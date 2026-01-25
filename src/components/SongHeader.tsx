@@ -18,70 +18,70 @@ export default function SongHeader({ song }: SongHeaderProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6 md:gap-8">
       {/* Album Art */}
-      <div className="relative group">
+      <div className="relative group flex-shrink-0">
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
         <Image
           src={song.albumArt}
           alt={`${song.title} album art`}
           width={200}
           height={200}
-          className="relative w-48 h-48 md:w-56 md:h-56 rounded-xl object-cover shadow-2xl"
+          className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-xl object-cover shadow-2xl"
           priority
         />
       </div>
 
       {/* Song Info */}
-      <div className="flex-1 text-center md:text-left">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
+      <div className="flex-1 text-center md:text-left min-w-0">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2 truncate">
           {song.title}
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-4">{song.artist}</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-3 sm:mb-4 truncate">{song.artist}</p>
 
         {/* Meta Info */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-400 mb-6">
-          <div className="flex items-center gap-2">
-            <Music className="w-4 h-4" />
-            <span>{song.spotify?.album || "Unknown Album"}</span>
+        <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-4 text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <Music className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span className="truncate max-w-[150px] sm:max-w-none">{song.spotify?.album || "Unknown Album"}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
             <span>{formatDate(song.releaseDate)}</span>
           </div>
         </div>
 
         {/* Quick Stats */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-4">
+        <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center md:justify-start sm:gap-4">
           {song.billboard && (
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2 text-yellow-400 mb-1">
-                <TrendingUp className="w-4 h-4" />
-                <span className="text-xs uppercase tracking-wider">Peak Position</span>
+            <div className="bg-gray-800/50 border border-gray-700 rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
+              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-yellow-400 mb-0.5 sm:mb-1">
+                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider hidden sm:inline">Peak</span>
               </div>
-              <p className="text-2xl font-bold text-white">
+              <p className="text-lg sm:text-2xl font-bold text-white text-center sm:text-left">
                 #{song.billboard.peakPosition}
               </p>
             </div>
           )}
 
           {song.spotify && (
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2 text-green-400 mb-1">
-                <span className="text-xs uppercase tracking-wider">Total Streams</span>
+            <div className="bg-gray-800/50 border border-gray-700 rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
+              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-green-400 mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider">Streams</span>
               </div>
-              <p className="text-2xl font-bold text-white">
+              <p className="text-lg sm:text-2xl font-bold text-white text-center sm:text-left">
                 {song.spotify.totalStreams}
               </p>
             </div>
           )}
 
           {song.youtube && (
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2 text-red-400 mb-1">
-                <span className="text-xs uppercase tracking-wider">YouTube Views</span>
+            <div className="bg-gray-800/50 border border-gray-700 rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
+              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-red-400 mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider">Views</span>
               </div>
-              <p className="text-2xl font-bold text-white">
+              <p className="text-lg sm:text-2xl font-bold text-white text-center sm:text-left">
                 {song.youtube.viewCount}
               </p>
             </div>
@@ -89,16 +89,16 @@ export default function SongHeader({ song }: SongHeaderProps) {
         </div>
 
         {/* External Links */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-6">
+        <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mt-4 sm:mt-6">
           {song.spotify?.externalUrl && (
             <a
               href={song.spotify.externalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 bg-green-600 hover:bg-green-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
             >
-              <span>Open in Spotify</span>
-              <ExternalLink className="w-4 h-4" />
+              <span>Spotify</span>
+              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           )}
           {song.youtube?.externalUrl && (
@@ -106,10 +106,21 @@ export default function SongHeader({ song }: SongHeaderProps) {
               href={song.youtube.externalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 bg-red-600 hover:bg-red-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
             >
-              <span>Watch on YouTube</span>
-              <ExternalLink className="w-4 h-4" />
+              <span>YouTube</span>
+              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            </a>
+          )}
+          {song.genius?.lyricsUrl && (
+            <a
+              href={song.genius.lyricsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 sm:gap-2 bg-yellow-600 hover:bg-yellow-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
+            >
+              <span>Lyrics</span>
+              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           )}
         </div>

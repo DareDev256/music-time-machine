@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSongById } from "@/lib/mockData";
+import { getSongData, getConfiguredApis } from "@/lib/dataFetcher";
 
 export async function GET(
   request: NextRequest,
@@ -7,13 +7,19 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const song = getSongById(id);
+    const song = await getSongData(id);
 
     if (!song) {
       return NextResponse.json({ error: "Song not found" }, { status: 404 });
     }
 
-    return NextResponse.json(song);
+    return NextResponse.json({
+      ...song,
+      _meta: {
+        apis: getConfiguredApis(),
+        useMock: process.env.USE_MOCK_DATA === "true",
+      },
+    });
   } catch (error) {
     console.error("Song fetch error:", error);
     return NextResponse.json(

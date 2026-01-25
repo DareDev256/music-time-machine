@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Music, TrendingUp, Sparkles } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
+import DateSearch from "@/components/DateSearch";
 import { SearchResult } from "@/types";
 
 export default function Home() {
@@ -51,14 +52,14 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 px-2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Track Any Song Across the{" "}
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
                 Music Ecosystem
               </span>
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 px-4">
               Search any song and see its complete performance timeline across
               Spotify, YouTube, Billboard, and more.
             </p>
@@ -70,7 +71,7 @@ export default function Home() {
           </div>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16 px-2">
             {[
               { icon: "🎧", label: "Spotify Streams" },
               { icon: "📺", label: "YouTube Views" },
@@ -79,48 +80,53 @@ export default function Home() {
             ].map((feature) => (
               <div
                 key={feature.label}
-                className="flex items-center gap-2 bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2"
+                className="flex items-center gap-2 bg-gray-800/50 border border-gray-700 rounded-full px-3 sm:px-4 py-1.5 sm:py-2"
               >
-                <span>{feature.icon}</span>
-                <span className="text-gray-300 text-sm">{feature.label}</span>
+                <span className="text-sm sm:text-base">{feature.icon}</span>
+                <span className="text-gray-300 text-xs sm:text-sm">{feature.label}</span>
               </div>
             ))}
+          </div>
+
+          {/* Time Machine - Birthday Search */}
+          <div className="max-w-md mx-auto">
+            <DateSearch />
           </div>
         </div>
       </div>
 
       {/* Trending Songs Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
-            <TrendingUp className="w-5 h-5 text-white" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg sm:rounded-xl flex items-center justify-center">
+            <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
-          <h3 className="text-2xl font-bold text-white">Trending Songs</h3>
-          <Sparkles className="w-5 h-5 text-yellow-400" />
+          <h3 className="text-xl sm:text-2xl font-bold text-white">Trending Songs</h3>
+          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
         </div>
 
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {[...Array(5)].map((_, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
+            {[...Array(10)].map((_, i) => (
               <div
                 key={i}
-                className="bg-gray-800/50 border border-gray-700 rounded-2xl p-4 animate-pulse"
+                className="bg-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 animate-pulse"
               >
-                <div className="w-full aspect-square bg-gray-700 rounded-xl mb-4" />
-                <div className="h-5 bg-gray-700 rounded mb-2" />
-                <div className="h-4 bg-gray-700 rounded w-2/3" />
+                <div className="w-full aspect-square bg-gray-700 rounded-lg sm:rounded-xl mb-3 sm:mb-4" />
+                <div className="h-4 sm:h-5 bg-gray-700 rounded mb-2" />
+                <div className="h-3 sm:h-4 bg-gray-700 rounded w-2/3" />
               </div>
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
             {trending.map((song) => (
               <Link
                 key={song.id}
                 href={`/song/${song.id}`}
-                className="group bg-gray-800/50 border border-gray-700 rounded-2xl p-4 hover:bg-gray-800 hover:border-purple-500/50 transition-all"
+                className="group bg-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 hover:bg-gray-800 hover:border-purple-500/50 transition-all active:scale-[0.98]"
               >
-                <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+                <div className="relative aspect-square mb-3 sm:mb-4 rounded-lg sm:rounded-xl overflow-hidden">
                   <Image
                     src={song.albumArt}
                     alt={song.title}
@@ -129,10 +135,10 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h4 className="text-white font-medium truncate group-hover:text-purple-400 transition-colors">
+                <h4 className="text-white font-medium text-sm sm:text-base truncate group-hover:text-purple-400 transition-colors">
                   {song.title}
                 </h4>
-                <p className="text-gray-400 text-sm truncate">{song.artist}</p>
+                <p className="text-gray-400 text-xs sm:text-sm truncate">{song.artist}</p>
               </Link>
             ))}
           </div>

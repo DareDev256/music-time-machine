@@ -73,65 +73,66 @@ export default function TimelineChart({ data }: TimelineChartProps) {
   const tickInterval = Math.ceil(data.length / 8);
 
   return (
-    <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6">
-      <h2 className="text-xl font-semibold text-white mb-6">
+    <div className="bg-gray-900/50 border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+      <h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">
         Performance Timeline
       </h2>
-      <div className="h-80">
+      <div className="h-56 sm:h-72 md:h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+          <LineChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis
               dataKey="date"
               tickFormatter={formatXAxis}
               stroke="#6B7280"
-              tick={{ fill: "#9CA3AF", fontSize: 12 }}
+              tick={{ fill: "#9CA3AF", fontSize: 10 }}
               interval={tickInterval}
             />
             <YAxis
               stroke="#6B7280"
-              tick={{ fill: "#9CA3AF", fontSize: 12 }}
+              tick={{ fill: "#9CA3AF", fontSize: 10 }}
               domain={[0, 100]}
               tickFormatter={(value) => `${value}%`}
+              width={35}
             />
             <Tooltip content={<CustomTooltip />} />
             <Legend
-              wrapperStyle={{ paddingTop: "20px" }}
+              wrapperStyle={{ paddingTop: "12px", fontSize: "12px" }}
               formatter={(value) => (
-                <span className="text-gray-300 text-sm">{value}</span>
+                <span className="text-gray-300 text-xs sm:text-sm">{value}</span>
               )}
             />
             <Line
               type="monotone"
               dataKey="spotify"
-              name="Spotify Popularity"
+              name="Spotify"
               stroke="#1DB954"
-              strokeWidth={3}
+              strokeWidth={2}
               dot={false}
-              activeDot={{ r: 6, fill: "#1DB954" }}
+              activeDot={{ r: 5, fill: "#1DB954" }}
             />
             <Line
               type="monotone"
               dataKey="youtube"
-              name="YouTube Engagement"
+              name="YouTube"
               stroke="#FF0000"
-              strokeWidth={3}
+              strokeWidth={2}
               dot={false}
-              activeDot={{ r: 6, fill: "#FF0000" }}
+              activeDot={{ r: 5, fill: "#FF0000" }}
             />
             <Line
               type="monotone"
               dataKey="billboard"
-              name="Billboard Position"
+              name="Billboard"
               stroke="#FBBF24"
-              strokeWidth={3}
+              strokeWidth={2}
               dot={false}
-              activeDot={{ r: 6, fill: "#FBBF24" }}
+              activeDot={{ r: 5, fill: "#FBBF24" }}
             />
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <p className="text-gray-500 text-xs mt-4 text-center">
+      <p className="text-gray-500 text-[10px] sm:text-xs mt-3 sm:mt-4 text-center">
         * Billboard position shown as inverted scale (higher = better chart position)
       </p>
     </div>

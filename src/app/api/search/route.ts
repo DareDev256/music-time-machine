@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { searchSongs, getTrendingSongs } from "@/lib/mockData";
+import { searchSongs, getTrendingSongs, getConfiguredApis } from "@/lib/dataFetcher";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -9,12 +9,20 @@ export async function GET(request: NextRequest) {
     // If no query, return trending songs
     if (!query || query.trim() === "") {
       const trending = getTrendingSongs();
-      return NextResponse.json({ results: trending, type: "trending" });
+      return NextResponse.json({
+        results: trending,
+        type: "trending",
+        apis: getConfiguredApis(),
+      });
     }
 
     // Search for songs
-    const results = searchSongs(query);
-    return NextResponse.json({ results, type: "search" });
+    const results = await searchSongs(query);
+    return NextResponse.json({
+      results,
+      type: "search",
+      apis: getConfiguredApis(),
+    });
   } catch (error) {
     console.error("Search error:", error);
     return NextResponse.json(

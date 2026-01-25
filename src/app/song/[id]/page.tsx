@@ -99,25 +99,25 @@ export default function SongPage({ params }: PageProps) {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
         {/* Song Header */}
-        <section className="mb-12">
+        <section className="mb-6 sm:mb-8 md:mb-12">
           <SongHeader song={song} />
         </section>
 
         {/* Timeline Chart */}
         {song.timeline && song.timeline.length > 0 && (
-          <section className="mb-12">
+          <section className="mb-6 sm:mb-8 md:mb-12">
             <TimelineChart data={song.timeline} />
           </section>
         )}
 
         {/* Platform Cards Grid */}
         <section>
-          <h2 className="text-xl font-semibold text-white mb-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">
             Platform Breakdown
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
             {song.spotify && <SpotifyCard data={song.spotify} />}
             {song.youtube && <YouTubeCard data={song.youtube} />}
             {song.billboard && <BillboardCard data={song.billboard} />}
