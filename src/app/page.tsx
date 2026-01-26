@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Music, TrendingUp, Sparkles } from "lucide-react";
+import { TrendingUp, Sparkles, Music } from "lucide-react";
+import SafeImage from "@/components/SafeImage";
 import SearchBar from "@/components/SearchBar";
 import DateSearch from "@/components/DateSearch";
 import { SearchResult } from "@/types";
@@ -126,8 +126,8 @@ export default function Home() {
                 href={`/song/${song.id}`}
                 className="group bg-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 hover:bg-gray-800 hover:border-purple-500/50 transition-all active:scale-[0.98]"
               >
-                <div className="relative aspect-square mb-3 sm:mb-4 rounded-lg sm:rounded-xl overflow-hidden">
-                  <Image
+                <div className="relative aspect-square mb-3 sm:mb-4 rounded-lg sm:rounded-xl overflow-hidden bg-gray-800">
+                  <SafeImage
                     src={song.albumArt}
                     alt={song.title}
                     fill

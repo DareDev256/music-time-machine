@@ -2,15 +2,25 @@
 
 import { useEffect, useState, use } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import { SongData } from "@/types";
 import SongHeader from "@/components/SongHeader";
-import TimelineChart from "@/components/TimelineChart";
 import SpotifyCard from "@/components/SpotifyCard";
 import YouTubeCard from "@/components/YouTubeCard";
 import BillboardCard from "@/components/BillboardCard";
 import GeniusCard from "@/components/GeniusCard";
 import SearchBar from "@/components/SearchBar";
+
+// Dynamic import with SSR disabled to avoid recharts hydration issues
+const TimelineChart = dynamic(() => import("@/components/TimelineChart"), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-gray-900/50 border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 h-80 flex items-center justify-center">
+      <Loader2 className="w-8 h-8 text-purple-500 animate-spin" />
+    </div>
+  ),
+});
 
 interface PageProps {
   params: Promise<{ id: string }>;

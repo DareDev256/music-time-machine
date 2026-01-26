@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
   try {
     // If no query, return trending songs
     if (!query || query.trim() === "") {
-      const trending = getTrendingSongs();
+      const trending = await getTrendingSongs();
       return NextResponse.json({
         results: trending,
         type: "trending",

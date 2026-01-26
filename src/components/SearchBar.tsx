@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Search, X, Music, Loader2 } from "lucide-react";
 import { SearchResult } from "@/types";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -150,7 +150,7 @@ export default function SearchBar() {
               }`}
             >
               {result.albumArt ? (
-                <Image
+                <SafeImage
                   src={result.albumArt}
                   alt={result.title}
                   width={48}

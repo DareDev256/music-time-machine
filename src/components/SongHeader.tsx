@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Calendar, TrendingUp, Music, ExternalLink } from "lucide-react";
 import { SongData } from "@/types";
+import SafeImage from "@/components/SafeImage";
 
 interface SongHeaderProps {
   song: SongData;
@@ -22,7 +22,7 @@ export default function SongHeader({ song }: SongHeaderProps) {
       {/* Album Art */}
       <div className="relative group flex-shrink-0">
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
-        <Image
+        <SafeImage
           src={song.albumArt}
           alt={`${song.title} album art`}
           width={200}

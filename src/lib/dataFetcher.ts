@@ -1,7 +1,7 @@
 import { SongData, SearchResult, TimelineDataPoint } from "@/types";
 import { getSpotifyTrack, searchSpotifyTracks, isSpotifyConfigured } from "./spotify";
 import { getYouTubeVideoBySearch, isYouTubeConfigured } from "./youtube";
-import { getGeniusSongBySearch, isGeniusConfigured } from "./genius";
+import { getGeniusSongBySearch, getGeniusSong, searchGeniusSongs, isGeniusConfigured } from "./genius";
 import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending } from "./mockData";
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true";
@@ -10,35 +10,59 @@ export async function searchSongs(query: string): Promise<SearchResult[]> {
   // Always check mock data first for exact matches
   const mockResults = searchMockSongs(query);
 
-  if (USE_MOCK_DATA || !isSpotifyConfigured()) {
+  if (USE_MOCK_DATA) {
     return mockResults;
   }
 
-  try {
-    // Search Spotify for real results
-    const spotifyResults = await searchSpotifyTracks(query, 10);
+  // Try Spotify first if configured
+  if (isSpotifyConfigured()) {
+    try {
+      const spotifyResults = await searchSpotifyTracks(query, 10);
+      const results: SearchResult[] = spotifyResults.map((track) => ({
+        id: `spotify:${track.id}`,
+        title: track.name,
+        artist: track.artist,
+        albumArt: track.albumArt,
+        releaseDate: track.releaseDate,
+        spotifyUrl: `https://open.spotify.com/track/${track.id}`,
+      }));
 
-    // Convert to SearchResult format
-    const results: SearchResult[] = spotifyResults.map((track) => ({
-      id: `spotify:${track.id}`,
-      title: track.name,
-      artist: track.artist,
-      albumArt: track.albumArt,
-      releaseDate: track.releaseDate,
-      spotifyUrl: `https://open.spotify.com/track/${track.id}`,
-    }));
+      const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
+      const filtered = results.filter(
+        (r) => !mockIds.has(r.title.toLowerCase())
+      );
 
-    // Merge with mock results (mock takes priority for exact matches)
-    const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
-    const filtered = results.filter(
-      (r) => !mockIds.has(r.title.toLowerCase())
-    );
-
-    return [...mockResults, ...filtered].slice(0, 10);
-  } catch (error) {
-    console.error("Search error, falling back to mock:", error);
-    return mockResults;
+      return [...mockResults, ...filtered].slice(0, 10);
+    } catch (error) {
+      console.error("Spotify search error:", error);
+    }
   }
+
+  // Fall back to Genius search if Spotify unavailable
+  if (isGeniusConfigured()) {
+    try {
+      const geniusResults = await searchGeniusSongs(query, 10);
+      const results: SearchResult[] = geniusResults.map((song) => ({
+        id: `genius:${song.id}`,
+        title: song.title,
+        artist: song.artist,
+        albumArt: song.albumArt,
+        releaseDate: song.releaseDate || new Date().toISOString(),
+      }));
+
+      const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
+      const filtered = results.filter(
+        (r) => !mockIds.has(r.title.toLowerCase())
+      );
+
+      return [...mockResults, ...filtered].slice(0, 10);
+    } catch (error) {
+      console.error("Genius search error:", error);
+    }
+  }
+
+  // Final fallback to mock data
+  return mockResults;
 }
 
 export async function getTrendingSongs(): Promise<SearchResult[]> {
@@ -58,6 +82,12 @@ export async function getSongData(id: string): Promise<SongData | null> {
   if (id.startsWith("spotify:")) {
     const spotifyId = id.replace("spotify:", "");
     return fetchRealSongData(spotifyId);
+  }
+
+  // If it's a Genius ID, fetch from Genius
+  if (id.startsWith("genius:")) {
+    const geniusId = parseInt(id.replace("genius:", ""), 10);
+    return fetchGeniusSongData(geniusId);
   }
 
   // For mock song IDs, enrich with real data if APIs are configured
@@ -105,6 +135,38 @@ async function fetchRealSongData(spotifyId: string): Promise<SongData | null> {
     };
   } catch (error) {
     console.error("Error fetching real song data:", error);
+    return null;
+  }
+}
+
+async function fetchGeniusSongData(geniusId: number): Promise<SongData | null> {
+  try {
+    const genius = await getGeniusSong(geniusId);
+    if (!genius) return null;
+
+    // Fetch YouTube data in parallel
+    const youtube = isYouTubeConfigured()
+      ? await getYouTubeVideoBySearch(genius.title, genius.artist)
+      : null;
+
+    // Generate timeline from release date
+    const releaseDate = genius.releaseDate || new Date().toISOString().split("T")[0];
+    const timeline = generateTimeline(releaseDate);
+
+    return {
+      id: `genius:${geniusId}`,
+      title: genius.title,
+      artist: genius.artist,
+      albumArt: genius.albumArt || "",
+      releaseDate,
+      spotify: null,
+      youtube,
+      billboard: null,
+      genius,
+      timeline,
+    };
+  } catch (error) {
+    console.error("Error fetching Genius song data:", error);
     return null;
   }
 }

@@ -41,6 +41,27 @@ export async function searchGeniusSong(
   }
 }
 
+export async function searchGeniusSongs(
+  query: string,
+  limit: number = 10
+): Promise<{ id: number; title: string; artist: string; albumArt: string; releaseDate: string }[]> {
+  try {
+    const data = await geniusFetch(`/search?q=${encodeURIComponent(query)}`);
+    const hits = data.response?.hits || [];
+
+    return hits.slice(0, limit).map((hit: { result: { id: number; title: string; primary_artist?: { name?: string }; song_art_image_thumbnail_url?: string; release_date_for_display?: string } }) => ({
+      id: hit.result.id,
+      title: hit.result.title,
+      artist: hit.result.primary_artist?.name || "Unknown",
+      albumArt: hit.result.song_art_image_thumbnail_url || "",
+      releaseDate: hit.result.release_date_for_display || "",
+    }));
+  } catch (error) {
+    console.error("Genius search error:", error);
+    return [];
+  }
+}
+
 export async function getGeniusSong(songId: number): Promise<GeniusData | null> {
   try {
     const data = await geniusFetch(`/songs/${songId}?text_format=plain`);

@@ -82,5 +82,5 @@ export interface SearchResult {
   artist: string;
   albumArt: string;
   releaseDate: string;
-  spotifyUrl: string;
+  spotifyUrl?: string;
 }
