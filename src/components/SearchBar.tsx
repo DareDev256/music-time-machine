@@ -42,7 +42,7 @@ export default function SearchBar() {
       }
     };
 
-    const debounce = setTimeout(searchSongs, 300);
+    const debounce = setTimeout(searchSongs, 150);
     return () => clearTimeout(debounce);
   }, [query]);
 
@@ -122,6 +122,7 @@ export default function SearchBar() {
               setIsOpen(false);
               inputRef.current?.focus();
             }}
+            aria-label="Clear search"
             className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
           >
             {isLoading ? (

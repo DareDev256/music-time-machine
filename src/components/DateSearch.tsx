@@ -133,6 +133,7 @@ export default function DateSearch() {
         <button
           onClick={handleSearch}
           disabled={!selectedDate || isSearching}
+          aria-label="Search by date"
           className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl text-white font-medium transition-all flex items-center gap-2"
         >
           {isSearching ? (

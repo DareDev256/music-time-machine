@@ -13,13 +13,20 @@ export async function GET(
       return NextResponse.json({ error: "Song not found" }, { status: 404 });
     }
 
-    return NextResponse.json({
-      ...song,
-      _meta: {
-        apis: getConfiguredApis(),
-        useMock: process.env.USE_MOCK_DATA === "true",
+    return NextResponse.json(
+      {
+        ...song,
+        _meta: {
+          apis: getConfiguredApis(),
+          useMock: process.env.USE_MOCK_DATA === "true",
+        },
       },
-    });
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=300",
+        },
+      }
+    );
   } catch (error) {
     console.error("Song fetch error:", error);
     return NextResponse.json(

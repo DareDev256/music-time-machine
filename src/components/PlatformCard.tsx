@@ -36,6 +36,7 @@ export default function PlatformCard({
             href={externalUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Open ${title} in new tab`}
             className="text-gray-400 hover:text-white active:scale-95 transition-all p-1"
           >
             <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />

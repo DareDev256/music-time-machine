@@ -33,7 +33,6 @@ export default function SafeImage({
       alt={alt}
       className={className}
       onError={() => setError(true)}
-      unoptimized
       {...props}
     />
   );

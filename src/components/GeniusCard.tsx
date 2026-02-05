@@ -20,7 +20,7 @@ export default function GeniusCard({ data }: GeniusCardProps) {
     <PlatformCard
       title="Genius"
       icon={<GeniusIcon />}
-      color="#FFFF64"
+      color="#FFDB33"
       externalUrl={data.lyricsUrl}
     >
       {/* Song Description */}
