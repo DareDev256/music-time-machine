@@ -1,8 +1,12 @@
 import { GeniusData } from "@/types";
+import { checkGeniusLimit } from "./rateLimit";
 
 const GENIUS_API_BASE = "https://api.genius.com";
 
 async function geniusFetch(endpoint: string) {
+  if (!checkGeniusLimit()) {
+    throw new Error("Genius rate limit exceeded");
+  }
   const token = process.env.GENIUS_ACCESS_TOKEN;
   if (!token) {
     throw new Error("Genius access token not configured");

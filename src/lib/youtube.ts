@@ -1,8 +1,12 @@
 import { YouTubeData } from "@/types";
+import { checkYouTubeLimit } from "./rateLimit";
 
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
 async function youtubeFetch(endpoint: string, params: Record<string, string>) {
+  if (!checkYouTubeLimit()) {
+    throw new Error("YouTube rate limit exceeded");
+  }
   const apiKey = process.env.YOUTUBE_API_KEY;
   if (!apiKey) {
     throw new Error("YouTube API key not configured");

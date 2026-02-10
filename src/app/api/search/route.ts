@@ -1,13 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { searchSongs, getTrendingSongs, getConfiguredApis } from "@/lib/dataFetcher";
 
+function sanitizeQuery(input: string): string {
+  return input
+    .replace(/<[^>]*>/g, "") // Strip HTML tags
+    .replace(/[<>"'&]/g, "") // Remove dangerous chars
+    .trim()
+    .slice(0, 200); // Max 200 chars
+}
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const query = searchParams.get("q");
+  const rawQuery = searchParams.get("q");
 
   try {
     // If no query, return trending songs
-    if (!query || query.trim() === "") {
+    if (!rawQuery || rawQuery.trim() === "") {
       const trending = await getTrendingSongs();
       return NextResponse.json(
         {
@@ -21,6 +29,11 @@ export async function GET(request: NextRequest) {
           },
         }
       );
+    }
+
+    const query = sanitizeQuery(rawQuery);
+    if (query.length === 0) {
+      return NextResponse.json({ results: [], type: "search", apis: getConfiguredApis() });
     }
 
     // Search for songs

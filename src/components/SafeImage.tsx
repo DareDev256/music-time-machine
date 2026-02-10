@@ -20,9 +20,9 @@ export default function SafeImage({
   if (error) {
     return (
       <div
-        className={`bg-gray-800 flex items-center justify-center ${fallbackClassName || className || ""}`}
+        className={`bg-gray-100 dark:bg-gray-800 flex items-center justify-center ${fallbackClassName || className || ""}`}
       >
-        <Music className="w-1/3 h-1/3 text-gray-600" />
+        <Music className="w-1/3 h-1/3 text-gray-400 dark:text-gray-600" />
       </div>
     );
   }

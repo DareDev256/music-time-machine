@@ -19,7 +19,10 @@ export default function PlatformCard({
   externalUrl,
 }: PlatformCardProps) {
   return (
-    <div className="bg-gray-900/50 border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:border-gray-600 transition-colors">
+    <div
+      className="bg-card border border-border rounded-2xl p-4 sm:p-6 hover:border-border transition-colors"
+      style={{ borderTopWidth: "2px", borderTopColor: color }}
+    >
       {/* Header */}
       <div className="flex items-center justify-between mb-3 sm:mb-4">
         <div className="flex items-center gap-2 sm:gap-3">
@@ -29,15 +32,14 @@ export default function PlatformCard({
           >
             <span style={{ color }}>{icon}</span>
           </div>
-          <h3 className="text-base sm:text-lg font-semibold text-white">{title}</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-foreground">{title}</h3>
         </div>
         {externalUrl && (
           <a
             href={externalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Open ${title} in new tab`}
-            className="text-gray-400 hover:text-white active:scale-95 transition-all p-1"
+            className="text-foreground-secondary hover:text-foreground active:scale-95 transition-all p-1"
           >
             <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
           </a>
@@ -59,12 +61,12 @@ interface StatRowProps {
 
 export function StatRow({ label, value, subValue }: StatRowProps) {
   return (
-    <div className="flex items-center justify-between py-1.5 sm:py-2 border-b border-gray-800 last:border-0">
-      <span className="text-gray-400 text-xs sm:text-sm">{label}</span>
+    <div className="flex items-center justify-between py-1.5 sm:py-2 border-b border-border last:border-0">
+      <span className="text-foreground-secondary text-xs sm:text-sm">{label}</span>
       <div className="text-right">
-        <span className="text-white font-medium text-sm sm:text-base">{value}</span>
+        <span className="text-foreground font-medium text-sm sm:text-base">{value}</span>
         {subValue && (
-          <span className="text-gray-500 text-[10px] sm:text-xs block">{subValue}</span>
+          <span className="text-foreground-secondary text-[10px] sm:text-xs block">{subValue}</span>
         )}
       </div>
     </div>

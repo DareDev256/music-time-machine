@@ -1,0 +1,66 @@
+# Changelog
+
+All notable changes to the Music Time Machine project will be documented in this file.
+
+## [1.0.0] - 2026-02-07
+
+### Added
+- **Apple Music-Inspired Redesign** — Full visual overhaul with ThemeProvider (light/dark mode), Navigation component with scroll-aware blur, and Apple-style design tokens (CSS custom properties via `@theme inline`)
+- **Audio Preview** — HTML5 audio player for Spotify 30-second preview clips with play/pause, seekable progress bar, album art, and external Spotify link
+- **Song Comparison** — Side-by-side metrics comparison at `/compare` with winner highlighting across Spotify streams, YouTube views, Billboard peak, weeks on chart, and Genius page views
+- **Artist Pages** — Dedicated artist view at `/artist/[id]` with top tracks, discography grid, career timeline, and aggregate stats (monthly listeners, total streams)
+- **Social Sharing** — Share modal with copy-to-clipboard, X (Twitter), and Facebook sharing. OG image generation via `@vercel/og` edge function at `/api/og/[id]`
+- **Security Hardening** — HTTP security headers (CSP, HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy) via `next.config.ts`. Input validation with regex on all API routes. Query sanitization (HTML stripping, dangerous char removal, 200-char limit)
+- **TTL Cache** — In-memory cache with configurable TTL and max size eviction. Search results cached 5 min, song data cached 30 min
+- **Token Bucket Rate Limiting** — Per-API rate limits: Spotify 30/30s, YouTube 100/hr, Genius 50/min
+- **Testing Infrastructure** — Vitest + Testing Library + jsdom. Unit tests for TTLCache (expiry, eviction, CRUD) and dataFetcher (search, song data retrieval)
+- **Error Boundary** — Route-level error page (`error.tsx`) with retry and home navigation, plus root-level `global-error.tsx` for crashes in the root layout itself
+- **SafeImage Component** — Image wrapper with graceful fallback to music note icon on load failure
+- **FOUC Prevention** — Inline `<script>` in `<head>` applies theme class before first paint
+
+### Changed
+- Bumped version from 0.3.0/0.4.0 to 1.0.0
+- Replaced raw Tailwind dark mode with class-based theming using CSS custom properties
+- Layout now wraps all pages in ThemeProvider with persistent Navigation bar
+- All components use semantic color tokens (`bg-background`, `text-foreground`, `border-border`, `bg-card`, etc.) instead of hardcoded Tailwind colors
+
+### Dependencies Added
+- `framer-motion` ^11.18.0
+- `@vercel/og` ^0.6.0
+- `vitest` ^3.0.0 (dev)
+- `@testing-library/react` ^16.0.0 (dev)
+- `@testing-library/jest-dom` ^6.0.0 (dev)
+- `jsdom` ^25.0.0 (dev)
+
+---
+
+## [0.3.0] - 2025-01-25
+
+### Added
+- Real API clients for Spotify (OAuth 2.0 Client Credentials), YouTube Data API v3, and Genius API
+- Unified data fetcher with hybrid mock/real strategy and graceful fallback
+- "Time Machine" birthday search — find the Billboard #1 on any date (2019-2024)
+- Expanded song catalog from 10 to 18 curated songs
+- Full mobile responsiveness overhaul
+
+### Changed
+- Updated to Next.js 16, React 19, Tailwind CSS 4
+
+---
+
+## [0.2.0] - 2025-01-21
+
+### Added
+- 5 additional songs: Uptown Funk, drivers license, Dance Monkey, Old Town Road, Levitating
+- Improved mock data with more realistic metrics
+
+---
+
+## [0.1.0] - 2025-01-21
+
+### Added
+- Core dashboard with real-time search autocomplete
+- Song detail pages with platform cards (Spotify, YouTube, Billboard, Genius)
+- Performance timeline chart (Recharts multi-line)
+- 5 initial songs with full mock data
+- Responsive design foundation

@@ -1,4 +1,5 @@
-import { SpotifyData } from "@/types";
+import { SpotifyData, ArtistData } from "@/types";
+import { checkSpotifyLimit } from "./rateLimit";
 
 let accessToken: string | null = null;
 let tokenExpiry: number = 0;
@@ -36,6 +37,9 @@ async function getAccessToken(): Promise<string> {
 }
 
 async function spotifyFetch(endpoint: string) {
+  if (!checkSpotifyLimit()) {
+    throw new Error("Spotify rate limit exceeded");
+  }
   const token = await getAccessToken();
   const response = await fetch(`https://api.spotify.com/v1${endpoint}`, {
     headers: { Authorization: `Bearer ${token}` },
@@ -151,6 +155,51 @@ function formatNumber(num: number): string {
     return (num / 1_000).toFixed(1) + "K";
   }
   return num.toString();
+}
+
+export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | null> {
+  try {
+    let artistData;
+    // If it looks like an ID, fetch directly
+    if (/^[a-zA-Z0-9]{22}$/.test(idOrName)) {
+      artistData = await spotifyFetch(`/artists/${idOrName}`);
+    } else {
+      // Search by name
+      const searchData = await spotifyFetch(`/search?q=${encodeURIComponent(idOrName)}&type=artist&limit=1`);
+      artistData = searchData.artists?.items?.[0];
+    }
+    if (!artistData) return null;
+
+    const [topTracks, albums] = await Promise.all([
+      spotifyFetch(`/artists/${artistData.id}/top-tracks`).catch(() => ({ tracks: [] })),
+      spotifyFetch(`/artists/${artistData.id}/albums?limit=10&include_groups=album`).catch(() => ({ items: [] })),
+    ]);
+
+    return {
+      id: artistData.id,
+      name: artistData.name,
+      slug: artistData.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      image: artistData.images?.[0]?.url || "",
+      genres: artistData.genres || [],
+      monthlyListeners: formatNumber(artistData.followers?.total || 0),
+      totalStreams: "N/A",
+      topTracks: (topTracks.tracks || []).slice(0, 5).map((t: { id: string; name: string; album: { images: { url: string }[] }; popularity: number }) => ({
+        id: t.id,
+        title: t.name,
+        albumArt: t.album.images[0]?.url || "",
+        streams: formatNumber(t.popularity * 25000000),
+      })),
+      albums: (albums.items || []).map((a: { name: string; release_date: string; images: { url: string }[] }) => ({
+        name: a.name,
+        year: a.release_date?.split("-")[0] || "",
+        albumArt: a.images[0]?.url || "",
+      })),
+      careerTimeline: [],
+    };
+  } catch (error) {
+    console.error("Spotify artist fetch error:", error);
+    return null;
+  }
 }
 
 export function isSpotifyConfigured(): boolean {

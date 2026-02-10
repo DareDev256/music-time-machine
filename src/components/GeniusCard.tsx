@@ -24,8 +24,8 @@ export default function GeniusCard({ data }: GeniusCardProps) {
       externalUrl={data.lyricsUrl}
     >
       {/* Song Description */}
-      <div className="bg-gray-800/50 rounded-xl p-4 mb-4">
-        <p className="text-gray-300 text-sm leading-relaxed">
+      <div className="bg-background-secondary rounded-xl p-4 mb-4">
+        <p className="text-foreground-secondary text-sm leading-relaxed">
           {data.description}
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function GeniusCard({ data }: GeniusCardProps) {
         href={data.lyricsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 flex items-center justify-center gap-2 w-full bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-400 py-3 rounded-xl transition-colors"
+        className="mt-4 flex items-center justify-center gap-2 w-full bg-amber-100 dark:bg-amber-900/20 hover:bg-amber-200 dark:hover:bg-amber-900/30 text-amber-700 dark:text-amber-400 py-3 rounded-xl transition-colors"
       >
         <FileText className="w-4 h-4" />
         <span className="font-medium">View Full Lyrics</span>

@@ -40,16 +40,16 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   };
 
   return (
-    <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg p-4 shadow-xl">
-      <p className="text-white font-medium mb-2">{formatDate(label || "")}</p>
+    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-lg">
+      <p className="text-foreground font-medium mb-2">{formatDate(label || "")}</p>
       {payload.map((entry, index) => (
         <div key={index} className="flex items-center gap-2 text-sm">
           <div
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: entry.color }}
           />
-          <span className="text-gray-400">{entry.name}:</span>
-          <span className="text-white font-medium">
+          <span className="text-foreground-secondary">{entry.name}:</span>
+          <span className="text-foreground font-medium">
             {entry.dataKey === "billboard"
               ? `#${101 - entry.value}`
               : `${entry.value}%`}
@@ -73,24 +73,24 @@ export default function TimelineChart({ data }: TimelineChartProps) {
   const tickInterval = Math.ceil(data.length / 8);
 
   return (
-    <div className="bg-gray-900/50 border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6">
-      <h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">
+    <div className="bg-card border border-border rounded-2xl p-4 sm:p-6">
+      <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6">
         Performance Timeline
       </h2>
       <div className="h-56 sm:h-72 md:h-80">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#E5E5EA" />
             <XAxis
               dataKey="date"
               tickFormatter={formatXAxis}
-              stroke="#6B7280"
-              tick={{ fill: "#9CA3AF", fontSize: 10 }}
+              stroke="#8E8E93"
+              tick={{ fill: "#8E8E93", fontSize: 10 }}
               interval={tickInterval}
             />
             <YAxis
-              stroke="#6B7280"
-              tick={{ fill: "#9CA3AF", fontSize: 10 }}
+              stroke="#8E8E93"
+              tick={{ fill: "#8E8E93", fontSize: 10 }}
               domain={[0, 100]}
               tickFormatter={(value) => `${value}%`}
               width={35}
@@ -99,7 +99,7 @@ export default function TimelineChart({ data }: TimelineChartProps) {
             <Legend
               wrapperStyle={{ paddingTop: "12px", fontSize: "12px" }}
               formatter={(value) => (
-                <span className="text-gray-300 text-xs sm:text-sm">{value}</span>
+                <span className="text-foreground-secondary text-xs sm:text-sm">{value}</span>
               )}
             />
             <Line
@@ -132,7 +132,7 @@ export default function TimelineChart({ data }: TimelineChartProps) {
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <p className="text-gray-500 text-[10px] sm:text-xs mt-3 sm:mt-4 text-center">
+      <p className="text-foreground-secondary text-[10px] sm:text-xs mt-3 sm:mt-4 text-center">
         * Billboard position shown as inverted scale (higher = better chart position)
       </p>
     </div>

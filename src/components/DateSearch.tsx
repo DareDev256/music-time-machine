@@ -19,7 +19,7 @@ interface ChartEntry {
 const historicalNumber1s: Record<string, ChartEntry> = {
   // 2024
   "2024-01": { position: 1, title: "Lovin On Me", artist: "Jack Harlow", albumArt: "https://i.scdn.co/image/ab67616d0000b2738a01c7b77a34f6d9c8dac60e", id: "lovin-on-me", weeksAtOne: 4 },
-  "2024-02": { position: 1, title: "Texas Hold 'Em", artist: "Beyoncé", albumArt: "https://i.scdn.co/image/ab67616d0000b273b53558ec6bb12ae2606c0494", id: "texas-hold-em", weeksAtOne: 2 },
+  "2024-02": { position: 1, title: "Texas Hold 'Em", artist: "Beyonce", albumArt: "https://i.scdn.co/image/ab67616d0000b273b53558ec6bb12ae2606c0494", id: "texas-hold-em", weeksAtOne: 2 },
   "2024-03": { position: 1, title: "Espresso", artist: "Sabrina Carpenter", albumArt: "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96", id: "espresso", weeksAtOne: 1 },
   // 2023
   "2023-01": { position: 1, title: "Flowers", artist: "Miley Cyrus", albumArt: "https://i.scdn.co/image/ab67616d0000b2738b58d20f1b77295730db15b4", id: "flowers", weeksAtOne: 8 },
@@ -110,14 +110,14 @@ export default function DateSearch() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl p-6">
+    <div className="bg-background-secondary border border-border rounded-2xl p-6">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
           <Calendar className="w-5 h-5 text-white" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white">Time Machine</h3>
-          <p className="text-sm text-gray-400">What was #1 on your birthday?</p>
+          <h3 className="text-lg font-semibold text-foreground">Time Machine</h3>
+          <p className="text-sm text-foreground-secondary">What was #1 on your birthday?</p>
         </div>
       </div>
 
@@ -128,13 +128,12 @@ export default function DateSearch() {
           onChange={(e) => setSelectedDate(e.target.value)}
           max={new Date().toISOString().split("T")[0]}
           min="2019-01-01"
-          className="flex-1 bg-gray-900/80 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+          className="flex-1 bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors"
         />
         <button
           onClick={handleSearch}
           disabled={!selectedDate || isSearching}
-          aria-label="Search by date"
-          className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl text-white font-medium transition-all flex items-center gap-2"
+          className="px-6 py-3 bg-accent hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed rounded-xl text-white font-medium transition-all flex items-center gap-2"
         >
           {isSearching ? (
             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -148,8 +147,8 @@ export default function DateSearch() {
       </div>
 
       {result && (
-        <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+        <div className="bg-card border border-border rounded-xl p-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <div className="flex items-center gap-2 text-sm text-foreground-secondary mb-3">
             <Music className="w-4 h-4" />
             <span>
               {result.isExact ? (
@@ -164,7 +163,7 @@ export default function DateSearch() {
             href={`/song/${result.entry.id}`}
             className="flex items-center gap-4 group"
           >
-            <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-800">
+            <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-gray-800">
               <SafeImage
                 src={result.entry.albumArt}
                 alt={result.entry.title}
@@ -178,18 +177,18 @@ export default function DateSearch() {
             </div>
 
             <div className="flex-1 min-w-0">
-              <h4 className="text-white font-medium truncate group-hover:text-purple-400 transition-colors">
+              <h4 className="text-foreground font-medium truncate group-hover:text-accent transition-colors">
                 {result.entry.title}
               </h4>
-              <p className="text-gray-400 text-sm truncate">{result.entry.artist}</p>
+              <p className="text-foreground-secondary text-sm truncate">{result.entry.artist}</p>
               {result.entry.weeksAtOne && (
-                <p className="text-gray-500 text-xs mt-1">
+                <p className="text-foreground-secondary text-xs mt-1">
                   {result.entry.weeksAtOne} weeks at #1
                 </p>
               )}
             </div>
 
-            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-purple-400 transition-colors" />
+            <ChevronRight className="w-5 h-5 text-foreground-secondary group-hover:text-accent transition-colors" />
           </Link>
         </div>
       )}

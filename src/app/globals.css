@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
+/* Apple Music Design Tokens */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --background-secondary: #F5F5F7;
+  --foreground: #1D1D1F;
+  --foreground-secondary: #86868B;
+  --accent: #FC3C44;
+  --accent-hover: #E0353C;
+  --border: #D2D2D7;
+  --card: #FFFFFF;
+  --card-hover: #F5F5F7;
+}
+
+.dark {
+  --background: #000000;
+  --background-secondary: #1C1C1E;
+  --foreground: #F5F5F7;
+  --foreground-secondary: #86868B;
+  --accent: #FC3C44;
+  --accent-hover: #FF5A5F;
+  --border: #38383A;
+  --card: #1C1C1E;
+  --card-hover: #2C2C2E;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent FOUC */
+html:not(.dark):not(.light) {
+  background: #000000;
+  color: #F5F5F7;
+}
+
+/* Smooth theme transitions */
+html.dark,
+html.light {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground-secondary);
 }

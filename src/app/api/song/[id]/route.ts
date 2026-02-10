@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSongData, getConfiguredApis } from "@/lib/dataFetcher";
 
+function isValidId(id: string): boolean {
+  // Allow alphanumeric, dashes, colons (for spotify:xxx, genius:xxx format)
+  return /^[a-zA-Z0-9\-:]+$/.test(id) && id.length <= 200;
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { id } = await params;
+
+    if (!isValidId(id)) {
+      return NextResponse.json({ error: "Invalid song ID" }, { status: 400 });
+    }
+
     const song = await getSongData(id);
 
     if (!song) {

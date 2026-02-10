@@ -32,8 +32,8 @@ export default function SpotifyCard({ data }: SpotifyCardProps) {
 
       {/* Audio Features */}
       {data.audioFeatures && (
-        <div className="mt-4 pt-4 border-t border-gray-800">
-          <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+        <div className="mt-4 pt-4 border-t border-border">
+          <p className="text-xs text-foreground-secondary uppercase tracking-wider mb-3">
             Audio Features
           </p>
           <div className="grid grid-cols-2 gap-3">
@@ -67,13 +67,13 @@ function AudioFeature({ label, value, isBpm }: AudioFeatureProps) {
   return (
     <div>
       <div className="flex justify-between text-xs mb-1">
-        <span className="text-gray-400">{label}</span>
-        <span className="text-white">
+        <span className="text-foreground-secondary">{label}</span>
+        <span className="text-foreground">
           {isBpm ? `${Math.round(value)} BPM` : `${Math.round(percentage)}%`}
         </span>
       </div>
       {!isBpm && (
-        <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+        <div className="h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div
             className="h-full bg-green-500 rounded-full transition-all duration-500"
             style={{ width: `${percentage}%` }}

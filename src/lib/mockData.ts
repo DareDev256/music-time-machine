@@ -1,4 +1,4 @@
-import { SongData, SearchResult, TimelineDataPoint } from "@/types";
+import { SongData, SearchResult, TimelineDataPoint, ArtistData } from "@/types";
 
 // Generate timeline data for a song
 function generateTimeline(
@@ -1223,4 +1223,58 @@ export function getTrendingSongs(): SearchResult[] {
       releaseDate: song.releaseDate,
       spotifyUrl: song.spotify?.externalUrl || "",
     }));
+}
+
+// Aggregate artist data from mock songs
+export function getArtistDataBySlug(slug: string): ArtistData | null {
+  const artistSongs: SongData[] = [];
+  let artistName = "";
+  let artistImage = "";
+
+  for (const song of Object.values(mockSongs)) {
+    const songArtistSlug = song.artist.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    if (songArtistSlug === slug || songArtistSlug.startsWith(slug)) {
+      artistSongs.push(song);
+      if (!artistName) {
+        artistName = song.artist;
+        artistImage = song.albumArt;
+      }
+    }
+  }
+
+  if (artistSongs.length === 0) return null;
+
+  const topTracks = artistSongs.map((s) => ({
+    id: s.id,
+    title: s.title,
+    albumArt: s.albumArt,
+    streams: s.spotify?.totalStreams || "N/A",
+  }));
+
+  const albumSet = new Map<string, { name: string; year: string; albumArt: string }>();
+  for (const s of artistSongs) {
+    if (s.spotify?.album && !albumSet.has(s.spotify.album)) {
+      albumSet.set(s.spotify.album, {
+        name: s.spotify.album,
+        year: s.releaseDate.split("-")[0],
+        albumArt: s.albumArt,
+      });
+    }
+  }
+
+  return {
+    id: slug,
+    name: artistName,
+    slug,
+    image: artistImage,
+    genres: ["Pop"],
+    monthlyListeners: "50M+",
+    totalStreams: "10B+",
+    topTracks,
+    albums: Array.from(albumSet.values()),
+    careerTimeline: artistSongs.map((s) => ({
+      year: s.releaseDate.split("-")[0],
+      event: `Released "${s.title}"`,
+    })).sort((a, b) => a.year.localeCompare(b.year)),
+  };
 }

@@ -84,3 +84,45 @@ export interface SearchResult {
   releaseDate: string;
   spotifyUrl?: string;
 }
+
+export interface ComparisonInsight {
+  metric: string;
+  song1Value: string;
+  song2Value: string;
+  winner: "song1" | "song2" | "tie";
+}
+
+export interface ComparisonData {
+  song1: SongData;
+  song2: SongData;
+  insights: ComparisonInsight[];
+}
+
+export interface AlbumSummary {
+  name: string;
+  year: string;
+  albumArt: string;
+}
+
+export interface CareerEvent {
+  year: string;
+  event: string;
+}
+
+export interface ArtistData {
+  id: string;
+  name: string;
+  slug: string;
+  image: string;
+  genres: string[];
+  monthlyListeners: string;
+  totalStreams: string;
+  topTracks: {
+    id: string;
+    title: string;
+    albumArt: string;
+    streams: string;
+  }[];
+  albums: AlbumSummary[];
+  careerTimeline: CareerEvent[];
+}

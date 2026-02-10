@@ -1,20 +1,24 @@
-import { SongData, SearchResult, TimelineDataPoint } from "@/types";
-import { getSpotifyTrack, searchSpotifyTracks, isSpotifyConfigured } from "./spotify";
+import { SongData, SearchResult, TimelineDataPoint, ComparisonData, ArtistData } from "@/types";
+import { getSpotifyTrack, searchSpotifyTracks, getSpotifyArtist, isSpotifyConfigured } from "./spotify";
 import { getYouTubeVideoBySearch, isYouTubeConfigured } from "./youtube";
 import { getGeniusSongBySearch, getGeniusSong, searchGeniusSongs, isGeniusConfigured } from "./genius";
-import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending } from "./mockData";
+import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending, getArtistDataBySlug } from "./mockData";
+import { searchCache, SEARCH_TTL, songCache, SONG_TTL } from "./cache";
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true";
 
 export async function searchSongs(query: string): Promise<SearchResult[]> {
-  // Always check mock data first for exact matches
+  const cacheKey = `search:${query.toLowerCase()}`;
+  const cached = searchCache.get<SearchResult[]>(cacheKey);
+  if (cached) return cached;
+
   const mockResults = searchMockSongs(query);
 
   if (USE_MOCK_DATA) {
+    searchCache.set(cacheKey, mockResults, SEARCH_TTL);
     return mockResults;
   }
 
-  // Try Spotify first if configured
   if (isSpotifyConfigured()) {
     try {
       const spotifyResults = await searchSpotifyTracks(query, 10);
@@ -28,17 +32,15 @@ export async function searchSongs(query: string): Promise<SearchResult[]> {
       }));
 
       const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
-      const filtered = results.filter(
-        (r) => !mockIds.has(r.title.toLowerCase())
-      );
-
-      return [...mockResults, ...filtered].slice(0, 10);
+      const filtered = results.filter((r) => !mockIds.has(r.title.toLowerCase()));
+      const combined = [...mockResults, ...filtered].slice(0, 10);
+      searchCache.set(cacheKey, combined, SEARCH_TTL);
+      return combined;
     } catch (error) {
       console.error("Spotify search error:", error);
     }
   }
 
-  // Fall back to Genius search if Spotify unavailable
   if (isGeniusConfigured()) {
     try {
       const geniusResults = await searchGeniusSongs(query, 10);
@@ -51,53 +53,59 @@ export async function searchSongs(query: string): Promise<SearchResult[]> {
       }));
 
       const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
-      const filtered = results.filter(
-        (r) => !mockIds.has(r.title.toLowerCase())
-      );
-
-      return [...mockResults, ...filtered].slice(0, 10);
+      const filtered = results.filter((r) => !mockIds.has(r.title.toLowerCase()));
+      const combined = [...mockResults, ...filtered].slice(0, 10);
+      searchCache.set(cacheKey, combined, SEARCH_TTL);
+      return combined;
     } catch (error) {
       console.error("Genius search error:", error);
     }
   }
 
-  // Final fallback to mock data
+  searchCache.set(cacheKey, mockResults, SEARCH_TTL);
   return mockResults;
 }
 
 export async function getTrendingSongs(): Promise<SearchResult[]> {
-  // Trending always uses curated mock data
   return getMockTrending();
 }
 
 export async function getSongData(id: string): Promise<SongData | null> {
-  // Check if this is a mock song ID
+  const cacheKey = `song:${id}`;
+  const cached = songCache.get<SongData>(cacheKey);
+  if (cached) return cached;
+
   const mockSong = getMockSong(id);
 
   if (USE_MOCK_DATA) {
+    if (mockSong) songCache.set(cacheKey, mockSong, SONG_TTL);
     return mockSong;
   }
 
-  // If it's a Spotify ID, fetch real data
   if (id.startsWith("spotify:")) {
     const spotifyId = id.replace("spotify:", "");
-    return fetchRealSongData(spotifyId);
+    const result = await fetchRealSongData(spotifyId);
+    if (result) songCache.set(cacheKey, result, SONG_TTL);
+    return result;
   }
 
-  // If it's a Genius ID, fetch from Genius
   if (id.startsWith("genius:")) {
     const geniusId = parseInt(id.replace("genius:", ""), 10);
-    return fetchGeniusSongData(geniusId);
+    const result = await fetchGeniusSongData(geniusId);
+    if (result) songCache.set(cacheKey, result, SONG_TTL);
+    return result;
   }
 
-  // For mock song IDs, enrich with real data if APIs are configured
   if (mockSong) {
-    return enrichMockSong(mockSong);
+    const enriched = await enrichMockSong(mockSong);
+    songCache.set(cacheKey, enriched, SONG_TTL);
+    return enriched;
   }
 
-  // Try to fetch from Spotify directly
   if (isSpotifyConfigured()) {
-    return fetchRealSongData(id);
+    const result = await fetchRealSongData(id);
+    if (result) songCache.set(cacheKey, result, SONG_TTL);
+    return result;
   }
 
   return null;
@@ -108,17 +116,11 @@ async function fetchRealSongData(spotifyId: string): Promise<SongData | null> {
     const spotify = await getSpotifyTrack(spotifyId);
     if (!spotify) return null;
 
-    // Fetch from other platforms in parallel
     const [youtube, genius] = await Promise.all([
-      isYouTubeConfigured()
-        ? getYouTubeVideoBySearch(spotify.name, spotify.artist)
-        : null,
-      isGeniusConfigured()
-        ? getGeniusSongBySearch(spotify.name, spotify.artist)
-        : null,
+      isYouTubeConfigured() ? getYouTubeVideoBySearch(spotify.name, spotify.artist) : null,
+      isGeniusConfigured() ? getGeniusSongBySearch(spotify.name, spotify.artist) : null,
     ]);
 
-    // Generate timeline from available data
     const timeline = generateTimeline(spotify.releaseDate);
 
     return {
@@ -129,7 +131,7 @@ async function fetchRealSongData(spotifyId: string): Promise<SongData | null> {
       releaseDate: spotify.releaseDate,
       spotify,
       youtube,
-      billboard: null, // Billboard requires scraping, not implemented
+      billboard: null,
       genius,
       timeline,
     };
@@ -144,12 +146,10 @@ async function fetchGeniusSongData(geniusId: number): Promise<SongData | null> {
     const genius = await getGeniusSong(geniusId);
     if (!genius) return null;
 
-    // Fetch YouTube data in parallel
     const youtube = isYouTubeConfigured()
       ? await getYouTubeVideoBySearch(genius.title, genius.artist)
       : null;
 
-    // Generate timeline from release date
     const releaseDate = genius.releaseDate || new Date().toISOString().split("T")[0];
     const timeline = generateTimeline(releaseDate);
 
@@ -172,11 +172,9 @@ async function fetchGeniusSongData(geniusId: number): Promise<SongData | null> {
 }
 
 async function enrichMockSong(song: SongData): Promise<SongData> {
-  // Start with mock data
   const enriched = { ...song };
 
   try {
-    // Fetch real data from configured APIs in parallel
     const promises: Promise<void>[] = [];
 
     if (isSpotifyConfigured() && song.spotify?.id) {
@@ -211,6 +209,93 @@ async function enrichMockSong(song: SongData): Promise<SongData> {
   return enriched;
 }
 
+export async function compareSongs(id1: string, id2: string): Promise<ComparisonData | null> {
+  const [song1, song2] = await Promise.all([getSongData(id1), getSongData(id2)]);
+  if (!song1 || !song2) return null;
+
+  const insights: ComparisonData["insights"] = [];
+
+  if (song1.spotify && song2.spotify) {
+    const s1 = parseMetric(song1.spotify.totalStreams);
+    const s2 = parseMetric(song2.spotify.totalStreams);
+    insights.push({
+      metric: "Spotify Streams",
+      song1Value: song1.spotify.totalStreams,
+      song2Value: song2.spotify.totalStreams,
+      winner: s1 >= s2 ? "song1" : "song2",
+    });
+    insights.push({
+      metric: "Popularity Score",
+      song1Value: `${song1.spotify.popularity}/100`,
+      song2Value: `${song2.spotify.popularity}/100`,
+      winner: song1.spotify.popularity >= song2.spotify.popularity ? "song1" : "song2",
+    });
+  }
+
+  if (song1.youtube && song2.youtube) {
+    const v1 = parseMetric(song1.youtube.viewCount);
+    const v2 = parseMetric(song2.youtube.viewCount);
+    insights.push({
+      metric: "YouTube Views",
+      song1Value: song1.youtube.viewCount,
+      song2Value: song2.youtube.viewCount,
+      winner: v1 >= v2 ? "song1" : "song2",
+    });
+  }
+
+  if (song1.billboard && song2.billboard) {
+    insights.push({
+      metric: "Billboard Peak",
+      song1Value: `#${song1.billboard.peakPosition}`,
+      song2Value: `#${song2.billboard.peakPosition}`,
+      winner: song1.billboard.peakPosition <= song2.billboard.peakPosition ? "song1" : "song2",
+    });
+    insights.push({
+      metric: "Weeks on Chart",
+      song1Value: `${song1.billboard.weeksOnChart}`,
+      song2Value: `${song2.billboard.weeksOnChart}`,
+      winner: song1.billboard.weeksOnChart >= song2.billboard.weeksOnChart ? "song1" : "song2",
+    });
+  }
+
+  if (song1.genius && song2.genius) {
+    const p1 = parseMetric(song1.genius.pageViews);
+    const p2 = parseMetric(song2.genius.pageViews);
+    insights.push({
+      metric: "Genius Page Views",
+      song1Value: song1.genius.pageViews,
+      song2Value: song2.genius.pageViews,
+      winner: p1 >= p2 ? "song1" : "song2",
+    });
+  }
+
+  return { song1, song2, insights };
+}
+
+export async function getArtistData(slug: string): Promise<ArtistData | null> {
+  const mockArtist = getArtistDataBySlug(slug);
+  if (mockArtist) return mockArtist;
+
+  if (isSpotifyConfigured()) {
+    try {
+      const artist = await getSpotifyArtist(slug);
+      if (artist) return artist;
+    } catch (error) {
+      console.error("Error fetching artist from Spotify:", error);
+    }
+  }
+
+  return null;
+}
+
+function parseMetric(value: string): number {
+  const num = parseFloat(value);
+  if (value.endsWith("B")) return num * 1_000_000_000;
+  if (value.endsWith("M")) return num * 1_000_000;
+  if (value.endsWith("K")) return num * 1_000;
+  return num || 0;
+}
+
 function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineDataPoint[] {
   const timeline: TimelineDataPoint[] = [];
   const start = new Date(releaseDate);
@@ -222,16 +307,11 @@ function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineD
   while (currentDate <= now && month < 48) {
     const spotifyGrowth = Math.min(
       100,
-      Math.floor(
-        20 + 80 * (1 - Math.exp(-month / peakMonth)) + Math.random() * 10 - month * 0.5
-      )
+      Math.floor(20 + 80 * (1 - Math.exp(-month / peakMonth)) + Math.random() * 10 - month * 0.5)
     );
-
     const youtubeGrowth = Math.min(
       100,
-      Math.floor(
-        15 + 85 * (1 - Math.exp(-month / (peakMonth + 1))) + Math.random() * 8 - month * 0.3
-      )
+      Math.floor(15 + 85 * (1 - Math.exp(-month / (peakMonth + 1))) + Math.random() * 8 - month * 0.3)
     );
 
     let billboardPos = null;
