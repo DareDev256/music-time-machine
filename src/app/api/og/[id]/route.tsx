@@ -60,6 +60,7 @@ export async function GET(
           }}
         >
           {song.albumArt ? (
+            /* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text -- @vercel/og ImageResponse requires <img>, not next/image */
             <img
               src={song.albumArt}
               width={400}
