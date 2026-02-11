@@ -13,6 +13,17 @@ interface AudioPlayerProps {
   spotifyUrl?: string;
 }
 
+const ALLOWED_AUDIO_ORIGINS = ["https://p.scdn.co"];
+
+function isAllowedAudioUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    return ALLOWED_AUDIO_ORIGINS.some((origin) => parsed.origin === origin);
+  } catch {
+    return false;
+  }
+}
+
 export default function AudioPlayer({
   previewUrl,
   title,
@@ -21,6 +32,7 @@ export default function AudioPlayer({
   spotifyUrl,
 }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const safePreviewUrl = isAllowedAudioUrl(previewUrl) ? previewUrl : "";
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(30);
@@ -80,7 +92,7 @@ export default function AudioPlayer({
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <audio ref={audioRef} src={previewUrl} preload="metadata" />
+      <audio ref={audioRef} src={safePreviewUrl} preload="metadata" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center gap-3 sm:gap-4">

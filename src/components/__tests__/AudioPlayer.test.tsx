@@ -19,7 +19,7 @@ beforeEach(() => {
 });
 
 const defaultProps = {
-  previewUrl: "https://example.com/preview.mp3",
+  previewUrl: "https://p.scdn.co/mp3-preview/abc123",
   title: "Bohemian Rhapsody",
   artist: "Queen",
   albumArt: "https://example.com/album.jpg",
@@ -53,7 +53,7 @@ describe("AudioPlayer", () => {
 
     const audio = container.querySelector("audio");
     expect(audio).toBeInTheDocument();
-    expect(audio).toHaveAttribute("src", "https://example.com/preview.mp3");
+    expect(audio).toHaveAttribute("src", "https://p.scdn.co/mp3-preview/abc123");
   });
 
   it("renders Spotify link when spotifyUrl is provided", () => {

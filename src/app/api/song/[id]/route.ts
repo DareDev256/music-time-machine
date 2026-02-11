@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSongData, getConfiguredApis } from "@/lib/dataFetcher";
+import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
 
 function isValidId(id: string): boolean {
   // Allow alphanumeric, dashes, colons (for spotify:xxx, genius:xxx format)
@@ -10,6 +11,11 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const clientIp = extractClientIp(request);
+  if (!checkRouteLimit("song", clientIp)) {
+    return rateLimitResponse();
+  }
+
   try {
     const { id } = await params;
 

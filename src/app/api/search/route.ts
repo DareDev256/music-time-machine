@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { searchSongs, getTrendingSongs, getConfiguredApis } from "@/lib/dataFetcher";
+import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
 
 function sanitizeQuery(input: string): string {
   return input
@@ -10,6 +11,10 @@ function sanitizeQuery(input: string): string {
 }
 
 export async function GET(request: NextRequest) {
+  const clientIp = extractClientIp(request);
+  if (!checkRouteLimit("search", clientIp)) {
+    return rateLimitResponse();
+  }
   const searchParams = request.nextUrl.searchParams;
   const rawQuery = searchParams.get("q");
 

@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { compareSongs } from "@/lib/dataFetcher";
+import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
 
 export async function GET(request: NextRequest) {
+  const clientIp = extractClientIp(request);
+  if (!checkRouteLimit("compare", clientIp)) {
+    return rateLimitResponse();
+  }
   const searchParams = request.nextUrl.searchParams;
   const song1 = searchParams.get("song1");
   const song2 = searchParams.get("song2");

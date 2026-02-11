@@ -1,14 +1,31 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 import { getSongData } from "@/lib/dataFetcher";
+import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
 
 export const runtime = "edge";
+
+function isValidId(id: string): boolean {
+  return /^[a-zA-Z0-9\-:]+$/.test(id) && id.length <= 200;
+}
 
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const clientIp = extractClientIp(request);
+  if (!checkRouteLimit("og", clientIp)) {
+    return rateLimitResponse();
+  }
+
   const { id } = await params;
+
+  if (!isValidId(id)) {
+    return new Response(JSON.stringify({ error: "Invalid song ID" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 
   const song = await getSongData(id);
   if (!song) {

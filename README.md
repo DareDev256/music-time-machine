@@ -7,7 +7,7 @@
 Search any song. See its complete performance timeline across Spotify, YouTube, Billboard, and Genius.
 Compare tracks head-to-head. Explore artist discographies. Preview audio. Share discoveries.
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.1-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -189,8 +189,10 @@ See [docs/API_SETUP.md](docs/API_SETUP.md) for step-by-step configuration with t
 | **HTTP Headers** | CSP, HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy |
 | **Input Validation** | Regex ID check (`/^[a-zA-Z0-9\-:]+$/`), 200-char max on all API routes |
 | **Query Sanitization** | HTML tag stripping, dangerous character removal (`< > " ' &`), length truncation |
-| **Rate Limiting** | Token bucket per API — prevents abuse and quota exhaustion |
+| **API Rate Limiting** | Per-IP token bucket on all API routes — 429 with Retry-After on abuse |
+| **External Rate Limiting** | Token bucket per upstream API — prevents quota exhaustion |
 | **Response Caching** | TTL-based cache reduces external API surface area |
+| **Audio URL Validation** | Preview URLs validated against Spotify CDN origin allowlist |
 | **Image Allowlist** | Remote patterns restricted to Spotify, YouTube, Genius CDNs only |
 | **Media Sources** | CSP `media-src` locked to Spotify preview CDN (`p.scdn.co`) |
 

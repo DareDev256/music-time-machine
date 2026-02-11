@@ -52,3 +52,43 @@ export function checkYouTubeLimit(): boolean {
 export function checkGeniusLimit(): boolean {
   return tryConsume("genius", 50, 60_000); // 50 requests per minute
 }
+
+// --- API route-level rate limiting (per-IP) ---
+
+const ROUTE_LIMITS = {
+  search: { maxTokens: 20, windowMs: 60_000 },   // 20 searches/min
+  song: { maxTokens: 30, windowMs: 60_000 },      // 30 lookups/min
+  compare: { maxTokens: 15, windowMs: 60_000 },   // 15 comparisons/min
+  artist: { maxTokens: 30, windowMs: 60_000 },    // 30 lookups/min
+  og: { maxTokens: 10, windowMs: 60_000 },        // 10 OG images/min
+} as const;
+
+export type RouteName = keyof typeof ROUTE_LIMITS;
+
+export function extractClientIp(request: Request): string {
+  const headers = request.headers;
+  const forwarded = headers.get("x-forwarded-for");
+  if (forwarded) {
+    return forwarded.split(",")[0].trim();
+  }
+  return headers.get("x-real-ip") ?? "unknown";
+}
+
+export function checkRouteLimit(route: RouteName, clientIp: string): boolean {
+  const config = ROUTE_LIMITS[route];
+  const key = `route:${route}:${clientIp}`;
+  return tryConsume(key, config.maxTokens, config.windowMs);
+}
+
+export function rateLimitResponse(): Response {
+  return new Response(
+    JSON.stringify({ error: "Too many requests. Please try again later." }),
+    {
+      status: 429,
+      headers: {
+        "Content-Type": "application/json",
+        "Retry-After": "60",
+      },
+    }
+  );
+}
