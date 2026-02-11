@@ -2,10 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.0.3] - 2026-02-11
+
+### Changed
+- **README.md elevated to portfolio-grade** — Centered hero with navigation links (Live Demo · API Guide · Changelog), "Why This Exists" narrative section, Quick Start promoted above features for faster onboarding, improved architecture diagram with per-API rate limits inline, environment variable reference table with direct links to provider dashboards, en-dash typography, interpunct-separated demo song list, and tighter contributing section. Designed for two audiences: recruiters (10-second scan) and engineers (deep dive)
+
+---
+
 ## [1.0.2] - 2026-02-11
 
 ### Changed
-- **README.md rewritten to portfolio-grade** — Compelling hero tagline, clickable badge links, scannable feature/platform tables, ASCII architecture diagram with data flow, tech stack organized by layer, streamlined quick-start section, security hardening table, and condensed song catalog. Restructured for two audiences: recruiters (10-second scan) and engineers (deep dive)
+- **README.md rewritten** — Feature/platform tables, ASCII architecture diagram, tech stack by layer, security hardening table, condensed song catalog
 
 ---
 
