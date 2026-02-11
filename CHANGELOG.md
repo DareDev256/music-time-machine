@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.0.2] - 2026-02-11
+
+### Changed
+- **README.md rewritten to portfolio-grade** — Compelling hero tagline, clickable badge links, scannable feature/platform tables, ASCII architecture diagram with data flow, tech stack organized by layer, streamlined quick-start section, security hardening table, and condensed song catalog. Restructured for two audiences: recruiters (10-second scan) and engineers (deep dive)
+
+---
+
 ## [1.0.1] - 2026-02-11
 
 ### Fixed

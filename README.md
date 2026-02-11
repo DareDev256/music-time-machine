@@ -1,68 +1,103 @@
 # Music Time Machine
 
-A music intelligence dashboard that lets you search any song and explore its complete performance timeline across Spotify, YouTube, Billboard, and Genius. Compare songs head-to-head, explore artist discographies, preview audio, and share discoveries.
+**Search any song. See its journey across the entire music ecosystem.**
 
-![Version](https://img.shields.io/badge/version-v1.0.1-blue?style=flat-square)
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss)
-![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat-square&logo=vercel)
+A full-stack music intelligence dashboard that unifies real-time data from Spotify, YouTube, Billboard, and Genius into a single interactive timeline. Compare tracks head-to-head, explore artist discographies, preview audio, and share discoveries — all with production-grade security and zero-config setup.
 
-**Live Demo:** [music-time-machine.vercel.app](https://music-time-machine.vercel.app)
+[![Version](https://img.shields.io/badge/version-1.0.2-blue?style=flat-square)](CHANGELOG.md)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
+[![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat-square&logo=vercel)](https://music-time-machine.vercel.app)
+
+**[Live Demo](https://music-time-machine.vercel.app)**
 
 ---
 
-## Features
+## What It Does
 
-### Core
-- **Song Search** — Real-time autocomplete with debounced API calls, keyboard navigation, instant results
-- **Performance Timeline** — Interactive multi-line chart (Recharts) tracking Spotify, YouTube, and Billboard performance over time
-- **Time Machine** — "What was #1 on your birthday?" with historical Billboard data (2019-2024)
+| Feature | Description |
+|---------|-------------|
+| **Song Search** | Real-time autocomplete with debounced API calls, keyboard navigation (arrow keys + enter), instant results |
+| **Performance Timeline** | Interactive multi-line chart tracking Spotify streams, YouTube views, and Billboard position over time |
+| **Time Machine** | "What was #1 on your birthday?" — historical Billboard lookup (2019-2024) |
+| **Audio Preview** | 30-second Spotify clips with seekable progress bar, album art, play/pause controls |
+| **Song Comparison** | Side-by-side metrics battle with winner highlighting across streams, views, chart position, and page views |
+| **Artist Pages** | Top tracks, discography grid, career timeline, and aggregate stats |
+| **Social Sharing** | Share modal (copy link, X, Facebook) with dynamic OG image generation via Edge Runtime |
+| **Theme Toggle** | Light/dark mode with Apple Music-inspired design tokens and FOUC prevention |
 
-### v1.0 New
-- **Audio Preview** — 30-second Spotify preview clips with play/pause, seekable progress bar, and album art
-- **Song Comparison** — Side-by-side metrics battle (streams, views, chart position, page views) with winner highlighting
-- **Artist Pages** — Top tracks, discography grid, career timeline, and aggregate stats
-- **Social Sharing** — Share modal (copy link, X, Facebook) with dynamic OG image generation
-- **Theme Toggle** — Light/dark mode with Apple Music-inspired design tokens and FOUC prevention
+### Platform Coverage
 
-### Platform Integration
-
-| Platform | Metrics |
-|----------|---------|
-| **Spotify** | Total streams, popularity (0-100), playlist count, audio features (danceability, energy, valence, tempo), 30s preview |
+| Platform | What You Get |
+|----------|-------------|
+| **Spotify** | Total streams, popularity score, playlist count, audio features (danceability, energy, valence, tempo), 30s preview |
 | **YouTube** | Video views, likes, comments, thumbnail, publish date, channel info |
-| **Billboard** | Peak position, weeks on chart, entry position/date, chart movement history |
+| **Billboard** | Peak position, weeks on chart, entry date, chart movement history |
 | **Genius** | Lyrics link, page views, annotation count, description, release context |
+
+---
+
+## Architecture
+
+The app uses a **hybrid data strategy** — works out of the box with curated mock data, enriches with real APIs when configured:
+
+```
+Client Request
+     │
+     ▼
+API Route ──── Validate input (regex ID check, 200-char limit)
+     │          Sanitize query (strip HTML, remove < > " ' &)
+     │
+     ▼
+dataFetcher ──── TTL Cache hit? ──── YES ──► Return cached
+     │
+     │ MISS
+     ▼
+USE_MOCK_DATA?
+     │
+  ┌──┴──┐
+  YES   NO
+  │     │
+  ▼     ▼
+Mock   Real APIs (rate-limited per token bucket)
+Data   ┌──────┬──────────┬────────┐
+       │ Spotify  YouTube   Genius │
+       └──────┴──────────┴────────┘
+              │
+              ▼
+        Merge with mock fallback
+              │
+              ▼
+        Cache result ──► Return
+```
+
+**Key engineering decisions:**
+- **Graceful degradation** — No API keys? App still works perfectly with 18 curated songs
+- **Token bucket rate limiting** — Spotify 30 req/30s, YouTube 100 req/hr, Genius 50 req/min
+- **TTL caching** — Search results: 5 min, song data: 30 min (prevents redundant API calls)
 
 ---
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | Next.js 16 (App Router, Turbopack) |
-| **Runtime** | React 19 with `use()` hook for async params |
-| **Language** | TypeScript 5 (strict mode) |
-| **Styling** | Tailwind CSS 4 (`@theme inline` design tokens) |
-| **Charts** | Recharts 3 (responsive, customizable) |
-| **Animations** | Framer Motion 11 |
-| **OG Images** | @vercel/og (Edge Runtime) |
-| **Icons** | Lucide React |
-| **Testing** | Vitest 3 + Testing Library + jsdom |
-| **Deployment** | Vercel (Edge Functions) |
+| Layer | Technology |
+|-------|-----------|
+| Framework | **Next.js 16** — App Router, Turbopack, Edge Runtime |
+| Runtime | **React 19** — `use()` hook for async params |
+| Language | **TypeScript 5** — Strict mode |
+| Styling | **Tailwind CSS 4** — `@theme inline` design tokens (light/dark) |
+| Charts | **Recharts 3** — Multi-line normalized timeline |
+| Animation | **Framer Motion 11** — Page transitions, card animations |
+| OG Images | **@vercel/og** — Dynamic social preview images at the edge |
+| Icons | **Lucide React** |
+| Testing | **Vitest 3** + Testing Library + jsdom |
+| Deploy | **Vercel** — Edge Functions, serverless |
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ (20+ recommended)
-- npm, yarn, or pnpm
-
-### Installation
+## Quick Start
 
 ```bash
 git clone https://github.com/DareDev256/music-time-machine.git
@@ -71,11 +106,11 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+Open [http://localhost:3000](http://localhost:3000). The app works immediately with mock data — no API keys required.
 
-### Environment Variables
+### Environment Variables (optional)
 
-Create `.env.local` in the project root and configure:
+To enable real API data, create `.env.local`:
 
 ```env
 SPOTIFY_CLIENT_ID=your_spotify_client_id
@@ -83,12 +118,12 @@ SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
 YOUTUBE_API_KEY=your_youtube_api_key
 GENIUS_ACCESS_TOKEN=your_genius_access_token
 
-# 'true' = always use mock data (default, no API keys needed)
-# 'false' = use real APIs when available, fall back to mock
+# 'true' = mock data only (default, no keys needed)
+# 'false' = real APIs with mock fallback
 USE_MOCK_DATA=true
 ```
 
-See [docs/API_SETUP.md](docs/API_SETUP.md) for detailed API configuration instructions.
+See [docs/API_SETUP.md](docs/API_SETUP.md) for step-by-step API configuration.
 
 ---
 
@@ -98,166 +133,79 @@ See [docs/API_SETUP.md](docs/API_SETUP.md) for detailed API configuration instru
 src/
 ├── app/
 │   ├── page.tsx                    # Home — search + time machine + trending
-│   ├── layout.tsx                  # Root layout (ThemeProvider, Navigation, FOUC script)
-│   ├── globals.css                 # Tailwind + Apple Music design tokens (light/dark)
-│   ├── error.tsx                   # Route-level error boundary with retry
-│   ├── global-error.tsx            # Root layout error boundary
+│   ├── layout.tsx                  # Root layout (ThemeProvider, nav, FOUC script)
+│   ├── globals.css                 # Tailwind + Apple Music design tokens
+│   ├── error.tsx / global-error.tsx # Error boundaries with retry
 │   ├── song/[id]/page.tsx          # Song detail dashboard
 │   ├── compare/page.tsx            # Side-by-side song comparison
-│   ├── artist/[id]/page.tsx        # Artist profile (tracks, discography, timeline)
+│   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/
-│       ├── search/route.ts         # GET /api/search?q=query (with input sanitization)
-│       ├── song/[id]/route.ts      # GET /api/song/:id (with ID validation)
+│       ├── search/route.ts         # GET /api/search?q=query
+│       ├── song/[id]/route.ts      # GET /api/song/:id
 │       ├── compare/route.ts        # GET /api/compare?song1=x&song2=y
 │       ├── artist/[id]/route.ts    # GET /api/artist/:id
-│       └── og/[id]/route.tsx       # GET /api/og/:id — dynamic OG image (Edge Runtime)
-├── components/
-│   ├── ThemeProvider.tsx           # React context for light/dark theming
-│   ├── Navigation.tsx              # Fixed nav bar with scroll blur + theme toggle
-│   ├── SearchBar.tsx               # Autocomplete with keyboard nav (arrow keys + enter)
-│   ├── DateSearch.tsx              # "What was #1" time machine input
-│   ├── SongHeader.tsx              # Song info + quick stats + external links
-│   ├── AudioPlayer.tsx             # Fixed-bottom HTML5 audio player (30s previews)
-│   ├── ComparisonView.tsx          # Side-by-side metric cards with winner badges
-│   ├── ShareCard.tsx               # Share modal (copy link, X, Facebook)
-│   ├── ArtistHeader.tsx            # Artist image, genres, aggregate stats
-│   ├── SafeImage.tsx               # next/image wrapper with fallback on error
-│   ├── TimelineChart.tsx           # Multi-line Recharts performance graph
-│   ├── PlatformCard.tsx            # Reusable card wrapper + StatRow
-│   ├── SpotifyCard.tsx             # Spotify metrics + audio feature bars
-│   ├── YouTubeCard.tsx             # YouTube video stats
-│   ├── BillboardCard.tsx           # Billboard chart history
-│   └── GeniusCard.tsx              # Genius lyrics + annotations
+│       └── og/[id]/route.tsx       # Dynamic OG image (Edge Runtime)
+├── components/                     # 16 single-responsibility UI components
 ├── lib/
-│   ├── dataFetcher.ts              # Unified data layer (mock + real API + cache)
-│   ├── mockData.ts                 # 18 curated songs with full mock data
+│   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
+│   ├── mockData.ts                 # 18 curated songs with full metrics
 │   ├── cache.ts                    # TTL cache with max-size eviction
 │   ├── rateLimit.ts                # Token bucket rate limiter per API
-│   ├── spotify.ts                  # Spotify Web API client (OAuth 2.0)
-│   ├── youtube.ts                  # YouTube Data API v3 client
-│   ├── genius.ts                   # Genius API client
-│   └── __tests__/
-│       ├── cache.test.ts           # TTLCache unit tests
-│       └── dataFetcher.test.ts     # Data fetcher integration tests
+│   ├── spotify.ts / youtube.ts / genius.ts  # API clients
+│   └── __tests__/                  # Unit + integration tests
 └── types/
-    └── index.ts                    # TypeScript interfaces (SongData, ArtistData, ComparisonData, etc.)
-```
-
----
-
-## API Architecture
-
-The app uses a **hybrid data strategy** — mock data works out of the box, real APIs enrich when configured:
-
-```
-Request → API Route (validate + sanitize)
-            ↓
-        dataFetcher.ts → Check cache (TTL)
-            ↓                    ↓
-        Cache HIT          Cache MISS
-        (return)               ↓
-                    Check USE_MOCK_DATA
-                    ↓                ↓
-              true: mock      false: real APIs
-                                     ↓
-                         ┌───────────┼───────────┐
-                     Spotify    YouTube      Genius
-                     (rate limited per token bucket)
-                         └───────────┴───────────┘
-                                     ↓
-                          Merge with mock fallback
-                                     ↓
-                            Set cache → Return
+    └── index.ts                    # TypeScript interfaces
 ```
 
 ---
 
 ## Security
 
-- **HTTP Security Headers** — CSP, HSTS (2-year max-age + preload), X-Content-Type-Options, X-Frame-Options (DENY), Referrer-Policy, Permissions-Policy. Configured in `next.config.ts`
-- **Input Validation** — All API routes validate IDs with regex (`/^[a-zA-Z0-9\-:]+$/`) and enforce 200-char max length
-- **Query Sanitization** — Search endpoint strips HTML tags, removes dangerous characters (`< > " ' &`), and truncates
-- **Rate Limiting** — Token bucket algorithm per API: Spotify 30 req/30s, YouTube 100 req/hr, Genius 50 req/min
-- **Response Caching** — TTL cache prevents redundant API calls (search: 5 min, song data: 30 min)
-- **Image Safety** — Remote patterns whitelisted for Spotify, YouTube, and Genius CDNs only
-- **Media Sources** — CSP `media-src` restricted to Spotify preview CDN (`p.scdn.co`)
+This project implements production-grade security hardening:
+
+| Layer | Implementation |
+|-------|---------------|
+| **HTTP Headers** | CSP, HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options (DENY), Referrer-Policy, Permissions-Policy |
+| **Input Validation** | Regex ID validation (`/^[a-zA-Z0-9\-:]+$/`), 200-char max on all API routes |
+| **Query Sanitization** | HTML tag stripping, dangerous character removal (`< > " ' &`), length truncation |
+| **Rate Limiting** | Token bucket per API — prevents abuse and quota exhaustion |
+| **Caching** | TTL-based response cache — reduces external API surface |
+| **Image Allowlist** | Remote patterns restricted to Spotify, YouTube, and Genius CDNs only |
+| **Media Sources** | CSP `media-src` locked to Spotify preview CDN (`p.scdn.co`) |
 
 ---
 
 ## Testing
 
 ```bash
-# Run all tests
-npm test
-
-# Run in watch mode
-npx vitest --watch
+npm test              # Run all tests
+npx vitest --watch    # Watch mode
 ```
 
-**Stack:** Vitest 3 + @testing-library/react + @testing-library/jest-dom + jsdom
-
-**Coverage:**
-- `cache.ts` — TTL expiry, max-size eviction, CRUD operations
-- `dataFetcher.ts` — Search by title/artist, mock data retrieval, unknown ID handling
-
-Tests mock all external API clients (Spotify, YouTube, Genius) to run fast and offline.
+**Coverage:** TTLCache (expiry, eviction, CRUD) and dataFetcher (search, retrieval, fallback). All external APIs mocked for fast, offline execution.
 
 ---
 
 ## Available Songs
 
-18 curated songs spanning 2014-2024:
+18 curated tracks spanning 2014-2024, each with full cross-platform mock data:
 
-| Song | Artist | Year | Peak |
-|------|--------|------|------|
-| Blinding Lights | The Weeknd | 2019 | #1 |
-| bad guy | Billie Eilish | 2019 | #1 |
-| Shape of You | Ed Sheeran | 2017 | #1 |
-| As It Was | Harry Styles | 2022 | #1 |
-| Anti-Hero | Taylor Swift | 2022 | #1 |
-| Uptown Funk | Mark Ronson ft. Bruno Mars | 2014 | #1 |
-| drivers license | Olivia Rodrigo | 2021 | #1 |
-| Dance Monkey | Tones and I | 2019 | #4 |
-| Old Town Road | Lil Nas X ft. Billy Ray Cyrus | 2019 | #1 |
-| Levitating | Dua Lipa | 2020 | #2 |
-| Flowers | Miley Cyrus | 2023 | #1 |
-| vampire | Olivia Rodrigo | 2023 | #1 |
-| Cruel Summer | Taylor Swift | 2019 | #1 |
-| Espresso | Sabrina Carpenter | 2024 | #1 |
-| TEXAS HOLD 'EM | Beyonce | 2024 | #1 |
-| Die With A Smile | Lady Gaga & Bruno Mars | 2024 | #1 |
-| APT. | ROSE & Bruno Mars | 2024 | #1 |
+> Blinding Lights, bad guy, Shape of You, As It Was, Anti-Hero, Uptown Funk, drivers license, Dance Monkey, Old Town Road, Levitating, Flowers, vampire, Cruel Summer, Espresso, TEXAS HOLD 'EM, Die With A Smile, APT.
 
 ---
 
 ## Roadmap
 
-### Completed
-- [x] Real Spotify/YouTube/Genius API integration
-- [x] Date-based search ("What was #1 on my birthday?")
-- [x] Mobile responsive design
-- [x] Expanded song catalog (18 songs)
-- [x] Song comparison (side-by-side metrics)
-- [x] Artist pages (top tracks, discography, career timeline)
-- [x] Social sharing (OG images, share modal)
-- [x] Audio preview (Spotify 30s clips)
-- [x] Theme toggle (light/dark)
-- [x] Security hardening (headers, validation, rate limiting, caching)
-- [x] Testing infrastructure (Vitest + Testing Library)
-
-### Planned
 - [ ] Billboard chart scraping (historical data beyond mock)
 - [ ] User accounts + saved songs
 - [ ] Real-time trending from Spotify/YouTube
 - [ ] Playlist generation from comparison results
-- [ ] Audio feature visualization (radar chart)
+- [ ] Audio feature radar chart visualization
 - [ ] PWA support (offline mode, install prompt)
 
 ---
 
 ## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -267,15 +215,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for detailed release history.
-
----
-
 ## License
 
-MIT License - feel free to use this project for your own purposes.
+MIT
 
 ---
 
