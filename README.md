@@ -7,7 +7,7 @@
 Search any song. See its complete performance timeline across Spotify, YouTube, Billboard, and Genius.
 Compare tracks head-to-head. Explore artist discographies. Preview audio. Share discoveries.
 
-[![Version](https://img.shields.io/badge/version-1.0.3-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -54,6 +54,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with curated moc
 | **Artist Pages** | Top tracks, discography grid, career timeline, aggregate stats |
 | **Audio Preview** | 30-second Spotify clips with seekable progress bar and album art |
 | **Social Sharing** | Share modal (copy link, X, Facebook) with dynamic OG image generation via Edge Runtime |
+| **Audio DNA Radar** | Interactive radar chart visualizing danceability, energy, happiness, and tempo with auto-detected "vibe" tag |
 | **Theme Toggle** | Light/dark mode with Apple Music–inspired design tokens and FOUC prevention |
 
 ### Platform Coverage
@@ -140,7 +141,7 @@ src/
 │       ├── compare/route.ts        # GET /api/compare?song1=x&song2=y
 │       ├── artist/[id]/route.ts    # GET /api/artist/:id
 │       └── og/[id]/route.tsx       # Dynamic OG image (Edge Runtime)
-├── components/                     # 16 single-responsibility UI components
+├── components/                     # 17 single-responsibility UI components
 ├── lib/
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
 │   ├── mockData.ts                 # 18 curated songs with full platform metrics
@@ -220,7 +221,7 @@ npx vitest --watch    # Watch mode
 - [ ] User accounts + saved songs
 - [ ] Real-time trending from Spotify/YouTube APIs
 - [ ] Playlist generation from comparison results
-- [ ] Audio feature radar chart visualization
+- [x] Audio feature radar chart visualization
 - [ ] PWA support (offline mode, install prompt)
 
 ---

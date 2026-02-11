@@ -15,6 +15,15 @@ import AudioPlayer from "@/components/AudioPlayer";
 import ShareCard from "@/components/ShareCard";
 import SearchBar from "@/components/SearchBar";
 
+const AudioRadarChart = dynamic(() => import("@/components/AudioRadarChart"), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-card border border-border rounded-2xl p-4 sm:p-6 h-64 flex items-center justify-center">
+      <Loader2 className="w-6 h-6 text-accent animate-spin" />
+    </div>
+  ),
+});
+
 const TimelineChart = dynamic(() => import("@/components/TimelineChart"), {
   ssr: false,
   loading: () => (
@@ -147,6 +156,18 @@ export default function SongPage({ params }: PageProps) {
             transition={{ duration: 0.4, delay: 0.15 }}
           >
             <TimelineChart data={song.timeline} />
+          </motion.section>
+        )}
+
+        {/* Audio DNA Radar */}
+        {song.spotify?.audioFeatures && (
+          <motion.section
+            className="mb-6 sm:mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <AudioRadarChart audioFeatures={song.spotify.audioFeatures} />
           </motion.section>
         )}
 
