@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { X, Link2, Check, Share2 } from "lucide-react";
 import { SongData } from "@/types";
+import SafeImage from "./SafeImage";
 
 interface ShareCardProps {
   song: SongData;
@@ -78,7 +79,7 @@ export default function ShareCard({ song, onClose }: ShareCardProps) {
         <div className="bg-background-secondary rounded-xl p-3 mb-6 flex items-center gap-3">
           <div className="w-12 h-12 rounded-lg bg-background-secondary flex-shrink-0 overflow-hidden">
             {song.albumArt && (
-              <img src={song.albumArt} alt={song.title} className="w-full h-full object-cover" />
+              <SafeImage src={song.albumArt} alt={song.title} width={48} height={48} className="w-full h-full object-cover" />
             )}
           </div>
           <div className="min-w-0">

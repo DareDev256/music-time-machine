@@ -301,7 +301,7 @@ function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineD
   const start = new Date(releaseDate);
   const now = new Date();
 
-  let currentDate = new Date(start);
+  const currentDate = new Date(start);
   let month = 0;
 
   while (currentDate <= now && month < 48) {

@@ -2,7 +2,7 @@
 
 A music intelligence dashboard that lets you search any song and explore its complete performance timeline across Spotify, YouTube, Billboard, and Genius. Compare songs head-to-head, explore artist discographies, preview audio, and share discoveries.
 
-![Version](https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v1.0.1-blue?style=flat-square)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)

@@ -10,7 +10,7 @@ function generateTimeline(
   const now = new Date();
 
   // Generate monthly data points
-  let currentDate = new Date(start);
+  const currentDate = new Date(start);
   let month = 0;
 
   while (currentDate <= now && month < 48) {

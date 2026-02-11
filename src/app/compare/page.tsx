@@ -123,17 +123,19 @@ function SongSelector({
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
   const [selected, setSelected] = useState<SearchResult | null>(null);
 
-  useEffect(() => {
-    if (!query.trim()) {
+  const handleQueryChange = (value: string) => {
+    setQuery(value);
+    if (!value.trim()) {
       setResults([]);
-      return;
     }
+  };
+
+  useEffect(() => {
+    if (!query.trim()) return;
 
     const timeout = setTimeout(async () => {
-      setIsSearching(true);
       try {
         const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
         const data = await res.json();
@@ -141,8 +143,6 @@ function SongSelector({
         setIsOpen(true);
       } catch {
         setResults([]);
-      } finally {
-        setIsSearching(false);
       }
     }, 300);
 
@@ -213,7 +213,7 @@ function SongSelector({
           <input
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => handleQueryChange(e.target.value)}
             placeholder="Search for a song..."
             className="w-full pl-10 pr-4 py-3 bg-background-secondary border border-border rounded-xl text-foreground placeholder-foreground-secondary text-sm focus:outline-none focus:border-accent"
           />

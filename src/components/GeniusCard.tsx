@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText, MessageSquare, Eye, ExternalLink } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
 import { GeniusData } from "@/types";
 import PlatformCard, { StatRow } from "./PlatformCard";
 
