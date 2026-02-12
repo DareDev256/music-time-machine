@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.3.2] - 2026-02-12
+
+### Added
+- **Mock data module test suite** (`src/lib/__tests__/mockData.test.ts`) — 18 tests covering catalog integrity (song count, required fields, audio features for recommendations), `searchSongs` (exact title, partial match, artist match, empty results, SearchResult shape), `getSongById` (valid/invalid/empty ID), `getTrendingSongs` (count cap, shape), and `getArtistDataBySlug` (slug lookup, top tracks population, career timeline sorting, unknown artist, album deduplication)
+- **Data fetcher expanded test suite** — 14 new tests added to `dataFetcher.test.ts`: `parseMetric` edge cases (B/M/K suffixes, plain numbers, non-numeric input, NaN propagation fix), `compareSongs` (insight generation, null on invalid ID, winner correctness, `lowerWins` Billboard inversion, all 6 metrics present), `getArtistData` (mock slug resolution, unknown fallback), `getCatalog` (full catalog return)
+
+---
+
 ## [1.3.1] - 2026-02-12
 
 ### Added

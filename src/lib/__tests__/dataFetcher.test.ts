@@ -20,7 +20,7 @@ vi.mock("../genius", () => ({
   searchGeniusSongs: vi.fn(),
 }));
 
-import { searchSongs, getSongData } from "../dataFetcher";
+import { searchSongs, getSongData, parseMetric, compareSongs, getArtistData, getCatalog } from "../dataFetcher";
 
 describe("dataFetcher", () => {
   beforeEach(() => {
@@ -60,6 +60,110 @@ describe("dataFetcher", () => {
     it("returns null for unknown IDs", async () => {
       const song = await getSongData("nonexistent-song-id");
       expect(song).toBeNull();
+    });
+  });
+
+  describe("parseMetric", () => {
+    it("parses billions suffix", () => {
+      expect(parseMetric("4.2B")).toBe(4_200_000_000);
+    });
+
+    it("parses millions suffix", () => {
+      expect(parseMetric("320M")).toBe(320_000_000);
+    });
+
+    it("parses thousands suffix", () => {
+      expect(parseMetric("45K")).toBe(45_000);
+    });
+
+    it("parses plain numbers without suffix", () => {
+      expect(parseMetric("100")).toBe(100);
+    });
+
+    it("returns 0 for non-numeric input", () => {
+      expect(parseMetric("N/A")).toBe(0);
+      expect(parseMetric("")).toBe(0);
+      expect(parseMetric("abc")).toBe(0);
+    });
+
+    it("handles NaN before suffix check (NaN propagation fix)", () => {
+      // "N/AB" starts with NaN — early guard should return 0, not NaN * 1B
+      expect(parseMetric("N/AB")).toBe(0);
+    });
+  });
+
+  describe("compareSongs", () => {
+    it("returns comparison data with insights for two known songs", async () => {
+      const result = await compareSongs("blinding-lights", "shape-of-you");
+      expect(result).not.toBeNull();
+      expect(result!.song1.title).toBe("Blinding Lights");
+      expect(result!.song2.title).toBe("Shape of You");
+      expect(result!.insights.length).toBeGreaterThan(0);
+    });
+
+    it("returns null when one song ID is invalid", async () => {
+      const result = await compareSongs("blinding-lights", "nonexistent");
+      expect(result).toBeNull();
+    });
+
+    it("produces correct winner for each insight metric", async () => {
+      const result = await compareSongs("blinding-lights", "shape-of-you");
+      expect(result).not.toBeNull();
+      for (const insight of result!.insights) {
+        expect(["song1", "song2"]).toContain(insight.winner);
+        expect(insight.metric).toBeTruthy();
+        expect(insight.song1Value).toBeTruthy();
+        expect(insight.song2Value).toBeTruthy();
+      }
+    });
+
+    it("applies lowerWins for Billboard Peak (lower position = better)", async () => {
+      const result = await compareSongs("blinding-lights", "shape-of-you");
+      const billboardInsight = result!.insights.find((i) => i.metric === "Billboard Peak");
+      expect(billboardInsight).toBeDefined();
+      // The song with the lower peak position number should win
+      const peak1 = parseInt(billboardInsight!.song1Value.replace("#", ""));
+      const peak2 = parseInt(billboardInsight!.song2Value.replace("#", ""));
+      if (peak1 <= peak2) {
+        expect(billboardInsight!.winner).toBe("song1");
+      } else {
+        expect(billboardInsight!.winner).toBe("song2");
+      }
+    });
+
+    it("includes all 6 metrics when both songs have full platform data", async () => {
+      const result = await compareSongs("blinding-lights", "shape-of-you");
+      const metricNames = result!.insights.map((i) => i.metric);
+      expect(metricNames).toContain("Spotify Streams");
+      expect(metricNames).toContain("YouTube Views");
+      expect(metricNames).toContain("Billboard Peak");
+      expect(metricNames).toContain("Weeks on Chart");
+      expect(metricNames).toContain("Genius Page Views");
+      expect(metricNames).toContain("Popularity Score");
+    });
+  });
+
+  describe("getArtistData", () => {
+    it("returns artist data for a known mock artist slug", async () => {
+      const artist = await getArtistData("the-weeknd");
+      expect(artist).not.toBeNull();
+      expect(artist!.name).toBe("The Weeknd");
+      expect(artist!.topTracks.length).toBeGreaterThan(0);
+    });
+
+    it("returns null for unknown artist", async () => {
+      const artist = await getArtistData("unknown-artist-xyz");
+      expect(artist).toBeNull();
+    });
+  });
+
+  describe("getCatalog", () => {
+    it("returns all songs from the mock catalog", () => {
+      const catalog = getCatalog();
+      expect(catalog.length).toBe(17);
+      expect(catalog[0]).toHaveProperty("id");
+      expect(catalog[0]).toHaveProperty("title");
+      expect(catalog[0]).toHaveProperty("spotify");
     });
   });
 });
