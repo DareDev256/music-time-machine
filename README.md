@@ -7,14 +7,14 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.1-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![Deploy](https://img.shields.io/badge/Live-Vercel-black?style=flat-square&logo=vercel)](https://music-time-machine.vercel.app)
 
-[**Try It Live**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [API Setup](docs/API_SETUP.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
+[**Try It Live**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [Architecture](docs/ARCHITECTURE.md) &nbsp;·&nbsp; [API Setup](docs/API_SETUP.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
 
 </div>
 

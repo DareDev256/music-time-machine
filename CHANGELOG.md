@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.2.1] - 2026-02-12
+
+### Added
+- **Architecture Guide** (`docs/ARCHITECTURE.md`) — Comprehensive technical documentation covering the full data flow (search → cache → mock/API → render), mock-first design strategy with fallback chain explanation, TTL cache internals with rationale for oldest-first vs true LRU eviction, token bucket algorithm pseudocode for both upstream API and per-IP route rate limiting, input validation guard pattern, component architecture tree mapping UI to source files, and key files reference table. Linked from README navigation bar
+
+---
+
 ## [1.2.0] - 2026-02-12
 
 ### Changed
