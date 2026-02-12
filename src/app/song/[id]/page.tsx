@@ -13,6 +13,7 @@ import BillboardCard from "@/components/BillboardCard";
 import GeniusCard from "@/components/GeniusCard";
 import AudioPlayer from "@/components/AudioPlayer";
 import ShareCard from "@/components/ShareCard";
+import SimilarSongs from "@/components/SimilarSongs";
 import SearchBar from "@/components/SearchBar";
 
 const AudioRadarChart = dynamic(() => import("@/components/AudioRadarChart"), {
@@ -40,6 +41,7 @@ interface PageProps {
 export default function SongPage({ params }: PageProps) {
   const { id } = use(params);
   const [song, setSong] = useState<SongData | null>(null);
+  const [catalog, setCatalog] = useState<SongData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showShare, setShowShare] = useState(false);
@@ -48,19 +50,22 @@ export default function SongPage({ params }: PageProps) {
     const fetchSong = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/song/${id}`);
+        const [songRes, catalogRes] = await Promise.all([
+          fetch(`/api/song/${id}`),
+          fetch("/api/catalog"),
+        ]);
 
-        if (!res.ok) {
-          if (res.status === 404) {
-            setError("Song not found");
-          } else {
-            setError("Failed to load song data");
-          }
+        if (!songRes.ok) {
+          setError(songRes.status === 404 ? "Song not found" : "Failed to load song data");
           return;
         }
 
-        const data = await res.json();
+        const data = await songRes.json();
         setSong(data);
+
+        if (catalogRes.ok) {
+          setCatalog(await catalogRes.json());
+        }
       } catch (err) {
         console.error("Error fetching song:", err);
         setError("Failed to load song data");
@@ -203,6 +208,18 @@ export default function SongPage({ params }: PageProps) {
             )}
           </div>
         </motion.section>
+
+        {/* Similar Songs */}
+        {catalog.length > 0 && (
+          <motion.section
+            className="mt-6 sm:mt-8 md:mt-12"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+          >
+            <SimilarSongs song={song} catalog={catalog} />
+          </motion.section>
+        )}
       </main>
 
       {/* Audio Preview Player */}

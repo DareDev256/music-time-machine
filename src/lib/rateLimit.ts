@@ -79,6 +79,7 @@ const ROUTE_LIMITS = {
   compare: { maxTokens: 15, windowMs: 60_000 },   // 15 comparisons/min
   artist: { maxTokens: 30, windowMs: 60_000 },    // 30 lookups/min
   og: { maxTokens: 10, windowMs: 60_000 },        // 10 OG images/min
+  catalog: { maxTokens: 10, windowMs: 60_000 },  // 10 catalog fetches/min
 } as const;
 
 export type RouteName = keyof typeof ROUTE_LIMITS;

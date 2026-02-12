@@ -2,7 +2,7 @@ import { SongData, SearchResult, TimelineDataPoint, ComparisonData, ComparisonIn
 import { getSpotifyTrack, searchSpotifyTracks, getSpotifyArtist, isSpotifyConfigured } from "./spotify";
 import { getYouTubeVideoBySearch, isYouTubeConfigured } from "./youtube";
 import { getGeniusSongBySearch, getGeniusSong, searchGeniusSongs, isGeniusConfigured } from "./genius";
-import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending, getArtistDataBySlug } from "./mockData";
+import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending, getArtistDataBySlug, mockSongs } from "./mockData";
 import { searchCache, SEARCH_TTL, songCache, SONG_TTL } from "./cache";
 
 // --- Reusable helpers ---
@@ -311,6 +311,11 @@ function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineD
   }
 
   return timeline;
+}
+
+/** Return all songs in the mock catalog (for recommendations). */
+export function getCatalog(): SongData[] {
+  return Object.values(mockSongs);
 }
 
 export function getConfiguredApis(): string[] {

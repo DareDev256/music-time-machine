@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.2.1-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -47,7 +47,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 **Search & Discover** — Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. No query? The home page shows a trending grid of 18 curated tracks.
 
-**Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), and a 30-second audio preview with seekable playback.
+**Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo), and a 30-second audio preview with seekable playback.
 
 **Compare Tracks** — Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. The comparison reveals which song dominates where.
 
@@ -70,6 +70,8 @@ These are the design decisions that make this more than a CRUD app:
 **Token Bucket Rate Limiting** — Instead of simple request counting with windowed cleanup, each API gets a token bucket with burst capacity and continuous refill. One multiplication, one comparison per request — no arrays, no timers. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks.
 
 **TTL Cache with LRU Eviction** — A generic `TTLCache` class using `Map` insertion-order semantics for oldest-first eviction. Search results cached 5 min (200 entries), song data cached 30 min (100 entries). Eliminates redundant external API calls without external dependencies.
+
+**Content-Based Recommendations** — `recommendations.ts` computes weighted Euclidean distance across a 4D audio feature space (danceability, energy 1.5x, valence 1.5x, normalized tempo). Additive bonuses for same-artist and same-era matches prevent the algorithm from only surfacing sonically identical tracks. Zero external dependencies, runs entirely on the existing mock catalog.
 
 **Edge-Generated OG Images** — `/api/og/[id]` runs on Vercel's Edge Runtime using `@vercel/og` (Satori under the hood). Renders JSX to a 1200x630 PNG with album art, song title, and key stats. Sub-100ms, no headless browser.
 
@@ -106,7 +108,7 @@ Data   ┌──────────┬────────────�
         Cache result ──► Return
 ```
 
-**5 API routes**, each with input validation, per-IP rate limiting, and consistent error responses:
+**6 API routes**, each with input validation, per-IP rate limiting, and consistent error responses:
 
 | Route | Purpose |
 |-------|---------|
@@ -114,6 +116,7 @@ Data   ┌──────────┬────────────�
 | `GET /api/song/:id` | Full song data across all four platforms |
 | `GET /api/compare?song1=&song2=` | Head-to-head metrics with winner analysis |
 | `GET /api/artist/:id` | Artist profile, top tracks, discography |
+| `GET /api/catalog` | Full song catalog for recommendations |
 | `GET /api/og/:id` | Dynamic OG image generation (Edge Runtime) |
 
 ---
@@ -156,8 +159,9 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 5 validated, rate-limited API routes
-├── components/                     # 17 single-responsibility UI components
+├── components/                     # 18 single-responsibility UI components
 ├── lib/
+│   ├── recommendations.ts          # Audio feature similarity engine
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
 │   ├── cache.ts                    # TTL cache with max-size eviction
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators

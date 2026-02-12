@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.3.0] - 2026-02-12
+
+### Added
+- **Similar Songs Recommendation Engine** (`src/lib/recommendations.ts`) — Content-based song recommendation using weighted Euclidean distance across a 4D audio feature space (danceability, energy ×1.5, valence ×1.5, normalized tempo). Additive score bonuses for same-artist (+15) and same-era ±2 years (+8) prevent purely sonic matches. Returns top 4 similar songs with human-readable reason tags ("Nearly identical vibe", "High energy match", "Same artist", etc.)
+- **SimilarSongs Component** (`src/components/SimilarSongs.tsx`) — Responsive 2×2 / 4×1 grid of recommended song cards on every song detail page. Each card shows album art, title, artist, and a reason badge. Staggered Framer Motion entrance animations. Cards link directly to the recommended song's detail page for seamless discovery
+- **Catalog API Route** (`/api/catalog`) — Returns the full song catalog for client-side recommendation computation. Rate-limited to 10 requests/min per IP. Aggressively cached (24hr `s-maxage`, 1hr `stale-while-revalidate`) since the catalog changes infrequently
+
+---
+
 ## [1.2.1] - 2026-02-12
 
 ### Added
