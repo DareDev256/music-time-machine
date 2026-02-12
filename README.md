@@ -7,7 +7,7 @@
 Search any song. See its complete performance timeline across Spotify, YouTube, Billboard, and Genius.
 Compare tracks head-to-head. Explore artist discographies. Preview audio. Share discoveries.
 
-[![Version](https://img.shields.io/badge/version-1.1.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.3-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)

@@ -11,11 +11,10 @@ vi.mock("next/image", () => ({
   },
 }));
 
-// Stub HTMLMediaElement play/pause since jsdom doesn't implement them
+// Stub HTMLMediaElement play/pause on jsdom's actual prototype
 beforeEach(() => {
-  vi.stubGlobal("HTMLMediaElement", class {});
-  window.HTMLMediaElement.prototype.play = vi.fn().mockResolvedValue(undefined);
-  window.HTMLMediaElement.prototype.pause = vi.fn();
+  HTMLMediaElement.prototype.play = vi.fn().mockResolvedValue(undefined);
+  HTMLMediaElement.prototype.pause = vi.fn();
 });
 
 const defaultProps = {

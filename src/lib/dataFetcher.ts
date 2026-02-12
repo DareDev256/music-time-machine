@@ -290,10 +290,11 @@ export async function getArtistData(slug: string): Promise<ArtistData | null> {
 
 function parseMetric(value: string): number {
   const num = parseFloat(value);
+  if (isNaN(num)) return 0;
   if (value.endsWith("B")) return num * 1_000_000_000;
   if (value.endsWith("M")) return num * 1_000_000;
   if (value.endsWith("K")) return num * 1_000;
-  return num || 0;
+  return num;
 }
 
 function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineDataPoint[] {
