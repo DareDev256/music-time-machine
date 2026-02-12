@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.3.1] - 2026-02-12
+
+### Added
+- **Recommendations engine test suite** (`src/lib/__tests__/recommendations.test.ts`) — 12 tests covering weighted Euclidean distance ranking, same-artist bonus (+15), same-era bonus (+8), reason labeling ("Nearly identical vibe", "High energy match", "Same artist", "Same era"), limit parameter, and edge cases (no audio features, empty catalog, all candidates missing features)
+- **Rate limiter test suite** (`src/lib/__tests__/rateLimit.test.ts`) — 21 tests covering token bucket consumption/exhaustion, time-based refill with fake timers, max token cap, pre-configured API limiters (Spotify 30/30s, Genius 50/min), per-IP route isolation, `extractClientIp` header parsing (X-Forwarded-For, X-Real-IP, unknown fallback), 429 response builder, `isValidId` validation (special chars, length), and `sanitizeQuery` XSS prevention (HTML stripping, dangerous chars, length enforcement)
+
+---
+
 ## [1.3.0] - 2026-02-12
 
 ### Added

@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.3.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.1-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -195,7 +195,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, retrieval, unknown ID handling). External API clients fully mocked for fast, offline execution.
+Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, retrieval, unknown ID handling), recommendations engine (distance ranking, artist/era bonuses, reason labeling, edge cases), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`). External API clients fully mocked for fast, offline execution.
 
 ---
 
