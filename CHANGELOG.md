@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.3.3] - 2026-02-12
+
+### Security
+- **Full security audit** — Scanned entire codebase for hardcoded credentials, exposed API keys, and insecure HTTP calls. All API keys correctly use `process.env.*` with missing-key guards. No secrets in source. All external calls use HTTPS. `npm audit` returns 0 vulnerabilities
+- **Added `.env.example`** — Safe credential template committed to repo so developers can `cp .env.example .env.local` instead of guessing variable names from README. All values blank, comments link to provider dashboards
+- **Cross-Origin-Opener-Policy header** — Added `same-origin` COOP header to prevent cross-origin window access, mitigating Spectre-class side-channel attacks and `window.opener` phishing vectors
+- **X-Permitted-Cross-Domain-Policies header** — Added `none` directive to block Flash/Acrobat cross-domain policy file loading (legacy plugin attack vector)
+
+---
+
 ## [1.3.2] - 2026-02-12
 
 ### Added

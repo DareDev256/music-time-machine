@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.3.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.3-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -141,7 +141,7 @@ Data   ┌──────────┬────────────�
 
 | Layer | Implementation |
 |-------|---------------|
-| **HTTP Headers** | CSP (no `unsafe-eval`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy |
+| **HTTP Headers** | CSP (no `unsafe-eval`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy, COOP `same-origin`, X-Permitted-Cross-Domain-Policies `none` |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, 200-char max |
 | **Rate Limiting** | Per-IP token bucket on all 5 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
@@ -174,7 +174,11 @@ src/
 
 ## Environment Variables
 
-All optional — the app works with zero configuration.
+All optional — the app works with zero configuration. Copy `.env.example` to `.env.local` to get started.
+
+```bash
+cp .env.example .env.local
+```
 
 ```env
 SPOTIFY_CLIENT_ID=          # developer.spotify.com/dashboard
