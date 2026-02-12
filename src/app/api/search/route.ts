@@ -1,14 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { searchSongs, getTrendingSongs, getConfiguredApis } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
-
-function sanitizeQuery(input: string): string {
-  return input
-    .replace(/<[^>]*>/g, "") // Strip HTML tags
-    .replace(/[<>"'&]/g, "") // Remove dangerous chars
-    .trim()
-    .slice(0, 200); // Max 200 chars
-}
+import { checkRouteLimit, extractClientIp, rateLimitResponse, sanitizeQuery } from "@/lib/rateLimit";
 
 export async function GET(request: NextRequest) {
   const clientIp = extractClientIp(request);

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { compareSongs } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
+import { checkRouteLimit, extractClientIp, rateLimitResponse, isValidId } from "@/lib/rateLimit";
 
 export async function GET(request: NextRequest) {
   const clientIp = extractClientIp(request);
@@ -18,9 +18,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // Validate IDs
-  const idPattern = /^[a-zA-Z0-9\-:]+$/;
-  if (!idPattern.test(song1) || !idPattern.test(song2) || song1.length > 200 || song2.length > 200) {
+  if (!isValidId(song1) || !isValidId(song2)) {
     return NextResponse.json({ error: "Invalid song IDs" }, { status: 400 });
   }
 

@@ -7,7 +7,25 @@ interface RateLimitBucket {
 
 const buckets = new Map<string, RateLimitBucket>();
 
+// Evict stale buckets every 5 minutes to prevent unbounded memory growth
+// from unique per-IP keys accumulating over time.
+const EVICTION_INTERVAL_MS = 5 * 60_000;
+const STALE_THRESHOLD_MS = 10 * 60_000; // Buckets idle >10 min are stale
+let lastEviction = Date.now();
+
+function evictStaleBuckets(): void {
+  const now = Date.now();
+  if (now - lastEviction < EVICTION_INTERVAL_MS) return;
+  lastEviction = now;
+  for (const [key, bucket] of buckets) {
+    if (now - bucket.lastRefill > STALE_THRESHOLD_MS) {
+      buckets.delete(key);
+    }
+  }
+}
+
 function getBucket(name: string, maxTokens: number, refillPeriodMs: number): RateLimitBucket {
+  evictStaleBuckets();
   let bucket = buckets.get(name);
   if (!bucket) {
     bucket = {
@@ -91,4 +109,24 @@ export function rateLimitResponse(): Response {
       },
     }
   );
+}
+
+// --- Shared input validation ---
+
+const ID_PATTERN = /^[a-zA-Z0-9\-:]+$/;
+const MAX_ID_LENGTH = 200;
+const MAX_QUERY_LENGTH = 200;
+
+/** Validate a resource ID (songs, artists, etc). Allows alphanumeric, dashes, colons. */
+export function isValidId(id: string): boolean {
+  return id.length > 0 && id.length <= MAX_ID_LENGTH && ID_PATTERN.test(id);
+}
+
+/** Sanitize a user search query: strip HTML, remove dangerous chars, enforce max length. */
+export function sanitizeQuery(input: string): string {
+  return input
+    .replace(/<[^>]*>/g, "")
+    .replace(/[<>"'&]/g, "")
+    .trim()
+    .slice(0, MAX_QUERY_LENGTH);
 }

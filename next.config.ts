@@ -29,13 +29,15 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              "script-src 'self' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https://i.scdn.co https://i.ytimg.com https://images.genius.com",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https://api.spotify.com https://accounts.spotify.com https://www.googleapis.com https://api.genius.com",
               "media-src 'self' https://p.scdn.co",
               "frame-src 'none'",
+              "object-src 'none'",
+              "base-uri 'self'",
             ].join("; "),
           },
           {
@@ -57,6 +59,10 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
+          },
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "off",
           },
         ],
       },

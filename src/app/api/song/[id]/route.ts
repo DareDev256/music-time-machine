@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSongData, getConfiguredApis } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
-
-function isValidId(id: string): boolean {
-  // Allow alphanumeric, dashes, colons (for spotify:xxx, genius:xxx format)
-  return /^[a-zA-Z0-9\-:]+$/.test(id) && id.length <= 200;
-}
+import { checkRouteLimit, extractClientIp, rateLimitResponse, isValidId } from "@/lib/rateLimit";
 
 export async function GET(
   request: NextRequest,

@@ -1,13 +1,9 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 import { getSongData } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
+import { checkRouteLimit, extractClientIp, rateLimitResponse, isValidId } from "@/lib/rateLimit";
 
 export const runtime = "edge";
-
-function isValidId(id: string): boolean {
-  return /^[a-zA-Z0-9\-:]+$/.test(id) && id.length <= 200;
-}
 
 export async function GET(
   request: NextRequest,

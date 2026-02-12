@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getArtistData } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
+import { checkRouteLimit, extractClientIp, rateLimitResponse, isValidId } from "@/lib/rateLimit";
 
 export async function GET(
   request: NextRequest,
@@ -14,7 +14,7 @@ export async function GET(
   try {
     const { id } = await params;
 
-    if (!/^[a-zA-Z0-9\-]+$/.test(id) || id.length > 200) {
+    if (!isValidId(id)) {
       return NextResponse.json({ error: "Invalid artist ID" }, { status: 400 });
     }
 
