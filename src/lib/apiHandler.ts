@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { checkRouteLimit, extractClientIp, rateLimitResponse, RouteName } from "./rateLimit";
 
-type RouteContext = { params: Promise<{ id: string }> };
+type RouteContext = { params: Promise<Record<string, string>> };
 
 interface HandlerOptions {
   route: RouteName;

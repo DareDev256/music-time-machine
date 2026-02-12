@@ -1182,6 +1182,32 @@ export const mockSongs: Record<string, SongData> = {
   },
 };
 
+// Genre classification for each song in the catalog
+export const songGenres: Record<string, string> = {
+  "blinding-lights": "R&B",
+  "bad-guy": "Alt/Indie",
+  "shape-of-you": "Pop",
+  "as-it-was": "Pop",
+  "anti-hero": "Pop",
+  "uptown-funk": "Funk",
+  "drivers-license": "Alt/Indie",
+  "dance-monkey": "Pop",
+  "old-town-road": "Country",
+  "levitating": "Disco/Dance",
+  "flowers": "Pop",
+  "vampire": "Alt/Indie",
+  "cruel-summer": "Pop",
+  "espresso": "Pop",
+  "texas-hold-em": "Country",
+  "die-with-a-smile": "R&B",
+  "apt": "K-Pop",
+};
+
+// All distinct genres in the catalog, sorted
+export const catalogGenres: string[] = [
+  ...new Set(Object.values(songGenres)),
+].sort();
+
 // Search function
 export function searchSongs(query: string): SearchResult[] {
   const lowerQuery = query.toLowerCase();
@@ -1199,6 +1225,7 @@ export function searchSongs(query: string): SearchResult[] {
         albumArt: song.albumArt,
         releaseDate: song.releaseDate,
         spotifyUrl: song.spotify?.externalUrl || "",
+        genre: songGenres[id],
       });
     }
   }
@@ -1213,16 +1240,15 @@ export function getSongById(id: string): SongData | null {
 
 // Get all songs for trending display
 export function getTrendingSongs(): SearchResult[] {
-  return Object.entries(mockSongs)
-    .slice(0, 10)
-    .map(([id, song]) => ({
-      id,
-      title: song.title,
-      artist: song.artist,
-      albumArt: song.albumArt,
-      releaseDate: song.releaseDate,
-      spotifyUrl: song.spotify?.externalUrl || "",
-    }));
+  return Object.entries(mockSongs).map(([id, song]) => ({
+    id,
+    title: song.title,
+    artist: song.artist,
+    albumArt: song.albumArt,
+    releaseDate: song.releaseDate,
+    spotifyUrl: song.spotify?.externalUrl || "",
+    genre: songGenres[id],
+  }));
 }
 
 // Aggregate artist data from mock songs

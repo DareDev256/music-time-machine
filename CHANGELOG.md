@@ -2,6 +2,19 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.5.0] - 2026-02-12
+
+### Added
+- **Genre & Era Discovery Filters** (`src/components/FilterBar.tsx`) — Interactive filter pill bar on the trending songs grid. Users can filter by genre (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) and era (2010s, 2020s) with toggle-on/toggle-off selection. Active filters show a result count badge ("5 of 18"). `AnimatePresence` with `mode="wait"` provides smooth cross-fade transitions between filter states; `layout` prop on cards animates grid reflow. Clear button resets all filters. Empty state handles zero-match combinations gracefully
+- **Genre classification system** — Added `songGenres` map and `catalogGenres` export to `mockData.ts`, assigning accurate genre tags to all 18 songs. Genre propagates through `SearchResult` type via new optional `genre` field, included in both `searchSongs()` and `getTrendingSongs()` results
+- **Full catalog in trending** — `getTrendingSongs()` now returns all 18 songs instead of the previous 10-song cap, making genre filtering meaningful across the complete catalog
+- **Genre badge on song cards** — Each trending card now displays a small genre pill below the artist name for at-a-glance categorization
+
+### Fixed
+- **`withRouteHandler` RouteContext type** — Changed `RouteContext.params` from `Promise<{ id: string }>` to `Promise<Record<string, string>>` to accommodate routes with no dynamic params (e.g. `/api/catalog`), fixing a TypeScript build error
+
+---
+
 ## [1.4.0] - 2026-02-12
 
 ### Changed

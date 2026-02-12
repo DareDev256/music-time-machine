@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.4.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -45,7 +45,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 ## What You Can Do
 
-**Search & Discover** — Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. No query? The home page shows a trending grid of 18 curated tracks.
+**Search & Discover** — Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. No query? The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — click any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog instantly, with animated transitions between filter states.
 
 **Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo), and a 30-second audio preview with seekable playback.
 
@@ -159,7 +159,7 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 18 single-responsibility UI components
+├── components/                     # 19 single-responsibility UI components
 ├── lib/
 │   ├── recommendations.ts          # Audio feature similarity engine
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
@@ -200,7 +200,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**91 tests** across 8 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`). External API clients fully mocked for fast, offline execution.
+**93 tests** across 8 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`). External API clients fully mocked for fast, offline execution.
 
 ---
 

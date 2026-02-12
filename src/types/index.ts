@@ -83,6 +83,7 @@ export interface SearchResult {
   albumArt: string;
   releaseDate: string;
   spotifyUrl?: string;
+  genre?: string;
 }
 
 export interface ComparisonInsight {

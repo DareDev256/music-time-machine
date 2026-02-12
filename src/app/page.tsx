@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { TrendingUp, Sparkles, Music, ArrowRight, GitCompareArrows } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 import SearchBar from "@/components/SearchBar";
 import DateSearch from "@/components/DateSearch";
+import FilterBar from "@/components/FilterBar";
 import { SearchResult } from "@/types";
 
 const fadeIn = {
@@ -24,9 +25,28 @@ const cardVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
+function getEra(releaseDate: string): string {
+  const year = parseInt(releaseDate.split("-")[0], 10);
+  return year < 2020 ? "2010s" : "2020s";
+}
+
 export default function Home() {
   const [trending, setTrending] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeGenre, setActiveGenre] = useState<string | null>(null);
+  const [activeEra, setActiveEra] = useState<string | null>(null);
+
+  const genres = useMemo(
+    () => [...new Set(trending.map((s) => s.genre).filter(Boolean))].sort() as string[],
+    [trending]
+  );
+
+  const filtered = useMemo(() => {
+    let results = trending;
+    if (activeGenre) results = results.filter((s) => s.genre === activeGenre);
+    if (activeEra) results = results.filter((s) => getEra(s.releaseDate) === activeEra);
+    return results;
+  }, [trending, activeGenre, activeEra]);
 
   useEffect(() => {
     const fetchTrending = async () => {
@@ -121,13 +141,28 @@ export default function Home() {
 
       {/* Trending Songs Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+        <div className="flex items-center gap-3 mb-4 sm:mb-5">
           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent/10 rounded-xl flex items-center justify-center">
             <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-foreground">Trending Songs</h2>
           <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
+          {!loading && (activeGenre || activeEra) && (
+            <span className="text-xs text-foreground-secondary bg-background-secondary px-2 py-0.5 rounded-full">
+              {filtered.length} of {trending.length}
+            </span>
+          )}
         </div>
+
+        {!loading && genres.length > 0 && (
+          <FilterBar
+            genres={genres}
+            activeGenre={activeGenre}
+            activeEra={activeEra}
+            onGenreChange={setActiveGenre}
+            onEraChange={setActiveEra}
+          />
+        )}
 
         {loading ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
@@ -143,36 +178,59 @@ export default function Home() {
             ))}
           </div>
         ) : (
-          <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            {trending.map((song) => (
-              <motion.div key={song.id} variants={cardVariant}>
-                <Link
-                  href={`/song/${song.id}`}
-                  className="group bg-card border border-border rounded-2xl p-3 sm:p-4 hover:shadow-lg hover:border-border/80 transition-all active:scale-[0.98] block"
-                >
-                  <div className="relative aspect-square mb-3 sm:mb-4 rounded-xl overflow-hidden bg-background-secondary">
-                    <SafeImage
-                      src={song.albumArt}
-                      alt={song.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="text-foreground font-medium text-sm sm:text-base truncate group-hover:text-accent transition-colors">
-                    {song.title}
-                  </h3>
-                  <p className="text-foreground-secondary text-xs sm:text-sm truncate">
-                    {song.artist}
-                  </p>
-                </Link>
+          <AnimatePresence mode="wait">
+            {filtered.length > 0 ? (
+              <motion.div
+                key={`${activeGenre}-${activeEra}`}
+                className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4"
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0 }}
+                variants={staggerContainer}
+              >
+                {filtered.map((song) => (
+                  <motion.div key={song.id} variants={cardVariant} layout>
+                    <Link
+                      href={`/song/${song.id}`}
+                      className="group bg-card border border-border rounded-2xl p-3 sm:p-4 hover:shadow-lg hover:border-border/80 transition-all active:scale-[0.98] block"
+                    >
+                      <div className="relative aspect-square mb-3 sm:mb-4 rounded-xl overflow-hidden bg-background-secondary">
+                        <SafeImage
+                          src={song.albumArt}
+                          alt={song.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="text-foreground font-medium text-sm sm:text-base truncate group-hover:text-accent transition-colors">
+                        {song.title}
+                      </h3>
+                      <p className="text-foreground-secondary text-xs sm:text-sm truncate">
+                        {song.artist}
+                      </p>
+                      {song.genre && (
+                        <span className="inline-block mt-1.5 text-[10px] text-foreground-secondary bg-background-secondary px-2 py-0.5 rounded-full">
+                          {song.genre}
+                        </span>
+                      )}
+                    </Link>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            ) : (
+              <motion.div
+                key="empty"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="text-center py-12"
+              >
+                <p className="text-foreground-secondary text-sm">
+                  No songs match{activeGenre ? ` "${activeGenre}"` : ""}{activeGenre && activeEra ? " in" : ""}{activeEra ? ` the ${activeEra}` : ""}.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         )}
       </div>
 

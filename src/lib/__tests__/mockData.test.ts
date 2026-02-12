@@ -5,6 +5,8 @@ import {
   getSongById,
   getTrendingSongs,
   getArtistDataBySlug,
+  songGenres,
+  catalogGenres,
 } from "../mockData";
 
 describe("mockData", () => {
@@ -87,17 +89,32 @@ describe("mockData", () => {
   });
 
   describe("getTrendingSongs", () => {
-    it("returns exactly 10 songs", () => {
-      expect(getTrendingSongs()).toHaveLength(10);
+    it("returns the full catalog", () => {
+      expect(getTrendingSongs()).toHaveLength(Object.keys(mockSongs).length);
     });
 
-    it("returns SearchResult shape", () => {
+    it("returns SearchResult shape with genre", () => {
       const trending = getTrendingSongs();
       for (const song of trending) {
         expect(song).toHaveProperty("id");
         expect(song).toHaveProperty("title");
         expect(song).toHaveProperty("artist");
+        expect(song).toHaveProperty("genre");
       }
+    });
+  });
+
+  describe("songGenres", () => {
+    it("has a genre for every song in the catalog", () => {
+      for (const id of Object.keys(mockSongs)) {
+        expect(songGenres[id]).toBeDefined();
+      }
+    });
+
+    it("catalogGenres contains only unique sorted values", () => {
+      const sorted = [...catalogGenres].sort();
+      expect(catalogGenres).toEqual(sorted);
+      expect(new Set(catalogGenres).size).toBe(catalogGenres.length);
     });
   });
 
