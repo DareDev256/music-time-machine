@@ -1,19 +1,11 @@
 import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
 import { getSongData } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse, isValidId } from "@/lib/rateLimit";
+import { isValidId } from "@/lib/rateLimit";
+import { withRouteHandler } from "@/lib/apiHandler";
 
 export const runtime = "edge";
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const clientIp = extractClientIp(request);
-  if (!checkRouteLimit("og", clientIp)) {
-    return rateLimitResponse();
-  }
-
+export const GET = withRouteHandler({ route: "og" }, async (_request, { params }) => {
   const { id } = await params;
 
   if (!isValidId(id)) {
@@ -191,4 +183,4 @@ export async function GET(
     ),
     { width: 1200, height: 630 }
   );
-}
+});

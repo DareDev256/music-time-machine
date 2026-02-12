@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.4.0] - 2026-02-12
+
+### Changed
+- **Extracted `withRouteHandler` middleware** (`src/lib/apiHandler.ts`) — New higher-order function that wraps all API route handlers with rate limiting (IP extraction + route-level token bucket check + 429 response) and centralized error handling (try/catch + structured 500 response). Eliminates ~60 lines of duplicated boilerplate across 6 API routes. Adding a new route now requires zero lifecycle code — just business logic
+- **Refactored all 6 API routes** — `search`, `song/[id]`, `compare`, `artist/[id]`, `catalog`, and `og/[id]` all use `withRouteHandler()` instead of hand-rolled rate limiting and try/catch blocks. Routes now export `const GET = withRouteHandler(...)` instead of `async function GET(...)`, making the handler a pure expression of its business logic
+- **Added `jsonWithCache` helper** — Utility function in `apiHandler.ts` for building `NextResponse.json` with `Cache-Control` headers, replacing 3 inline header objects across search, song, and catalog routes
+
+---
+
 ## [1.3.3] - 2026-02-12
 
 ### Security

@@ -1,17 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
 import { getCatalog } from "@/lib/dataFetcher";
-import { checkRouteLimit, extractClientIp, rateLimitResponse } from "@/lib/rateLimit";
+import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
 
-export async function GET(request: NextRequest) {
-  const clientIp = extractClientIp(request);
-  if (!checkRouteLimit("catalog", clientIp)) {
-    return rateLimitResponse();
-  }
-
+export const GET = withRouteHandler({ route: "catalog" }, async () => {
   const catalog = getCatalog();
-  return NextResponse.json(catalog, {
-    headers: {
-      "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=3600",
-    },
-  });
-}
+  return jsonWithCache(catalog, "public, s-maxage=86400, stale-while-revalidate=3600");
+});

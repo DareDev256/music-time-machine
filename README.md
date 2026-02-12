@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.3.3-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -108,7 +108,7 @@ Data   ┌──────────┬────────────�
         Cache result ──► Return
 ```
 
-**6 API routes**, each with input validation, per-IP rate limiting, and consistent error responses:
+**6 API routes**, each wrapped in `withRouteHandler()` middleware for automatic rate limiting, error handling, and consistent responses:
 
 | Route | Purpose |
 |-------|---------|
@@ -158,13 +158,14 @@ src/
 │   ├── song/[id]/page.tsx          # Song detail dashboard
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
-│   └── api/                        # 5 validated, rate-limited API routes
+│   └── api/                        # 6 routes, all using withRouteHandler middleware
 ├── components/                     # 18 single-responsibility UI components
 ├── lib/
 │   ├── recommendations.ts          # Audio feature similarity engine
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
 │   ├── cache.ts                    # TTL cache with max-size eviction
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
+│   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
 │   ├── spotify.ts / youtube.ts / genius.ts
 │   └── __tests__/                  # Unit + integration tests
 └── types/index.ts                  # TypeScript interfaces for all data shapes
