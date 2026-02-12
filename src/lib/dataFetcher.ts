@@ -1,9 +1,56 @@
-import { SongData, SearchResult, TimelineDataPoint, ComparisonData, ArtistData } from "@/types";
+import { SongData, SearchResult, TimelineDataPoint, ComparisonData, ComparisonInsight, ArtistData } from "@/types";
 import { getSpotifyTrack, searchSpotifyTracks, getSpotifyArtist, isSpotifyConfigured } from "./spotify";
 import { getYouTubeVideoBySearch, isYouTubeConfigured } from "./youtube";
 import { getGeniusSongBySearch, getGeniusSong, searchGeniusSongs, isGeniusConfigured } from "./genius";
 import { getSongById as getMockSong, searchSongs as searchMockSongs, getTrendingSongs as getMockTrending, getArtistDataBySlug } from "./mockData";
 import { searchCache, SEARCH_TTL, songCache, SONG_TTL } from "./cache";
+
+// --- Reusable helpers ---
+
+/** Merge API results with mock results, deduplicating by title and capping at `limit`. */
+function mergeWithMock(apiResults: SearchResult[], mockResults: SearchResult[], limit: number = 10): SearchResult[] {
+  const mockTitles = new Set(mockResults.map((r) => r.title.toLowerCase()));
+  const unique = apiResults.filter((r) => !mockTitles.has(r.title.toLowerCase()));
+  return [...mockResults, ...unique].slice(0, limit);
+}
+
+/** Parse human-readable metric strings like "1.5B", "320M", "45K" into raw numbers. */
+export function parseMetric(value: string): number {
+  const num = parseFloat(value);
+  if (isNaN(num)) return 0;
+  if (value.endsWith("B")) return num * 1_000_000_000;
+  if (value.endsWith("M")) return num * 1_000_000;
+  if (value.endsWith("K")) return num * 1_000;
+  return num;
+}
+
+interface MetricDef {
+  metric: string;
+  platform: keyof SongData;
+  getValue: (song: SongData) => string;
+  /** Raw numeric value for comparison. Higher wins unless `lowerWins` is set. */
+  getNumeric: (song: SongData) => number;
+  lowerWins?: boolean;
+}
+
+const COMPARISON_METRICS: MetricDef[] = [
+  { metric: "Spotify Streams", platform: "spotify", getValue: (s) => s.spotify!.totalStreams, getNumeric: (s) => parseMetric(s.spotify!.totalStreams) },
+  { metric: "Popularity Score", platform: "spotify", getValue: (s) => `${s.spotify!.popularity}/100`, getNumeric: (s) => s.spotify!.popularity },
+  { metric: "YouTube Views", platform: "youtube", getValue: (s) => s.youtube!.viewCount, getNumeric: (s) => parseMetric(s.youtube!.viewCount) },
+  { metric: "Billboard Peak", platform: "billboard", getValue: (s) => `#${s.billboard!.peakPosition}`, getNumeric: (s) => s.billboard!.peakPosition, lowerWins: true },
+  { metric: "Weeks on Chart", platform: "billboard", getValue: (s) => `${s.billboard!.weeksOnChart}`, getNumeric: (s) => s.billboard!.weeksOnChart },
+  { metric: "Genius Page Views", platform: "genius", getValue: (s) => s.genius!.pageViews, getNumeric: (s) => parseMetric(s.genius!.pageViews) },
+];
+
+function buildInsights(song1: SongData, song2: SongData): ComparisonInsight[] {
+  return COMPARISON_METRICS.flatMap(({ metric, platform, getValue, getNumeric, lowerWins }) => {
+    if (!song1[platform] || !song2[platform]) return [];
+    const n1 = getNumeric(song1);
+    const n2 = getNumeric(song2);
+    const winner = lowerWins ? (n1 <= n2 ? "song1" : "song2") : (n1 >= n2 ? "song1" : "song2");
+    return [{ metric, song1Value: getValue(song1), song2Value: getValue(song2), winner } as ComparisonInsight];
+  });
+}
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true";
 
@@ -31,9 +78,7 @@ export async function searchSongs(query: string): Promise<SearchResult[]> {
         spotifyUrl: `https://open.spotify.com/track/${track.id}`,
       }));
 
-      const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
-      const filtered = results.filter((r) => !mockIds.has(r.title.toLowerCase()));
-      const combined = [...mockResults, ...filtered].slice(0, 10);
+      const combined = mergeWithMock(results, mockResults);
       searchCache.set(cacheKey, combined, SEARCH_TTL);
       return combined;
     } catch (error) {
@@ -52,9 +97,7 @@ export async function searchSongs(query: string): Promise<SearchResult[]> {
         releaseDate: song.releaseDate || new Date().toISOString(),
       }));
 
-      const mockIds = new Set(mockResults.map((r) => r.title.toLowerCase()));
-      const filtered = results.filter((r) => !mockIds.has(r.title.toLowerCase()));
-      const combined = [...mockResults, ...filtered].slice(0, 10);
+      const combined = mergeWithMock(results, mockResults);
       searchCache.set(cacheKey, combined, SEARCH_TTL);
       return combined;
     } catch (error) {
@@ -213,63 +256,7 @@ export async function compareSongs(id1: string, id2: string): Promise<Comparison
   const [song1, song2] = await Promise.all([getSongData(id1), getSongData(id2)]);
   if (!song1 || !song2) return null;
 
-  const insights: ComparisonData["insights"] = [];
-
-  if (song1.spotify && song2.spotify) {
-    const s1 = parseMetric(song1.spotify.totalStreams);
-    const s2 = parseMetric(song2.spotify.totalStreams);
-    insights.push({
-      metric: "Spotify Streams",
-      song1Value: song1.spotify.totalStreams,
-      song2Value: song2.spotify.totalStreams,
-      winner: s1 >= s2 ? "song1" : "song2",
-    });
-    insights.push({
-      metric: "Popularity Score",
-      song1Value: `${song1.spotify.popularity}/100`,
-      song2Value: `${song2.spotify.popularity}/100`,
-      winner: song1.spotify.popularity >= song2.spotify.popularity ? "song1" : "song2",
-    });
-  }
-
-  if (song1.youtube && song2.youtube) {
-    const v1 = parseMetric(song1.youtube.viewCount);
-    const v2 = parseMetric(song2.youtube.viewCount);
-    insights.push({
-      metric: "YouTube Views",
-      song1Value: song1.youtube.viewCount,
-      song2Value: song2.youtube.viewCount,
-      winner: v1 >= v2 ? "song1" : "song2",
-    });
-  }
-
-  if (song1.billboard && song2.billboard) {
-    insights.push({
-      metric: "Billboard Peak",
-      song1Value: `#${song1.billboard.peakPosition}`,
-      song2Value: `#${song2.billboard.peakPosition}`,
-      winner: song1.billboard.peakPosition <= song2.billboard.peakPosition ? "song1" : "song2",
-    });
-    insights.push({
-      metric: "Weeks on Chart",
-      song1Value: `${song1.billboard.weeksOnChart}`,
-      song2Value: `${song2.billboard.weeksOnChart}`,
-      winner: song1.billboard.weeksOnChart >= song2.billboard.weeksOnChart ? "song1" : "song2",
-    });
-  }
-
-  if (song1.genius && song2.genius) {
-    const p1 = parseMetric(song1.genius.pageViews);
-    const p2 = parseMetric(song2.genius.pageViews);
-    insights.push({
-      metric: "Genius Page Views",
-      song1Value: song1.genius.pageViews,
-      song2Value: song2.genius.pageViews,
-      winner: p1 >= p2 ? "song1" : "song2",
-    });
-  }
-
-  return { song1, song2, insights };
+  return { song1, song2, insights: buildInsights(song1, song2) };
 }
 
 export async function getArtistData(slug: string): Promise<ArtistData | null> {
@@ -286,15 +273,6 @@ export async function getArtistData(slug: string): Promise<ArtistData | null> {
   }
 
   return null;
-}
-
-function parseMetric(value: string): number {
-  const num = parseFloat(value);
-  if (isNaN(num)) return 0;
-  if (value.endsWith("B")) return num * 1_000_000_000;
-  if (value.endsWith("M")) return num * 1_000_000;
-  if (value.endsWith("K")) return num * 1_000;
-  return num;
 }
 
 function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineDataPoint[] {
