@@ -6,9 +6,18 @@ interface ScoredSong {
   reason: string;
 }
 
+/** Extract the primary artist name, stripping "ft." / "feat." guest credits */
+export function primaryArtist(artist: string): string {
+  return artist
+    .split(/\s+(?:ft\.?|feat\.?)\s+/i)[0]
+    .trim()
+    .toLowerCase();
+}
+
 /**
  * Find similar songs based on audio feature proximity, artist match, and era.
  * Uses weighted Euclidean distance in the (danceability, energy, valence, normalizedTempo) space.
+ * Enforces artist diversity: at most one song per artist in results.
  */
 export function getSimilarSongs(
   target: SongData,
@@ -20,6 +29,7 @@ export function getSimilarSongs(
 
   const targetYear = new Date(target.releaseDate).getFullYear();
   const normalizedTargetTempo = targetFeatures.tempo / 200; // BPM → 0-1 range
+  const targetPrimary = primaryArtist(target.artist);
 
   const scored: ScoredSong[] = [];
 
@@ -42,10 +52,8 @@ export function getSimilarSongs(
     // Convert distance to a 0-100 similarity score (lower distance = higher score)
     let score = Math.max(0, 100 - distance * 150);
 
-    // Bonus: same artist or featuring artist
-    const sameArtist =
-      candidate.artist.toLowerCase().includes(target.artist.toLowerCase().split(" ")[0]) ||
-      target.artist.toLowerCase().includes(candidate.artist.toLowerCase().split(" ")[0]);
+    // Bonus: same primary artist
+    const sameArtist = primaryArtist(candidate.artist) === targetPrimary;
     if (sameArtist) score += 15;
 
     // Bonus: same era (within 2 years)
@@ -68,8 +76,18 @@ export function getSimilarSongs(
     scored.push({ song: candidate, score, reason });
   }
 
-  return scored
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ song, reason }) => ({ song, reason }));
+  // Diversity-aware selection: at most one song per artist
+  scored.sort((a, b) => b.score - a.score);
+  const picked: { song: SongData; reason: string }[] = [];
+  const seenArtists = new Set<string>();
+
+  for (const entry of scored) {
+    if (picked.length >= limit) break;
+    const artist = primaryArtist(entry.song.artist);
+    if (seenArtists.has(artist)) continue;
+    seenArtists.add(artist);
+    picked.push({ song: entry.song, reason: entry.reason });
+  }
+
+  return picked;
 }

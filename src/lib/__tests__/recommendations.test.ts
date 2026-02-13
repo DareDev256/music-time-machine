@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getSimilarSongs } from "../recommendations";
+import { getSimilarSongs, primaryArtist } from "../recommendations";
 import { SongData } from "@/types";
 
 // Minimal factory — only fields the algorithm actually reads
@@ -55,10 +55,10 @@ describe("getSimilarSongs", () => {
   });
 
   it("ranks sonically identical songs highest", () => {
-    const twin = makeSong({ id: "twin", artist: "Other" });
+    const twin = makeSong({ id: "twin", artist: "Alpha" });
     const different = makeSong({
       id: "different",
-      artist: "Other",
+      artist: "Beta",
       spotify: {
         ...makeSong({ id: "x" }).spotify!,
         audioFeatures: { danceability: 0.1, energy: 0.1, valence: 0.1, tempo: 60 },
@@ -164,5 +164,59 @@ describe("getSimilarSongs", () => {
       makeSong({ id: "b", spotify: null }),
     ];
     expect(getSimilarSongs(target, catalog)).toEqual([]);
+  });
+
+  it("enforces artist diversity — at most one song per artist", () => {
+    const catalog = [
+      makeSong({ id: "a1", artist: "Dua Lipa" }),
+      makeSong({ id: "a2", artist: "Dua Lipa" }),
+      makeSong({ id: "b1", artist: "Adele" }),
+    ];
+    const results = getSimilarSongs(target, catalog, 4);
+    const artists = results.map((r) => r.song.artist);
+    // Should contain only one Dua Lipa song, not both
+    expect(artists.filter((a) => a === "Dua Lipa")).toHaveLength(1);
+    expect(artists).toContain("Adele");
+  });
+
+  it("skips duplicate artists to fill the limit with diverse picks", () => {
+    // 3 songs by Same, 3 by unique artists — limit 3 should pick 1 Same + 2 unique
+    const catalog = [
+      makeSong({ id: "s1", artist: "Same" }),
+      makeSong({ id: "s2", artist: "Same" }),
+      makeSong({ id: "s3", artist: "Same" }),
+      makeSong({ id: "u1", artist: "Unique One" }),
+      makeSong({ id: "u2", artist: "Unique Two" }),
+    ];
+    const results = getSimilarSongs(target, catalog, 3);
+    const artists = results.map((r) => r.song.artist);
+    expect(new Set(artists).size).toBe(3); // all unique
+  });
+
+  it("treats 'ft.' featured artists as same primary artist", () => {
+    const base = makeSong({ id: "base", artist: "Mark Ronson" });
+    const feat = makeSong({ id: "feat", artist: "Mark Ronson ft. Bruno Mars" });
+    const catalog = [feat, makeSong({ id: "other", artist: "Other" })];
+    const results = getSimilarSongs(base, catalog, 4);
+    const markSong = results.find((r) => r.song.id === "feat");
+    expect(markSong?.reason).toBe("Same artist");
+  });
+});
+
+describe("primaryArtist", () => {
+  it("extracts artist before 'ft.'", () => {
+    expect(primaryArtist("Mark Ronson ft. Bruno Mars")).toBe("mark ronson");
+  });
+
+  it("extracts artist before 'feat.'", () => {
+    expect(primaryArtist("Lil Nas X feat. Billy Ray Cyrus")).toBe("lil nas x");
+  });
+
+  it("returns full name when no feature credit", () => {
+    expect(primaryArtist("Taylor Swift")).toBe("taylor swift");
+  });
+
+  it("is case-insensitive", () => {
+    expect(primaryArtist("THE WEEKND")).toBe("the weeknd");
   });
 });

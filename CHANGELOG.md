@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.5.4] - 2026-02-13
+
+### Fixed
+- **Recommendations same-artist flooding** — `getSimilarSongs()` used pure top-K scoring, allowing multiple songs by the same artist to dominate the 4-slot recommendation grid. Added diversity-aware greedy selection that enforces at most one song per primary artist, scanning past duplicate artists to fill slots with varied picks
+- **False-positive same-artist matching** — Artist comparison used `split(" ")[0]` + `includes()`, a fragile heuristic that could match unrelated artists sharing a common word. Replaced with `primaryArtist()` extraction that strips "ft." / "feat." guest credits and compares normalized primary names via strict equality
+
+### Added
+- **7 new recommendation tests** — Artist diversity enforcement (at most 1 per artist, diverse fill across limit), "ft." featured artist detection, `primaryArtist()` unit tests (ft./feat. extraction, case insensitivity, passthrough for solo artists)
+
+---
+
 ## [1.5.3] - 2026-02-13
 
 ### Added
