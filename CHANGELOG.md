@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.5.1] - 2026-02-12
+
+### Fixed
+- **Era filter crash on missing `release_date`** — Spotify API can return `null`/`undefined` for `track.album.release_date` on some tracks (singles, EPs, older catalog). `getSpotifyTrack()` and `searchSpotifyTracks()` in `spotify.ts` now fall back to `"Unknown"` instead of propagating `undefined`. `getEra()` in `page.tsx` now guards against missing/malformed release dates with `isNaN()` check, returning `"Unknown"` instead of crashing with `TypeError: Cannot read properties of undefined (reading 'split')`
+- **Compare route missing cache headers** — `/api/compare` was the only data route returning bare `NextResponse.json()` without `Cache-Control` headers after the v1.4.0 middleware refactor. Now uses `jsonWithCache()` with 1-hour `s-maxage` and 5-minute `stale-while-revalidate`, matching the song detail route pattern. Eliminates redundant API calls for repeated comparisons
+
+---
+
 ## [1.5.0] - 2026-02-12
 
 ### Added

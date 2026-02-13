@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { compareSongs } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
-import { withRouteHandler } from "@/lib/apiHandler";
+import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
+
+const CACHE_TTL = "public, s-maxage=3600, stale-while-revalidate=300";
 
 export const GET = withRouteHandler({ route: "compare" }, async (request: NextRequest) => {
   const searchParams = request.nextUrl.searchParams;
@@ -24,5 +26,5 @@ export const GET = withRouteHandler({ route: "compare" }, async (request: NextRe
     return NextResponse.json({ error: "One or both songs not found" }, { status: 404 });
   }
 
-  return NextResponse.json(comparison);
+  return jsonWithCache(comparison, CACHE_TTL);
 });

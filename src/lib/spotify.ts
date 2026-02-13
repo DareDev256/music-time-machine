@@ -96,7 +96,7 @@ export async function getSpotifyTrack(trackId: string): Promise<SpotifyData | nu
       artist: track.artists.map((a: { name: string }) => a.name).join(", "),
       album: track.album.name,
       albumArt: track.album.images[0]?.url || "",
-      releaseDate: track.album.release_date,
+      releaseDate: track.album.release_date || "Unknown",
       popularity: track.popularity,
       totalStreams: estimatedStreams,
       playlistCount,
@@ -136,7 +136,7 @@ export async function searchSpotifyTracks(
       name: track.name,
       artist: track.artists[0]?.name || "Unknown",
       albumArt: track.album.images[0]?.url || "",
-      releaseDate: track.album.release_date,
+      releaseDate: track.album.release_date || "Unknown",
     }));
   } catch (error) {
     console.error("Spotify search error:", error);

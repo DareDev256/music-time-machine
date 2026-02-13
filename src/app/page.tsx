@@ -26,7 +26,9 @@ const cardVariant = {
 };
 
 function getEra(releaseDate: string): string {
+  if (!releaseDate || releaseDate === "Unknown") return "Unknown";
   const year = parseInt(releaseDate.split("-")[0], 10);
+  if (isNaN(year)) return "Unknown";
   return year < 2020 ? "2010s" : "2020s";
 }
 
