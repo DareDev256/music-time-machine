@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.5.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.3-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -161,6 +161,7 @@ src/
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
 ├── components/                     # 19 single-responsibility UI components
 ├── lib/
+│   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
 │   ├── cache.ts                    # TTL cache with max-size eviction
@@ -200,7 +201,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**93 tests** across 8 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`). External API clients fully mocked for fast, offline execution.
+**112 tests** across 9 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`), **Time Machine** (exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity). External API clients fully mocked for fast, offline execution.
 
 ---
 

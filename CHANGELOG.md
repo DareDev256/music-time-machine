@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.5.3] - 2026-02-13
+
+### Added
+- **Time Machine test suite** (`src/lib/__tests__/timeMachine.test.ts`) — 19 tests covering the core date-to-song matching engine. `getChartForDate`: exact month lookup, zero-padding of single-digit months, leap day handling, out-of-range dates (pre-2019 / post-2024), last-day-of-month edge case, full ChartEntry shape validation. `findClosestChart`: exact month passthrough, closest-month fallback for gaps in data, boundary snapping for dates far outside the range, empty dataset returns null, custom single-entry dataset injection, equidistant month tiebreaking. `historicalNumber1s` data integrity: year span validation, YYYY-MM key format enforcement, required field checks, unique song ID constraint
+- **Extracted `timeMachine.ts`** (`src/lib/timeMachine.ts`) — Moved `getChartForDate()`, `findClosestChart()`, `ChartEntry` interface, and `historicalNumber1s` data from `DateSearch.tsx` into a dedicated testable module. `findClosestChart` now accepts an optional `data` parameter for dependency injection in tests. `DateSearch.tsx` updated to import from the new module with zero behavior change
+
+---
+
 ## [1.5.2] - 2026-02-12
 
 ### Fixed
