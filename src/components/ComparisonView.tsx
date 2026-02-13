@@ -50,32 +50,42 @@ export default function ComparisonView({ data }: ComparisonViewProps) {
                 className={`text-center py-2 rounded-lg ${
                   insight.winner === "song1"
                     ? "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
-                    : "bg-background-secondary"
+                    : insight.winner === "tie"
+                      ? "bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800"
+                      : "bg-background-secondary"
                 }`}
               >
                 <p className={`text-lg sm:text-xl font-bold ${
-                  insight.winner === "song1" ? "text-green-600 dark:text-green-400" : "text-foreground"
+                  insight.winner === "song1" ? "text-green-600 dark:text-green-400" : insight.winner === "tie" ? "text-amber-600 dark:text-amber-400" : "text-foreground"
                 }`}>
                   {insight.song1Value}
                 </p>
                 {insight.winner === "song1" && (
                   <p className="text-green-600 dark:text-green-400 text-xs mt-0.5">Winner</p>
                 )}
+                {insight.winner === "tie" && (
+                  <p className="text-amber-600 dark:text-amber-400 text-xs mt-0.5">Tie</p>
+                )}
               </div>
               <div
                 className={`text-center py-2 rounded-lg ${
                   insight.winner === "song2"
                     ? "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
-                    : "bg-background-secondary"
+                    : insight.winner === "tie"
+                      ? "bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800"
+                      : "bg-background-secondary"
                 }`}
               >
                 <p className={`text-lg sm:text-xl font-bold ${
-                  insight.winner === "song2" ? "text-green-600 dark:text-green-400" : "text-foreground"
+                  insight.winner === "song2" ? "text-green-600 dark:text-green-400" : insight.winner === "tie" ? "text-amber-600 dark:text-amber-400" : "text-foreground"
                 }`}>
                   {insight.song2Value}
                 </p>
                 {insight.winner === "song2" && (
                   <p className="text-green-600 dark:text-green-400 text-xs mt-0.5">Winner</p>
+                )}
+                {insight.winner === "tie" && (
+                  <p className="text-amber-600 dark:text-amber-400 text-xs mt-0.5">Tie</p>
                 )}
               </div>
             </div>
@@ -84,26 +94,34 @@ export default function ComparisonView({ data }: ComparisonViewProps) {
       </div>
 
       {/* Score Summary */}
-      {insights.length > 0 && (
-        <div className="bg-card border border-border rounded-xl p-6 text-center">
-          <p className="text-foreground-secondary text-sm mb-2">Overall Score</p>
-          <div className="flex items-center justify-center gap-8">
-            <div>
-              <p className="text-3xl font-bold text-foreground">
-                {insights.filter((i) => i.winner === "song1").length}
-              </p>
-              <p className="text-foreground-secondary text-xs truncate max-w-[100px]">{song1.title}</p>
+      {insights.length > 0 && (() => {
+        const ties = insights.filter((i) => i.winner === "tie").length;
+        return (
+          <div className="bg-card border border-border rounded-xl p-6 text-center">
+            <p className="text-foreground-secondary text-sm mb-2">Overall Score</p>
+            <div className="flex items-center justify-center gap-8">
+              <div>
+                <p className="text-3xl font-bold text-foreground">
+                  {insights.filter((i) => i.winner === "song1").length}
+                </p>
+                <p className="text-foreground-secondary text-xs truncate max-w-[100px]">{song1.title}</p>
+              </div>
+              <span className="text-foreground-secondary text-xl">-</span>
+              <div>
+                <p className="text-3xl font-bold text-foreground">
+                  {insights.filter((i) => i.winner === "song2").length}
+                </p>
+                <p className="text-foreground-secondary text-xs truncate max-w-[100px]">{song2.title}</p>
+              </div>
             </div>
-            <span className="text-foreground-secondary text-xl">-</span>
-            <div>
-              <p className="text-3xl font-bold text-foreground">
-                {insights.filter((i) => i.winner === "song2").length}
+            {ties > 0 && (
+              <p className="text-amber-600 dark:text-amber-400 text-xs mt-3">
+                {ties} tied {ties === 1 ? "metric" : "metrics"}
               </p>
-              <p className="text-foreground-secondary text-xs truncate max-w-[100px]">{song2.title}</p>
-            </div>
+            )}
           </div>
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

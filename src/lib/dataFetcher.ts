@@ -47,7 +47,7 @@ function buildInsights(song1: SongData, song2: SongData): ComparisonInsight[] {
     if (!song1[platform] || !song2[platform]) return [];
     const n1 = getNumeric(song1);
     const n2 = getNumeric(song2);
-    const winner = lowerWins ? (n1 <= n2 ? "song1" : "song2") : (n1 >= n2 ? "song1" : "song2");
+    const winner = n1 === n2 ? "tie" as const : lowerWins ? (n1 < n2 ? "song1" : "song2") : (n1 > n2 ? "song1" : "song2");
     return [{ metric, song1Value: getValue(song1), song2Value: getValue(song2), winner } as ComparisonInsight];
   });
 }

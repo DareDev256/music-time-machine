@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, Suspense } from "react";
+import { useState, useEffect, useCallback, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Loader2, Search, Music } from "lucide-react";
@@ -124,6 +124,17 @@ function SongSelector({
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<SearchResult | null>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleQueryChange = (value: string) => {
     setQuery(value);
@@ -177,7 +188,7 @@ function SongSelector({
   };
 
   return (
-    <div className="relative">
+    <div className="relative" ref={wrapperRef}>
       <label className="text-foreground-secondary text-xs uppercase tracking-wider mb-2 block">
         {label}
       </label>

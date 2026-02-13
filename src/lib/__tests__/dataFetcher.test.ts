@@ -110,7 +110,7 @@ describe("dataFetcher", () => {
       const result = await compareSongs("blinding-lights", "shape-of-you");
       expect(result).not.toBeNull();
       for (const insight of result!.insights) {
-        expect(["song1", "song2"]).toContain(insight.winner);
+        expect(["song1", "song2", "tie"]).toContain(insight.winner);
         expect(insight.metric).toBeTruthy();
         expect(insight.song1Value).toBeTruthy();
         expect(insight.song2Value).toBeTruthy();
@@ -121,10 +121,12 @@ describe("dataFetcher", () => {
       const result = await compareSongs("blinding-lights", "shape-of-you");
       const billboardInsight = result!.insights.find((i) => i.metric === "Billboard Peak");
       expect(billboardInsight).toBeDefined();
-      // The song with the lower peak position number should win
+      // The song with the lower peak position number should win; equal = tie
       const peak1 = parseInt(billboardInsight!.song1Value.replace("#", ""));
       const peak2 = parseInt(billboardInsight!.song2Value.replace("#", ""));
-      if (peak1 <= peak2) {
+      if (peak1 === peak2) {
+        expect(billboardInsight!.winner).toBe("tie");
+      } else if (peak1 < peak2) {
         expect(billboardInsight!.winner).toBe("song1");
       } else {
         expect(billboardInsight!.winner).toBe("song2");

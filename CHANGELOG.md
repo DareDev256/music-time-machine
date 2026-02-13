@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.5.2] - 2026-02-12
+
+### Fixed
+- **Comparison tie misattribution** — `buildInsights()` in `dataFetcher.ts` used `>=`/`<=` comparisons that silently awarded ties to Song 1 instead of detecting equality. When two songs had identical values (e.g., both peaking at #1 on Billboard), Song 1 was incorrectly declared the "winner." Now uses strict `<`/`>` with an explicit `n1 === n2` tie check, matching the `"tie"` value already defined in the `ComparisonInsight` type
+- **Comparison UI missing tie rendering** — `ComparisonView.tsx` only styled `"song1"` and `"song2"` winner states. Tied metrics now display with amber highlight on both sides, a "Tie" label, and a summary count ("2 tied metrics") below the overall score
+- **Compare page dropdown stuck open** — `SongSelector` dropdown in `/compare` never closed when clicking outside because `isOpen` was only set to `false` on item selection. Added `useRef` + `mousedown` click-outside handler to dismiss the dropdown when focus leaves the component
+
+---
+
 ## [1.5.1] - 2026-02-12
 
 ### Fixed

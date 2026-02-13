@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.5.1-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.2-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -49,7 +49,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 **Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo), and a 30-second audio preview with seekable playback.
 
-**Compare Tracks** — Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. The comparison reveals which song dominates where.
+**Compare Tracks** — Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics now display with amber highlighting and a summary count. Click-outside dismissal on the song search dropdowns.
 
 **Time Machine** — "What was #1 on your birthday?" Enter a date and see the Billboard chart-topper for that month, with full historical data spanning 2019–2024.
 
