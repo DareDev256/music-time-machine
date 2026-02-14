@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.6.3] - 2026-02-14
+
+### Fixed
+- **`splitArtists()` `&` separator required surrounding whitespace** — The regex used `\s+&\s+` which only matched `" & "` with spaces on both sides. Real-world Spotify data can have `"A&B"`, `"A& B"`, or `"A &B"` — all of which silently bypassed the diversity filter, allowing duplicate-artist recommendations. Now uses `\s*&\s*` (optional whitespace)
+- **`splitArtists()` broke genre-like names with `&`** — The lenient `&` split would incorrectly split `"R&B"` into `["R", "B"]`. Added a 2-character minimum guard: `&` only splits when both sides are ≥2 characters
+- **Removed undocumented `x` separator** — JSDoc claimed support for `"Future x Metro Boomin"` but the regex never implemented it. Rather than add a fragile `x` split (which breaks artist names like `"Lil Nas X"`), removed the false documentation
+
+### Added
+- 2 new tests for `splitArtists` edge cases (spaceless `&` splits, `R&B` preservation), bringing total to 134
+
+---
+
 ## [1.6.2] - 2026-02-14
 
 ### Fixed

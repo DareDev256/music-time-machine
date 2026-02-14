@@ -296,6 +296,17 @@ describe("splitArtists", () => {
   it("returns single-element array for solo artist", () => {
     expect(splitArtists("Taylor Swift")).toEqual(["taylor swift"]);
   });
+
+  it("splits on '&' without surrounding spaces", () => {
+    expect(splitArtists("Gaga&Mars")).toEqual(["gaga", "mars"]);
+    expect(splitArtists("Gaga& Mars")).toEqual(["gaga", "mars"]);
+    expect(splitArtists("Gaga &Mars")).toEqual(["gaga", "mars"]);
+  });
+
+  it("does NOT split 'R&B' or other short-token '&' patterns", () => {
+    expect(splitArtists("R&B")).toEqual(["r&b"]);
+    expect(splitArtists("A&B")).toEqual(["a&b"]);
+  });
 });
 
 describe("primaryArtist", () => {

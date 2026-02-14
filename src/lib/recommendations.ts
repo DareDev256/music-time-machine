@@ -8,16 +8,29 @@ interface ScoredSong {
 
 /**
  * Split a credit string into individual artist names.
- * Handles: "ft." / "feat." / "&" / "," / "with" / "x" separators.
+ * Handles: "ft." / "feat." / "&" / "," / "with" separators.
+ * The "&" split requires at least 2 chars on each side to avoid
+ * breaking genre-style names like "R&B".
  * e.g. "Lady Gaga & Bruno Mars" → ["lady gaga", "bruno mars"]
  *      "Mark Ronson ft. Bruno Mars" → ["mark ronson", "bruno mars"]
  *      "Tones and I" → ["tones and i"] (single artist — "and" is NOT a separator)
  */
 export function splitArtists(artist: string): string[] {
-  return artist
-    .split(/\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with|&)\s+)\s*/i)
-    .map((s) => s.trim().toLowerCase())
-    .filter(Boolean);
+  // First pass: split on unambiguous separators (comma, ft., feat., with)
+  const parts = artist.split(
+    /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i
+  );
+  // Second pass: split on "&" only when both sides are ≥2 chars (avoids "R&B")
+  const result: string[] = [];
+  for (const part of parts) {
+    const ampersandParts = part.split(/\s*&\s*/);
+    if (ampersandParts.length > 1 && ampersandParts.every((p) => p.trim().length >= 2)) {
+      result.push(...ampersandParts);
+    } else {
+      result.push(part);
+    }
+  }
+  return result.map((s) => s.trim().toLowerCase()).filter(Boolean);
 }
 
 /** Extract the primary (first-billed) artist name, normalised to lowercase */
