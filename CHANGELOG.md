@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.6.1] - 2026-02-14
+
+### Changed
+- **README.md portfolio-grade overhaul** — Added at-a-glance stats bar (19 components, 121 tests, 6 API routes, 4 platforms, 0 config required), test coverage badge, restructured features into scannable emoji-anchored sections with bullet breakdowns instead of dense paragraphs, converted Engineering Highlights from prose to comparison table format, added per-route rate limit column to API routes table, broke test coverage from a single paragraph into a suite-by-suite table, and added Contributing section with codebase conventions (middleware pattern, data layer rules, styling tokens, type boundaries). Tighter hero copy, cleaner visual hierarchy for both recruiter quick-scan and engineer deep-dive audiences
+
+---
+
 ## [1.6.0] - 2026-02-14
 
 ### Added

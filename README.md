@@ -1,20 +1,33 @@
 <div align="center">
 
-# Music Time Machine
+# 🎵 Music Time Machine
 
 **The full picture of any song's impact — from release day to today.**
 
 One search. Four platforms. Every metric that matters.
-Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.6.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.6.1-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-121_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![Deploy](https://img.shields.io/badge/Live-Vercel-black?style=flat-square&logo=vercel)](https://music-time-machine.vercel.app)
 
-[**Try It Live**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [Architecture](docs/ARCHITECTURE.md) &nbsp;·&nbsp; [API Setup](docs/API_SETUP.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
+[**Try It Live →**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [Architecture](docs/ARCHITECTURE.md) &nbsp;·&nbsp; [API Setup](docs/API_SETUP.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
+
+<br>
+
+<table>
+<tr>
+<td align="center"><strong>19</strong><br><sub>Components</sub></td>
+<td align="center"><strong>121</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>6</strong><br><sub>API Routes</sub></td>
+<td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
+<td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
+<td align="center"><strong>0</strong><br><sub>Config Required</sub></td>
+</tr>
+</table>
 
 </div>
 
@@ -39,25 +52,37 @@ npm run dev
 
 Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated songs — **no API keys required**.
 
-> Want real-time data from any song on Spotify? Set `USE_MOCK_DATA=false` and add your keys. See the [API Setup Guide](docs/API_SETUP.md).
+> Want live data from any song on Spotify? Set `USE_MOCK_DATA=false` and add your keys. See the [API Setup Guide](docs/API_SETUP.md).
 
 ---
 
-## What You Can Do
+## Features
 
-**Search & Discover** — Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. No query? The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — click any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog instantly, with animated transitions between filter states.
+### 🔍 Search & Discover
+Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
 
-**Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo) with **match score badges** showing percentage similarity, and a 30-second audio preview with seekable playback.
+### 📊 Song Dashboard
+Every song gets a detail page with:
+- **4 platform cards** — Spotify, YouTube, Billboard, Genius
+- **Performance timeline** — multi-line chart tracking metrics over time
+- **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
+- **Similar Songs** — powered by weighted Euclidean distance across 4D audio features, with color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%)
+- **30-second preview** — seekable audio playback from Spotify
 
-**Compare Tracks** — Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics now display with amber highlighting and a summary count. Click-outside dismissal on the song search dropdowns.
+### ⚔️ Compare Tracks
+Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics display with amber highlighting and a summary count.
 
-**Time Machine** — "What was #1 on your birthday?" Enter a date and see the Billboard chart-topper for that month, with full historical data spanning 2019–2024.
+### ⏰ Time Machine
+*"What was #1 on your birthday?"* Enter any date and see the Billboard chart-topper for that month, with historical data spanning 2019–2024.
 
-**Artist Profiles** — Explore any artist's top tracks, full discography grid, career timeline, and aggregate stats (monthly listeners, total streams).
+### 🎤 Artist Profiles
+Explore any artist's top tracks, full discography grid, career timeline, and aggregate stats (monthly listeners, total streams).
 
-**Share** — Dynamic OG image generation via Edge Runtime. Share modal with copy-to-clipboard, X, and Facebook — each shared link renders a rich social preview card with album art and stats.
+### 📤 Social Sharing
+Dynamic OG image generation via Edge Runtime. Share modal with copy-to-clipboard, X, and Facebook — each shared link renders a rich social preview card with album art and stats.
 
-**Theme Toggle** — Light/dark mode with Apple Music–inspired design tokens. A blocking `<script>` applies the theme before first paint — zero FOUC.
+### 🌓 Theme Toggle
+Light/dark mode with Apple Music–inspired design tokens. A blocking `<script>` applies the theme before first paint — zero FOUC.
 
 ---
 
@@ -65,15 +90,14 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 These are the design decisions that make this more than a CRUD app:
 
-**Mock-First Architecture** — The app starts with complete, realistic mock data for all 18 songs across all four platforms. When real APIs are configured, `dataFetcher.ts` enriches mock data with live responses via `Promise.all`. If any API call fails, mock data stays. This means: zero-config works perfectly, partial config works partially, full config works fully. The consumer never sees an empty state.
-
-**Token Bucket Rate Limiting** — Instead of simple request counting with windowed cleanup, each API gets a token bucket with burst capacity and continuous refill. One multiplication, one comparison per request — no arrays, no timers. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks.
-
-**TTL Cache with LRU Eviction** — A generic `TTLCache` class using `Map` insertion-order semantics for oldest-first eviction. Search results cached 5 min (200 entries), song data cached 30 min (100 entries). Eliminates redundant external API calls without external dependencies.
-
-**Content-Based Recommendations** — `recommendations.ts` computes weighted Euclidean distance across a 4D audio feature space (danceability, energy 1.5x, valence 1.5x, normalized tempo). Additive bonuses for same-artist and same-era matches. **Diversity-aware selection** ensures at most one song per artist in results. Each recommendation surfaces a **match score** (0–99%) rendered as a color-coded circular progress badge — emerald for strong matches, sky blue for moderate, amber for weak. Zero external dependencies, runs entirely on the existing mock catalog.
-
-**Edge-Generated OG Images** — `/api/og/[id]` runs on Vercel's Edge Runtime using `@vercel/og` (Satori under the hood). Renders JSX to a 1200x630 PNG with album art, song title, and key stats. Sub-100ms, no headless browser.
+| Pattern | What & Why |
+|---------|-----------|
+| **Mock-First Architecture** | Starts with realistic mock data for all 18 songs across 4 platforms. Real APIs enrich via `Promise.all` — if any call fails, mock data stays. Zero-config works perfectly, partial config works partially, full config works fully. The consumer never sees an empty state. |
+| **Token Bucket Rate Limiting** | Each API gets a token bucket with burst capacity and continuous refill — one multiplication, one comparison per request. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks. |
+| **TTL Cache + LRU Eviction** | Generic `TTLCache` using `Map` insertion-order semantics for oldest-first eviction. Search cached 5 min (200 entries), songs cached 30 min (100 entries). Zero external dependencies. |
+| **Content-Based Recommendations** | Weighted Euclidean distance across danceability, energy ×1.5, valence ×1.5, and normalized tempo. Same-artist and same-era bonuses. **Diversity-aware selection** caps at one song per artist. Match scores (0–99%) rendered as color-coded circular progress badges. |
+| **Edge OG Images** | `/api/og/[id]` renders JSX to a 1200×630 PNG via `@vercel/og` (Satori). Sub-100ms, no headless browser. |
+| **Route Middleware** | `withRouteHandler()` wraps all 6 API routes with rate limiting, error handling, and consistent responses — zero boilerplate per route. |
 
 ---
 
@@ -108,16 +132,16 @@ Data   ┌──────────┬────────────�
         Cache result ──► Return
 ```
 
-**6 API routes**, each wrapped in `withRouteHandler()` middleware for automatic rate limiting, error handling, and consistent responses:
+### API Routes
 
-| Route | Purpose |
-|-------|---------|
-| `GET /api/search?q=` | Autocomplete search, returns trending when empty |
-| `GET /api/song/:id` | Full song data across all four platforms |
-| `GET /api/compare?song1=&song2=` | Head-to-head metrics with winner analysis |
-| `GET /api/artist/:id` | Artist profile, top tracks, discography |
-| `GET /api/catalog` | Full song catalog for recommendations |
-| `GET /api/og/:id` | Dynamic OG image generation (Edge Runtime) |
+| Route | Purpose | Rate Limit |
+|-------|---------|-----------|
+| `GET /api/search?q=` | Autocomplete search, trending when empty | 20/min |
+| `GET /api/song/:id` | Full song data across all four platforms | 30/min |
+| `GET /api/compare?song1=&song2=` | Head-to-head metrics with winner analysis | 15/min |
+| `GET /api/artist/:id` | Artist profile, top tracks, discography | 30/min |
+| `GET /api/catalog` | Full song catalog for recommendations | 10/min |
+| `GET /api/og/:id` | Dynamic OG image generation (Edge Runtime) | 10/min |
 
 ---
 
@@ -143,7 +167,7 @@ Data   ┌──────────┬────────────�
 |-------|---------------|
 | **HTTP Headers** | CSP (no `unsafe-eval`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy, COOP `same-origin`, X-Permitted-Cross-Domain-Policies `none` |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, 200-char max |
-| **Rate Limiting** | Per-IP token bucket on all 5 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction |
+| **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
 
 ---
@@ -168,7 +192,7 @@ src/
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
 │   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # Unit + integration tests
+│   └── __tests__/                  # 121 tests across 9 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -176,7 +200,7 @@ src/
 
 ## Environment Variables
 
-All optional — the app works with zero configuration. Copy `.env.example` to `.env.local` to get started.
+All optional — the app works with zero configuration.
 
 ```bash
 cp .env.example .env.local
@@ -201,7 +225,38 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**121 tests** across 9 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling, **match score validation**, **artist diversity enforcement**, `primaryArtist` extraction), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`), **Time Machine** (exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity). External API clients fully mocked for fast, offline execution.
+**121 tests** across **9 suites** covering:
+
+| Suite | What's Tested |
+|-------|--------------|
+| **TTLCache** | Expiry, eviction, CRUD operations |
+| **dataFetcher** | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
+| **mockData** | Catalog integrity, search matching, artist slug resolution, timeline sorting |
+| **recommendations** | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement |
+| **rateLimit** | Token bucket consumption/refill, per-IP route isolation, stale eviction |
+| **input validation** | `isValidId`, `sanitizeQuery` |
+| **Time Machine** | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
+| **AudioPlayer** | Play/pause, unmount cleanup, seek behavior |
+| **SearchBar** | Autocomplete rendering, keyboard navigation |
+
+External API clients fully mocked — tests run fast and offline.
+
+---
+
+## Contributing
+
+```bash
+git checkout -b feature/your-feature
+npm test                    # All 121 tests must pass
+npm run lint                # Zero warnings
+npm run build               # Clean production build
+```
+
+The codebase follows strict patterns:
+- **API routes** — wrap with `withRouteHandler()`, no raw try/catch
+- **Data fetching** — all reads go through `dataFetcher.ts`, never direct API calls from components
+- **Styling** — semantic tokens (`bg-background`, `text-foreground`), never hardcoded colors
+- **Types** — every API boundary typed in `types/index.ts`
 
 ---
 
