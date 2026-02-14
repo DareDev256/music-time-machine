@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.6.0] - 2026-02-14
+
+### Added
+- **Match Score Badges** — Each similar song recommendation now displays a circular progress badge showing the percentage match (0–99%) with color-coded tiers: emerald (≥80%), sky blue (≥60%), amber (≥40%), muted (below). The recommendations engine now exposes the numeric similarity score alongside the reason tag, giving users tangible confidence in each recommendation
+- **Color-coded card borders** — Similar song cards render with a subtle ring tint matching their match score tier, reinforcing the visual hierarchy at a glance
+- **2 new recommendation tests** — `matchScore` range validation (0–99, integer) and ordering assertion (closer songs get higher scores)
+
+---
+
 ## [1.5.4] - 2026-02-13
 
 ### Fixed

@@ -12,6 +12,30 @@ interface SimilarSongsProps {
   catalog: SongData[];
 }
 
+/** Returns a Tailwind text color class based on match strength */
+function matchColor(score: number): string {
+  if (score >= 80) return "text-emerald-400";
+  if (score >= 60) return "text-sky-400";
+  if (score >= 40) return "text-amber-400";
+  return "text-foreground-secondary";
+}
+
+/** Returns a Tailwind ring/border color class based on match strength */
+function matchRingColor(score: number): string {
+  if (score >= 80) return "ring-emerald-400/30";
+  if (score >= 60) return "ring-sky-400/30";
+  if (score >= 40) return "ring-amber-400/30";
+  return "ring-border";
+}
+
+/** SVG arc path for circular progress indicator */
+function circleArc(score: number): string {
+  const radius = 16;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (score / 100) * circumference;
+  return `${offset}`;
+}
+
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const similar = getSimilarSongs(song, catalog);
 
@@ -24,7 +48,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
         Similar Songs
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        {similar.map(({ song: rec, reason }, i) => (
+        {similar.map(({ song: rec, reason, matchScore }, i) => (
           <motion.div
             key={rec.id}
             initial={{ opacity: 0, y: 12 }}
@@ -33,7 +57,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
           >
             <Link
               href={`/song/${rec.id}`}
-              className="group block bg-card border border-border rounded-xl p-3 hover:border-accent/50 hover:shadow-lg transition-all"
+              className={`group block bg-card border border-border rounded-xl p-3 hover:border-accent/50 hover:shadow-lg transition-all ring-1 ${matchRingColor(matchScore)} hover:ring-accent/40`}
             >
               <div className="relative mb-3">
                 <SafeImage
@@ -43,7 +67,48 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                   height={200}
                   className="w-full aspect-square rounded-lg object-cover group-hover:scale-[1.02] transition-transform"
                 />
-                <span className="absolute bottom-1.5 right-1.5 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm">
+                {/* Match score circular badge */}
+                <div
+                  className="absolute -top-2 -right-2 w-10 h-10 flex items-center justify-center"
+                  title={`${matchScore}% match`}
+                >
+                  <svg
+                    viewBox="0 0 40 40"
+                    className="w-10 h-10 -rotate-90"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="20"
+                      cy="20"
+                      r="16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      className="text-border/50"
+                    />
+                    <circle
+                      cx="20"
+                      cy="20"
+                      r="16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeDasharray={`${2 * Math.PI * 16}`}
+                      strokeDashoffset={circleArc(matchScore)}
+                      strokeLinecap="round"
+                      className={matchColor(matchScore)}
+                    />
+                  </svg>
+                  <span
+                    className={`absolute inset-0 flex items-center justify-center text-[9px] font-bold ${matchColor(matchScore)}`}
+                  >
+                    {matchScore}%
+                  </span>
+                  {/* Solid background behind the badge for readability */}
+                  <div className="absolute inset-0 -z-10 rounded-full bg-card border border-border" />
+                </div>
+                {/* Reason tag */}
+                <span className="absolute bottom-1.5 left-1.5 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm">
                   {reason}
                 </span>
               </div>

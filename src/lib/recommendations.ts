@@ -23,7 +23,7 @@ export function getSimilarSongs(
   target: SongData,
   catalog: SongData[],
   limit: number = 4
-): { song: SongData; reason: string }[] {
+): { song: SongData; reason: string; matchScore: number }[] {
   const targetFeatures = target.spotify?.audioFeatures;
   if (!targetFeatures) return [];
 
@@ -78,7 +78,7 @@ export function getSimilarSongs(
 
   // Diversity-aware selection: at most one song per artist
   scored.sort((a, b) => b.score - a.score);
-  const picked: { song: SongData; reason: string }[] = [];
+  const picked: { song: SongData; reason: string; matchScore: number }[] = [];
   const seenArtists = new Set<string>();
 
   for (const entry of scored) {
@@ -86,7 +86,9 @@ export function getSimilarSongs(
     const artist = primaryArtist(entry.song.artist);
     if (seenArtists.has(artist)) continue;
     seenArtists.add(artist);
-    picked.push({ song: entry.song, reason: entry.reason });
+    // Clamp score to 0–99 range (100% would imply identical song)
+    const matchScore = Math.min(99, Math.max(0, Math.round(entry.score)));
+    picked.push({ song: entry.song, reason: entry.reason, matchScore });
   }
 
   return picked;

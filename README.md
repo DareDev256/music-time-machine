@@ -7,7 +7,7 @@
 One search. Four platforms. Every metric that matters.
 Spotify streams, YouTube views, Billboard chart position, Genius cultural context — unified in a single dashboard.
 
-[![Version](https://img.shields.io/badge/version-1.5.4-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.6.0-blue?style=flat-square)](CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -47,7 +47,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 **Search & Discover** — Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. No query? The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — click any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog instantly, with animated transitions between filter states.
 
-**Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo), and a 30-second audio preview with seekable playback.
+**Song Dashboard** — Every song gets a detail page with four platform cards (Spotify, YouTube, Billboard, Genius), a performance timeline chart tracking metrics over time, an Audio DNA radar chart that auto-detects the song's "vibe" (Groovy, High Energy, Mellow...), a **Similar Songs** section powered by audio feature similarity (weighted Euclidean distance across danceability, energy, valence, and tempo) with **match score badges** showing percentage similarity, and a 30-second audio preview with seekable playback.
 
 **Compare Tracks** — Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics now display with amber highlighting and a summary count. Click-outside dismissal on the song search dropdowns.
 
@@ -71,7 +71,7 @@ These are the design decisions that make this more than a CRUD app:
 
 **TTL Cache with LRU Eviction** — A generic `TTLCache` class using `Map` insertion-order semantics for oldest-first eviction. Search results cached 5 min (200 entries), song data cached 30 min (100 entries). Eliminates redundant external API calls without external dependencies.
 
-**Content-Based Recommendations** — `recommendations.ts` computes weighted Euclidean distance across a 4D audio feature space (danceability, energy 1.5x, valence 1.5x, normalized tempo). Additive bonuses for same-artist and same-era matches. **Diversity-aware selection** ensures at most one song per artist in results, preventing same-artist flooding and maximizing variety. Zero external dependencies, runs entirely on the existing mock catalog.
+**Content-Based Recommendations** — `recommendations.ts` computes weighted Euclidean distance across a 4D audio feature space (danceability, energy 1.5x, valence 1.5x, normalized tempo). Additive bonuses for same-artist and same-era matches. **Diversity-aware selection** ensures at most one song per artist in results. Each recommendation surfaces a **match score** (0–99%) rendered as a color-coded circular progress badge — emerald for strong matches, sky blue for moderate, amber for weak. Zero external dependencies, runs entirely on the existing mock catalog.
 
 **Edge-Generated OG Images** — `/api/og/[id]` runs on Vercel's Edge Runtime using `@vercel/og` (Satori under the hood). Renders JSX to a 1200x630 PNG with album art, song title, and key stats. Sub-100ms, no headless browser.
 
@@ -201,7 +201,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**119 tests** across 9 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling, **artist diversity enforcement**, `primaryArtist` extraction), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`), **Time Machine** (exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity). External API clients fully mocked for fast, offline execution.
+**121 tests** across 9 suites. Coverage: TTLCache (expiry, eviction, CRUD), dataFetcher (search, comparison engine with `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog), mock data module (catalog integrity, search matching, artist slug resolution, timeline sorting), recommendations engine (distance ranking, artist/era bonuses, reason labeling, **match score validation**, **artist diversity enforcement**, `primaryArtist` extraction), rate limiter (token bucket consumption/refill, per-IP route isolation, stale eviction), input validation (`isValidId`, `sanitizeQuery`), **Time Machine** (exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity). External API clients fully mocked for fast, offline execution.
 
 ---
 

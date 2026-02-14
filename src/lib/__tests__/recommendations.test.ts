@@ -154,6 +154,41 @@ describe("getSimilarSongs", () => {
     expect(results[0].reason).toBe("High energy match");
   });
 
+  it("includes a matchScore between 0 and 99 for each result", () => {
+    const catalog = [
+      makeSong({ id: "a", artist: "Alpha" }),
+      makeSong({ id: "b", artist: "Beta" }),
+    ];
+    const results = getSimilarSongs(target, catalog);
+    for (const r of results) {
+      expect(r.matchScore).toBeGreaterThanOrEqual(0);
+      expect(r.matchScore).toBeLessThanOrEqual(99);
+      expect(Number.isInteger(r.matchScore)).toBe(true);
+    }
+  });
+
+  it("assigns higher matchScore to sonically closer songs", () => {
+    const close = makeSong({
+      id: "close",
+      artist: "Artist A",
+      spotify: {
+        ...makeSong({ id: "x" }).spotify!,
+        audioFeatures: { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 },
+      },
+    });
+    const far = makeSong({
+      id: "far",
+      artist: "Artist B",
+      releaseDate: "2010-01-01",
+      spotify: {
+        ...makeSong({ id: "x" }).spotify!,
+        audioFeatures: { danceability: 0.1, energy: 0.1, valence: 0.1, tempo: 60 },
+      },
+    });
+    const results = getSimilarSongs(target, [far, close]);
+    expect(results[0].matchScore).toBeGreaterThan(results[1].matchScore);
+  });
+
   it("handles empty catalog gracefully", () => {
     expect(getSimilarSongs(target, [])).toEqual([]);
   });
