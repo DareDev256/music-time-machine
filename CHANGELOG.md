@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.6.2] - 2026-02-14
+
+### Fixed
+- **Diversity filter bypass for `&` / `,` / `with` collaborations** — `primaryArtist()` only stripped `ft.`/`feat.` credits, so "Lady Gaga & Bruno Mars" and "ROSÉ & Bruno Mars" were treated as unrelated artists and could both appear in recommendations. New `splitArtists()` function parses all common collaboration separators, and the diversity filter now checks *every* credited artist against the seen-set — not just the primary
+- **Same-artist bonus missed for `&` collaborations** — Scoring now detects shared credits across any separator, so "Bruno Mars" correctly gets the +15 same-artist bonus when compared to "Lady Gaga & Bruno Mars"
+
+### Added
+- 11 new tests covering `splitArtists()` parsing (8 tests) and `&`-collaboration diversity enforcement (2 + 1 primaryArtist test), bringing total to 132
+
+---
+
 ## [1.6.1] - 2026-02-14
 
 ### Changed

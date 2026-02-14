@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getSimilarSongs, primaryArtist } from "../recommendations";
+import { getSimilarSongs, primaryArtist, splitArtists } from "../recommendations";
 import { SongData } from "@/types";
 
 // Minimal factory — only fields the algorithm actually reads
@@ -236,6 +236,66 @@ describe("getSimilarSongs", () => {
     const markSong = results.find((r) => r.song.id === "feat");
     expect(markSong?.reason).toBe("Same artist");
   });
+
+  it("treats '&' collaborations as shared artist for same-artist bonus", () => {
+    const base = makeSong({ id: "base", artist: "Bruno Mars" });
+    const collab = makeSong({ id: "collab", artist: "Lady Gaga & Bruno Mars" });
+    const catalog = [collab, makeSong({ id: "other", artist: "Other" })];
+    const results = getSimilarSongs(base, catalog, 4);
+    const collabSong = results.find((r) => r.song.id === "collab");
+    expect(collabSong?.reason).toBe("Same artist");
+  });
+
+  it("deduplicates '&' collaborations sharing an artist in diversity filter", () => {
+    const catalog = [
+      makeSong({ id: "lg", artist: "Lady Gaga & Bruno Mars" }),
+      makeSong({ id: "rose", artist: "ROSÉ & Bruno Mars" }),
+      makeSong({ id: "solo", artist: "Adele" }),
+    ];
+    const results = getSimilarSongs(target, catalog, 4);
+    // Only one Bruno Mars collab should appear — the higher-scored one
+    const brunoSongs = results.filter(
+      (r) => r.song.artist.toLowerCase().includes("bruno mars")
+    );
+    expect(brunoSongs).toHaveLength(1);
+    expect(results.find((r) => r.song.artist === "Adele")).toBeTruthy();
+  });
+});
+
+describe("splitArtists", () => {
+  it("splits on 'ft.'", () => {
+    expect(splitArtists("Mark Ronson ft. Bruno Mars")).toEqual(["mark ronson", "bruno mars"]);
+  });
+
+  it("splits on 'feat.'", () => {
+    expect(splitArtists("Lil Nas X feat. Billy Ray Cyrus")).toEqual(["lil nas x", "billy ray cyrus"]);
+  });
+
+  it("splits on '&'", () => {
+    expect(splitArtists("Lady Gaga & Bruno Mars")).toEqual(["lady gaga", "bruno mars"]);
+  });
+
+  it("splits on ','", () => {
+    expect(splitArtists("Drake, Future")).toEqual(["drake", "future"]);
+  });
+
+  it("splits on 'with'", () => {
+    expect(splitArtists("David Guetta with Sia")).toEqual(["david guetta", "sia"]);
+  });
+
+  it("does NOT split on 'and' (preserves artist names like 'Tones and I')", () => {
+    expect(splitArtists("Tones and I")).toEqual(["tones and i"]);
+  });
+
+  it("handles multiple separators in one string", () => {
+    expect(splitArtists("DJ Khaled ft. Drake, Lil Wayne & Rick Ross")).toEqual([
+      "dj khaled", "drake", "lil wayne", "rick ross",
+    ]);
+  });
+
+  it("returns single-element array for solo artist", () => {
+    expect(splitArtists("Taylor Swift")).toEqual(["taylor swift"]);
+  });
 });
 
 describe("primaryArtist", () => {
@@ -245,6 +305,10 @@ describe("primaryArtist", () => {
 
   it("extracts artist before 'feat.'", () => {
     expect(primaryArtist("Lil Nas X feat. Billy Ray Cyrus")).toBe("lil nas x");
+  });
+
+  it("extracts artist before '&'", () => {
+    expect(primaryArtist("Lady Gaga & Bruno Mars")).toBe("lady gaga");
   });
 
   it("returns full name when no feature credit", () => {

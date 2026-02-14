@@ -6,12 +6,23 @@ interface ScoredSong {
   reason: string;
 }
 
-/** Extract the primary artist name, stripping "ft." / "feat." guest credits */
-export function primaryArtist(artist: string): string {
+/**
+ * Split a credit string into individual artist names.
+ * Handles: "ft." / "feat." / "&" / "," / "with" / "x" separators.
+ * e.g. "Lady Gaga & Bruno Mars" → ["lady gaga", "bruno mars"]
+ *      "Mark Ronson ft. Bruno Mars" → ["mark ronson", "bruno mars"]
+ *      "Tones and I" → ["tones and i"] (single artist — "and" is NOT a separator)
+ */
+export function splitArtists(artist: string): string[] {
   return artist
-    .split(/\s+(?:ft\.?|feat\.?)\s+/i)[0]
-    .trim()
-    .toLowerCase();
+    .split(/\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with|&)\s+)\s*/i)
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+/** Extract the primary (first-billed) artist name, normalised to lowercase */
+export function primaryArtist(artist: string): string {
+  return splitArtists(artist)[0] ?? artist.trim().toLowerCase();
 }
 
 /**
@@ -29,7 +40,7 @@ export function getSimilarSongs(
 
   const targetYear = new Date(target.releaseDate).getFullYear();
   const normalizedTargetTempo = targetFeatures.tempo / 200; // BPM → 0-1 range
-  const targetPrimary = primaryArtist(target.artist);
+  const targetArtists = new Set(splitArtists(target.artist));
 
   const scored: ScoredSong[] = [];
 
@@ -52,8 +63,9 @@ export function getSimilarSongs(
     // Convert distance to a 0-100 similarity score (lower distance = higher score)
     let score = Math.max(0, 100 - distance * 150);
 
-    // Bonus: same primary artist
-    const sameArtist = primaryArtist(candidate.artist) === targetPrimary;
+    // Bonus: shared artist credit (any overlap between target and candidate artists)
+    const candidateArtists = splitArtists(candidate.artist);
+    const sameArtist = candidateArtists.some((a) => targetArtists.has(a));
     if (sameArtist) score += 15;
 
     // Bonus: same era (within 2 years)
@@ -76,16 +88,17 @@ export function getSimilarSongs(
     scored.push({ song: candidate, score, reason });
   }
 
-  // Diversity-aware selection: at most one song per artist
+  // Diversity-aware selection: skip songs whose *any* credited artist was already picked.
+  // This prevents "Lady Gaga & Bruno Mars" and "ROSÉ & Bruno Mars" from both appearing.
   scored.sort((a, b) => b.score - a.score);
   const picked: { song: SongData; reason: string; matchScore: number }[] = [];
   const seenArtists = new Set<string>();
 
   for (const entry of scored) {
     if (picked.length >= limit) break;
-    const artist = primaryArtist(entry.song.artist);
-    if (seenArtists.has(artist)) continue;
-    seenArtists.add(artist);
+    const artists = splitArtists(entry.song.artist);
+    if (artists.some((a) => seenArtists.has(a))) continue;
+    for (const a of artists) seenArtists.add(a);
     // Clamp score to 0–99 range (100% would imply identical song)
     const matchScore = Math.min(99, Math.max(0, Math.round(entry.score)));
     picked.push({ song: entry.song, reason: entry.reason, matchScore });
