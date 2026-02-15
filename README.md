@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.6.3-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.7.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-134_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -20,7 +20,7 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>19</strong><br><sub>Components</sub></td>
+<td align="center"><strong>20</strong><br><sub>Components</sub></td>
 <td align="center"><strong>134</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>6</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
@@ -183,7 +183,7 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 19 single-responsibility UI components
+├── components/                     # 20 single-responsibility UI components
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine

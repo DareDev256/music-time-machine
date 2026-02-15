@@ -3,10 +3,11 @@
 import { useEffect, useState, use } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Loader2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { ArtistData } from "@/types";
 import ArtistHeader from "@/components/ArtistHeader";
 import SafeImage from "@/components/SafeImage";
+import { PageLoadingState, PageErrorState } from "@/components/PageStates";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -41,29 +42,8 @@ export default function ArtistPage({ params }: PageProps) {
     fetchArtist();
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <Loader2 className="w-12 h-12 text-accent animate-spin mx-auto mb-4" />
-          <p className="text-foreground-secondary">Loading artist data...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !artist) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-accent text-xl mb-4">{error || "Artist not found"}</p>
-          <Link href="/" className="text-foreground-secondary hover:text-foreground transition-colors">
-            Go back home
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <PageLoadingState message="Loading artist data..." />;
+  if (error || !artist) return <PageErrorState message={error || "Artist not found"} />;
 
   return (
     <div className="min-h-screen bg-background">

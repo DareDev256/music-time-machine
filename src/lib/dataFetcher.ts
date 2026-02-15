@@ -118,39 +118,27 @@ export async function getSongData(id: string): Promise<SongData | null> {
   const cached = songCache.get<SongData>(cacheKey);
   if (cached) return cached;
 
+  const result = await resolveSongData(id);
+  if (result) songCache.set(cacheKey, result, SONG_TTL);
+  return result;
+}
+
+/** Resolve song data through the appropriate source (mock → API prefix → enrichment → fallback). */
+async function resolveSongData(id: string): Promise<SongData | null> {
   const mockSong = getMockSong(id);
 
-  if (USE_MOCK_DATA) {
-    if (mockSong) songCache.set(cacheKey, mockSong, SONG_TTL);
-    return mockSong;
-  }
+  if (USE_MOCK_DATA) return mockSong;
 
   if (id.startsWith("spotify:")) {
-    const spotifyId = id.replace("spotify:", "");
-    const result = await fetchRealSongData(spotifyId);
-    if (result) songCache.set(cacheKey, result, SONG_TTL);
-    return result;
+    return fetchRealSongData(id.replace("spotify:", ""));
   }
 
   if (id.startsWith("genius:")) {
-    const geniusId = parseInt(id.replace("genius:", ""), 10);
-    const result = await fetchGeniusSongData(geniusId);
-    if (result) songCache.set(cacheKey, result, SONG_TTL);
-    return result;
+    return fetchGeniusSongData(parseInt(id.replace("genius:", ""), 10));
   }
 
-  if (mockSong) {
-    const enriched = await enrichMockSong(mockSong);
-    songCache.set(cacheKey, enriched, SONG_TTL);
-    return enriched;
-  }
-
-  if (isSpotifyConfigured()) {
-    const result = await fetchRealSongData(id);
-    if (result) songCache.set(cacheKey, result, SONG_TTL);
-    return result;
-  }
-
+  if (mockSong) return enrichMockSong(mockSong);
+  if (isSpotifyConfigured()) return fetchRealSongData(id);
   return null;
 }
 
@@ -318,10 +306,3 @@ export function getCatalog(): SongData[] {
   return Object.values(mockSongs);
 }
 
-export function getConfiguredApis(): string[] {
-  const apis: string[] = [];
-  if (isSpotifyConfigured()) apis.push("spotify");
-  if (isYouTubeConfigured()) apis.push("youtube");
-  if (isGeniusConfigured()) apis.push("genius");
-  return apis;
-}

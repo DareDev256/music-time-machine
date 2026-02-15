@@ -2,6 +2,23 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.7.0] - 2026-02-14
+
+### Changed
+- **Extracted `PageLoadingState` / `PageErrorState` shared components** (`src/components/PageStates.tsx`) — Song detail and artist pages both duplicated identical full-screen loading spinners and error-with-back-link states (~15 lines each). Now import from a single shared module, eliminating 4 copy-pasted blocks
+- **Consolidated `getSongData` cache logic** — Extracted `resolveSongData()` helper that handles the mock → API-prefix → enrichment → fallback resolution chain. The 5 separate `songCache.set()` calls collapsed to one, making the caching boundary explicit and the resolution logic easier to follow
+- **Removed dead `getConfiguredApis()`** — Function computed configured API names on every search/song request, but no client component ever consumed the `apis` field. Removed the function and the `apis`/`_meta` properties from search and song API responses
+- **Artist route now uses `jsonWithCache`** — `/api/artist/[id]` was the only data route returning bare `NextResponse.json()` without `Cache-Control` headers, causing redundant API calls for repeated artist lookups. Now matches song/compare/catalog pattern with 1-hour `s-maxage`
+
+### Removed
+- `getConfiguredApis()` from `dataFetcher.ts` — dead code, never consumed by frontend
+- `apis` field from `/api/search` response — unused metadata
+- `_meta` wrapper from `/api/song/:id` response — unused metadata
+
+> *"Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away."* — Antoine de Saint-Exupery
+
+---
+
 ## [1.6.3] - 2026-02-14
 
 ### Fixed

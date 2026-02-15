@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { getArtistData } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
-import { withRouteHandler } from "@/lib/apiHandler";
+import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
+
+const CACHE_TTL = "public, s-maxage=3600, stale-while-revalidate=300";
 
 export const GET = withRouteHandler({ route: "artist" }, async (_request, { params }) => {
   const { id } = await params;
@@ -15,5 +17,5 @@ export const GET = withRouteHandler({ route: "artist" }, async (_request, { para
     return NextResponse.json({ error: "Artist not found" }, { status: 404 });
   }
 
-  return NextResponse.json(artist);
+  return jsonWithCache(artist, CACHE_TTL);
 });

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSongData, getConfiguredApis } from "@/lib/dataFetcher";
+import { getSongData } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
 import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
 
@@ -17,8 +17,5 @@ export const GET = withRouteHandler({ route: "song" }, async (_request, { params
     return NextResponse.json({ error: "Song not found" }, { status: 404 });
   }
 
-  return jsonWithCache(
-    { ...song, _meta: { apis: getConfiguredApis(), useMock: process.env.USE_MOCK_DATA === "true" } },
-    CACHE_TTL
-  );
+  return jsonWithCache(song, CACHE_TTL);
 });

@@ -15,6 +15,7 @@ import AudioPlayer from "@/components/AudioPlayer";
 import ShareCard from "@/components/ShareCard";
 import SimilarSongs from "@/components/SimilarSongs";
 import SearchBar from "@/components/SearchBar";
+import { PageLoadingState, PageErrorState } from "@/components/PageStates";
 
 const AudioRadarChart = dynamic(() => import("@/components/AudioRadarChart"), {
   ssr: false,
@@ -77,32 +78,8 @@ export default function SongPage({ params }: PageProps) {
     fetchSong();
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <Loader2 className="w-12 h-12 text-accent animate-spin mx-auto mb-4" />
-          <p className="text-foreground-secondary">Loading song data...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !song) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-accent text-xl mb-4">{error || "Song not found"}</p>
-          <Link
-            href="/"
-            className="text-foreground-secondary hover:text-foreground transition-colors"
-          >
-            Go back home
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <PageLoadingState message="Loading song data..." />;
+  if (error || !song) return <PageErrorState message={error || "Song not found"} />;
 
   return (
     <div className="min-h-screen bg-background">
