@@ -1,13 +1,14 @@
 {
   "name": "music-time-machine",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest"
+    "test": "vitest",
+    "audit": "npm audit --audit-level=moderate"
   },
   "dependencies": {
     "@vercel/og": "^0.6.0",

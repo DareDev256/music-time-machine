@@ -27,7 +27,10 @@ export function withRouteHandler(
     try {
       return await handler(request, context);
     } catch (error) {
-      console.error(`API error [${options.route}]:`, error);
+      // Log only the message — full error objects can leak upstream API internals,
+      // response bodies, or stack traces containing file paths.
+      const message = error instanceof Error ? error.message : "Unknown error";
+      console.error(`API error [${options.route}]: ${message}`);
       return NextResponse.json(
         { error: "Internal server error" },
         { status: 500 }

@@ -38,6 +38,8 @@ const nextConfig: NextConfig = {
               "frame-src 'none'",
               "object-src 'none'",
               "base-uri 'self'",
+              "form-action 'self'",
+              "upgrade-insecure-requests",
             ].join("; "),
           },
           {
@@ -71,6 +73,10 @@ const nextConfig: NextConfig = {
           {
             key: "X-Permitted-Cross-Domain-Policies",
             value: "none",
+          },
+          {
+            key: "Cross-Origin-Resource-Policy",
+            value: "same-origin",
           },
         ],
       },

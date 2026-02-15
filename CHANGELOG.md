@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.7.1] - 2026-02-15
+
+### Security
+- **CSP `form-action 'self'` directive** — Blocks XSS payloads from submitting forms to attacker-controlled servers. `form-action` is not covered by `default-src`, so without this directive a script injection could exfiltrate data via form submission even with strict CSP
+- **CSP `upgrade-insecure-requests` directive** — Forces browsers to rewrite any `http://` subresource URLs to `https://`, catching mixed-content issues that slip past code review
+- **`Cross-Origin-Resource-Policy: same-origin` header** — Prevents other origins from embedding API responses as subresources, mitigating Spectre-class cross-origin data leakage
+- **Safe error logging in `apiHandler.ts`** — Error handler now logs only `error.message` instead of the full error object, preventing upstream API internals, response bodies, and file-path-containing stack traces from appearing in production logs
+- **`npm run audit` script** — Added `npm audit --audit-level=moderate` as a package script for CI/CD integration. `npm audit` returns 0 vulnerabilities as of this audit
+
+---
+
 ## [1.7.0] - 2026-02-14
 
 ### Changed
