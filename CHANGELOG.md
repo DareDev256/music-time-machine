@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.7.2] - 2026-02-15
+
+### Added
+- **Comprehensive JSDoc on all TypeScript interfaces** (`src/types/index.ts`) — Every interface and field now has documentation with `@example` values, value ranges, and architectural notes. Module-level doc explains the nullable platform pattern and why numeric fields use strings
+- **Updated component tree in ARCHITECTURE.md** — Fixed stale component count (17 → 20) and added missing components: `PageStates`, `FilterBar`, `SafeImage`, `PlatformCard`, `SimilarSongs`. Component tree now shows shared utility components and `PageStates` reuse across song/artist pages
+
+---
+
 ## [1.7.1] - 2026-02-15
 
 ### Security

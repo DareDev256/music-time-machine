@@ -151,20 +151,24 @@ const data = await getSongData(id);
 
 ## Component Architecture
 
-17 components, each with a single responsibility:
+20 client components, each with a single responsibility:
 
 ```
 Layout (ThemeProvider + Navigation)
 ├── Home (page.tsx)
 │   ├── SearchBar ─── debounced input, keyboard nav, autocomplete dropdown
 │   ├── DateSearch ─── "What was #1 on your birthday?" picker
-│   └── Trending Grid ─── 18 curated song cards
+│   ├── FilterBar ─── genre + era filter pills for the trending grid
+│   └── Trending Grid ─── 18 curated song cards with SafeImage
 │
 ├── Song Detail (song/[id]/page.tsx)
+│   ├── PageStates ─── shared loading spinner + error-with-back-link states
 │   ├── SongHeader ─── title, artist, album art, share button
+│   ├── PlatformCard ─── card shell with icon utilities (shared by all 4 cards)
 │   ├── SpotifyCard / YouTubeCard / BillboardCard / GeniusCard
 │   ├── TimelineChart ─── Recharts multi-line performance over time
 │   ├── AudioRadarChart ─── Recharts radar (danceability, energy, valence, tempo)
+│   ├── SimilarSongs ─── content-based recommendations with match score badges
 │   ├── AudioPlayer ─── HTML5 audio with seek bar (Spotify 30s previews)
 │   └── ShareCard ─── copy link, X, Facebook + OG preview
 │
@@ -172,7 +176,12 @@ Layout (ThemeProvider + Navigation)
 │   └── ComparisonView ─── dual song selectors + winner-highlighted metrics table
 │
 └── Artist (artist/[id]/page.tsx)
+    ├── PageStates ─── reused loading/error states (shared with song detail)
     └── ArtistHeader ─── image, stats, top tracks, discography grid, career timeline
+
+Shared utilities:
+├── SafeImage ─── next/image wrapper with error fallback to placeholder
+└── PlatformCard ─── reusable card frame + platform icon resolver
 ```
 
 **Dynamic imports**: `AudioRadarChart` is loaded via `next/dynamic` to code-split Recharts' radar dependencies from the main bundle.
