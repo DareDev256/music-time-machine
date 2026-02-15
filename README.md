@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.7.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.8.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-134_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -20,8 +20,8 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>20</strong><br><sub>Components</sub></td>
-<td align="center"><strong>134</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>21</strong><br><sub>Components</sub></td>
+<td align="center"><strong>141</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>6</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -63,6 +63,7 @@ Real-time autocomplete with debounced API calls and keyboard navigation. Results
 
 ### 📊 Song Dashboard
 Every song gets a detail page with:
+- **Quick Stats bar** — at-a-glance cross-platform metrics (streams, views, chart peak, weeks, page views) with smart abbreviation (2.4B, 770M) and color-coded icons
 - **4 platform cards** — Spotify, YouTube, Billboard, Genius
 - **Performance timeline** — multi-line chart tracking metrics over time
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
@@ -183,7 +184,7 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 20 single-responsibility UI components
+├── components/                     # 21 single-responsibility UI components
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine
@@ -192,7 +193,7 @@ src/
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
 │   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 132 tests across 9 suites
+│   └── __tests__/                  # 132 tests across 10 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -225,7 +226,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**134 tests** across **9 suites** covering:
+**141 tests** across **10 suites** covering:
 
 | Suite | What's Tested |
 |-------|--------------|
@@ -238,6 +239,7 @@ npx vitest --watch    # Watch mode
 | **Time Machine** | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
 | **AudioPlayer** | Play/pause, unmount cleanup, seek behavior |
 | **SearchBar** | Autocomplete rendering, keyboard navigation |
+| **QuickStats** | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
 
 External API clients fully mocked — tests run fast and offline.
 
@@ -247,7 +249,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 134 tests must pass
+npm test                    # All 141 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```

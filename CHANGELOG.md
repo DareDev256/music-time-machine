@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.8.0] - 2026-02-15
+
+### Added
+- **QuickStats summary bar on song detail page** — New at-a-glance stats strip between the song header and timeline chart. Shows abbreviated cross-platform metrics (Spotify streams, YouTube views, Billboard peak/weeks, Genius page views) with color-coded icons. Adapts grid columns to available data — songs with 2 platforms get 2 columns, fully-loaded songs get 5. Smart number abbreviation (2,400,000,000 → 2.4B). Fully accessible with ARIA roles
+- **QuickStats test suite** — 7 tests covering empty state, per-platform rendering, abbreviation accuracy, full-data rendering, and accessibility attributes
+
+---
+
 ## [1.7.2] - 2026-02-15
 
 ### Added

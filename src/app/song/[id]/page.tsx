@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Loader2, GitCompareArrows, Share2 } from "lucide-react";
 import { SongData } from "@/types";
 import SongHeader from "@/components/SongHeader";
+import QuickStats from "@/components/QuickStats";
 import SpotifyCard from "@/components/SpotifyCard";
 import YouTubeCard from "@/components/YouTubeCard";
 import BillboardCard from "@/components/BillboardCard";
@@ -127,6 +128,16 @@ export default function SongPage({ params }: PageProps) {
           transition={{ duration: 0.4 }}
         >
           <SongHeader song={song} />
+        </motion.section>
+
+        {/* Quick Stats Bar */}
+        <motion.section
+          className="mb-6 sm:mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
+          <QuickStats song={song} />
         </motion.section>
 
         {/* Timeline Chart */}
