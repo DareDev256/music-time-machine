@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getSimilarSongs, primaryArtist, splitArtists } from "../recommendations";
+import { getSimilarSongs, getDiversityMeta, primaryArtist, splitArtists } from "../recommendations";
 import { SongData } from "@/types";
 
 // Minimal factory — only fields the algorithm actually reads
@@ -337,6 +337,89 @@ describe("splitArtists", () => {
   it("does NOT split 'R&B' or other short-token '&' patterns", () => {
     expect(splitArtists("R&B")).toEqual(["r&b"]);
     expect(splitArtists("A&B")).toEqual(["a&b"]);
+  });
+});
+
+describe("getDiversityMeta", () => {
+  const target = makeSong({ id: "target", releaseDate: "2022-06-01" });
+
+  it("returns zero score and 'No data' for empty picks", () => {
+    const result = getDiversityMeta(target, []);
+    expect(result.score).toBe(0);
+    expect(result.label).toBe("No data");
+    expect(result.genres).toEqual([]);
+    expect(result.eras).toEqual([]);
+  });
+
+  it("detects genres from songGenres map using song IDs", () => {
+    // Use real mock song IDs that exist in the songGenres map
+    const picks = [
+      { song: makeSong({ id: "blinding-lights" }) },
+      { song: makeSong({ id: "shape-of-you" }) },
+      { song: makeSong({ id: "old-town-road" }) },
+    ];
+    const result = getDiversityMeta(target, picks);
+    expect(result.genres).toContain("R&B");
+    expect(result.genres).toContain("Pop");
+    expect(result.genres).toContain("Country");
+    expect(result.genres).toHaveLength(3);
+  });
+
+  it("includes target era in era calculation", () => {
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: "2022-03-01" }) },
+    ];
+    const result = getDiversityMeta(target, picks);
+    // Target is 2022, pick is 2022 — only one era "2020s"
+    expect(result.eras).toEqual(["2020s"]);
+  });
+
+  it("detects multiple eras when picks span decades", () => {
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: "2015-01-01" }) },
+      { song: makeSong({ id: "b", releaseDate: "2023-01-01" }) },
+    ];
+    const result = getDiversityMeta(target, picks);
+    expect(result.eras).toContain("2010s");
+    expect(result.eras).toContain("2020s");
+  });
+
+  it("scores higher for more genre diversity", () => {
+    const narrow = [
+      { song: makeSong({ id: "shape-of-you" }) },   // Pop
+      { song: makeSong({ id: "as-it-was" }) },       // Pop
+    ];
+    const wide = [
+      { song: makeSong({ id: "blinding-lights" }) }, // R&B
+      { song: makeSong({ id: "old-town-road" }) },   // Country
+    ];
+    const narrowScore = getDiversityMeta(target, narrow).score;
+    const wideScore = getDiversityMeta(target, wide).score;
+    expect(wideScore).toBeGreaterThan(narrowScore);
+  });
+
+  it("returns 'Good variety' for 4 genres within same era pair", () => {
+    // 4 genres across 2 eras (target 2010s + picks in 2010s/2020s) → score ~70
+    const targetFor2010s = makeSong({ id: "target-old", releaseDate: "2015-06-01" });
+    const picks = [
+      { song: makeSong({ id: "blinding-lights", releaseDate: "2019-11-29" }) }, // R&B, 2010s
+      { song: makeSong({ id: "old-town-road", releaseDate: "2019-04-05" }) },   // Country, 2010s
+      { song: makeSong({ id: "levitating", releaseDate: "2020-03-27" }) },      // Disco/Dance, 2020s
+      { song: makeSong({ id: "vampire", releaseDate: "2023-06-30" }) },         // Alt/Indie, 2020s
+    ];
+    const result = getDiversityMeta(targetFor2010s, picks);
+    expect(result.label).toBe("Good variety");
+    expect(result.score).toBeGreaterThanOrEqual(45);
+  });
+
+  it("sorts genres alphabetically", () => {
+    const picks = [
+      { song: makeSong({ id: "uptown-funk" }) },     // Funk
+      { song: makeSong({ id: "blinding-lights" }) },  // R&B
+      { song: makeSong({ id: "shape-of-you" }) },     // Pop
+    ];
+    const result = getDiversityMeta(target, picks);
+    expect(result.genres).toEqual([...result.genres].sort());
   });
 });
 

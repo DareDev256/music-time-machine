@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.9.0-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-161_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.10.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-170_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -67,7 +67,7 @@ Every song gets a detail page with:
 - **4 platform cards** — Spotify, YouTube, Billboard, Genius
 - **Performance timeline** — multi-line chart tracking metrics over time
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
-- **Similar Songs** — powered by weighted Euclidean distance across 4D audio features, with color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%)
+- **Similar Songs** — powered by weighted Euclidean distance across 4D audio features, with color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) and a **diversity indicator** showing genre spread, era span, and a scored label (Wide mix / Good variety / Similar vibe)
 - **30-second preview** — seekable audio playback from Spotify
 
 ### ⚔️ Compare Tracks

@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.10.0] - 2026-02-16
+
+### Added
+- **Diversity indicator on Similar Songs** — A visual bar above recommendations shows how genre-diverse the picks are. Displays color-coded genre chips (Pop, R&B, Country, etc.), era span tags, and a scored diversity label (Wide mix / Good variety / Similar vibe / Narrow focus). Uses the same emerald/sky/amber color language as match scores for consistency
+- **`getDiversityMeta()` function** — Analyzes recommendation sets by genre spread (60% weight) and era spread (40% weight) to produce a 0–100 diversity score with human-readable labels. Genres resolved via the existing `songGenres` map; eras derived from release dates
+- **7 new tests for `getDiversityMeta`** — Coverage for empty picks, genre detection from mock IDs, era calculation, multi-era detection, comparative scoring, label thresholds, and alphabetical genre sorting (170 tests total)
+
+---
+
 ## [1.9.1] - 2026-02-16
 
 ### Fixed

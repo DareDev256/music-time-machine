@@ -1,9 +1,70 @@
 import { SongData } from "@/types";
+import { songGenres } from "@/lib/mockData";
 
 interface ScoredSong {
   song: SongData;
   score: number;
   reason: string;
+}
+
+/** Diversity analysis of a recommendation set */
+export interface DiversityMeta {
+  /** Overall diversity score (0–100). Higher = more diverse picks. */
+  score: number;
+  /** Human-readable label for the diversity level. */
+  label: string;
+  /** Distinct genres present across the recommendations. */
+  genres: string[];
+  /** Decade spread — unique decades represented. @example ["2010s", "2020s"] */
+  eras: string[];
+}
+
+/**
+ * Analyze the genre and era diversity of a recommendation set.
+ * Score formula:
+ *   - Base: (unique genres / total picks) × 60  (genre variety is the primary signal)
+ *   - Bonus: (unique eras / total picks) × 40   (era spread adds depth)
+ * A set of 4 songs spanning 4 genres and 2 decades scores 100.
+ */
+export function getDiversityMeta(
+  target: SongData,
+  picks: { song: SongData }[]
+): DiversityMeta {
+  if (picks.length === 0) return { score: 0, label: "No data", genres: [], eras: [] };
+
+  const genres = new Set<string>();
+  const eras = new Set<string>();
+
+  // Include target song in era calculation for context
+  const targetDecade = `${Math.floor(new Date(target.releaseDate).getFullYear() / 10) * 10}s`;
+  eras.add(targetDecade);
+
+  for (const { song } of picks) {
+    const genre = songGenres[song.id];
+    if (genre) genres.add(genre);
+
+    const year = new Date(song.releaseDate).getFullYear();
+    eras.add(`${Math.floor(year / 10) * 10}s`);
+  }
+
+  const count = picks.length;
+  const genreRatio = genres.size / count;
+  const eraRatio = (eras.size - 1) / Math.max(1, count); // subtract 1 for target's era (baseline)
+
+  const score = Math.min(100, Math.round(genreRatio * 60 + eraRatio * 40));
+
+  const label =
+    score >= 75 ? "Wide mix" :
+    score >= 45 ? "Good variety" :
+    score >= 20 ? "Similar vibe" :
+    "Narrow focus";
+
+  return {
+    score,
+    label,
+    genres: [...genres].sort(),
+    eras: [...eras].sort(),
+  };
 }
 
 /**

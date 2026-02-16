@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
-import { getSimilarSongs } from "@/lib/recommendations";
+import { getSimilarSongs, getDiversityMeta } from "@/lib/recommendations";
 
 interface SimilarSongsProps {
   song: SongData;
@@ -36,10 +36,41 @@ function circleArc(score: number): string {
   return `${offset}`;
 }
 
+/** Tailwind bg class for genre chip — each genre gets a unique muted color */
+function genreChipColor(genre: string): string {
+  const map: Record<string, string> = {
+    "Pop": "bg-pink-500/15 text-pink-300 border-pink-500/20",
+    "R&B": "bg-purple-500/15 text-purple-300 border-purple-500/20",
+    "Country": "bg-amber-500/15 text-amber-300 border-amber-500/20",
+    "K-Pop": "bg-rose-500/15 text-rose-300 border-rose-500/20",
+    "Alt/Indie": "bg-teal-500/15 text-teal-300 border-teal-500/20",
+    "Disco/Dance": "bg-cyan-500/15 text-cyan-300 border-cyan-500/20",
+    "Funk": "bg-orange-500/15 text-orange-300 border-orange-500/20",
+  };
+  return map[genre] ?? "bg-foreground/10 text-foreground-secondary border-foreground/10";
+}
+
+/** Color for the diversity score indicator */
+function diversityColor(score: number): string {
+  if (score >= 75) return "text-emerald-400";
+  if (score >= 45) return "text-sky-400";
+  if (score >= 20) return "text-amber-400";
+  return "text-foreground-secondary";
+}
+
+function diversityBgColor(score: number): string {
+  if (score >= 75) return "bg-emerald-400/10 border-emerald-400/20";
+  if (score >= 45) return "bg-sky-400/10 border-sky-400/20";
+  if (score >= 20) return "bg-amber-400/10 border-amber-400/20";
+  return "bg-foreground/5 border-foreground/10";
+}
+
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const similar = getSimilarSongs(song, catalog);
 
   if (similar.length === 0) return null;
+
+  const diversity = getDiversityMeta(song, similar);
 
   return (
     <div>
@@ -47,6 +78,45 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
         <Sparkles className="w-5 h-5 text-accent" />
         Similar Songs
       </h2>
+
+      {/* Diversity indicator bar */}
+      <motion.div
+        className="mb-4 sm:mb-5 flex flex-wrap items-center gap-2"
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
+        role="status"
+        aria-label={`Recommendation diversity: ${diversity.label}, score ${diversity.score}`}
+      >
+        {/* Diversity score badge */}
+        <div
+          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-medium ${diversityBgColor(diversity.score)}`}
+        >
+          <Shuffle className={`w-3 h-3 ${diversityColor(diversity.score)}`} aria-hidden="true" />
+          <span className={diversityColor(diversity.score)}>{diversity.label}</span>
+        </div>
+
+        {/* Genre chips */}
+        {diversity.genres.map((genre, i) => (
+          <motion.span
+            key={genre}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 + i * 0.05 }}
+            className={`inline-flex items-center px-2 py-0.5 rounded-full border text-[10px] font-medium ${genreChipColor(genre)}`}
+          >
+            {genre}
+          </motion.span>
+        ))}
+
+        {/* Era tags */}
+        {diversity.eras.length > 1 && (
+          <span className="text-[10px] text-foreground-secondary ml-1">
+            · spans {diversity.eras.join(" & ")}
+          </span>
+        )}
+      </motion.div>
+
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         {similar.map(({ song: rec, reason, matchScore }, i) => (
           <motion.div
