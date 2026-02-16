@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.8.3] - 2026-02-16
+
+### Added
+- **API handler middleware test suite** — 8 tests covering `withRouteHandler` and `jsonWithCache` in `apiHandler.ts`, the previously untested middleware wrapping all 6 API routes. Tests verify rate limit enforcement (429 on exceeded limits), error containment (500 responses never leak internal error messages or secrets), non-Error thrown value handling, request context forwarding, and cache header injection
+
+---
+
 ## [1.8.2] - 2026-02-16
 
 ### Fixed
