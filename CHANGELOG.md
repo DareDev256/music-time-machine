@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.8.1] - 2026-02-15
+
+### Security
+- **Nonce-based CSP eliminates `'unsafe-inline'` from `script-src`** — Created `src/proxy.ts` (Next.js 16 proxy) that generates a cryptographically random nonce per request. The nonce is injected into the `Content-Security-Policy` header and passed to the layout via `x-nonce` request header. Next.js automatically applies the nonce to framework scripts, bundles, and inline styles. The FOUC-prevention theme script now uses `<Script nonce={nonce}>` instead of `dangerouslySetInnerHTML`. This closes the last major XSS vector — injected inline scripts are now blocked by the browser since they can't guess the per-request nonce
+- **`'strict-dynamic'` CSP directive** — Added alongside nonces so dynamically-loaded scripts trusted by nonced scripts also execute, while still blocking attacker-injected scripts. This is the CSP Level 3 best practice for SPAs
+- **CSP moved from static headers to dynamic proxy** — `next.config.ts` no longer sets CSP (static headers can't contain per-request nonces). All other security headers (HSTS, X-Frame-Options, etc.) remain in `next.config.ts`
+- **Dev-mode CSP safety** — `'unsafe-eval'` only in development (HMR needs it), stripped in production. `'unsafe-inline'` for styles only in dev; production uses nonces for style tags too
+
+---
+
 ## [1.8.0] - 2026-02-15
 
 ### Added

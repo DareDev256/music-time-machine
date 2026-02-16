@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 import "./globals.css";
@@ -31,30 +33,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") ?? "";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var t = localStorage.getItem('theme');
-                if (t === 'light' || t === 'dark') {
-                  document.documentElement.classList.add(t);
-                } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-                  document.documentElement.classList.add('light');
-                } else {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
-          }}
-        />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          nonce={nonce}
+        >{`(function(){var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.classList.add(t)}else if(window.matchMedia('(prefers-color-scheme: light)').matches){document.documentElement.classList.add('light')}else{document.documentElement.classList.add('dark')}})();`}</Script>
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider>

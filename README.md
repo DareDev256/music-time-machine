@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.8.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.8.1-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-134_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -166,7 +166,7 @@ Data   ┌──────────┬────────────�
 
 | Layer | Implementation |
 |-------|---------------|
-| **HTTP Headers** | CSP (no `unsafe-eval`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy, COOP `same-origin`, X-Permitted-Cross-Domain-Policies `none` |
+| **HTTP Headers** | Nonce-based CSP (no `unsafe-inline`, no `unsafe-eval`, `strict-dynamic`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy, COOP `same-origin`, X-Permitted-Cross-Domain-Policies `none` |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, 200-char max |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
