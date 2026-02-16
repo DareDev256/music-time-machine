@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.10.1] - 2026-02-16
+
+### Security
+- **Rate limit bypass via IP spoofing closed** — `extractClientIp()` now validates extracted IPs against IPv4/IPv6 format patterns before using them as rate limit bucket keys. Previously, an attacker could send `X-Forwarded-For: random-string-{n}` on every request, creating a fresh rate limit bucket each time and completely bypassing per-IP rate limiting. Invalid IPs now fall back to a shared `"unknown-invalid"` bucket, making spoofing counterproductive — all spoofed requests compete for the same token allocation
+- **`x-real-ip` header also validated** — Previously `x-real-ip` was trusted without any format check. Now receives the same IPv4/IPv6 validation as `x-forwarded-for`
+- **Prototype pollution defense in `sanitizeQuery()`** — Queries that resolve to exactly `__proto__`, `constructor`, or `prototype` after sanitization are now rejected (return empty string). Prevents potential prototype pollution if query values are ever used as object keys in downstream code
+- **7 new security tests** — IP spoofing rejection (garbage strings, SQL injection payloads), IPv6 acceptance, shared-bucket funneling assertion, prototype pollution blocking, and safe substring passthrough (177 tests total)
+
+---
+
 ## [1.10.0] - 2026-02-16
 
 ### Added

@@ -120,8 +120,8 @@ describe("checkRouteLimit — per-IP rate limiting", () => {
   });
 });
 
-describe("extractClientIp", () => {
-  it("extracts first IP from X-Forwarded-For", () => {
+describe("extractClientIp — spoofing protection", () => {
+  it("extracts first valid IP from X-Forwarded-For", () => {
     const req = new Request("http://localhost", {
       headers: { "x-forwarded-for": "203.0.113.50, 70.41.3.18, 150.172.238.178" },
     });
@@ -138,6 +138,45 @@ describe("extractClientIp", () => {
   it("returns 'unknown' when no IP headers present", () => {
     const req = new Request("http://localhost");
     expect(extractClientIp(req)).toBe("unknown");
+  });
+
+  it("rejects spoofed non-IP strings in X-Forwarded-For", () => {
+    const req = new Request("http://localhost", {
+      headers: { "x-forwarded-for": "fake-ip-bypass-1234" },
+    });
+    expect(extractClientIp(req)).toBe("unknown-invalid");
+  });
+
+  it("rejects SQL injection in X-Forwarded-For", () => {
+    const req = new Request("http://localhost", {
+      headers: { "x-forwarded-for": "127.0.0.1 OR 1=1" },
+    });
+    expect(extractClientIp(req)).toBe("unknown-invalid");
+  });
+
+  it("rejects spoofed non-IP strings in X-Real-IP", () => {
+    const req = new Request("http://localhost", {
+      headers: { "x-real-ip": "not-an-ip" },
+    });
+    expect(extractClientIp(req)).toBe("unknown-invalid");
+  });
+
+  it("accepts valid IPv6 addresses", () => {
+    const req = new Request("http://localhost", {
+      headers: { "x-forwarded-for": "2001:db8::1" },
+    });
+    expect(extractClientIp(req)).toBe("2001:db8::1");
+  });
+
+  it("funnels all spoofed IPs into a shared bucket", () => {
+    // Two different spoofed values → same fallback → same rate limit bucket
+    const req1 = new Request("http://localhost", {
+      headers: { "x-forwarded-for": "spoof-attempt-1" },
+    });
+    const req2 = new Request("http://localhost", {
+      headers: { "x-forwarded-for": "spoof-attempt-2" },
+    });
+    expect(extractClientIp(req1)).toBe(extractClientIp(req2));
   });
 });
 
@@ -199,5 +238,18 @@ describe("sanitizeQuery", () => {
   it("passes through clean queries unchanged", () => {
     expect(sanitizeQuery("Blinding Lights")).toBe("Blinding Lights");
     expect(sanitizeQuery("drake hotline bling")).toBe("drake hotline bling");
+  });
+
+  it("blocks prototype pollution payloads", () => {
+    expect(sanitizeQuery("__proto__")).toBe("");
+    expect(sanitizeQuery("constructor")).toBe("");
+    expect(sanitizeQuery("prototype")).toBe("");
+  });
+
+  it("allows queries containing dangerous keys as substrings", () => {
+    // "constructor" as a standalone query is blocked, but as part of a
+    // natural search it's fine — nobody's doing bracket notation on this.
+    expect(sanitizeQuery("the constructor song")).toBe("the constructor song");
+    expect(sanitizeQuery("prototype records")).toBe("prototype records");
   });
 });

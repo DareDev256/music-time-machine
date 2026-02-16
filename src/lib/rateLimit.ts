@@ -84,13 +84,40 @@ const ROUTE_LIMITS = {
 
 export type RouteName = keyof typeof ROUTE_LIMITS;
 
+/**
+ * IPv4: 1-3 digits × 4 octets. IPv6: hex groups with optional :: shorthand.
+ * Rejects spoofed garbage like "fake-ip", "127.0.0.1 OR 1=1", etc.
+ */
+const IPV4_PATTERN = /^(\d{1,3}\.){3}\d{1,3}$/;
+const IPV6_PATTERN = /^([0-9a-fA-F]{0,4}:){2,7}[0-9a-fA-F]{0,4}$/;
+
+function isValidIp(ip: string): boolean {
+  return IPV4_PATTERN.test(ip) || IPV6_PATTERN.test(ip);
+}
+
+/**
+ * Extract the client IP from request headers with spoofing protection.
+ *
+ * Problem: `x-forwarded-for` is trivially spoofable by clients. An attacker
+ * sending `X-Forwarded-For: random-string-{n}` on every request gets a fresh
+ * rate limit bucket each time, completely bypassing per-IP rate limiting.
+ *
+ * Mitigation: Validate the extracted IP against IPv4/IPv6 format. Invalid IPs
+ * fall back to "unknown-invalid", which funnels all spoofed requests into a
+ * single shared rate limit bucket — making spoofing counterproductive.
+ */
 export function extractClientIp(request: Request): string {
   const headers = request.headers;
   const forwarded = headers.get("x-forwarded-for");
   if (forwarded) {
-    return forwarded.split(",")[0].trim();
+    const ip = forwarded.split(",")[0].trim();
+    return isValidIp(ip) ? ip : "unknown-invalid";
   }
-  return headers.get("x-real-ip") ?? "unknown";
+  const realIp = headers.get("x-real-ip");
+  if (realIp) {
+    return isValidIp(realIp) ? realIp : "unknown-invalid";
+  }
+  return "unknown";
 }
 
 export function checkRouteLimit(route: RouteName, clientIp: string): boolean {
@@ -123,11 +150,21 @@ export function isValidId(id: string): boolean {
   return id.length > 0 && id.length <= MAX_ID_LENGTH && ID_PATTERN.test(id);
 }
 
-/** Sanitize a user search query: strip HTML, remove dangerous chars, enforce max length. */
+/** Keys that could trigger prototype pollution if used in object bracket notation. */
+const DANGEROUS_KEYS = new Set(["__proto__", "constructor", "prototype"]);
+
+/** Sanitize a user search query: strip HTML, remove dangerous chars, block
+ *  prototype pollution payloads, enforce max length. */
 export function sanitizeQuery(input: string): string {
-  return input
+  const cleaned = input
     .replace(/<[^>]*>/g, "")
     .replace(/[<>"'&]/g, "")
     .trim()
     .slice(0, MAX_QUERY_LENGTH);
+
+  // Block prototype pollution: if the entire cleaned query is a dangerous
+  // object key, reject it. Prevents use as object property in downstream code.
+  if (DANGEROUS_KEYS.has(cleaned)) return "";
+
+  return cleaned;
 }
