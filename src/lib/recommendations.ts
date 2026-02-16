@@ -103,9 +103,10 @@ export function getSimilarSongs(
 
   // Diversity-aware selection: skip songs whose *any* credited artist was already picked.
   // This prevents "Lady Gaga & Bruno Mars" and "ROSÉ & Bruno Mars" from both appearing.
+  // Pre-seed with target artists so recommendations surface *new* artists, not more of the same.
   scored.sort((a, b) => b.score - a.score);
   const picked: { song: SongData; reason: string; matchScore: number }[] = [];
-  const seenArtists = new Set<string>();
+  const seenArtists = new Set<string>(targetArtists);
 
   for (const entry of scored) {
     if (picked.length >= limit) break;

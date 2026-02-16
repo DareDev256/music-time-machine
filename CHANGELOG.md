@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.9.1] - 2026-02-16
+
+### Fixed
+- **Diversity filter pre-seeds target artists** — `getSimilarSongs` now excludes the target song's own artists from recommendations. Previously, viewing "Lady Gaga & Bruno Mars" could surface "Bruno Mars - 24K Magic" as a recommendation because the diversity filter only tracked *picked* artists, not the target's. The `seenArtists` set is now initialized with `targetArtists`, ensuring recommendations always surface new artists rather than more songs by the same artist
+- **Removed unused `afterEach` import** in `apiHandler.test.ts` — Eliminated the last ESLint warning in the codebase
+
+---
+
 ## [1.9.0] - 2026-02-16
 
 ### Changed

@@ -48,7 +48,7 @@ describe("getSimilarSongs", () => {
 
   it("skips candidates without audio features", () => {
     const noFeatures = makeSong({ id: "silent", spotify: null });
-    const catalog = [noFeatures, makeSong({ id: "valid" })];
+    const catalog = [noFeatures, makeSong({ id: "valid", artist: "Other Artist" })];
     const results = getSimilarSongs(target, catalog);
     expect(results).toHaveLength(1);
     expect(results[0].song.id).toBe("valid");
@@ -68,7 +68,7 @@ describe("getSimilarSongs", () => {
     expect(results[0].song.id).toBe("twin");
   });
 
-  it("applies same-artist bonus", () => {
+  it("excludes same-artist songs via diversity pre-seeding", () => {
     const sameArtist = makeSong({
       id: "same-artist",
       artist: "Test Artist",
@@ -86,9 +86,9 @@ describe("getSimilarSongs", () => {
       },
     });
     const results = getSimilarSongs(target, [stranger, sameArtist]);
-    // Same artist gets +15 bonus so should rank higher despite identical features to stranger
-    expect(results[0].song.id).toBe("same-artist");
-    expect(results[0].reason).toBe("Same artist");
+    // Same-artist songs are now excluded by the diversity pre-seed
+    expect(results).toHaveLength(1);
+    expect(results[0].song.id).toBe("stranger");
   });
 
   it("applies same-era bonus for songs within 2 years", () => {
@@ -228,22 +228,24 @@ describe("getSimilarSongs", () => {
     expect(new Set(artists).size).toBe(3); // all unique
   });
 
-  it("treats 'ft.' featured artists as same primary artist", () => {
+  it("excludes 'ft.' featured artists via diversity pre-seeding", () => {
     const base = makeSong({ id: "base", artist: "Mark Ronson" });
     const feat = makeSong({ id: "feat", artist: "Mark Ronson ft. Bruno Mars" });
     const catalog = [feat, makeSong({ id: "other", artist: "Other" })];
     const results = getSimilarSongs(base, catalog, 4);
-    const markSong = results.find((r) => r.song.id === "feat");
-    expect(markSong?.reason).toBe("Same artist");
+    // "Mark Ronson ft. Bruno Mars" shares artist with target — excluded by diversity pre-seed
+    expect(results.every((r) => r.song.id !== "feat")).toBe(true);
+    expect(results.find((r) => r.song.id === "other")).toBeTruthy();
   });
 
-  it("treats '&' collaborations as shared artist for same-artist bonus", () => {
+  it("excludes '&' collaborations sharing target artist via diversity pre-seeding", () => {
     const base = makeSong({ id: "base", artist: "Bruno Mars" });
     const collab = makeSong({ id: "collab", artist: "Lady Gaga & Bruno Mars" });
     const catalog = [collab, makeSong({ id: "other", artist: "Other" })];
     const results = getSimilarSongs(base, catalog, 4);
-    const collabSong = results.find((r) => r.song.id === "collab");
-    expect(collabSong?.reason).toBe("Same artist");
+    // "Lady Gaga & Bruno Mars" shares Bruno Mars with target — excluded
+    expect(results.every((r) => r.song.id !== "collab")).toBe(true);
+    expect(results.find((r) => r.song.id === "other")).toBeTruthy();
   });
 
   it("deduplicates '&' collaborations sharing an artist in diversity filter", () => {
@@ -259,6 +261,35 @@ describe("getSimilarSongs", () => {
     );
     expect(brunoSongs).toHaveLength(1);
     expect(results.find((r) => r.song.artist === "Adele")).toBeTruthy();
+  });
+
+  it("pre-seeds diversity filter with target artists — no same-artist results", () => {
+    // Target is "Test Artist" — no song by "Test Artist" should appear in results
+    const catalog = [
+      makeSong({ id: "ta1", artist: "Test Artist" }),
+      makeSong({ id: "ta2", artist: "Test Artist" }),
+      makeSong({ id: "other", artist: "Different Person" }),
+    ];
+    const results = getSimilarSongs(target, catalog, 4);
+    expect(results.every((r) => r.song.artist !== "Test Artist")).toBe(true);
+    expect(results.find((r) => r.song.id === "other")).toBeTruthy();
+  });
+
+  it("pre-seeds diversity with collab artists — target feat. artist excluded", () => {
+    // Target features Bruno Mars — no other Bruno Mars song should appear
+    const collabTarget = makeSong({ id: "target-collab", artist: "Lady Gaga & Bruno Mars" });
+    const catalog = [
+      makeSong({ id: "bruno-solo", artist: "Bruno Mars" }),
+      makeSong({ id: "gaga-solo", artist: "Lady Gaga" }),
+      makeSong({ id: "adele", artist: "Adele" }),
+      makeSong({ id: "drake", artist: "Drake" }),
+    ];
+    const results = getSimilarSongs(collabTarget, catalog, 4);
+    // Neither Bruno Mars nor Lady Gaga solo songs should appear
+    expect(results.every((r) => r.song.artist !== "Bruno Mars")).toBe(true);
+    expect(results.every((r) => r.song.artist !== "Lady Gaga")).toBe(true);
+    expect(results.find((r) => r.song.id === "adele")).toBeTruthy();
+    expect(results.find((r) => r.song.id === "drake")).toBeTruthy();
   });
 });
 

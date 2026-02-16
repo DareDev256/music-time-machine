@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { withRouteHandler, jsonWithCache } from "../apiHandler";
 import { NextRequest, NextResponse } from "next/server";
 
