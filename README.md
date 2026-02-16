@@ -170,6 +170,7 @@ Data   ┌──────────┬────────────�
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, 200-char max |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
+| **Accessibility** | ARIA combobox pattern on search (listbox + options + activedescendant), focus-trapped modal dialogs with Escape dismiss, keyboard-navigable audio seek slider, dynamic aria-labels on all interactive controls |
 
 ---
 
@@ -193,7 +194,7 @@ src/
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
 │   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 132 tests across 10 suites
+│   └── __tests__/                  # 141 tests across 10 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 

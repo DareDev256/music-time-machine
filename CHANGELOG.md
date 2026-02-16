@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.8.2] - 2026-02-16
+
+### Fixed
+- **ShareCard modal accessibility** — Added focus trap (Tab cycles within modal), Escape key dismissal, backdrop click-to-close, `role="dialog"` with `aria-modal="true"`, and focus restoration on unmount. Previously keyboard users could tab behind the modal and had no way to dismiss it via keyboard (WCAG 2.1 SC 2.1.2)
+- **SearchBar autocomplete ARIA roles** — Added `role="combobox"` with `aria-expanded`, `aria-autocomplete="list"`, `aria-controls`, and `aria-activedescendant` to the input. Dropdown now has `role="listbox"` with `role="option"` and `aria-selected` on each result. Screen readers can now navigate search suggestions
+- **AudioPlayer play button missing label** — Added dynamic `aria-label` ("Play preview" / "Pause preview") so screen readers announce the button's purpose
+- **AudioPlayer seek bar keyboard access** — Progress bar now has `role="slider"` with full ARIA attributes (`aria-valuemin`, `aria-valuemax`, `aria-valuenow`, `aria-valuetext`) and Arrow key support for keyboard-only seeking (±2s per press)
+
+---
+
 ## [1.8.1] - 2026-02-15
 
 ### Security

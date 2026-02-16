@@ -99,11 +99,13 @@ export default function SearchBar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const listboxId = "search-listbox";
+
   return (
     <div className="relative w-full max-w-2xl">
       {/* Search Input */}
       <div className="relative">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" aria-hidden="true" />
         <input
           ref={inputRef}
           type="text"
@@ -112,6 +114,11 @@ export default function SearchBar() {
           onKeyDown={handleKeyDown}
           onFocus={() => query.trim() && results.length > 0 && setIsOpen(true)}
           placeholder="Search for any song..."
+          role="combobox"
+          aria-expanded={isOpen && results.length > 0}
+          aria-autocomplete="list"
+          aria-controls={listboxId}
+          aria-activedescendant={selectedIndex >= 0 ? `search-option-${selectedIndex}` : undefined}
           className="w-full pl-12 pr-12 py-4 bg-gray-100 dark:bg-gray-800/60 rounded-full text-foreground placeholder-gray-400 focus:outline-none transition-all"
         />
         {query && (
@@ -137,11 +144,17 @@ export default function SearchBar() {
       {isOpen && results.length > 0 && (
         <div
           ref={dropdownRef}
+          id={listboxId}
+          role="listbox"
+          aria-label="Search results"
           className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-900 shadow-xl border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden z-50"
         >
           {results.map((result, index) => (
             <button
               key={result.id}
+              id={`search-option-${index}`}
+              role="option"
+              aria-selected={index === selectedIndex}
               onClick={() => navigateToSong(result.id)}
               className={`w-full flex items-center gap-4 p-4 text-left transition-colors ${
                 index === selectedIndex

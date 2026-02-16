@@ -121,6 +121,7 @@ export default function AudioPlayer({
           {/* Play Button */}
           <button
             onClick={togglePlay}
+            aria-label={isPlaying ? "Pause preview" : "Play preview"}
             className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 bg-accent hover:bg-accent-hover rounded-full flex items-center justify-center transition-colors"
           >
             {isPlaying ? (
@@ -136,8 +137,21 @@ export default function AudioPlayer({
               {formatTime(currentTime)}
             </span>
             <div
+              role="slider"
+              aria-label="Seek audio"
+              aria-valuemin={0}
+              aria-valuemax={Math.round(duration)}
+              aria-valuenow={Math.round(currentTime)}
+              aria-valuetext={`${formatTime(currentTime)} of ${formatTime(duration)}`}
+              tabIndex={0}
               className="flex-1 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer"
               onClick={handleSeek}
+              onKeyDown={(e) => {
+                const audio = audioRef.current;
+                if (!audio) return;
+                if (e.key === "ArrowRight") { audio.currentTime = Math.min(duration, currentTime + 2); e.preventDefault(); }
+                if (e.key === "ArrowLeft") { audio.currentTime = Math.max(0, currentTime - 2); e.preventDefault(); }
+              }}
             >
               <div
                 className="h-full bg-accent rounded-full transition-all"
