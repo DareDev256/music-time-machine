@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.9.0] - 2026-02-16
+
+### Changed
+- **Extracted comparison engine into `src/lib/comparison.ts`** — Moved `parseMetric`, `COMPARISON_METRICS`, and `buildInsights` out of `dataFetcher.ts` into a dedicated module. `dataFetcher.ts` now focuses purely on data orchestration (fetching, caching, resolution), while comparison logic is independently importable and testable. Backwards-compatible re-export of `parseMetric` from `dataFetcher.ts` ensures zero breaking changes for existing consumers
+
+### Added
+- **Comparison module test suite** — 12 tests covering `parseMetric` (6 cases), `COMPARISON_METRICS` structure validation (2 cases), and `buildInsights` logic (4 cases including missing platform graceful skip, tie detection, `lowerWins` inversion for Billboard Peak, and song2 winner path)
+
+---
+
 ## [1.8.3] - 2026-02-16
 
 ### Added
