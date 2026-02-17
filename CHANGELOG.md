@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.12.0] - 2026-02-17
+
+### Added
+- **Responsive navigation with route links** — Navigation bar now includes Home and Compare links with active-state indicators (accent highlight + dot badge on mobile). Desktop shows inline pill-style links with a divider before the theme toggle. Mobile gets a hamburger menu with an animated dropdown panel and backdrop overlay
+- **Mobile hamburger menu** — Slide-down menu with Framer Motion animations, body scroll lock, Escape-to-close, click-outside dismiss, and `aria-expanded`/`aria-controls` attributes for full WCAG accessibility
+- **Active route highlighting** — `usePathname` tracks the current page and highlights the matching nav link with the accent color. Uses `startsWith` for nested routes, exact match for home
+
+---
+
 ## [1.11.2] - 2026-02-17
 
 ### Added

@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.11.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.12.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-203_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -81,6 +81,9 @@ Explore any artist's top tracks, full discography grid, career timeline, and agg
 
 ### 📤 Social Sharing
 Dynamic OG image generation via Edge Runtime. Share modal with copy-to-clipboard, X, and Facebook — each shared link renders a rich social preview card with album art and stats.
+
+### 🧭 Responsive Navigation
+Full navigation bar with route links (Home, Compare) and active-state highlighting. Desktop shows inline pill-style links; mobile gets a hamburger menu with animated dropdown, backdrop overlay, body scroll lock, and Escape-to-close. WCAG-accessible with `aria-expanded`, `aria-controls`, and keyboard support.
 
 ### 🌓 Theme Toggle
 Light/dark mode with Apple Music–inspired design tokens. A blocking `<script>` applies the theme before first paint — zero FOUC.
