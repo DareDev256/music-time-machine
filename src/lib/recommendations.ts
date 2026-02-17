@@ -1,6 +1,16 @@
 import { SongData } from "@/types";
 import { songGenres } from "@/lib/mockData";
 
+/**
+ * Safely extract a year from a release date string.
+ * Returns null for undefined, empty, or unparseable dates instead of NaN.
+ */
+export function safeYear(date: string | undefined | null): number | null {
+  if (!date) return null;
+  const y = new Date(date).getFullYear();
+  return Number.isNaN(y) ? null : y;
+}
+
 interface ScoredSong {
   song: SongData;
   score: number;
@@ -35,16 +45,20 @@ export function getDiversityMeta(
   const genres = new Set<string>();
   const eras = new Set<string>();
 
-  // Include target song in era calculation for context
-  const targetDecade = `${Math.floor(new Date(target.releaseDate).getFullYear() / 10) * 10}s`;
-  eras.add(targetDecade);
+  // Include target song in era calculation for context (guard against invalid dates)
+  const targetYear = safeYear(target.releaseDate);
+  if (targetYear !== null) {
+    eras.add(`${Math.floor(targetYear / 10) * 10}s`);
+  }
 
   for (const { song } of picks) {
     const genre = songGenres[song.id];
     if (genre) genres.add(genre);
 
-    const year = new Date(song.releaseDate).getFullYear();
-    eras.add(`${Math.floor(year / 10) * 10}s`);
+    const year = safeYear(song.releaseDate);
+    if (year !== null) {
+      eras.add(`${Math.floor(year / 10) * 10}s`);
+    }
   }
 
   const count = picks.length;
@@ -112,7 +126,7 @@ export function getSimilarSongs(
   const targetFeatures = target.spotify?.audioFeatures;
   if (!targetFeatures) return [];
 
-  const targetYear = new Date(target.releaseDate).getFullYear();
+  const targetYear = safeYear(target.releaseDate);
   const normalizedTargetTempo = targetFeatures.tempo / 200; // BPM → 0-1 range
   const targetArtists = new Set(splitArtists(target.artist));
 
@@ -142,9 +156,9 @@ export function getSimilarSongs(
     const sameArtist = candidateArtists.some((a) => targetArtists.has(a));
     if (sameArtist) score += 15;
 
-    // Bonus: same era (within 2 years)
-    const candidateYear = new Date(candidate.releaseDate).getFullYear();
-    if (Math.abs(candidateYear - targetYear) <= 2) score += 8;
+    // Bonus: same era (within 2 years) — skip if either date is invalid
+    const candidateYear = safeYear(candidate.releaseDate);
+    if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= 2) score += 8;
 
     // Determine the primary reason for the recommendation
     const reason = sameArtist
@@ -155,7 +169,7 @@ export function getSimilarSongs(
           ? "High energy match"
           : Math.abs(features.valence - targetFeatures.valence) < 0.1
             ? "Similar mood"
-            : Math.abs(candidateYear - targetYear) <= 1
+            : (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= 1)
               ? "Same era"
               : "Similar sound";
 

@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.11.1] - 2026-02-17
+
+### Fixed
+- **Diversity score NaN contamination** — `getDiversityMeta()` and `getSimilarSongs()` now guard against invalid, missing, or empty `releaseDate` values via a new `safeYear()` helper. Previously, `new Date(undefined).getFullYear()` produced `NaN`, which created phantom `"NaNs"` era entries — corrupting diversity scores and rendering garbage era tags in the UI (e.g. "spans 2020s & NaNs"). Invalid dates are now excluded from era calculations entirely
+- **Era bonus crash for missing dates** — The same-era bonus (+8 points) in `getSimilarSongs` now safely skips candidates with unparseable release dates instead of producing NaN comparisons that silently awarded or denied the bonus
+
+### Added
+- **`safeYear()` utility** — Extracted reusable date-year parser that returns `null` instead of `NaN` for invalid inputs. Used across both diversity scoring and similarity matching
+- **8 new tests** — `safeYear` unit tests (valid dates, undefined, null, empty string, unparseable), `getDiversityMeta` invalid-date edge cases (missing pick dates, invalid target date, all-invalid dates) — 194 tests total
+
+---
+
 ## [1.11.0] - 2026-02-16
 
 ### Changed

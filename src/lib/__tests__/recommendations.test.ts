@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getSimilarSongs, getDiversityMeta, primaryArtist, splitArtists } from "../recommendations";
+import { getSimilarSongs, getDiversityMeta, primaryArtist, splitArtists, safeYear } from "../recommendations";
 import { SongData } from "@/types";
 
 // Minimal factory — only fields the algorithm actually reads
@@ -442,5 +442,63 @@ describe("primaryArtist", () => {
 
   it("is case-insensitive", () => {
     expect(primaryArtist("THE WEEKND")).toBe("the weeknd");
+  });
+});
+
+describe("safeYear", () => {
+  it("extracts year from valid date string", () => {
+    expect(safeYear("2022-06-15")).toBe(2022);
+    expect(safeYear("1999-06-15")).toBe(1999);
+  });
+
+  it("returns null for undefined", () => {
+    expect(safeYear(undefined)).toBeNull();
+  });
+
+  it("returns null for null", () => {
+    expect(safeYear(null)).toBeNull();
+  });
+
+  it("returns null for empty string", () => {
+    expect(safeYear("")).toBeNull();
+  });
+
+  it("returns null for unparseable date", () => {
+    expect(safeYear("not-a-date")).toBeNull();
+  });
+});
+
+describe("getDiversityMeta — invalid date handling", () => {
+  const target = makeSong({ id: "target", releaseDate: "2022-06-01" });
+
+  it("excludes NaN eras when picks have missing releaseDate", () => {
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: undefined as unknown as string }) },
+      { song: makeSong({ id: "b", releaseDate: "2015-01-01" }) },
+    ];
+    const result = getDiversityMeta(target, picks);
+    // Should NOT contain "NaNs" — only real decades
+    expect(result.eras.every((e) => !e.includes("NaN"))).toBe(true);
+    expect(result.eras).toContain("2020s");
+    expect(result.eras).toContain("2010s");
+  });
+
+  it("handles target with invalid releaseDate gracefully", () => {
+    const badTarget = makeSong({ id: "bad", releaseDate: "" });
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: "2020-06-15" }) },
+    ];
+    const result = getDiversityMeta(badTarget, picks);
+    expect(result.eras).toEqual(["2020s"]);
+    expect(result.eras.every((e) => !e.includes("NaN"))).toBe(true);
+  });
+
+  it("returns empty eras when all dates are invalid", () => {
+    const badTarget = makeSong({ id: "bad", releaseDate: "" });
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: undefined as unknown as string }) },
+    ];
+    const result = getDiversityMeta(badTarget, picks);
+    expect(result.eras).toEqual([]);
   });
 });
