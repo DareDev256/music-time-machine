@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.11.0] - 2026-02-16
+
+### Changed
+- **Extracted shared `formatCompact()` utility** (`src/lib/formatNumber.ts`) — Unified three duplicate number-formatting functions (`formatNumber` in spotify.ts, `formatViews` in genius.ts, `formatCount` in youtube.ts) into a single polymorphic function that handles `number`, numeric `string`, `undefined`, and `null` inputs. All three API clients now import from one source, eliminating ~30 lines of duplicated B/M/K formatting logic and ensuring consistent thresholds across platforms
+
+### Added
+- **`formatCompact` test suite** — 9 tests covering billion/million/thousand thresholds, sub-1000 passthrough, numeric string parsing (YouTube API pattern), undefined/null/empty/NaN handling, and non-numeric string passthrough (186 tests total)
+
+---
+
 ## [1.10.1] - 2026-02-16
 
 ### Security

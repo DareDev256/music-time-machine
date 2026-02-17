@@ -1,5 +1,6 @@
 import { YouTubeData } from "@/types";
 import { checkYouTubeLimit } from "./rateLimit";
+import { formatCompact } from "./formatNumber";
 
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
@@ -70,9 +71,9 @@ export async function getYouTubeVideo(videoId: string): Promise<YouTubeData | nu
         video.snippet.thumbnails.high?.url ||
         video.snippet.thumbnails.default?.url,
       publishedAt: video.snippet.publishedAt.split("T")[0],
-      viewCount: formatCount(video.statistics.viewCount),
-      likeCount: formatCount(video.statistics.likeCount),
-      commentCount: formatCount(video.statistics.commentCount),
+      viewCount: formatCompact(video.statistics.viewCount),
+      likeCount: formatCompact(video.statistics.likeCount),
+      commentCount: formatCompact(video.statistics.commentCount),
       channelTitle: video.snippet.channelTitle,
       externalUrl: `https://youtube.com/watch?v=${video.id}`,
     };
@@ -97,23 +98,6 @@ export async function getYouTubeVideoBySearch(
     console.error("YouTube search error:", error);
     return null;
   }
-}
-
-function formatCount(count: string | undefined): string {
-  if (!count) return "N/A";
-  const num = parseInt(count, 10);
-  if (isNaN(num)) return count;
-
-  if (num >= 1_000_000_000) {
-    return (num / 1_000_000_000).toFixed(1) + "B";
-  }
-  if (num >= 1_000_000) {
-    return (num / 1_000_000).toFixed(1) + "M";
-  }
-  if (num >= 1_000) {
-    return (num / 1_000).toFixed(1) + "K";
-  }
-  return num.toString();
 }
 
 export function isYouTubeConfigured(): boolean {

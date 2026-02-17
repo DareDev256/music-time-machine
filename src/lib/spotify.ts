@@ -1,5 +1,6 @@
 import { SpotifyData, ArtistData } from "@/types";
 import { checkSpotifyLimit } from "./rateLimit";
+import { formatCompact } from "./formatNumber";
 
 let accessToken: string | null = null;
 let tokenExpiry: number = 0;
@@ -88,7 +89,7 @@ export async function getSpotifyTrack(trackId: string): Promise<SpotifyData | nu
 
     // Streams aren't available via public API - would need Spotify for Artists
     // Using a rough estimate based on popularity
-    const estimatedStreams = formatNumber(track.popularity * 25000000 + Math.random() * 500000000);
+    const estimatedStreams = formatCompact(track.popularity * 25000000 + Math.random() * 500000000);
 
     return {
       id: track.id,
@@ -144,19 +145,6 @@ export async function searchSpotifyTracks(
   }
 }
 
-function formatNumber(num: number): string {
-  if (num >= 1_000_000_000) {
-    return (num / 1_000_000_000).toFixed(1) + "B";
-  }
-  if (num >= 1_000_000) {
-    return (num / 1_000_000).toFixed(1) + "M";
-  }
-  if (num >= 1_000) {
-    return (num / 1_000).toFixed(1) + "K";
-  }
-  return num.toString();
-}
-
 export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | null> {
   try {
     let artistData;
@@ -181,13 +169,13 @@ export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | n
       slug: artistData.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       image: artistData.images?.[0]?.url || "",
       genres: artistData.genres || [],
-      monthlyListeners: formatNumber(artistData.followers?.total || 0),
+      monthlyListeners: formatCompact(artistData.followers?.total || 0),
       totalStreams: "N/A",
       topTracks: (topTracks.tracks || []).slice(0, 5).map((t: { id: string; name: string; album: { images: { url: string }[] }; popularity: number }) => ({
         id: t.id,
         title: t.name,
         albumArt: t.album.images[0]?.url || "",
-        streams: formatNumber(t.popularity * 25000000),
+        streams: formatCompact(t.popularity * 25000000),
       })),
       albums: (albums.items || []).map((a: { name: string; release_date: string; images: { url: string }[] }) => ({
         name: a.name,

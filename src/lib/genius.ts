@@ -1,5 +1,6 @@
 import { GeniusData } from "@/types";
 import { checkGeniusLimit } from "./rateLimit";
+import { formatCompact } from "./formatNumber";
 
 const GENIUS_API_BASE = "https://api.genius.com";
 
@@ -78,7 +79,7 @@ export async function getGeniusSong(songId: number): Promise<GeniusData | null> 
       title: song.title,
       artist: song.primary_artist?.name || "Unknown",
       albumArt: song.song_art_image_url || song.header_image_url || "",
-      pageViews: formatViews(song.stats?.pageviews),
+      pageViews: formatCompact(song.stats?.pageviews),
       annotationCount: song.annotation_count || 0,
       lyricsUrl: song.url,
       description: song.description?.plain || extractDescription(song),
@@ -103,18 +104,6 @@ export async function getGeniusSongBySearch(
     console.error("Genius search error:", error);
     return null;
   }
-}
-
-function formatViews(views: number | undefined): string {
-  if (!views) return "N/A";
-
-  if (views >= 1_000_000) {
-    return (views / 1_000_000).toFixed(1) + "M";
-  }
-  if (views >= 1_000) {
-    return (views / 1_000).toFixed(1) + "K";
-  }
-  return views.toString();
 }
 
 function extractDescription(song: {

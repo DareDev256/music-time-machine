@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.10.1-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-177_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.11.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-186_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -96,6 +96,7 @@ These are the design decisions that make this more than a CRUD app:
 | **Mock-First Architecture** | Starts with realistic mock data for all 18 songs across 4 platforms. Real APIs enrich via `Promise.all` — if any call fails, mock data stays. Zero-config works perfectly, partial config works partially, full config works fully. The consumer never sees an empty state. |
 | **Token Bucket Rate Limiting** | Each API gets a token bucket with burst capacity and continuous refill — one multiplication, one comparison per request. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks. |
 | **TTL Cache + LRU Eviction** | Generic `TTLCache` using `Map` insertion-order semantics for oldest-first eviction. Search cached 5 min (200 entries), songs cached 30 min (100 entries). Zero external dependencies. |
+| **Shared `formatCompact` Utility** | Unified B/M/K number formatting across all 3 API clients (Spotify, YouTube, Genius). Handles `number`, numeric `string`, `undefined`, and `null` inputs — one function instead of three with identical logic. |
 | **Content-Based Recommendations** | Weighted Euclidean distance across danceability, energy ×1.5, valence ×1.5, and normalized tempo. Same-era bonus for songs within 2 years. **Diversity-aware selection** pre-seeds the target song's artists and caps at one song per artist — recommendations always surface *new* artists. Match scores (0–99%) rendered as color-coded circular progress badges. |
 | **Edge OG Images** | `/api/og/[id]` renders JSX to a 1200×630 PNG via `@vercel/og` (Satori). Sub-100ms, no headless browser. |
 | **Route Middleware** | `withRouteHandler()` wraps all 6 API routes with rate limiting, error handling, and consistent responses — zero boilerplate per route. |
@@ -193,8 +194,9 @@ src/
 │   ├── cache.ts                    # TTL cache with max-size eviction
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
 │   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
+│   ├── formatNumber.ts              # Shared B/M/K compact number formatter
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 141 tests across 10 suites
+│   └── __tests__/                  # 150 tests across 11 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -227,7 +229,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**177 tests** across **12 suites** covering:
+**186 tests** across **13 suites** covering:
 
 | Suite | What's Tested |
 |-------|--------------|
@@ -240,6 +242,7 @@ npx vitest --watch    # Watch mode
 | **Time Machine** | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
 | **AudioPlayer** | Play/pause, unmount cleanup, seek behavior |
 | **SearchBar** | Autocomplete rendering, keyboard navigation |
+| **formatCompact** | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
 | **QuickStats** | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
 
 External API clients fully mocked — tests run fast and offline.
