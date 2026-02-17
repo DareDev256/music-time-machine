@@ -1,6 +1,7 @@
 import { YouTubeData } from "@/types";
 import { checkYouTubeLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
+import { safeFetch } from "./safeFetch";
 
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
@@ -18,7 +19,7 @@ async function youtubeFetch(endpoint: string, params: Record<string, string>) {
     key: apiKey,
   });
 
-  const response = await fetch(`${YOUTUBE_API_BASE}${endpoint}?${searchParams}`);
+  const response = await safeFetch(`${YOUTUBE_API_BASE}${endpoint}?${searchParams}`);
 
   if (!response.ok) {
     throw new Error(`YouTube API error: ${response.status}`);

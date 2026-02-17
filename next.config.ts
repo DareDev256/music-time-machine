@@ -63,6 +63,10 @@ const nextConfig: NextConfig = {
             key: "Cross-Origin-Resource-Policy",
             value: "same-origin",
           },
+          {
+            key: "Cross-Origin-Embedder-Policy",
+            value: "credentialless",
+          },
         ],
       },
     ];

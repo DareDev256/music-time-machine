@@ -1,6 +1,7 @@
 import { GeniusData } from "@/types";
 import { checkGeniusLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
+import { safeFetch } from "./safeFetch";
 
 const GENIUS_API_BASE = "https://api.genius.com";
 
@@ -13,7 +14,7 @@ async function geniusFetch(endpoint: string) {
     throw new Error("Genius access token not configured");
   }
 
-  const response = await fetch(`${GENIUS_API_BASE}${endpoint}`, {
+  const response = await safeFetch(`${GENIUS_API_BASE}${endpoint}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

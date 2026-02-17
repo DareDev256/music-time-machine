@@ -1,6 +1,7 @@
 import { SpotifyData, ArtistData } from "@/types";
 import { checkSpotifyLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
+import { safeFetch } from "./safeFetch";
 
 let accessToken: string | null = null;
 let tokenExpiry: number = 0;
@@ -17,7 +18,7 @@ async function getAccessToken(): Promise<string> {
     throw new Error("Spotify credentials not configured");
   }
 
-  const response = await fetch("https://accounts.spotify.com/api/token", {
+  const response = await safeFetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
@@ -42,7 +43,7 @@ async function spotifyFetch(endpoint: string) {
     throw new Error("Spotify rate limit exceeded");
   }
   const token = await getAccessToken();
-  const response = await fetch(`https://api.spotify.com/v1${endpoint}`, {
+  const response = await safeFetch(`https://api.spotify.com/v1${endpoint}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 

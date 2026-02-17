@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.12.1] - 2026-02-17
+
+### Security
+- **SSRF origin validation on all outbound API requests** — Created `safeFetch()` wrapper (`src/lib/safeFetch.ts`) that validates the final resolved URL origin against an explicit allowlist before any server-side request is made. All three API clients (Spotify, YouTube, Genius) now route through `safeFetch()` instead of bare `fetch()`. Blocks cloud metadata endpoints (169.254.169.254), internal IPs, localhost, `@`-credential URL tricks, subdomain spoofing (api.spotify.com.evil.com), HTTP downgrades of HTTPS origins, and arbitrary external domains. Defense-in-depth against SSRF even when URL construction uses hardcoded base URLs — catches edge cases from encoded characters, future code changes, or template string manipulation
+- **Genius ID NaN guard** — `dataFetcher.ts` now validates the parsed Genius ID is a positive integer before passing it to the API client. Previously, `parseInt("not-a-number", 10)` produced `NaN` which would propagate to `getGeniusSong(NaN)` and construct a malformed API URL (`/songs/NaN`)
+- **Cross-Origin-Embedder-Policy header** — Added `credentialless` COEP to complete cross-origin isolation alongside the existing COOP `same-origin` header. Mitigates Spectre-class side-channel attacks by ensuring cross-origin resources are loaded without credentials unless explicitly opted in
+
+### Added
+- **12 SSRF validation tests** — Coverage for all 4 allowed origins, cloud metadata blocking, localhost blocking, internal IP blocking, arbitrary domain blocking, `@`-credential trick, malformed URL rejection, HTTP downgrade blocking, subdomain spoofing (215 tests total)
+
+---
+
 ## [1.12.0] - 2026-02-17
 
 ### Added

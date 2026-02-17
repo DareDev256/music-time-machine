@@ -101,7 +101,9 @@ async function resolveSongData(id: string): Promise<SongData | null> {
   }
 
   if (id.startsWith("genius:")) {
-    return fetchGeniusSongData(parseInt(id.replace("genius:", ""), 10));
+    const geniusId = parseInt(id.replace("genius:", ""), 10);
+    if (Number.isNaN(geniusId) || geniusId <= 0) return null;
+    return fetchGeniusSongData(geniusId);
   }
 
   if (mockSong) return enrichMockSong(mockSong);
