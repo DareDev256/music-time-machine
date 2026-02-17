@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { ExternalLink } from "lucide-react";
+import { safeHref } from "@/lib/safeHref";
 
 interface PlatformCardProps {
   title: string;
@@ -34,9 +35,9 @@ export default function PlatformCard({
           </div>
           <h3 className="text-base sm:text-lg font-semibold text-foreground">{title}</h3>
         </div>
-        {externalUrl && (
+        {externalUrl && safeHref(externalUrl) !== "#" && (
           <a
-            href={externalUrl}
+            href={safeHref(externalUrl)}
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground-secondary hover:text-foreground active:scale-95 transition-all p-1"

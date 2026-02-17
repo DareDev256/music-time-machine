@@ -3,6 +3,7 @@
 import { FileText, ExternalLink } from "lucide-react";
 import { GeniusData } from "@/types";
 import PlatformCard, { StatRow } from "./PlatformCard";
+import { safeHref } from "@/lib/safeHref";
 
 interface GeniusCardProps {
   data: GeniusData;
@@ -41,7 +42,7 @@ export default function GeniusCard({ data }: GeniusCardProps) {
 
       {/* View Lyrics Button */}
       <a
-        href={data.lyricsUrl}
+        href={safeHref(data.lyricsUrl)}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-4 flex items-center justify-center gap-2 w-full bg-amber-100 dark:bg-amber-900/20 hover:bg-amber-200 dark:hover:bg-amber-900/30 text-amber-700 dark:text-amber-400 py-3 rounded-xl transition-colors"

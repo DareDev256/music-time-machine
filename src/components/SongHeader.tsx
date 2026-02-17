@@ -4,6 +4,7 @@ import { Calendar, TrendingUp, Music, ExternalLink } from "lucide-react";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
+import { safeHref } from "@/lib/safeHref";
 
 interface SongHeaderProps {
   song: SongData;
@@ -97,9 +98,9 @@ export default function SongHeader({ song }: SongHeaderProps) {
 
         {/* External Links */}
         <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mt-4 sm:mt-6">
-          {song.spotify?.externalUrl && (
+          {song.spotify?.externalUrl && safeHref(song.spotify.externalUrl) !== "#" && (
             <a
-              href={song.spotify.externalUrl}
+              href={safeHref(song.spotify.externalUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 sm:gap-2 bg-green-600 hover:bg-green-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
@@ -108,9 +109,9 @@ export default function SongHeader({ song }: SongHeaderProps) {
               <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           )}
-          {song.youtube?.externalUrl && (
+          {song.youtube?.externalUrl && safeHref(song.youtube.externalUrl) !== "#" && (
             <a
-              href={song.youtube.externalUrl}
+              href={safeHref(song.youtube.externalUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 sm:gap-2 bg-red-600 hover:bg-red-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
@@ -119,9 +120,9 @@ export default function SongHeader({ song }: SongHeaderProps) {
               <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           )}
-          {song.genius?.lyricsUrl && (
+          {song.genius?.lyricsUrl && safeHref(song.genius.lyricsUrl) !== "#" && (
             <a
-              href={song.genius.lyricsUrl}
+              href={safeHref(song.genius.lyricsUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 sm:gap-2 bg-yellow-600 hover:bg-yellow-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"

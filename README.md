@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.12.1-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-215_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.12.2-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-227_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -174,6 +174,7 @@ Data   ┌──────────┬────────────�
 | **SSRF Protection** | All outbound API requests routed through `safeFetch()` — origin-validated against an explicit allowlist before any request leaves the server. Blocks cloud metadata, internal IPs, `@`-credential tricks, subdomain spoofing, and HTTP downgrades |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Genius ID NaN guard prevents malformed IDs from reaching the API |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction, IP format validation to prevent rate limit bypass via spoofed headers |
+| **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
 | **Accessibility** | ARIA combobox pattern on search (listbox + options + activedescendant), focus-trapped modal dialogs with Escape dismiss, keyboard-navigable audio seek slider, dynamic aria-labels on all interactive controls |
 
@@ -233,7 +234,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**215 tests** across **15 suites** covering:
+**227 tests** across **16 suites** covering:
 
 | Suite | What's Tested |
 |-------|--------------|
@@ -247,6 +248,7 @@ npx vitest --watch    # Watch mode
 | **AudioPlayer** | Play/pause, unmount cleanup, seek behavior |
 | **SearchBar** | Autocomplete rendering, keyboard navigation |
 | **formatCompact** | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
+| **safeHref** | HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` blocking, undefined/null/empty/malformed |
 | **QuickStats** | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
 
 External API clients fully mocked — tests run fast and offline.

@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.12.2] - 2026-02-17
+
+### Security
+- **Protocol validation on all external `href` attributes** — Created `safeHref()` utility (`src/lib/safeHref.ts`) that validates URLs use the `https:` protocol before rendering them as `<a href>`. Applied to all components that render API-sourced URLs: `SongHeader.tsx` (Spotify, YouTube, Genius links), `PlatformCard.tsx` (external link icon), and `GeniusCard.tsx` (View Lyrics button). Blocks `javascript:`, `data:`, `vbscript:`, `http:`, `ftp:`, `file:`, and any other non-HTTPS protocol. Links with invalid URLs are suppressed entirely rather than rendering as inert `#` anchors. Defense-in-depth against XSS via compromised API responses — React escapes text content but does NOT sanitize `href` attributes
+
+### Added
+- **12 `safeHref` unit tests** — HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` protocol blocking, undefined/null/empty/malformed URL handling (227 tests total)
+
+---
+
 ## [1.12.1] - 2026-02-17
 
 ### Security
