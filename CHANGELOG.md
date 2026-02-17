@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.11.2] - 2026-02-17
+
+### Added
+- **9 integration tests for diversity filter pipeline** — End-to-end coverage for `getSimilarSongs()` → `getDiversityMeta()` composition, specifically targeting the NaN-guard and artist pre-seed fixes that shipped without integration tests. Covers: mixed valid/invalid date propagation, garbage date era-bonus safety, multi-credit collaboration pre-seeding (ft., &, comma separators), UI contract validation (sorted eras, valid labels, integer matchScores), and edge cases (all-same-artist catalog, empty recommendations). 203 tests total
+
+---
+
 ## [1.11.1] - 2026-02-17
 
 ### Fixed
