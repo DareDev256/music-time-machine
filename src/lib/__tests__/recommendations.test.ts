@@ -501,4 +501,28 @@ describe("getDiversityMeta — invalid date handling", () => {
     const result = getDiversityMeta(badTarget, picks);
     expect(result.eras).toEqual([]);
   });
+
+  it("never produces a negative diversity score from invalid dates", () => {
+    const badTarget = makeSong({ id: "bad", releaseDate: "TBD" });
+    const picks = [
+      { song: makeSong({ id: "a", releaseDate: "not-a-date" }) },
+      { song: makeSong({ id: "b", releaseDate: "" }) },
+    ];
+    const result = getDiversityMeta(badTarget, picks);
+    expect(result.score).toBeGreaterThanOrEqual(0);
+    expect(result.eras).toEqual([]);
+  });
+
+  it("scores correctly when target date is invalid but picks have valid eras", () => {
+    const badTarget = makeSong({ id: "bad", releaseDate: "" });
+    const picks = [
+      { song: makeSong({ id: "blinding-lights", releaseDate: "2019-11-29" }) },
+      { song: makeSong({ id: "shape-of-you", releaseDate: "2017-01-06" }) },
+    ];
+    const result = getDiversityMeta(badTarget, picks);
+    // Both picks are 2010s — eraRatio should reflect actual era spread, not be negative
+    expect(result.score).toBeGreaterThanOrEqual(0);
+    expect(result.eras).toContain("2010s");
+    expect(result.eras.every((e) => !e.includes("NaN"))).toBe(true);
+  });
 });

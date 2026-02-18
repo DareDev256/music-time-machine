@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.13.2] - 2026-02-18
+
+### Fixed
+- **Negative diversity score from invalid target dates** — `getDiversityMeta()` era ratio subtracted 1 for the target's baseline era unconditionally, but when `safeYear()` returned `null` for an invalid target date, the target era was never added to the set. This made `(eras.size - 1)` negative, dragging the diversity score below its intended floor. Now conditionally subtracts the baseline only when the target era was actually contributed, with `Math.max(0, ...)` as a safety floor
+
+### Added
+- **2 new tests** — negative score regression test with all-invalid dates, and correct scoring when only the target date is invalid (230 tests total)
+
+---
+
 ## [1.13.1] - 2026-02-17
 
 ### Fixed

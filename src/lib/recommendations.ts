@@ -63,7 +63,11 @@ export function getDiversityMeta(
 
   const count = picks.length;
   const genreRatio = genres.size / count;
-  const eraRatio = (eras.size - 1) / Math.max(1, count); // subtract 1 for target's era (baseline)
+  // Subtract 1 only when the target era was actually added (valid target date).
+  // Without this guard, an invalid target date means the set never received the
+  // baseline era, making (eras.size - 1) negative and dragging the score below 0.
+  const eraBaseline = targetYear !== null ? 1 : 0;
+  const eraRatio = Math.max(0, (eras.size - eraBaseline) / Math.max(1, count));
 
   const score = Math.min(100, Math.round(genreRatio * 60 + eraRatio * 40));
 
