@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.14.0] - 2026-02-18
+
+### Changed
+- **Extracted named constants from recommendation algorithm** — All tuning knobs (`FEATURE_WEIGHTS`, `SAME_ARTIST_BONUS`, `SAME_ERA_BONUS`, `DISTANCE_TO_SCORE`, thresholds for reason classification, diversity formula weights) are now declared at module scope with JSDoc. Previously embedded as magic numbers across a 75-line function, making the scoring model opaque to tune or audit
+- **Extracted `featureDistance()` pure function** — The 4D weighted Euclidean distance calculation (danceability, energy ×1.5, valence ×1.5, normalized tempo ×0.8) is now an independently callable function with tempo normalization co-located with the weight constants
+- **Extracted `classifyReason()` pure function** — Replaced a 6-level nested ternary chain with sequential early-return conditionals. Each recommendation reason ("Same artist", "Nearly identical vibe", "High energy match", "Similar mood", "Same era", "Similar sound") is now a single readable line. Adding a new reason requires one `if` insertion instead of editing a fragile ternary tree
+- **Extracted `decadeLabel()` helper** — DRYed the `Math.floor(year / 10) * 10}s` pattern used in both branches of `getDiversityMeta()`, eliminating a subtle copy-paste divergence risk
+- **Reorganized module into logical sections** — Algorithm constants → helpers → scoring → diversity meta → artist parsing → recommendation engine, with section headers for navigation
+
+---
+
 ## [1.13.4] - 2026-02-18
 
 ### Changed

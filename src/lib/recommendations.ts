@@ -1,6 +1,51 @@
 import { SongData } from "@/types";
 import { songGenres } from "@/lib/mockData";
 
+// ── Algorithm constants ─────────────────────────────────────────────────────
+// Named so the scoring model is readable and tunable from one place.
+
+/** Feature weights for the 4D Euclidean distance. Energy and valence dominate "vibe." */
+const FEATURE_WEIGHTS = {
+  danceability: 1.0,
+  energy: 1.5,
+  valence: 1.5,
+  tempo: 0.8,
+} as const;
+
+/** Max BPM used to normalize tempo into 0–1 range alongside other features. */
+const TEMPO_CEILING = 200;
+
+/** Multiplier converting raw distance to a 0–100 similarity score. */
+const DISTANCE_TO_SCORE = 150;
+
+/** Additive bonus when any credited artist overlaps between target and candidate. */
+const SAME_ARTIST_BONUS = 15;
+
+/** Additive bonus when candidate is released within {@link ERA_PROXIMITY_YEARS} of target. */
+const SAME_ERA_BONUS = 8;
+
+/** Max year gap to qualify for the same-era bonus. */
+const ERA_PROXIMITY_YEARS = 2;
+
+/** Distance threshold below which two songs are "nearly identical." */
+const NEAR_IDENTICAL_THRESHOLD = 0.15;
+
+/** Energy threshold above which both songs qualify as "high energy." */
+const HIGH_ENERGY_THRESHOLD = 0.7;
+
+/** Valence delta below which the mood is considered matching. */
+const SIMILAR_MOOD_THRESHOLD = 0.1;
+
+/** Year gap for the "Same era" reason label (tighter than the scoring bonus). */
+const ERA_REASON_YEARS = 1;
+
+/** Diversity score formula: genre variety is the primary signal. */
+const GENRE_WEIGHT = 60;
+/** Diversity score formula: era spread adds depth. */
+const ERA_WEIGHT = 40;
+
+// ── Helpers ─────────────────────────────────────────────────────────────────
+
 /**
  * Safely extract a year from a release date string.
  * Returns null for undefined, empty, or unparseable dates instead of NaN.
@@ -15,11 +60,56 @@ export function safeYear(date: string | undefined | null): number | null {
   return parsed.getUTCFullYear();
 }
 
+/** Convert a year to its decade label. @example 2017 → "2010s" */
+function decadeLabel(year: number): string {
+  return `${Math.floor(year / 10) * 10}s`;
+}
+
+// ── Scoring ─────────────────────────────────────────────────────────────────
+
 interface ScoredSong {
   song: SongData;
   score: number;
   reason: string;
 }
+
+/** Weighted Euclidean distance between two audio feature vectors. */
+function featureDistance(
+  a: { danceability: number; energy: number; valence: number; tempo: number },
+  b: { danceability: number; energy: number; valence: number; tempo: number },
+): number {
+  const normA = a.tempo / TEMPO_CEILING;
+  const normB = b.tempo / TEMPO_CEILING;
+  return Math.sqrt(
+    FEATURE_WEIGHTS.danceability * (a.danceability - b.danceability) ** 2 +
+    FEATURE_WEIGHTS.energy * (a.energy - b.energy) ** 2 +
+    FEATURE_WEIGHTS.valence * (a.valence - b.valence) ** 2 +
+    FEATURE_WEIGHTS.tempo * (normA - normB) ** 2,
+  );
+}
+
+/**
+ * Classify the primary reason a candidate was recommended.
+ * Order matters — first matching rule wins, most specific first.
+ */
+function classifyReason(
+  distance: number,
+  sameArtist: boolean,
+  candidateEnergy: number,
+  targetEnergy: number,
+  valenceDelta: number,
+  targetYear: number | null,
+  candidateYear: number | null,
+): string {
+  if (sameArtist) return "Same artist";
+  if (distance < NEAR_IDENTICAL_THRESHOLD) return "Nearly identical vibe";
+  if (candidateEnergy > HIGH_ENERGY_THRESHOLD && targetEnergy > HIGH_ENERGY_THRESHOLD) return "High energy match";
+  if (Math.abs(valenceDelta) < SIMILAR_MOOD_THRESHOLD) return "Similar mood";
+  if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_REASON_YEARS) return "Same era";
+  return "Similar sound";
+}
+
+// ── Diversity meta ──────────────────────────────────────────────────────────
 
 /** Diversity analysis of a recommendation set */
 export interface DiversityMeta {
@@ -42,7 +132,7 @@ export interface DiversityMeta {
  */
 export function getDiversityMeta(
   target: SongData,
-  picks: { song: SongData }[]
+  picks: { song: SongData }[],
 ): DiversityMeta {
   if (picks.length === 0) return { score: 0, label: "No data", genres: [], eras: [] };
 
@@ -52,7 +142,7 @@ export function getDiversityMeta(
   // Include target song in era calculation for context (guard against invalid dates)
   const targetYear = safeYear(target.releaseDate);
   if (targetYear !== null) {
-    eras.add(`${Math.floor(targetYear / 10) * 10}s`);
+    eras.add(decadeLabel(targetYear));
   }
 
   for (const { song } of picks) {
@@ -61,7 +151,7 @@ export function getDiversityMeta(
 
     const year = safeYear(song.releaseDate);
     if (year !== null) {
-      eras.add(`${Math.floor(year / 10) * 10}s`);
+      eras.add(decadeLabel(year));
     }
   }
 
@@ -73,7 +163,7 @@ export function getDiversityMeta(
   const eraBaseline = targetYear !== null ? 1 : 0;
   const eraRatio = Math.max(0, (eras.size - eraBaseline) / Math.max(1, count));
 
-  const score = Math.min(100, Math.round(genreRatio * 60 + eraRatio * 40));
+  const score = Math.min(100, Math.round(genreRatio * GENRE_WEIGHT + eraRatio * ERA_WEIGHT));
 
   const label =
     score >= 75 ? "Wide mix" :
@@ -89,6 +179,8 @@ export function getDiversityMeta(
   };
 }
 
+// ── Artist parsing ──────────────────────────────────────────────────────────
+
 /**
  * Split a credit string into individual artist names.
  * Handles: "ft." / "feat." / "&" / "," / "with" separators.
@@ -101,7 +193,7 @@ export function getDiversityMeta(
 export function splitArtists(artist: string): string[] {
   // First pass: split on unambiguous separators (comma, ft., feat., with)
   const parts = artist.split(
-    /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i
+    /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i,
   );
   // Second pass: split on "&" only when both sides are ≥2 chars (avoids "R&B")
   const result: string[] = [];
@@ -121,6 +213,8 @@ export function primaryArtist(artist: string): string {
   return splitArtists(artist)[0] ?? artist.trim().toLowerCase();
 }
 
+// ── Recommendation engine ───────────────────────────────────────────────────
+
 /**
  * Find similar songs based on audio feature proximity, artist match, and era.
  * Uses weighted Euclidean distance in the (danceability, energy, valence, normalizedTempo) space.
@@ -129,13 +223,12 @@ export function primaryArtist(artist: string): string {
 export function getSimilarSongs(
   target: SongData,
   catalog: SongData[],
-  limit: number = 4
+  limit: number = 4,
 ): { song: SongData; reason: string; matchScore: number }[] {
   const targetFeatures = target.spotify?.audioFeatures;
   if (!targetFeatures) return [];
 
   const targetYear = safeYear(target.releaseDate);
-  const normalizedTargetTempo = targetFeatures.tempo / 200; // BPM → 0-1 range
   const targetArtists = new Set(splitArtists(target.artist));
 
   const scored: ScoredSong[] = [];
@@ -146,40 +239,31 @@ export function getSimilarSongs(
     const features = candidate.spotify?.audioFeatures;
     if (!features) continue;
 
-    const normalizedTempo = features.tempo / 200;
-
-    // Weighted Euclidean distance (energy and valence matter most for "vibe")
-    const distance = Math.sqrt(
-      1.0 * (features.danceability - targetFeatures.danceability) ** 2 +
-      1.5 * (features.energy - targetFeatures.energy) ** 2 +
-      1.5 * (features.valence - targetFeatures.valence) ** 2 +
-      0.8 * (normalizedTempo - normalizedTargetTempo) ** 2
-    );
+    const distance = featureDistance(targetFeatures, features);
 
     // Convert distance to a 0-100 similarity score (lower distance = higher score)
-    let score = Math.max(0, 100 - distance * 150);
+    let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
 
     // Bonus: shared artist credit (any overlap between target and candidate artists)
     const candidateArtists = splitArtists(candidate.artist);
     const sameArtist = candidateArtists.some((a) => targetArtists.has(a));
-    if (sameArtist) score += 15;
+    if (sameArtist) score += SAME_ARTIST_BONUS;
 
-    // Bonus: same era (within 2 years) — skip if either date is invalid
+    // Bonus: same era (within ERA_PROXIMITY_YEARS) — skip if either date is invalid
     const candidateYear = safeYear(candidate.releaseDate);
-    if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= 2) score += 8;
+    if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
+      score += SAME_ERA_BONUS;
+    }
 
-    // Determine the primary reason for the recommendation
-    const reason = sameArtist
-      ? "Same artist"
-      : distance < 0.15
-        ? "Nearly identical vibe"
-        : features.energy > 0.7 && targetFeatures.energy > 0.7
-          ? "High energy match"
-          : Math.abs(features.valence - targetFeatures.valence) < 0.1
-            ? "Similar mood"
-            : (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= 1)
-              ? "Same era"
-              : "Similar sound";
+    const reason = classifyReason(
+      distance,
+      sameArtist,
+      features.energy,
+      targetFeatures.energy,
+      features.valence - targetFeatures.valence,
+      targetYear,
+      candidateYear,
+    );
 
     scored.push({ song: candidate, score, reason });
   }
