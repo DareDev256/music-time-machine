@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.13.0] - 2026-02-17
+
+### Added
+- **Song Journey milestone timeline** (`src/components/SongMilestones.tsx`) — Animated vertical timeline on the song detail page showing key moments in a song's life. Extracts milestones from cross-platform data: release date (with album name), YouTube music video publish date, Billboard Hot 100 entry (with entry position and total weeks), Billboard peak position (with #1 celebration copy), and Genius community annotations (when ≥20). Milestones are chronologically sorted and rendered with platform-colored node icons, staggered Framer Motion entrance animations, and WCAG-accessible `role="list"` semantics. Requires at least 2 milestones to render — gracefully returns null for sparse data. 22 components total
+
+---
+
 ## [1.12.2] - 2026-02-17
 
 ### Security
