@@ -150,7 +150,13 @@ async function fetchGeniusSongData(geniusId: number): Promise<SongData | null> {
       ? await getYouTubeVideoBySearch(genius.title, genius.artist)
       : null;
 
-    const releaseDate = genius.releaseDate || new Date().toISOString().split("T")[0];
+    // Validate Genius release date — truthy-but-unparseable strings like "TBD"
+    // bypass the `||` fallback, so verify the parsed Date is valid.
+    const rawDate = genius.releaseDate || "";
+    const parsedDate = new Date(rawDate);
+    const releaseDate = Number.isNaN(parsedDate.getTime())
+      ? new Date().toISOString().split("T")[0]
+      : rawDate;
     const timeline = generateTimeline(releaseDate);
 
     return {
@@ -235,6 +241,12 @@ export async function getArtistData(slug: string): Promise<ArtistData | null> {
 function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineDataPoint[] {
   const timeline: TimelineDataPoint[] = [];
   const start = new Date(releaseDate);
+
+  // Guard: reject Invalid Date from unparseable strings (e.g. "not-a-date").
+  // The call-site `||` fallback only catches falsy values — truthy garbage
+  // like "gibberish" passes through and produces NaN-contaminated data points.
+  if (Number.isNaN(start.getTime())) return timeline;
+
   const now = new Date();
 
   const currentDate = new Date(start);

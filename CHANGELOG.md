@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.13.1] - 2026-02-17
+
+### Fixed
+- **Timeline NaN contamination from unparseable release dates** — `generateTimeline()` now validates the parsed `Date` object before generating data points. Previously, truthy-but-unparseable strings (e.g. `"TBD"`, `"Unknown"`) from the Genius API bypassed the `||` fallback guard and produced `Invalid Date`, causing NaN-contaminated timeline entries (dates like `"NaN-NaN-NaN"`, `NaN` metric values). The function now returns an empty timeline for invalid dates instead of silently generating garbage
+- **Genius release date fallback hardened** — `fetchGeniusSongData()` now validates the parsed date _before_ using it, not just checking truthiness. A Genius response with `releaseDate: "TBD"` previously passed the `||` check (it's truthy), producing an invalid `releaseDate` on the `SongData` object and a corrupted timeline. Now falls back to today's date for any unparseable value
+
+### Added
+- **1 new test** — Genius song with unparseable release date (`"TBD"`) verifies the fallback produces a valid `releaseDate` and NaN-free timeline data points (228 tests total)
+
+---
+
 ## [1.13.0] - 2026-02-17
 
 ### Added

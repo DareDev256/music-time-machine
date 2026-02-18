@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.13.0-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-227_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.13.1-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-228_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -235,7 +235,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**227 tests** across **16 suites** covering:
+**228 tests** across **16 suites** covering:
 
 | Suite | What's Tested |
 |-------|--------------|
@@ -260,7 +260,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 141 tests must pass
+npm test                    # All 228 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```

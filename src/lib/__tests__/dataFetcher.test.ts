@@ -21,6 +21,11 @@ vi.mock("../genius", () => ({
 }));
 
 import { searchSongs, getSongData, parseMetric, compareSongs, getArtistData, getCatalog } from "../dataFetcher";
+import { getGeniusSong } from "../genius";
+import { isGeniusConfigured } from "../genius";
+
+const mockIsGeniusConfigured = vi.mocked(isGeniusConfigured);
+const mockGetGeniusSong = vi.mocked(getGeniusSong);
 
 describe("dataFetcher", () => {
   beforeEach(() => {
@@ -60,6 +65,31 @@ describe("dataFetcher", () => {
     it("returns null for unknown IDs", async () => {
       const song = await getSongData("nonexistent-song-id");
       expect(song).toBeNull();
+    });
+
+    it("produces valid timeline when Genius returns unparseable release date", async () => {
+      mockIsGeniusConfigured.mockReturnValue(true);
+      mockGetGeniusSong.mockResolvedValue({
+        id: 12345,
+        title: "Test Song",
+        artist: "Test Artist",
+        albumArt: "https://example.com/art.jpg",
+        releaseDate: "TBD",            // truthy but unparseable
+        url: "https://genius.com/test",
+        pageViews: "10K",
+        description: "A test song",
+        annotations: 5,
+      });
+
+      const song = await getSongData("genius:12345");
+      expect(song).not.toBeNull();
+      // Release date should fall back to today, not "TBD"
+      expect(Number.isNaN(new Date(song!.releaseDate).getTime())).toBe(false);
+      // Timeline should be valid (non-empty, no NaN dates)
+      expect(song!.timeline.length).toBeGreaterThanOrEqual(0);
+      for (const point of song!.timeline) {
+        expect(Number.isNaN(new Date(point.date).getTime())).toBe(false);
+      }
     });
   });
 
