@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.13.4] - 2026-02-18
+
+### Changed
+- **README portfolio upgrade for diversity-aware recommendations** — Expanded the Similar Songs and Engineering Highlights sections to articulate the full depth of the diversity-picked system: 4D weighted Euclidean distance scoring, collaboration parser (`ft.`, `feat.`, `&`, `,`, `with` with 2-char `R&B` guard), greedy artist-deduplication loop with target artist pre-seeding, `getDiversityMeta()` genre/era scoring formula (60%/40% weighting), timezone-safe `safeYear()` with `getUTCFullYear()`, and tiered match score SVG badges. Expanded test suite table to reflect full recommendation test coverage including `splitArtists`, `getDiversityMeta`, and `safeYear`
+
+---
+
 ## [1.13.3] - 2026-02-18
 
 ### Fixed

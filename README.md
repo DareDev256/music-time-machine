@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.13.3-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.13.4-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-235_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -68,7 +68,8 @@ Every song gets a detail page with:
 - **Performance timeline** — multi-line chart tracking metrics over time
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Song Journey** — animated vertical milestone timeline showing key moments: release date, music video drop, Billboard chart entry, peak position, and Genius community engagement. Each milestone is chronologically sorted with platform-colored icons and staggered entrance animations
-- **Similar Songs** — powered by weighted Euclidean distance across 4D audio features, with color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) and a **diversity indicator** showing genre spread, era span, and a scored label (Wide mix / Good variety / Similar vibe)
+- **Similar Songs** — content-based recommendations powered by weighted Euclidean distance across 4D audio features (danceability, energy ×1.5, valence ×1.5, normalized tempo), with additive bonuses for shared artists (+15) and same era (+8). Color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) render as circular SVG progress rings on each card
+- **Diversity-Aware Picks** — the recommendation engine enforces artist diversity: a greedy selection loop pre-seeds the target song's credited artists (parsing `ft.`, `feat.`, `&`, `,`, `with` collaborations) and caps results at one song per artist, ensuring recommendations always surface *new* artists. A **diversity indicator** bar analyzes the final picks by genre spread (60% weight) and era spread (40% weight), displaying genre chips with per-genre colors, era span tags, and a scored label (Wide mix / Good variety / Similar vibe / Narrow focus)
 - **30-second preview** — seekable audio playback from Spotify
 
 ### ⚔️ Compare Tracks
@@ -101,7 +102,7 @@ These are the design decisions that make this more than a CRUD app:
 | **Token Bucket Rate Limiting** | Each API gets a token bucket with burst capacity and continuous refill — one multiplication, one comparison per request. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks. |
 | **TTL Cache + LRU Eviction** | Generic `TTLCache` using `Map` insertion-order semantics for oldest-first eviction. Search cached 5 min (200 entries), songs cached 30 min (100 entries). Zero external dependencies. |
 | **Shared `formatCompact` Utility** | Unified B/M/K number formatting across all 3 API clients (Spotify, YouTube, Genius). Handles `number`, numeric `string`, `undefined`, and `null` inputs — one function instead of three with identical logic. |
-| **Content-Based Recommendations** | Weighted Euclidean distance across danceability, energy ×1.5, valence ×1.5, and normalized tempo. Same-era bonus for songs within 2 years. **Diversity-aware selection** pre-seeds the target song's artists and caps at one song per artist — recommendations always surface *new* artists. Match scores (0–99%) rendered as color-coded circular progress badges. |
+| **Content-Based Recommendations** | 4D audio feature similarity (weighted Euclidean distance) with artist (+15) and era (+8) bonuses. **Diversity-aware greedy selection** pre-seeds the target's credited artists (parses `ft.`, `&`, `,`, `with` separators with a 2-char guard to avoid splitting `R&B`) and enforces a one-song-per-artist cap. A `getDiversityMeta()` analyzer scores genre spread (60%) + era spread (40%) across the final picks, producing a 0–100 score with tiered labels. Timezone-safe `safeYear()` with `getUTCFullYear()` prevents era miscalculation from UTC midnight drift. Match scores (0–99%) rendered as circular SVG progress badges with emerald/sky/amber tier colors. |
 | **Edge OG Images** | `/api/og/[id]` renders JSX to a 1200×630 PNG via `@vercel/og` (Satori). Sub-100ms, no headless browser. |
 | **Route Middleware** | `withRouteHandler()` wraps all 6 API routes with rate limiting, error handling, and consistent responses — zero boilerplate per route. |
 
@@ -242,7 +243,7 @@ npx vitest --watch    # Watch mode
 | **TTLCache** | Expiry, eviction, CRUD operations |
 | **dataFetcher** | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
 | **mockData** | Catalog integrity, search matching, artist slug resolution, timeline sorting |
-| **recommendations** | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement |
+| **recommendations** | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing |
 | **rateLimit** | Token bucket consumption/refill, per-IP route isolation, stale eviction |
 | **input validation** | `isValidId`, `sanitizeQuery` |
 | **Time Machine** | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
