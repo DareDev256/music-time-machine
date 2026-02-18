@@ -25,6 +25,19 @@ describe("mockData", () => {
       }
     });
 
+    it("no timeline contains NaN-contaminated data points", () => {
+      for (const [id, song] of Object.entries(mockSongs)) {
+        for (const point of song.timeline) {
+          expect(point.date, `${id} timeline has NaN date`).not.toContain("NaN");
+          expect(Number.isNaN(point.spotify), `${id} timeline has NaN spotify`).toBe(false);
+          expect(Number.isNaN(point.youtube), `${id} timeline has NaN youtube`).toBe(false);
+          if (point.billboard !== undefined) {
+            expect(Number.isNaN(point.billboard), `${id} timeline has NaN billboard`).toBe(false);
+          }
+        }
+      }
+    });
+
     it("every song has spotify audio features for recommendations engine", () => {
       for (const [id, song] of Object.entries(mockSongs)) {
         const af = song.spotify?.audioFeatures;

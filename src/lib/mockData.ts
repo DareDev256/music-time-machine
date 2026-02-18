@@ -7,6 +7,10 @@ function generateTimeline(
 ): TimelineDataPoint[] {
   const timeline: TimelineDataPoint[] = [];
   const start = new Date(releaseDate);
+
+  // Guard: reject Invalid Date from unparseable strings — mirrors dataFetcher.ts fix.
+  if (Number.isNaN(start.getTime())) return timeline;
+
   const now = new Date();
 
   // Generate monthly data points

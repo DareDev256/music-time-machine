@@ -6,9 +6,13 @@ import { songGenres } from "@/lib/mockData";
  * Returns null for undefined, empty, or unparseable dates instead of NaN.
  */
 export function safeYear(date: string | undefined | null): number | null {
-  if (!date) return null;
-  const y = new Date(date).getFullYear();
-  return Number.isNaN(y) ? null : y;
+  if (!date || !date.trim()) return null;
+  const parsed = new Date(date);
+  if (Number.isNaN(parsed.getTime())) return null;
+  // Use getUTCFullYear to avoid timezone drift — new Date("2022") parses as
+  // UTC midnight, but getFullYear() returns local time, which shifts the year
+  // backward in western-hemisphere timezones (e.g. 2022 → 2021 in EST).
+  return parsed.getUTCFullYear();
 }
 
 interface ScoredSong {

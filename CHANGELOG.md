@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.13.3] - 2026-02-18
+
+### Fixed
+- **Timezone drift in `safeYear()` era calculation** — `getFullYear()` returns local-time year, but `new Date("2022")` parses as UTC midnight. In western-hemisphere timezones (e.g. EST/EDT), this silently shifted years backward (2022 → 2021), corrupting era labels in the diversity indicator. Switched to `getUTCFullYear()` for consistent cross-timezone behavior
+- **Whitespace-only date strings bypassed NaN guard** — `safeYear("   ")` passed the `!date` check (truthy), then produced `NaN` from `new Date("   ")`. Now trims before the falsy check
+- **Missing NaN guard in `mockData.ts` `generateTimeline()`** — The NaN guard from `e0bdbf1` was only applied to `dataFetcher.ts`, leaving the duplicate `mockData.ts` copy vulnerable to `RangeError` on invalid dates
+
+### Added
+- **5 new tests** — timezone-safe year parsing, whitespace date handling, API placeholder strings (`"TBD"`, `"Unknown"`, `"N/A"`), timeline NaN integrity across mock catalog, whitespace release date in pipeline (235 tests total)
+
+---
+
 ## [1.13.2] - 2026-02-18
 
 ### Fixed

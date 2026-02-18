@@ -94,6 +94,20 @@ describe("Pipeline — NaN era contamination", () => {
     expect(diversity.eras).toEqual(["2020s"]);
   });
 
+  it("handles whitespace-only release dates without NaN leakage", () => {
+    const target = withFeatures("t", "Target", { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 }, "2022-01-01");
+    const catalog = [
+      withFeatures("a", "Alpha", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }, "   "),
+      withFeatures("b", "Beta", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }, "2022-06-01"),
+    ];
+
+    const similar = getSimilarSongs(target, catalog);
+    const diversity = getDiversityMeta(target, similar);
+
+    expect(diversity.eras.every((e) => !e.includes("NaN"))).toBe(true);
+    expect(diversity.score).toBeGreaterThanOrEqual(0);
+  });
+
   it("skips era bonus safely when candidate dates are garbage", () => {
     const target = withFeatures("t", "Target", { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 }, "2022-01-01");
     const goodDate = withFeatures("g", "Good", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }, "2022-06-01");

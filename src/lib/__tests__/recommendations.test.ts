@@ -466,6 +466,23 @@ describe("safeYear", () => {
   it("returns null for unparseable date", () => {
     expect(safeYear("not-a-date")).toBeNull();
   });
+
+  it("returns null for whitespace-only string", () => {
+    expect(safeYear("   ")).toBeNull();
+  });
+
+  it("handles year-only string without crashing", () => {
+    // "2022" is valid per Date.parse — should return 2022, not NaN
+    const result = safeYear("2022");
+    expect(result).toBe(2022);
+    expect(Number.isNaN(result)).toBe(false);
+  });
+
+  it("returns null for common placeholder strings from APIs", () => {
+    expect(safeYear("TBD")).toBeNull();
+    expect(safeYear("Unknown")).toBeNull();
+    expect(safeYear("N/A")).toBeNull();
+  });
 });
 
 describe("getDiversityMeta — invalid date handling", () => {
