@@ -3,19 +3,15 @@
 import { TrendingUp } from "lucide-react";
 import { BillboardData } from "@/types";
 import PlatformCard, { StatRow } from "./PlatformCard";
+import { formatDate } from "@/lib/formatDate";
+
+const SHORT_DATE: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
 
 interface BillboardCardProps {
   data: BillboardData;
 }
 
 export default function BillboardCard({ data }: BillboardCardProps) {
-  const formatDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
 
   return (
     <PlatformCard
@@ -29,14 +25,14 @@ export default function BillboardCard({ data }: BillboardCardProps) {
           Peak Position
         </p>
         <p className="text-5xl font-bold text-foreground">#{data.peakPosition}</p>
-        <p className="text-foreground-secondary text-sm mt-1">{formatDate(data.peakDate)}</p>
+        <p className="text-foreground-secondary text-sm mt-1">{formatDate(data.peakDate, SHORT_DATE)}</p>
       </div>
 
       <StatRow label="Weeks on Chart" value={data.weeksOnChart} />
       <StatRow
         label="Entry Position"
         value={`#${data.entryPosition}`}
-        subValue={formatDate(data.entryDate)}
+        subValue={formatDate(data.entryDate, SHORT_DATE)}
       />
 
       {/* Chart History Mini Timeline */}

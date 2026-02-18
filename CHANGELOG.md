@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.15.0] - 2026-02-18
+
+### Changed
+- **Extracted `formatDate()` shared utility** — Consolidated 4 inline `formatDate` implementations (SongHeader, YouTubeCard, BillboardCard, SongMilestones) into `src/lib/formatDate.ts`. The shared version includes NaN-safe fallback that only `SongMilestones` had — the other 3 would render `"Invalid Date"` on bad input. Accepts optional `Intl.DateTimeFormatOptions` for the "short" vs "long" month variants
+- **Extracted `toSlug()` shared utility** — Consolidated 3 copies of the `name.toLowerCase().replace(/[^a-z0-9]+/g, "-")` slug pattern (SongHeader, mockData, spotify.ts) into `src/lib/toSlug.ts`. Single source of truth for artist URL generation
+- **Extracted `generateTimeline()` to dedicated module** — The 45-line synthetic timeline generator was duplicated verbatim in both `mockData.ts` and `dataFetcher.ts`. A previous bugfix (e0bdbf1) only patched one copy — proving this was an active maintenance hazard. Now lives in `src/lib/timeline.ts` imported by both consumers
+
+---
+
 ## [1.14.0] - 2026-02-18
 
 ### Changed

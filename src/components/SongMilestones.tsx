@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { Calendar, Trophy, Play, TrendingUp, BookOpen, Music } from "lucide-react";
 import { SongData } from "@/types";
+import { formatDate } from "@/lib/formatDate";
+
+const SHORT_DATE: Intl.DateTimeFormatOptions = { month: "short", day: "numeric", year: "numeric" };
 
 interface Milestone {
   date: string;
@@ -11,13 +14,6 @@ interface Milestone {
   icon: React.ReactNode;
   color: string;
   accentBg: string;
-}
-
-/** Format ISO date to readable "Jan 29, 2020" style */
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  if (isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
 /** Extract milestones from cross-platform song data */
@@ -139,7 +135,7 @@ export default function SongMilestones({ song }: { song: SongData }) {
               {/* Content */}
               <div className="pt-0.5 sm:pt-1.5 min-w-0 flex-1">
                 <time className="text-[10px] sm:text-[11px] uppercase tracking-wider text-foreground-secondary font-medium">
-                  {formatDate(m.date)}
+                  {formatDate(m.date, SHORT_DATE)}
                 </time>
                 <p className="text-sm sm:text-base font-medium text-foreground leading-snug mt-0.5">
                   {m.label}

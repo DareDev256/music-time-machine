@@ -2,6 +2,7 @@ import { SpotifyData, ArtistData } from "@/types";
 import { checkSpotifyLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
 import { safeFetch } from "./safeFetch";
+import { toSlug } from "./toSlug";
 
 let accessToken: string | null = null;
 let tokenExpiry: number = 0;
@@ -167,7 +168,7 @@ export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | n
     return {
       id: artistData.id,
       name: artistData.name,
-      slug: artistData.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      slug: toSlug(artistData.name),
       image: artistData.images?.[0]?.url || "",
       genres: artistData.genres || [],
       monthlyListeners: formatCompact(artistData.followers?.total || 0),

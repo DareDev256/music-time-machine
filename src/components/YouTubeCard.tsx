@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { YouTubeData } from "@/types";
 import PlatformCard, { StatRow } from "./PlatformCard";
+import { formatDate } from "@/lib/formatDate";
+
+const SHORT_DATE: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
 
 interface YouTubeCardProps {
   data: YouTubeData;
@@ -16,13 +19,6 @@ const YouTubeIcon = () => (
 );
 
 export default function YouTubeCard({ data }: YouTubeCardProps) {
-  const formatDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
 
   return (
     <PlatformCard
@@ -55,7 +51,7 @@ export default function YouTubeCard({ data }: YouTubeCardProps) {
       <StatRow label="Total Views" value={data.viewCount} />
       <StatRow label="Likes" value={data.likeCount} />
       <StatRow label="Comments" value={data.commentCount} />
-      <StatRow label="Published" value={formatDate(data.publishedAt)} />
+      <StatRow label="Published" value={formatDate(data.publishedAt, SHORT_DATE)} />
       <StatRow label="Channel" value={data.channelTitle} />
     </PlatformCard>
   );

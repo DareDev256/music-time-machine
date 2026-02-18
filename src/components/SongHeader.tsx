@@ -5,21 +5,15 @@ import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { safeHref } from "@/lib/safeHref";
+import { formatDate } from "@/lib/formatDate";
+import { toSlug } from "@/lib/toSlug";
 
 interface SongHeaderProps {
   song: SongData;
 }
 
 export default function SongHeader({ song }: SongHeaderProps) {
-  const formatDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
-
-  const artistSlug = song.artist.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const artistSlug = toSlug(song.artist);
 
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6 md:gap-8">

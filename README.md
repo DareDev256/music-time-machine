@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.13.4-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.15.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-235_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -202,6 +202,9 @@ src/
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
 │   ├── apiHandler.ts               # Route middleware (rate limit + error handling)
 │   ├── formatNumber.ts              # Shared B/M/K compact number formatter
+│   ├── formatDate.ts               # NaN-safe date formatting (replaces 4 inline copies)
+│   ├── toSlug.ts                    # URL-safe slug generator (replaces 3 inline copies)
+│   ├── timeline.ts                  # Synthetic timeline data generator (deduplicated)
 │   ├── spotify.ts / youtube.ts / genius.ts
 │   └── __tests__/                  # 150 tests across 11 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes

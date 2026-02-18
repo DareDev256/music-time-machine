@@ -1,4 +1,5 @@
-import { SongData, SearchResult, TimelineDataPoint, ComparisonData, ArtistData } from "@/types";
+import { SongData, SearchResult, ComparisonData, ArtistData } from "@/types";
+import { generateTimeline } from "./timeline";
 import { getSpotifyTrack, searchSpotifyTracks, getSpotifyArtist, isSpotifyConfigured } from "./spotify";
 import { getYouTubeVideoBySearch, isYouTubeConfigured } from "./youtube";
 import { getGeniusSongBySearch, getGeniusSong, searchGeniusSongs, isGeniusConfigured } from "./genius";
@@ -236,50 +237,6 @@ export async function getArtistData(slug: string): Promise<ArtistData | null> {
   }
 
   return null;
-}
-
-function generateTimeline(releaseDate: string, peakMonth: number = 3): TimelineDataPoint[] {
-  const timeline: TimelineDataPoint[] = [];
-  const start = new Date(releaseDate);
-
-  // Guard: reject Invalid Date from unparseable strings (e.g. "not-a-date").
-  // The call-site `||` fallback only catches falsy values — truthy garbage
-  // like "gibberish" passes through and produces NaN-contaminated data points.
-  if (Number.isNaN(start.getTime())) return timeline;
-
-  const now = new Date();
-
-  const currentDate = new Date(start);
-  let month = 0;
-
-  while (currentDate <= now && month < 48) {
-    const spotifyGrowth = Math.min(
-      100,
-      Math.floor(20 + 80 * (1 - Math.exp(-month / peakMonth)) + Math.random() * 10 - month * 0.5)
-    );
-    const youtubeGrowth = Math.min(
-      100,
-      Math.floor(15 + 85 * (1 - Math.exp(-month / (peakMonth + 1))) + Math.random() * 8 - month * 0.3)
-    );
-
-    let billboardPos = null;
-    if (month >= 1 && month <= 20) {
-      const peak = 100 - 90 * Math.exp(-Math.pow(month - peakMonth, 2) / 10);
-      billboardPos = Math.max(1, Math.floor(peak + Math.random() * 10));
-    }
-
-    timeline.push({
-      date: currentDate.toISOString().split("T")[0],
-      spotify: Math.max(0, spotifyGrowth),
-      youtube: Math.max(0, youtubeGrowth),
-      billboard: billboardPos ? 101 - billboardPos : undefined,
-    });
-
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    month++;
-  }
-
-  return timeline;
 }
 
 /** Return all songs in the mock catalog (for recommendations). */

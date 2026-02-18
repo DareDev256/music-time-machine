@@ -1,66 +1,6 @@
 import { SongData, SearchResult, TimelineDataPoint, ArtistData } from "@/types";
-
-// Generate timeline data for a song
-function generateTimeline(
-  releaseDate: string,
-  peakMonth: number = 3
-): TimelineDataPoint[] {
-  const timeline: TimelineDataPoint[] = [];
-  const start = new Date(releaseDate);
-
-  // Guard: reject Invalid Date from unparseable strings — mirrors dataFetcher.ts fix.
-  if (Number.isNaN(start.getTime())) return timeline;
-
-  const now = new Date();
-
-  // Generate monthly data points
-  const currentDate = new Date(start);
-  let month = 0;
-
-  while (currentDate <= now && month < 48) {
-    // Max 4 years of data
-    // Spotify streams curve (exponential growth then plateau)
-    const spotifyGrowth = Math.min(
-      100,
-      Math.floor(
-        20 +
-          80 * (1 - Math.exp(-month / peakMonth)) +
-          Math.random() * 10 -
-          month * 0.5
-      )
-    );
-
-    // YouTube views curve (similar pattern)
-    const youtubeGrowth = Math.min(
-      100,
-      Math.floor(
-        15 +
-          85 * (1 - Math.exp(-month / (peakMonth + 1))) +
-          Math.random() * 8 -
-          month * 0.3
-      )
-    );
-
-    // Billboard position (inverse - lower is better, peaks then drops)
-    let billboardPos = null;
-    if (month >= 1 && month <= 20) {
-      const peak = 100 - 90 * Math.exp(-Math.pow(month - peakMonth, 2) / 10);
-      billboardPos = Math.max(1, Math.floor(peak + Math.random() * 10));
-    }
-
-    timeline.push({
-      date: currentDate.toISOString().split("T")[0],
-      spotify: Math.max(0, spotifyGrowth),
-      youtube: Math.max(0, youtubeGrowth),
-      billboard: billboardPos ? 101 - billboardPos : undefined, // Invert for graph (higher = better)
-    });
-
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    month++;
-  }
-
-  return timeline;
-}
+import { generateTimeline } from "./timeline";
+import { toSlug } from "./toSlug";
 
 // Mock database of popular songs
 export const mockSongs: Record<string, SongData> = {
@@ -1262,7 +1202,7 @@ export function getArtistDataBySlug(slug: string): ArtistData | null {
   let artistImage = "";
 
   for (const song of Object.values(mockSongs)) {
-    const songArtistSlug = song.artist.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const songArtistSlug = toSlug(song.artist);
     if (songArtistSlug === slug || songArtistSlug.startsWith(slug)) {
       artistSongs.push(song);
       if (!artistName) {
