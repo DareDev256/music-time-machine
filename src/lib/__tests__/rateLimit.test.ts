@@ -252,4 +252,21 @@ describe("sanitizeQuery", () => {
     expect(sanitizeQuery("the constructor song")).toBe("the constructor song");
     expect(sanitizeQuery("prototype records")).toBe("prototype records");
   });
+
+  it("strips null bytes that could truncate downstream parsers", () => {
+    expect(sanitizeQuery("photo\x00.js")).toBe("photo.js");
+    expect(sanitizeQuery("search\x00term")).toBe("searchterm");
+    expect(sanitizeQuery("\x00\x00\x00")).toBe("");
+  });
+
+  it("strips unicode control characters (C0/C1 ranges)", () => {
+    // Tab (\x09), newline (\x0A), carriage return (\x0D) — legitimate in
+    // text but meaningless in a search query; can confuse WAFs and logs.
+    expect(sanitizeQuery("line\x0Abreak")).toBe("linebreak");
+    expect(sanitizeQuery("tab\x09here")).toBe("tabhere");
+    expect(sanitizeQuery("cr\x0Dlf")).toBe("crlf");
+    // C1 range (U+0080–U+009F) — rarely used, can break parsers
+    expect(sanitizeQuery("test\x85value")).toBe("testvalue");
+    expect(sanitizeQuery("test\x8Dvalue")).toBe("testvalue");
+  });
 });

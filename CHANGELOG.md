@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.15.1] - 2026-02-19
+
+### Security
+- **Applied `safeHref()` to AudioPlayer Spotify link** — `AudioPlayer.tsx` rendered `spotifyUrl` directly in `<a href>` without protocol validation, while all other external links (SongHeader, PlatformCard, GeniusCard) used `safeHref()`. Now validates the URL and suppresses the link entirely if it's non-HTTPS (no inert `#` anchor rendered)
+- **Hardened `sanitizeQuery()` against null byte and control char injection** — Added stripping of null bytes (`\x00`) and unicode control characters (C0 range U+0000–U+001F, DEL U+007F, C1 range U+0080–U+009F) before existing HTML/char sanitization. Null bytes can truncate strings in C-backed parsers (e.g. path traversal via `photo\x00.js`); control chars can confuse WAFs, log parsers, and downstream text processing
+- **Expanded `Permissions-Policy` from 3 to 11 blocked APIs** — Added `payment=()`, `usb=()`, `bluetooth=()`, `serial=()`, `hid=()`, `idle-detection=()`, `screen-wake-lock=()`, `web-share=(self)` to prevent unauthorized access to sensitive browser APIs via injected iframes or compromised third-party scripts
+
+### Added
+- **2 new test cases** — null byte stripping (`\x00` truncation attack) and C0/C1 control character removal (`\x09`, `\x0A`, `\x0D`, `\x85`, `\x8D`) in `sanitizeQuery` (237 tests total)
+
+---
+
 ## [1.15.0] - 2026-02-18
 
 ### Changed

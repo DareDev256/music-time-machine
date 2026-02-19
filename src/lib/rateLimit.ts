@@ -153,10 +153,17 @@ export function isValidId(id: string): boolean {
 /** Keys that could trigger prototype pollution if used in object bracket notation. */
 const DANGEROUS_KEYS = new Set(["__proto__", "constructor", "prototype"]);
 
-/** Sanitize a user search query: strip HTML, remove dangerous chars, block
- *  prototype pollution payloads, enforce max length. */
+/** Sanitize a user search query: strip null bytes, unicode control chars,
+ *  HTML tags, dangerous chars, prototype pollution payloads, enforce max length.
+ *
+ *  Null bytes (\x00, %00) can truncate strings in C-backed parsers (e.g. path
+ *  traversal via `photo\x00.js`). Unicode control chars (U+0000–U+001F,
+ *  U+007F–U+009F) have no legitimate use in search queries and can confuse
+ *  downstream text processing, log analysis, and WAF rules. */
 export function sanitizeQuery(input: string): string {
   const cleaned = input
+    // Strip null bytes and unicode control characters (C0, DEL, C1 ranges)
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, "")
     .replace(/<[^>]*>/g, "")
     .replace(/[<>"'&]/g, "")
     .trim()

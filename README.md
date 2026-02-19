@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.15.0-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-235_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.15.1-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-237_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -21,7 +21,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>22</strong><br><sub>Components</sub></td>
-<td align="center"><strong>235</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>237</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>6</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -176,7 +176,9 @@ Data   ┌──────────┬────────────�
 | **SSRF Protection** | All outbound API requests routed through `safeFetch()` — origin-validated against an explicit allowlist before any request leaves the server. Blocks cloud metadata, internal IPs, `@`-credential tricks, subdomain spoofing, and HTTP downgrades |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Genius ID NaN guard prevents malformed IDs from reaching the API |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After), per-upstream-API token buckets, stale bucket eviction, IP format validation to prevent rate limit bypass via spoofed headers |
-| **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data |
+| **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data. Non-HTTPS URLs are suppressed entirely (no inert `#` link rendered) |
+| **Input Sanitization** | `sanitizeQuery()` strips null bytes (`\x00`) and unicode control characters (C0/C1 ranges U+0000–U+001F, U+007F–U+009F) before HTML/char filtering — prevents string truncation attacks in downstream parsers and log injection |
+| **Permissions Policy** | Locks down 11 browser APIs: camera, microphone, geolocation, payment, USB, Bluetooth, serial, HID, idle detection, screen wake lock, web-share (self only) |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
 | **Accessibility** | ARIA combobox pattern on search (listbox + options + activedescendant), focus-trapped modal dialogs with Escape dismiss, keyboard-navigable audio seek slider, dynamic aria-labels on all interactive controls |
 
@@ -239,7 +241,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**228 tests** across **16 suites** covering:
+**237 tests** across **16 suites** covering:
 
 | Suite | What's Tested |
 |-------|--------------|
@@ -264,7 +266,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 228 tests must pass
+npm test                    # All 237 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```

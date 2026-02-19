@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Play, Pause, Volume2, ExternalLink } from "lucide-react";
 import SafeImage from "./SafeImage";
+import { safeHref } from "../lib/safeHref";
 
 interface AudioPlayerProps {
   previewUrl: string;
@@ -166,9 +167,9 @@ export default function AudioPlayer({
           {/* Volume & Spotify Link */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <Volume2 className="w-4 h-4 text-foreground-secondary hidden sm:block" />
-            {spotifyUrl && (
+            {spotifyUrl && safeHref(spotifyUrl) !== "#" && (
               <a
-                href={spotifyUrl}
+                href={safeHref(spotifyUrl)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-secondary hover:text-green-500 transition-colors"
