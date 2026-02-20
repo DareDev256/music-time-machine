@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.0] - 2026-02-19
+
+### Added
+- **User-configurable playlist generation settings** — New `PlaylistConfigurator` component on the song detail page lets users tune recommendation results by preferred genres, release era range (2015–2025), and mood preset (Upbeat / Chill / Melancholy / Energetic). Preferences apply additive scoring bonuses (`PREFERRED_GENRE_BONUS = 12`, `PREFERRED_ERA_BONUS = 10`, `MOOD_MATCH_BONUS = 10`) on top of existing Euclidean distance scoring, so results still make sense when no preferences are set
+- **`RecommendationPrefs` type** — Exported from `recommendations.ts` for type-safe preference passing through the engine
+- **localStorage persistence** — User preferences saved under `mtm-rec-prefs` key and restored on page load, matching the existing `ThemeProvider` pattern
+
+---
+
 ## [1.15.2] - 2026-02-19
 
 ### Fixed

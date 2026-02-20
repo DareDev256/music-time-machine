@@ -1,6 +1,35 @@
 import { SongData } from "@/types";
 import { songGenres } from "@/lib/mockData";
 
+// ── User preferences ─────────────────────────────────────────────────────
+
+/** Mood preset → target audio feature ranges for preference-aware scoring. */
+const MOOD_TARGETS: Record<string, { energy: number; valence: number }> = {
+  upbeat:     { energy: 0.8, valence: 0.8 },
+  chill:      { energy: 0.35, valence: 0.5 },
+  melancholy: { energy: 0.4, valence: 0.2 },
+  energetic:  { energy: 0.9, valence: 0.6 },
+};
+
+/** Additive bonus when a candidate matches one of the user's preferred genres. */
+const PREFERRED_GENRE_BONUS = 12;
+/** Additive bonus when a candidate falls within the user's preferred era range. */
+const PREFERRED_ERA_BONUS = 10;
+/** Additive bonus when a candidate's mood features are close to the user's target. */
+const MOOD_MATCH_BONUS = 10;
+/** Delta threshold for mood feature proximity. */
+const MOOD_PROXIMITY = 0.25;
+
+/** User-configurable recommendation preferences. All fields optional. */
+export interface RecommendationPrefs {
+  /** Preferred genres — candidates matching these get a scoring bonus. */
+  genres?: string[];
+  /** Preferred release year range — candidates within get a scoring bonus. */
+  eraRange?: [number, number];
+  /** Mood preset — biases scoring toward matching energy/valence profiles. */
+  mood?: "upbeat" | "chill" | "melancholy" | "energetic";
+}
+
 // ── Algorithm constants ─────────────────────────────────────────────────────
 // Named so the scoring model is readable and tunable from one place.
 
@@ -235,6 +264,7 @@ export function getSimilarSongs(
   target: SongData,
   catalog: SongData[],
   limit: number = 4,
+  prefs?: RecommendationPrefs,
 ): { song: SongData; reason: string; matchScore: number }[] {
   const targetFeatures = target.spotify?.audioFeatures;
   if (!targetFeatures) return [];
@@ -264,6 +294,24 @@ export function getSimilarSongs(
     const candidateYear = safeYear(candidate.releaseDate);
     if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
       score += SAME_ERA_BONUS;
+    }
+
+    // ── User preference bonuses ──────────────────────────────────────
+    if (prefs) {
+      const candidateGenre = songGenres[candidate.id];
+      if (prefs.genres?.length && candidateGenre && prefs.genres.includes(candidateGenre)) {
+        score += PREFERRED_GENRE_BONUS;
+      }
+      if (prefs.eraRange && candidateYear !== null) {
+        const [lo, hi] = prefs.eraRange;
+        if (candidateYear >= lo && candidateYear <= hi) score += PREFERRED_ERA_BONUS;
+      }
+      if (prefs.mood && MOOD_TARGETS[prefs.mood]) {
+        const mt = MOOD_TARGETS[prefs.mood];
+        const eDelta = Math.abs(features.energy - mt.energy);
+        const vDelta = Math.abs(features.valence - mt.valence);
+        if (eDelta < MOOD_PROXIMITY && vDelta < MOOD_PROXIMITY) score += MOOD_MATCH_BONUS;
+      }
     }
 
     const reason = classifyReason(

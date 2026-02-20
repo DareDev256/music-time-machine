@@ -1,11 +1,14 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { Sparkles, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta } from "@/lib/recommendations";
+import type { RecommendationPrefs } from "@/lib/recommendations";
+import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 
 interface SimilarSongsProps {
   song: SongData;
@@ -66,7 +69,10 @@ function diversityBgColor(score: number): string {
 }
 
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
-  const similar = getSimilarSongs(song, catalog);
+  const [prefs, setPrefs] = useState<RecommendationPrefs>({});
+  const handlePrefsChange = useCallback((p: RecommendationPrefs) => setPrefs(p), []);
+
+  const similar = getSimilarSongs(song, catalog, 4, prefs);
 
   if (similar.length === 0) return null;
 
@@ -78,6 +84,8 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
         <Sparkles className="w-5 h-5 text-accent" />
         Similar Songs
       </h2>
+
+      <PlaylistConfigurator onChange={handlePrefsChange} />
 
       {/* Diversity indicator bar */}
       <motion.div
