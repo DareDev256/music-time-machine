@@ -83,17 +83,32 @@ const ERA_FULL_SPREAD = 2;
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
 /**
+ * Lightweight cache for safeYear — avoids redundant Date construction when the
+ * same release date string is parsed in both the scoring loop and getDiversityMeta.
+ * Bounded to 256 entries to prevent unbounded growth in edge cases.
+ */
+const yearCache = new Map<string, number | null>();
+const YEAR_CACHE_LIMIT = 256;
+
+/**
  * Safely extract a year from a release date string.
  * Returns null for undefined, empty, or unparseable dates instead of NaN.
+ * Results are memoized — repeated calls with the same string skip Date parsing.
  */
 export function safeYear(date: string | undefined | null): number | null {
   if (!date || !date.trim()) return null;
+
+  const cached = yearCache.get(date);
+  if (cached !== undefined) return cached;
+
   const parsed = new Date(date);
-  if (Number.isNaN(parsed.getTime())) return null;
-  // Use getUTCFullYear to avoid timezone drift — new Date("2022") parses as
-  // UTC midnight, but getFullYear() returns local time, which shifts the year
-  // backward in western-hemisphere timezones (e.g. 2022 → 2021 in EST).
-  return parsed.getUTCFullYear();
+  const result = Number.isNaN(parsed.getTime()) ? null : parsed.getUTCFullYear();
+
+  // Evict oldest entries if cache exceeds limit (simple size guard)
+  if (yearCache.size >= YEAR_CACHE_LIMIT) yearCache.clear();
+  yearCache.set(date, result);
+
+  return result;
 }
 
 /** Convert a year to its decade label. @example 2017 → "2010s" */
@@ -107,6 +122,8 @@ interface ScoredSong {
   song: SongData;
   score: number;
   reason: string;
+  /** Pre-parsed artist names — avoids redundant regex splits in the diversity filter. */
+  artists: string[];
 }
 
 /** Weighted Euclidean distance between two audio feature vectors. */
@@ -286,6 +303,7 @@ export function getSimilarSongs(
     let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
 
     // Bonus: shared artist credit (any overlap between target and candidate artists)
+    // Parse once here — reused in the diversity filter below to avoid redundant regex work.
     const candidateArtists = splitArtists(candidate.artist);
     const sameArtist = candidateArtists.some((a) => targetArtists.has(a));
     if (sameArtist) score += SAME_ARTIST_BONUS;
@@ -324,7 +342,7 @@ export function getSimilarSongs(
       candidateYear,
     );
 
-    scored.push({ song: candidate, score, reason });
+    scored.push({ song: candidate, score, reason, artists: candidateArtists });
   }
 
   // Diversity-aware selection: skip songs whose *any* credited artist was already picked.
@@ -336,7 +354,8 @@ export function getSimilarSongs(
 
   for (const entry of scored) {
     if (picked.length >= limit) break;
-    const artists = splitArtists(entry.song.artist);
+    // Reuse pre-parsed artists from the scoring pass — no redundant regex work.
+    const artists = entry.artists;
     if (artists.some((a) => seenArtists.has(a))) continue;
     for (const a of artists) seenArtists.add(a);
     // Clamp score to 0–99 range (100% would imply identical song)

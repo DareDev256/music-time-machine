@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.2] - 2026-02-20
+
+### Fixed
+- **Redundant `splitArtists()` regex parsing in recommendation pipeline** — Each candidate song had its artist string parsed twice: once during scoring and again during the diversity filter. The `ScoredSong` interface now carries pre-parsed artist arrays through the pipeline, eliminating N redundant regex operations per recommendation request
+- **Redundant `safeYear()` Date construction across scoring and diversity analysis** — Added a bounded memoization cache (256 entries) to `safeYear()` so repeated calls with the same release date string skip `new Date()` construction entirely. The cache self-clears when full to prevent unbounded memory growth
+
+---
+
 ## [1.16.1] - 2026-02-19
 
 ### Changed
