@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.15.2] - 2026-02-19
+
+### Fixed
+- **Era diversity ratio used pick count as denominator, making "Wide mix" unreachable** — `getDiversityMeta()` calculated `eraRatio` as `(eras.size - baseline) / picks.length`, but decades are inherently coarser than genres (a catalog spanning 2017–2024 only covers 2 decades). With 4 picks, the era component maxed out at `1/4 × 40 = 10` points, capping the total diversity score at ~70 and making the "Wide mix" label (≥75) mathematically impossible. Now normalizes against a fixed `ERA_FULL_SPREAD = 2` constant, so spanning 2+ distinct decades gives full era credit (40 points). A set of 4 different genres across 2 decades now correctly scores 80 ("Wide mix") instead of 70 ("Good variety")
+
+### Added
+- **1 new test case** — verifies "Similar vibe" label for 2 genres within a single era (238 tests total)
+
+---
+
 ## [1.15.1] - 2026-02-19
 
 ### Security

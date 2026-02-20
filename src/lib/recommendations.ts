@@ -43,6 +43,13 @@ const ERA_REASON_YEARS = 1;
 const GENRE_WEIGHT = 60;
 /** Diversity score formula: era spread adds depth. */
 const ERA_WEIGHT = 40;
+/**
+ * Normalizer for era diversity ratio. Decades are inherently coarser than
+ * genres (a catalog spanning 2017–2024 only covers 2 decades), so dividing
+ * by pick count produces a ratio that almost never exceeds 0.25. Using a
+ * fixed spread of 2 means "picks span 2+ distinct decades" = full era credit.
+ */
+const ERA_FULL_SPREAD = 2;
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -128,7 +135,7 @@ export interface DiversityMeta {
  * Score formula:
  *   - Base: (unique genres / total picks) × 60  (genre variety is the primary signal)
  *   - Bonus: (unique eras / total picks) × 40   (era spread adds depth)
- * A set of 4 songs spanning 4 genres and 2 decades scores 100.
+ * A set of 4 songs spanning 4 genres and 3+ decades scores 100.
  */
 export function getDiversityMeta(
   target: SongData,
@@ -161,7 +168,11 @@ export function getDiversityMeta(
   // Without this guard, an invalid target date means the set never received the
   // baseline era, making (eras.size - 1) negative and dragging the score below 0.
   const eraBaseline = targetYear !== null ? 1 : 0;
-  const eraRatio = Math.max(0, (eras.size - eraBaseline) / Math.max(1, count));
+  // Normalize against ERA_FULL_SPREAD instead of count. Decades are far coarser
+  // than genres — a typical catalog spans only 2 decades, so dividing by count
+  // (4) made eraRatio cap at 0.25, capping era contribution at 10/40 points
+  // and making "Wide mix" (≥75) mathematically unreachable.
+  const eraRatio = Math.min(1, Math.max(0, (eras.size - eraBaseline) / ERA_FULL_SPREAD));
 
   const score = Math.min(100, Math.round(genreRatio * GENRE_WEIGHT + eraRatio * ERA_WEIGHT));
 

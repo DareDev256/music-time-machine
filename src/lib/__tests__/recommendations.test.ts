@@ -398,8 +398,9 @@ describe("getDiversityMeta", () => {
     expect(wideScore).toBeGreaterThan(narrowScore);
   });
 
-  it("returns 'Good variety' for 4 genres within same era pair", () => {
-    // 4 genres across 2 eras (target 2010s + picks in 2010s/2020s) → score ~70
+  it("returns 'Wide mix' for 4 genres spanning 2 decades", () => {
+    // 4 genres across 2 eras (target 2010s + picks in 2010s/2020s)
+    // Genre: 4/4 × 60 = 60, Era: min(1, 1/2) × 40 = 20, total = 80
     const targetFor2010s = makeSong({ id: "target-old", releaseDate: "2015-06-01" });
     const picks = [
       { song: makeSong({ id: "blinding-lights", releaseDate: "2019-11-29" }) }, // R&B, 2010s
@@ -408,8 +409,23 @@ describe("getDiversityMeta", () => {
       { song: makeSong({ id: "vampire", releaseDate: "2023-06-30" }) },         // Alt/Indie, 2020s
     ];
     const result = getDiversityMeta(targetFor2010s, picks);
-    expect(result.label).toBe("Good variety");
-    expect(result.score).toBeGreaterThanOrEqual(45);
+    expect(result.label).toBe("Wide mix");
+    expect(result.score).toBeGreaterThanOrEqual(75);
+  });
+
+  it("returns 'Similar vibe' for 2 genres in same era", () => {
+    // 2 genres / 4 picks × 60 = 30, all same era = 0, total = 30
+    const targetFor2020s = makeSong({ id: "target-new", releaseDate: "2022-06-01" });
+    const picks = [
+      { song: makeSong({ id: "blinding-lights", releaseDate: "2020-01-01" }) }, // R&B, 2020s
+      { song: makeSong({ id: "shape-of-you", releaseDate: "2020-01-01" }) },    // Pop, 2020s
+      { song: makeSong({ id: "as-it-was", releaseDate: "2022-01-01" }) },       // Pop, 2020s
+      { song: makeSong({ id: "flowers", releaseDate: "2023-01-01" }) },         // Pop, 2020s
+    ];
+    const result = getDiversityMeta(targetFor2020s, picks);
+    expect(result.label).toBe("Similar vibe");
+    expect(result.score).toBeGreaterThanOrEqual(20);
+    expect(result.score).toBeLessThan(45);
   });
 
   it("sorts genres alphabetically", () => {
