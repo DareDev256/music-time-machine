@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.3] - 2026-02-20
+
+### Added
+- **RecommendationPrefs test coverage** — 6 tests covering genre bonus, era range bonus, mood preset scoring, invalid mood graceful handling, stacked multi-bonus ranking, and empty prefs passthrough. These preference bonuses (added in v1.16.0) previously had zero test coverage
+- **Timeline generator tests** — 6 tests for `generateTimeline`: invalid date guard, data point shape validation, 48-month cap, release date anchoring, billboard position windowing (months 1–20 only), and custom peakMonth parameter
+- **`toSlug` utility tests** — 6 tests covering lowercase/hyphenation, special character stripping, consecutive separator collapse, numeric content, and empty string edge case
+- **`formatDate` utility tests** — 5 tests covering locale formatting, unparseable date fallback (returns raw input instead of "Invalid Date"), custom Intl options, empty string handling, and year-only string parsing
+
+---
+
 ## [1.16.2] - 2026-02-20
 
 ### Fixed
