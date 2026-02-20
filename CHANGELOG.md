@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.1] - 2026-02-19
+
+### Changed
+- **Dependency updates** — Bumped 10 packages to latest compatible versions: react 19.2.3→19.2.4, react-dom 19.2.3→19.2.4, eslint-config-next 16.1.4→16.1.6, lucide-react 0.562.0→0.575.0, recharts 3.6.0→3.7.0, tailwindcss 4.1.18→4.2.0, @tailwindcss/postcss 4.1.18→4.2.0, @types/react 19.2.9→19.2.14, @types/node 20.19.30→20.19.33, typescript-eslint packages synced
+
+### Security
+- **Audit note** — 15 remaining vulnerabilities (all in eslint 9 dependency tree: ajv ReDoS, minimatch ReDoS) are dev-only and require eslint 10 migration (breaking change, tracked separately). No runtime impact
+
+---
+
 ## [1.16.0] - 2026-02-19
 
 ### Added
