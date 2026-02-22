@@ -2,6 +2,19 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.4] - 2026-02-22
+
+### Fixed
+- **Insufficient health data** — Added `/api/health` endpoint exposing structured metrics: app version, uptime, integration readiness (Spotify/YouTube/Genius), cache utilization, and operational status. This resolves the "insufficient_data" health score by giving monitoring systems a concrete surface to probe
+- **Cache observability** — Added `getStats()` method to `TTLCache` returning size, maxSize, and utilization ratio for health reporting
+- **Build-time version injection** — `NEXT_PUBLIC_APP_VERSION` is now injected from `package.json` via `next.config.ts`, eliminating manual version tracking in health responses
+
+### Added
+- **CI test scripts** — `npm run test:ci` (single-run, no watch) and `npm run test:coverage` (with coverage reporting) for pipeline-friendly test execution
+- **Health endpoint tests** — 4 tests covering cache stats: empty cache, partial utilization, full utilization, zero-maxSize edge case
+
+---
+
 ## [1.16.3] - 2026-02-20
 
 ### Added

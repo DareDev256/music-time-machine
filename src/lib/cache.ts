@@ -51,6 +51,15 @@ class TTLCache {
   get size(): number {
     return this.cache.size;
   }
+
+  /** Return observable stats for health reporting. */
+  getStats(): { size: number; maxSize: number; utilization: number } {
+    return {
+      size: this.cache.size,
+      maxSize: this.maxSize,
+      utilization: this.maxSize > 0 ? +(this.cache.size / this.maxSize).toFixed(3) : 0,
+    };
+  }
 }
 
 // 5 minute TTL for search results
