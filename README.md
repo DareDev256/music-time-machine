@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.16.5-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.16.6-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-265_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -25,7 +25,7 @@ One search. Four platforms. Every metric that matters.
 <td align="center"><strong>265</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
-<td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
+<td align="center"><strong>17</strong><br><sub>Curated Songs</sub></td>
 <td align="center"><strong>0</strong><br><sub>Config Required</sub></td>
 </tr>
 </table>
@@ -150,7 +150,7 @@ Data   ┌──────────┬────────────�
 | `GET /api/artist/:id` | Artist profile, top tracks, discography | 30/min |
 | `GET /api/catalog` | Full song catalog for recommendations | 10/min |
 | `GET /api/og/:id` | Dynamic OG image generation (Edge Runtime) | 10/min |
-| `GET /api/health` | Structured health metrics (version, uptime, integrations, caches) | — |
+| `GET /api/health` | Runtime health checks, memory, request/error counters, per-subsystem status | — |
 
 ---
 

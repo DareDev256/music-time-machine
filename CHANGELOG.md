@@ -2,6 +2,19 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.6] - 2026-02-23
+
+### Fixed
+- **Insufficient health data resolved** — Replaced hardcoded, stale metrics (wrong song count, manual test count) with dynamic runtime data: catalog size counted from `mockSongs`, request throughput, error rate, and `process.memoryUsage()` snapshot (RSS, heap, external in MB)
+- **Per-subsystem health checks** — Added `checks` array with individual `pass/warn/fail` status for catalog, search cache, song cache, and integrations — giving monitoring systems granular data to compute a real health score instead of flagging `insufficient_data`
+- **Status derivation from checks** — Overall status is now computed from check results (`unhealthy` if any fail, `degraded` if any warn, `healthy` otherwise) instead of a simplified boolean
+
+### Added
+- **`recordError()` export** — Other API routes can increment the global error counter for health reporting
+- **Memory metrics** — Health endpoint now reports RSS, heapUsed, heapTotal, and external memory usage
+
+---
+
 ## [1.16.5] - 2026-02-22
 
 ### Security

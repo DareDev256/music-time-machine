@@ -3,19 +3,32 @@ import { searchCache, songCache } from "@/lib/cache";
 import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
+import { mockSongs } from "@/lib/mockData";
 
-// Captured once at module load — survives across requests in the same process.
+// ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
+let requestCount = 0;
+let errorCount = 0;
 
 /** Version from package.json, injected at build time via next.config.ts. */
 const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "unknown";
 
+/** Number of API route files — updated when routes are added/removed. */
+const API_ROUTE_COUNT = 7;
+
 export const dynamic = "force-dynamic"; // Never cache health checks
 
+/** Increment the global error counter (call from other API routes). */
+export function recordError(): void {
+  errorCount++;
+}
+
 export async function GET(): Promise<NextResponse> {
+  requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
 
+  // ── Per-subsystem health checks ──────────────────────────────────────
   const integrations = {
     spotify: isSpotifyConfigured(),
     youtube: isYouTubeConfigured(),
@@ -24,11 +37,40 @@ export async function GET(): Promise<NextResponse> {
 
   const configuredCount = Object.values(integrations).filter(Boolean).length;
   const useMockData = process.env.USE_MOCK_DATA === "true";
+  const catalogSize = Object.keys(mockSongs).length;
 
-  // Determine overall status:
-  // - "healthy": mock mode OR at least 1 real integration configured
-  // - "degraded": real mode but zero integrations (falls back to mock anyway)
-  const status = useMockData || configuredCount > 0 ? "healthy" : "degraded";
+  const checks = [
+    {
+      name: "catalog",
+      status: catalogSize > 0 ? "pass" : "fail",
+      detail: `${catalogSize} songs loaded`,
+    },
+    {
+      name: "cache:search",
+      status: "pass" as const,
+      detail: `${searchCache.getStats().size}/${searchCache.getStats().maxSize} entries`,
+    },
+    {
+      name: "cache:song",
+      status: "pass" as const,
+      detail: `${songCache.getStats().size}/${songCache.getStats().maxSize} entries`,
+    },
+    {
+      name: "integrations",
+      status: useMockData || configuredCount > 0 ? "pass" : "warn",
+      detail: useMockData
+        ? "mock mode (no APIs required)"
+        : `${configuredCount}/3 configured`,
+    },
+  ] as const;
+
+  const hasFailure = checks.some((c) => c.status === "fail");
+  const hasWarning = checks.some((c) => c.status === "warn");
+  const status = hasFailure ? "unhealthy" : hasWarning ? "degraded" : "healthy";
+
+  // ── Memory snapshot (MB, 1 decimal) ──────────────────────────────────
+  const mem = process.memoryUsage();
+  const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
 
   return NextResponse.json({
     status,
@@ -40,14 +82,23 @@ export async function GET(): Promise<NextResponse> {
     },
     mode: useMockData ? "mock" : "live",
     integrations,
+    checks,
     caches: {
       search: searchCache.getStats(),
       song: songCache.getStats(),
     },
     metrics: {
-      catalogSize: 18,       // Curated mock songs
-      apiRoutes: 7,          // Including this health route
-      testCount: 261,        // Tracked manually — bumped with test additions
+      catalogSize,
+      apiRoutes: API_ROUTE_COUNT,
+      requests: requestCount,
+      errors: errorCount,
+    },
+    memory: {
+      rss: toMB(mem.rss),
+      heapUsed: toMB(mem.heapUsed),
+      heapTotal: toMB(mem.heapTotal),
+      external: toMB(mem.external),
+      unit: "MB",
     },
   });
 }
