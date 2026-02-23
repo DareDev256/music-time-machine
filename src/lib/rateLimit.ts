@@ -134,6 +134,8 @@ export function rateLimitResponse(): Response {
       headers: {
         "Content-Type": "application/json",
         "Retry-After": "60",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
       },
     }
   );

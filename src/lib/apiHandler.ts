@@ -33,15 +33,31 @@ export function withRouteHandler(
       console.error(`API error [${options.route}]: ${message}`);
       return NextResponse.json(
         { error: "Internal server error" },
-        { status: 500 }
+        { status: 500, headers: API_SECURITY_HEADERS }
       );
     }
   };
 }
 
-/** Build a NextResponse.json with standard cache headers. */
+/**
+ * Standard security headers applied to every API JSON response.
+ *
+ * These supplement the global headers in next.config.ts — which cover page
+ * routes but don't always propagate to programmatic NextResponse.json() calls.
+ *
+ * - nosniff: prevents browsers from MIME-sniffing JSON into HTML (stored XSS vector)
+ * - DENY: blocks embedding API responses in iframes (clickjacking)
+ * - no-store: API data is user-specific or time-sensitive; don't cache in shared proxies
+ */
+const API_SECURITY_HEADERS: Record<string, string> = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Cache-Control": "no-store",
+};
+
+/** Build a NextResponse.json with standard cache + security headers. */
 export function jsonWithCache(data: unknown, cacheTtl: string): NextResponse {
   return NextResponse.json(data, {
-    headers: { "Cache-Control": cacheTtl },
+    headers: { ...API_SECURITY_HEADERS, "Cache-Control": cacheTtl },
   });
 }

@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.5] - 2026-02-22
+
+### Security
+- **Reverse tabnabbing** — `window.open` calls in ShareCard now pass `noopener,noreferrer` features, preventing opened pages from accessing `window.opener` to redirect the original tab
+- **Deprecated clipboard fallback removed** — Replaced `document.execCommand("copy")` DOM injection with graceful Clipboard API failure handling, eliminating unnecessary XSS surface
+- **Cache key normalization** — All cache keys are now NFC-normalized with zero-width/control characters stripped, preventing cache poisoning via Unicode normalization form collisions
+- **API response hardening** — All JSON API responses (including 429 and 500 errors) now include `X-Content-Type-Options: nosniff` and `X-Frame-Options: DENY` headers, closing MIME-sniffing and clickjacking gaps on programmatic responses
+
+---
+
 ## [1.16.4] - 2026-02-22
 
 ### Fixed

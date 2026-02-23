@@ -3,6 +3,21 @@ interface CacheEntry<T> {
   expiry: number;
 }
 
+/**
+ * Normalize a cache key to prevent cache poisoning.
+ *
+ * Without normalization, visually identical strings with different byte
+ * representations (unicode normalization forms, zero-width chars, control
+ * chars) could map to separate cache slots — letting an attacker poison the
+ * cache or bypass it entirely. NFC normalization + control char stripping
+ * ensures one canonical key per logical value.
+ */
+function normalizeKey(key: string): string {
+  return key
+    .normalize("NFC")
+    .replace(/[\x00-\x1F\x7F-\x9F\u200B-\u200F\uFEFF]/g, "");
+}
+
 class TTLCache {
   private cache = new Map<string, CacheEntry<unknown>>();
   private maxSize: number;
@@ -12,11 +27,11 @@ class TTLCache {
   }
 
   get<T>(key: string): T | null {
-    const entry = this.cache.get(key);
+    const entry = this.cache.get(normalizeKey(key));
     if (!entry) return null;
 
     if (Date.now() > entry.expiry) {
-      this.cache.delete(key);
+      this.cache.delete(normalizeKey(key));
       return null;
     }
 
@@ -24,13 +39,14 @@ class TTLCache {
   }
 
   set<T>(key: string, data: T, ttlMs: number): void {
+    const nKey = normalizeKey(key);
     // Evict oldest entries if at capacity
     if (this.cache.size >= this.maxSize) {
       const firstKey = this.cache.keys().next().value;
       if (firstKey) this.cache.delete(firstKey);
     }
 
-    this.cache.set(key, {
+    this.cache.set(nKey, {
       data,
       expiry: Date.now() + ttlMs,
     });

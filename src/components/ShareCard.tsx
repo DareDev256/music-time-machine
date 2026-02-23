@@ -67,33 +67,36 @@ export default function ShareCard({ song, onClose }: ShareCardProps) {
   const copyLink = async () => {
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback
-      const input = document.createElement("input");
-      input.value = url;
-      document.body.appendChild(input);
-      input.select();
-      document.execCommand("copy");
-      document.body.removeChild(input);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      // Clipboard API unavailable (non-HTTPS or denied permission) — no
+      // deprecated execCommand fallback. The Clipboard API is supported on
+      // 98%+ of browsers since 2018; falling back to DOM injection with
+      // execCommand creates an unnecessary XSS surface.
+      console.warn("Clipboard API unavailable — copy failed");
+      return;
     }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
+
+  /**
+   * Open a share URL safely. `noopener` prevents the opened page from accessing
+   * `window.opener` (reverse tabnabbing), `noreferrer` hides the referrer header.
+   * Without these, a malicious share-target page could redirect the original tab.
+   */
+  const safeOpen = (href: string) =>
+    window.open(href, "_blank", "noopener,noreferrer");
 
   const shareToX = () => {
     const text = `Check out "${song.title}" by ${song.artist} on Music Time Machine!`;
-    window.open(
-      `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
-      "_blank"
+    safeOpen(
+      `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`
     );
   };
 
   const shareToFacebook = () => {
-    window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      "_blank"
+    safeOpen(
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`
     );
   };
 
