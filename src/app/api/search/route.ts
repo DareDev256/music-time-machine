@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { searchSongs, getTrendingSongs } from "@/lib/dataFetcher";
 import { sanitizeQuery } from "@/lib/rateLimit";
 import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
@@ -15,7 +15,7 @@ export const GET = withRouteHandler({ route: "search" }, async (request: NextReq
 
   const query = sanitizeQuery(rawQuery);
   if (query.length === 0) {
-    return NextResponse.json({ results: [], type: "search" });
+    return jsonWithCache({ results: [], type: "search" }, CACHE_TTL);
   }
 
   const results = await searchSongs(query);

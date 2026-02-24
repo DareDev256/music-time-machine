@@ -136,6 +136,7 @@ export function rateLimitResponse(): Response {
         "Retry-After": "60",
         "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
+        "Cache-Control": "no-store",
       },
     }
   );

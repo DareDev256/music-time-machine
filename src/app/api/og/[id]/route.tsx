@@ -1,7 +1,7 @@
 import { ImageResponse } from "@vercel/og";
 import { getSongData } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
-import { withRouteHandler } from "@/lib/apiHandler";
+import { withRouteHandler, jsonError } from "@/lib/apiHandler";
 
 export const runtime = "edge";
 
@@ -9,10 +9,7 @@ export const GET = withRouteHandler({ route: "og" }, async (_request, { params }
   const { id } = await params;
 
   if (!isValidId(id)) {
-    return new Response(JSON.stringify({ error: "Invalid song ID" }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" },
-    });
+    return jsonError({ error: "Invalid song ID" }, 400);
   }
 
   const song = await getSongData(id);

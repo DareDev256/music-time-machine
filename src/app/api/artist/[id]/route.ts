@@ -1,7 +1,6 @@
-import { NextResponse } from "next/server";
 import { getArtistData } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
-import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
+import { withRouteHandler, jsonWithCache, jsonError } from "@/lib/apiHandler";
 
 const CACHE_TTL = "public, s-maxage=3600, stale-while-revalidate=300";
 
@@ -9,12 +8,12 @@ export const GET = withRouteHandler({ route: "artist" }, async (_request, { para
   const { id } = await params;
 
   if (!isValidId(id)) {
-    return NextResponse.json({ error: "Invalid artist ID" }, { status: 400 });
+    return jsonError({ error: "Invalid artist ID" }, 400);
   }
 
   const artist = await getArtistData(id);
   if (!artist) {
-    return NextResponse.json({ error: "Artist not found" }, { status: 404 });
+    return jsonError({ error: "Artist not found" }, 404);
   }
 
   return jsonWithCache(artist, CACHE_TTL);

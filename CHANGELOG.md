@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.16.7] - 2026-02-24
+
+### Security
+- **Uniform error response headers** — All API error responses (400, 404, 422) now include `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, and `Cache-Control: no-store` via new `jsonError()` helper. Previously, validation-failure branches in 5 routes returned raw `NextResponse.json()` without security headers — browsers could MIME-sniff those JSON error bodies
+- **Fetch timeout enforcement** — `safeFetch()` now enforces a 10-second `AbortController` timeout on all outbound API requests. Prevents resource exhaustion when an allowed upstream origin responds slowly (slow-loris vector). Caller-provided signals take precedence
+- **Rate limit CDN cache poisoning fix** — 429 responses now include `Cache-Control: no-store`, preventing CDN/proxy caches from storing and serving rate-limit errors to innocent users
+- **Dead import cleanup** — Removed unused `NextResponse` imports from 4 API route files after migrating to `jsonError()`
+
+---
+
 ## [1.16.6] - 2026-02-23
 
 ### Fixed

@@ -42,16 +42,39 @@ function assertAllowedOrigin(url: string): void {
   }
 }
 
+/** Default timeout for outbound API requests (10 seconds).
+ *
+ * Without a timeout, a slow-response from an allowed origin (e.g. Spotify
+ * experiencing a partial outage) can hold Node.js connections indefinitely,
+ * exhausting the server's connection pool — a resource exhaustion vector.
+ */
+const DEFAULT_TIMEOUT_MS = 10_000;
+
 /**
  * Fetch wrapper that validates the target URL origin before making the request.
  * Drop-in replacement for `fetch()` — same signature, same return type.
+ *
+ * Enforces a 10s timeout via AbortController. Callers can override by passing
+ * their own `signal` in `init` (the caller's signal takes precedence).
  */
 export async function safeFetch(
   url: string,
   init?: RequestInit
 ): Promise<Response> {
   assertAllowedOrigin(url);
-  return fetch(url, init);
+
+  // Respect caller-provided signal; otherwise enforce default timeout
+  if (init?.signal) {
+    return fetch(url, init);
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+  try {
+    return await fetch(url, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 /** Exposed for testing. */

@@ -61,3 +61,17 @@ export function jsonWithCache(data: unknown, cacheTtl: string): NextResponse {
     headers: { ...API_SECURITY_HEADERS, "Cache-Control": cacheTtl },
   });
 }
+
+/**
+ * Build an error NextResponse.json with security headers.
+ *
+ * Without this, validation-failure branches (400, 404) return raw
+ * NextResponse.json() — missing nosniff and X-Frame-Options. Browsers
+ * can MIME-sniff unprotected JSON error bodies into executable HTML.
+ */
+export function jsonError(
+  body: { error: string },
+  status: 400 | 404 | 422
+): NextResponse {
+  return NextResponse.json(body, { status, headers: API_SECURITY_HEADERS });
+}

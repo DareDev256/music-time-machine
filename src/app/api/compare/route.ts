@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { compareSongs } from "@/lib/dataFetcher";
 import { isValidId } from "@/lib/rateLimit";
-import { withRouteHandler, jsonWithCache } from "@/lib/apiHandler";
+import { withRouteHandler, jsonWithCache, jsonError } from "@/lib/apiHandler";
 
 const CACHE_TTL = "public, s-maxage=3600, stale-while-revalidate=300";
 
@@ -11,19 +11,16 @@ export const GET = withRouteHandler({ route: "compare" }, async (request: NextRe
   const song2 = searchParams.get("song2");
 
   if (!song1 || !song2) {
-    return NextResponse.json(
-      { error: "Both song1 and song2 query parameters are required" },
-      { status: 400 }
-    );
+    return jsonError({ error: "Both song1 and song2 query parameters are required" }, 400);
   }
 
   if (!isValidId(song1) || !isValidId(song2)) {
-    return NextResponse.json({ error: "Invalid song IDs" }, { status: 400 });
+    return jsonError({ error: "Invalid song IDs" }, 400);
   }
 
   const comparison = await compareSongs(song1, song2);
   if (!comparison) {
-    return NextResponse.json({ error: "One or both songs not found" }, { status: 404 });
+    return jsonError({ error: "One or both songs not found" }, 404);
   }
 
   return jsonWithCache(comparison, CACHE_TTL);
