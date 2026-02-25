@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.16.7-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-265_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.17.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-272_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -159,7 +159,7 @@ Data   ┌──────────┬────────────�
 | Layer | Technology | Why |
 |-------|-----------|-----|
 | Framework | **Next.js 16** | App Router, Turbopack, Edge Runtime for OG images |
-| Runtime | **React 19** | `use()` hook for async params (Next.js 16 requirement) |
+| Runtime | **React 19** | `use()` hook for async params, custom hooks for data fetching (`useSongData`) |
 | Language | **TypeScript 5** | Strict mode — every API boundary is typed |
 | Styling | **Tailwind CSS 4** | `@theme inline` design tokens, no config file needed |
 | Charts | **Recharts 3** | Responsive timeline + radar chart with custom tooltips |

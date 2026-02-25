@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useState, use } from "react";
+import { useState, use } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowLeft, Loader2, GitCompareArrows, Share2 } from "lucide-react";
-import { SongData } from "@/types";
 import SongHeader from "@/components/SongHeader";
 import QuickStats from "@/components/QuickStats";
 import SpotifyCard from "@/components/SpotifyCard";
@@ -18,6 +17,7 @@ import SimilarSongs from "@/components/SimilarSongs";
 import SongMilestones from "@/components/SongMilestones";
 import SearchBar from "@/components/SearchBar";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
+import { useSongData } from "@/hooks/useSongData";
 
 const AudioRadarChart = dynamic(() => import("@/components/AudioRadarChart"), {
   ssr: false,
@@ -43,42 +43,8 @@ interface PageProps {
 
 export default function SongPage({ params }: PageProps) {
   const { id } = use(params);
-  const [song, setSong] = useState<SongData | null>(null);
-  const [catalog, setCatalog] = useState<SongData[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { song, catalog, loading, error } = useSongData(id);
   const [showShare, setShowShare] = useState(false);
-
-  useEffect(() => {
-    const fetchSong = async () => {
-      try {
-        setLoading(true);
-        const [songRes, catalogRes] = await Promise.all([
-          fetch(`/api/song/${id}`),
-          fetch("/api/catalog"),
-        ]);
-
-        if (!songRes.ok) {
-          setError(songRes.status === 404 ? "Song not found" : "Failed to load song data");
-          return;
-        }
-
-        const data = await songRes.json();
-        setSong(data);
-
-        if (catalogRes.ok) {
-          setCatalog(await catalogRes.json());
-        }
-      } catch (err) {
-        console.error("Error fetching song:", err);
-        setError("Failed to load song data");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchSong();
-  }, [id]);
 
   if (loading) return <PageLoadingState message="Loading song data..." />;
   if (error || !song) return <PageErrorState message={error || "Song not found"} />;

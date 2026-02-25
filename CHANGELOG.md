@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.17.0] - 2026-02-24
+
+### Changed
+- **Extract `useSongData` hook** — Moved song detail page data-fetching logic (parallel song + catalog fetch, loading/error states) into `src/hooks/useSongData.ts`. The song page component is now a pure render function with zero `useEffect` calls
+- **AbortController on navigation** — The new hook cancels in-flight API requests when the song ID changes or the component unmounts, preventing stale-response overwrites that the inline `useEffect` didn't handle
+- **Removed unused imports** — Cleaned `useState`, `useEffect`, and `SongData` type imports from the song page now that the hook owns them
+
+### Added
+- **7 hook tests** — Full coverage for `useSongData`: loading state, parallel fetch, 404 handling, 500 handling, network error, catalog-only failure, and unmount abort (272 total tests)
+
+---
+
 ## [1.16.7] - 2026-02-24
 
 ### Security
