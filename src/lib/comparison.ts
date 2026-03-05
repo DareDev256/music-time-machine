@@ -1,9 +1,13 @@
 import { SongData, ComparisonInsight } from "@/types";
 
-/** Parse human-readable metric strings like "1.5B", "320M", "45K" into raw numbers. */
+/**
+ * Parse human-readable metric strings like "1.5B", "320M", "45K" into raw numbers.
+ * Uses Number.isFinite instead of isNaN — catches both NaN *and* Infinity
+ * (parseFloat("Infinity") returns Infinity, which the old isNaN guard missed).
+ */
 export function parseMetric(value: string): number {
   const num = parseFloat(value);
-  if (isNaN(num)) return 0;
+  if (!Number.isFinite(num)) return 0;
   if (value.endsWith("B")) return num * 1_000_000_000;
   if (value.endsWith("M")) return num * 1_000_000;
   if (value.endsWith("K")) return num * 1_000;

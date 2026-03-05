@@ -29,6 +29,6 @@ export function formatDate(
   options: Intl.DateTimeFormatOptions = DEFAULT_OPTIONS
 ): string {
   const d = new Date(iso);
-  if (isNaN(d.getTime())) return iso;
+  if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("en-US", options);
 }

@@ -18,6 +18,27 @@ const API_ROUTE_COUNT = 7;
 
 export const dynamic = "force-dynamic"; // Never cache health checks
 
+/**
+ * Weight map for check statuses — higher weight = more severe.
+ * Extensible: add "critical" or "degraded" without touching the resolution logic.
+ */
+const SEVERITY_WEIGHT: Record<string, { weight: number; label: string }> = {
+  fail: { weight: 2, label: "unhealthy" },
+  warn: { weight: 1, label: "degraded" },
+  pass: { weight: 0, label: "healthy" },
+} as const;
+
+/** Resolve the worst severity across a set of check statuses. */
+function resolveOverallStatus(statuses: readonly string[]): string {
+  return statuses.reduce<{ weight: number; label: string }>(
+    (worst, s) => {
+      const severity = SEVERITY_WEIGHT[s] ?? SEVERITY_WEIGHT.pass;
+      return severity.weight > worst.weight ? severity : worst;
+    },
+    { ...SEVERITY_WEIGHT.pass },
+  ).label;
+}
+
 /** Increment the global error counter (call from other API routes). */
 export function recordError(): void {
   errorCount++;
@@ -64,9 +85,7 @@ export async function GET(): Promise<NextResponse> {
     },
   ] as const;
 
-  const hasFailure = checks.some((c) => c.status === "fail");
-  const hasWarning = checks.some((c) => c.status === "warn");
-  const status = hasFailure ? "unhealthy" : hasWarning ? "degraded" : "healthy";
+  const status = resolveOverallStatus(checks.map((c) => c.status));
 
   // ── Memory snapshot (MB, 1 decimal) ──────────────────────────────────
   const mem = process.memoryUsage();

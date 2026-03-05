@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.18.1] - 2026-03-05
+
+### Changed
+- **`parseMetric` guard** — Replaced global `isNaN()` with `Number.isFinite()` in comparison.ts, catching both NaN and Infinity from `parseFloat()` (Infinity slipped through the old guard)
+- **`formatDate` guard** — Switched global `isNaN()` to `Number.isNaN()` in formatDate.ts for type-safe validation without implicit coercion
+- **`findClosestChart` immutability** — Converted mutable for-loop with `let closest` to a declarative `Object.entries().reduce()`, making the pure-function contract explicit
+- **Health severity engine** — Extracted nested ternary status resolution into a `SEVERITY_WEIGHT` map with `resolveOverallStatus()`, making severity levels data-driven and extensible without touching branching logic
+
+---
+
 ## [1.18.0] - 2026-03-05
 
 ### Added

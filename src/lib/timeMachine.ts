@@ -41,23 +41,26 @@ export function getChartForDate(date: Date): ChartEntry | null {
   return historicalNumber1s[key] || null;
 }
 
-/** Fallback: finds the closest available month to the target date. */
+/**
+ * Fallback: finds the closest available month to the target date.
+ * Pure function — uses reduce instead of mutable accumulator to make
+ * the "scan all entries, keep best" intent explicit and side-effect-free.
+ */
 export function findClosestChart(
   date: Date,
   data: Record<string, ChartEntry> = historicalNumber1s
 ): { entry: ChartEntry; monthKey: string } | null {
   const targetTime = date.getTime();
-  let closest: { entry: ChartEntry; monthKey: string; diff: number } | null = null;
 
-  for (const [monthKey, entry] of Object.entries(data)) {
+  const closest = Object.entries(data).reduce<{
+    entry: ChartEntry; monthKey: string; diff: number;
+  } | null>((best, [monthKey, entry]) => {
     const [year, month] = monthKey.split("-").map(Number);
-    const entryDate = new Date(year, month - 1, 15);
-    const diff = Math.abs(entryDate.getTime() - targetTime);
-
-    if (!closest || diff < closest.diff) {
-      closest = { entry, monthKey, diff };
-    }
-  }
+    const diff = Math.abs(new Date(year, month - 1, 15).getTime() - targetTime);
+    return !best || diff < best.diff
+      ? { entry, monthKey, diff }
+      : best;
+  }, null);
 
   return closest ? { entry: closest.entry, monthKey: closest.monthKey } : null;
 }
