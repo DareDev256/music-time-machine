@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.17.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.17.1-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-272_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -21,11 +21,11 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>23</strong><br><sub>Components</sub></td>
-<td align="center"><strong>265</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>27</strong><br><sub>Components</sub></td>
+<td align="center"><strong>272</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
-<td align="center"><strong>17</strong><br><sub>Curated Songs</sub></td>
+<td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
 <td align="center"><strong>0</strong><br><sub>Config Required</sub></td>
 </tr>
 </table>
@@ -105,6 +105,7 @@ These are the design decisions that make this more than a CRUD app:
 | **Shared `formatCompact` Utility** | Unified B/M/K number formatting across all 3 API clients (Spotify, YouTube, Genius). Handles `number`, numeric `string`, `undefined`, and `null` inputs — one function instead of three with identical logic. |
 | **Content-Based Recommendations** | 4D audio feature similarity via extracted `featureDistance()` function with named weight constants (`FEATURE_WEIGHTS`: danceability ×1.0, energy ×1.5, valence ×1.5, tempo ×0.8). Additive bonuses (`SAME_ARTIST_BONUS = 15`, `SAME_ERA_BONUS = 8`) and classification thresholds are module-level constants, making the scoring model auditable and tunable from one place. **Diversity-aware greedy selection** pre-seeds the target's credited artists (parses `ft.`, `&`, `,`, `with` separators with a 2-char guard to avoid splitting `R&B`) and enforces a one-song-per-artist cap. Reason classification uses `classifyReason()` with early-return rules instead of nested ternaries. A `getDiversityMeta()` analyzer scores genre spread (60%) + era spread (40%) across the final picks, producing a 0–100 score with tiered labels. Timezone-safe `safeYear()` with `getUTCFullYear()` prevents era miscalculation from UTC midnight drift. Match scores (0–99%) rendered as circular SVG progress badges with emerald/sky/amber tier colors. |
 | **Edge OG Images** | `/api/og/[id]` renders JSX to a 1200×630 PNG via `@vercel/og` (Satori). Sub-100ms, no headless browser. |
+| **Fetch Timeout + AbortController** | All outbound API requests enforce a 10s `AbortController` timeout via `safeFetch()` — prevents resource exhaustion from slow upstream responses. Client-side fetches in `useSongData` use a separate `AbortController` that auto-cancels on navigation or unmount, preventing stale-response overwrites. Two layers: server-side protects Node.js connections, client-side protects React state. |
 | **Route Middleware** | `withRouteHandler()` wraps all 6 API routes with rate limiting, error handling, and consistent responses — zero boilerplate per route. |
 
 ---
@@ -112,7 +113,7 @@ These are the design decisions that make this more than a CRUD app:
 ## Architecture
 
 ```
-Client Request
+Client Request ──── useSongData hook (AbortController on nav/unmount)
      │
      ▼
 API Route ──── Validate input (regex ID check, 200-char max)
@@ -127,8 +128,11 @@ USE_MOCK_DATA?
   YES   NO
   │     │
   ▼     ▼
-Mock   Real APIs ── Token Bucket Rate Limiting
-Data   ┌──────────┬────────────┬──────────┐
+Mock   safeFetch() ── SSRF origin check + 10s timeout
+Data       │
+           ▼
+       Real APIs ── Token Bucket Rate Limiting
+       ┌──────────┬────────────┬──────────┐
        │ Spotify  │  YouTube   │  Genius  │
        │ 30/30s   │  100/hr    │  50/min  │
        └──────────┴────────────┴──────────┘
@@ -159,7 +163,7 @@ Data   ┌──────────┬────────────�
 | Layer | Technology | Why |
 |-------|-----------|-----|
 | Framework | **Next.js 16** | App Router, Turbopack, Edge Runtime for OG images |
-| Runtime | **React 19** | `use()` hook for async params, custom hooks for data fetching (`useSongData`) |
+| Runtime | **React 19** | `use()` hook for async params, `useSongData` hook with AbortController cleanup |
 | Language | **TypeScript 5** | Strict mode — every API boundary is typed |
 | Styling | **Tailwind CSS 4** | `@theme inline` design tokens, no config file needed |
 | Charts | **Recharts 3** | Responsive timeline + radar chart with custom tooltips |
@@ -178,7 +182,7 @@ Data   ┌──────────┬────────────�
 | **SSRF Protection** | All outbound API requests routed through `safeFetch()` — origin-validated against an explicit allowlist before any request leaves the server. Blocks cloud metadata, internal IPs, `@`-credential tricks, subdomain spoofing, and HTTP downgrades |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Genius ID NaN guard prevents malformed IDs from reaching the API |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After + `no-store`), per-upstream-API token buckets, stale bucket eviction, IP format validation to prevent rate limit bypass via spoofed headers |
-| **Fetch Timeout** | All outbound API requests enforce a 10s AbortController timeout via `safeFetch()` — prevents resource exhaustion from slow upstream responses holding Node.js connections indefinitely |
+| **Fetch Timeout** | Two-layer AbortController defense: server-side `safeFetch()` enforces 10s timeouts on all outbound API requests (prevents slow-loris resource exhaustion); client-side `useSongData` hook cancels in-flight fetches on navigation/unmount (prevents stale state overwrites and memory leaks) |
 | **Uniform Error Headers** | All API error responses (400, 404, 422, 429, 500) include `nosniff` + `X-Frame-Options: DENY` + `no-store` via `jsonError()` helper — no unprotected JSON responses anywhere in the stack |
 | **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data. Non-HTTPS URLs are suppressed entirely (no inert `#` link rendered) |
 | **Input Sanitization** | `sanitizeQuery()` strips null bytes (`\x00`) and unicode control characters (C0/C1 ranges U+0000–U+001F, U+007F–U+009F) before HTML/char filtering — prevents string truncation attacks in downstream parsers and log injection |
@@ -199,7 +203,10 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 22 single-responsibility UI components
+├── components/                     # 27 single-responsibility UI components
+│   └── PageStates.tsx              # Shared loading/error full-page states
+├── hooks/
+│   └── useSongData.ts              # Song page data fetching with AbortController
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine
@@ -211,8 +218,9 @@ src/
 │   ├── formatDate.ts               # NaN-safe date formatting (replaces 4 inline copies)
 │   ├── toSlug.ts                    # URL-safe slug generator (replaces 3 inline copies)
 │   ├── timeline.ts                  # Synthetic timeline data generator (deduplicated)
+│   ├── safeFetch.ts                 # SSRF-safe fetch with 10s AbortController timeout
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 150 tests across 11 suites
+│   └── __tests__/                  # 272 tests across 22 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -245,22 +253,32 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**237 tests** across **16 suites** covering:
+**272 tests** across **22 suites** covering:
 
-| Suite | What's Tested |
-|-------|--------------|
-| **TTLCache** | Expiry, eviction, CRUD operations |
-| **dataFetcher** | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
-| **mockData** | Catalog integrity, search matching, artist slug resolution, timeline sorting |
-| **recommendations** | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing |
-| **rateLimit** | Token bucket consumption/refill, per-IP route isolation, stale eviction |
-| **input validation** | `isValidId`, `sanitizeQuery` |
-| **Time Machine** | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
-| **AudioPlayer** | Play/pause, unmount cleanup, seek behavior |
-| **SearchBar** | Autocomplete rendering, keyboard navigation |
-| **formatCompact** | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
-| **safeHref** | HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` blocking, undefined/null/empty/malformed |
-| **QuickStats** | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
+| Suite | Tests | What's Tested |
+|-------|------:|--------------|
+| **recommendations** | 57 | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing |
+| **rateLimit** | 30 | Token bucket consumption/refill, per-IP route isolation, stale eviction, input validation (`isValidId`, `sanitizeQuery`) |
+| **mockData** | 21 | Catalog integrity, search matching, artist slug resolution, timeline sorting |
+| **dataFetcher** | 20 | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
+| **Time Machine** | 19 | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
+| **comparison** | 12 | Winner analysis, tied metrics, head-to-head stat extraction |
+| **safeFetch** | 12 | SSRF origin allowlist, 10s timeout enforcement, caller signal precedence, malformed URL rejection |
+| **safeHref** | 12 | HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` blocking, undefined/null/empty/malformed |
+| **diversity pipeline** | 10 | End-to-end integration: artist capping, genre spread, era spread, scoring thresholds |
+| **formatCompact** | 9 | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
+| **apiHandler** | 8 | Route middleware wrapping, rate limit integration, error response format |
+| **TTLCache** | 7 | Expiry, eviction, CRUD operations, `getStats()` observability |
+| **QuickStats** | 7 | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
+| **useSongData** | 7 | Loading state, parallel fetch, 404/500 handling, network error, catalog-only failure, unmount abort |
+| **RecommendationPrefs** | 6 | Genre bonus, era range bonus, mood preset scoring, invalid mood handling, stacked bonuses, empty prefs |
+| **timeline** | 6 | Invalid date guard, data point shape, 48-month cap, release anchoring, billboard windowing |
+| **toSlug** | 6 | Lowercase/hyphenation, special char stripping, separator collapse, numeric, empty string |
+| **formatDate** | 5 | Locale formatting, unparseable date fallback, custom Intl options, empty string, year-only |
+| **AudioPlayer** | 5 | Play/pause, unmount cleanup, seek behavior |
+| **ComparisonView** | 5 | Side-by-side rendering, winner highlighting, tied metric handling |
+| **SearchBar** | 4 | Autocomplete rendering, keyboard navigation |
+| **health** | 4 | Cache stats, utilization reporting, zero-maxSize edge case |
 
 External API clients fully mocked — tests run fast and offline.
 
@@ -270,7 +288,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 237 tests must pass
+npm test                    # All 272 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```

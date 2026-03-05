@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.17.1] - 2026-03-05
+
+### Changed
+- **README overhaul** — Corrected all stale metrics (tests: 237→272 across 22 suites, components: 23→27, curated songs: 17→18) and expanded the testing table with per-suite test counts
+- **Architecture diagram** — Now shows both resilience layers: client-side `useSongData` AbortController and server-side `safeFetch()` SSRF check + 10s timeout
+- **Engineering Highlights** — Added "Fetch Timeout + AbortController" row documenting the two-layer timeout strategy (server-side resource exhaustion prevention + client-side stale-state prevention)
+- **Security table** — Updated Fetch Timeout row to describe both AbortController layers instead of just the server-side one
+- **Project structure** — Added `hooks/` directory, `safeFetch.ts`, and `PageStates.tsx` to the tree
+
+---
+
 ## [1.17.0] - 2026-02-24
 
 ### Changed
