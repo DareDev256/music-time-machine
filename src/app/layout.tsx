@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
+import KeyboardShortcutProvider from "@/components/KeyboardShortcutProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -52,6 +53,7 @@ export default async function RootLayout({
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider>
           <Navigation />
+          <KeyboardShortcutProvider />
           <main className="pt-14">{children}</main>
         </ThemeProvider>
       </body>

@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.18.0] - 2026-03-05
+
+### Added
+- **Keyboard shortcuts** — Global `useKeyboardShortcuts` hook with 7 key bindings: `/` focus search, `?` toggle cheat sheet, `h` go home, `t` toggle theme, `Esc` close/blur, plus context-aware `s` (share) and `c` (compare) on song pages
+- **Shortcuts panel** — Animated modal overlay (`KeyboardShortcuts.tsx`) with scoped sections (Navigation vs Song Page), styled `<kbd>` keys, and proper WCAG focus management (trap, restore, Escape)
+- **Nav keyboard trigger** — Keyboard icon button in the desktop navigation bar for discoverability; dispatches a synthetic `?` keydown so the global hook controls all state
+- **CustomEvent bridge** — Song page listens for `mtm:share` and `mtm:compare` events, decoupling the global keyboard hook from page-level state without prop drilling or context providers
+
+---
+
 ## [1.17.1] - 2026-03-05
 
 ### Changed

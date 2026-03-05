@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, use } from "react";
+import { useState, useEffect, useCallback, use } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowLeft, Loader2, GitCompareArrows, Share2 } from "lucide-react";
@@ -43,8 +44,22 @@ interface PageProps {
 
 export default function SongPage({ params }: PageProps) {
   const { id } = use(params);
+  const router = useRouter();
   const { song, catalog, loading, error } = useSongData(id);
   const [showShare, setShowShare] = useState(false);
+
+  // Listen for keyboard shortcut events from the global hook
+  const handleShare = useCallback(() => setShowShare(true), []);
+  const handleCompare = useCallback(() => router.push(`/compare?song1=${id}`), [router, id]);
+
+  useEffect(() => {
+    document.addEventListener("mtm:share", handleShare);
+    document.addEventListener("mtm:compare", handleCompare);
+    return () => {
+      document.removeEventListener("mtm:share", handleShare);
+      document.removeEventListener("mtm:compare", handleCompare);
+    };
+  }, [handleShare, handleCompare]);
 
   if (loading) return <PageLoadingState message="Loading song data..." />;
   if (error || !song) return <PageErrorState message={error || "Song not found"} />;

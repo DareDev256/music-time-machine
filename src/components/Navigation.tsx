@@ -3,9 +3,14 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Music, Sun, Moon, GitCompareArrows, Home, Menu, X } from "lucide-react";
+import { Music, Sun, Moon, GitCompareArrows, Home, Menu, X, Keyboard } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
+
+/** Dispatches a synthetic `?` keydown so the global hook opens the panel */
+function openShortcutsPanel() {
+  document.dispatchEvent(new KeyboardEvent("keydown", { key: "?" }));
+}
 
 const NAV_LINKS = [
   { href: "/", label: "Home", icon: Home },
@@ -104,6 +109,15 @@ export default function Navigation() {
                 ) : (
                   <Moon className="w-4.5 h-4.5 text-gray-500 hover:text-gray-700" />
                 )}
+              </button>
+
+              <button
+                onClick={openShortcutsPanel}
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group"
+                aria-label="Keyboard shortcuts"
+                title="Keyboard shortcuts (?)"
+              >
+                <Keyboard className="w-4 h-4 text-gray-400 group-hover:text-accent transition-colors" />
               </button>
             </div>
 

@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.17.1-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.18.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-272_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -21,7 +21,7 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>27</strong><br><sub>Components</sub></td>
+<td align="center"><strong>30</strong><br><sub>Components</sub></td>
 <td align="center"><strong>272</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
@@ -87,6 +87,9 @@ Dynamic OG image generation via Edge Runtime. Share modal with copy-to-clipboard
 
 ### 🧭 Responsive Navigation
 Full navigation bar with route links (Home, Compare) and active-state highlighting. Desktop shows inline pill-style links; mobile gets a hamburger menu with animated dropdown, backdrop overlay, body scroll lock, and Escape-to-close. WCAG-accessible with `aria-expanded`, `aria-controls`, and keyboard support.
+
+### Keyboard Shortcuts
+Press `?` anywhere to reveal a shortcut cheat sheet. Power-user navigation: `/` focuses search, `h` returns home, `t` toggles theme, and on song pages `s` opens share and `c` starts a comparison. A keyboard icon in the nav bar provides discoverability for mouse users. Context-aware — song-page shortcuts are dimmed when not on a song page, and all shortcuts are suppressed when typing in form fields.
 
 ### 🌓 Theme Toggle
 Light/dark mode with Apple Music–inspired design tokens. A blocking `<script>` applies the theme before first paint — zero FOUC.
