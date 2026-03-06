@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { Sparkles, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -72,11 +72,17 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const [prefs, setPrefs] = useState<RecommendationPrefs>({});
   const handlePrefsChange = useCallback((p: RecommendationPrefs) => setPrefs(p), []);
 
-  const similar = getSimilarSongs(song, catalog, 4, prefs);
+  const similar = useMemo(
+    () => getSimilarSongs(song, catalog, 4, prefs),
+    [song, catalog, prefs],
+  );
+
+  const diversity = useMemo(
+    () => getDiversityMeta(song, similar),
+    [song, similar],
+  );
 
   if (similar.length === 0) return null;
-
-  const diversity = getDiversityMeta(song, similar);
 
   return (
     <div>

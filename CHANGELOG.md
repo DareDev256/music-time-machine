@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.18.2] - 2026-03-06
+
+### Fixed
+- **Same-artist candidates wasted scoring budget** — `SAME_ARTIST_BONUS` (+15) inflated scores of candidates that the diversity filter unconditionally excluded (via `seenArtists` pre-seeding). These dead entries occupied top positions in the sorted array, forcing the diversity loop to skip its highest-scored entries first — a pessimal iteration order. Same-artist candidates are now early-skipped before distance calculation, eliminating wasted `featureDistance()` calls and the removed `SAME_ARTIST_BONUS` constant
+- **Recommendation pipeline recomputed on every render** — `getSimilarSongs()` and `getDiversityMeta()` were called directly in the `SimilarSongs` component body with no memoization. Every parent re-render triggered the full O(n) scoring loop, sort, and diversity filter. Both are now wrapped in `useMemo` with proper dependency arrays
+- **Dead `classifyReason` parameter** — Removed the `sameArtist` boolean parameter and `"Same artist"` return path from `classifyReason()`, since same-artist candidates are now excluded before scoring and could never reach the classification step
+
+---
+
 ## [1.18.1] - 2026-03-05
 
 ### Changed

@@ -47,9 +47,6 @@ const TEMPO_CEILING = 200;
 /** Multiplier converting raw distance to a 0–100 similarity score. */
 const DISTANCE_TO_SCORE = 150;
 
-/** Additive bonus when any credited artist overlaps between target and candidate. */
-const SAME_ARTIST_BONUS = 15;
-
 /** Additive bonus when candidate is released within {@link ERA_PROXIMITY_YEARS} of target. */
 const SAME_ERA_BONUS = 8;
 
@@ -144,17 +141,18 @@ function featureDistance(
 /**
  * Classify the primary reason a candidate was recommended.
  * Order matters — first matching rule wins, most specific first.
+ * Note: same-artist candidates are early-skipped in the scoring loop
+ * (they're unconditionally excluded by the diversity filter), so
+ * "Same artist" is no longer a possible output.
  */
 function classifyReason(
   distance: number,
-  sameArtist: boolean,
   candidateEnergy: number,
   targetEnergy: number,
   valenceDelta: number,
   targetYear: number | null,
   candidateYear: number | null,
 ): string {
-  if (sameArtist) return "Same artist";
   if (distance < NEAR_IDENTICAL_THRESHOLD) return "Nearly identical vibe";
   if (candidateEnergy > HIGH_ENERGY_THRESHOLD && targetEnergy > HIGH_ENERGY_THRESHOLD) return "High energy match";
   if (Math.abs(valenceDelta) < SIMILAR_MOOD_THRESHOLD) return "Similar mood";
@@ -297,16 +295,17 @@ export function getSimilarSongs(
     const features = candidate.spotify?.audioFeatures;
     if (!features) continue;
 
+    // Early-skip candidates sharing any artist with the target — the diversity
+    // filter would unconditionally exclude them anyway. Skipping here avoids
+    // wasted distance calculations and prevents dead entries from occupying
+    // top positions in the sorted array.
+    const candidateArtists = splitArtists(candidate.artist);
+    if (candidateArtists.some((a) => targetArtists.has(a))) continue;
+
     const distance = featureDistance(targetFeatures, features);
 
     // Convert distance to a 0-100 similarity score (lower distance = higher score)
     let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
-
-    // Bonus: shared artist credit (any overlap between target and candidate artists)
-    // Parse once here — reused in the diversity filter below to avoid redundant regex work.
-    const candidateArtists = splitArtists(candidate.artist);
-    const sameArtist = candidateArtists.some((a) => targetArtists.has(a));
-    if (sameArtist) score += SAME_ARTIST_BONUS;
 
     // Bonus: same era (within ERA_PROXIMITY_YEARS) — skip if either date is invalid
     const candidateYear = safeYear(candidate.releaseDate);
@@ -334,7 +333,6 @@ export function getSimilarSongs(
 
     const reason = classifyReason(
       distance,
-      sameArtist,
       features.energy,
       targetFeatures.energy,
       features.valence - targetFeatures.valence,
@@ -347,10 +345,10 @@ export function getSimilarSongs(
 
   // Diversity-aware selection: skip songs whose *any* credited artist was already picked.
   // This prevents "Lady Gaga & Bruno Mars" and "ROSÉ & Bruno Mars" from both appearing.
-  // Pre-seed with target artists so recommendations surface *new* artists, not more of the same.
+  // Same-artist candidates were already excluded in the scoring loop above.
   scored.sort((a, b) => b.score - a.score);
   const picked: { song: SongData; reason: string; matchScore: number }[] = [];
-  const seenArtists = new Set<string>(targetArtists);
+  const seenArtists = new Set<string>();
 
   for (const entry of scored) {
     if (picked.length >= limit) break;
