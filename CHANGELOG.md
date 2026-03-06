@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.18.3] - 2026-03-06
+
+### Fixed
+- **Match score badge unreadable on album art** — The circular match score badge used `-z-10` for its `bg-card` background, but the parent container lacked a stacking context (`isolate`). The background div escaped the badge's paint order and rendered behind the album art image, leaving score text floating on busy artwork with no contrast. Added `isolate` to the badge container to confine the negative z-index
+- **Diversity indicator didn't animate on preference changes** — The diversity badge, genre chips, and era tags used `initial`/`animate` props that only fired on mount. When the user changed recommendation preferences, the indicator snapped to new values with no visual feedback. Wrapped the indicator in `AnimatePresence mode="wait"` with a `key` derived from `${label}-${score}`, triggering smooth exit/enter transitions on every diversity change
+- **Recommendation cards missing keyboard focus styles** — `Link` elements had hover styles but no `focus-visible` ring, violating WCAG 2.1 SC 2.4.7 (Focus Visible). Keyboard users couldn't tell which card was focused. Added `focus-visible:ring-2 focus-visible:ring-accent` with proper offset
+- **Era span text not animated** — The "spans 2010s & 2020s" text rendered as a plain `<span>`, jarring against the animated genre chips beside it. Upgraded to `motion.span` with a staggered fade-in
+- **Match score badge missing semantic role** — The circular badge used `title` for tooltip but had no `role` or `aria-label`, making it invisible to screen readers. Added `role="img"` and `aria-label` for the score, plus `aria-hidden` on the decorative percentage text
+
+---
+
 ## [1.18.2] - 2026-03-06
 
 ### Fixed

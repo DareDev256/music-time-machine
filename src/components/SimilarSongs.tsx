@@ -3,7 +3,7 @@
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { Sparkles, Shuffle } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta } from "@/lib/recommendations";
@@ -93,43 +93,53 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
 
       <PlaylistConfigurator onChange={handlePrefsChange} />
 
-      {/* Diversity indicator bar */}
-      <motion.div
-        className="mb-4 sm:mb-5 flex flex-wrap items-center gap-2"
-        initial={{ opacity: 0, y: -8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.1 }}
-        role="status"
-        aria-label={`Recommendation diversity: ${diversity.label}, score ${diversity.score}`}
-      >
-        {/* Diversity score badge */}
-        <div
-          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-medium ${diversityBgColor(diversity.score)}`}
+      {/* Diversity indicator bar — keyed on label+score so it re-animates on pref changes */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`${diversity.label}-${diversity.score}`}
+          className="mb-4 sm:mb-5 flex flex-wrap items-center gap-2"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -4 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          role="status"
+          aria-live="polite"
+          aria-label={`Recommendation diversity: ${diversity.label}, score ${diversity.score}`}
         >
-          <Shuffle className={`w-3 h-3 ${diversityColor(diversity.score)}`} aria-hidden="true" />
-          <span className={diversityColor(diversity.score)}>{diversity.label}</span>
-        </div>
-
-        {/* Genre chips */}
-        {diversity.genres.map((genre, i) => (
-          <motion.span
-            key={genre}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 + i * 0.05 }}
-            className={`inline-flex items-center px-2 py-0.5 rounded-full border text-[10px] font-medium ${genreChipColor(genre)}`}
+          {/* Diversity score badge */}
+          <div
+            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-medium transition-colors duration-300 ${diversityBgColor(diversity.score)}`}
           >
-            {genre}
-          </motion.span>
-        ))}
+            <Shuffle className={`w-3 h-3 ${diversityColor(diversity.score)}`} aria-hidden="true" />
+            <span className={diversityColor(diversity.score)}>{diversity.label}</span>
+          </div>
 
-        {/* Era tags */}
-        {diversity.eras.length > 1 && (
-          <span className="text-[10px] text-foreground-secondary ml-1">
-            · spans {diversity.eras.join(" & ")}
-          </span>
-        )}
-      </motion.div>
+          {/* Genre chips */}
+          {diversity.genres.map((genre, i) => (
+            <motion.span
+              key={genre}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2, delay: 0.1 + i * 0.05 }}
+              className={`inline-flex items-center px-2 py-0.5 rounded-full border text-[10px] font-medium ${genreChipColor(genre)}`}
+            >
+              {genre}
+            </motion.span>
+          ))}
+
+          {/* Era tags */}
+          {diversity.eras.length > 1 && (
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
+              className="text-[10px] text-foreground-secondary ml-1"
+            >
+              · spans {diversity.eras.join(" & ")}
+            </motion.span>
+          )}
+        </motion.div>
+      </AnimatePresence>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         {similar.map(({ song: rec, reason, matchScore }, i) => (
@@ -141,7 +151,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
           >
             <Link
               href={`/song/${rec.id}`}
-              className={`group block bg-card border border-border rounded-xl p-3 hover:border-accent/50 hover:shadow-lg transition-all ring-1 ${matchRingColor(matchScore)} hover:ring-accent/40`}
+              className={`group block bg-card border border-border rounded-xl p-3 hover:border-accent/50 hover:shadow-lg transition-all ring-1 ${matchRingColor(matchScore)} hover:ring-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
             >
               <div className="relative mb-3">
                 <SafeImage
@@ -151,10 +161,14 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                   height={200}
                   className="w-full aspect-square rounded-lg object-cover group-hover:scale-[1.02] transition-transform"
                 />
-                {/* Match score circular badge */}
+                {/* Match score circular badge — isolate creates a local stacking
+                    context so the -z-10 background stays behind the SVG rings
+                    instead of falling behind the album art image */}
                 <div
-                  className="absolute -top-2 -right-2 w-10 h-10 flex items-center justify-center"
+                  className="absolute -top-2 -right-2 w-10 h-10 flex items-center justify-center isolate"
                   title={`${matchScore}% match`}
+                  aria-label={`${matchScore}% match`}
+                  role="img"
                 >
                   <svg
                     viewBox="0 0 40 40"
@@ -185,6 +199,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                   </svg>
                   <span
                     className={`absolute inset-0 flex items-center justify-center text-[9px] font-bold ${matchColor(matchScore)}`}
+                    aria-hidden="true"
                   >
                     {matchScore}%
                   </span>
