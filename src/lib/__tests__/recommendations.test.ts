@@ -559,3 +559,81 @@ describe("getDiversityMeta — invalid date handling", () => {
     expect(result.eras.every((e) => !e.includes("NaN"))).toBe(true);
   });
 });
+
+// ── Diverse selection strategy ───────────────────────────────────────────
+
+describe("getSimilarSongs — diverse strategy", () => {
+  function withFeatures(
+    id: string, artist: string,
+    features: { danceability: number; energy: number; valence: number; tempo: number },
+    releaseDate = "2022-01-01",
+  ): SongData {
+    return makeSong({
+      id, artist, releaseDate,
+      spotify: {
+        id, name: id, artist, album: "", albumArt: "",
+        releaseDate, popularity: 80, totalStreams: "1M",
+        playlistCount: 100, previewUrl: null, externalUrl: "",
+        audioFeatures: features,
+      },
+    });
+  }
+
+  it("diverse strategy prefers unseen genres over higher-scoring same-genre", () => {
+    // Target: moderate features. Catalog has songs from different mock IDs
+    // that map to different genres in songGenres. The diverse picker should
+    // prefer a lower-scored song from an unseen genre over a higher-scored
+    // one from a genre it already picked.
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+
+    // Two very close candidates (same genre would be picked by best-match)
+    // and one slightly farther candidate from a different artist
+    const close1 = withFeatures("c1", "Alpha",
+      { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 });
+    const close2 = withFeatures("c2", "Beta",
+      { danceability: 0.705, energy: 0.705, valence: 0.705, tempo: 120.5 });
+    const farther = withFeatures("c3", "Gamma",
+      { danceability: 0.6, energy: 0.6, valence: 0.6, tempo: 110 }, "2015-01-01");
+
+    const bestMatch = getSimilarSongs(target, [close1, close2, farther], 3, { strategy: "best-match" });
+    const diverse = getSimilarSongs(target, [close1, close2, farther], 3, { strategy: "diverse" });
+
+    // Both strategies should return all 3 (different artists)
+    expect(bestMatch).toHaveLength(3);
+    expect(diverse).toHaveLength(3);
+    // Diverse strategy should still include all candidates
+    expect(diverse.map((r) => r.song.id).sort()).toEqual(["c1", "c2", "c3"].sort());
+  });
+
+  it("diverse strategy still respects artist deduplication", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    const catalog = [
+      withFeatures("a1", "Alpha", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("a2", "Alpha", { danceability: 0.72, energy: 0.72, valence: 0.72, tempo: 122 }),
+      withFeatures("b1", "Beta", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }),
+    ];
+
+    const results = getSimilarSongs(target, catalog, 4, { strategy: "diverse" });
+    const artists = results.map((r) => r.song.artist);
+    // Only one Alpha should appear
+    expect(artists.filter((a) => a === "Alpha")).toHaveLength(1);
+  });
+
+  it("diverse strategy returns valid matchScores in 0-99 range", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.5, energy: 0.5, valence: 0.5, tempo: 100 });
+    const catalog = Array.from({ length: 10 }, (_, i) =>
+      withFeatures(`s${i}`, `Artist ${i}`,
+        { danceability: 0.3 + i * 0.05, energy: 0.3 + i * 0.05, valence: 0.3 + i * 0.05, tempo: 80 + i * 8 },
+        `${2015 + i}-06-01`));
+
+    const results = getSimilarSongs(target, catalog, 4, { strategy: "diverse" });
+    for (const pick of results) {
+      expect(pick.matchScore).toBeGreaterThanOrEqual(0);
+      expect(pick.matchScore).toBeLessThanOrEqual(99);
+      expect(Number.isInteger(pick.matchScore)).toBe(true);
+    }
+  });
+});

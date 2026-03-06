@@ -20,6 +20,9 @@ const MOOD_MATCH_BONUS = 10;
 /** Delta threshold for mood feature proximity. */
 const MOOD_PROXIMITY = 0.25;
 
+/** Selection strategy for the recommendation picker. */
+export type SelectionStrategy = "best-match" | "diverse";
+
 /** User-configurable recommendation preferences. All fields optional. */
 export interface RecommendationPrefs {
   /** Preferred genres — candidates matching these get a scoring bonus. */
@@ -28,6 +31,8 @@ export interface RecommendationPrefs {
   eraRange?: [number, number];
   /** Mood preset — biases scoring toward matching energy/valence profiles. */
   mood?: "upbeat" | "chill" | "melancholy" | "energetic";
+  /** Selection strategy — "best-match" (default) or "diverse" for genre/era spread. */
+  strategy?: SelectionStrategy;
 }
 
 // ── Algorithm constants ─────────────────────────────────────────────────────
@@ -76,6 +81,11 @@ const ERA_WEIGHT = 40;
  * fixed spread of 2 means "picks span 2+ distinct decades" = full era credit.
  */
 const ERA_FULL_SPREAD = 2;
+
+/** Bonus added during the diverse-strategy pick phase for an unseen genre. */
+const DIVERSITY_GENRE_BONUS = 25;
+/** Bonus added during the diverse-strategy pick phase for an unseen era. */
+const DIVERSITY_ERA_BONUS = 15;
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -350,15 +360,59 @@ export function getSimilarSongs(
   const picked: { song: SongData; reason: string; matchScore: number }[] = [];
   const seenArtists = new Set<string>();
 
-  for (const entry of scored) {
-    if (picked.length >= limit) break;
-    // Reuse pre-parsed artists from the scoring pass — no redundant regex work.
-    const artists = entry.artists;
-    if (artists.some((a) => seenArtists.has(a))) continue;
-    for (const a of artists) seenArtists.add(a);
-    // Clamp score to 0–99 range (100% would imply identical song)
-    const matchScore = Math.min(99, Math.max(0, Math.round(entry.score)));
-    picked.push({ song: entry.song, reason: entry.reason, matchScore });
+  const strategy = prefs?.strategy ?? "best-match";
+
+  if (strategy === "diverse") {
+    // Diverse strategy: greedily pick the candidate that maximizes marginal
+    // diversity (unseen genre/era) while keeping a quality floor. Each round
+    // scans remaining candidates, adds a diversity bonus to unseen genres/eras,
+    // and picks the highest effective score.
+    const seenGenres = new Set<string>();
+    const seenEras = new Set<string>();
+    const remaining = [...scored];
+
+    while (picked.length < limit && remaining.length > 0) {
+      let bestIdx = -1;
+      let bestEffective = -Infinity;
+
+      for (let i = 0; i < remaining.length; i++) {
+        const entry = remaining[i];
+        if (entry.artists.some((a) => seenArtists.has(a))) continue;
+
+        let effective = entry.score;
+        const genre = songGenres[entry.song.id];
+        if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
+        const year = safeYear(entry.song.releaseDate);
+        if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
+
+        if (effective > bestEffective) {
+          bestEffective = effective;
+          bestIdx = i;
+        }
+      }
+
+      if (bestIdx === -1) break;
+
+      const winner = remaining.splice(bestIdx, 1)[0];
+      for (const a of winner.artists) seenArtists.add(a);
+      const genre = songGenres[winner.song.id];
+      if (genre) seenGenres.add(genre);
+      const year = safeYear(winner.song.releaseDate);
+      if (year !== null) seenEras.add(decadeLabel(year));
+
+      const matchScore = Math.min(99, Math.max(0, Math.round(winner.score)));
+      picked.push({ song: winner.song, reason: winner.reason, matchScore });
+    }
+  } else {
+    // Best-match strategy: greedy by score (original behavior).
+    for (const entry of scored) {
+      if (picked.length >= limit) break;
+      const artists = entry.artists;
+      if (artists.some((a) => seenArtists.has(a))) continue;
+      for (const a of artists) seenArtists.add(a);
+      const matchScore = Math.min(99, Math.max(0, Math.round(entry.score)));
+      picked.push({ song: entry.song, reason: entry.reason, matchScore });
+    }
   }
 
   return picked;

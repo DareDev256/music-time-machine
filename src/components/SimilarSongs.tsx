@@ -2,12 +2,12 @@
 
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { Sparkles, Shuffle } from "lucide-react";
+import { Sparkles, Shuffle, Zap, Layers } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta } from "@/lib/recommendations";
-import type { RecommendationPrefs } from "@/lib/recommendations";
+import type { RecommendationPrefs, SelectionStrategy } from "@/lib/recommendations";
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 
 interface SimilarSongsProps {
@@ -68,13 +68,24 @@ function diversityBgColor(score: number): string {
   return "bg-foreground/5 border-foreground/10";
 }
 
+const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc: string }[] = [
+  { id: "best-match", label: "Best match", icon: Zap, desc: "Highest similarity scores" },
+  { id: "diverse", label: "Diverse", icon: Layers, desc: "Maximize genre & era spread" },
+];
+
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const [prefs, setPrefs] = useState<RecommendationPrefs>({});
   const handlePrefsChange = useCallback((p: RecommendationPrefs) => setPrefs(p), []);
+  const [strategy, setStrategy] = useState<SelectionStrategy>("best-match");
+
+  const effectivePrefs = useMemo(
+    () => ({ ...prefs, strategy }),
+    [prefs, strategy],
+  );
 
   const similar = useMemo(
-    () => getSimilarSongs(song, catalog, 4, prefs),
-    [song, catalog, prefs],
+    () => getSimilarSongs(song, catalog, 4, effectivePrefs),
+    [song, catalog, effectivePrefs],
   );
 
   const diversity = useMemo(
@@ -90,6 +101,30 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
         <Sparkles className="w-5 h-5 text-accent" />
         Similar Songs
       </h2>
+
+      {/* Strategy toggle */}
+      <div className="flex items-center gap-1.5 mb-3" role="radiogroup" aria-label="Selection strategy">
+        {STRATEGIES.map(({ id, label, icon: Icon, desc }) => {
+          const active = strategy === id;
+          return (
+            <button
+              key={id}
+              onClick={() => setStrategy(id)}
+              role="radio"
+              aria-checked={active}
+              title={desc}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${
+                active
+                  ? "bg-accent/12 text-accent border-accent/30 shadow-[0_0_8px_rgba(252,60,68,0.08)]"
+                  : "bg-transparent text-foreground-secondary border-border hover:border-foreground/30 hover:text-foreground"
+              }`}
+            >
+              <Icon className="w-3.5 h-3.5" aria-hidden="true" />
+              {label}
+            </button>
+          );
+        })}
+      </div>
 
       <PlaylistConfigurator onChange={handlePrefsChange} />
 

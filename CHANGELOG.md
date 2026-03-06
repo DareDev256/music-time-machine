@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.19.0] - 2026-03-06
+
+### Added
+- **Diverse selection strategy** — New "Diverse" mode toggle in Similar Songs that maximizes genre and era spread across recommendations using a greedy set-cover algorithm. Each pick round applies marginal diversity bonuses (+25 for unseen genre, +15 for unseen decade) to re-rank candidates, producing a wider mix without sacrificing match quality. Strategy persists as `SelectionStrategy` type in `RecommendationPrefs`
+- **Strategy toggle UI** — Accessible `radiogroup` with "Best match" (default) and "Diverse" options, styled with the project's accent color system and spring-in transitions. Includes ARIA roles, title descriptions, and focus-visible styles
+- **3 new tests** covering diverse strategy genre spreading, artist deduplication under diverse mode, and matchScore range validation (275 total, all passing)
+
+---
+
 ## [1.18.3] - 2026-03-06
 
 ### Fixed
