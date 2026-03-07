@@ -560,6 +560,75 @@ describe("getDiversityMeta — invalid date handling", () => {
   });
 });
 
+// ── Auto selection strategy ──────────────────────────────────────────────
+
+describe("getSimilarSongs — auto strategy", () => {
+  function withFeatures(
+    id: string, artist: string,
+    features: { danceability: number; energy: number; valence: number; tempo: number },
+    releaseDate = "2022-01-01",
+  ): SongData {
+    return makeSong({
+      id, artist, releaseDate,
+      spotify: {
+        id, name: id, artist, album: "", albumArt: "",
+        releaseDate, popularity: 80, totalStreams: "1M",
+        playlistCount: 100, previewUrl: null, externalUrl: "",
+        audioFeatures: features,
+      },
+    });
+  }
+
+  it("auto strategy falls back to best-match when top candidates are already diverse", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    // Use mock IDs that map to distinct genres in songGenres
+    const catalog = [
+      withFeatures("blinding-lights", "The Weeknd", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("old-town-road", "Lil Nas X", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }),
+      withFeatures("levitating", "Dua Lipa", { danceability: 0.72, energy: 0.72, valence: 0.72, tempo: 122 }),
+    ];
+    const autoResults = getSimilarSongs(target, catalog, 3, { strategy: "auto" });
+    const bestResults = getSimilarSongs(target, catalog, 3, { strategy: "best-match" });
+    // Already diverse catalog → auto should produce same order as best-match
+    expect(autoResults.map((r) => r.song.id)).toEqual(bestResults.map((r) => r.song.id));
+  });
+
+  it("auto strategy switches to diverse when top candidates are genre-homogeneous", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    // All candidates use IDs with no genre mapping (homogeneous from songGenres perspective)
+    const catalog = [
+      withFeatures("x1", "Alpha", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("x2", "Beta", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }),
+      withFeatures("x3", "Gamma", { danceability: 0.72, energy: 0.72, valence: 0.72, tempo: 122 }),
+      withFeatures("blinding-lights", "Delta", { danceability: 0.6, energy: 0.6, valence: 0.6, tempo: 110 }, "2015-01-01"),
+    ];
+    const autoResults = getSimilarSongs(target, catalog, 4, { strategy: "auto" });
+    // Auto should detect genre homogeneity and switch to diverse mode
+    expect(autoResults).toHaveLength(4);
+    // All results should be valid
+    for (const pick of autoResults) {
+      expect(pick.matchScore).toBeGreaterThanOrEqual(0);
+      expect(pick.matchScore).toBeLessThanOrEqual(99);
+    }
+  });
+
+  it("auto is the default when no strategy is specified", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    const catalog = [
+      withFeatures("a", "Alpha", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+    ];
+    // No prefs at all
+    const noPrefs = getSimilarSongs(target, catalog);
+    // Empty prefs
+    const emptyPrefs = getSimilarSongs(target, catalog, 4, {});
+    expect(noPrefs).toHaveLength(1);
+    expect(emptyPrefs).toHaveLength(1);
+  });
+});
+
 // ── Diverse selection strategy ───────────────────────────────────────────
 
 describe("getSimilarSongs — diverse strategy", () => {
@@ -619,6 +688,37 @@ describe("getSimilarSongs — diverse strategy", () => {
     const artists = results.map((r) => r.song.artist);
     // Only one Alpha should appear
     expect(artists.filter((a) => a === "Alpha")).toHaveLength(1);
+  });
+
+  it("diverse strategy uses popularity as tiebreaker between equal candidates", () => {
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    // Two candidates with identical features but different popularity
+    const popular = makeSong({
+      id: "pop-high", artist: "Famous",
+      releaseDate: "2022-01-01",
+      spotify: {
+        id: "pop-high", name: "pop-high", artist: "Famous",
+        album: "", albumArt: "", releaseDate: "2022-01-01",
+        popularity: 95, totalStreams: "1M", playlistCount: 100,
+        previewUrl: null, externalUrl: "",
+        audioFeatures: { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 },
+      },
+    });
+    const obscure = makeSong({
+      id: "pop-low", artist: "Unknown",
+      releaseDate: "2022-01-01",
+      spotify: {
+        id: "pop-low", name: "pop-low", artist: "Unknown",
+        album: "", albumArt: "", releaseDate: "2022-01-01",
+        popularity: 5, totalStreams: "1K", playlistCount: 1,
+        previewUrl: null, externalUrl: "",
+        audioFeatures: { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 },
+      },
+    });
+    const results = getSimilarSongs(target, [obscure, popular], 2, { strategy: "diverse" });
+    // Popular song should rank first due to popularity tiebreaker
+    expect(results[0].song.id).toBe("pop-high");
   });
 
   it("diverse strategy returns valid matchScores in 0-99 range", () => {

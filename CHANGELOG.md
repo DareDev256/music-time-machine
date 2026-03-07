@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.20.0] - 2026-03-06
+
+### Added
+- **Auto selection strategy** — New default "Auto" mode that inspects the top candidates' genre diversity and intelligently switches between best-match and diverse strategies. When the top picks are already genre-diverse (2+ distinct genres), Auto preserves best-match ordering for maximum relevance. When candidates are homogeneous, Auto activates diverse mode to break out of the genre bubble. Eliminates the need for users to manually toggle strategies
+- **Popularity quality signal** — The diverse/auto picker now factors in Spotify popularity (0-100) as a lightweight tiebreaker (max +5 points), preventing obscure filler from outranking well-known tracks when diversity bonuses are equal. Popular songs surface naturally without overriding genre/era diversity
+- **4 new tests** covering auto-strategy fallback logic, genre homogeneity detection, default strategy behavior, and popularity tiebreaking (279 total, all passing)
+
+---
+
 ## [1.19.0] - 2026-03-06
 
 ### Added

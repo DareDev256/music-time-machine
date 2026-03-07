@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { Sparkles, Shuffle, Zap, Layers } from "lucide-react";
+import { Sparkles, Shuffle, Zap, Layers, Wand2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
@@ -69,6 +69,7 @@ function diversityBgColor(score: number): string {
 }
 
 const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc: string }[] = [
+  { id: "auto", label: "Auto", icon: Wand2, desc: "Smart pick — adapts based on your catalog" },
   { id: "best-match", label: "Best match", icon: Zap, desc: "Highest similarity scores" },
   { id: "diverse", label: "Diverse", icon: Layers, desc: "Maximize genre & era spread" },
 ];
@@ -76,7 +77,7 @@ const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const [prefs, setPrefs] = useState<RecommendationPrefs>({});
   const handlePrefsChange = useCallback((p: RecommendationPrefs) => setPrefs(p), []);
-  const [strategy, setStrategy] = useState<SelectionStrategy>("best-match");
+  const [strategy, setStrategy] = useState<SelectionStrategy>("auto");
 
   const effectivePrefs = useMemo(
     () => ({ ...prefs, strategy }),

@@ -21,7 +21,7 @@ const MOOD_MATCH_BONUS = 10;
 const MOOD_PROXIMITY = 0.25;
 
 /** Selection strategy for the recommendation picker. */
-export type SelectionStrategy = "best-match" | "diverse";
+export type SelectionStrategy = "auto" | "best-match" | "diverse";
 
 /** User-configurable recommendation preferences. All fields optional. */
 export interface RecommendationPrefs {
@@ -86,6 +86,21 @@ const ERA_FULL_SPREAD = 2;
 const DIVERSITY_GENRE_BONUS = 25;
 /** Bonus added during the diverse-strategy pick phase for an unseen era. */
 const DIVERSITY_ERA_BONUS = 15;
+
+/**
+ * Popularity bonus scale for diverse/auto strategies. Popular songs get a small
+ * quality signal so the diversity picker doesn't surface obscure filler over
+ * well-known tracks when diversity bonuses are equal.
+ * Max bonus = POPULARITY_WEIGHT (popularity is 0–100, divided by 100).
+ */
+const POPULARITY_WEIGHT = 5;
+
+/**
+ * Auto-strategy threshold: if the top `limit` best-match candidates share
+ * fewer than this many distinct genres, auto switches to diverse mode.
+ * At 2+, the best-match set is already reasonably diverse.
+ */
+const AUTO_DIVERSITY_THRESHOLD = 2;
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -360,7 +375,23 @@ export function getSimilarSongs(
   const picked: { song: SongData; reason: string; matchScore: number }[] = [];
   const seenArtists = new Set<string>();
 
-  const strategy = prefs?.strategy ?? "best-match";
+  const requestedStrategy = prefs?.strategy ?? "auto";
+
+  // Auto-strategy: inspect the top best-match candidates' genre diversity.
+  // If the greedy top-N are genre-homogeneous, switch to diverse mode.
+  const strategy: "best-match" | "diverse" = (() => {
+    if (requestedStrategy !== "auto") return requestedStrategy;
+    const topGenres = new Set<string>();
+    let inspected = 0;
+    for (const entry of scored) {
+      if (inspected >= limit) break;
+      if (entry.artists.some((a) => seenArtists.has(a))) continue;
+      const genre = songGenres[entry.song.id];
+      if (genre) topGenres.add(genre);
+      inspected++;
+    }
+    return topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
+  })();
 
   if (strategy === "diverse") {
     // Diverse strategy: greedily pick the candidate that maximizes marginal
@@ -384,6 +415,9 @@ export function getSimilarSongs(
         if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
         const year = safeYear(entry.song.releaseDate);
         if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
+        // Popularity quality signal: prefer well-known tracks as a tiebreaker
+        const popularity = entry.song.spotify?.popularity ?? 0;
+        effective += (popularity / 100) * POPULARITY_WEIGHT;
 
         if (effective > bestEffective) {
           bestEffective = effective;
