@@ -57,7 +57,7 @@ class TTLCache {
   }
 
   delete(key: string): void {
-    this.cache.delete(key);
+    this.cache.delete(normalizeKey(key));
   }
 
   clear(): void {

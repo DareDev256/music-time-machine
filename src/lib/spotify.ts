@@ -73,7 +73,7 @@ export async function searchSpotifyTrack(
       albumArt: track.album.images[0]?.url || "",
     };
   } catch (error) {
-    console.error("Spotify search error:", error);
+    console.error("Spotify search error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -115,7 +115,7 @@ export async function getSpotifyTrack(trackId: string): Promise<SpotifyData | nu
         : undefined,
     };
   } catch (error) {
-    console.error("Spotify track fetch error:", error);
+    console.error("Spotify track fetch error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -142,7 +142,7 @@ export async function searchSpotifyTracks(
       releaseDate: track.album.release_date || "Unknown",
     }));
   } catch (error) {
-    console.error("Spotify search error:", error);
+    console.error("Spotify search error:", error instanceof Error ? error.message : "Unknown");
     return [];
   }
 }
@@ -187,7 +187,7 @@ export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | n
       careerTimeline: [],
     };
   } catch (error) {
-    console.error("Spotify artist fetch error:", error);
+    console.error("Spotify artist fetch error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }

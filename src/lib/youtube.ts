@@ -49,7 +49,7 @@ export async function searchYouTubeVideo(
       thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.default?.url,
     };
   } catch (error) {
-    console.error("YouTube search error:", error);
+    console.error("YouTube search error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -79,7 +79,7 @@ export async function getYouTubeVideo(videoId: string): Promise<YouTubeData | nu
       externalUrl: `https://youtube.com/watch?v=${video.id}`,
     };
   } catch (error) {
-    console.error("YouTube video fetch error:", error);
+    console.error("YouTube video fetch error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -96,7 +96,7 @@ export async function getYouTubeVideoBySearch(
     // Get full video details
     return getYouTubeVideo(searchResult.videoId);
   } catch (error) {
-    console.error("YouTube search error:", error);
+    console.error("YouTube search error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }

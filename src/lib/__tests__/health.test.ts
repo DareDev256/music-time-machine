@@ -1,6 +1,23 @@
 import { describe, it, expect } from "vitest";
 import { TTLCache } from "../cache";
 
+describe("TTLCache.delete normalization", () => {
+  it("deletes entries set with equivalent unicode keys", () => {
+    const cache = new TTLCache(10);
+    // e-acute as single codepoint vs combining sequence
+    cache.set("caf\u00E9", "value", 60_000);
+    cache.delete("cafe\u0301"); // combining form — must normalize to match
+    expect(cache.has("caf\u00E9")).toBe(false);
+  });
+
+  it("deletes entries containing zero-width chars in the key", () => {
+    const cache = new TTLCache(10);
+    cache.set("key", "value", 60_000);
+    cache.delete("key\u200B"); // zero-width space stripped by normalizeKey
+    expect(cache.has("key")).toBe(false);
+  });
+});
+
 describe("TTLCache.getStats", () => {
   it("returns zero utilization on empty cache", () => {
     const cache = new TTLCache(100);

@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.0] - 2026-03-06
+
+### Security
+- **Health endpoint information disclosure** — `/api/health` previously exposed heap memory sizes, RSS, uptime, error counts, cache utilization, and integration config to unauthenticated users — a reconnaissance goldmine for attackers (OWASP A01). Now returns only `status` + `version` + `timestamp` without auth. Detailed diagnostics require a `HEALTH_AUTH_TOKEN` Bearer header. Added `HEALTH_AUTH_TOKEN` to `.env.example`
+- **Error object logging leaks server internals** — All `catch` blocks in `spotify.ts`, `youtube.ts`, and `genius.ts` logged the full error object (`console.error("...", error)`), which serializes stack traces containing file paths, and upstream API response bodies that may echo back auth headers. Replaced with `error.message` extraction across all 9 catch blocks
+- **Cache.delete() normalization bypass** — `TTLCache.delete()` used the raw key instead of `normalizeKey()`, meaning entries set via NFC-normalized keys couldn't be deleted with unicode-equivalent variants. Fixed to normalize consistently across all cache operations (get/set/has/delete)
+
+### Added
+- 2 new tests for cache delete normalization (unicode NFC equivalence, zero-width char stripping)
+
+---
+
 ## [1.20.0] - 2026-03-06
 
 ### Added
