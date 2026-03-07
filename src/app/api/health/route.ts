@@ -16,6 +16,13 @@ const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "unknown";
 /** Number of API route files — updated when routes are added/removed. */
 const API_ROUTE_COUNT = 7;
 
+/**
+ * Static catalog size — mockSongs is a frozen import that never changes
+ * at runtime. Computing Object.keys() once avoids allocating a throwaway
+ * string array on every health check request.
+ */
+const CATALOG_SIZE = Object.keys(mockSongs).length;
+
 export const dynamic = "force-dynamic"; // Never cache health checks
 
 /**
@@ -49,32 +56,32 @@ export async function GET(): Promise<NextResponse> {
   const now = Date.now();
   const uptimeMs = now - startedAt;
 
-  // ── Per-subsystem health checks ──────────────────────────────────────
-  const integrations = {
-    spotify: isSpotifyConfigured(),
-    youtube: isYouTubeConfigured(),
-    genius: isGeniusConfigured(),
-  };
+  // ── Snapshot cache stats once — avoids 6 redundant getStats() calls ──
+  const searchStats = searchCache.getStats();
+  const songStats = songCache.getStats();
 
-  const configuredCount = Object.values(integrations).filter(Boolean).length;
+  // ── Per-subsystem health checks ──────────────────────────────────────
+  const spotify = isSpotifyConfigured();
+  const youtube = isYouTubeConfigured();
+  const genius = isGeniusConfigured();
+  const configuredCount = +spotify + +youtube + +genius;
   const useMockData = process.env.USE_MOCK_DATA === "true";
-  const catalogSize = Object.keys(mockSongs).length;
 
   const checks = [
     {
       name: "catalog",
-      status: catalogSize > 0 ? "pass" : "fail",
-      detail: `${catalogSize} songs loaded`,
+      status: CATALOG_SIZE > 0 ? "pass" : "fail",
+      detail: `${CATALOG_SIZE} songs loaded`,
     },
     {
       name: "cache:search",
       status: "pass" as const,
-      detail: `${searchCache.getStats().size}/${searchCache.getStats().maxSize} entries`,
+      detail: `${searchStats.size}/${searchStats.maxSize} entries`,
     },
     {
       name: "cache:song",
       status: "pass" as const,
-      detail: `${songCache.getStats().size}/${songCache.getStats().maxSize} entries`,
+      detail: `${songStats.size}/${songStats.maxSize} entries`,
     },
     {
       name: "integrations",
@@ -100,14 +107,14 @@ export async function GET(): Promise<NextResponse> {
       human: formatUptime(uptimeMs),
     },
     mode: useMockData ? "mock" : "live",
-    integrations,
+    integrations: { spotify, youtube, genius },
     checks,
     caches: {
-      search: searchCache.getStats(),
-      song: songCache.getStats(),
+      search: searchStats,
+      song: songStats,
     },
     metrics: {
-      catalogSize,
+      catalogSize: CATALOG_SIZE,
       apiRoutes: API_ROUTE_COUNT,
       requests: requestCount,
       errors: errorCount,

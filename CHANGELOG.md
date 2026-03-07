@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.20.1] - 2026-03-06
+
+### Changed
+- **Health endpoint data fetching optimized** — Cache stats (`getStats()`) were called 6 times per request (3x per cache); now snapshotted once into locals. Catalog size hoisted to module scope as `CATALOG_SIZE` since `mockSongs` is a static import — eliminates a throwaway `Object.keys()` array allocation per request. Integration count uses arithmetic coercion (`+bool`) instead of `Object.values().filter().length`, avoiding two intermediate array allocations
+- **`TTLCache.delete()` now normalizes keys** — `get()` and `set()` both applied NFC normalization + control-char stripping, but `delete()` used the raw key. Unicode-equivalent keys (e.g. precomposed vs decomposed "cafe\u0301") could silently miss the cache entry, leaving stale data unevictable
+
+---
+
 ## [1.20.0] - 2026-03-06
 
 ### Added
