@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.20.1-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-279_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.21.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-281_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -22,7 +22,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>30</strong><br><sub>Components</sub></td>
-<td align="center"><strong>275</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>281</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -70,7 +70,7 @@ Every song gets a detail page with:
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Song Journey** — animated vertical milestone timeline showing key moments: release date, music video drop, Billboard chart entry, peak position, and Genius community engagement. Each milestone is chronologically sorted with platform-colored icons and staggered entrance animations
 - **Similar Songs** — content-based recommendations powered by weighted Euclidean distance across 4D audio features (danceability, energy ×1.5, valence ×1.5, normalized tempo), with same-era bonus (+8). Color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) render as circular SVG progress rings on each card. **User-configurable preferences** let you tune results by preferred genres, era range (2015–2025), and mood (Upbeat / Chill / Melancholy / Energetic) — persisted to localStorage
-- **Diversity-Aware Picks** — same-artist candidates are early-skipped before scoring (parsing `ft.`, `feat.`, `&`, `,`, `with` collaborations), avoiding wasted distance calculations. A greedy selection loop then caps results at one song per artist, ensuring recommendations always surface *new* artists. **Three selection strategies** are available via a toggle: **Auto** (default — inspects top candidates' genre diversity and intelligently switches between best-match and diverse), **Best match** (greedy by score), and **Diverse** (greedy set-cover with marginal diversity bonuses — +25 unseen genre, +15 unseen decade — plus a popularity quality signal that prevents obscure filler from outranking well-known tracks). Both the scoring pipeline and diversity metadata are memoized to prevent redundant recomputation on re-renders. A **diversity indicator** bar analyzes the final picks by genre spread (60% weight) and era spread (40% weight, normalized against a fixed 2-decade spread instead of pick count), displaying genre chips with per-genre colors, era span tags, and a scored label (Wide mix / Good variety / Similar vibe / Narrow focus)
+- **Diversity-Aware Picks** — same-artist candidates are early-skipped before scoring (parsing `ft.`, `feat.`, `&`, `,`, `with` collaborations), avoiding wasted distance calculations. A greedy selection loop then caps results at one song per artist, ensuring recommendations always surface *new* artists. **Three selection strategies** are available via a toggle: **Auto** (default — inspects top candidates' genre diversity and intelligently switches between best-match and diverse), **Best match** (greedy by score), and **Diverse** (greedy set-cover with marginal diversity bonuses — +25 unseen genre, +15 unseen decade — plus a popularity quality signal that prevents obscure filler from outranking well-known tracks). An **auto-insight indicator** reveals the engine's decision when Auto is active — showing the resolved strategy and genre count detected, with color-coded labels and smooth height-reveal animation. Both the scoring pipeline and diversity metadata are memoized to prevent redundant recomputation on re-renders. A **diversity indicator** bar analyzes the final picks by genre spread (60% weight) and era spread (40% weight, normalized against a fixed 2-decade spread instead of pick count), displaying genre chips with per-genre colors, era span tags, and a scored label (Wide mix / Good variety / Similar vibe / Narrow focus)
 - **30-second preview** — seekable audio playback from Spotify
 
 ### ⚔️ Compare Tracks
@@ -260,7 +260,7 @@ npx vitest --watch    # Watch mode
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
-| **recommendations** | 57 | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing |
+| **recommendations** | 59 | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing, `getAutoInsight` strategy resolution |
 | **rateLimit** | 30 | Token bucket consumption/refill, per-IP route isolation, stale eviction, input validation (`isValidId`, `sanitizeQuery`) |
 | **mockData** | 21 | Catalog integrity, search matching, artist slug resolution, timeline sorting |
 | **dataFetcher** | 20 | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |

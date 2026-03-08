@@ -2,11 +2,11 @@
 
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { Sparkles, Shuffle, Zap, Layers, Wand2 } from "lucide-react";
+import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
-import { getSimilarSongs, getDiversityMeta } from "@/lib/recommendations";
+import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
 import type { RecommendationPrefs, SelectionStrategy } from "@/lib/recommendations";
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 
@@ -89,6 +89,13 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
     [song, catalog, effectivePrefs],
   );
 
+  // Capture auto-insight immediately after scoring (synchronous, same render frame)
+  const autoInsight = useMemo(() => {
+    if (strategy !== "auto") return null;
+    return getAutoInsight();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- must re-read after similar recomputes
+  }, [strategy, similar]);
+
   const diversity = useMemo(
     () => getDiversityMeta(song, similar),
     [song, similar],
@@ -126,6 +133,37 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
           );
         })}
       </div>
+
+      {/* Auto-insight pill — reveals what the engine resolved to */}
+      <AnimatePresence>
+        {autoInsight && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+            animate={{ opacity: 1, height: "auto", marginBottom: 8 }}
+            exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <div
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium text-foreground-secondary bg-foreground/5 border border-foreground/8"
+              role="status"
+              aria-live="polite"
+              aria-label={`Auto resolved to ${autoInsight.resolved} — ${autoInsight.genresDetected.length} genre${autoInsight.genresDetected.length !== 1 ? "s" : ""} detected`}
+            >
+              <Wand2 className="w-3 h-3 text-accent/60" aria-hidden="true" />
+              <span>Auto</span>
+              <ArrowRight className="w-2.5 h-2.5 text-foreground/30" aria-hidden="true" />
+              <span className={autoInsight.resolved === "diverse" ? "text-sky-400" : "text-emerald-400"}>
+                {autoInsight.resolved === "diverse" ? "Diverse" : "Best match"}
+              </span>
+              <span className="text-foreground/25">·</span>
+              <span>
+                {autoInsight.genresDetected.length} genre{autoInsight.genresDetected.length !== 1 ? "s" : ""} detected
+              </span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <PlaylistConfigurator onChange={handlePrefsChange} />
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getSimilarSongs, getDiversityMeta, primaryArtist, splitArtists, safeYear } from "../recommendations";
+import { getSimilarSongs, getDiversityMeta, primaryArtist, splitArtists, safeYear, getAutoInsight } from "../recommendations";
 import { SongData } from "@/types";
 
 // Minimal factory — only fields the algorithm actually reads
@@ -719,6 +719,34 @@ describe("getSimilarSongs — diverse strategy", () => {
     const results = getSimilarSongs(target, [obscure, popular], 2, { strategy: "diverse" });
     // Popular song should rank first due to popularity tiebreaker
     expect(results[0].song.id).toBe("pop-high");
+  });
+
+  it("getAutoInsight returns resolved strategy and detected genres", () => {
+    // getAutoInsight imported at top level
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    const catalog = Array.from({ length: 6 }, (_, i) =>
+      withFeatures(`s${i}`, `Artist ${i}`,
+        { danceability: 0.65 + i * 0.02, energy: 0.65 + i * 0.02, valence: 0.65 + i * 0.02, tempo: 115 + i * 3 },
+        `${2018 + i}-01-01`));
+
+    // Auto should resolve to one of the two strategies and expose insight
+    getSimilarSongs(target, catalog, 4, { strategy: "auto" });
+    const insight = getAutoInsight();
+    expect(insight).not.toBeNull();
+    expect(["best-match", "diverse"]).toContain(insight?.resolved);
+    expect(Array.isArray(insight?.genresDetected)).toBe(true);
+  });
+
+  it("getAutoInsight returns null when strategy is not auto", () => {
+    // getAutoInsight imported at top level
+    const target = withFeatures("t", "Target",
+      { danceability: 0.5, energy: 0.5, valence: 0.5, tempo: 100 });
+    const catalog = [
+      withFeatures("s1", "A1", { danceability: 0.5, energy: 0.5, valence: 0.5, tempo: 100 }),
+    ];
+    getSimilarSongs(target, catalog, 4, { strategy: "best-match" });
+    expect(getAutoInsight()).toBeNull();
   });
 
   it("diverse strategy returns valid matchScores in 0-99 range", () => {

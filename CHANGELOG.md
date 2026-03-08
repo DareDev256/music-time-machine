@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.0] - 2026-03-08
+
+### Added
+- **Auto-insight indicator** — When "Auto" strategy is selected, a subtle animated pill appears below the strategy toggle showing what the engine resolved to ("Best match" or "Diverse") and how many genres it detected in top candidates. Uses color-coded labels (emerald for best-match, sky for diverse) and a smooth height-reveal animation. Provides algorithmic transparency without adding cognitive load
+- **`getAutoInsight()` API** — New exported function exposing the auto-strategy resolution metadata (`resolved` strategy + `genresDetected` array) for UI consumption. Module-level capture pattern keeps `getSimilarSongs` return type stable (no breaking changes)
+- **`AutoInsight` type** — Typed interface for auto-strategy resolution data
+- **2 new tests** covering auto-insight population and null-on-manual-strategy (281 total, all passing)
+
+---
+
 ## [1.20.1] - 2026-03-06
 
 ### Changed

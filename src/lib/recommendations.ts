@@ -23,6 +23,23 @@ const MOOD_PROXIMITY = 0.25;
 /** Selection strategy for the recommendation picker. */
 export type SelectionStrategy = "auto" | "best-match" | "diverse";
 
+/** Insight into the auto-strategy resolution for UI transparency. */
+export interface AutoInsight {
+  /** The strategy auto resolved to after inspecting candidates. */
+  resolved: "best-match" | "diverse";
+  /** Distinct genres detected in the top candidates. */
+  genresDetected: string[];
+}
+
+// Module-level ref — set during getSimilarSongs, read by getAutoInsight().
+// Safe because scoring + rendering are synchronous within a single React render.
+let _lastAutoInsight: AutoInsight | null = null;
+
+/** Returns insight from the most recent auto-strategy resolution, or null if strategy wasn't "auto". */
+export function getAutoInsight(): AutoInsight | null {
+  return _lastAutoInsight;
+}
+
 /** User-configurable recommendation preferences. All fields optional. */
 export interface RecommendationPrefs {
   /** Preferred genres — candidates matching these get a scoring bonus. */
@@ -379,6 +396,8 @@ export function getSimilarSongs(
 
   // Auto-strategy: inspect the top best-match candidates' genre diversity.
   // If the greedy top-N are genre-homogeneous, switch to diverse mode.
+  // Captures insight metadata for UI transparency (see getAutoInsight()).
+  _lastAutoInsight = null;
   const strategy: "best-match" | "diverse" = (() => {
     if (requestedStrategy !== "auto") return requestedStrategy;
     const topGenres = new Set<string>();
@@ -390,7 +409,9 @@ export function getSimilarSongs(
       if (genre) topGenres.add(genre);
       inspected++;
     }
-    return topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
+    const resolved = topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
+    _lastAutoInsight = { resolved, genresDetected: [...topGenres].sort() };
+    return resolved;
   })();
 
   if (strategy === "diverse") {
