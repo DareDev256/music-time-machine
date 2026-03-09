@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.3] - 2026-03-09
+
+### Added
+- **Spotify integration tests** — 10 tests covering token caching with concurrent `Promise.all` fetches, track/artist response mapping, audio features merge when present and graceful degradation when absent, Spotify ID pattern detection (22-char alphanumeric → direct fetch vs name → search), rate limit enforcement, and credential configuration checks
+- **YouTube integration tests** — 6 tests covering video data mapping with `formatCompact`, thumbnail resolution fallback chain (maxres → high → default), search-to-detail fetch chaining in `getYouTubeVideoBySearch`, query construction with music category filter, and API key configuration
+- **16 new tests total** (298 total, all passing)
+
+---
+
 ## [1.21.2] - 2026-03-09
 
 ### Fixed
