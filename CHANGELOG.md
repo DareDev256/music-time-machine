@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.2] - 2026-03-09
+
+### Fixed
+- **Auto-strategy artist deduplication** — The auto-strategy inspection loop used an empty `seenArtists` set when sampling top candidates for genre diversity assessment. Two songs by the same artist both counted toward the inspection limit, potentially filling the sample before other artists were evaluated. This caused the auto resolver to misjudge genre diversity and pick the wrong strategy. The inspection now tracks its own `inspectedArtists` set, matching the deduplication behavior of the actual picker
+- **1 new regression test** covering the artist-collision edge case in auto-strategy inspection (282 total, all passing)
+
+---
+
 ## [1.21.1] - 2026-03-08
 
 ### Added

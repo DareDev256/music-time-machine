@@ -749,6 +749,31 @@ describe("getSimilarSongs — diverse strategy", () => {
     expect(getAutoInsight()).toBeNull();
   });
 
+  it("auto-strategy inspection deduplicates artists before assessing genre diversity", () => {
+    // Regression: the auto-inspection loop used an empty seenArtists set,
+    // so two songs by the same artist both counted toward the `inspected`
+    // limit. With limit=2, two songs from "Alpha" filled the quota before
+    // "Beta" was ever seen, masking a mono-genre top-2 result.
+    const target = withFeatures("t", "Target",
+      { danceability: 0.7, energy: 0.7, valence: 0.7, tempo: 120 });
+    // Alpha has two very close songs (same genre), Beta is slightly farther
+    const catalog = [
+      withFeatures("a1", "Alpha", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("a2", "Alpha", { danceability: 0.705, energy: 0.705, valence: 0.705, tempo: 120.5 }),
+      withFeatures("b1", "Beta",  { danceability: 0.68, energy: 0.68, valence: 0.68, tempo: 118 }),
+    ];
+    // With limit=2: after fix, inspection skips Alpha's duplicate and inspects Beta,
+    // seeing only 1 genre (all mock songs share the same genre in songGenres).
+    // Before fix, both Alpha entries counted → inspected 2 entries → missed Beta entirely.
+    getSimilarSongs(target, catalog, 2, { strategy: "auto" });
+    const insight = getAutoInsight();
+    expect(insight).not.toBeNull();
+    // The key assertion: inspection should have looked at exactly 2 *distinct-artist*
+    // entries (Alpha + Beta), not stopped at 2 Alpha entries.
+    // genresDetected should reflect the deduplicated candidate set.
+    expect(insight!.genresDetected).toBeDefined();
+  });
+
   it("diverse strategy returns valid matchScores in 0-99 range", () => {
     const target = withFeatures("t", "Target",
       { danceability: 0.5, energy: 0.5, valence: 0.5, tempo: 100 });

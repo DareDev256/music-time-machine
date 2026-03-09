@@ -401,10 +401,16 @@ export function getSimilarSongs(
   const strategy: "best-match" | "diverse" = (() => {
     if (requestedStrategy !== "auto") return requestedStrategy;
     const topGenres = new Set<string>();
+    // Track artists during inspection so the genre sample matches what the
+    // picker would actually select. Without this, two entries by the same
+    // artist both counted toward `inspected`, inflating the sample and
+    // potentially masking low-diversity picks.
+    const inspectedArtists = new Set<string>();
     let inspected = 0;
     for (const entry of scored) {
       if (inspected >= limit) break;
-      if (entry.artists.some((a) => seenArtists.has(a))) continue;
+      if (entry.artists.some((a) => inspectedArtists.has(a))) continue;
+      for (const a of entry.artists) inspectedArtists.add(a);
       const genre = songGenres[entry.song.id];
       if (genre) topGenres.add(genre);
       inspected++;
