@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.1] - 2026-03-08
+
+### Added
+- **Recommendation engine documentation** — New `docs/RECOMMENDATIONS.md` with complete algorithm reference: scoring model (weighted 4D Euclidean distance), all three selection strategies (best-match, diverse, auto), artist diversity filter, user preference system with mood targets, diversity meta scoring formula, tuning constants table, and export reference. Linked from main README nav bar
+
+---
+
 ## [1.21.0] - 2026-03-08
 
 ### Added
