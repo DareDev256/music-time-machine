@@ -143,8 +143,13 @@ export function safeYear(date: string | undefined | null): number | null {
   const parsed = new Date(date);
   const result = Number.isNaN(parsed.getTime()) ? null : parsed.getUTCFullYear();
 
-  // Evict oldest entries if cache exceeds limit (simple size guard)
-  if (yearCache.size >= YEAR_CACHE_LIMIT) yearCache.clear();
+  // FIFO eviction: remove only the oldest entry instead of nuking the entire
+  // cache. clear() destroyed cached null values for invalid dates, forcing
+  // redundant Date.parse calls on every subsequent scoring pass.
+  if (yearCache.size >= YEAR_CACHE_LIMIT) {
+    const oldest = yearCache.keys().next().value;
+    if (oldest !== undefined) yearCache.delete(oldest);
+  }
   yearCache.set(date, result);
 
   return result;
@@ -238,9 +243,13 @@ export function getDiversityMeta(
     eras.add(decadeLabel(targetYear));
   }
 
+  let genreKnown = 0;
   for (const { song } of picks) {
     const genre = songGenres[song.id];
-    if (genre) genres.add(genre);
+    if (genre) {
+      genres.add(genre);
+      genreKnown++;
+    }
 
     const year = safeYear(song.releaseDate);
     if (year !== null) {
@@ -249,7 +258,11 @@ export function getDiversityMeta(
   }
 
   const count = picks.length;
-  const genreRatio = genres.size / count;
+  // Use only picks with known genres as the denominator — songs missing from
+  // songGenres shouldn't deflate the ratio. Falls back to total count when
+  // no genre data exists at all (avoids division by zero).
+  const genreDenom = genreKnown > 0 ? genreKnown : count;
+  const genreRatio = genres.size / genreDenom;
   // Subtract 1 only when the target era was actually added (valid target date).
   // Without this guard, an invalid target date means the set never received the
   // baseline era, making (eras.size - 1) negative and dragging the score below 0.

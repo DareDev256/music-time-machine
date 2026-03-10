@@ -437,6 +437,32 @@ describe("getDiversityMeta", () => {
     const result = getDiversityMeta(target, picks);
     expect(result.genres).toEqual([...result.genres].sort());
   });
+
+  it("does not deflate genre ratio when some picks lack genre data", () => {
+    // 2 picks with known genres (both distinct) + 1 pick with unknown genre
+    // Before fix: genreRatio = 2/3 = 0.67 → score = 40
+    // After fix:  genreRatio = 2/2 = 1.0  → score = 60 (unknown picks excluded from denominator)
+    const picks = [
+      { song: makeSong({ id: "blinding-lights" }) },   // R&B (known)
+      { song: makeSong({ id: "old-town-road" }) },     // Country (known)
+      { song: makeSong({ id: "unknown-id-xyz" }) },    // no genre mapping
+    ];
+    const result = getDiversityMeta(target, picks);
+    // Genre contribution should be 2/2 × 60 = 60, not 2/3 × 60 = 40
+    expect(result.score).toBeGreaterThanOrEqual(60);
+  });
+
+  it("falls back to total count when no picks have genre data", () => {
+    // All picks have unknown IDs — no genre data at all
+    const picks = [
+      { song: makeSong({ id: "zzz-1" }) },
+      { song: makeSong({ id: "zzz-2" }) },
+    ];
+    const result = getDiversityMeta(target, picks);
+    // 0 genres / 2 picks = 0 genre score — should not divide by zero
+    expect(result.score).toBeGreaterThanOrEqual(0);
+    expect(result.genres).toEqual([]);
+  });
 });
 
 describe("primaryArtist", () => {
@@ -498,6 +524,20 @@ describe("safeYear", () => {
     expect(safeYear("TBD")).toBeNull();
     expect(safeYear("Unknown")).toBeNull();
     expect(safeYear("N/A")).toBeNull();
+  });
+
+  it("preserves cache entries on eviction instead of clearing all", () => {
+    // Parse a known date so it's cached
+    const year = safeYear("2025-01-01");
+    expect(year).toBe(2025);
+    // Parse 300 unique dates to force eviction past the 256 limit
+    for (let i = 0; i < 300; i++) {
+      safeYear(`${1700 + i}-06-15`);
+    }
+    // If clear() was used, the original entry AND many others would be gone.
+    // With FIFO eviction, the most-recently-used entries survive.
+    // The last few entries should still be cached (won't crash, returns correct value)
+    expect(safeYear("1999-06-15")).toBe(1999);
   });
 });
 

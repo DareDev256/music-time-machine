@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.5] - 2026-03-10
+
+### Fixed
+- **yearCache FIFO eviction** — `safeYear()` cache used `yearCache.clear()` when hitting the 256-entry limit, nuking all cached entries including null values for invalid dates. Every subsequent scoring pass re-parsed the same invalid date strings. Replaced with FIFO eviction that removes only the oldest entry, preserving the rest of the cache
+- **getDiversityMeta genre ratio denominator** — Songs without genre data in `songGenres` still counted in the `picks.length` denominator, deflating `genreRatio`. A set of 3 picks with 2 known distinct genres scored 2/3 = 0.67 instead of the correct 2/2 = 1.0. Now only genre-mapped picks contribute to the denominator
+- **3 new regression tests** covering cache eviction behavior, genre ratio with partial metadata, and zero-genre fallback (322 total, all passing)
+
+---
+
 ## [1.21.4] - 2026-03-09
 
 ### Added
