@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.6] - 2026-03-10
+
+### Fixed
+- **SearchBar year display** — `new Date(result.releaseDate).getFullYear()` rendered "NaN" in search dropdown when release date was unparseable. Now shows em-dash fallback
+- **BillboardCard chart timeline** — Chart movement start/end labels bypassed the safe `formatDate` utility, calling `new Date().toLocaleDateString()` directly which renders "Invalid Date" on bad input. Now uses `formatDate` consistently
+- **SongMilestones Genius date crash** — `new Date(geniusDate).toISOString()` throws `RangeError` (not just bad display) when Genius returns non-ISO strings like "TBD". Now validates before calling `.toISOString()`, falling back to the song's own release date
+- **AudioRadarChart tempo NaN** — `audioFeatures.tempo` of `undefined`/`null` propagated NaN through the normalization math, causing the Tempo radar axis to silently vanish. Now guards with `Number.isFinite()` and defaults to 0
+
+---
+
 ## [1.21.5] - 2026-03-10
 
 ### Fixed

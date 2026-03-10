@@ -180,7 +180,10 @@ export default function SearchBar() {
                 <p className="text-foreground-secondary text-sm truncate">{result.artist}</p>
               </div>
               <span className="text-foreground-secondary text-xs">
-                {new Date(result.releaseDate).getFullYear()}
+                {(() => {
+                  const d = new Date(result.releaseDate);
+                  return Number.isNaN(d.getTime()) ? "—" : d.getFullYear();
+                })()}
               </span>
             </button>
           ))}

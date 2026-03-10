@@ -59,7 +59,10 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
 
 export default function AudioRadarChart({ audioFeatures }: AudioRadarChartProps) {
   // Normalize tempo to 0–100 scale (typical BPM range: 60–200)
-  const normalizedTempo = Math.min(100, Math.max(0, Math.round(((audioFeatures.tempo - 60) / 140) * 100)));
+  const rawTempo = audioFeatures.tempo ?? 0;
+  const normalizedTempo = Number.isFinite(rawTempo)
+    ? Math.min(100, Math.max(0, Math.round(((rawTempo - 60) / 140) * 100)))
+    : 0;
 
   const data: RadarDataPoint[] = [
     { feature: "Danceability", value: Math.round(audioFeatures.danceability * 100), fullMark: 100 },

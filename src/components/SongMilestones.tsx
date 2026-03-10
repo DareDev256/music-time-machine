@@ -77,9 +77,11 @@ function extractMilestones(song: SongData): Milestone[] {
   // 5. Genius annotations milestone
   if (song.genius && song.genius.annotationCount >= 20) {
     milestones.push({
-      date: song.genius.releaseDate
-        ? new Date(song.genius.releaseDate).toISOString().split("T")[0]
-        : song.releaseDate,
+      date: (() => {
+        if (!song.genius.releaseDate) return song.releaseDate;
+        const parsed = new Date(song.genius.releaseDate);
+        return Number.isNaN(parsed.getTime()) ? song.releaseDate : parsed.toISOString().split("T")[0];
+      })(),
       label: `${song.genius.annotationCount} community annotations`,
       detail: `${song.genius.pageViews} page views on Genius`,
       icon: <BookOpen className="w-3.5 h-3.5" />,

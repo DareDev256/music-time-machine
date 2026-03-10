@@ -66,18 +66,10 @@ export default function BillboardCard({ data }: BillboardCardProps) {
           </div>
           <div className="flex justify-between text-xs text-foreground-secondary mt-2">
             <span>
-              {new Date(data.chartHistory[0]?.date).toLocaleDateString("en-US", {
-                month: "short",
-                year: "2-digit",
-              })}
+              {formatDate(data.chartHistory[0]?.date ?? "", { month: "short", year: "2-digit" })}
             </span>
             <span>
-              {new Date(
-                data.chartHistory[data.chartHistory.length - 1]?.date
-              ).toLocaleDateString("en-US", {
-                month: "short",
-                year: "2-digit",
-              })}
+              {formatDate(data.chartHistory[data.chartHistory.length - 1]?.date ?? "", { month: "short", year: "2-digit" })}
             </span>
           </div>
         </div>
