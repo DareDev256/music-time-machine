@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.21.4] - 2026-03-09
+
+### Added
+- **Genius API integration tests** — 21 tests covering all 4 exported functions (`searchGeniusSong`, `searchGeniusSongs`, `getGeniusSong`, `getGeniusSongBySearch`) plus `isGeniusConfigured`. Tests cover response mapping, missing artist fallback to "Unknown", URL encoding of special characters, search limit enforcement, image fallback chain (song_art → header_image), three-tier description extraction (plain → preview → generated), search-to-detail fetch chaining, rate limit enforcement, Bearer token auth header, and missing credentials handling
+- **319 total tests** across 25 suites (all passing)
+
+---
+
 ## [1.21.3] - 2026-03-09
 
 ### Added
