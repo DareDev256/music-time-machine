@@ -323,25 +323,39 @@ export function primaryArtist(artist: string): string {
   return splitArtists(artist)[0] ?? artist.trim().toLowerCase();
 }
 
-// ── Recommendation engine ───────────────────────────────────────────────────
+// ── Pick result type ─────────────────────────────────────────────────────
+
+/** A single recommendation pick with scoring metadata for the UI. */
+interface PickResult {
+  song: SongData;
+  reason: string;
+  matchScore: number;
+}
+
+/** Clamp a raw score into the 0–99 integer range used by the UI. */
+function clampScore(raw: number): number {
+  return Math.min(99, Math.max(0, Math.round(raw)));
+}
+
+// ── Scoring pipeline ─────────────────────────────────────────────────────
+
+/** Audio features required from the target song. */
+type AudioFeatures = { danceability: number; energy: number; valence: number; tempo: number };
 
 /**
- * Find similar songs based on audio feature proximity, artist match, and era.
- * Uses weighted Euclidean distance in the (danceability, energy, valence, normalizedTempo) space.
- * Enforces artist diversity: at most one song per artist in results.
+ * Score every eligible candidate against the target.
+ * Filters out the target itself, candidates without audio features,
+ * and candidates sharing an artist with the target (diversity pre-seed).
+ * Returns candidates sorted by score descending.
  */
-export function getSimilarSongs(
+function scoreCandidates(
   target: SongData,
   catalog: SongData[],
-  limit: number = 4,
+  targetFeatures: AudioFeatures,
+  targetYear: number | null,
+  targetArtists: Set<string>,
   prefs?: RecommendationPrefs,
-): { song: SongData; reason: string; matchScore: number }[] {
-  const targetFeatures = target.spotify?.audioFeatures;
-  if (!targetFeatures) return [];
-
-  const targetYear = safeYear(target.releaseDate);
-  const targetArtists = new Set(splitArtists(target.artist));
-
+): ScoredSong[] {
   const scored: ScoredSong[] = [];
 
   for (const candidate of catalog) {
@@ -351,18 +365,14 @@ export function getSimilarSongs(
     if (!features) continue;
 
     // Early-skip candidates sharing any artist with the target — the diversity
-    // filter would unconditionally exclude them anyway. Skipping here avoids
-    // wasted distance calculations and prevents dead entries from occupying
-    // top positions in the sorted array.
+    // filter would unconditionally exclude them anyway.
     const candidateArtists = splitArtists(candidate.artist);
     if (candidateArtists.some((a) => targetArtists.has(a))) continue;
 
     const distance = featureDistance(targetFeatures, features);
-
-    // Convert distance to a 0-100 similarity score (lower distance = higher score)
     let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
 
-    // Bonus: same era (within ERA_PROXIMITY_YEARS) — skip if either date is invalid
+    // Bonus: same era (within ERA_PROXIMITY_YEARS)
     const candidateYear = safeYear(candidate.releaseDate);
     if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
       score += SAME_ERA_BONUS;
@@ -380,114 +390,150 @@ export function getSimilarSongs(
       }
       if (prefs.mood && MOOD_TARGETS[prefs.mood]) {
         const mt = MOOD_TARGETS[prefs.mood];
-        const eDelta = Math.abs(features.energy - mt.energy);
-        const vDelta = Math.abs(features.valence - mt.valence);
-        if (eDelta < MOOD_PROXIMITY && vDelta < MOOD_PROXIMITY) score += MOOD_MATCH_BONUS;
+        if (Math.abs(features.energy - mt.energy) < MOOD_PROXIMITY && Math.abs(features.valence - mt.valence) < MOOD_PROXIMITY) {
+          score += MOOD_MATCH_BONUS;
+        }
       }
     }
 
     const reason = classifyReason(
-      distance,
-      features.energy,
-      targetFeatures.energy,
-      features.valence - targetFeatures.valence,
-      targetYear,
-      candidateYear,
+      distance, features.energy, targetFeatures.energy,
+      features.valence - targetFeatures.valence, targetYear, candidateYear,
     );
 
     scored.push({ song: candidate, score, reason, artists: candidateArtists });
   }
 
-  // Diversity-aware selection: skip songs whose *any* credited artist was already picked.
-  // This prevents "Lady Gaga & Bruno Mars" and "ROSÉ & Bruno Mars" from both appearing.
-  // Same-artist candidates were already excluded in the scoring loop above.
   scored.sort((a, b) => b.score - a.score);
-  const picked: { song: SongData; reason: string; matchScore: number }[] = [];
+  return scored;
+}
+
+// ── Strategy resolution ──────────────────────────────────────────────────
+
+/**
+ * Inspect the top best-match candidates' genre diversity to decide whether
+ * the auto strategy should resolve to "best-match" or "diverse".
+ * Deduplicates artists during inspection so the genre sample matches what
+ * the picker would actually select.
+ */
+function resolveStrategy(
+  requested: SelectionStrategy,
+  scored: ScoredSong[],
+  limit: number,
+): "best-match" | "diverse" {
+  _lastAutoInsight = null;
+  if (requested !== "auto") return requested;
+
+  const topGenres = new Set<string>();
+  const inspectedArtists = new Set<string>();
+  let inspected = 0;
+
+  for (const entry of scored) {
+    if (inspected >= limit) break;
+    if (entry.artists.some((a) => inspectedArtists.has(a))) continue;
+    for (const a of entry.artists) inspectedArtists.add(a);
+    const genre = songGenres[entry.song.id];
+    if (genre) topGenres.add(genre);
+    inspected++;
+  }
+
+  const resolved = topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
+  _lastAutoInsight = { resolved, genresDetected: [...topGenres].sort() };
+  return resolved;
+}
+
+// ── Pick strategies ──────────────────────────────────────────────────────
+
+/**
+ * Best-match picker: greedily pick highest-scored candidates,
+ * enforcing at-most-one-song-per-artist diversity.
+ */
+function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
+  const picked: PickResult[] = [];
   const seenArtists = new Set<string>();
 
-  const requestedStrategy = prefs?.strategy ?? "auto";
-
-  // Auto-strategy: inspect the top best-match candidates' genre diversity.
-  // If the greedy top-N are genre-homogeneous, switch to diverse mode.
-  // Captures insight metadata for UI transparency (see getAutoInsight()).
-  _lastAutoInsight = null;
-  const strategy: "best-match" | "diverse" = (() => {
-    if (requestedStrategy !== "auto") return requestedStrategy;
-    const topGenres = new Set<string>();
-    // Track artists during inspection so the genre sample matches what the
-    // picker would actually select. Without this, two entries by the same
-    // artist both counted toward `inspected`, inflating the sample and
-    // potentially masking low-diversity picks.
-    const inspectedArtists = new Set<string>();
-    let inspected = 0;
-    for (const entry of scored) {
-      if (inspected >= limit) break;
-      if (entry.artists.some((a) => inspectedArtists.has(a))) continue;
-      for (const a of entry.artists) inspectedArtists.add(a);
-      const genre = songGenres[entry.song.id];
-      if (genre) topGenres.add(genre);
-      inspected++;
-    }
-    const resolved = topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
-    _lastAutoInsight = { resolved, genresDetected: [...topGenres].sort() };
-    return resolved;
-  })();
-
-  if (strategy === "diverse") {
-    // Diverse strategy: greedily pick the candidate that maximizes marginal
-    // diversity (unseen genre/era) while keeping a quality floor. Each round
-    // scans remaining candidates, adds a diversity bonus to unseen genres/eras,
-    // and picks the highest effective score.
-    const seenGenres = new Set<string>();
-    const seenEras = new Set<string>();
-    const remaining = [...scored];
-
-    while (picked.length < limit && remaining.length > 0) {
-      let bestIdx = -1;
-      let bestEffective = -Infinity;
-
-      for (let i = 0; i < remaining.length; i++) {
-        const entry = remaining[i];
-        if (entry.artists.some((a) => seenArtists.has(a))) continue;
-
-        let effective = entry.score;
-        const genre = songGenres[entry.song.id];
-        if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
-        const year = safeYear(entry.song.releaseDate);
-        if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
-        // Popularity quality signal: prefer well-known tracks as a tiebreaker
-        const popularity = entry.song.spotify?.popularity ?? 0;
-        effective += (popularity / 100) * POPULARITY_WEIGHT;
-
-        if (effective > bestEffective) {
-          bestEffective = effective;
-          bestIdx = i;
-        }
-      }
-
-      if (bestIdx === -1) break;
-
-      const winner = remaining.splice(bestIdx, 1)[0];
-      for (const a of winner.artists) seenArtists.add(a);
-      const genre = songGenres[winner.song.id];
-      if (genre) seenGenres.add(genre);
-      const year = safeYear(winner.song.releaseDate);
-      if (year !== null) seenEras.add(decadeLabel(year));
-
-      const matchScore = Math.min(99, Math.max(0, Math.round(winner.score)));
-      picked.push({ song: winner.song, reason: winner.reason, matchScore });
-    }
-  } else {
-    // Best-match strategy: greedy by score (original behavior).
-    for (const entry of scored) {
-      if (picked.length >= limit) break;
-      const artists = entry.artists;
-      if (artists.some((a) => seenArtists.has(a))) continue;
-      for (const a of artists) seenArtists.add(a);
-      const matchScore = Math.min(99, Math.max(0, Math.round(entry.score)));
-      picked.push({ song: entry.song, reason: entry.reason, matchScore });
-    }
+  for (const entry of scored) {
+    if (picked.length >= limit) break;
+    if (entry.artists.some((a) => seenArtists.has(a))) continue;
+    for (const a of entry.artists) seenArtists.add(a);
+    picked.push({ song: entry.song, reason: entry.reason, matchScore: clampScore(entry.score) });
   }
 
   return picked;
+}
+
+/**
+ * Diverse picker: greedily pick the candidate that maximizes marginal
+ * diversity (unseen genre/era) while keeping a quality floor. Each round
+ * adds a diversity bonus to unseen genres/eras and picks the highest
+ * effective score. Popularity acts as a tiebreaker.
+ */
+function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
+  const picked: PickResult[] = [];
+  const seenArtists = new Set<string>();
+  const seenGenres = new Set<string>();
+  const seenEras = new Set<string>();
+  const remaining = [...scored];
+
+  while (picked.length < limit && remaining.length > 0) {
+    let bestIdx = -1;
+    let bestEffective = -Infinity;
+
+    for (let i = 0; i < remaining.length; i++) {
+      const entry = remaining[i];
+      if (entry.artists.some((a) => seenArtists.has(a))) continue;
+
+      let effective = entry.score;
+      const genre = songGenres[entry.song.id];
+      if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
+      const year = safeYear(entry.song.releaseDate);
+      if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
+      effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
+
+      if (effective > bestEffective) {
+        bestEffective = effective;
+        bestIdx = i;
+      }
+    }
+
+    if (bestIdx === -1) break;
+
+    const winner = remaining.splice(bestIdx, 1)[0];
+    for (const a of winner.artists) seenArtists.add(a);
+    const genre = songGenres[winner.song.id];
+    if (genre) seenGenres.add(genre);
+    const year = safeYear(winner.song.releaseDate);
+    if (year !== null) seenEras.add(decadeLabel(year));
+
+    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score) });
+  }
+
+  return picked;
+}
+
+// ── Recommendation engine ───────────────────────────────────────────────────
+
+/**
+ * Find similar songs based on audio feature proximity, artist match, and era.
+ * Uses weighted Euclidean distance in the (danceability, energy, valence, normalizedTempo) space.
+ * Enforces artist diversity: at most one song per artist in results.
+ *
+ * Pipeline: score → resolve strategy → pick
+ */
+export function getSimilarSongs(
+  target: SongData,
+  catalog: SongData[],
+  limit: number = 4,
+  prefs?: RecommendationPrefs,
+): PickResult[] {
+  const targetFeatures = target.spotify?.audioFeatures;
+  if (!targetFeatures) return [];
+
+  const targetYear = safeYear(target.releaseDate);
+  const targetArtists = new Set(splitArtists(target.artist));
+
+  const scored = scoreCandidates(target, catalog, targetFeatures, targetYear, targetArtists, prefs);
+  const strategy = resolveStrategy(prefs?.strategy ?? "auto", scored, limit);
+
+  return strategy === "diverse" ? pickDiverse(scored, limit) : pickBestMatch(scored, limit);
 }

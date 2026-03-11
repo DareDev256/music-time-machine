@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.22.0] - 2026-03-10
+
+### Changed
+- **Recommendation engine decomposition** — Extracted `getSimilarSongs` (160-line monolith) into 4 focused functions: `scoreCandidates()` (scoring pipeline), `resolveStrategy()` (auto/best-match/diverse resolution), `pickBestMatch()` (greedy score picker), and `pickDiverse()` (marginal diversity picker). The main function is now a clean 10-line orchestrator. Zero behavior changes — all 322 tests pass unchanged
+- **Shared `PickResult` type** — Replaced repeated `{ song: SongData; reason: string; matchScore: number }` inline types with a named interface, reducing type duplication across the pick pipeline
+- **`clampScore()` helper** — Extracted the `Math.min(99, Math.max(0, Math.round(...)))` pattern used by both pickers into a single function
+
+---
+
 ## [1.21.6] - 2026-03-10
 
 ### Fixed
