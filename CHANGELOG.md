@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.22.1] - 2026-03-10
+
+### Added
+- **Testing guide** (`docs/TESTING.md`) — Comprehensive documentation of the test infrastructure: toolchain (Vitest + Testing Library + jsdom), test organization across 25 suites, 6 mock patterns (module-level mocks, fresh re-imports, global fetch stubs, Next.js mocks, fake timers, data factories), test categories (unit/integration/component), security test coverage map, and conventions for adding new tests
+- **README nav link** — Added Testing Guide to the docs navigation bar
+
+---
+
 ## [1.22.0] - 2026-03-10
 
 ### Changed
