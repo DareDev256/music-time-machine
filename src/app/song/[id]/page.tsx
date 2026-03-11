@@ -19,6 +19,7 @@ import SongMilestones from "@/components/SongMilestones";
 import SearchBar from "@/components/SearchBar";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
 import { useSongData } from "@/hooks/useSongData";
+import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
 
 const AudioRadarChart = dynamic(() => import("@/components/AudioRadarChart"), {
   ssr: false,
@@ -47,6 +48,14 @@ export default function SongPage({ params }: PageProps) {
   const router = useRouter();
   const { song, catalog, loading, error } = useSongData(id);
   const [showShare, setShowShare] = useState(false);
+  const { record: recordView } = useRecentlyViewed();
+
+  // Record this song view for the Recently Viewed strip on the home page
+  useEffect(() => {
+    if (song) {
+      recordView({ id: song.id, title: song.title, artist: song.artist, albumArt: song.albumArt });
+    }
+  }, [song, recordView]);
 
   // Listen for keyboard shortcut events from the global hook
   const handleShare = useCallback(() => setShowShare(true), []);

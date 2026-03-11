@@ -76,3 +76,12 @@ html.light {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--foreground-secondary);
 }
+
+/* Hide scrollbar for horizontal scroll strips */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
