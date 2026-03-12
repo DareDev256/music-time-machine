@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.22.2] - 2026-03-11
+
+### Security
+- **Fallback CSP in next.config.ts** — Added static Content-Security-Policy header as defense-in-depth baseline for requests the proxy doesn't intercept (static assets, error pages). Uses `'strict-dynamic'` + `'unsafe-inline'` fallback pair per CSP3 spec §8.1
+- **Health endpoint hardened** — Wrapped `/api/health` with `withRouteHandler` for rate limiting (6 req/min per IP) and security headers. Memory details (heap, RSS) now gated behind `HEALTH_TOKEN` env var to prevent unauthenticated runtime recon
+- **`health` rate limit bucket** — Added to `ROUTE_LIMITS` in rateLimit.ts (was the only unprotected API route)
+
+---
+
 ## [1.22.1] - 2026-03-10
 
 ### Added

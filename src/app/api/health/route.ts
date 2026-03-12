@@ -4,6 +4,7 @@ import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
 import { mockSongs } from "@/lib/mockData";
+import { withRouteHandler } from "@/lib/apiHandler";
 
 // ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
@@ -51,7 +52,15 @@ export function recordError(): void {
   errorCount++;
 }
 
-export async function GET(): Promise<NextResponse> {
+/**
+ * Health check — now rate-limited via withRouteHandler.
+ *
+ * Memory details (heap, rss, external) are only included when the request
+ * provides a valid HEALTH_TOKEN query param matching the server-side env var.
+ * This prevents unauthenticated recon of runtime memory patterns while
+ * keeping the health endpoint useful for uptime monitoring.
+ */
+export const GET = withRouteHandler({ route: "health" }, async (request) => {
   requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
@@ -94,11 +103,8 @@ export async function GET(): Promise<NextResponse> {
 
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
-  // ── Memory snapshot (MB, 1 decimal) ──────────────────────────────────
-  const mem = process.memoryUsage();
-  const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
-
-  return NextResponse.json({
+  // ── Build response (memory gated behind token) ────────────────────────
+  const body: Record<string, unknown> = {
     status,
     version: APP_VERSION,
     timestamp: new Date(now).toISOString(),
@@ -119,15 +125,26 @@ export async function GET(): Promise<NextResponse> {
       requests: requestCount,
       errors: errorCount,
     },
-    memory: {
+  };
+
+  // Gate memory details behind a shared secret — process.memoryUsage()
+  // reveals heap pressure patterns useful for timing side-channels.
+  const healthToken = process.env.HEALTH_TOKEN;
+  const providedToken = request.nextUrl.searchParams.get("token");
+  if (healthToken && providedToken === healthToken) {
+    const mem = process.memoryUsage();
+    const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
+    body.memory = {
       rss: toMB(mem.rss),
       heapUsed: toMB(mem.heapUsed),
       heapTotal: toMB(mem.heapTotal),
       external: toMB(mem.external),
       unit: "MB",
-    },
-  });
-}
+    };
+  }
+
+  return NextResponse.json(body);
+});
 
 function formatUptime(ms: number): string {
   const s = Math.floor(ms / 1000);
