@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import ThemeProvider from "@/components/ThemeProvider";
+import PrefsProvider from "@/components/PrefsProvider";
 import Navigation from "@/components/Navigation";
 import KeyboardShortcutProvider from "@/components/KeyboardShortcutProvider";
 import "./globals.css";
@@ -52,9 +53,11 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider>
-          <Navigation />
-          <KeyboardShortcutProvider />
-          <main className="pt-14">{children}</main>
+          <PrefsProvider>
+            <Navigation />
+            <KeyboardShortcutProvider />
+            <main className="pt-14">{children}</main>
+          </PrefsProvider>
         </ThemeProvider>
       </body>
     </html>
