@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.22.2] - 2026-03-13
+
+### Security
+- **Edge middleware** (`src/middleware.ts`) — New request-level security layer running on Vercel's edge network before any route handler. Adds `X-Request-Id` header (crypto.randomUUID) to every request/response for security incident correlation, blocks path traversal attempts (`/../`, `/./`, `%2e%2e` encoded variants) at the edge before they reach route handlers, and enforces method restriction (GET/HEAD/OPTIONS only) on all API routes with proper 405 responses
+- **Health endpoint hardening** — `/api/health` now has rate limiting (30 req/min per IP via token bucket) and security headers (`nosniff`, `X-Frame-Options: DENY`, `no-store`) matching all other API routes. Previously the only route bypassing both `withRouteHandler()` and security headers, making it a reconnaissance and DDoS vector
+
+---
+
 ## [1.22.1] - 2026-03-10
 
 ### Added
