@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.1] - 2026-03-13
+
+### Fixed
+- **Diversity reason tags** — Songs picked by the diverse strategy for genre/era variety now show "Unique genre" or "Different era" instead of the misleading audio-similarity reason (e.g. "Similar sound"). The first pick still shows the original reason since it's always the best pure-similarity match
+- **Diversity reason styling** — Diversity-driven reason tags render with distinct colors (purple for genre, teal for era) so users can visually distinguish diversity picks from similarity picks at a glance
+
+---
+
 ## [1.23.0] - 2026-03-13
 
 ### Changed

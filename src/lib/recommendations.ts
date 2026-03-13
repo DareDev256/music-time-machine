@@ -478,6 +478,9 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
   while (picked.length < limit && remaining.length > 0) {
     let bestIdx = -1;
     let bestEffective = -Infinity;
+    /** Track whether the winning candidate got genre/era diversity bonuses. */
+    let bestGenreBonus = false;
+    let bestEraBonus = false;
 
     for (let i = 0; i < remaining.length; i++) {
       const entry = remaining[i];
@@ -485,14 +488,18 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
 
       let effective = entry.score;
       const genre = songGenres[entry.song.id];
-      if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
+      const hasGenreBonus = !!(genre && !seenGenres.has(genre));
+      if (hasGenreBonus) effective += DIVERSITY_GENRE_BONUS;
       const year = safeYear(entry.song.releaseDate);
-      if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
+      const hasEraBonus = year !== null && !seenEras.has(decadeLabel(year));
+      if (hasEraBonus) effective += DIVERSITY_ERA_BONUS;
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
       if (effective > bestEffective) {
         bestEffective = effective;
         bestIdx = i;
+        bestGenreBonus = hasGenreBonus;
+        bestEraBonus = hasEraBonus;
       }
     }
 
@@ -505,7 +512,16 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     const year = safeYear(winner.song.releaseDate);
     if (year !== null) seenEras.add(decadeLabel(year));
 
-    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score) });
+    // When diversity bonuses drove the selection, surface that rationale
+    // instead of the generic audio-similarity reason. The first pick never
+    // gets overridden — it's always the best pure-similarity candidate.
+    const reason = picked.length > 0 && bestGenreBonus
+      ? "Unique genre"
+      : picked.length > 0 && bestEraBonus
+        ? "Different era"
+        : winner.reason;
+
+    picked.push({ song: winner.song, reason, matchScore: clampScore(winner.score) });
   }
 
   return picked;

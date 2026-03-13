@@ -280,8 +280,14 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                   {/* Solid background behind the badge for readability */}
                   <div className="absolute inset-0 -z-10 rounded-full bg-card border border-border" />
                 </div>
-                {/* Reason tag */}
-                <span className="absolute bottom-1.5 left-1.5 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm">
+                {/* Reason tag — diversity picks get a distinct accent */}
+                <span className={`absolute bottom-1.5 left-1.5 text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm ${
+                  reason === "Unique genre"
+                    ? "bg-purple-600/80 text-purple-100"
+                    : reason === "Different era"
+                      ? "bg-teal-600/80 text-teal-100"
+                      : "bg-black/70 text-white"
+                }`}>
                   {reason}
                 </span>
               </div>
