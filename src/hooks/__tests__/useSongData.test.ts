@@ -100,7 +100,7 @@ describe("useSongData", () => {
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
-    expect(result.current.error).toBe("Failed to load song data");
+    expect(result.current.error).toBe("Network error");
     expect(result.current.song).toBeNull();
   });
 

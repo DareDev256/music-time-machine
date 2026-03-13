@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.22.1-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.23.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-322_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -116,7 +116,7 @@ These are the design decisions that make this more than a CRUD app:
 ## Architecture
 
 ```
-Client Request ──── useSongData hook (AbortController on nav/unmount)
+Client Request ──── useAsyncData hook (AbortController on nav/unmount)
      │
      ▼
 API Route ──── Validate input (regex ID check, 200-char max)
@@ -166,7 +166,7 @@ Data       │
 | Layer | Technology | Why |
 |-------|-----------|-----|
 | Framework | **Next.js 16** | App Router, Turbopack, Edge Runtime for OG images |
-| Runtime | **React 19** | `use()` hook for async params, `useSongData` hook with AbortController cleanup |
+| Runtime | **React 19** | `use()` hook for async params, `useAsyncData` generic fetch hook with `useReducer` state machine + AbortController cleanup |
 | Language | **TypeScript 5** | Strict mode — every API boundary is typed |
 | Styling | **Tailwind CSS 4** | `@theme inline` design tokens, no config file needed |
 | Charts | **Recharts 3** | Responsive timeline + radar chart with custom tooltips |
@@ -185,7 +185,7 @@ Data       │
 | **SSRF Protection** | All outbound API requests routed through `safeFetch()` — origin-validated against an explicit allowlist before any request leaves the server. Blocks cloud metadata, internal IPs, `@`-credential tricks, subdomain spoofing, and HTTP downgrades |
 | **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Genius ID NaN guard prevents malformed IDs from reaching the API |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After + `no-store`), per-upstream-API token buckets, stale bucket eviction, IP format validation to prevent rate limit bypass via spoofed headers |
-| **Fetch Timeout** | Two-layer AbortController defense: server-side `safeFetch()` enforces 10s timeouts on all outbound API requests (prevents slow-loris resource exhaustion); client-side `useSongData` hook cancels in-flight fetches on navigation/unmount (prevents stale state overwrites and memory leaks) |
+| **Fetch Timeout** | Two-layer AbortController defense: server-side `safeFetch()` enforces 10s timeouts on all outbound API requests (prevents slow-loris resource exhaustion); client-side `useAsyncData` hook cancels in-flight fetches on navigation/unmount across all data-fetching pages (prevents stale state overwrites and memory leaks) |
 | **Uniform Error Headers** | All API error responses (400, 404, 422, 429, 500) include `nosniff` + `X-Frame-Options: DENY` + `no-store` via `jsonError()` helper — no unprotected JSON responses anywhere in the stack |
 | **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data. Non-HTTPS URLs are suppressed entirely (no inert `#` link rendered) |
 | **Input Sanitization** | `sanitizeQuery()` strips null bytes (`\x00`) and unicode control characters (C0/C1 ranges U+0000–U+001F, U+007F–U+009F) before HTML/char filtering — prevents string truncation attacks in downstream parsers and log injection |
@@ -209,7 +209,8 @@ src/
 ├── components/                     # 27 single-responsibility UI components
 │   └── PageStates.tsx              # Shared loading/error full-page states
 ├── hooks/
-│   └── useSongData.ts              # Song page data fetching with AbortController
+│   ├── useAsyncData.ts              # Generic useReducer-backed async fetch hook
+│   └── useSongData.ts              # Song page data fetching (wraps useAsyncData)
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine

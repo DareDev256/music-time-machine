@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.0] - 2026-03-13
+
+### Changed
+- **`useAsyncData` generic hook** — New `useReducer`-backed async fetch primitive that replaces the repeated `useState(data) + useState(loading) + useState(error)` pattern. Discriminated union types make impossible states (loading + error simultaneously) unrepresentable. Includes automatic `AbortController` cleanup
+- **`useSongData` simplified** — Refactored from 4 separate `useState` calls to a thin wrapper over `useAsyncData`. Same public API, half the code, zero behavior changes
+- **Artist page fetch hardened** — Replaced 3 inline `useState` calls + unguarded `fetch` (no `AbortController`) with `useAsyncData`, gaining automatic request cancellation on unmount
+- **Error messages pass through** — Network errors now surface the actual message (e.g. "Network error") instead of a generic "Failed to load" string, giving users better diagnostic context
+
+---
+
 ## [1.22.1] - 2026-03-10
 
 ### Added

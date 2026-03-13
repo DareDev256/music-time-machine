@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, use } from "react";
+import { use } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -8,6 +8,7 @@ import { ArtistData } from "@/types";
 import ArtistHeader from "@/components/ArtistHeader";
 import SafeImage from "@/components/SafeImage";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
+import { useAsyncData } from "@/hooks/useAsyncData";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -15,32 +16,18 @@ interface PageProps {
 
 export default function ArtistPage({ params }: PageProps) {
   const { id } = use(params);
-  const [artist, setArtist] = useState<ArtistData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchArtist = async () => {
-      try {
-        setLoading(true);
-        const res = await fetch(`/api/artist/${id}`);
-
-        if (!res.ok) {
-          setError(res.status === 404 ? "Artist not found" : "Failed to load artist data");
-          return;
-        }
-
-        const data = await res.json();
-        setArtist(data);
-      } catch {
-        setError("Failed to load artist data");
-      } finally {
-        setLoading(false);
+  const { data: artist, loading, error } = useAsyncData<ArtistData>(
+    async (signal) => {
+      const res = await fetch(`/api/artist/${id}`, { signal });
+      if (!res.ok) {
+        throw new Error(
+          res.status === 404 ? "Artist not found" : "Failed to load artist data",
+        );
       }
-    };
-
-    fetchArtist();
-  }, [id]);
+      return res.json();
+    },
+    [id],
+  );
 
   if (loading) return <PageLoadingState message="Loading artist data..." />;
   if (error || !artist) return <PageErrorState message={error || "Artist not found"} />;
