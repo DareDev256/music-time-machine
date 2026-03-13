@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.1] - 2026-03-13
+
+### Added
+- **`useAsyncData` test suite** — 13 tests covering the full state machine lifecycle: idle→loading→success/error transitions, AbortController signal passthrough, unmount abort cleanup, stale request suppression after abort, dependency-driven re-fetch, AbortError swallowing, non-Error rejection handling, empty error message fallback, and console.error logging verification
+
+---
+
 ## [1.23.0] - 2026-03-13
 
 ### Changed
