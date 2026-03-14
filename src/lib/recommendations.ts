@@ -168,6 +168,8 @@ interface ScoredSong {
   reason: string;
   /** Pre-parsed artist names — avoids redundant regex splits in the diversity filter. */
   artists: string[];
+  /** Decomposed score components for UI transparency. */
+  breakdown: ScoreBreakdown;
 }
 
 /** Weighted Euclidean distance between two audio feature vectors. */
@@ -330,11 +332,27 @@ export function primaryArtist(artist: string): string {
 
 // ── Pick result type ─────────────────────────────────────────────────────
 
+/** Breakdown of how a recommendation score was computed. */
+export interface ScoreBreakdown {
+  /** Raw similarity score from audio feature distance (0–100). */
+  base: number;
+  /** Era proximity bonus (0 or SAME_ERA_BONUS). */
+  era: number;
+  /** Preferred genre bonus (0 or PREFERRED_GENRE_BONUS). */
+  genre: number;
+  /** Preferred era range bonus (0 or PREFERRED_ERA_BONUS). */
+  prefEra: number;
+  /** Mood match bonus (0 or MOOD_MATCH_BONUS). */
+  mood: number;
+}
+
 /** A single recommendation pick with scoring metadata for the UI. */
-interface PickResult {
+export interface PickResult {
   song: SongData;
   reason: string;
   matchScore: number;
+  /** Score breakdown showing what contributed to the match score. */
+  breakdown: ScoreBreakdown;
 }
 
 /** Clamp a raw score into the 0–99 integer range used by the UI. */
@@ -375,38 +393,51 @@ function scoreCandidates(
     if (candidateArtists.some((a) => targetArtists.has(a))) continue;
 
     const distance = featureDistance(targetFeatures, features);
-    let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
+    const base = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
+    let score = base;
 
     // Bonus: same era (within ERA_PROXIMITY_YEARS)
     const candidateYear = safeYear(String(candidate.releaseDate ?? ""));
+    let eraBonus = 0;
     if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
-      score += SAME_ERA_BONUS;
+      eraBonus = SAME_ERA_BONUS;
+      score += eraBonus;
     }
 
     // ── User preference bonuses ──────────────────────────────────────
+    let genreBonus = 0;
+    let prefEraBonus = 0;
+    let moodBonus = 0;
     if (prefs) {
       const candidateGenre = songGenres[candidate.id];
       if (prefs.genres?.length && candidateGenre && prefs.genres.includes(candidateGenre)) {
-        score += PREFERRED_GENRE_BONUS;
+        genreBonus = PREFERRED_GENRE_BONUS;
+        score += genreBonus;
       }
       if (prefs.eraRange && candidateYear !== null) {
         const [lo, hi] = prefs.eraRange;
-        if (candidateYear >= lo && candidateYear <= hi) score += PREFERRED_ERA_BONUS;
+        if (candidateYear >= lo && candidateYear <= hi) {
+          prefEraBonus = PREFERRED_ERA_BONUS;
+          score += prefEraBonus;
+        }
       }
       if (prefs.mood && MOOD_TARGETS[prefs.mood]) {
         const mt = MOOD_TARGETS[prefs.mood];
         if (Math.abs(features.energy - mt.energy) < MOOD_PROXIMITY && Math.abs(features.valence - mt.valence) < MOOD_PROXIMITY) {
-          score += MOOD_MATCH_BONUS;
+          moodBonus = MOOD_MATCH_BONUS;
+          score += moodBonus;
         }
       }
     }
+
+    const breakdown: ScoreBreakdown = { base, era: eraBonus, genre: genreBonus, prefEra: prefEraBonus, mood: moodBonus };
 
     const reason = classifyReason(
       distance, features.energy, targetFeatures.energy,
       features.valence - targetFeatures.valence, targetYear, candidateYear,
     );
 
-    scored.push({ song: candidate, score, reason, artists: candidateArtists });
+    scored.push({ song: candidate, score, reason, artists: candidateArtists, breakdown });
   }
 
   scored.sort((a, b) => b.score - a.score);
@@ -461,7 +492,7 @@ function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
     if (picked.length >= limit) break;
     if (entry.artists.some((a) => seenArtists.has(a))) continue;
     for (const a of entry.artists) seenArtists.add(a);
-    picked.push({ song: entry.song, reason: entry.reason, matchScore: clampScore(entry.score) });
+    picked.push({ song: entry.song, reason: entry.reason, matchScore: clampScore(entry.score), breakdown: entry.breakdown });
   }
 
   return picked;
@@ -510,7 +541,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     const year = safeYear(String(winner.song.releaseDate ?? ""));
     if (year !== null) seenEras.add(decadeLabel(year));
 
-    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score) });
+    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score), breakdown: winner.breakdown });
   }
 
   return picked;
