@@ -238,7 +238,7 @@ export function getDiversityMeta(
   const eras = new Set<string>();
 
   // Include target song in era calculation for context (guard against invalid dates)
-  const targetYear = safeYear(target.releaseDate);
+  const targetYear = safeYear(String(target.releaseDate ?? ""));
   if (targetYear !== null) {
     eras.add(decadeLabel(targetYear));
   }
@@ -251,7 +251,7 @@ export function getDiversityMeta(
       genreKnown++;
     }
 
-    const year = safeYear(song.releaseDate);
+    const year = safeYear(String(song.releaseDate ?? ""));
     if (year !== null) {
       eras.add(decadeLabel(year));
     }
@@ -301,6 +301,10 @@ export function getDiversityMeta(
  *      "Tones and I" → ["tones and i"] (single artist — "and" is NOT a separator)
  */
 export function splitArtists(artist: string): string[] {
+  // Runtime guard: API responses can smuggle non-string values past TypeScript's
+  // compile-time checks. Return empty array instead of crashing on .split().
+  if (typeof artist !== "string") return [];
+
   // First pass: split on unambiguous separators (comma, ft., feat., with)
   const parts = artist.split(
     /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i,
@@ -320,6 +324,7 @@ export function splitArtists(artist: string): string[] {
 
 /** Extract the primary (first-billed) artist name, normalised to lowercase */
 export function primaryArtist(artist: string): string {
+  if (typeof artist !== "string") return "";
   return splitArtists(artist)[0] ?? artist.trim().toLowerCase();
 }
 
@@ -366,14 +371,14 @@ function scoreCandidates(
 
     // Early-skip candidates sharing any artist with the target — the diversity
     // filter would unconditionally exclude them anyway.
-    const candidateArtists = splitArtists(candidate.artist);
+    const candidateArtists = splitArtists(String(candidate.artist ?? ""));
     if (candidateArtists.some((a) => targetArtists.has(a))) continue;
 
     const distance = featureDistance(targetFeatures, features);
     let score = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
 
     // Bonus: same era (within ERA_PROXIMITY_YEARS)
-    const candidateYear = safeYear(candidate.releaseDate);
+    const candidateYear = safeYear(String(candidate.releaseDate ?? ""));
     if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
       score += SAME_ERA_BONUS;
     }
@@ -486,7 +491,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
       let effective = entry.score;
       const genre = songGenres[entry.song.id];
       if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
-      const year = safeYear(entry.song.releaseDate);
+      const year = safeYear(String(entry.song.releaseDate ?? ""));
       if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
@@ -502,7 +507,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     for (const a of winner.artists) seenArtists.add(a);
     const genre = songGenres[winner.song.id];
     if (genre) seenGenres.add(genre);
-    const year = safeYear(winner.song.releaseDate);
+    const year = safeYear(String(winner.song.releaseDate ?? ""));
     if (year !== null) seenEras.add(decadeLabel(year));
 
     picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score) });
@@ -529,8 +534,8 @@ export function getSimilarSongs(
   const targetFeatures = target.spotify?.audioFeatures;
   if (!targetFeatures) return [];
 
-  const targetYear = safeYear(target.releaseDate);
-  const targetArtists = new Set(splitArtists(target.artist));
+  const targetYear = safeYear(String(target.releaseDate ?? ""));
+  const targetArtists = new Set(splitArtists(String(target.artist ?? "")));
 
   const scored = scoreCandidates(target, catalog, targetFeatures, targetYear, targetArtists, prefs);
   const strategy = resolveStrategy(prefs?.strategy ?? "auto", scored, limit);

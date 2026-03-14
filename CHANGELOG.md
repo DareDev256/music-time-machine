@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.2] - 2026-03-13
+
+### Changed
+- **Runtime type guards** — `splitArtists()` and `primaryArtist()` now return safe defaults (`[]` and `""`) when called with non-string inputs, preventing `.split()`/`.trim()` crashes from API-sourced data that bypasses TypeScript's compile-time checks
+- **String coercion at call boundaries** — All 8 call sites in `scoreCandidates`, `getSimilarSongs`, `getDiversityMeta`, and `pickDiverse` now wrap `.artist` and `.releaseDate` with `String(value ?? "")`, catching both nullish and non-string values before they reach the parsing pipeline
+
+---
+
 ## [1.23.1] - 2026-03-13
 
 ### Added
