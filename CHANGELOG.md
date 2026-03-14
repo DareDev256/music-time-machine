@@ -38,6 +38,11 @@ All notable changes to the Music Time Machine project will be documented in this
 
 ### Added
 - **`useAsyncData` test suite** — 13 tests covering the full state machine lifecycle: idle→loading→success/error transitions, AbortController signal passthrough, unmount abort cleanup, stale request suppression after abort, dependency-driven re-fetch, AbortError swallowing, non-Error rejection handling, empty error message fallback, and console.error logging verification
+## [1.23.1] - 2026-03-13
+
+### Fixed
+- **Diversity reason tags** — Songs picked by the diverse strategy for genre/era variety now show "Unique genre" or "Different era" instead of the misleading audio-similarity reason (e.g. "Similar sound"). The first pick still shows the original reason since it's always the best pure-similarity match
+- **Diversity reason styling** — Diversity-driven reason tags render with distinct colors (purple for genre, teal for era) so users can visually distinguish diversity picks from similarity picks at a glance
 
 ---
 

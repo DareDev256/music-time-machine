@@ -542,7 +542,13 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
   while (picked.length < limit && remaining.length > 0) {
     let bestIdx = -1;
     let bestEffective = -Infinity;
+<<<<<<< HEAD
     let bestTag: DiversityTag = null;
+=======
+    /** Track whether the winning candidate got genre/era diversity bonuses. */
+    let bestGenreBonus = false;
+    let bestEraBonus = false;
+>>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
 
     for (let i = 0; i < remaining.length; i++) {
       const entry = remaining[i];
@@ -552,6 +558,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
       let tag: DiversityTag = null;
 
       const genre = songGenres[entry.song.id];
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
       const year = safeYear(String(entry.song.releaseDate ?? ""));
@@ -573,12 +580,24 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
         if (!tag) tag = "collab";
       }
 >>>>>>> passion/feat-diversity-picked-feat-mmpo5vfs
+=======
+      const hasGenreBonus = !!(genre && !seenGenres.has(genre));
+      if (hasGenreBonus) effective += DIVERSITY_GENRE_BONUS;
+      const year = safeYear(entry.song.releaseDate);
+      const hasEraBonus = year !== null && !seenEras.has(decadeLabel(year));
+      if (hasEraBonus) effective += DIVERSITY_ERA_BONUS;
+>>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
       if (effective > bestEffective) {
         bestEffective = effective;
         bestIdx = i;
+<<<<<<< HEAD
         bestTag = tag;
+=======
+        bestGenreBonus = hasGenreBonus;
+        bestEraBonus = hasEraBonus;
+>>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
       }
     }
 
@@ -592,6 +611,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     if (year !== null) seenEras.add(decadeLabel(year));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     picked.push({
       song: winner.song,
       reason: winner.reason,
@@ -602,6 +622,18 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
 =======
     picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score), breakdown: winner.breakdown });
 >>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
+=======
+    // When diversity bonuses drove the selection, surface that rationale
+    // instead of the generic audio-similarity reason. The first pick never
+    // gets overridden — it's always the best pure-similarity candidate.
+    const reason = picked.length > 0 && bestGenreBonus
+      ? "Unique genre"
+      : picked.length > 0 && bestEraBonus
+        ? "Different era"
+        : winner.reason;
+
+    picked.push({ song: winner.song, reason, matchScore: clampScore(winner.score) });
+>>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
   }
 
   return picked;
