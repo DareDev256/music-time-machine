@@ -42,7 +42,7 @@ export async function searchGeniusSong(
       artist: hit.primary_artist?.name || "Unknown",
     };
   } catch (error) {
-    console.error("Genius search error:", error);
+    console.error("Genius search error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -63,7 +63,7 @@ export async function searchGeniusSongs(
       releaseDate: hit.result.release_date_for_display || "",
     }));
   } catch (error) {
-    console.error("Genius search error:", error);
+    console.error("Genius search error:", error instanceof Error ? error.message : "Unknown");
     return [];
   }
 }
@@ -87,7 +87,7 @@ export async function getGeniusSong(songId: number): Promise<GeniusData | null> 
       releaseDate: song.release_date || song.release_date_for_display || "",
     };
   } catch (error) {
-    console.error("Genius song fetch error:", error);
+    console.error("Genius song fetch error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }
@@ -102,7 +102,7 @@ export async function getGeniusSongBySearch(
 
     return getGeniusSong(searchResult.id);
   } catch (error) {
-    console.error("Genius search error:", error);
+    console.error("Genius search error:", error instanceof Error ? error.message : "Unknown");
     return null;
   }
 }

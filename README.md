@@ -15,6 +15,8 @@ One search. Four platforms. Every metric that matters.
 [![Tests](https://img.shields.io/badge/tests-322_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Version](https://img.shields.io/badge/version-1.24.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-335_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.21.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-279_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -207,6 +209,9 @@ Data       │
 | **Input Sanitization** | `sanitizeQuery()` strips null bytes (`\x00`) and unicode control characters (C0/C1 ranges U+0000–U+001F, U+007F–U+009F) before HTML/char filtering — prevents string truncation attacks in downstream parsers and log injection |
 | **Permissions Policy** | Locks down 11 browser APIs: camera, microphone, geolocation, payment, USB, Bluetooth, serial, HID, idle detection, screen wake lock, web-share (self only) |
 | **CDN Allowlists** | Remote images restricted to Spotify/YouTube/Genius CDNs; `media-src` locked to `p.scdn.co`; audio URLs validated against origin allowlist |
+| **Health Endpoint Auth** | `/api/health` returns only `status` + `version` to unauthenticated callers. Detailed diagnostics (memory, uptime, cache stats, integration config, error counts) require a `HEALTH_AUTH_TOKEN` Bearer header — prevents server reconnaissance (OWASP A01) |
+| **Structured Error Logging** | All API error `catch` blocks log `error.message` only — never the full error object. Prevents stack traces, file paths, and upstream API response bodies from leaking into log aggregators |
+| **Cache Key Normalization** | All cache operations (get/set/has/delete) normalize keys via NFC unicode normalization + control char stripping — prevents cache poisoning via equivalent-but-different byte sequences |
 | **Accessibility** | ARIA combobox pattern on search (listbox + options + activedescendant), focus-trapped modal dialogs with Escape dismiss, keyboard-navigable audio seek slider, dynamic aria-labels on all interactive controls |
 
 ---

@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { searchCache, songCache } from "@/lib/cache";
 import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
@@ -54,6 +54,7 @@ export function recordError(): void {
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Whether to redact internal diagnostics from the health response.
  *
  * In production, memory stats, error counts, and cache internals are
@@ -76,6 +77,35 @@ export async function GET(): Promise<NextResponse> {
  */
 export const GET = withRouteHandler({ route: "health" }, async (request) => {
 >>>>>>> passion/security-add-content-security-poli-mmmte429
+=======
+ * Verify the request carries a valid HEALTH_AUTH_TOKEN via Bearer header.
+ *
+ * Without this gate, unauthenticated users can read heap sizes, error rates,
+ * cache utilization, uptime, and integration config — giving attackers a
+ * detailed internal map of the running server (OWASP A01: Broken Access Control).
+ *
+ * When no HEALTH_AUTH_TOKEN env var is set, detailed diagnostics are simply
+ * omitted — the public response is limited to status + version.
+ */
+function isAuthorizedForDetails(request: NextRequest): boolean {
+  const token = process.env.HEALTH_AUTH_TOKEN;
+  if (!token) return false; // No token configured = no detailed access
+
+  const authHeader = request.headers.get("authorization");
+  if (!authHeader?.startsWith("Bearer ")) return false;
+
+  // Constant-time-ish comparison to prevent timing attacks on the token.
+  // Length check first — Buffer operations require equal-length inputs.
+  const provided = authHeader.slice(7);
+  if (provided.length !== token.length) return false;
+
+  const a = Buffer.from(provided);
+  const b = Buffer.from(token);
+  return a.every((byte, i) => byte === b[i]);
+}
+
+export async function GET(request: NextRequest): Promise<NextResponse> {
+>>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
   requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
@@ -119,6 +149,7 @@ export const GET = withRouteHandler({ route: "health" }, async (request) => {
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // ── Base response — always exposed (safe for public consumption) ────
   const response: Record<string, unknown> = {
 =======
@@ -128,6 +159,27 @@ export const GET = withRouteHandler({ route: "health" }, async (request) => {
     status,
     version: APP_VERSION,
     timestamp: new Date(now).toISOString(),
+=======
+  // ── Public response (safe for unauthenticated consumers) ─────────────
+  // Only expose status + version. Memory, uptime, error counts, cache stats,
+  // and integration config are server internals that aid reconnaissance.
+  const publicPayload = {
+    status,
+    version: APP_VERSION,
+    timestamp: new Date(now).toISOString(),
+  };
+
+  if (!isAuthorizedForDetails(request)) {
+    return NextResponse.json(publicPayload);
+  }
+
+  // ── Detailed diagnostics (requires HEALTH_AUTH_TOKEN) ────────────────
+  const mem = process.memoryUsage();
+  const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
+
+  return NextResponse.json({
+    ...publicPayload,
+>>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
     uptime: {
       ms: uptimeMs,
       human: formatUptime(uptimeMs),

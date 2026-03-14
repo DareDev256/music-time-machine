@@ -159,6 +159,15 @@ All notable changes to the Music Time Machine project will be documented in this
 ### Changed
 - **Health endpoint data fetching optimized** — Cache stats (`getStats()`) were called 6 times per request (3x per cache); now snapshotted once into locals. Catalog size hoisted to module scope as `CATALOG_SIZE` since `mockSongs` is a static import — eliminates a throwaway `Object.keys()` array allocation per request. Integration count uses arithmetic coercion (`+bool`) instead of `Object.values().filter().length`, avoiding two intermediate array allocations
 - **`TTLCache.delete()` now normalizes keys** — `get()` and `set()` both applied NFC normalization + control-char stripping, but `delete()` used the raw key. Unicode-equivalent keys (e.g. precomposed vs decomposed "cafe\u0301") could silently miss the cache entry, leaving stale data unevictable
+## [1.21.0] - 2026-03-06
+
+### Security
+- **Health endpoint information disclosure** — `/api/health` previously exposed heap memory sizes, RSS, uptime, error counts, cache utilization, and integration config to unauthenticated users — a reconnaissance goldmine for attackers (OWASP A01). Now returns only `status` + `version` + `timestamp` without auth. Detailed diagnostics require a `HEALTH_AUTH_TOKEN` Bearer header. Added `HEALTH_AUTH_TOKEN` to `.env.example`
+- **Error object logging leaks server internals** — All `catch` blocks in `spotify.ts`, `youtube.ts`, and `genius.ts` logged the full error object (`console.error("...", error)`), which serializes stack traces containing file paths, and upstream API response bodies that may echo back auth headers. Replaced with `error.message` extraction across all 9 catch blocks
+- **Cache.delete() normalization bypass** — `TTLCache.delete()` used the raw key instead of `normalizeKey()`, meaning entries set via NFC-normalized keys couldn't be deleted with unicode-equivalent variants. Fixed to normalize consistently across all cache operations (get/set/has/delete)
+
+### Added
+- 2 new tests for cache delete normalization (unicode NFC equivalence, zero-width char stripping)
 
 ---
 
