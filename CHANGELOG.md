@@ -67,6 +67,12 @@ All notable changes to the Music Time Machine project will be documented in this
 - **Stale recommendation prefs from React 19 batching** — `PlaylistConfigurator` and `SimilarSongs` maintained independent `useState` copies of recommendation preferences. When both updated in the same event handler, React 19 automatic batching caused stale closures. Consolidated into a single `PrefsProvider` context backed by `useReducer` that always re-reads from localStorage after writes
 - **Cross-tab preference sync** — Recommendation preferences now sync across browser tabs via `storage` event listener. Changing genre/mood/era filters in one tab immediately reflects in others
 - **Strategy state duplication** — `SelectionStrategy` ("auto"/"best-match"/"diverse") was managed independently in `SimilarSongs` via local `useState`. Now lives in the centralized `PrefsProvider` alongside prefs, persisted to localStorage
+## [1.22.2] - 2026-03-11
+
+### Security
+- **Fallback CSP in next.config.ts** — Added static Content-Security-Policy header as defense-in-depth baseline for requests the proxy doesn't intercept (static assets, error pages). Uses `'strict-dynamic'` + `'unsafe-inline'` fallback pair per CSP3 spec §8.1
+- **Health endpoint hardened** — Wrapped `/api/health` with `withRouteHandler` for rate limiting (6 req/min per IP) and security headers. Memory details (heap, RSS) now gated behind `HEALTH_TOKEN` env var to prevent unauthenticated runtime recon
+- **`health` rate limit bucket** — Added to `ROUTE_LIMITS` in rateLimit.ts (was the only unprotected API route)
 
 ---
 

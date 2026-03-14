@@ -4,6 +4,7 @@ import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
 import { mockSongs } from "@/lib/mockData";
+import { withRouteHandler } from "@/lib/apiHandler";
 
 // ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
@@ -52,6 +53,7 @@ export function recordError(): void {
 }
 
 /**
+<<<<<<< HEAD
  * Whether to redact internal diagnostics from the health response.
  *
  * In production, memory stats, error counts, and cache internals are
@@ -64,6 +66,16 @@ export function recordError(): void {
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 export async function GET(): Promise<NextResponse> {
+=======
+ * Health check — now rate-limited via withRouteHandler.
+ *
+ * Memory details (heap, rss, external) are only included when the request
+ * provides a valid HEALTH_TOKEN query param matching the server-side env var.
+ * This prevents unauthenticated recon of runtime memory patterns while
+ * keeping the health endpoint useful for uptime monitoring.
+ */
+export const GET = withRouteHandler({ route: "health" }, async (request) => {
+>>>>>>> passion/security-add-content-security-poli-mmmte429
   requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
@@ -106,8 +118,13 @@ export async function GET(): Promise<NextResponse> {
 
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
+<<<<<<< HEAD
   // ── Base response — always exposed (safe for public consumption) ────
   const response: Record<string, unknown> = {
+=======
+  // ── Build response (memory gated behind token) ────────────────────────
+  const body: Record<string, unknown> = {
+>>>>>>> passion/security-add-content-security-poli-mmmte429
     status,
     version: APP_VERSION,
     timestamp: new Date(now).toISOString(),
@@ -130,8 +147,22 @@ export async function GET(): Promise<NextResponse> {
       apiRoutes: API_ROUTE_COUNT,
       requests: requestCount,
       errors: errorCount,
+<<<<<<< HEAD
     };
     response.memory = {
+=======
+    },
+  };
+
+  // Gate memory details behind a shared secret — process.memoryUsage()
+  // reveals heap pressure patterns useful for timing side-channels.
+  const healthToken = process.env.HEALTH_TOKEN;
+  const providedToken = request.nextUrl.searchParams.get("token");
+  if (healthToken && providedToken === healthToken) {
+    const mem = process.memoryUsage();
+    const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
+    body.memory = {
+>>>>>>> passion/security-add-content-security-poli-mmmte429
       rss: toMB(mem.rss),
       heapUsed: toMB(mem.heapUsed),
       heapTotal: toMB(mem.heapTotal),
@@ -140,8 +171,13 @@ export async function GET(): Promise<NextResponse> {
     };
   }
 
+<<<<<<< HEAD
   return NextResponse.json(response);
 }
+=======
+  return NextResponse.json(body);
+});
+>>>>>>> passion/security-add-content-security-poli-mmmte429
 
 function formatUptime(ms: number): string {
   const s = Math.floor(ms / 1000);
