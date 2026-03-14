@@ -18,6 +18,13 @@ All notable changes to the Music Time Machine project will be documented in this
 ### Changed
 - **Runtime type guards** — `splitArtists()` and `primaryArtist()` now return safe defaults (`[]` and `""`) when called with non-string inputs, preventing `.split()`/`.trim()` crashes from API-sourced data that bypasses TypeScript's compile-time checks
 - **String coercion at call boundaries** — All 8 call sites in `scoreCandidates`, `getSimilarSongs`, `getDiversityMeta`, and `pickDiverse` now wrap `.artist` and `.releaseDate` with `String(value ?? "")`, catching both nullish and non-string values before they reach the parsing pipeline
+## [1.24.0] - 2026-03-13
+
+### Added
+- **Collaboration-aware diversity picking** — The diverse/auto strategy now detects featured artist tracks (ft./feat./with) and applies a `COLLAB_DIVERSITY_BONUS` (+8) to reward cross-genre collaborations. Songs with featured artists naturally bridge audiences and genres, making them high-value diversity picks
+- **Diversity reason tags** — Each recommendation card in diverse/auto mode now shows *why* it was diversity-picked: "New genre" (violet), "New era" (teal), or "Collab pick" (rose). Positioned as a top-left badge on the album art for at-a-glance transparency into the engine's decision-making
+- **Collaboration indicator** — A `Users` icon appears next to song titles on recommendation cards when the track has featured artists, giving visual context for multi-artist credits
+- **Exported `PickResult` and `DiversityTag` types** — Recommendation pick metadata is now part of the public API for downstream consumers
 
 ---
 
