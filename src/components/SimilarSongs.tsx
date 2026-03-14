@@ -2,12 +2,12 @@
 
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight } from "lucide-react";
+import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
-import type { RecommendationPrefs, SelectionStrategy } from "@/lib/recommendations";
+import type { RecommendationPrefs, SelectionStrategy, DiversityTag } from "@/lib/recommendations";
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 
 interface SimilarSongsProps {
@@ -66,6 +66,16 @@ function diversityBgColor(score: number): string {
   if (score >= 45) return "bg-sky-400/10 border-sky-400/20";
   if (score >= 20) return "bg-amber-400/10 border-amber-400/20";
   return "bg-foreground/5 border-foreground/10";
+}
+
+/** Label + color for diversity reason tags on recommendation cards */
+function diversityTagStyle(tag: DiversityTag): { label: string; cls: string } | null {
+  switch (tag) {
+    case "new-genre": return { label: "New genre", cls: "bg-violet-500/20 text-violet-300" };
+    case "new-era":   return { label: "New era", cls: "bg-teal-500/20 text-teal-300" };
+    case "collab":    return { label: "Collab pick", cls: "bg-rose-500/20 text-rose-300" };
+    default:          return null;
+  }
 }
 
 const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc: string }[] = [
@@ -216,7 +226,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
       </AnimatePresence>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        {similar.map(({ song: rec, reason, matchScore }, i) => (
+        {similar.map(({ song: rec, reason, matchScore, isCollab, diversityTag }, i) => (
           <motion.div
             key={rec.id}
             initial={{ opacity: 0, y: 12 }}
@@ -284,10 +294,28 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                 <span className="absolute bottom-1.5 left-1.5 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm">
                   {reason}
                 </span>
+                {/* Diversity tag — shows why the diverse strategy picked this */}
+                {diversityTag && (() => {
+                  const style = diversityTagStyle(diversityTag);
+                  return style ? (
+                    <span className={`absolute top-1.5 left-1.5 text-[9px] px-1.5 py-0.5 rounded-full backdrop-blur-sm font-medium ${style.cls}`}>
+                      {style.label}
+                    </span>
+                  ) : null;
+                })()}
               </div>
-              <p className="text-sm font-medium text-foreground truncate">
-                {rec.title}
-              </p>
+              <div className="flex items-center gap-1.5 min-w-0">
+                <p className="text-sm font-medium text-foreground truncate">
+                  {rec.title}
+                </p>
+                {isCollab && (
+                  <Users
+                    className="w-3 h-3 text-rose-400/70 shrink-0"
+                    aria-label="Collaboration track"
+                    role="img"
+                  />
+                )}
+              </div>
               <p className="text-xs text-foreground-secondary truncate">
                 {rec.artist}
               </p>

@@ -103,6 +103,12 @@ const ERA_FULL_SPREAD = 2;
 const DIVERSITY_GENRE_BONUS = 25;
 /** Bonus added during the diverse-strategy pick phase for an unseen era. */
 const DIVERSITY_ERA_BONUS = 15;
+/**
+ * Bonus for collaboration tracks (ft./feat./with) in the diversity picker.
+ * Collabs naturally bridge genres and audiences — a featured artist from a
+ * different scene is a strong diversity signal the engine should reward.
+ */
+const COLLAB_DIVERSITY_BONUS = 8;
 
 /**
  * Popularity bonus scale for diverse/auto strategies. Popular songs get a small
@@ -325,11 +331,18 @@ export function primaryArtist(artist: string): string {
 
 // ── Pick result type ─────────────────────────────────────────────────────
 
+/** Why the diversity picker chose this song over alternatives. */
+export type DiversityTag = "new-genre" | "new-era" | "collab" | null;
+
 /** A single recommendation pick with scoring metadata for the UI. */
-interface PickResult {
+export interface PickResult {
   song: SongData;
   reason: string;
   matchScore: number;
+  /** Whether this song is a collaboration (has featured artists). */
+  isCollab: boolean;
+  /** Why the diversity strategy picked this song, if applicable. */
+  diversityTag: DiversityTag;
 }
 
 /** Clamp a raw score into the 0–99 integer range used by the UI. */
@@ -456,7 +469,13 @@ function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
     if (picked.length >= limit) break;
     if (entry.artists.some((a) => seenArtists.has(a))) continue;
     for (const a of entry.artists) seenArtists.add(a);
-    picked.push({ song: entry.song, reason: entry.reason, matchScore: clampScore(entry.score) });
+    picked.push({
+      song: entry.song,
+      reason: entry.reason,
+      matchScore: clampScore(entry.score),
+      isCollab: entry.artists.length > 1,
+      diversityTag: null,
+    });
   }
 
   return picked;
@@ -478,21 +497,37 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
   while (picked.length < limit && remaining.length > 0) {
     let bestIdx = -1;
     let bestEffective = -Infinity;
+    let bestTag: DiversityTag = null;
 
     for (let i = 0; i < remaining.length; i++) {
       const entry = remaining[i];
       if (entry.artists.some((a) => seenArtists.has(a))) continue;
 
       let effective = entry.score;
+      let tag: DiversityTag = null;
+
       const genre = songGenres[entry.song.id];
-      if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
+      if (genre && !seenGenres.has(genre)) {
+        effective += DIVERSITY_GENRE_BONUS;
+        tag = "new-genre";
+      }
       const year = safeYear(entry.song.releaseDate);
-      if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
+      if (year !== null && !seenEras.has(decadeLabel(year))) {
+        effective += DIVERSITY_ERA_BONUS;
+        // Only override tag if genre wasn't the primary reason
+        if (!tag) tag = "new-era";
+      }
+      // Collaboration bonus — songs with featured artists bridge audiences
+      if (entry.artists.length > 1) {
+        effective += COLLAB_DIVERSITY_BONUS;
+        if (!tag) tag = "collab";
+      }
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
       if (effective > bestEffective) {
         bestEffective = effective;
         bestIdx = i;
+        bestTag = tag;
       }
     }
 
@@ -505,7 +540,13 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     const year = safeYear(winner.song.releaseDate);
     if (year !== null) seenEras.add(decadeLabel(year));
 
-    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score) });
+    picked.push({
+      song: winner.song,
+      reason: winner.reason,
+      matchScore: clampScore(winner.score),
+      isCollab: winner.artists.length > 1,
+      diversityTag: bestTag,
+    });
   }
 
   return picked;
