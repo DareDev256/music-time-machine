@@ -73,6 +73,11 @@ All notable changes to the Music Time Machine project will be documented in this
 - **Fallback CSP in next.config.ts** — Added static Content-Security-Policy header as defense-in-depth baseline for requests the proxy doesn't intercept (static assets, error pages). Uses `'strict-dynamic'` + `'unsafe-inline'` fallback pair per CSP3 spec §8.1
 - **Health endpoint hardened** — Wrapped `/api/health` with `withRouteHandler` for rate limiting (6 req/min per IP) and security headers. Memory details (heap, RSS) now gated behind `HEALTH_TOKEN` env var to prevent unauthenticated runtime recon
 - **`health` rate limit bucket** — Added to `ROUTE_LIMITS` in rateLimit.ts (was the only unprotected API route)
+## [1.22.2] - 2026-03-13
+
+### Security
+- **Edge middleware** (`src/middleware.ts`) — New request-level security layer running on Vercel's edge network before any route handler. Adds `X-Request-Id` header (crypto.randomUUID) to every request/response for security incident correlation, blocks path traversal attempts (`/../`, `/./`, `%2e%2e` encoded variants) at the edge before they reach route handlers, and enforces method restriction (GET/HEAD/OPTIONS only) on all API routes with proper 405 responses
+- **Health endpoint hardening** — `/api/health` now has rate limiting (30 req/min per IP via token bucket) and security headers (`nosniff`, `X-Frame-Options: DENY`, `no-store`) matching all other API routes. Previously the only route bypassing both `withRouteHandler()` and security headers, making it a reconnaissance and DDoS vector
 
 ---
 

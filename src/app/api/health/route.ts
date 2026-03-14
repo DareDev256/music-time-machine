@@ -4,7 +4,11 @@ import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
 import { mockSongs } from "@/lib/mockData";
+<<<<<<< HEAD
 import { withRouteHandler } from "@/lib/apiHandler";
+=======
+import { extractClientIp, tryConsume } from "@/lib/rateLimit";
+>>>>>>> passion/security-diversity-picked-securit-mmou91b3
 
 // ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
@@ -53,6 +57,7 @@ export function recordError(): void {
 }
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  * Whether to redact internal diagnostics from the health response.
@@ -106,6 +111,31 @@ function isAuthorizedForDetails(request: NextRequest): boolean {
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
 >>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
+=======
+ * Security headers for health responses. This route doesn't use
+ * withRouteHandler() (it needs access to process-level counters),
+ * so headers are applied manually.
+ */
+const HEALTH_HEADERS: Record<string, string> = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Cache-Control": "no-store",
+};
+
+export async function GET(request: NextRequest): Promise<NextResponse> {
+  // ── Rate limit: 30 health checks/min per IP ────────────────────────
+  // Health endpoints are common DDoS targets and reconnaissance vectors.
+  // Without rate limiting, attackers can probe memory/uptime patterns
+  // to time attacks during high-load periods.
+  const clientIp = extractClientIp(request);
+  if (!tryConsume(`route:health:${clientIp}`, 30, 60_000)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429, headers: { ...HEALTH_HEADERS, "Retry-After": "60" } }
+    );
+  }
+
+>>>>>>> passion/security-diversity-picked-securit-mmou91b3
   requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
@@ -177,6 +207,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const mem = process.memoryUsage();
   const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
 
+<<<<<<< HEAD
   return NextResponse.json({
     ...publicPayload,
 >>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
@@ -225,6 +256,40 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
 <<<<<<< HEAD
   return NextResponse.json(response);
+=======
+  return NextResponse.json(
+    {
+      status,
+      version: APP_VERSION,
+      timestamp: new Date(now).toISOString(),
+      uptime: {
+        ms: uptimeMs,
+        human: formatUptime(uptimeMs),
+      },
+      mode: useMockData ? "mock" : "live",
+      integrations: { spotify, youtube, genius },
+      checks,
+      caches: {
+        search: searchStats,
+        song: songStats,
+      },
+      metrics: {
+        catalogSize: CATALOG_SIZE,
+        apiRoutes: API_ROUTE_COUNT,
+        requests: requestCount,
+        errors: errorCount,
+      },
+      memory: {
+        rss: toMB(mem.rss),
+        heapUsed: toMB(mem.heapUsed),
+        heapTotal: toMB(mem.heapTotal),
+        external: toMB(mem.external),
+        unit: "MB",
+      },
+    },
+    { headers: HEALTH_HEADERS }
+  );
+>>>>>>> passion/security-diversity-picked-securit-mmou91b3
 }
 =======
   return NextResponse.json(body);
