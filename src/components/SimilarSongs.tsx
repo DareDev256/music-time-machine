@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,11 +8,16 @@ import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { RecommendationPrefs, SelectionStrategy, DiversityTag } from "@/lib/recommendations";
 =======
 import type { RecommendationPrefs, SelectionStrategy, ScoreBreakdown } from "@/lib/recommendations";
 >>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
+=======
+import type { SelectionStrategy } from "@/lib/recommendations";
+>>>>>>> passion/fix-diversity-picked-fix-mmp832v3
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
+import { usePrefs } from "@/components/PrefsProvider";
 
 interface SimilarSongsProps {
   song: SongData;
@@ -121,9 +126,7 @@ function ScoreBreakdownBar({ breakdown, total }: { breakdown: ScoreBreakdown; to
 }
 
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
-  const [prefs, setPrefs] = useState<RecommendationPrefs>({});
-  const handlePrefsChange = useCallback((p: RecommendationPrefs) => setPrefs(p), []);
-  const [strategy, setStrategy] = useState<SelectionStrategy>("auto");
+  const { prefs, strategy, setStrategy } = usePrefs();
 
   const effectivePrefs = useMemo(
     () => ({ ...prefs, strategy }),
@@ -211,7 +214,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
         )}
       </AnimatePresence>
 
-      <PlaylistConfigurator onChange={handlePrefsChange} />
+      <PlaylistConfigurator />
 
       {/* Diversity indicator bar — keyed on label+score so it re-animates on pref changes */}
       <AnimatePresence mode="wait">

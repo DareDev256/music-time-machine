@@ -56,6 +56,12 @@ All notable changes to the Music Time Machine project will be documented in this
 - **`RecentlyViewed` component** (`src/components/RecentlyViewed.tsx`) — Compact pill-style cards with album art, staggered entrance animations, and hover-to-accent transitions. Uses `scrollbar-hide` utility for clean horizontal overflow
 - **`scrollbar-hide` CSS utility** — Cross-browser scrollbar hiding for horizontal scroll strips (WebKit + Firefox + IE)
 - **Song detail page integration** — Automatically records viewed songs when song data loads, feeding the home page strip
+## [1.22.2] - 2026-03-13
+
+### Fixed
+- **Stale recommendation prefs from React 19 batching** — `PlaylistConfigurator` and `SimilarSongs` maintained independent `useState` copies of recommendation preferences. When both updated in the same event handler, React 19 automatic batching caused stale closures. Consolidated into a single `PrefsProvider` context backed by `useReducer` that always re-reads from localStorage after writes
+- **Cross-tab preference sync** — Recommendation preferences now sync across browser tabs via `storage` event listener. Changing genre/mood/era filters in one tab immediately reflects in others
+- **Strategy state duplication** — `SelectionStrategy` ("auto"/"best-match"/"diverse") was managed independently in `SimilarSongs` via local `useState`. Now lives in the centralized `PrefsProvider` alongside prefs, persisted to localStorage
 
 ---
 

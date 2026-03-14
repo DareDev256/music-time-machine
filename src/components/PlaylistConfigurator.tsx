@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SlidersHorizontal, X, RotateCcw } from "lucide-react";
 import { catalogGenres } from "@/lib/mockData";
 import type { RecommendationPrefs } from "@/lib/recommendations";
-
-const STORAGE_KEY = "mtm-rec-prefs";
+import { usePrefs } from "@/components/PrefsProvider";
 
 const MOODS = [
   { id: "upbeat", label: "Upbeat", icon: "☀️" },
@@ -18,34 +17,11 @@ const MOODS = [
 const ERA_MIN = 2015;
 const ERA_MAX = 2025;
 
-function loadPrefs(): RecommendationPrefs {
-  if (typeof window === "undefined") return {};
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch { return {}; }
-}
-
-function savePrefs(prefs: RecommendationPrefs): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
-}
-
-interface Props {
-  onChange: (prefs: RecommendationPrefs) => void;
-}
-
-export default function PlaylistConfigurator({ onChange }: Props) {
+export default function PlaylistConfigurator() {
   const [open, setOpen] = useState(false);
-  const [prefs, setPrefs] = useState<RecommendationPrefs>(loadPrefs);
+  const { prefs, setPrefs, reset: resetPrefs } = usePrefs();
 
-  const commit = useCallback((next: RecommendationPrefs) => {
-    setPrefs(next);
-    savePrefs(next);
-    onChange(next);
-  }, [onChange]);
-
-  // Emit initial prefs on mount
-  useEffect(() => { onChange(prefs); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const commit = (next: RecommendationPrefs) => setPrefs(next);
 
   const toggleGenre = (g: string) => {
     const current = prefs.genres ?? [];
@@ -68,7 +44,7 @@ export default function PlaylistConfigurator({ onChange }: Props) {
     commit(rest);
   };
 
-  const reset = () => commit({});
+  const reset = () => resetPrefs();
 
   const activeCount = (prefs.genres?.length ?? 0) + (prefs.mood ? 1 : 0) + (prefs.eraRange ? 1 : 0);
 
