@@ -10,6 +10,12 @@ All notable changes to the Music Time Machine project will be documented in this
 
 ### Added
 - **6 new traceability tests** — UUID format validation, uniqueness verification, X-Request-ID presence on 200/429/500 responses, and request ID inclusion in error log messages (341 tests across 26 suites)
+## [1.24.0] - 2026-03-13
+
+### Added
+- **Score breakdown bars** — each recommendation card now renders a stacked bar showing exactly how the match score was computed: base audio similarity (gray), era proximity bonus (sky), genre preference bonus (pink), preferred era bonus (amber), and mood match bonus (violet). Segments are proportionally sized and reveal exact point values on hover via native tooltips. Accessible via `role="img"` with a descriptive `aria-label`
+- **`ScoreBreakdown` type** — new exported interface decomposing match scores into 5 additive components (`base`, `era`, `genre`, `prefEra`, `mood`), threaded through the entire scoring→picking→rendering pipeline
+- **`PickResult.breakdown` field** — recommendation results now carry their full score breakdown, enabling downstream consumers (UI, analytics, tests) to inspect scoring decisions without re-running the engine
 
 ---
 

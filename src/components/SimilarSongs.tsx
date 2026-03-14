@@ -7,7 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
+<<<<<<< HEAD
 import type { RecommendationPrefs, SelectionStrategy, DiversityTag } from "@/lib/recommendations";
+=======
+import type { RecommendationPrefs, SelectionStrategy, ScoreBreakdown } from "@/lib/recommendations";
+>>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 
 interface SimilarSongsProps {
@@ -83,6 +87,38 @@ const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc
   { id: "best-match", label: "Best match", icon: Zap, desc: "Highest similarity scores" },
   { id: "diverse", label: "Diverse", icon: Layers, desc: "Maximize genre & era spread" },
 ];
+
+/** Stacked bar showing score composition — base similarity + bonus segments */
+function ScoreBreakdownBar({ breakdown, total }: { breakdown: ScoreBreakdown; total: number }) {
+  const segments: { value: number; color: string; label: string }[] = [
+    { value: breakdown.base, color: "bg-foreground/20", label: "Similarity" },
+    ...(breakdown.era > 0 ? [{ value: breakdown.era, color: "bg-sky-400/60", label: "Era" }] : []),
+    ...(breakdown.genre > 0 ? [{ value: breakdown.genre, color: "bg-pink-400/60", label: "Genre" }] : []),
+    ...(breakdown.prefEra > 0 ? [{ value: breakdown.prefEra, color: "bg-amber-400/60", label: "Pref era" }] : []),
+    ...(breakdown.mood > 0 ? [{ value: breakdown.mood, color: "bg-violet-400/60", label: "Mood" }] : []),
+  ];
+  // Normalize against the clamped total (max 99) for visual width
+  const cap = Math.max(total, 1);
+
+  return (
+    <div
+      className="mt-1.5 flex items-center gap-1"
+      role="img"
+      aria-label={`Score breakdown: ${segments.map((s) => `${s.label} ${Math.round(s.value)}`).join(", ")}`}
+    >
+      <div className="flex-1 h-1 rounded-full bg-foreground/5 overflow-hidden flex">
+        {segments.map(({ value, color, label }) => (
+          <div
+            key={label}
+            className={`h-full ${color} transition-all duration-500`}
+            style={{ width: `${(value / cap) * 100}%` }}
+            title={`${label}: +${Math.round(value)}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
   const [prefs, setPrefs] = useState<RecommendationPrefs>({});
@@ -226,7 +262,11 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
       </AnimatePresence>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+<<<<<<< HEAD
         {similar.map(({ song: rec, reason, matchScore, isCollab, diversityTag }, i) => (
+=======
+        {similar.map(({ song: rec, reason, matchScore, breakdown }, i) => (
+>>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
           <motion.div
             key={rec.id}
             initial={{ opacity: 0, y: 12 }}
@@ -319,6 +359,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
               <p className="text-xs text-foreground-secondary truncate">
                 {rec.artist}
               </p>
+              <ScoreBreakdownBar breakdown={breakdown} total={matchScore} />
             </Link>
           </motion.div>
         ))}
