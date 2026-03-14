@@ -4,11 +4,8 @@ import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
 import { mockSongs } from "@/lib/mockData";
-<<<<<<< HEAD
 import { withRouteHandler } from "@/lib/apiHandler";
-=======
 import { extractClientIp, tryConsume } from "@/lib/rateLimit";
->>>>>>> passion/security-diversity-picked-securit-mmou91b3
 
 // ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
@@ -57,9 +54,6 @@ export function recordError(): void {
 }
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Whether to redact internal diagnostics from the health response.
  *
  * In production, memory stats, error counts, and cache internals are
@@ -72,7 +66,6 @@ export function recordError(): void {
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 export async function GET(): Promise<NextResponse> {
-=======
  * Health check — now rate-limited via withRouteHandler.
  *
  * Memory details (heap, rss, external) are only included when the request
@@ -81,8 +74,6 @@ export async function GET(): Promise<NextResponse> {
  * keeping the health endpoint useful for uptime monitoring.
  */
 export const GET = withRouteHandler({ route: "health" }, async (request) => {
->>>>>>> passion/security-add-content-security-poli-mmmte429
-=======
  * Verify the request carries a valid HEALTH_AUTH_TOKEN via Bearer header.
  *
  * Without this gate, unauthenticated users can read heap sizes, error rates,
@@ -110,8 +101,6 @@ function isAuthorizedForDetails(request: NextRequest): boolean {
 }
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
->>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
-=======
  * Security headers for health responses. This route doesn't use
  * withRouteHandler() (it needs access to process-level counters),
  * so headers are applied manually.
@@ -135,7 +124,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     );
   }
 
->>>>>>> passion/security-diversity-picked-securit-mmou91b3
   requestCount++;
   const now = Date.now();
   const uptimeMs = now - startedAt;
@@ -178,18 +166,13 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   // ── Base response — always exposed (safe for public consumption) ────
   const response: Record<string, unknown> = {
-=======
   // ── Build response (memory gated behind token) ────────────────────────
   const body: Record<string, unknown> = {
->>>>>>> passion/security-add-content-security-poli-mmmte429
     status,
     version: APP_VERSION,
     timestamp: new Date(now).toISOString(),
-=======
   // ── Public response (safe for unauthenticated consumers) ─────────────
   // Only expose status + version. Memory, uptime, error counts, cache stats,
   // and integration config are server internals that aid reconnaissance.
@@ -207,10 +190,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const mem = process.memoryUsage();
   const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
 
-<<<<<<< HEAD
   return NextResponse.json({
     ...publicPayload,
->>>>>>> passion/security-diversity-picked-securit-mmfmpsrw
     uptime: {
       ms: uptimeMs,
       human: formatUptime(uptimeMs),
@@ -230,10 +211,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       apiRoutes: API_ROUTE_COUNT,
       requests: requestCount,
       errors: errorCount,
-<<<<<<< HEAD
     };
     response.memory = {
-=======
     },
   };
 
@@ -245,7 +224,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const mem = process.memoryUsage();
     const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
     body.memory = {
->>>>>>> passion/security-add-content-security-poli-mmmte429
       rss: toMB(mem.rss),
       heapUsed: toMB(mem.heapUsed),
       heapTotal: toMB(mem.heapTotal),
@@ -254,9 +232,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     };
   }
 
-<<<<<<< HEAD
   return NextResponse.json(response);
-=======
   return NextResponse.json(
     {
       status,
@@ -289,12 +265,16 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     },
     { headers: HEALTH_HEADERS }
   );
->>>>>>> passion/security-diversity-picked-securit-mmou91b3
+  return NextResponse.json(response, {
+    headers: {
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
+      "Cache-Control": "no-store",
+    },
+  });
 }
-=======
   return NextResponse.json(body);
 });
->>>>>>> passion/security-add-content-security-poli-mmmte429
 
 function formatUptime(ms: number): string {
   const s = Math.floor(ms / 1000);

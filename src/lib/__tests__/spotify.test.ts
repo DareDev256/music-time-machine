@@ -3,6 +3,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 // Mock dependencies before importing the module under test
 vi.mock("../safeFetch", () => ({
   safeFetch: vi.fn(),
+  safeJson: vi.fn((resp: { json: () => Promise<unknown> }) => resp.json()),
 }));
 vi.mock("../rateLimit", () => ({
   checkSpotifyLimit: vi.fn(() => true),
@@ -14,7 +15,10 @@ import { checkSpotifyLimit } from "../rateLimit";
 // Must re-import fresh per test to reset token cache
 async function loadModule() {
   vi.resetModules();
-  vi.mock("../safeFetch", () => ({ safeFetch: vi.fn() }));
+  vi.mock("../safeFetch", () => ({
+    safeFetch: vi.fn(),
+    safeJson: vi.fn((resp: { json: () => Promise<unknown> }) => resp.json()),
+  }));
   vi.mock("../rateLimit", () => ({ checkSpotifyLimit: vi.fn(() => true) }));
   return import("../spotify");
 }

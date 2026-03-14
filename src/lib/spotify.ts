@@ -1,7 +1,7 @@
 import { SpotifyData, ArtistData } from "@/types";
 import { checkSpotifyLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
-import { safeFetch } from "./safeFetch";
+import { safeFetch, safeJson } from "./safeFetch";
 import { toSlug } from "./toSlug";
 
 let accessToken: string | null = null;
@@ -32,7 +32,7 @@ async function getAccessToken(): Promise<string> {
     throw new Error("Failed to get Spotify access token");
   }
 
-  const data = await response.json();
+  const data = await safeJson<{ access_token: string; expires_in: number }>(response);
   accessToken = data.access_token;
   tokenExpiry = Date.now() + (data.expires_in - 60) * 1000; // Refresh 1 min early
 
@@ -52,7 +52,7 @@ async function spotifyFetch(endpoint: string) {
     throw new Error(`Spotify API error: ${response.status}`);
   }
 
-  return response.json();
+  return safeJson(response);
 }
 
 export async function searchSpotifyTrack(

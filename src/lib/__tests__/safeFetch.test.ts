@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { assertAllowedOrigin } from "../safeFetch";
+import { assertAllowedOrigin, sanitizeJson } from "../safeFetch";
 
 describe("assertAllowedOrigin", () => {
   it("allows Spotify API origin", () => {
@@ -50,5 +50,66 @@ describe("assertAllowedOrigin", () => {
 
   it("blocks subdomain spoofing", () => {
     expect(() => assertAllowedOrigin("https://api.spotify.com.evil.com/v1/tracks")).toThrow("SSRF blocked");
+  });
+});
+
+describe("sanitizeJson", () => {
+  it("passes through clean objects unchanged", () => {
+    const input = { tracks: { items: [{ id: "abc", name: "Song" }] } };
+    expect(sanitizeJson(input)).toEqual(input);
+  });
+
+  it("strips __proto__ keys from objects", () => {
+    // Force __proto__ as an own property via null-prototype object
+    const obj = Object.create(null);
+    obj.name = "safe";
+    obj["__proto__"] = { isAdmin: true };
+    const result = sanitizeJson(obj) as Record<string, unknown>;
+    expect(result).toEqual({ name: "safe" });
+    expect(Object.prototype.hasOwnProperty.call(result, "__proto__")).toBe(false);
+  });
+
+  it("strips constructor and prototype keys", () => {
+    const obj = Object.create(null);
+    obj.data = "ok";
+    obj["constructor"] = { payload: true };
+    obj["prototype"] = { injected: true };
+    const result = sanitizeJson(obj);
+    expect(result).toEqual({ data: "ok" });
+  });
+
+  it("sanitizes nested objects recursively", () => {
+    const obj = Object.create(null);
+    const nested = Object.create(null);
+    nested.valid = 1;
+    nested["__proto__"] = { evil: true };
+    obj.response = nested;
+    const result = sanitizeJson(obj) as { response: Record<string, unknown> };
+    expect(result.response).toEqual({ valid: 1 });
+  });
+
+  it("sanitizes arrays of objects", () => {
+    const item = Object.create(null);
+    item.id = 1;
+    item["__proto__"] = { x: true };
+    const result = sanitizeJson([item]);
+    expect(result).toEqual([{ id: 1 }]);
+  });
+
+  it("returns primitives unchanged", () => {
+    expect(sanitizeJson("hello")).toBe("hello");
+    expect(sanitizeJson(42)).toBe(42);
+    expect(sanitizeJson(null)).toBeNull();
+    expect(sanitizeJson(true)).toBe(true);
+  });
+
+  it("caps recursion depth to prevent stack overflow", () => {
+    // Build a 25-level nested object — sanitizer stops stripping at depth 20
+    let obj: Record<string, unknown> = { clean: true };
+    for (let i = 0; i < 25; i++) {
+      obj = { nested: obj };
+    }
+    // Should not throw — just returns as-is past MAX_DEPTH
+    expect(() => sanitizeJson(obj)).not.toThrow();
   });
 });

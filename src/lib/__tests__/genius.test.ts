@@ -1,6 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-vi.mock("../safeFetch", () => ({ safeFetch: vi.fn() }));
+vi.mock("../safeFetch", () => ({
+  safeFetch: vi.fn(),
+  safeJson: vi.fn((resp: { json: () => Promise<unknown> }) => resp.json()),
+}));
 vi.mock("../rateLimit", () => ({ checkGeniusLimit: vi.fn(() => true) }));
 
 function mockResponse(data: unknown, ok = true) {
@@ -9,7 +12,10 @@ function mockResponse(data: unknown, ok = true) {
 
 async function loadModule() {
   vi.resetModules();
-  vi.mock("../safeFetch", () => ({ safeFetch: vi.fn() }));
+  vi.mock("../safeFetch", () => ({
+  safeFetch: vi.fn(),
+  safeJson: vi.fn((resp: { json: () => Promise<unknown> }) => resp.json()),
+}));
   vi.mock("../rateLimit", () => ({ checkGeniusLimit: vi.fn(() => true) }));
   return import("../genius");
 }

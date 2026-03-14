@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.4] - 2026-03-14
+
+### Security
+- **Prototype pollution sanitizer for external API responses** — All outbound API calls (Spotify, YouTube, Genius) now pass through `safeJson()` instead of raw `response.json()`. The sanitizer recursively strips `__proto__`, `constructor`, and `prototype` keys from parsed JSON before it enters application logic. A compromised CDN, middlebox, or API response containing `{"__proto__": {"isAdmin": true}}` would previously propagate prototype pollution through the entire server→client pipeline. Depth-capped at 20 levels to prevent stack overflow from adversarial payloads
+- **Health endpoint security headers** — `/api/health` now returns `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, and `Cache-Control: no-store`. Previously bypassed `withRouteHandler`, so browsers could MIME-sniff the unprotected JSON body into executable HTML
+
+### Added
+- **7 new sanitizer tests** — Prototype pollution key stripping, nested object sanitization, array traversal, primitive pass-through, recursion depth cap, and `constructor`/`prototype` key removal (348 tests across 26 suites)
+
+---
+
 ## [1.23.3] - 2026-03-14
 
 ### Security

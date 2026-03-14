@@ -1,7 +1,7 @@
 import { GeniusData } from "@/types";
 import { checkGeniusLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
-import { safeFetch } from "./safeFetch";
+import { safeFetch, safeJson } from "./safeFetch";
 
 const GENIUS_API_BASE = "https://api.genius.com";
 
@@ -24,7 +24,7 @@ async function geniusFetch(endpoint: string) {
     throw new Error(`Genius API error: ${response.status}`);
   }
 
-  return response.json();
+  return safeJson(response);
 }
 
 export async function searchGeniusSong(

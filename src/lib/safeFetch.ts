@@ -77,5 +77,53 @@ export async function safeFetch(
   }
 }
 
+// ── Prototype pollution sanitizer for parsed JSON ────────────────────
+
+/** Keys that trigger prototype pollution when assigned via bracket notation. */
+const DANGEROUS_KEYS = new Set(["__proto__", "constructor", "prototype"]);
+
+/** Maximum recursion depth to prevent stack overflow from deeply nested payloads. */
+const MAX_DEPTH = 20;
+
+/**
+ * Recursively strip prototype-pollution keys from a parsed JSON value.
+ *
+ * External API responses (Spotify, YouTube, Genius) are parsed with
+ * `response.json()` and flow through the server into client React props.
+ * A compromised CDN, middlebox, or API could inject `__proto__` keys that
+ * modify Object.prototype when spread into new objects — enabling property
+ * injection across the entire runtime.
+ *
+ * Applied at the safeFetch boundary so all outbound API responses are
+ * sanitized before entering application logic.
+ */
+export function sanitizeJson<T>(value: T, depth: number = 0): T {
+  if (depth > MAX_DEPTH) return value;
+
+  if (Array.isArray(value)) {
+    return value.map((item) => sanitizeJson(item, depth + 1)) as T;
+  }
+
+  if (value !== null && typeof value === "object") {
+    const clean: Record<string, unknown> = {};
+    for (const key of Object.keys(value)) {
+      if (DANGEROUS_KEYS.has(key)) continue;
+      clean[key] = sanitizeJson((value as Record<string, unknown>)[key], depth + 1);
+    }
+    return clean as T;
+  }
+
+  return value;
+}
+
+/**
+ * Parse a Response body as JSON with prototype-pollution sanitization.
+ * Drop-in replacement for `response.json()` in API client code.
+ */
+export async function safeJson<T = unknown>(response: Response): Promise<T> {
+  const raw = await response.json();
+  return sanitizeJson<T>(raw);
+}
+
 /** Exposed for testing. */
 export { assertAllowedOrigin, ALLOWED_ORIGINS };
