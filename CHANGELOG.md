@@ -35,6 +35,14 @@ All notable changes to the Music Time Machine project will be documented in this
 - **`useSongData` simplified** — Refactored from 4 separate `useState` calls to a thin wrapper over `useAsyncData`. Same public API, half the code, zero behavior changes
 - **Artist page fetch hardened** — Replaced 3 inline `useState` calls + unguarded `fetch` (no `AbortController`) with `useAsyncData`, gaining automatic request cancellation on unmount
 - **Error messages pass through** — Network errors now surface the actual message (e.g. "Network error") instead of a generic "Failed to load" string, giving users better diagnostic context
+## [1.23.0] - 2026-03-11
+
+### Added
+- **Recently Viewed songs** — Horizontal scroll strip on the home page showing the last 8 songs the user explored. Persisted in localStorage via `useSyncExternalStore` for SSR-safe, lint-clean hydration. Songs are deduplicated on re-view (moved to front) and capped at 8 entries with FIFO eviction. Section auto-hides when empty
+- **`useRecentlyViewed` hook** (`src/hooks/useRecentlyViewed.ts`) — Manages localStorage-backed recently viewed queue with `subscribe`/`getSnapshot`/`getServerSnapshot` pattern for concurrent-mode safety
+- **`RecentlyViewed` component** (`src/components/RecentlyViewed.tsx`) — Compact pill-style cards with album art, staggered entrance animations, and hover-to-accent transitions. Uses `scrollbar-hide` utility for clean horizontal overflow
+- **`scrollbar-hide` CSS utility** — Cross-browser scrollbar hiding for horizontal scroll strips (WebKit + Firefox + IE)
+- **Song detail page integration** — Automatically records viewed songs when song data loads, feeding the home page strip
 
 ---
 

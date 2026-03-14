@@ -8,6 +8,8 @@ import SafeImage from "@/components/SafeImage";
 import SearchBar from "@/components/SearchBar";
 import DateSearch from "@/components/DateSearch";
 import FilterBar from "@/components/FilterBar";
+import RecentlyViewed from "@/components/RecentlyViewed";
+import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
 import { SearchResult } from "@/types";
 
 const fadeIn = {
@@ -37,6 +39,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [activeGenre, setActiveGenre] = useState<string | null>(null);
   const [activeEra, setActiveEra] = useState<string | null>(null);
+  const { songs: recentSongs } = useRecentlyViewed();
 
   const genres = useMemo(
     () => [...new Set(trending.map((s) => s.genre).filter(Boolean))].sort() as string[],
@@ -140,6 +143,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Recently Viewed */}
+      <RecentlyViewed songs={recentSongs} />
 
       {/* Trending Songs Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">

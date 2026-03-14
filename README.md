@@ -8,6 +8,8 @@ One search. Four platforms. Every metric that matters.
 
 [![Version](https://img.shields.io/badge/version-1.23.3-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-341_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.23.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-322_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -23,6 +25,8 @@ One search. Four platforms. Every metric that matters.
 <tr>
 <td align="center"><strong>30</strong><br><sub>Components</sub></td>
 <td align="center"><strong>341</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>31</strong><br><sub>Components</sub></td>
+<td align="center"><strong>322</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -72,6 +76,9 @@ Every song gets a detail page with:
 - **Similar Songs** — content-based recommendations powered by weighted Euclidean distance across 4D audio features (danceability, energy ×1.5, valence ×1.5, normalized tempo), with same-era bonus (+8). Color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) render as circular SVG progress rings on each card. **User-configurable preferences** let you tune results by preferred genres, era range (2015–2025), and mood (Upbeat / Chill / Melancholy / Energetic) — persisted to localStorage
 - **Diversity-Aware Picks** — same-artist candidates are early-skipped before scoring (parsing `ft.`, `feat.`, `&`, `,`, `with` collaborations), avoiding wasted distance calculations. A greedy selection loop then caps results at one song per artist, ensuring recommendations always surface *new* artists. **Three selection strategies** are available via a toggle: **Auto** (default — inspects top candidates' genre diversity and intelligently switches between best-match and diverse), **Best match** (greedy by score), and **Diverse** (greedy set-cover with marginal diversity bonuses — +25 unseen genre, +15 unseen decade — plus a popularity quality signal that prevents obscure filler from outranking well-known tracks). An **auto-insight indicator** reveals the engine's decision when Auto is active — showing the resolved strategy and genre count detected, with color-coded labels and smooth height-reveal animation. Both the scoring pipeline and diversity metadata are memoized to prevent redundant recomputation on re-renders. A **diversity indicator** bar analyzes the final picks by genre spread (60% weight) and era spread (40% weight, normalized against a fixed 2-decade spread instead of pick count), displaying genre chips with per-genre colors, era span tags, and a scored label (Wide mix / Good variety / Similar vibe / Narrow focus)
 - **30-second preview** — seekable audio playback from Spotify
+
+### 🕐 Recently Viewed
+A horizontal scroll strip on the home page shows the last 8 songs you've explored, persisted in localStorage via `useSyncExternalStore`. Each entry displays album art, title, and artist in a compact pill layout. Songs are deduplicated (re-viewing moves to front) and capped with FIFO eviction. The section auto-hides when empty — zero visual noise for first-time visitors.
 
 ### ⚔️ Compare Tracks
 Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics display with amber highlighting and a summary count.
