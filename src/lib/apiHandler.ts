@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { checkRouteLimit, extractClientIp, rateLimitResponse, RouteName } from "./rateLimit";
 
 type RouteContext = { params: Promise<Record<string, string>> };
@@ -9,31 +10,47 @@ interface HandlerOptions {
 }
 
 /**
- * Wrap an API route handler with rate limiting and error handling.
+ * Generate a unique request ID for traceability.
+ *
+ * During security incidents, X-Request-ID lets you correlate a suspicious
+ * request across CDN access logs → load balancer → application logs.
+ * Without it, finding the same request in multiple systems is guesswork.
+ */
+export function generateRequestId(): string {
+  return randomUUID();
+}
+
+/**
+ * Wrap an API route handler with rate limiting, error handling, and request tracing.
  *
  * Eliminates per-route boilerplate: IP extraction, rate-limit checks, try/catch,
- * and consistent 500 responses all live here instead of in every route file.
+ * request ID generation, and consistent 500 responses all live here instead of
+ * in every route file.
  */
 export function withRouteHandler(
   options: HandlerOptions,
   handler: (request: NextRequest, context: RouteContext) => Promise<NextResponse | Response>
 ) {
   return async (request: NextRequest, context: RouteContext): Promise<NextResponse | Response> => {
+    const requestId = generateRequestId();
     const clientIp = extractClientIp(request);
     if (!checkRouteLimit(options.route, clientIp)) {
-      return rateLimitResponse();
+      return rateLimitResponse(requestId);
     }
 
     try {
-      return await handler(request, context);
+      const response = await handler(request, context);
+      // Attach request ID to every successful response for traceability
+      response.headers.set("X-Request-ID", requestId);
+      return response;
     } catch (error) {
       // Log only the message — full error objects can leak upstream API internals,
       // response bodies, or stack traces containing file paths.
       const message = error instanceof Error ? error.message : "Unknown error";
-      console.error(`API error [${options.route}]: ${message}`);
+      console.error(`API error [${options.route}] req=${requestId}: ${message}`);
       return NextResponse.json(
         { error: "Internal server error" },
-        { status: 500, headers: API_SECURITY_HEADERS }
+        { status: 500, headers: { ...API_SECURITY_HEADERS, "X-Request-ID": requestId } }
       );
     }
   };

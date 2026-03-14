@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { withRouteHandler, jsonWithCache } from "../apiHandler";
+import { withRouteHandler, jsonWithCache, generateRequestId } from "../apiHandler";
 import { NextRequest, NextResponse } from "next/server";
 
 // Mock the rateLimit module — apiHandler depends on it for every request
@@ -7,7 +7,11 @@ vi.mock("../rateLimit", () => ({
   extractClientIp: vi.fn(() => "127.0.0.1"),
   checkRouteLimit: vi.fn(() => true),
   rateLimitResponse: vi.fn(
-    () => NextResponse.json({ error: "Too many requests" }, { status: 429, headers: { "Retry-After": "60" } })
+    (requestId?: string) => {
+      const headers: Record<string, string> = { "Retry-After": "60" };
+      if (requestId) headers["X-Request-ID"] = requestId;
+      return NextResponse.json({ error: "Too many requests" }, { status: 429, headers });
+    }
   ),
 }));
 
@@ -126,5 +130,70 @@ describe("jsonWithCache", () => {
     const body = await res.json();
     expect(body).toBeNull();
     expect(res.headers.get("Cache-Control")).toBe("no-store");
+  });
+});
+
+describe("X-Request-ID traceability", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("generates valid UUID v4 request IDs", () => {
+    const id = generateRequestId();
+    expect(id).toMatch(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+    );
+  });
+
+  it("generates unique IDs on each call", () => {
+    const ids = new Set(Array.from({ length: 50 }, () => generateRequestId()));
+    expect(ids.size).toBe(50);
+  });
+
+  it("attaches X-Request-ID to successful responses", async () => {
+    const handler = vi.fn(async () => NextResponse.json({ ok: true }));
+    const wrapped = withRouteHandler({ route: "search" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    const requestId = res.headers.get("X-Request-ID");
+
+    expect(requestId).toBeTruthy();
+    expect(requestId).toMatch(/^[0-9a-f-]{36}$/i);
+  });
+
+  it("attaches X-Request-ID to 500 error responses", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw new Error("boom"); });
+    const wrapped = withRouteHandler({ route: "song" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+
+    expect(res.status).toBe(500);
+    expect(res.headers.get("X-Request-ID")).toMatch(/^[0-9a-f-]{36}$/i);
+  });
+
+  it("attaches X-Request-ID to 429 rate limit responses", async () => {
+    vi.mocked(checkRouteLimit).mockReturnValueOnce(false);
+    const handler = vi.fn(async () => NextResponse.json({}));
+    const wrapped = withRouteHandler({ route: "search" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+
+    expect(res.status).toBe(429);
+    expect(res.headers.get("X-Request-ID")).toMatch(/^[0-9a-f-]{36}$/i);
+  });
+
+  it("includes request ID in error log messages", async () => {
+    const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw new Error("db timeout"); });
+    const wrapped = withRouteHandler({ route: "compare" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    const requestId = res.headers.get("X-Request-ID");
+
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining(`req=${requestId}`)
+    );
+    consoleSpy.mockRestore();
   });
 });

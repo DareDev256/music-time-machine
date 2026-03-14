@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.3] - 2026-03-14
+
+### Security
+- **X-Request-ID traceability** — Every API response (200, 429, 500) now includes a unique `X-Request-ID` header (crypto.randomUUID). Error logs include the request ID for cross-system incident correlation. Rate limit responses also carry the ID so CDN/WAF logs can trace blocked requests back to the application layer
+- **Health endpoint info redaction** — `/api/health` no longer exposes `process.memoryUsage()`, error counts, request counts, or cache internals in production (`NODE_ENV=production`). Attackers previously could use memory pressure data to time resource exhaustion attacks and error counts to confirm fuzzing attempts. Development mode retains full diagnostics for debugging convenience
+
+### Added
+- **6 new traceability tests** — UUID format validation, uniqueness verification, X-Request-ID presence on 200/429/500 responses, and request ID inclusion in error log messages (341 tests across 26 suites)
+
+---
+
 ## [1.23.2] - 2026-03-13
 
 ### Changed

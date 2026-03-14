@@ -51,6 +51,18 @@ export function recordError(): void {
   errorCount++;
 }
 
+/**
+ * Whether to redact internal diagnostics from the health response.
+ *
+ * In production, memory stats, error counts, and cache internals are
+ * information disclosure risks (OWASP A01:2021). Attackers use memory
+ * pressure data to time resource exhaustion attacks, error counts to
+ * confirm fuzzing attempts are landing, and cache utilization to map
+ * traffic patterns. Redacted in production; full output in development
+ * for debugging convenience.
+ */
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
+
 export async function GET(): Promise<NextResponse> {
   requestCount++;
   const now = Date.now();
@@ -94,11 +106,8 @@ export async function GET(): Promise<NextResponse> {
 
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
-  // ── Memory snapshot (MB, 1 decimal) ──────────────────────────────────
-  const mem = process.memoryUsage();
-  const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
-
-  return NextResponse.json({
+  // ── Base response — always exposed (safe for public consumption) ────
+  const response: Record<string, unknown> = {
     status,
     version: APP_VERSION,
     timestamp: new Date(now).toISOString(),
@@ -109,24 +118,29 @@ export async function GET(): Promise<NextResponse> {
     mode: useMockData ? "mock" : "live",
     integrations: { spotify, youtube, genius },
     checks,
-    caches: {
-      search: searchStats,
-      song: songStats,
-    },
-    metrics: {
+  };
+
+  // ── Diagnostics — redacted in production to prevent info disclosure ──
+  if (!IS_PRODUCTION) {
+    const mem = process.memoryUsage();
+    const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
+    response.caches = { search: searchStats, song: songStats };
+    response.metrics = {
       catalogSize: CATALOG_SIZE,
       apiRoutes: API_ROUTE_COUNT,
       requests: requestCount,
       errors: errorCount,
-    },
-    memory: {
+    };
+    response.memory = {
       rss: toMB(mem.rss),
       heapUsed: toMB(mem.heapUsed),
       heapTotal: toMB(mem.heapTotal),
       external: toMB(mem.external),
       unit: "MB",
-    },
-  });
+    };
+  }
+
+  return NextResponse.json(response);
 }
 
 function formatUptime(ms: number): string {
