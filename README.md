@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.23.3-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-341_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.23.5-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-316_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Version](https://img.shields.io/badge/version-1.23.0-blue?style=flat-square)](CHANGELOG.md)
 [![Version](https://img.shields.io/badge/version-1.22.2-blue?style=flat-square)](CHANGELOG.md)
 [![Version](https://img.shields.io/badge/version-1.23.1-blue?style=flat-square)](CHANGELOG.md)

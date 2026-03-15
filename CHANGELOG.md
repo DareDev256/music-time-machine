@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.5] - 2026-03-15
+
+### Added
+- **26 new tests across 3 test files** covering previously untested critical paths (316 total tests across 29 suites):
+  - `apiHandler.jsonError.test.ts` — Verifies `jsonError()` returns correct status codes (400/404/422), includes security headers (nosniff, DENY, no-store), and confirms header parity between `jsonError` and `jsonWithCache`
+  - `safeFetch.safeJson.test.ts` — Tests `safeJson()` async pipeline: clean JSON parsing, `__proto__`/`constructor` stripping from API responses, array sanitization, null/primitive handling, and malformed body error propagation
+  - `rateLimit.response.test.ts` — Tests `rateLimitResponse()` X-Request-ID attachment (present when provided, absent when omitted), security headers on 429 responses, and JSON body structure
+
+---
+
 ## [1.23.4] - 2026-03-14
 
 ### Security
