@@ -33,7 +33,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>30</strong><br><sub>Components</sub></td>
-<td align="center"><strong>341</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>306</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>31</strong><br><sub>Components</sub></td>
 <td align="center"><strong>322</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>348</strong><br><sub>Tests</sub></td>

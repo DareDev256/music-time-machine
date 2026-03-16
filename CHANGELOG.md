@@ -2,6 +2,19 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.6] - 2026-03-16
+
+### Added
+- **8 new YouTubeCard unit tests** covering interactive video preview rendering (306 total tests across 30 suites):
+  - Platform header, stat rows (views/likes/comments/channel), thumbnail image with alt text
+  - Play button overlay verification (red circle + triangular play icon)
+  - Short date formatting via `formatDate` with `SHORT_DATE` options
+  - External URL passthrough to PlatformCard (href, target, rel attributes)
+  - Graceful fallback when `publishedAt` is unparseable (no "Invalid Date" leak)
+  - Data isolation test ensuring no cross-fixture bleed-through
+
+---
+
 ## [1.23.5] - 2026-03-15
 
 ### Added
