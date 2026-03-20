@@ -4,7 +4,6 @@ import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
 import { mockSongs } from "@/lib/mockData";
-import { withRouteHandler } from "@/lib/apiHandler";
 import { extractClientIp, tryConsume } from "@/lib/rateLimit";
 
 // ── Process-level counters (survive across requests in the same instance) ──
@@ -38,7 +37,7 @@ const SEVERITY_WEIGHT: Record<string, { weight: number; label: string }> = {
 } as const;
 
 /** Resolve the worst severity across a set of check statuses. */
-function resolveOverallStatus(statuses: readonly string[]): string {
+export function resolveOverallStatus(statuses: readonly string[]): string {
   return statuses.reduce<{ weight: number; label: string }>(
     (worst, s) => {
       const severity = SEVERITY_WEIGHT[s] ?? SEVERITY_WEIGHT.pass;
@@ -54,26 +53,6 @@ export function recordError(): void {
 }
 
 /**
- * Whether to redact internal diagnostics from the health response.
- *
- * In production, memory stats, error counts, and cache internals are
- * information disclosure risks (OWASP A01:2021). Attackers use memory
- * pressure data to time resource exhaustion attacks, error counts to
- * confirm fuzzing attempts are landing, and cache utilization to map
- * traffic patterns. Redacted in production; full output in development
- * for debugging convenience.
- */
-const IS_PRODUCTION = process.env.NODE_ENV === "production";
-
-export async function GET(): Promise<NextResponse> {
- * Health check — now rate-limited via withRouteHandler.
- *
- * Memory details (heap, rss, external) are only included when the request
- * provides a valid HEALTH_TOKEN query param matching the server-side env var.
- * This prevents unauthenticated recon of runtime memory patterns while
- * keeping the health endpoint useful for uptime monitoring.
- */
-export const GET = withRouteHandler({ route: "health" }, async (request) => {
  * Verify the request carries a valid HEALTH_AUTH_TOKEN via Bearer header.
  *
  * Without this gate, unauthenticated users can read heap sizes, error rates,
@@ -83,7 +62,7 @@ export const GET = withRouteHandler({ route: "health" }, async (request) => {
  * When no HEALTH_AUTH_TOKEN env var is set, detailed diagnostics are simply
  * omitted — the public response is limited to status + version.
  */
-function isAuthorizedForDetails(request: NextRequest): boolean {
+export function isAuthorizedForDetails(request: NextRequest): boolean {
   const token = process.env.HEALTH_AUTH_TOKEN;
   if (!token) return false; // No token configured = no detailed access
 
@@ -100,7 +79,7 @@ function isAuthorizedForDetails(request: NextRequest): boolean {
   return a.every((byte, i) => byte === b[i]);
 }
 
-export async function GET(request: NextRequest): Promise<NextResponse> {
+/**
  * Security headers for health responses. This route doesn't use
  * withRouteHandler() (it needs access to process-level counters),
  * so headers are applied manually.
@@ -113,9 +92,6 @@ const HEALTH_HEADERS: Record<string, string> = {
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   // ── Rate limit: 30 health checks/min per IP ────────────────────────
-  // Health endpoints are common DDoS targets and reconnaissance vectors.
-  // Without rate limiting, attackers can probe memory/uptime patterns
-  // to time attacks during high-load periods.
   const clientIp = extractClientIp(request);
   if (!tryConsume(`route:health:${clientIp}`, 30, 60_000)) {
     return NextResponse.json(
@@ -128,7 +104,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const now = Date.now();
   const uptimeMs = now - startedAt;
 
-  // ── Snapshot cache stats once — avoids 6 redundant getStats() calls ──
+  // ── Snapshot cache stats once ──────────────────────────────────────
   const searchStats = searchCache.getStats();
   const songStats = songCache.getStats();
 
@@ -166,16 +142,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   const status = resolveOverallStatus(checks.map((c) => c.status));
 
-  // ── Base response — always exposed (safe for public consumption) ────
-  const response: Record<string, unknown> = {
-  // ── Build response (memory gated behind token) ────────────────────────
-  const body: Record<string, unknown> = {
-    status,
-    version: APP_VERSION,
-    timestamp: new Date(now).toISOString(),
   // ── Public response (safe for unauthenticated consumers) ─────────────
-  // Only expose status + version. Memory, uptime, error counts, cache stats,
-  // and integration config are server internals that aid reconnaissance.
   const publicPayload = {
     status,
     version: APP_VERSION,
@@ -183,61 +150,16 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   };
 
   if (!isAuthorizedForDetails(request)) {
-    return NextResponse.json(publicPayload);
+    return NextResponse.json(publicPayload, { headers: HEALTH_HEADERS });
   }
 
   // ── Detailed diagnostics (requires HEALTH_AUTH_TOKEN) ────────────────
   const mem = process.memoryUsage();
   const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
 
-  return NextResponse.json({
-    ...publicPayload,
-    uptime: {
-      ms: uptimeMs,
-      human: formatUptime(uptimeMs),
-    },
-    mode: useMockData ? "mock" : "live",
-    integrations: { spotify, youtube, genius },
-    checks,
-  };
-
-  // ── Diagnostics — redacted in production to prevent info disclosure ──
-  if (!IS_PRODUCTION) {
-    const mem = process.memoryUsage();
-    const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
-    response.caches = { search: searchStats, song: songStats };
-    response.metrics = {
-      catalogSize: CATALOG_SIZE,
-      apiRoutes: API_ROUTE_COUNT,
-      requests: requestCount,
-      errors: errorCount,
-    };
-    response.memory = {
-    },
-  };
-
-  // Gate memory details behind a shared secret — process.memoryUsage()
-  // reveals heap pressure patterns useful for timing side-channels.
-  const healthToken = process.env.HEALTH_TOKEN;
-  const providedToken = request.nextUrl.searchParams.get("token");
-  if (healthToken && providedToken === healthToken) {
-    const mem = process.memoryUsage();
-    const toMB = (bytes: number) => +(bytes / 1_048_576).toFixed(1);
-    body.memory = {
-      rss: toMB(mem.rss),
-      heapUsed: toMB(mem.heapUsed),
-      heapTotal: toMB(mem.heapTotal),
-      external: toMB(mem.external),
-      unit: "MB",
-    };
-  }
-
-  return NextResponse.json(response);
   return NextResponse.json(
     {
-      status,
-      version: APP_VERSION,
-      timestamp: new Date(now).toISOString(),
+      ...publicPayload,
       uptime: {
         ms: uptimeMs,
         human: formatUptime(uptimeMs),
@@ -245,10 +167,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       mode: useMockData ? "mock" : "live",
       integrations: { spotify, youtube, genius },
       checks,
-      caches: {
-        search: searchStats,
-        song: songStats,
-      },
+      caches: { search: searchStats, song: songStats },
       metrics: {
         catalogSize: CATALOG_SIZE,
         apiRoutes: API_ROUTE_COUNT,
@@ -265,18 +184,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     },
     { headers: HEALTH_HEADERS }
   );
-  return NextResponse.json(response, {
-    headers: {
-      "X-Content-Type-Options": "nosniff",
-      "X-Frame-Options": "DENY",
-      "Cache-Control": "no-store",
-    },
-  });
 }
-  return NextResponse.json(body);
-});
 
-function formatUptime(ms: number): string {
+export function formatUptime(ms: number): string {
   const s = Math.floor(ms / 1000);
   const m = Math.floor(s / 60);
   const h = Math.floor(m / 60);

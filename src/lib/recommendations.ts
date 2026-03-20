@@ -53,7 +53,6 @@ export interface RecommendationPrefs {
 }
 
 // ── Algorithm constants ─────────────────────────────────────────────────────
-// Named so the scoring model is readable and tunable from one place.
 
 /** Feature weights for the 4D Euclidean distance. Energy and valence dominate "vibe." */
 const FEATURE_WEIGHTS = {
@@ -168,6 +167,20 @@ function decadeLabel(year: number): string {
 
 // ── Scoring ─────────────────────────────────────────────────────────────────
 
+/** Breakdown of how a recommendation score was computed. */
+export interface ScoreBreakdown {
+  /** Raw similarity score from audio feature distance (0–100). */
+  base: number;
+  /** Era proximity bonus (0 or SAME_ERA_BONUS). */
+  era: number;
+  /** Preferred genre bonus (0 or PREFERRED_GENRE_BONUS). */
+  genre: number;
+  /** Preferred era range bonus (0 or PREFERRED_ERA_BONUS). */
+  prefEra: number;
+  /** Mood match bonus (0 or MOOD_MATCH_BONUS). */
+  mood: number;
+}
+
 interface ScoredSong {
   song: SongData;
   score: number;
@@ -196,9 +209,6 @@ function featureDistance(
 /**
  * Classify the primary reason a candidate was recommended.
  * Order matters — first matching rule wins, most specific first.
- * Note: same-artist candidates are early-skipped in the scoring loop
- * (they're unconditionally excluded by the diversity filter), so
- * "Same artist" is no longer a possible output.
  */
 function classifyReason(
   distance: number,
@@ -231,10 +241,6 @@ export interface DiversityMeta {
 
 /**
  * Analyze the genre and era diversity of a recommendation set.
- * Score formula:
- *   - Base: (unique genres / total picks) × 60  (genre variety is the primary signal)
- *   - Bonus: (unique eras / total picks) × 40   (era spread adds depth)
- * A set of 4 songs spanning 4 genres and 3+ decades scores 100.
  */
 export function getDiversityMeta(
   target: SongData,
@@ -245,7 +251,6 @@ export function getDiversityMeta(
   const genres = new Set<string>();
   const eras = new Set<string>();
 
-  // Include target song in era calculation for context (guard against invalid dates)
   const targetYear = safeYear(String(target.releaseDate ?? ""));
   if (targetYear !== null) {
     eras.add(decadeLabel(targetYear));
@@ -266,19 +271,9 @@ export function getDiversityMeta(
   }
 
   const count = picks.length;
-  // Use only picks with known genres as the denominator — songs missing from
-  // songGenres shouldn't deflate the ratio. Falls back to total count when
-  // no genre data exists at all (avoids division by zero).
   const genreDenom = genreKnown > 0 ? genreKnown : count;
   const genreRatio = genres.size / genreDenom;
-  // Subtract 1 only when the target era was actually added (valid target date).
-  // Without this guard, an invalid target date means the set never received the
-  // baseline era, making (eras.size - 1) negative and dragging the score below 0.
   const eraBaseline = targetYear !== null ? 1 : 0;
-  // Normalize against ERA_FULL_SPREAD instead of count. Decades are far coarser
-  // than genres — a typical catalog spans only 2 decades, so dividing by count
-  // (4) made eraRatio cap at 0.25, capping era contribution at 10/40 points
-  // and making "Wide mix" (≥75) mathematically unreachable.
   const eraRatio = Math.min(1, Math.max(0, (eras.size - eraBaseline) / ERA_FULL_SPREAD));
 
   const score = Math.min(100, Math.round(genreRatio * GENRE_WEIGHT + eraRatio * ERA_WEIGHT));
@@ -302,22 +297,13 @@ export function getDiversityMeta(
 /**
  * Split a credit string into individual artist names.
  * Handles: "ft." / "feat." / "&" / "," / "with" separators.
- * The "&" split requires at least 2 chars on each side to avoid
- * breaking genre-style names like "R&B".
- * e.g. "Lady Gaga & Bruno Mars" → ["lady gaga", "bruno mars"]
- *      "Mark Ronson ft. Bruno Mars" → ["mark ronson", "bruno mars"]
- *      "Tones and I" → ["tones and i"] (single artist — "and" is NOT a separator)
  */
 export function splitArtists(artist: string): string[] {
-  // Runtime guard: API responses can smuggle non-string values past TypeScript's
-  // compile-time checks. Return empty array instead of crashing on .split().
   if (typeof artist !== "string") return [];
 
-  // First pass: split on unambiguous separators (comma, ft., feat., with)
   const parts = artist.split(
     /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i,
   );
-  // Second pass: split on "&" only when both sides are ≥2 chars (avoids "R&B")
   const result: string[] = [];
   for (const part of parts) {
     const ampersandParts = part.split(/\s*&\s*/);
@@ -338,39 +324,13 @@ export function primaryArtist(artist: string): string {
 
 // ── Pick result type ─────────────────────────────────────────────────────
 
-<<<<<<< HEAD
-/** Why the diversity picker chose this song over alternatives. */
-export type DiversityTag = "new-genre" | "new-era" | "collab" | null;
-=======
-/** Breakdown of how a recommendation score was computed. */
-export interface ScoreBreakdown {
-  /** Raw similarity score from audio feature distance (0–100). */
-  base: number;
-  /** Era proximity bonus (0 or SAME_ERA_BONUS). */
-  era: number;
-  /** Preferred genre bonus (0 or PREFERRED_GENRE_BONUS). */
-  genre: number;
-  /** Preferred era range bonus (0 or PREFERRED_ERA_BONUS). */
-  prefEra: number;
-  /** Mood match bonus (0 or MOOD_MATCH_BONUS). */
-  mood: number;
-}
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
-
 /** A single recommendation pick with scoring metadata for the UI. */
 export interface PickResult {
   song: SongData;
   reason: string;
   matchScore: number;
-<<<<<<< HEAD
-  /** Whether this song is a collaboration (has featured artists). */
-  isCollab: boolean;
-  /** Why the diversity strategy picked this song, if applicable. */
-  diversityTag: DiversityTag;
-=======
   /** Score breakdown showing what contributed to the match score. */
   breakdown: ScoreBreakdown;
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
 }
 
 /** Clamp a raw score into the 0–99 integer range used by the UI. */
@@ -405,8 +365,6 @@ function scoreCandidates(
     const features = candidate.spotify?.audioFeatures;
     if (!features) continue;
 
-    // Early-skip candidates sharing any artist with the target — the diversity
-    // filter would unconditionally exclude them anyway.
     const candidateArtists = splitArtists(String(candidate.artist ?? ""));
     if (candidateArtists.some((a) => targetArtists.has(a))) continue;
 
@@ -414,7 +372,6 @@ function scoreCandidates(
     const base = Math.max(0, 100 - distance * DISTANCE_TO_SCORE);
     let score = base;
 
-    // Bonus: same era (within ERA_PROXIMITY_YEARS)
     const candidateYear = safeYear(String(candidate.releaseDate ?? ""));
     let eraBonus = 0;
     if (targetYear !== null && candidateYear !== null && Math.abs(candidateYear - targetYear) <= ERA_PROXIMITY_YEARS) {
@@ -422,7 +379,6 @@ function scoreCandidates(
       score += eraBonus;
     }
 
-    // ── User preference bonuses ──────────────────────────────────────
     let genreBonus = 0;
     let prefEraBonus = 0;
     let moodBonus = 0;
@@ -464,12 +420,6 @@ function scoreCandidates(
 
 // ── Strategy resolution ──────────────────────────────────────────────────
 
-/**
- * Inspect the top best-match candidates' genre diversity to decide whether
- * the auto strategy should resolve to "best-match" or "diverse".
- * Deduplicates artists during inspection so the genre sample matches what
- * the picker would actually select.
- */
 function resolveStrategy(
   requested: SelectionStrategy,
   scored: ScoredSong[],
@@ -498,10 +448,6 @@ function resolveStrategy(
 
 // ── Pick strategies ──────────────────────────────────────────────────────
 
-/**
- * Best-match picker: greedily pick highest-scored candidates,
- * enforcing at-most-one-song-per-artist diversity.
- */
 function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
   const picked: PickResult[] = [];
   const seenArtists = new Set<string>();
@@ -510,17 +456,12 @@ function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
     if (picked.length >= limit) break;
     if (entry.artists.some((a) => seenArtists.has(a))) continue;
     for (const a of entry.artists) seenArtists.add(a);
-<<<<<<< HEAD
     picked.push({
       song: entry.song,
       reason: entry.reason,
       matchScore: clampScore(entry.score),
-      isCollab: entry.artists.length > 1,
-      diversityTag: null,
+      breakdown: entry.breakdown,
     });
-=======
-    picked.push({ song: entry.song, reason: entry.reason, matchScore: clampScore(entry.score), breakdown: entry.breakdown });
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
   }
 
   return picked;
@@ -528,9 +469,8 @@ function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
 
 /**
  * Diverse picker: greedily pick the candidate that maximizes marginal
- * diversity (unseen genre/era) while keeping a quality floor. Each round
- * adds a diversity bonus to unseen genres/eras and picks the highest
- * effective score. Popularity acts as a tiebreaker.
+ * diversity (unseen genre/era) while keeping a quality floor.
+ * Collaboration bonus rewards featured-artist tracks that bridge audiences.
  */
 function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
   const picked: PickResult[] = [];
@@ -542,62 +482,30 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
   while (picked.length < limit && remaining.length > 0) {
     let bestIdx = -1;
     let bestEffective = -Infinity;
-<<<<<<< HEAD
-    let bestTag: DiversityTag = null;
-=======
-    /** Track whether the winning candidate got genre/era diversity bonuses. */
     let bestGenreBonus = false;
     let bestEraBonus = false;
->>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
 
     for (let i = 0; i < remaining.length; i++) {
       const entry = remaining[i];
       if (entry.artists.some((a) => seenArtists.has(a))) continue;
 
       let effective = entry.score;
-      let tag: DiversityTag = null;
 
       const genre = songGenres[entry.song.id];
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (genre && !seenGenres.has(genre)) effective += DIVERSITY_GENRE_BONUS;
-      const year = safeYear(String(entry.song.releaseDate ?? ""));
-      if (year !== null && !seenEras.has(decadeLabel(year))) effective += DIVERSITY_ERA_BONUS;
-=======
-      if (genre && !seenGenres.has(genre)) {
-        effective += DIVERSITY_GENRE_BONUS;
-        tag = "new-genre";
-      }
-      const year = safeYear(entry.song.releaseDate);
-      if (year !== null && !seenEras.has(decadeLabel(year))) {
-        effective += DIVERSITY_ERA_BONUS;
-        // Only override tag if genre wasn't the primary reason
-        if (!tag) tag = "new-era";
-      }
-      // Collaboration bonus — songs with featured artists bridge audiences
-      if (entry.artists.length > 1) {
-        effective += COLLAB_DIVERSITY_BONUS;
-        if (!tag) tag = "collab";
-      }
->>>>>>> passion/feat-diversity-picked-feat-mmpo5vfs
-=======
       const hasGenreBonus = !!(genre && !seenGenres.has(genre));
       if (hasGenreBonus) effective += DIVERSITY_GENRE_BONUS;
-      const year = safeYear(entry.song.releaseDate);
+      const year = safeYear(String(entry.song.releaseDate ?? ""));
       const hasEraBonus = year !== null && !seenEras.has(decadeLabel(year));
       if (hasEraBonus) effective += DIVERSITY_ERA_BONUS;
->>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
+      // Collaboration bonus — songs with featured artists bridge audiences
+      if (entry.artists.length > 1) effective += COLLAB_DIVERSITY_BONUS;
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
       if (effective > bestEffective) {
         bestEffective = effective;
         bestIdx = i;
-<<<<<<< HEAD
-        bestTag = tag;
-=======
         bestGenreBonus = hasGenreBonus;
         bestEraBonus = hasEraBonus;
->>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
       }
     }
 
@@ -610,19 +518,6 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
     const year = safeYear(String(winner.song.releaseDate ?? ""));
     if (year !== null) seenEras.add(decadeLabel(year));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    picked.push({
-      song: winner.song,
-      reason: winner.reason,
-      matchScore: clampScore(winner.score),
-      isCollab: winner.artists.length > 1,
-      diversityTag: bestTag,
-    });
-=======
-    picked.push({ song: winner.song, reason: winner.reason, matchScore: clampScore(winner.score), breakdown: winner.breakdown });
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
-=======
     // When diversity bonuses drove the selection, surface that rationale
     // instead of the generic audio-similarity reason. The first pick never
     // gets overridden — it's always the best pure-similarity candidate.
@@ -632,8 +527,12 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
         ? "Different era"
         : winner.reason;
 
-    picked.push({ song: winner.song, reason, matchScore: clampScore(winner.score) });
->>>>>>> passion/fix-diversity-picked-fix-mmp95ewh
+    picked.push({
+      song: winner.song,
+      reason,
+      matchScore: clampScore(winner.score),
+      breakdown: winner.breakdown,
+    });
   }
 
   return picked;

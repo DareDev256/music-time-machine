@@ -2,6 +2,20 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.23.7] - 2026-03-20
+
+### Fixed
+- **Resolved merge conflicts** in `recommendations.ts` (3-way conflict from diversity/breakdown/reason branches) and `health/route.ts` (3-way conflict from auth/token/production-redact branches)
+  - Unified `PickResult` interface with `ScoreBreakdown` + diversity reason overrides + collab bonus
+  - Health route consolidated to Bearer token auth with public/private response split and security headers
+
+### Added
+- **32 new tests across 2 test files** covering critical paths after merge resolution (416 total tests across 32 suites):
+  - `health-route.test.ts` — `resolveOverallStatus` severity resolution (6 cases: all-pass, warn escalation, fail dominance, empty array, unknown status fallback), `isAuthorizedForDetails` Bearer token auth (7 cases: no env var, no header, wrong scheme, correct token, wrong token, length mismatch, prefix-match attack), `formatUptime` display formatting (6 cases: seconds, minutes, hours, days, zero, exact boundaries)
+  - `recommendations-merged.test.ts` — Runtime type guards for `splitArtists`/`primaryArtist` with non-string inputs (7 cases: null, undefined, number, object), `ScoreBreakdown` presence and decomposition on every `PickResult` (4 cases: base score, sum verification, era bonus detection, distant-era zero), diversity reason labels (2 cases: first-pick immunity from override, collab bonus in diverse mode)
+
+---
+
 ## [1.23.6] - 2026-03-16
 
 ### Added
