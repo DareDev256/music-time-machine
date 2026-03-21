@@ -7,15 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
 import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { RecommendationPrefs, SelectionStrategy, DiversityTag } from "@/lib/recommendations";
-=======
-import type { RecommendationPrefs, SelectionStrategy, ScoreBreakdown } from "@/lib/recommendations";
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
-=======
-import type { SelectionStrategy } from "@/lib/recommendations";
->>>>>>> passion/fix-diversity-picked-fix-mmp832v3
+import type { SelectionStrategy, ScoreBreakdown } from "@/lib/recommendations";
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 import { usePrefs } from "@/components/PrefsProvider";
 
@@ -265,11 +257,7 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
       </AnimatePresence>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-<<<<<<< HEAD
-        {similar.map(({ song: rec, reason, matchScore, isCollab, diversityTag }, i) => (
-=======
         {similar.map(({ song: rec, reason, matchScore, breakdown }, i) => (
->>>>>>> passion/feat-diversity-picked-feat-mmpsmce2
           <motion.div
             key={rec.id}
             initial={{ opacity: 0, y: 12 }}
