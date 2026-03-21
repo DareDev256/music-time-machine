@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.24.0] - 2026-03-21
+
+### Changed
+- **Extracted `score-colors.ts`** — consolidated 6 duplicated threshold-based color functions (`matchColor`, `matchRingColor`, `diversityColor`, `diversityBgColor`, `genreChipColor`, `reasonTagColor`) into a single parameterized module with tier-based lookups
+- **Extracted `MatchScoreBadge` component** — the 20-line inline SVG circular progress indicator is now a reusable component with typed props, ready for use in song cards, search results, and playlist previews
+- **Cleaned dead merge-conflict code** — removed unreachable `diversityTag`/`isCollab` references and the undefined `DiversityTag` type from `SimilarSongs.tsx` (artifacts from a 3-way merge that silently failed at runtime)
+- **Reduced `SimilarSongs.tsx` by ~40%** — from 367 lines with 7 inline utility functions to 213 lines focused purely on layout and interaction logic
+
+---
+
 ## [1.23.7] - 2026-03-20
 
 ### Fixed

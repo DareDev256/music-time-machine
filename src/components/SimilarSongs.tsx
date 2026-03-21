@@ -2,81 +2,27 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight, Users } from "lucide-react";
+import { Sparkles, Shuffle, Zap, Layers, Wand2, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
+import MatchScoreBadge from "@/components/MatchScoreBadge";
 import { getSimilarSongs, getDiversityMeta, getAutoInsight } from "@/lib/recommendations";
 import type { SelectionStrategy, ScoreBreakdown } from "@/lib/recommendations";
 import PlaylistConfigurator from "@/components/PlaylistConfigurator";
 import { usePrefs } from "@/components/PrefsProvider";
+import {
+  matchTextColor,
+  matchRingColor,
+  diversityTextColor,
+  diversityBgColor,
+  genreChipColor,
+  reasonTagColor,
+} from "@/lib/score-colors";
 
 interface SimilarSongsProps {
   song: SongData;
   catalog: SongData[];
-}
-
-/** Returns a Tailwind text color class based on match strength */
-function matchColor(score: number): string {
-  if (score >= 80) return "text-emerald-400";
-  if (score >= 60) return "text-sky-400";
-  if (score >= 40) return "text-amber-400";
-  return "text-foreground-secondary";
-}
-
-/** Returns a Tailwind ring/border color class based on match strength */
-function matchRingColor(score: number): string {
-  if (score >= 80) return "ring-emerald-400/30";
-  if (score >= 60) return "ring-sky-400/30";
-  if (score >= 40) return "ring-amber-400/30";
-  return "ring-border";
-}
-
-/** SVG arc path for circular progress indicator */
-function circleArc(score: number): string {
-  const radius = 16;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (score / 100) * circumference;
-  return `${offset}`;
-}
-
-/** Tailwind bg class for genre chip — each genre gets a unique muted color */
-function genreChipColor(genre: string): string {
-  const map: Record<string, string> = {
-    "Pop": "bg-pink-500/15 text-pink-300 border-pink-500/20",
-    "R&B": "bg-purple-500/15 text-purple-300 border-purple-500/20",
-    "Country": "bg-amber-500/15 text-amber-300 border-amber-500/20",
-    "K-Pop": "bg-rose-500/15 text-rose-300 border-rose-500/20",
-    "Alt/Indie": "bg-teal-500/15 text-teal-300 border-teal-500/20",
-    "Disco/Dance": "bg-cyan-500/15 text-cyan-300 border-cyan-500/20",
-    "Funk": "bg-orange-500/15 text-orange-300 border-orange-500/20",
-  };
-  return map[genre] ?? "bg-foreground/10 text-foreground-secondary border-foreground/10";
-}
-
-/** Color for the diversity score indicator */
-function diversityColor(score: number): string {
-  if (score >= 75) return "text-emerald-400";
-  if (score >= 45) return "text-sky-400";
-  if (score >= 20) return "text-amber-400";
-  return "text-foreground-secondary";
-}
-
-function diversityBgColor(score: number): string {
-  if (score >= 75) return "bg-emerald-400/10 border-emerald-400/20";
-  if (score >= 45) return "bg-sky-400/10 border-sky-400/20";
-  if (score >= 20) return "bg-amber-400/10 border-amber-400/20";
-  return "bg-foreground/5 border-foreground/10";
-}
-
-/** Label + color for diversity reason tags on recommendation cards */
-function diversityTagStyle(tag: DiversityTag): { label: string; cls: string } | null {
-  switch (tag) {
-    case "new-genre": return { label: "New genre", cls: "bg-violet-500/20 text-violet-300" };
-    case "new-era":   return { label: "New era", cls: "bg-teal-500/20 text-teal-300" };
-    case "collab":    return { label: "Collab pick", cls: "bg-rose-500/20 text-rose-300" };
-    default:          return null;
-  }
 }
 
 const STRATEGIES: { id: SelectionStrategy; label: string; icon: typeof Zap; desc: string }[] = [
@@ -94,7 +40,6 @@ function ScoreBreakdownBar({ breakdown, total }: { breakdown: ScoreBreakdown; to
     ...(breakdown.prefEra > 0 ? [{ value: breakdown.prefEra, color: "bg-amber-400/60", label: "Pref era" }] : []),
     ...(breakdown.mood > 0 ? [{ value: breakdown.mood, color: "bg-violet-400/60", label: "Mood" }] : []),
   ];
-  // Normalize against the clamped total (max 99) for visual width
   const cap = Math.max(total, 1);
 
   return (
@@ -225,8 +170,8 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
           <div
             className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-medium transition-colors duration-300 ${diversityBgColor(diversity.score)}`}
           >
-            <Shuffle className={`w-3 h-3 ${diversityColor(diversity.score)}`} aria-hidden="true" />
-            <span className={diversityColor(diversity.score)}>{diversity.label}</span>
+            <Shuffle className={`w-3 h-3 ${diversityTextColor(diversity.score)}`} aria-hidden="true" />
+            <span className={diversityTextColor(diversity.score)}>{diversity.label}</span>
           </div>
 
           {/* Genre chips */}
@@ -276,83 +221,15 @@ export default function SimilarSongs({ song, catalog }: SimilarSongsProps) {
                   height={200}
                   className="w-full aspect-square rounded-lg object-cover group-hover:scale-[1.02] transition-transform"
                 />
-                {/* Match score circular badge — isolate creates a local stacking
-                    context so the -z-10 background stays behind the SVG rings
-                    instead of falling behind the album art image */}
-                <div
-                  className="absolute -top-2 -right-2 w-10 h-10 flex items-center justify-center isolate"
-                  title={`${matchScore}% match`}
-                  aria-label={`${matchScore}% match`}
-                  role="img"
-                >
-                  <svg
-                    viewBox="0 0 40 40"
-                    className="w-10 h-10 -rotate-90"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="20"
-                      cy="20"
-                      r="16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      className="text-border/50"
-                    />
-                    <circle
-                      cx="20"
-                      cy="20"
-                      r="16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeDasharray={`${2 * Math.PI * 16}`}
-                      strokeDashoffset={circleArc(matchScore)}
-                      strokeLinecap="round"
-                      className={matchColor(matchScore)}
-                    />
-                  </svg>
-                  <span
-                    className={`absolute inset-0 flex items-center justify-center text-[9px] font-bold ${matchColor(matchScore)}`}
-                    aria-hidden="true"
-                  >
-                    {matchScore}%
-                  </span>
-                  {/* Solid background behind the badge for readability */}
-                  <div className="absolute inset-0 -z-10 rounded-full bg-card border border-border" />
-                </div>
+                <MatchScoreBadge score={matchScore} className="absolute -top-2 -right-2" />
                 {/* Reason tag — diversity picks get a distinct accent */}
-                <span className={`absolute bottom-1.5 left-1.5 text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm ${
-                  reason === "Unique genre"
-                    ? "bg-purple-600/80 text-purple-100"
-                    : reason === "Different era"
-                      ? "bg-teal-600/80 text-teal-100"
-                      : "bg-black/70 text-white"
-                }`}>
+                <span className={`absolute bottom-1.5 left-1.5 text-[10px] px-1.5 py-0.5 rounded-full backdrop-blur-sm ${reasonTagColor(reason)}`}>
                   {reason}
                 </span>
-                {/* Diversity tag — shows why the diverse strategy picked this */}
-                {diversityTag && (() => {
-                  const style = diversityTagStyle(diversityTag);
-                  return style ? (
-                    <span className={`absolute top-1.5 left-1.5 text-[9px] px-1.5 py-0.5 rounded-full backdrop-blur-sm font-medium ${style.cls}`}>
-                      {style.label}
-                    </span>
-                  ) : null;
-                })()}
               </div>
-              <div className="flex items-center gap-1.5 min-w-0">
-                <p className="text-sm font-medium text-foreground truncate">
-                  {rec.title}
-                </p>
-                {isCollab && (
-                  <Users
-                    className="w-3 h-3 text-rose-400/70 shrink-0"
-                    aria-label="Collaboration track"
-                    role="img"
-                  />
-                )}
-              </div>
+              <p className="text-sm font-medium text-foreground truncate">
+                {rec.title}
+              </p>
               <p className="text-xs text-foreground-secondary truncate">
                 {rec.artist}
               </p>

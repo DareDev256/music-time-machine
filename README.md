@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.23.8-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.24.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-439_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -23,7 +23,7 @@ One search. Four platforms. Every metric that matters.
 <tr>
 <td align="center"><strong>30</strong><br><sub>Components</sub></td>
 <td align="center"><strong>306</strong><br><sub>Tests</sub></td>
-<td align="center"><strong>31</strong><br><sub>Components</sub></td>
+<td align="center"><strong>32</strong><br><sub>Components</sub></td>
 <td align="center"><strong>322</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>348</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
