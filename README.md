@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.24.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.25.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-439_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -70,6 +70,7 @@ Every song gets a detail page with:
 - **Quick Stats bar** — at-a-glance cross-platform metrics (streams, views, chart peak, weeks, page views) with smart abbreviation (2.4B, 770M) and color-coded icons
 - **4 platform cards** — Spotify, YouTube, Billboard, Genius
 - **Performance timeline** — multi-line chart tracking metrics over time
+- **Mood Orb** — an animated, pulsing orb that visualizes the song's emotional character. Color maps from audio features (valence → hue, energy → saturation, danceability → lightness), pulse rate syncs to tempo BPM, and a descriptive mood label (Euphoric, Brooding, Hypnotic, Melancholic...) with micro-bar breakdowns gives an instant visceral read on the track's vibe
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Song Journey** — animated vertical milestone timeline showing key moments: release date, music video drop, Billboard chart entry, peak position, and Genius community engagement. Each milestone is chronologically sorted with platform-colored icons and staggered entrance animations
 - **Similar Songs** — content-based recommendations powered by weighted Euclidean distance across 4D audio features (danceability, energy ×1.5, valence ×1.5, normalized tempo), with same-era bonus (+8). Color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) render as circular SVG progress rings on each card. **User-configurable preferences** let you tune results by preferred genres, era range (2015–2025), and mood (Upbeat / Chill / Melancholy / Energetic) — persisted to localStorage
