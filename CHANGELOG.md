@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.25.1] - 2026-03-23
+
+### Changed
+- **Extracted `MetricCell` component from `ComparisonView`** — deduplicated the winner/tie/neutral cell rendering that was copy-pasted for song1 and song2 in every metric row
+- **Added `resolveState` + `cellStyles` lookup table** — conditional winner styling is now a single data-driven map instead of repeated ternary chains across 40+ lines
+- **Pre-computed score summary counts** — replaced three separate `insights.filter()` calls with a single `useMemo` loop that counts song1 wins, song2 wins, and ties in one pass
+- **Eliminated IIFE in JSX** — the score summary section no longer wraps in an anonymous function call; uses the pre-computed `scores` object directly
+
+---
+
 ## [1.25.0] - 2026-03-23
 
 ### Changed
