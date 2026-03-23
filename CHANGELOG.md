@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.25.0] - 2026-03-23
+
+### Changed
+- **Decomposed `recommendations.ts`** (566 -> 474 lines) — extracted two focused modules from the monolithic recommendation engine:
+  - **`artist-utils.ts`** — `splitArtists` and `primaryArtist` are now general-purpose utilities importable by any component, not trapped inside the scoring algorithm
+  - **`scoring-constants.ts`** — all 22 algorithm tuning knobs (feature weights, bonus values, thresholds, diversity parameters) extracted into a single discoverable file for easier adjustment
+- **Zero-breakage re-exports** — `recommendations.ts` re-exports artist utilities so all existing imports (3 components, 2 test files) continue working without changes
+- **All 416 tests pass** — no regressions from the decomposition
+
+---
+
 ## [1.24.0] - 2026-03-21
 
 ### Changed

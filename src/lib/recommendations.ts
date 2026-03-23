@@ -1,24 +1,33 @@
 import { SongData } from "@/types";
 import { songGenres } from "@/lib/mockData";
+import { splitArtists, primaryArtist } from "@/lib/artist-utils";
+import {
+  MOOD_TARGETS,
+  PREFERRED_GENRE_BONUS,
+  PREFERRED_ERA_BONUS,
+  MOOD_MATCH_BONUS,
+  MOOD_PROXIMITY,
+  FEATURE_WEIGHTS,
+  TEMPO_CEILING,
+  DISTANCE_TO_SCORE,
+  SAME_ERA_BONUS,
+  ERA_PROXIMITY_YEARS,
+  NEAR_IDENTICAL_THRESHOLD,
+  HIGH_ENERGY_THRESHOLD,
+  SIMILAR_MOOD_THRESHOLD,
+  ERA_REASON_YEARS,
+  GENRE_WEIGHT,
+  ERA_WEIGHT,
+  ERA_FULL_SPREAD,
+  DIVERSITY_GENRE_BONUS,
+  DIVERSITY_ERA_BONUS,
+  COLLAB_DIVERSITY_BONUS,
+  POPULARITY_WEIGHT,
+  AUTO_DIVERSITY_THRESHOLD,
+} from "@/lib/scoring-constants";
 
-// ── User preferences ─────────────────────────────────────────────────────
-
-/** Mood preset → target audio feature ranges for preference-aware scoring. */
-const MOOD_TARGETS: Record<string, { energy: number; valence: number }> = {
-  upbeat:     { energy: 0.8, valence: 0.8 },
-  chill:      { energy: 0.35, valence: 0.5 },
-  melancholy: { energy: 0.4, valence: 0.2 },
-  energetic:  { energy: 0.9, valence: 0.6 },
-};
-
-/** Additive bonus when a candidate matches one of the user's preferred genres. */
-const PREFERRED_GENRE_BONUS = 12;
-/** Additive bonus when a candidate falls within the user's preferred era range. */
-const PREFERRED_ERA_BONUS = 10;
-/** Additive bonus when a candidate's mood features are close to the user's target. */
-const MOOD_MATCH_BONUS = 10;
-/** Delta threshold for mood feature proximity. */
-const MOOD_PROXIMITY = 0.25;
+// Re-export artist utils so existing consumers don't break
+export { splitArtists, primaryArtist } from "@/lib/artist-utils";
 
 /** Selection strategy for the recommendation picker. */
 export type SelectionStrategy = "auto" | "best-match" | "diverse";
@@ -51,78 +60,6 @@ export interface RecommendationPrefs {
   /** Selection strategy — "best-match" (default) or "diverse" for genre/era spread. */
   strategy?: SelectionStrategy;
 }
-
-// ── Algorithm constants ─────────────────────────────────────────────────────
-
-/** Feature weights for the 4D Euclidean distance. Energy and valence dominate "vibe." */
-const FEATURE_WEIGHTS = {
-  danceability: 1.0,
-  energy: 1.5,
-  valence: 1.5,
-  tempo: 0.8,
-} as const;
-
-/** Max BPM used to normalize tempo into 0–1 range alongside other features. */
-const TEMPO_CEILING = 200;
-
-/** Multiplier converting raw distance to a 0–100 similarity score. */
-const DISTANCE_TO_SCORE = 150;
-
-/** Additive bonus when candidate is released within {@link ERA_PROXIMITY_YEARS} of target. */
-const SAME_ERA_BONUS = 8;
-
-/** Max year gap to qualify for the same-era bonus. */
-const ERA_PROXIMITY_YEARS = 2;
-
-/** Distance threshold below which two songs are "nearly identical." */
-const NEAR_IDENTICAL_THRESHOLD = 0.15;
-
-/** Energy threshold above which both songs qualify as "high energy." */
-const HIGH_ENERGY_THRESHOLD = 0.7;
-
-/** Valence delta below which the mood is considered matching. */
-const SIMILAR_MOOD_THRESHOLD = 0.1;
-
-/** Year gap for the "Same era" reason label (tighter than the scoring bonus). */
-const ERA_REASON_YEARS = 1;
-
-/** Diversity score formula: genre variety is the primary signal. */
-const GENRE_WEIGHT = 60;
-/** Diversity score formula: era spread adds depth. */
-const ERA_WEIGHT = 40;
-/**
- * Normalizer for era diversity ratio. Decades are inherently coarser than
- * genres (a catalog spanning 2017–2024 only covers 2 decades), so dividing
- * by pick count produces a ratio that almost never exceeds 0.25. Using a
- * fixed spread of 2 means "picks span 2+ distinct decades" = full era credit.
- */
-const ERA_FULL_SPREAD = 2;
-
-/** Bonus added during the diverse-strategy pick phase for an unseen genre. */
-const DIVERSITY_GENRE_BONUS = 25;
-/** Bonus added during the diverse-strategy pick phase for an unseen era. */
-const DIVERSITY_ERA_BONUS = 15;
-/**
- * Bonus for collaboration tracks (ft./feat./with) in the diversity picker.
- * Collabs naturally bridge genres and audiences — a featured artist from a
- * different scene is a strong diversity signal the engine should reward.
- */
-const COLLAB_DIVERSITY_BONUS = 8;
-
-/**
- * Popularity bonus scale for diverse/auto strategies. Popular songs get a small
- * quality signal so the diversity picker doesn't surface obscure filler over
- * well-known tracks when diversity bonuses are equal.
- * Max bonus = POPULARITY_WEIGHT (popularity is 0–100, divided by 100).
- */
-const POPULARITY_WEIGHT = 5;
-
-/**
- * Auto-strategy threshold: if the top `limit` best-match candidates share
- * fewer than this many distinct genres, auto switches to diverse mode.
- * At 2+, the best-match set is already reasonably diverse.
- */
-const AUTO_DIVERSITY_THRESHOLD = 2;
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -290,36 +227,6 @@ export function getDiversityMeta(
     genres: [...genres].sort(),
     eras: [...eras].sort(),
   };
-}
-
-// ── Artist parsing ──────────────────────────────────────────────────────────
-
-/**
- * Split a credit string into individual artist names.
- * Handles: "ft." / "feat." / "&" / "," / "with" separators.
- */
-export function splitArtists(artist: string): string[] {
-  if (typeof artist !== "string") return [];
-
-  const parts = artist.split(
-    /\s*(?:,\s*|\s+(?:ft\.?|feat\.?|with)\s+)\s*/i,
-  );
-  const result: string[] = [];
-  for (const part of parts) {
-    const ampersandParts = part.split(/\s*&\s*/);
-    if (ampersandParts.length > 1 && ampersandParts.every((p) => p.trim().length >= 2)) {
-      result.push(...ampersandParts);
-    } else {
-      result.push(part);
-    }
-  }
-  return result.map((s) => s.trim().toLowerCase()).filter(Boolean);
-}
-
-/** Extract the primary (first-billed) artist name, normalised to lowercase */
-export function primaryArtist(artist: string): string {
-  if (typeof artist !== "string") return "";
-  return splitArtists(artist)[0] ?? artist.trim().toLowerCase();
 }
 
 // ── Pick result type ─────────────────────────────────────────────────────
