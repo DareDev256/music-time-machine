@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.25.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.25.3-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-451_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -122,6 +122,82 @@ These are the design decisions that make this more than a CRUD app:
 
 ---
 
+## Custom Hooks API
+
+Four purpose-built hooks power the client-side data flow. Each is independently importable from `src/hooks/`.
+
+### `useAsyncData<T>(fetcher, deps)` — Generic Async State Machine
+
+Replaces the `useState(data) + useState(loading) + useState(error)` triple with a single `useReducer`-backed [discriminated union](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html#discriminated-unions) — impossible states like "loading AND error" are structurally unrepresentable.
+
+```tsx
+import { useAsyncData } from "@/hooks/useAsyncData";
+
+const { data, loading, error } = useAsyncData<Album[]>(
+  (signal) => fetch("/api/albums", { signal }).then(r => r.json()),
+  [artistId]  // re-fetches when deps change
+);
+```
+
+**Key behaviors:**
+- `AbortController` per fetch cycle — stale responses from previous renders are cancelled before new ones fire
+- Automatic cleanup on unmount — no "set state on unmounted component" warnings
+- Type-narrows via `status: "idle" | "loading" | "success" | "error"` internally
+
+### `useSongData(id)` — Song Page Data Fetcher
+
+Wraps `useAsyncData` to parallel-fetch song detail + catalog data in a single `Promise.all`. Returns `{ song, catalog, loading, error }`.
+
+```tsx
+const { song, catalog, loading, error } = useSongData("blinding-lights");
+// song: SongData | null, catalog: SongData[] (empty on failure, never undefined)
+```
+
+**Resilience:** If the catalog endpoint fails but the song succeeds, you still get `song` with an empty `catalog[]` — partial success over total failure.
+
+### `useKeyboardShortcuts({ onToggleTheme })` — Global Keyboard Navigation
+
+Powers the `?` shortcut cheat sheet and all power-user keyboard navigation. Returns `{ showPanel, setShowPanel, isSongPage }`.
+
+```tsx
+const { showPanel, setShowPanel, isSongPage } = useKeyboardShortcuts({
+  onToggleTheme: () => setTheme(prev => prev === "dark" ? "light" : "dark"),
+});
+```
+
+**Shortcut registry** (`SHORTCUTS` export — array of `{ key, label, scope }` objects):
+
+| Key | Action | Scope |
+|-----|--------|-------|
+| `/` | Focus search input | Global |
+| `?` | Toggle shortcuts panel | Global |
+| `h` | Navigate home | Global |
+| `t` | Toggle theme | Global |
+| `s` | Share current song | Song page only |
+| `c` | Compare current song | Song page only |
+| `Esc` | Close panel / blur input | Global |
+
+**Adding a shortcut:** Add an entry to `SHORTCUTS`, add a `case` in the `handleKey` switch, and song-page actions dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) (`mtm:share`, `mtm:compare`) that page components listen for.
+
+**Form-field awareness:** All shortcuts are suppressed when focus is on `input`, `textarea`, `select`, or `contentEditable` elements — except `Escape`, which blurs the field.
+
+### `useRecentlyViewed()` — Recently Viewed FIFO Queue
+
+Tracks the last 8 viewed songs in `localStorage` via React 19's `useSyncExternalStore` — no `useEffect`-on-mount hydration hack. Returns `{ songs, record }`.
+
+```tsx
+const { songs, record } = useRecentlyViewed();
+
+// Record a view (deduplicates, moves to front, FIFO-evicts past 8)
+record({ id: "blinding-lights", title: "Blinding Lights", artist: "The Weeknd", albumArt: "/art.jpg" });
+
+// songs: RecentSong[] — reactive, updates across tabs via storage events
+```
+
+**Storage shape:** Lightweight stubs (`id`, `title`, `artist`, `albumArt`, `viewedAt`) — never full `SongData` payloads. Key: `mtm:recently-viewed`. Degrades silently on storage-full or private browsing.
+
+---
+
 ## Architecture
 
 ```
@@ -228,7 +304,9 @@ src/
 │   └── PageStates.tsx              # Shared loading/error full-page states
 ├── hooks/
 │   ├── useAsyncData.ts              # Generic useReducer-backed async fetch hook
-│   └── useSongData.ts              # Song page data fetching (wraps useAsyncData)
+│   ├── useSongData.ts              # Song page data fetching (wraps useAsyncData)
+│   ├── useKeyboardShortcuts.ts     # Global keyboard navigation + shortcut registry
+│   └── useRecentlyViewed.ts        # localStorage FIFO queue via useSyncExternalStore
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
 │   ├── recommendations.ts          # Audio feature similarity engine

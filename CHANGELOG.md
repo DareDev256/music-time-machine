@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.25.3] - 2026-03-24
+
+### Added
+- **Custom Hooks API section in README** — full developer-facing documentation for all 4 client hooks (`useAsyncData`, `useSongData`, `useKeyboardShortcuts`, `useRecentlyViewed`) with type signatures, usage examples, key behaviors, and extension guides
+- **Keyboard shortcut registry table** — documents all 7 shortcuts, their scopes, the `CustomEvent` dispatch pattern (`mtm:share`, `mtm:compare`), form-field suppression logic, and how to add new shortcuts
+- **Project structure update** — added `useKeyboardShortcuts.ts` and `useRecentlyViewed.ts` to the directory tree (previously missing from README)
+
+---
+
 ## [1.25.2] - 2026-03-24
 
 ### Added
