@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.26.0] - 2026-03-24
+
+### Added
+- **Cross-Platform Impact Score** — a composite 0–100 score synthesizing Spotify, YouTube, Billboard, and Genius metrics into a single animated ring visualization with tier labels (Legendary, Iconic, Hit Maker, Rising Star, Cult Classic, Hidden Gem). SVG ring animates with spring-physics easing, number counts up with cubic ease-out, and per-platform breakdown bars show exactly where points come from
+- **`impactScore.ts` scoring engine** — weighted algorithm: Billboard (30 pts — chart peak + longevity), Spotify (30 pts — streams + popularity + playlists), YouTube (25 pts — views + likes + engagement ratio), Genius (15 pts — page views + annotations). Includes `parseCount()` utility for abbreviated number strings (4.2B, 18M, 892K)
+- **12 tests for impact scoring** — covers `parseCount` (6 tests for B/M/K/comma/plain/empty formats), tier assignment, platform score capping, total ceiling at 100, and billboard ranking comparisons
+
+---
+
 ## [1.25.3] - 2026-03-24
 
 ### Added
