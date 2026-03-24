@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.25.2] - 2026-03-24
+
+### Added
+- **35 tests for 3 recently-extracted modules** — covers `score-colors.ts` (20 tests), `artist-utils.ts` (15 tests), and validates all tier boundary values, SVG arc math, genre chip mapping, and artist credit parsing edge cases
+- **Boundary regression guards** — explicit off-by-one checks on color tier thresholds (≥80 vs >80) that would silently miscolor recommendation badges
+- **Runtime safety coverage** — tests for non-string inputs to `splitArtists`/`primaryArtist` that TypeScript can't catch from untyped API responses
+- **R&B ampersand preservation test** — ensures the `&` split heuristic doesn't break genre names like "R&B" while still splitting "Simon & Garfunkel"
+
+---
+
 ## [1.25.1] - 2026-03-23
 
 ### Changed

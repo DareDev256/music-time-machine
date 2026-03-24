@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.25.1-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-440_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.25.2-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-451_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -25,7 +25,7 @@ One search. Four platforms. Every metric that matters.
 <td align="center"><strong>306</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>32</strong><br><sub>Components</sub></td>
 <td align="center"><strong>322</strong><br><sub>Tests</sub></td>
-<td align="center"><strong>348</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>451</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
