@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.26.2] - 2026-03-25
+
+### Changed
+- **Refactored `SongHeader` component** — extracted `HeaderStat` and `PlatformLink` sub-components to eliminate three copy-pasted stat blocks and three copy-pasted external link blocks. The header now uses data-driven rendering, reducing ~70 lines of duplicated JSX to composable, typed components that are easier to maintain and extend with new platforms
+
+---
+
 ## [1.26.1] - 2026-03-25
 
 ### Security

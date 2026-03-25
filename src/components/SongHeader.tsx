@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactNode } from "react";
 import { Calendar, TrendingUp, Music, ExternalLink } from "lucide-react";
 import { SongData } from "@/types";
 import SafeImage from "@/components/SafeImage";
@@ -7,6 +8,59 @@ import Link from "next/link";
 import { safeHref } from "@/lib/safeHref";
 import { formatDate } from "@/lib/formatDate";
 import { toSlug } from "@/lib/toSlug";
+
+/* ------------------------------------------------------------------ */
+/*  Sub-components — eliminate duplicated stat / link markup           */
+/* ------------------------------------------------------------------ */
+
+interface HeaderStatProps {
+  label: string;
+  value: string;
+  color: string; // Tailwind text-color class, e.g. "text-yellow-400"
+  icon?: ReactNode;
+}
+
+/** Compact stat chip used in the song header's inline stats row. */
+function HeaderStat({ label, value, color, icon }: HeaderStatProps) {
+  return (
+    <div className="bg-background-secondary border border-border rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
+      <div className={`flex items-center justify-center sm:justify-start gap-1 sm:gap-2 ${color} mb-0.5 sm:mb-1`}>
+        {icon}
+        <span className="text-[10px] sm:text-xs uppercase tracking-wider">{label}</span>
+      </div>
+      <p className="text-lg sm:text-2xl font-bold text-foreground text-center sm:text-left">
+        {value}
+      </p>
+    </div>
+  );
+}
+
+interface PlatformLinkProps {
+  url: string | undefined;
+  label: string;
+  /** Tailwind bg + hover classes, e.g. "bg-green-600 hover:bg-green-500" */
+  colors: string;
+}
+
+/** External link pill used for Spotify / YouTube / Genius. */
+function PlatformLink({ url, label, colors }: PlatformLinkProps) {
+  if (!url || safeHref(url) === "#") return null;
+  return (
+    <a
+      href={safeHref(url)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center gap-1.5 sm:gap-2 ${colors} active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all`}
+    >
+      <span>{label}</span>
+      <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+    </a>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Main component                                                     */
+/* ------------------------------------------------------------------ */
 
 interface SongHeaderProps {
   song: SongData;
@@ -53,78 +107,37 @@ export default function SongHeader({ song }: SongHeaderProps) {
           </div>
         </div>
 
-        {/* Quick Stats */}
+        {/* Quick Stats — data-driven instead of copy-pasted blocks */}
         <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center md:justify-start sm:gap-4">
           {song.billboard && (
-            <div className="bg-background-secondary border border-border rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
-              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-yellow-400 mb-0.5 sm:mb-1">
-                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider hidden sm:inline">Peak</span>
-              </div>
-              <p className="text-lg sm:text-2xl font-bold text-foreground text-center sm:text-left">
-                #{song.billboard.peakPosition}
-              </p>
-            </div>
+            <HeaderStat
+              label="Peak"
+              value={`#${song.billboard.peakPosition}`}
+              color="text-yellow-400"
+              icon={<TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />}
+            />
           )}
-
           {song.spotify && (
-            <div className="bg-background-secondary border border-border rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
-              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-green-400 mb-0.5 sm:mb-1">
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider">Streams</span>
-              </div>
-              <p className="text-lg sm:text-2xl font-bold text-foreground text-center sm:text-left">
-                {song.spotify.totalStreams}
-              </p>
-            </div>
+            <HeaderStat
+              label="Streams"
+              value={song.spotify.totalStreams}
+              color="text-green-400"
+            />
           )}
-
           {song.youtube && (
-            <div className="bg-background-secondary border border-border rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3">
-              <div className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 text-red-400 mb-0.5 sm:mb-1">
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider">Views</span>
-              </div>
-              <p className="text-lg sm:text-2xl font-bold text-foreground text-center sm:text-left">
-                {song.youtube.viewCount}
-              </p>
-            </div>
+            <HeaderStat
+              label="Views"
+              value={song.youtube.viewCount}
+              color="text-red-400"
+            />
           )}
         </div>
 
-        {/* External Links */}
+        {/* External Links — data-driven instead of copy-pasted blocks */}
         <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mt-4 sm:mt-6">
-          {song.spotify?.externalUrl && safeHref(song.spotify.externalUrl) !== "#" && (
-            <a
-              href={safeHref(song.spotify.externalUrl)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 sm:gap-2 bg-green-600 hover:bg-green-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
-            >
-              <span>Spotify</span>
-              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
-          )}
-          {song.youtube?.externalUrl && safeHref(song.youtube.externalUrl) !== "#" && (
-            <a
-              href={safeHref(song.youtube.externalUrl)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 sm:gap-2 bg-red-600 hover:bg-red-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
-            >
-              <span>YouTube</span>
-              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
-          )}
-          {song.genius?.lyricsUrl && safeHref(song.genius.lyricsUrl) !== "#" && (
-            <a
-              href={safeHref(song.genius.lyricsUrl)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 sm:gap-2 bg-yellow-600 hover:bg-yellow-500 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all"
-            >
-              <span>Lyrics</span>
-              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
-          )}
+          <PlatformLink url={song.spotify?.externalUrl} label="Spotify" colors="bg-green-600 hover:bg-green-500" />
+          <PlatformLink url={song.youtube?.externalUrl} label="YouTube" colors="bg-red-600 hover:bg-red-500" />
+          <PlatformLink url={song.genius?.lyricsUrl} label="Lyrics" colors="bg-yellow-600 hover:bg-yellow-500" />
         </div>
       </div>
     </div>
