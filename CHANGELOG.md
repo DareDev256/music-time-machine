@@ -2,6 +2,17 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.26.1] - 2026-03-25
+
+### Security
+- **Next.js 16.1.6 → 16.2.1** — patches 5 CVEs: HTTP request smuggling in rewrites (GHSA-ggv3-7p47-pfv8), unbounded next/image disk cache exhaustion (GHSA-3x4c-7xq6-9pq8), postponed resume buffering DoS (GHSA-h27x-g6w4-24gq), null origin CSRF bypass on Server Actions (GHSA-mq59-m269-xvcx), null origin HMR websocket CSRF bypass (GHSA-jcc7-9wpm-mj36)
+- **`crypto.timingSafeEqual` in health auth** — replaced manual byte-loop comparison with Node.js native constant-time comparison to eliminate timing side-channel on `HEALTH_AUTH_TOKEN` verification
+- **Resolved .env.example merge conflict** — removed git conflict markers; consolidated on `HEALTH_AUTH_TOKEN` (Bearer header pattern) as the canonical env var name
+- **Dependency audit: 0 vulnerabilities** — fixed 4 transitive CVEs (rollup path traversal, flatted prototype pollution + DoS, minimatch ReDoS, ajv ReDoS) via `npm audit fix`
+- **API response indexing prevention** — added `X-Robots-Tag: noindex, nofollow` header to all `/api/*` responses via edge middleware to prevent search engine crawling of JSON endpoints
+
+---
+
 ## [1.26.0] - 2026-03-24
 
 ### Added

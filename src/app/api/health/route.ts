@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { timingSafeEqual } from "node:crypto";
 import { searchCache, songCache } from "@/lib/cache";
 import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
@@ -69,14 +70,12 @@ export function isAuthorizedForDetails(request: NextRequest): boolean {
   const authHeader = request.headers.get("authorization");
   if (!authHeader?.startsWith("Bearer ")) return false;
 
-  // Constant-time-ish comparison to prevent timing attacks on the token.
-  // Length check first — Buffer operations require equal-length inputs.
+  // Constant-time comparison via Node.js crypto to prevent timing attacks.
+  // Length check first — timingSafeEqual requires equal-length buffers.
   const provided = authHeader.slice(7);
   if (provided.length !== token.length) return false;
 
-  const a = Buffer.from(provided);
-  const b = Buffer.from(token);
-  return a.every((byte, i) => byte === b[i]);
+  return timingSafeEqual(Buffer.from(provided), Buffer.from(token));
 }
 
 /**

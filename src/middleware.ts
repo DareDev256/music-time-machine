@@ -62,6 +62,11 @@ export function middleware(request: NextRequest): NextResponse {
 
   response.headers.set("X-Request-Id", requestId);
 
+  // Prevent search engines from indexing raw API/JSON responses
+  if (pathname.startsWith("/api/")) {
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+
   return response;
 }
 
