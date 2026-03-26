@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.26.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.27.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-463_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -21,9 +21,9 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>30</strong><br><sub>Components</sub></td>
+<td align="center"><strong>31</strong><br><sub>Components</sub></td>
 <td align="center"><strong>306</strong><br><sub>Tests</sub></td>
-<td align="center"><strong>32</strong><br><sub>Components</sub></td>
+<td align="center"><strong>33</strong><br><sub>Components</sub></td>
 <td align="center"><strong>322</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>463</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
@@ -73,6 +73,7 @@ Every song gets a detail page with:
 - **Mood Orb** — an animated, pulsing orb that visualizes the song's emotional character. Color maps from audio features (valence → hue, energy → saturation, danceability → lightness), pulse rate syncs to tempo BPM, and a descriptive mood label (Euphoric, Brooding, Hypnotic, Melancholic...) with micro-bar breakdowns gives an instant visceral read on the track's vibe
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Impact Score** — a composite 0–100 score synthesizing all platform metrics into a single animated ring visualization. Weighted scoring: Billboard (30 pts — chart peak + longevity), Spotify (30 pts — streams + popularity + playlists), YouTube (25 pts — views + likes + engagement ratio), Genius (15 pts — page views + annotations). Tiered labels — Legendary, Iconic, Hit Maker, Rising Star, Cult Classic, Hidden Gem — with per-platform breakdown bars showing exactly where the points come from
+- **Streaming Velocity** — computes daily average Spotify streams and YouTube views from lifetime totals and release date, classifying each song into velocity tiers (Viral 2M+/day, Hot 500K+, Steady 100K+, Catalogue). Features animated counters, a color-coded tier badge with glow effect, and a proportional Spotify-vs-YouTube bar showing platform dominance. Renders only when meaningful data exists
 - **Song Journey** — animated vertical milestone timeline showing key moments: release date, music video drop, Billboard chart entry, peak position, and Genius community engagement. Each milestone is chronologically sorted with platform-colored icons and staggered entrance animations
 - **Similar Songs** — content-based recommendations powered by weighted Euclidean distance across 4D audio features (danceability, energy ×1.5, valence ×1.5, normalized tempo), with same-era bonus (+8). Color-coded **match score badges** (emerald ≥80%, sky ≥60%, amber ≥40%) render as circular SVG progress rings on each card. **User-configurable preferences** let you tune results by preferred genres, era range (2015–2025), and mood (Upbeat / Chill / Melancholy / Energetic) — persisted to localStorage
 - **Diversity-Aware Picks** — same-artist candidates are early-skipped before scoring (parsing `ft.`, `feat.`, `&`, `,`, `with` collaborations), avoiding wasted distance calculations. A greedy selection loop then caps results at one song per artist, ensuring recommendations always surface *new* artists. **Three selection strategies** are available via a toggle: **Auto** (default — inspects top candidates' genre diversity and intelligently switches between best-match and diverse), **Best match** (greedy by score), and **Diverse** (greedy set-cover with marginal diversity bonuses — +25 unseen genre, +15 unseen decade, +8 collaboration track — plus a popularity quality signal that prevents obscure filler from outranking well-known tracks). **Collaboration-aware picking** rewards songs with featured artists (`ft.`/`feat.`/`with`) because collabs naturally bridge genres and audiences. **Diversity reason tags** appear on each card in diverse/auto mode — "New genre" (violet), "New era" (teal), or "Collab pick" (rose) — giving users transparency into why the engine chose each recommendation. A **collab indicator** (Users icon) marks featured artist tracks on recommendation cards. An **auto-insight indicator** reveals the engine's decision when Auto is active — showing the resolved strategy and genre count detected, with color-coded labels and smooth height-reveal animation. Both the scoring pipeline and diversity metadata are memoized to prevent redundant recomputation on re-renders. A **diversity indicator** bar analyzes the final picks by genre spread (60% weight) and era spread (40% weight, normalized against a fixed 2-decade spread instead of pick count), displaying genre chips with per-genre colors, era span tags, and a scored label (Wide mix / Good variety / Similar vibe / Narrow focus)

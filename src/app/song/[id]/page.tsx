@@ -17,6 +17,7 @@ import ShareCard from "@/components/ShareCard";
 import SimilarSongs from "@/components/SimilarSongs";
 import SongMilestones from "@/components/SongMilestones";
 import ImpactScore from "@/components/ImpactScore";
+import StreamingVelocity from "@/components/StreamingVelocity";
 import SearchBar from "@/components/SearchBar";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
 import { useSongData } from "@/hooks/useSongData";
@@ -164,6 +165,16 @@ export default function SongPage({ params }: PageProps) {
           transition={{ duration: 0.4, delay: 0.22 }}
         >
           <ImpactScore song={song} />
+        </motion.section>
+
+        {/* Streaming Velocity */}
+        <motion.section
+          className="mb-6 sm:mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.24 }}
+        >
+          <StreamingVelocity song={song} />
         </motion.section>
 
         {/* Song Journey Milestones */}

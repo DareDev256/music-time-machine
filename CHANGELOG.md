@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.27.0] - 2026-03-26
+
+### Added
+- **Streaming Velocity** — new song detail section showing daily average Spotify streams, YouTube views, Billboard weeks on chart, and days since release. Metrics animate on mount with ease-out cubic timing. Songs are classified into velocity tiers (Viral / Hot / Steady / Catalogue) with color-coded badges and glow effects. A proportional Spotify-vs-YouTube bar shows platform dominance at a glance. Utility module (`velocity.ts`) reuses existing `parseCount` from `impactScore.ts` for consistent number parsing
+
+---
+
 ## [1.26.2] - 2026-03-25
 
 ### Changed
