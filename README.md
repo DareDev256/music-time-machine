@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.27.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.28.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-481_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -64,6 +64,9 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 ### 🔍 Search & Discover
 Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
+
+### 🎲 Pick for Me (Auto-Select)
+An intelligent auto-discovery button on the home page that analyzes your recently viewed songs and picks the optimal next track to explore. The selection engine maximizes **genre diversity** (unexplored genres get a 30-point bonus), avoids repeats, and rewards **new artists** — so if you've been deep in Pop, it'll surface a Country or K-Pop pick. When your history is empty, it picks a random high-quality entry point. When you've explored the entire catalog, it resurfaces your least-recently-viewed track. The button features a three-phase animation: idle → spinning disc → album art reveal with reason tag ("New genre: K-Pop", "New artist: Dua Lipa") before navigating. Slight randomness among top-3 candidates keeps repeated picks feeling fresh.
 
 ### 📊 Song Dashboard
 Every song gets a detail page with:

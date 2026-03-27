@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.28.0] - 2026-03-27
+
+### Added
+- **Pick for Me auto-select** — intelligent song discovery button on the home page (`DiscoverPick` component). Analyzes recently viewed songs via `pickNextSong` engine to maximize genre diversity (+30 for unexplored genres), avoid repeats, and reward new artists (+15). Falls back to random entry when no history exists, or resurfaces least-recently-viewed when entire catalog explored. Three-phase button animation (idle → spinning disc → album art reveal with reason tag) before navigating. Slight top-3 randomness prevents repetitive picks
+- New `src/lib/pickNextSong.ts` — pure scoring function with novelty-based candidate ranking, artist/genre profile extraction from viewing history, and three fallback strategies (random, novelty-scored, least-recent revisit)
+- Home page action row now features Compare + Pick for Me side-by-side with responsive stacking on mobile
+
+---
+
 ## [1.27.2] - 2026-03-27
 
 ### Fixed

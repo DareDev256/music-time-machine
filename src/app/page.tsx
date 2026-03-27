@@ -9,6 +9,7 @@ import SearchBar from "@/components/SearchBar";
 import DateSearch from "@/components/DateSearch";
 import FilterBar from "@/components/FilterBar";
 import RecentlyViewed from "@/components/RecentlyViewed";
+import DiscoverPick from "@/components/DiscoverPick";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
 import { SearchResult } from "@/types";
 
@@ -125,8 +126,8 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Compare CTA */}
-          <div className="flex justify-center mb-10">
+          {/* Action Row — Compare + Pick for Me */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10 max-w-lg mx-auto">
             <Link
               href="/compare"
               className="flex items-center gap-2 bg-background-secondary hover:bg-card-hover border border-border rounded-full px-5 py-2.5 transition-colors group"
@@ -135,6 +136,8 @@ export default function Home() {
               <span className="text-sm font-medium text-foreground">Compare Two Songs</span>
               <ArrowRight className="w-3.5 h-3.5 text-foreground-secondary group-hover:translate-x-0.5 transition-transform" />
             </Link>
+            <span className="text-xs text-foreground-secondary hidden sm:block">or</span>
+            <DiscoverPick />
           </div>
 
           {/* Time Machine - Birthday Search */}
