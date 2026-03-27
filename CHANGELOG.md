@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.27.1] - 2026-03-27
+
+### Added
+- **Velocity module test suite** — 18 tests covering `calculateVelocity()` and `TIER_META` from `velocity.ts`. Tests daily rate arithmetic (total ÷ days), all four tier boundary classifications (viral ≥ 2M, hot ≥ 500K, steady ≥ 100K, catalogue), null platform graceful degradation, invalid/empty release date fallback to 365 days, same-day release floor to 1 day, billboard `weeksOnChart` passthrough, and `combinedDaily` sum correctness. Deterministic via pinned `Date.now()` mocks. Total test count: 463 → 481
+
+---
+
 ## [1.27.0] - 2026-03-26
 
 ### Added
