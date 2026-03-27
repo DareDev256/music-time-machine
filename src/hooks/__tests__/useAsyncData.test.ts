@@ -61,8 +61,8 @@ describe("useAsyncData", () => {
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
-    // String coerced: (err as Error).message is undefined → fallback
-    expect(result.current.error).toBe("An error occurred");
+    // String rejections are now properly extracted instead of silently discarded
+    expect(result.current.error).toBe("string rejection");
   });
 
   // ── AbortController behaviour ─────────────────────────────────────

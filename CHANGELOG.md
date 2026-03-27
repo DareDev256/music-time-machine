@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.27.2] - 2026-03-27
+
+### Fixed
+- **Unsafe type casts in `useAsyncData`** — replaced `IDLE as AsyncState<T>` with a generic factory function `createIdle<T>()` that produces properly typed initial state without assertion. Replaced `(err as Error).name` and `(err as Error).message` casts in the catch block with `instanceof`-based type guards (`isAbortError`, `toErrorMessage`) that correctly handle non-Error rejection values (strings, numbers, objects) instead of silently swallowing them
+- **Unnecessary `as string` cast in `getAccessToken`** — the Spotify token function used `return accessToken as string` on a module-level `string | null` variable. Refactored to capture the token in a local `const` before assignment, giving TypeScript a narrow `string` type without any assertion
+- Updated test expectation for string rejection values to match the improved behavior (string errors now surface their actual message instead of falling through to the generic fallback)
+
+---
+
 ## [1.27.1] - 2026-03-27
 
 ### Added

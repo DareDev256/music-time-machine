@@ -33,10 +33,11 @@ async function getAccessToken(): Promise<string> {
   }
 
   const data = await safeJson<{ access_token: string; expires_in: number }>(response);
-  accessToken = data.access_token;
+  const token = data.access_token;
+  accessToken = token;
   tokenExpiry = Date.now() + (data.expires_in - 60) * 1000; // Refresh 1 min early
 
-  return accessToken as string;
+  return token;
 }
 
 async function spotifyFetch(endpoint: string) {

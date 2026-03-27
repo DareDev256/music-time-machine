@@ -25,7 +25,22 @@ function reducer<T>(_: AsyncState<T>, action: Action<T>): AsyncState<T> {
   }
 }
 
-const IDLE: AsyncState<never> = { status: "idle", data: null, error: null };
+/** Type-safe initial state factory — avoids `as` cast from `AsyncState<never>`. */
+function createIdle<T>(): AsyncState<T> {
+  return { status: "idle", data: null, error: null };
+}
+
+/** Extract an error message without unsafe `as Error` casts. */
+function toErrorMessage(err: unknown): string {
+  if (err instanceof Error) return err.message || "An error occurred";
+  if (typeof err === "string") return err || "An error occurred";
+  return "An error occurred";
+}
+
+/** Check if an unknown caught value is an AbortError. */
+function isAbortError(err: unknown): boolean {
+  return err instanceof DOMException && err.name === "AbortError";
+}
 
 /**
  * Generic async fetch hook backed by `useReducer`.
@@ -44,7 +59,7 @@ export function useAsyncData<T>(
   fetcher: (signal: AbortSignal) => Promise<T>,
   deps: React.DependencyList,
 ): { data: T | null; loading: boolean; error: string | null } {
-  const [state, dispatch] = useReducer(reducer<T>, IDLE as AsyncState<T>);
+  const [state, dispatch] = useReducer(reducer<T>, createIdle<T>());
 
   useEffect(() => {
     const controller = new AbortController();
@@ -56,12 +71,12 @@ export function useAsyncData<T>(
           dispatch({ type: "SUCCESS", data });
         }
       })
-      .catch((err) => {
-        if ((err as Error).name === "AbortError") return;
+      .catch((err: unknown) => {
+        if (isAbortError(err)) return;
         console.error("useAsyncData fetch error:", err);
         dispatch({
           type: "ERROR",
-          error: (err as Error).message || "An error occurred",
+          error: toErrorMessage(err),
         });
       });
 
