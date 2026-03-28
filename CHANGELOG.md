@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.28.1] - 2026-03-28
+
+### Changed
+- **Refactor `pickNextSong` module** — extracted two shared helpers (`primaryArtist`, `genreOf`) to eliminate duplicated logic. The compound-artist splitting regex (`feat.`, `ft.`, `&`, `,`, `with`) previously appeared in 3 separate locations; the genre-with-fallback lookup appeared in 5. Both are now single-source-of-truth functions with JSDoc, exported for reuse and testability. Regex compiled once as a module-level constant (`FEAT_SPLIT`) instead of re-created on every call. Zero behavioral change — all 481 tests pass unchanged
+
+---
+
 ## [1.28.0] - 2026-03-27
 
 ### Added

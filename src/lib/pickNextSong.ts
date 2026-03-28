@@ -19,6 +19,29 @@ export interface PickResult {
   genre: string;
 }
 
+/* ------------------------------------------------------------------ */
+/*  Shared helpers — single source of truth for artist & genre logic  */
+/* ------------------------------------------------------------------ */
+
+/** Regex that splits compound artist credits (feat., ft., &, commas, "with"). */
+const FEAT_SPLIT = /\s*(feat\.|ft\.|&|,|with)\s*/i;
+
+/**
+ * Extract the lead artist from a compound credit string.
+ * e.g. "Drake feat. Rihanna" → "Drake"
+ */
+export function primaryArtist(raw: string): string {
+  return raw.split(FEAT_SPLIT)[0].trim();
+}
+
+/**
+ * Look up a song's genre with a consistent fallback.
+ * Centralises the "Unknown" default so every call site stays in sync.
+ */
+export function genreOf(songId: string): string {
+  return songGenres[songId] || "Unknown";
+}
+
 /**
  * Score each candidate song based on how different it is from viewing history.
  * Higher = more novel = better pick.
@@ -37,7 +60,7 @@ function noveltyScore(
   let score = 50; // Base score
 
   // Genre diversity: bonus for genres the user hasn't explored
-  const genre = songGenres[songId] || "Unknown";
+  const genre = genreOf(songId);
   const genreCount = viewedGenres.get(genre) ?? 0;
   if (genreCount === 0) {
     score += 30; // Unexplored genre — strong bonus
@@ -46,7 +69,7 @@ function noveltyScore(
   }
 
   // Artist diversity: bonus for new artists
-  const artist = song.artist.split(/\s*(feat\.|ft\.|&|,|with)\s*/i)[0].trim();
+  const artist = primaryArtist(song.artist);
   if (!viewedArtists.has(artist.toLowerCase())) {
     score += 15;
   }
@@ -76,7 +99,7 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
     return {
       id,
       reason: "Random discovery",
-      genre: songGenres[id] || "Unknown",
+      genre: genreOf(id),
     };
   }
 
@@ -86,9 +109,9 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
   const viewedArtists = new Set<string>();
 
   for (const s of recentSongs) {
-    const genre = songGenres[s.id] || "Unknown";
+    const genre = genreOf(s.id);
     viewedGenres.set(genre, (viewedGenres.get(genre) ?? 0) + 1);
-    viewedArtists.add(s.artist.split(/\s*(feat\.|ft\.|&|,|with)\s*/i)[0].trim().toLowerCase());
+    viewedArtists.add(primaryArtist(s.artist).toLowerCase());
   }
 
   // Score all candidates
@@ -107,14 +130,14 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
     return {
       id,
       reason: "Revisit — it's been a while",
-      genre: songGenres[id] || "Unknown",
+      genre: genreOf(id),
     };
   }
 
   // Top pick — add slight randomness among top 3 to keep it fresh
   const topN = scored.slice(0, Math.min(3, scored.length));
   const pick = topN[Math.floor(Math.random() * topN.length)];
-  const genre = songGenres[pick.id] || "Unknown";
+  const genre = genreOf(pick.id);
 
   // Classify the reason
   const genreCount = viewedGenres.get(genre) ?? 0;
@@ -123,7 +146,7 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
     reason = `New genre: ${genre}`;
   } else {
     const song = mockSongs[pick.id];
-    const artist = song?.artist.split(/\s*(feat\.|ft\.|&|,|with)\s*/i)[0].trim() ?? "";
+    const artist = song ? primaryArtist(song.artist) : "";
     if (!viewedArtists.has(artist.toLowerCase())) {
       reason = `New artist: ${artist}`;
     } else {
