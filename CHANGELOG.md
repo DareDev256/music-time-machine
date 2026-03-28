@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.29.0] - 2026-03-28
+
+### Added
+- **Song Fingerprint visualization** — unique generative SVG identity for each song on the detail page (`SongFingerprint` component). Each fingerprint is deterministically derived from the track's audio features: valence maps to colour temperature (indigo → pink → orange), energy controls waveform amplitude, danceability sets segment count, and tempo shapes the inner ring density. Includes animated entrance with staggered pathLength reveals, accent dots, and centre pulse. Fully accessible with ARIA labels describing mood and energy. Responsive layout with feature legend showing mood label, energy class, danceability percentage, and BPM
+
+---
+
 ## [1.28.1] - 2026-03-28
 
 ### Changed

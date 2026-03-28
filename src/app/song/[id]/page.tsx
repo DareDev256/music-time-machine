@@ -16,6 +16,7 @@ import AudioPlayer from "@/components/AudioPlayer";
 import ShareCard from "@/components/ShareCard";
 import SimilarSongs from "@/components/SimilarSongs";
 import SongMilestones from "@/components/SongMilestones";
+import SongFingerprint from "@/components/SongFingerprint";
 import ImpactScore from "@/components/ImpactScore";
 import StreamingVelocity from "@/components/StreamingVelocity";
 import SearchBar from "@/components/SearchBar";
@@ -154,6 +155,18 @@ export default function SongPage({ params }: PageProps) {
             transition={{ duration: 0.4, delay: 0.2 }}
           >
             <AudioRadarChart audioFeatures={song.spotify.audioFeatures} />
+          </motion.section>
+        )}
+
+        {/* Song DNA Fingerprint */}
+        {song.spotify?.audioFeatures && (
+          <motion.section
+            className="mb-6 sm:mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.21 }}
+          >
+            <SongFingerprint audioFeatures={song.spotify.audioFeatures} title={song.title} />
           </motion.section>
         )}
 
