@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.30.0] - 2026-03-29
+
+### Added
+- **Chart Journey visualization** — animated SVG component (`ChartJourney`) on the song detail page that traces a song's Billboard Hot 100 trajectory. Uses cardinal-spline interpolation (tension 0.35) for smooth curves between chart positions, gradient area fill, and stroke-dashoffset animation that draws the path on mount. Peak position highlighted with a spring-animated marker. Summary stats row shows entry → peak → latest with date labels and trend arrows. Fully accessible with ARIA description. Renders conditionally when Billboard chart history has ≥2 data points
+
+---
+
 ## [1.29.0] - 2026-03-28
 
 ### Added

@@ -19,6 +19,7 @@ import SongMilestones from "@/components/SongMilestones";
 import SongFingerprint from "@/components/SongFingerprint";
 import ImpactScore from "@/components/ImpactScore";
 import StreamingVelocity from "@/components/StreamingVelocity";
+import ChartJourney from "@/components/ChartJourney";
 import SearchBar from "@/components/SearchBar";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
 import { useSongData } from "@/hooks/useSongData";
@@ -190,12 +191,24 @@ export default function SongPage({ params }: PageProps) {
           <StreamingVelocity song={song} />
         </motion.section>
 
+        {/* Chart Journey — Billboard position trajectory */}
+        {song.billboard && song.billboard.chartHistory.length >= 2 && (
+          <motion.section
+            className="mb-6 sm:mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.26 }}
+          >
+            <ChartJourney billboard={song.billboard} />
+          </motion.section>
+        )}
+
         {/* Song Journey Milestones */}
         <motion.section
           className="mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.26 }}
+          transition={{ duration: 0.4, delay: 0.28 }}
         >
           <SongMilestones song={song} />
         </motion.section>
