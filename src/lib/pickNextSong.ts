@@ -92,6 +92,11 @@ function noveltyScore(
 export function pickNextSong(recentSongs: RecentSong[]): PickResult {
   const catalogIds = Object.keys(mockSongs);
 
+  // Guard: empty catalog would cause undefined access downstream
+  if (catalogIds.length === 0) {
+    return { id: "", reason: "No songs available", genre: "Unknown" };
+  }
+
   // No history: pick a random popular song as entry point
   if (recentSongs.length === 0) {
     const idx = Math.floor(Math.random() * catalogIds.length);

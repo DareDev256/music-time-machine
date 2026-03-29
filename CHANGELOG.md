@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.30.1] - 2026-03-29
+
+### Fixed
+- **DiscoverPick timer race condition** — moved `setTimeout` calls from the `handlePick` callback into a `useEffect` with proper cleanup. Previously, if a user navigated away during the 1.4s spin→reveal→navigate sequence, both timers would fire after unmount — causing React state-update warnings and ghost navigation to the wrong page. Timers now cancel automatically on unmount via `useEffect` cleanup + `useRef` belt-and-suspenders guard
+- **Empty catalog guard in `pickNextSong`** — added a defensive check for `catalogIds.length === 0` that returns a safe fallback instead of crashing with `undefined` access on `catalogIds[idx]`. Prevents runtime errors if the mock data module is ever empty or slow to load
+
+---
+
 ## [1.30.0] - 2026-03-29
 
 ### Added

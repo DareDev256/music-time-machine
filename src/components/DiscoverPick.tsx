@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Disc3, Sparkles } from "lucide-react";
@@ -16,20 +16,42 @@ export default function DiscoverPick() {
   const { songs: recentSongs } = useRecentlyViewed();
   const [phase, setPhase] = useState<Phase>("idle");
   const [pick, setPick] = useState<PickResult | null>(null);
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  // Clean up all pending timers on unmount — prevents state updates
+  // and ghost navigation after the component is removed from the DOM
+  useEffect(() => {
+    return () => {
+      timersRef.current.forEach(clearTimeout);
+      timersRef.current = [];
+    };
+  }, []);
+
+  // Phase-driven timer chain: spinning → reveal → navigate
+  // Lives in useEffect so React's cleanup cancels timers on unmount
+  useEffect(() => {
+    if (phase !== "spinning" || !pick) return;
+
+    const revealTimer = setTimeout(() => setPhase("reveal"), 600);
+    const navTimer = setTimeout(() => {
+      router.push(`/song/${pick.id}`);
+    }, 1400);
+
+    timersRef.current = [revealTimer, navTimer];
+
+    return () => {
+      clearTimeout(revealTimer);
+      clearTimeout(navTimer);
+    };
+  }, [phase, pick, router]);
 
   const handlePick = useCallback(() => {
     if (phase !== "idle") return;
-    setPhase("spinning");
 
-    // Brief spin animation, then reveal
     const result = pickNextSong(recentSongs);
     setPick(result);
-
-    setTimeout(() => setPhase("reveal"), 600);
-    setTimeout(() => {
-      router.push(`/song/${result.id}`);
-    }, 1400);
-  }, [phase, recentSongs, router]);
+    setPhase("spinning"); // triggers the useEffect timer chain
+  }, [phase, recentSongs]);
 
   const song = pick ? mockSongs[pick.id] : null;
 
