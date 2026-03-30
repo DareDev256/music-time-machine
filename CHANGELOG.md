@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.30.2] - 2026-03-30
+
+### Added
+- **`pickNextSong` test suite** — 24 tests covering all three selection strategies (random discovery, novelty-scored pick, least-recently-viewed revisit) plus the `primaryArtist` and `genreOf` helper functions. Uses `vi.hoisted()` to mock the catalog layer with a controlled 5-song dataset and pins `Math.random` for deterministic assertions. Tests cover: compound artist credit splitting (feat./ft./&/,/with), genre fallback, empty catalog guard, genre diversity bonus, artist diversity bonus, over-represented genre penalty, top-N randomness boundary, single-candidate edge case, and PickResult shape contract across all code paths
+
+---
+
 ## [1.30.1] - 2026-03-29
 
 ### Fixed
