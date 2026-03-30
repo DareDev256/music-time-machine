@@ -91,3 +91,16 @@ export const POPULARITY_WEIGHT = 5;
  * many distinct genres, auto switches to diverse mode.
  */
 export const AUTO_DIVERSITY_THRESHOLD = 2;
+
+// ── Pick-engine scoring (novelty-based "Pick for Me") ──────────────────────
+
+/** Base score every unviewed candidate starts with. */
+export const PICK_BASE_SCORE = 50;
+/** Bonus for a genre the user hasn't explored yet. */
+export const PICK_UNEXPLORED_GENRE_BONUS = 30;
+/** Per-occurrence penalty for genres the user has already seen. */
+export const PICK_GENRE_REPEAT_PENALTY = 8;
+/** Bonus for an artist the user hasn't listened to. */
+export const PICK_NEW_ARTIST_BONUS = 15;
+/** Divisor applied to Spotify popularity (0-100) for a mild quality signal. */
+export const PICK_POPULARITY_DIVISOR = 10;

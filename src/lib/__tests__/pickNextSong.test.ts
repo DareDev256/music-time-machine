@@ -30,7 +30,8 @@ vi.mock("@/lib/mockData", () => ({
   songGenres: MOCK_GENRES,
 }));
 
-import { pickNextSong, primaryArtist, genreOf } from "../pickNextSong";
+import { pickNextSong, genreOf } from "../pickNextSong";
+import { primaryArtist } from "../artist-utils";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -48,24 +49,24 @@ afterEach(() => {
 
 // ── primaryArtist ────────────────────────────────────────────────────────────
 
-describe("primaryArtist", () => {
-  it("returns sole artist unchanged", () => {
-    expect(primaryArtist("Drake")).toBe("Drake");
+describe("primaryArtist (from artist-utils — lowercased)", () => {
+  it("returns sole artist lowercased", () => {
+    expect(primaryArtist("Drake")).toBe("drake");
   });
 
   it.each([
-    ["Drake feat. Rihanna", "Drake"],
-    ["Drake ft. Future", "Drake"],
-    ["Kanye & Jay-Z", "Kanye"],
-    ["Billie, Khalid", "Billie"],
-    ["Post Malone with Swae Lee", "Post Malone"],
+    ["Drake feat. Rihanna", "drake"],
+    ["Drake ft. Future", "drake"],
+    ["Kanye & Jay-Z", "kanye"],
+    ["Billie, Khalid", "billie"],
+    ["Post Malone with Swae Lee", "post malone"],
   ])("splits compound credit '%s' → '%s'", (input, expected) => {
     expect(primaryArtist(input)).toBe(expected);
   });
 
   it("is case-insensitive for delimiters", () => {
-    expect(primaryArtist("A FEAT. B")).toBe("A");
-    expect(primaryArtist("A Feat. B")).toBe("A");
+    expect(primaryArtist("A FEAT. B")).toBe("a");
+    expect(primaryArtist("A Feat. B")).toBe("a");
   });
 
   it("handles empty string without throwing", () => {

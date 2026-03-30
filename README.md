@@ -66,7 +66,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
 
 ### 🎲 Pick for Me (Auto-Select)
-An intelligent auto-discovery button on the home page that analyzes your recently viewed songs and picks the optimal next track to explore. The selection engine maximizes **genre diversity** (unexplored genres get a 30-point bonus), avoids repeats, and rewards **new artists** — so if you've been deep in Pop, it'll surface a Country or K-Pop pick. When your history is empty, it picks a random high-quality entry point. When you've explored the entire catalog, it resurfaces your least-recently-viewed track. The button features a three-phase animation: idle → spinning disc → album art reveal with reason tag ("New genre: K-Pop", "New artist: Dua Lipa") before navigating. Slight randomness among top-3 candidates keeps repeated picks feeling fresh.
+An intelligent auto-discovery button on the home page that analyzes your recently viewed songs and picks the optimal next track to explore. The selection engine maximizes **genre diversity** (unexplored genres get a bonus), avoids repeats, and rewards **new artists** — so if you've been deep in Pop, it'll surface a Country or K-Pop pick. All scoring constants (`PICK_BASE_SCORE`, `PICK_UNEXPLORED_GENRE_BONUS`, etc.) are centralized in `scoring-constants.ts` alongside the recommendation engine's tuning knobs for easy adjustment. The scorer returns both score and reason in a single pass via `scoreCandidate`, and genre lookups use the shared `genreOf` utility from `genre-utils.ts`. When your history is empty, it picks a random high-quality entry point. When you've explored the entire catalog, it resurfaces your least-recently-viewed track. The button features a three-phase animation: idle → spinning disc → album art reveal with reason tag ("New genre: K-Pop", "New artist: Dua Lipa") before navigating. Slight randomness among top-3 candidates keeps repeated picks feeling fresh.
 
 ### 📊 Song Dashboard
 Every song gets a detail page with:
@@ -360,7 +360,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**272 tests** across **22 suites** covering:
+**505 tests** across **37 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|

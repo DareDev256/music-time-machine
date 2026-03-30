@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.31.0] - 2026-03-30
+
+### Changed
+- **Pick-engine scoring constants extracted** — magic numbers in `noveltyScore` (base score 50, genre bonus 30, repeat penalty 8, artist bonus 15, popularity divisor 10) moved to `scoring-constants.ts` as named `PICK_*` exports, making the pick engine's tuning knobs discoverable alongside the recommendation engine's constants
+- **Single-pass scoring + reason classification** — `noveltyScore` refactored into `scoreCandidate` that returns both the numeric score and the human-readable reason in one pass, eliminating the duplicated genre/artist novelty checks that ran separately after scoring
+- **`genreOf` extracted to shared `genre-utils.ts`** — the `songGenres[id] || "Unknown"` lookup centralised into its own module, importable by both the pick engine and recommendation engine instead of being defined inside `pickNextSong.ts`
+- **`primaryArtist` consolidated** — removed the duplicate `primaryArtist` definition from `pickNextSong.ts`; now imports the canonical version from `artist-utils.ts`. A local `displayArtist` helper preserves original casing for user-facing reason strings
+
+---
+
 ## [1.30.2] - 2026-03-30
 
 ### Added
