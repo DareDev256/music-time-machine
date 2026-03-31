@@ -26,6 +26,7 @@ export interface RecentSong {
 /** In-memory listeners notified when localStorage changes from within this tab. */
 let listeners: (() => void)[] = [];
 function emitChange() {
+  cachedSnapshot = readStorage();
   listeners.forEach((l) => l());
 }
 
@@ -36,7 +37,15 @@ function subscribe(callback: () => void): () => void {
   };
 }
 
-function getSnapshot(): RecentSong[] {
+const EMPTY: RecentSong[] = [];
+
+/** Cached snapshot — React's useSyncExternalStore requires referential stability
+ *  when the underlying data hasn't changed (Object.is comparison). Returning a
+ *  fresh JSON.parse result on every call violates this contract, causing
+ *  unnecessary re-renders and React warnings. */
+let cachedSnapshot: RecentSong[] = EMPTY;
+
+function readStorage(): RecentSong[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return EMPTY;
@@ -47,10 +56,21 @@ function getSnapshot(): RecentSong[] {
   }
 }
 
-const EMPTY: RecentSong[] = [];
+function getSnapshot(): RecentSong[] {
+  return cachedSnapshot;
+}
+
 function getServerSnapshot(): RecentSong[] {
   return EMPTY;
 }
+
+/** Hydrate the cache on first client load */
+function initCache(): void {
+  if (typeof localStorage !== "undefined") {
+    cachedSnapshot = readStorage();
+  }
+}
+initCache();
 
 function writeToStorage(songs: RecentSong[]): void {
   try {
@@ -66,7 +86,9 @@ export function useRecentlyViewed() {
 
   const record = useCallback(
     (song: { id: string; title: string; artist: string; albumArt: string }) => {
-      const prev = getSnapshot();
+      // Read from authoritative localStorage, not the cached snapshot —
+      // cache can lag behind if another tab wrote or if tests cleared storage
+      const prev = readStorage();
       const filtered = prev.filter((s) => s.id !== song.id);
       const next: RecentSong[] = [
         { ...song, viewedAt: Date.now() },

@@ -49,6 +49,11 @@ export default function DiscoverPick() {
     if (phase !== "idle") return;
 
     const result = pickNextSong(recentSongs);
+
+    // Guard: if the engine returns an empty ID (empty catalog), don't start
+    // the animation chain — it would navigate to a broken /song/ route
+    if (!result.id) return;
+
     setPick(result);
     setPhase("spinning"); // triggers the useEffect timer chain
   }, [phase, recentSongs]);

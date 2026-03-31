@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.31.2] - 2026-03-31
+
+### Fixed
+- **`useRecentlyViewed` snapshot instability** — `getSnapshot()` was calling `JSON.parse` on every invocation, returning a new array reference each time. This violated React's `useSyncExternalStore` contract (requires `Object.is`-stable references), causing unnecessary re-renders. Snapshots are now cached and only updated when `writeToStorage` fires
+- **`useRecentlyViewed` stale-read on record** — `record()` now reads authoritative localStorage instead of the cached snapshot, preventing stale data when external writes occur (e.g. cross-tab mutations)
+- **DiscoverPick empty-catalog navigation crash** — when `pickNextSong` returned an empty ID (empty catalog), the timer chain still fired, navigating to a broken `/song/` route. The component now validates the pick before starting the animation sequence
+
+### Added
+- **`useRecentlyViewed` test suite** — 5 tests covering snapshot referential stability, FIFO ordering with max capacity, deduplication on re-view, and localStorage error resilience
+
+---
+
 ## [1.31.1] - 2026-03-31
 
 ### Added
