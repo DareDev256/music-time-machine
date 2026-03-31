@@ -361,7 +361,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**505 tests** across **37 suites** covering:
+**523 tests** across **37 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -375,7 +375,7 @@ npx vitest --watch    # Watch mode
 | **safeHref** | 12 | HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` blocking, undefined/null/empty/malformed |
 | **diversity pipeline** | 10 | End-to-end integration: artist capping, genre spread, era spread, scoring thresholds |
 | **formatCompact** | 9 | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
-| **apiHandler** | 8 | Route middleware wrapping, rate limit integration, error response format |
+| **apiHandler** | 26 | Route middleware, rate limit gating, security headers (nosniff/DENY/no-store), thrown value edge cases (null/undefined/object/rejected promise), plain Response support, jsonError status codes, X-Request-ID tracing |
 | **TTLCache** | 7 | Expiry, eviction, CRUD operations, `getStats()` observability |
 | **QuickStats** | 7 | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
 | **useSongData** | 7 | Loading state, parallel fetch, 404/500 handling, network error, catalog-only failure, unmount abort |

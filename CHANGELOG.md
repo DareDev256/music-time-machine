@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.31.1] - 2026-03-31
+
+### Added
+- **`apiHandler` comprehensive test suite** — expanded from 14 to 26 tests covering: `jsonError` function (400/404/422 status codes and security headers), security header verification on 500 error responses (nosniff, DENY, no-store), thrown edge cases (null, undefined, plain object, rejected promise), plain `Response` return path (not just `NextResponse`), and `jsonWithCache` Cache-Control override + security header assertions
+
+---
+
 ## [1.31.0] - 2026-03-30
 
 ### Changed

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { withRouteHandler, jsonWithCache, generateRequestId } from "../apiHandler";
+import { withRouteHandler, jsonWithCache, jsonError, generateRequestId } from "../apiHandler";
 import { NextRequest, NextResponse } from "next/server";
 
 // Mock the rateLimit module — apiHandler depends on it for every request
@@ -100,6 +100,76 @@ describe("withRouteHandler", () => {
     consoleSpy.mockRestore();
   });
 
+  it("includes security headers on 500 error responses", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw new Error("crash"); });
+    const wrapped = withRouteHandler({ route: "search" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+
+    expect(res.headers.get("X-Content-Type-Options")).toBe("nosniff");
+    expect(res.headers.get("X-Frame-Options")).toBe("DENY");
+    expect(res.headers.get("Cache-Control")).toBe("no-store");
+  });
+
+  it("handles thrown null gracefully", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw null; });
+    const wrapped = withRouteHandler({ route: "search" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+
+    expect(res.status).toBe(500);
+    const body = await res.json();
+    expect(body.error).toBe("Internal server error");
+  });
+
+  it("handles thrown undefined gracefully", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw undefined; });
+    const wrapped = withRouteHandler({ route: "song" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    expect(res.status).toBe(500);
+  });
+
+  it("handles thrown object without message property", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(async () => { throw { code: 42 }; });
+    const wrapped = withRouteHandler({ route: "compare" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    expect(res.status).toBe(500);
+    const body = await res.json();
+    // Must not leak the thrown object's properties
+    expect(body).toEqual({ error: "Internal server error" });
+    expect(JSON.stringify(body)).not.toContain("42");
+  });
+
+  it("handles rejected promise (not throw) identically", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const handler = vi.fn(() => Promise.reject(new Error("async reject")));
+    const wrapped = withRouteHandler({ route: "artist" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    expect(res.status).toBe(500);
+    const body = await res.json();
+    expect(body.error).toBe("Internal server error");
+  });
+
+  it("handles handler returning plain Response (not NextResponse)", async () => {
+    const handler = vi.fn(async () => new Response(JSON.stringify({ plain: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    }));
+    const wrapped = withRouteHandler({ route: "search" }, handler);
+
+    const res = await wrapped(makeRequest(), dummyContext);
+    expect(res.headers.get("X-Request-ID")).toBeTruthy();
+    const body = await res.json();
+    expect(body.plain).toBe(true);
+  });
+
   it("forwards context (params) to the handler", async () => {
     const params = Promise.resolve({ id: "blinding-lights" });
     const handler = vi.fn(async (_req, ctx) => {
@@ -129,6 +199,46 @@ describe("jsonWithCache", () => {
     const res = jsonWithCache(null, "no-store");
     const body = await res.json();
     expect(body).toBeNull();
+    expect(res.headers.get("Cache-Control")).toBe("no-store");
+  });
+
+  it("overrides the default no-store Cache-Control with provided cacheTtl", async () => {
+    const res = jsonWithCache({}, "public, max-age=3600");
+    // The explicit cacheTtl should win over the base API_SECURITY_HEADERS no-store
+    expect(res.headers.get("Cache-Control")).toBe("public, max-age=3600");
+  });
+
+  it("includes security headers (nosniff, DENY)", async () => {
+    const res = jsonWithCache({ ok: true }, "no-store");
+    expect(res.headers.get("X-Content-Type-Options")).toBe("nosniff");
+    expect(res.headers.get("X-Frame-Options")).toBe("DENY");
+  });
+});
+
+describe("jsonError", () => {
+  it("returns 400 with correct body and status", async () => {
+    const res = jsonError({ error: "Missing query parameter" }, 400);
+    expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe("Missing query parameter");
+  });
+
+  it("returns 404 with correct body and status", async () => {
+    const res = jsonError({ error: "Song not found" }, 404);
+    expect(res.status).toBe(404);
+    const body = await res.json();
+    expect(body.error).toBe("Song not found");
+  });
+
+  it("returns 422 with correct body and status", async () => {
+    const res = jsonError({ error: "Invalid date format" }, 422);
+    expect(res.status).toBe(422);
+  });
+
+  it("includes all security headers", async () => {
+    const res = jsonError({ error: "bad" }, 400);
+    expect(res.headers.get("X-Content-Type-Options")).toBe("nosniff");
+    expect(res.headers.get("X-Frame-Options")).toBe("DENY");
     expect(res.headers.get("Cache-Control")).toBe("no-store");
   });
 });
