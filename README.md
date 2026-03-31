@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.30.2-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-505_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.31.1-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-506_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -275,7 +275,8 @@ Data       │
 |-------|---------------|
 | **HTTP Headers** | Nonce-based CSP (no `unsafe-inline`, no `unsafe-eval`, `strict-dynamic`), HSTS (2yr + preload), X-Content-Type-Options, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy, COOP `same-origin`, COEP `credentialless`, X-Permitted-Cross-Domain-Policies `none` |
 | **SSRF Protection** | All outbound API requests routed through `safeFetch()` — origin-validated against an explicit allowlist before any request leaves the server. Blocks cloud metadata, internal IPs, `@`-credential tricks, subdomain spoofing, and HTTP downgrades |
-| **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Genius ID NaN guard prevents malformed IDs from reaching the API |
+| **Input Validation** | Shared `isValidId()` / `sanitizeQuery()` — regex ID check, HTML stripping, dangerous char removal, prototype pollution blocking, 200-char max. Query string size guard (2 KB) in `withRouteHandler()` rejects oversized payloads with 414 before any per-param parsing — prevents ReDoS amplification and log injection. Genius ID NaN guard prevents malformed IDs from reaching the API |
+| **Trusted Types** | `require-trusted-types-for 'script'` in both nonce-based proxy CSP (production) and static fallback CSP — blocks DOM XSS sinks (`innerHTML`, `document.write`, `eval`) unless values pass through a TrustedTypes policy. Progressive enhancement: unsupported browsers ignore the directive |
 | **Rate Limiting** | Per-IP token bucket on all 6 routes (429 + Retry-After + `no-store`), per-upstream-API token buckets, stale bucket eviction, IP format validation to prevent rate limit bypass via spoofed headers |
 | **Fetch Timeout** | Two-layer AbortController defense: server-side `safeFetch()` enforces 10s timeouts on all outbound API requests (prevents slow-loris resource exhaustion); client-side `useAsyncData` hook cancels in-flight fetches on navigation/unmount across all data-fetching pages (prevents stale state overwrites and memory leaks) |
 | **Request Traceability** | Every API response includes a unique `X-Request-ID` header (crypto.randomUUID) for cross-system incident correlation. Error logs embed the request ID. Rate limit 429 responses carry the ID so CDN/WAF logs can trace blocked requests |
