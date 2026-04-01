@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.33.1] - 2026-04-01
+
+### Fixed
+- **Pick engine null safety** — `pickNextSong` cold-start and least-recently-viewed fallback paths now validate that the selected song ID actually maps to a catalog entry before returning, preventing undefined-access crashes when `Record<string, SongData>` lookups miss
+- **DiscoverPick catalog guard** — the "Pick for Me" button now verifies the picked song exists in `mockSongs` before starting the spin animation, preventing navigation to broken `/song/` routes if the catalog changes between pick and render
+- **DiscoverPick undefined coercion** — `mockSongs[pick.id]` lookup now uses nullish coalescing (`?? null`) to normalize `undefined` returns to `null`, aligning runtime behavior with the component's type expectations
+
+---
+
 ## [1.33.0] - 2026-04-01
 
 ### Added

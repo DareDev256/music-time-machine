@@ -128,6 +128,11 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
   if (recentSongs.length === 0) {
     const idx = Math.floor(Math.random() * catalogIds.length);
     const id = catalogIds[idx];
+    // Guard: verify the randomly-selected ID actually maps to a song —
+    // Record<string, SongData> typing masks potential undefined lookups
+    if (!mockSongs[id]) {
+      return { id: "", reason: "No songs available", genre: "Unknown" };
+    }
     return { id, reason: "Random discovery", genre: genreOf(id) };
   }
 
@@ -151,7 +156,12 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
   // All songs viewed — pick least-recently-viewed
   if (scored.length === 0) {
     const sorted = [...recentSongs].sort((a, b) => a.viewedAt - b.viewedAt);
-    const id = sorted[0].id;
+    const id = sorted[0]?.id;
+    // Guard: validate the ID still exists in the catalog — songs could have
+    // been removed from mockSongs since the user last viewed them
+    if (!id || !mockSongs[id]) {
+      return { id: "", reason: "No songs available", genre: "Unknown" };
+    }
     return { id, reason: "Revisit — it's been a while", genre: genreOf(id) };
   }
 
