@@ -17,6 +17,7 @@ import ShareCard from "@/components/ShareCard";
 import SimilarSongs from "@/components/SimilarSongs";
 import SongMilestones from "@/components/SongMilestones";
 import SongFingerprint from "@/components/SongFingerprint";
+import ListeningContext from "@/components/ListeningContext";
 import ImpactScore from "@/components/ImpactScore";
 import StreamingVelocity from "@/components/StreamingVelocity";
 import ChartJourney from "@/components/ChartJourney";
@@ -171,12 +172,24 @@ export default function SongPage({ params }: PageProps) {
           </motion.section>
         )}
 
+        {/* Listening Context — when to listen */}
+        {song.spotify?.audioFeatures && (
+          <motion.section
+            className="mb-6 sm:mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.22 }}
+          >
+            <ListeningContext audioFeatures={song.spotify.audioFeatures} />
+          </motion.section>
+        )}
+
         {/* Cross-Platform Impact Score */}
         <motion.section
           className="mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.22 }}
+          transition={{ duration: 0.4, delay: 0.24 }}
         >
           <ImpactScore song={song} />
         </motion.section>
@@ -186,7 +199,7 @@ export default function SongPage({ params }: PageProps) {
           className="mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.24 }}
+          transition={{ duration: 0.4, delay: 0.26 }}
         >
           <StreamingVelocity song={song} />
         </motion.section>
@@ -197,7 +210,7 @@ export default function SongPage({ params }: PageProps) {
             className="mb-6 sm:mb-8 md:mb-12"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.26 }}
+            transition={{ duration: 0.4, delay: 0.28 }}
           >
             <ChartJourney billboard={song.billboard} />
           </motion.section>
@@ -208,7 +221,7 @@ export default function SongPage({ params }: PageProps) {
           className="mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.28 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
         >
           <SongMilestones song={song} />
         </motion.section>

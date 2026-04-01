@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.33.0] - 2026-04-01
+
+### Added
+- **Listening Context** — "When to Listen" card on the song detail page that maps audio features to ideal listening scenarios. Derives four contextual recommendations (time of day, activity, setting, season) from danceability, energy, valence, and tempo. Features a generated vibe sentence, staggered tag entrance animations with spring easing, hover interactions, and full ARIA list accessibility
+
+---
+
 ## [1.32.0] - 2026-04-01
 
 ### Added
