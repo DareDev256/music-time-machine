@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.32.0] - 2026-04-01
+
+### Added
+- **Genre Constellation** — interactive star map on the home page visualizing the entire catalog by audio features. Songs are positioned by energy (x-axis) and mood/valence (y-axis), colored by genre, and sized by danceability. Features hover spotlighting with floating tooltips, click-to-navigate, staggered spring entry animations, axis labels with quadrant hints, genre legend, and full keyboard accessibility (focus/blur states, Enter to navigate). Dimming effect fades non-hovered stars to 35% opacity for visual focus
+
+---
+
 ## [1.31.2] - 2026-03-31
 
 ### Fixed
