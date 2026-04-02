@@ -9,6 +9,17 @@ interface HandlerOptions {
   cacheTtl?: string;
 }
 
+// ── Process-level error counter ─────────────────────────────────────
+// Lives here because withRouteHandler is the single catch-all for API errors.
+// Previously lived in health/route.ts where it was never incremented — every
+// health check reported errors: 0 regardless of actual failure rate.
+let errorCount = 0;
+
+/** Read the global error count (used by the health endpoint). */
+export function getErrorCount(): number {
+  return errorCount;
+}
+
 /**
  * Generate a unique request ID for traceability.
  *
@@ -40,10 +51,18 @@ export function withRouteHandler(
 
     try {
       const response = await handler(request, context);
-      // Attach request ID to every successful response for traceability
-      response.headers.set("X-Request-ID", requestId);
-      return response;
+      // Attach request ID via new Response to avoid mutating potentially
+      // immutable headers (e.g. ImageResponse from @vercel/og, or a proxied
+      // fetch Response). Cloning preserves the body stream and status.
+      const headers = new Headers(response.headers);
+      headers.set("X-Request-ID", requestId);
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers,
+      });
     } catch (error) {
+      errorCount++;
       // Log only the message — full error objects can leak upstream API internals,
       // response bodies, or stack traces containing file paths.
       const message = error instanceof Error ? error.message : "Unknown error";

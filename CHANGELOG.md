@@ -2,6 +2,14 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.33.2] - 2026-04-02
+
+### Fixed
+- **API error counter** — `withRouteHandler` now increments a centralized error counter on caught exceptions; the health endpoint previously reported `errors: 0` at all times because the counter lived in an unreachable module and was never wired to the actual error path
+- **Response header safety** — `withRouteHandler` no longer mutates `response.headers` directly; instead clones via `new Response()` with copied headers, preventing potential throws on immutable-header responses (e.g. `ImageResponse` from `@vercel/og`)
+
+---
+
 ## [1.33.1] - 2026-04-01
 
 ### Fixed

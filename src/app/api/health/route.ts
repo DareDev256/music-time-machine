@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { timingSafeEqual } from "node:crypto";
 import { searchCache, songCache } from "@/lib/cache";
+import { getErrorCount } from "@/lib/apiHandler";
 import { isSpotifyConfigured } from "@/lib/spotify";
 import { isYouTubeConfigured } from "@/lib/youtube";
 import { isGeniusConfigured } from "@/lib/genius";
@@ -10,7 +11,6 @@ import { extractClientIp, tryConsume } from "@/lib/rateLimit";
 // ── Process-level counters (survive across requests in the same instance) ──
 const startedAt = Date.now();
 let requestCount = 0;
-let errorCount = 0;
 
 /** Version from package.json, injected at build time via next.config.ts. */
 const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "unknown";
@@ -46,11 +46,6 @@ export function resolveOverallStatus(statuses: readonly string[]): string {
     },
     { ...SEVERITY_WEIGHT.pass },
   ).label;
-}
-
-/** Increment the global error counter (call from other API routes). */
-export function recordError(): void {
-  errorCount++;
 }
 
 /**
@@ -171,7 +166,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         catalogSize: CATALOG_SIZE,
         apiRoutes: API_ROUTE_COUNT,
         requests: requestCount,
-        errors: errorCount,
+        errors: getErrorCount(),
       },
       memory: {
         rss: toMB(mem.rss),
