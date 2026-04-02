@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.33.1-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.33.2-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-522_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -287,7 +287,7 @@ Data       │
 | **Health Info Redaction** | `/api/health` redacts `process.memoryUsage()`, error counts, request counts, and cache internals in production — prevents attackers from using memory stats to time resource exhaustion attacks or error counts to confirm fuzzing attempts |
 | **Fetch Timeout** | Two-layer AbortController defense: server-side `safeFetch()` enforces 10s timeouts on all outbound API requests (prevents slow-loris resource exhaustion); client-side `useSongData` hook cancels in-flight fetches on navigation/unmount (prevents stale state overwrites and memory leaks) |
 | **Edge Middleware** | Request-level security at the edge: `X-Request-Id` correlation headers on every request, path traversal blocking (`/../`, `%2e%2e`), HTTP method restriction (GET/HEAD/OPTIONS only on API routes) |
-| **Uniform Error Headers** | All API error responses (400, 404, 422, 429, 500) include `nosniff` + `X-Frame-Options: DENY` + `no-store` via `jsonError()` helper — no unprotected JSON responses anywhere in the stack |
+| **Uniform Error Headers** | All API error responses (400, 404, 422, 429, 500) include `nosniff` + `X-Frame-Options: DENY` + `no-store` + `Cross-Origin-Resource-Policy: same-origin` via `jsonError()` helper — no unprotected JSON responses anywhere in the stack |
 | **API Response Sanitization** | All external API responses (Spotify, YouTube, Genius) pass through `safeJson()` — a recursive sanitizer that strips `__proto__`, `constructor`, and `prototype` keys from parsed JSON before it enters application logic. Prevents prototype pollution from compromised CDNs, middleboxes, or API responses. Depth-capped at 20 levels to prevent stack overflow from adversarial payloads |
 | **Uniform Error Headers** | All API error responses (400, 404, 422, 429, 500) and the health endpoint include `nosniff` + `X-Frame-Options: DENY` + `no-store` — no unprotected JSON responses anywhere in the stack |
 | **Href Protocol Validation** | All external URLs from API responses pass through `safeHref()` — only `https:` URLs render as clickable links. Blocks `javascript:`, `data:`, and other dangerous protocols that could enable XSS via compromised API data. Non-HTTPS URLs are suppressed entirely (no inert `#` link rendered) |
