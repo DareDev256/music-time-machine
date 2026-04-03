@@ -8,6 +8,7 @@ One search. Four platforms. Every metric that matters.
 
 [![Version](https://img.shields.io/badge/version-1.33.3-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-522_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Suites](https://img.shields.io/badge/suites-38-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -21,7 +22,7 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>40</strong><br><sub>Components</sub></td>
+<td align="center"><strong>35</strong><br><sub>Components</sub></td>
 <td align="center"><strong>522</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
@@ -305,7 +306,7 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 27 single-responsibility UI components
+├── components/                     # 35 single-responsibility UI components
 │   └── PageStates.tsx              # Shared loading/error full-page states
 ├── hooks/
 │   ├── useAsyncData.ts              # Generic useReducer-backed async fetch hook
@@ -325,7 +326,7 @@ src/
 │   ├── timeline.ts                  # Synthetic timeline data generator (deduplicated)
 │   ├── safeFetch.ts                 # SSRF-safe fetch with 10s AbortController timeout
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 272 tests across 22 suites
+│   └── __tests__/                  # 522 tests across 38 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -358,11 +359,11 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**523 tests** across **37 suites** covering:
+**522 tests** across **38 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
-| **recommendations** | 59 | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing, `getAutoInsight` strategy resolution |
+| **recommendations** | 70 | Distance ranking, artist/era bonuses, reason labeling, match score validation, artist diversity enforcement, `splitArtists` collaboration parsing, `getDiversityMeta` genre/era scoring, `safeYear` timezone-safe date parsing, `getAutoInsight` strategy resolution |
 | **rateLimit** | 30 | Token bucket consumption/refill, per-IP route isolation, stale eviction, input validation (`isValidId`, `sanitizeQuery`) |
 | **mockData** | 21 | Catalog integrity, search matching, artist slug resolution, timeline sorting |
 | **dataFetcher** | 20 | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
@@ -385,6 +386,19 @@ npx vitest --watch    # Watch mode
 | **SearchBar** | 4 | Autocomplete rendering, keyboard navigation |
 | **health** | 4 | Cache stats, utilization reporting, zero-maxSize edge case |
 | **impactScore** | 12 | parseCount (B/M/K/comma/plain/empty), tier assignment, platform capping, total ceiling, billboard ranking |
+| **pickNextSong** | 24 | Scoring engine candidates, genre diversity bonus, repeat penalty, least-recently-viewed fallback, empty history random pick, null safety guards |
+| **score-colors** | 20 | Match badge color thresholds, tier classification, SVG ring rendering, edge case score values |
+| **health-route** | 19 | Authenticated vs public responses, memory redaction in production, cache stats, subsystem status |
+| **velocity** | 18 | Daily stream/view computation, velocity tier classification, platform dominance ratio, missing data guards |
+| **artist-utils** | 15 | Artist slug parsing, collaboration splitting (`ft.`/`feat.`/`&`/`with`), name normalization |
+| **genius** | 21 | Search integration, song page scraping, annotation parsing, missing field fallbacks |
+| **recommendations-merged** | 13 | Full pipeline integration: scoring → diversity → selection → reason tagging |
+| **spotify** | 10 | Auth token flow, search endpoint, track features, playlist count, error recovery |
+| **useAsyncData** | 13 | Discriminated union state transitions, abort on deps change, abort on unmount, error narrowing |
+| **YouTubeCard** | 8 | Metric rendering, external link safety, missing data states, compact number formatting |
+| **rateLimit.response** | 9 | 429 response shape, Retry-After header, X-Request-ID propagation, security headers on limit |
+| **apiHandler.jsonError** | 9 | Status code mapping (400/404/422), security header presence, error body shape |
+| **safeFetch.safeJson** | 8 | Recursive `__proto__`/`constructor` stripping, depth cap enforcement, nested object sanitization |
 
 External API clients fully mocked — tests run fast and offline.
 
@@ -394,7 +408,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 272 tests must pass
+npm test                    # All 522 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```
@@ -409,11 +423,16 @@ The codebase follows strict patterns:
 
 ## Roadmap
 
+- [x] Audio feature radar chart visualization
+- [x] Intelligent auto-discovery (Pick for Me engine)
+- [x] Genre Constellation star map
+- [x] Listening Context recommendations
+- [x] Impact Score composite scoring
+- [x] Streaming Velocity analysis
 - [ ] Billboard chart scraping (historical data beyond mock)
 - [ ] User accounts + saved songs
 - [ ] Real-time trending from Spotify/YouTube APIs
 - [ ] Playlist generation from comparison results
-- [x] Audio feature radar chart visualization
 - [ ] PWA support (offline mode, install prompt)
 
 ---

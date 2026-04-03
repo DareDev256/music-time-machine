@@ -2,6 +2,15 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.33.3] - 2026-04-03
+
+### Changed
+- **README accuracy overhaul** — corrected stale counts across the entire README: component count (40→35), test suites (37→38), test count in contributing section (272→522), project structure annotation (272→522). Added suites badge to header
+- **Test suite table expanded** — added 14 previously undocumented test suites to the testing section (pickNextSong, score-colors, health-route, velocity, artist-utils, genius, recommendations-merged, spotify, useAsyncData, YouTubeCard, rateLimit.response, apiHandler.jsonError, safeFetch.safeJson), updated recommendations count (59→70)
+- **Roadmap updated** — marked 5 completed features (Pick for Me, Genre Constellation, Listening Context, Impact Score, Streaming Velocity) that were shipped but never checked off
+
+---
+
 ## [1.33.2] - 2026-04-02
 
 ### Fixed
