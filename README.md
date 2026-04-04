@@ -6,9 +6,9 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.34.0-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-522_passing-brightgreen?style=flat-square)](src/lib/__tests__)
-[![Suites](https://img.shields.io/badge/suites-38-blue?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.33.4-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-547_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Suites](https://img.shields.io/badge/suites-40-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -359,7 +359,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**522 tests** across **38 suites** covering:
+**547 tests** across **40 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -399,6 +399,8 @@ npx vitest --watch    # Watch mode
 | **rateLimit.response** | 9 | 429 response shape, Retry-After header, X-Request-ID propagation, security headers on limit |
 | **apiHandler.jsonError** | 9 | Status code mapping (400/404/422), security header presence, error body shape |
 | **safeFetch.safeJson** | 8 | Recursive `__proto__`/`constructor` stripping, depth cap enforcement, nested object sanitization |
+| **scoring-constants** | 19 | Structural invariants: mood target ranges, feature weight hierarchy, bonus/penalty sign correctness, diversity weight sum, threshold sanity, pick-engine balance |
+| **genre-utils** | 6 | Genre lookup resolution, unknown fallback, case sensitivity, special character genres, type safety |
 
 External API clients fully mocked — tests run fast and offline.
 
@@ -408,7 +410,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 522 tests must pass
+npm test                    # All 547 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```
