@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.34.0] - 2026-04-04
+
+### Added
+- **Listening DNA** — personalized taste profile card on the home page that aggregates audio features (energy, danceability, valence, tempo) from recently viewed songs into a diamond radar visualization. Classifies listeners into archetypes (The Dynamo, The Optimist, The Dreamer, The Groover, The Storm Chaser, The Explorer) based on feature thresholds. Shows top genre distribution as colored chips, animated feature bars, and a smooth SVG path-draw animation on mount. Auto-hides when fewer than 2 songs have been explored. Includes 8 unit tests covering empty states, archetype classification, genre chips, feature bars, radar rendering, and non-mock ID handling
+
+---
+
 ## [1.33.3] - 2026-04-03
 
 ### Changed

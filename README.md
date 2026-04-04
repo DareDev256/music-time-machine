@@ -6,9 +6,9 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.33.4-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-547_passing-brightgreen?style=flat-square)](src/lib/__tests__)
-[![Suites](https://img.shields.io/badge/suites-40-blue?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.34.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-530_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Suites](https://img.shields.io/badge/suites-39-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -22,8 +22,8 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>36</strong><br><sub>Components</sub></td>
-<td align="center"><strong>522</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>37</strong><br><sub>Components</sub></td>
+<td align="center"><strong>530</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -85,6 +85,9 @@ Every song gets a detail page with:
 
 ### 🌌 Genre Constellation
 An interactive star map on the home page that visualizes the entire catalog by audio DNA. Each song is a star positioned by **energy** (horizontal) and **mood/valence** (vertical), colored by genre, and sized by danceability. Four quadrants emerge naturally — Euphoric+Energetic, Chill+Happy, Intense+Dark, Calm+Reflective — letting you see how songs cluster across the musical landscape. Hovering spotlights a star (dimming the rest) with a floating tooltip showing song name, artist, and genre tag. Clicking any star navigates to its detail page. Stars animate in with staggered spring physics. Full keyboard accessibility with focus states and Enter-to-navigate.
+
+### 🧬 Your Listening DNA
+A personalized taste profile card that appears on the home page after you've explored 2+ songs. Aggregates audio features (energy, danceability, valence, tempo) from your recently viewed tracks to build a **diamond radar visualization** and classify you into a listener archetype — The Dynamo, The Optimist, The Dreamer, The Groover, The Storm Chaser, or The Explorer. Shows your top genre distribution as colored chips and animated feature bars. The diamond shape "draws" itself on mount with a smooth path animation, and vertex dots spring in sequentially. Auto-hides when insufficient data exists. The more you explore, the more your DNA evolves.
 
 ### 🕐 Recently Viewed
 A horizontal scroll strip on the home page shows the last 8 songs you've explored, persisted in localStorage via `useSyncExternalStore`. Each entry displays album art, title, and artist in a compact pill layout. Songs are deduplicated (re-viewing moves to front) and capped with FIFO eviction. The section auto-hides when empty — zero visual noise for first-time visitors.

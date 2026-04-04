@@ -11,6 +11,7 @@ import FilterBar from "@/components/FilterBar";
 import RecentlyViewed from "@/components/RecentlyViewed";
 import DiscoverPick from "@/components/DiscoverPick";
 import GenreConstellation from "@/components/GenreConstellation";
+import TasteProfile from "@/components/TasteProfile";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
 import { SearchResult } from "@/types";
 
@@ -150,6 +151,9 @@ export default function Home() {
 
       {/* Recently Viewed */}
       <RecentlyViewed songs={recentSongs} />
+
+      {/* Taste Profile — personalized listening DNA */}
+      <TasteProfile songs={recentSongs} />
 
       {/* Genre Constellation — audio feature star map */}
       <GenreConstellation />
