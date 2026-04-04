@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.33.3-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.34.0-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-522_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-38-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
@@ -22,7 +22,7 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>35</strong><br><sub>Components</sub></td>
+<td align="center"><strong>36</strong><br><sub>Components</sub></td>
 <td align="center"><strong>522</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
@@ -71,7 +71,7 @@ Every song gets a detail page with:
 - **Quick Stats bar** — at-a-glance cross-platform metrics (streams, views, chart peak, weeks, page views) with smart abbreviation (2.4B, 770M) and color-coded icons
 - **4 platform cards** — Spotify, YouTube, Billboard, Genius
 - **Performance timeline** — multi-line chart tracking metrics over time
-- **Mood Orb** — an animated, pulsing orb that visualizes the song's emotional character. Color maps from audio features (valence → hue, energy → saturation, danceability → lightness), pulse rate syncs to tempo BPM, and a descriptive mood label (Euphoric, Brooding, Hypnotic, Melancholic...) with micro-bar breakdowns gives an instant visceral read on the track's vibe
+- **Mood Ring** — classifies audio features into a named mood personality (Euphoric, Aggressive, Melancholic, Dreamy, Groovy, Electric, Warm, Nocturnal) with a rotating conic-gradient ring, tempo-synced pulsing emoji, ambient blur glow, a one-liner personality description, and mini trait bars for energy/valence/danceability — giving an instant visceral read on the track's character
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Song Fingerprint** — a unique generative SVG visualization for every song, deterministically derived from audio features. Valence maps to colour temperature (indigo for melancholic → pink for reflective → orange for euphoric), energy drives waveform amplitude, danceability controls segment density, and tempo shapes the inner ring. Animated entrance with staggered path reveals, accent dots, and centre pulse. Includes a feature legend with mood label, energy class, danceability %, and BPM
 - **Impact Score** — a composite 0–100 score synthesizing all platform metrics into a single animated ring visualization. Weighted scoring: Billboard (30 pts — chart peak + longevity), Spotify (30 pts — streams + popularity + playlists), YouTube (25 pts — views + likes + engagement ratio), Genius (15 pts — page views + annotations). Tiered labels — Legendary, Iconic, Hit Maker, Rising Star, Cult Classic, Hidden Gem — with per-platform breakdown bars showing exactly where the points come from
