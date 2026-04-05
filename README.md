@@ -6,9 +6,9 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.34.0-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-530_passing-brightgreen?style=flat-square)](src/lib/__tests__)
-[![Suites](https://img.shields.io/badge/suites-39-blue?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.35.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-537_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Suites](https://img.shields.io/badge/suites-40-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -22,8 +22,8 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>37</strong><br><sub>Components</sub></td>
-<td align="center"><strong>530</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>38</strong><br><sub>Components</sub></td>
+<td align="center"><strong>537</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -75,6 +75,7 @@ Every song gets a detail page with:
 - **Audio DNA radar** — auto-detects the song's "vibe" (Groovy, High Energy, Mellow...)
 - **Song Fingerprint** — a unique generative SVG visualization for every song, deterministically derived from audio features. Valence maps to colour temperature (indigo for melancholic → pink for reflective → orange for euphoric), energy drives waveform amplitude, danceability controls segment density, and tempo shapes the inner ring. Animated entrance with staggered path reveals, accent dots, and centre pulse. Includes a feature legend with mood label, energy class, danceability %, and BPM
 - **Impact Score** — a composite 0–100 score synthesizing all platform metrics into a single animated ring visualization. Weighted scoring: Billboard (30 pts — chart peak + longevity), Spotify (30 pts — streams + popularity + playlists), YouTube (25 pts — views + likes + engagement ratio), Genius (15 pts — page views + annotations). Tiered labels — Legendary, Iconic, Hit Maker, Rising Star, Cult Classic, Hidden Gem — with per-platform breakdown bars showing exactly where the points come from
+- **Platform Showdown** — visual head-to-head comparing Spotify vs YouTube across three dimensions: Reach (streams vs views), Engagement (playlists vs likes), and Discussion (popularity vs comments). Animated battle bars show platform split per metric, a scoreboard tallies category wins, and a dominance meter reveals whether the song is audio-first or video-first. Intelligent verdicts (Spotify Stronghold, YouTube Fortress, Balanced Presence) summarize the competitive landscape at a glance
 - **Streaming Velocity** — computes daily average Spotify streams and YouTube views from lifetime totals and release date, classifying each song into velocity tiers (Viral 2M+/day, Hot 500K+, Steady 100K+, Catalogue). Features animated counters, a color-coded tier badge with glow effect, and a proportional Spotify-vs-YouTube bar showing platform dominance. Renders only when meaningful data exists
 - **Listening Context** — "When to Listen" card that algorithmically maps audio features to ideal listening scenarios. Derives four contextual recommendations — time of day (Late Night, Golden Hour, Midday Peak, Early Morning), activity (Workout, Dance Floor, Road Trip, Deep Focus, Reflection, Chill Session), setting (Festival Crowd, House Party, Solo Headphones, Coffee Shop, Sunset Balcony), and season (Summer Heat, Spring Bloom, Autumn Storm, Winter Night, Rainy Day) — from danceability, energy, valence, and tempo analysis. Features a generated vibe sentence, staggered tag entrance animations, hover interactions, and full ARIA list accessibility
 - **Chart Journey** — an animated SVG visualization tracing the song's Billboard Hot 100 trajectory. A smooth cardinal-spline curve maps chart position over time (inverted: #1 at the peak), with a gradient fill beneath and a stroke-dashoffset animation that "draws" the path on mount. Key landmarks (entry position, peak, latest position) are annotated with date labels and directional arrows. The peak moment gets a spring-animated marker. Summary stats row below shows entry → peak → latest with trend indicators. Only renders for songs with ≥2 chart history points

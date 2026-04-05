@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.35.0] - 2026-04-05
+
+### Added
+- **Platform Showdown** — visual head-to-head between Spotify and YouTube on every song detail page. Compares three dimensions (Reach, Engagement, Discussion) with animated battle bars showing platform split. Includes win counter scoreboard, dominance meter (audio-first vs video-first), and intelligent verdicts (Spotify Stronghold, YouTube Fortress, Balanced Presence, etc.). Uses Framer Motion staggered animations with ease-out curves. Renders only when both platform data sources are available. 7 unit tests covering empty states, verdicts, metric labels, and balanced detection
+
+---
+
 ## [1.34.0] - 2026-04-04
 
 ### Added

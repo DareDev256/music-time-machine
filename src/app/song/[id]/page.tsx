@@ -20,6 +20,7 @@ import SongFingerprint from "@/components/SongFingerprint";
 import ListeningContext from "@/components/ListeningContext";
 import ImpactScore from "@/components/ImpactScore";
 import StreamingVelocity from "@/components/StreamingVelocity";
+import PlatformShowdown from "@/components/PlatformShowdown";
 import ChartJourney from "@/components/ChartJourney";
 import SearchBar from "@/components/SearchBar";
 import { PageLoadingState, PageErrorState } from "@/components/PageStates";
@@ -194,12 +195,22 @@ export default function SongPage({ params }: PageProps) {
           <ImpactScore song={song} />
         </motion.section>
 
+        {/* Platform Showdown — Spotify vs YouTube head-to-head */}
+        <motion.section
+          className="mb-6 sm:mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
+        >
+          <PlatformShowdown song={song} />
+        </motion.section>
+
         {/* Streaming Velocity */}
         <motion.section
           className="mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.26 }}
+          transition={{ duration: 0.4, delay: 0.27 }}
         >
           <StreamingVelocity song={song} />
         </motion.section>
