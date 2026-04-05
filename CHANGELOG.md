@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.35.1] - 2026-04-05
+
+### Added
+- **Middleware test suite** — 20 tests covering the edge security middleware that had zero coverage. Tests path traversal blocking (percent-encoded sequences, URL-spec normalization awareness), HTTP method restriction on API routes (405 with Allow header and JSON body), request ID injection (UUID v4 format, uniqueness), X-Robots-Tag on API-only routes, and priority ordering (traversal gate runs before method gate). Documents the interaction between URL-spec normalization and the middleware's defense-in-depth regex
+
+---
+
 ## [1.35.0] - 2026-04-05
 
 ### Added
