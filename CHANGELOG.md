@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.36.1] - 2026-04-06
+
+### Added
+- **Auto-select integration tests** — 13 tests covering edge cases in the recommendation engine's auto-strategy resolution. Tests missing/undefined/partial strategy parameters, degenerate catalogs (empty, single candidate, all null spotify), unmapped genre IDs forcing diverse fallback, and getAutoInsight state isolation across sequential calls
+
+---
+
 ## [1.36.0] - 2026-04-06
 
 ### Changed
