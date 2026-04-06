@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.36.0] - 2026-04-06
+
+### Changed
+- **Unified API error handling** — extracted 12 duplicated `error instanceof Error ? error.message : "Unknown"` catch patterns across `genius.ts` (4), `spotify.ts` (4), and `youtube.ts` (3) into a shared `apiErrorHandler.ts` module. New `extractErrorMessage()` safely coerces any thrown value to a string, and `apiCatch()` logs with context prefix and returns a typed fallback in one call. Catch blocks across all three API modules are now one-liners. 11 unit tests cover Error instances, subclasses, string throws, null/undefined/number edge cases, and console.error output verification
+
+---
+
 ## [1.35.1] - 2026-04-05
 
 ### Added

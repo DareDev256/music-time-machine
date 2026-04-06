@@ -3,6 +3,7 @@ import { checkSpotifyLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
 import { safeFetch, safeJson } from "./safeFetch";
 import { toSlug } from "./toSlug";
+import { apiCatch } from "./apiErrorHandler";
 
 let accessToken: string | null = null;
 let tokenExpiry: number = 0;
@@ -74,8 +75,7 @@ export async function searchSpotifyTrack(
       albumArt: track.album.images[0]?.url || "",
     };
   } catch (error) {
-    console.error("Spotify search error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("Spotify search", null, error);
   }
 }
 
@@ -116,8 +116,7 @@ export async function getSpotifyTrack(trackId: string): Promise<SpotifyData | nu
         : undefined,
     };
   } catch (error) {
-    console.error("Spotify track fetch error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("Spotify track fetch", null, error);
   }
 }
 
@@ -143,8 +142,7 @@ export async function searchSpotifyTracks(
       releaseDate: track.album.release_date || "Unknown",
     }));
   } catch (error) {
-    console.error("Spotify search error:", error instanceof Error ? error.message : "Unknown");
-    return [];
+    return apiCatch("Spotify search", [], error);
   }
 }
 
@@ -188,8 +186,7 @@ export async function getSpotifyArtist(idOrName: string): Promise<ArtistData | n
       careerTimeline: [],
     };
   } catch (error) {
-    console.error("Spotify artist fetch error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("Spotify artist fetch", null, error);
   }
 }
 

@@ -2,6 +2,7 @@ import { YouTubeData } from "@/types";
 import { checkYouTubeLimit } from "./rateLimit";
 import { formatCompact } from "./formatNumber";
 import { safeFetch, safeJson } from "./safeFetch";
+import { apiCatch } from "./apiErrorHandler";
 
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
@@ -49,8 +50,7 @@ export async function searchYouTubeVideo(
       thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.default?.url,
     };
   } catch (error) {
-    console.error("YouTube search error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("YouTube search", null, error);
   }
 }
 
@@ -79,8 +79,7 @@ export async function getYouTubeVideo(videoId: string): Promise<YouTubeData | nu
       externalUrl: `https://youtube.com/watch?v=${video.id}`,
     };
   } catch (error) {
-    console.error("YouTube video fetch error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("YouTube video fetch", null, error);
   }
 }
 
@@ -96,8 +95,7 @@ export async function getYouTubeVideoBySearch(
     // Get full video details
     return getYouTubeVideo(searchResult.videoId);
   } catch (error) {
-    console.error("YouTube search error:", error instanceof Error ? error.message : "Unknown");
-    return null;
+    return apiCatch("YouTube search", null, error);
   }
 }
 
