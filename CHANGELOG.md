@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.36.4] - 2026-04-07
+
+### Security
+- **URL domain extraction hardening** — added `extractDomainFromUrl()` in `src/utils/parsers.ts` with 5 validation layers: type gating, 2 KB length ceiling, ASCII control character rejection (CRLF injection prevention), userinfo stripping (credential-smuggling/phishing defense), and protocol allowlisting (blocks `javascript:`, `data:`, `ftp:`, `file:` schemes). Returns a typed `DomainResult` or `null` — never throws. 25 test cases covering valid URLs, dangerous protocols, credential injection, control characters, overlong input, and non-string edge cases
+
+---
+
 ## [1.36.3] - 2026-04-07
 
 ### Fixed
