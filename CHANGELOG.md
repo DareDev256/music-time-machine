@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.36.2] - 2026-04-07
+
+### Changed
+- **README accuracy sync** — corrected 6 stale counts across the README to match actual codebase state: tests (589→581), suites (44→43), components (38→37), project structure annotations (35→37 components, 578→581 tests), contributing test gate (557→581). All numbers now verified against `vitest run` output
+
+---
+
 ## [1.36.1] - 2026-04-06
 
 ### Added
