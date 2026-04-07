@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.36.3] - 2026-04-07
+
+### Fixed
+- **Slug generation bug** — `toSlug()` produced malformed slugs with leading/trailing hyphens when input started or ended with special characters (e.g. `"  !!!Rock!!!  "` → `"-rock-"` instead of `"rock"`). Also added unicode diacritics normalization so accented artist names produce clean ASCII slugs (`"Beyoncé"` → `"beyonce"` instead of `"beyonc-"`). 8 new test cases covering boundary hyphens, whitespace-only input, all-special-char input, and diacritics
+
+---
+
 ## [1.36.2] - 2026-04-07
 
 ### Changed

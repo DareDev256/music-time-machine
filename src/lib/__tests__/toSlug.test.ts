@@ -25,4 +25,40 @@ describe("toSlug", () => {
   it("handles empty string", () => {
     expect(toSlug("")).toBe("");
   });
+
+  // ── Bug fix: leading/trailing hyphens ──────────────────────────────
+
+  it("strips leading hyphens from special-char prefix", () => {
+    expect(toSlug("!!!Rock")).toBe("rock");
+  });
+
+  it("strips trailing hyphens from special-char suffix", () => {
+    expect(toSlug("Rock!!!")).toBe("rock");
+  });
+
+  it("strips both leading and trailing hyphens", () => {
+    expect(toSlug("  !!!Rock!!!  ")).toBe("rock");
+  });
+
+  it("returns empty string for all-special-character input", () => {
+    expect(toSlug("$$$%%%")).toBe("");
+  });
+
+  it("handles whitespace-only input", () => {
+    expect(toSlug("   ")).toBe("");
+  });
+
+  // ── Unicode diacritics ─────────────────────────────────────────────
+
+  it("normalizes accented characters to ASCII", () => {
+    expect(toSlug("Beyoncé")).toBe("beyonce");
+  });
+
+  it("normalizes multiple diacritics", () => {
+    expect(toSlug("Motörhead")).toBe("motorhead");
+  });
+
+  it("handles mixed unicode and special chars", () => {
+    expect(toSlug("Sigur Rós — (  )")).toBe("sigur-ros");
+  });
 });

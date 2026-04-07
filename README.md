@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.36.2-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-581_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.36.3-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-589_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-43-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -23,7 +23,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>37</strong><br><sub>Components</sub></td>
-<td align="center"><strong>581</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>589</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -330,7 +330,7 @@ src/
 │   ├── timeline.ts                  # Synthetic timeline data generator (deduplicated)
 │   ├── safeFetch.ts                 # SSRF-safe fetch with 10s AbortController timeout
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 581 tests across 43 suites
+│   └── __tests__/                  # 589 tests across 43 suites
 └── types/index.ts                  # TypeScript interfaces for all data shapes
 ```
 
@@ -363,7 +363,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**581 tests** across **43 suites** covering:
+**589 tests** across **43 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -415,7 +415,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 581 tests must pass
+npm test                    # All 589 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```
