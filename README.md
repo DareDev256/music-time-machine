@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.36.3-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-589_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.37.0-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-614_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-44-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -22,8 +22,8 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>37</strong><br><sub>Components</sub></td>
-<td align="center"><strong>589</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>38</strong><br><sub>Components</sub></td>
+<td align="center"><strong>614</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -62,6 +62,9 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 
 ### 🔍 Search & Discover
 Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
+
+### 🕰️ Music Timeline
+Interactive SVG scatter plot mapping every song by release date and Billboard peak chart position. Circle size encodes total Spotify streams; color encodes genre using the shared palette. Hover for rich tooltips, click to navigate. `#1` labels float above chart-toppers, non-hovered dots dim for focus, and the chart scrolls horizontally on mobile. Full keyboard accessibility with ARIA roles.
 
 ### 🎲 Pick for Me (Auto-Select)
 An intelligent auto-discovery button on the home page that analyzes your recently viewed songs and picks the optimal next track to explore. The selection engine maximizes **genre diversity** (unexplored genres get a bonus), avoids repeats, and rewards **new artists** — so if you've been deep in Pop, it'll surface a Country or K-Pop pick. All scoring constants (`PICK_BASE_SCORE`, `PICK_UNEXPLORED_GENRE_BONUS`, etc.) are centralized in `scoring-constants.ts` alongside the recommendation engine's tuning knobs for easy adjustment. The scorer returns both score and reason in a single pass via `scoreCandidate`, and genre lookups use the shared `genreOf` utility from `genre-utils.ts`. When your history is empty, it picks a random high-quality entry point. When you've explored the entire catalog, it resurfaces your least-recently-viewed track. The button features a three-phase animation: idle → spinning disc → album art reveal with reason tag ("New genre: K-Pop", "New artist: Dua Lipa") before navigating. Slight randomness among top-3 candidates keeps repeated picks feeling fresh.

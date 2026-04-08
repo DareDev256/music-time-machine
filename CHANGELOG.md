@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.37.0] - 2026-04-08
+
+### Added
+- **Music Timeline visualization** — new interactive SVG scatter plot on the home page mapping every song by release date (x-axis) and Billboard peak chart position (y-axis). Circle size encodes total Spotify streams, color encodes genre using the shared palette from GenreConstellation. Hover any dot for a tooltip showing title, artist, genre, peak position, chart weeks, and release year. Click or keyboard-navigate to jump to the song's detail page. Includes genre color legend, `#1` labels for chart-topping hits, glow ring on hover, and graceful dim of non-hovered dots. Horizontally scrollable on mobile with a 620px minimum width. Full ARIA roles and keyboard accessibility
+
+---
+
 ## [1.36.4] - 2026-04-07
 
 ### Security

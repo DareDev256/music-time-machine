@@ -11,6 +11,7 @@ import FilterBar from "@/components/FilterBar";
 import RecentlyViewed from "@/components/RecentlyViewed";
 import DiscoverPick from "@/components/DiscoverPick";
 import GenreConstellation from "@/components/GenreConstellation";
+import MusicTimeline from "@/components/MusicTimeline";
 import TasteProfile from "@/components/TasteProfile";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
 import { SearchResult } from "@/types";
@@ -157,6 +158,9 @@ export default function Home() {
 
       {/* Genre Constellation — audio feature star map */}
       <GenreConstellation />
+
+      {/* Music Timeline — songs plotted by release date × chart peak */}
+      <MusicTimeline />
 
       {/* Trending Songs Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
