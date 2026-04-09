@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.37.3] - 2026-04-09
+
+### Fixed
+- **TTLCache spurious eviction on key update** — `set()` evicted the oldest unrelated entry when updating an existing key at max capacity. `Map.set()` on an existing key doesn't increase size, so the eviction was unnecessary — silently dropping a valid cache entry and degrading hit rates over time. The bug triggered whenever frequently-refreshed queries (e.g. repeated searches) were re-cached while the cache was full. Fixed by checking `has(key)` before the eviction gate. Also eliminated a redundant `normalizeKey()` call in `get()`. 3 regression tests added (update-newest, update-oldest, insert-new at capacity)
+
+---
+
 ## [1.37.2] - 2026-04-09
 
 ### Fixed

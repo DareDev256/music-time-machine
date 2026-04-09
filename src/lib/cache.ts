@@ -27,11 +27,12 @@ class TTLCache {
   }
 
   get<T>(key: string): T | null {
-    const entry = this.cache.get(normalizeKey(key));
+    const nKey = normalizeKey(key);
+    const entry = this.cache.get(nKey);
     if (!entry) return null;
 
     if (Date.now() > entry.expiry) {
-      this.cache.delete(normalizeKey(key));
+      this.cache.delete(nKey);
       return null;
     }
 
@@ -40,8 +41,10 @@ class TTLCache {
 
   set<T>(key: string, data: T, ttlMs: number): void {
     const nKey = normalizeKey(key);
-    // Evict oldest entries if at capacity
-    if (this.cache.size >= this.maxSize) {
+    // Only evict when inserting a NEW key at capacity.
+    // Updating an existing key doesn't grow the Map, so eviction would
+    // needlessly destroy a valid unrelated entry (silent cache miss bug).
+    if (!this.cache.has(nKey) && this.cache.size >= this.maxSize) {
       const firstKey = this.cache.keys().next().value;
       if (firstKey) this.cache.delete(firstKey);
     }

@@ -374,7 +374,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**615 tests** across **44 suites** covering:
+**618 tests** across **44 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -390,7 +390,7 @@ npx vitest --watch    # Watch mode
 | **diversity pipeline** | 10 | End-to-end integration: artist capping, genre spread, era spread, scoring thresholds |
 | **formatCompact** | 9 | B/M/K thresholds, numeric string parsing, undefined/null/NaN handling, sub-1000 passthrough |
 | **apiHandler** | 26 | Route middleware, rate limit gating, security headers (nosniff/DENY/no-store), thrown value edge cases (null/undefined/object/rejected promise), plain Response support, jsonError status codes, X-Request-ID tracing |
-| **TTLCache** | 7 | Expiry, eviction, CRUD operations, `getStats()` observability |
+| **TTLCache** | 10 | Expiry, eviction, CRUD operations, `getStats()` observability, spurious eviction on key update regression |
 | **QuickStats** | 7 | Empty state, per-platform rendering, number abbreviation, full-data grid, accessibility |
 | **useSongData** | 7 | Loading state, parallel fetch, 404/500 handling, network error, catalog-only failure, unmount abort |
 | **RecommendationPrefs** | 6 | Genre bonus, era range bonus, mood preset scoring, invalid mood handling, stacked bonuses, empty prefs |
