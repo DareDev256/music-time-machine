@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.37.1] - 2026-04-09
+
+### Changed
+- **README accuracy sync** — corrected 8 stale values across the README to match actual codebase state: test count (589→614 in testing section and contributing gate), suite count (43→44), component count (37→38 in project structure), toSlug test count (6→9). Added 4 missing test suites to the testing table (apiErrorHandler, autoSelect.integration, PlatformShowdown, TasteProfile) with accurate test counts and descriptions. Added 4 missing lib files to the project structure (apiErrorHandler.ts, score-colors.ts, scoring-constants.ts, genre-utils.ts). Marked 4 recently shipped features as completed in the roadmap (Music Timeline, Platform Showdown, Listening DNA, Song Fingerprint). Bumped version badge to 1.37.1
+
+---
+
 ## [1.37.0] - 2026-04-08
 
 ### Added

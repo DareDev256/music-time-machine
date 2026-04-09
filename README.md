@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.37.0-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.37.1-blue?style=flat-square)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/tests-614_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-44-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
@@ -314,7 +314,7 @@ src/
 │   ├── compare/page.tsx            # Side-by-side song comparison
 │   ├── artist/[id]/page.tsx        # Artist profile + discography
 │   └── api/                        # 6 routes, all using withRouteHandler middleware
-├── components/                     # 37 single-responsibility UI components
+├── components/                     # 38 single-responsibility UI components
 │   └── PageStates.tsx              # Shared loading/error full-page states
 ├── hooks/
 │   ├── useAsyncData.ts              # Generic useReducer-backed async fetch hook
@@ -333,6 +333,10 @@ src/
 │   ├── toSlug.ts                    # URL-safe slug generator (replaces 3 inline copies)
 │   ├── timeline.ts                  # Synthetic timeline data generator (deduplicated)
 │   ├── safeFetch.ts                 # SSRF-safe fetch with 10s AbortController timeout
+│   ├── apiErrorHandler.ts           # Unified error extraction + context-prefixed logging
+│   ├── score-colors.ts              # Match badge color tiers + SVG ring rendering
+│   ├── scoring-constants.ts         # Centralized scoring weights, bonuses, and thresholds
+│   ├── genre-utils.ts               # Genre lookup resolution from catalog genre IDs
 │   ├── spotify.ts / youtube.ts / genius.ts
 │   └── __tests__/                  # 614 tests across 44 suites
 ├── utils/
@@ -370,7 +374,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**589 tests** across **43 suites** covering:
+**614 tests** across **44 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -391,7 +395,7 @@ npx vitest --watch    # Watch mode
 | **useSongData** | 7 | Loading state, parallel fetch, 404/500 handling, network error, catalog-only failure, unmount abort |
 | **RecommendationPrefs** | 6 | Genre bonus, era range bonus, mood preset scoring, invalid mood handling, stacked bonuses, empty prefs |
 | **timeline** | 6 | Invalid date guard, data point shape, 48-month cap, release anchoring, billboard windowing |
-| **toSlug** | 6 | Lowercase/hyphenation, special char stripping, separator collapse, numeric, empty string |
+| **toSlug** | 9 | Lowercase/hyphenation, special char stripping, separator collapse, numeric, empty string, boundary hyphen stripping, whitespace-only, unicode diacritics normalization |
 | **formatDate** | 5 | Locale formatting, unparseable date fallback, custom Intl options, empty string, year-only |
 | **AudioPlayer** | 5 | Play/pause, unmount cleanup, seek behavior |
 | **ComparisonView** | 5 | Side-by-side rendering, winner highlighting, tied metric handling |
@@ -414,6 +418,10 @@ npx vitest --watch    # Watch mode
 | **scoring-constants** | 19 | Structural invariants: mood target ranges, feature weight hierarchy, bonus/penalty sign correctness, diversity weight sum, threshold sanity, pick-engine balance |
 | **middleware** | 20 | Path traversal blocking (percent-encoded sequences, URL-spec normalization), method restriction (405 + Allow header + JSON body), request ID injection (UUID v4, uniqueness), X-Robots-Tag API-only, gate priority ordering |
 | **genre-utils** | 6 | Genre lookup resolution, unknown fallback, case sensitivity, special character genres, type safety |
+| **apiErrorHandler** | 11 | `extractErrorMessage()` on Error instances, subclasses, string/null/undefined/number throws, `apiCatch()` logging with context prefix, typed fallback returns, console.error output verification |
+| **autoSelect.integration** | 13 | Strategy resolution edge cases: missing/undefined/partial strategy params, degenerate catalogs (empty, single candidate, all null Spotify), unmapped genre IDs forcing diverse fallback, `getAutoInsight` state isolation across sequential calls |
+| **PlatformShowdown** | 7 | Empty states, verdict classification, metric label rendering, balanced detection, battle bar proportions |
+| **TasteProfile** | 8 | Empty states (< 2 songs), archetype classification thresholds, genre chip rendering, feature bar accuracy, radar SVG path rendering, non-mock ID handling |
 
 External API clients fully mocked — tests run fast and offline.
 
@@ -423,7 +431,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 589 tests must pass
+npm test                    # All 614 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```
@@ -444,6 +452,10 @@ The codebase follows strict patterns:
 - [x] Listening Context recommendations
 - [x] Impact Score composite scoring
 - [x] Streaming Velocity analysis
+- [x] Music Timeline scatter plot visualization
+- [x] Platform Showdown head-to-head comparison
+- [x] Listening DNA taste profiling
+- [x] Song Fingerprint generative visualization
 - [ ] Billboard chart scraping (historical data beyond mock)
 - [ ] User accounts + saved songs
 - [ ] Real-time trending from Spotify/YouTube APIs
