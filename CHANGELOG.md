@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.37.2] - 2026-04-09
+
+### Fixed
+- **Flash-of-error-state on song page** — `useAsyncData` hook reported `loading: false` during the pre-effect "idle" frame, causing consumers like the song detail page to briefly render "Song not found" before the fetch started. The idle state now correctly maps to `loading: true`, eliminating the single-frame error flash on every song navigation. Added regression test to prevent reintroduction
+
+---
+
 ## [1.37.1] - 2026-04-09
 
 ### Changed

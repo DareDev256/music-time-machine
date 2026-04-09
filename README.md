@@ -6,8 +6,8 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.37.1-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-614_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.37.2-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-615_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-44-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
@@ -23,7 +23,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>38</strong><br><sub>Components</sub></td>
-<td align="center"><strong>614</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>615</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -338,7 +338,7 @@ src/
 │   ├── scoring-constants.ts         # Centralized scoring weights, bonuses, and thresholds
 │   ├── genre-utils.ts               # Genre lookup resolution from catalog genre IDs
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 614 tests across 44 suites
+│   └── __tests__/                  # 615 tests across 44 suites
 ├── utils/
 │   ├── parsers.ts                   # Hardened URL domain extraction with 5-layer validation
 │   └── __tests__/                   # 25 parser tests
@@ -374,7 +374,7 @@ npm test              # Run all tests
 npx vitest --watch    # Watch mode
 ```
 
-**614 tests** across **44 suites** covering:
+**615 tests** across **44 suites** covering:
 
 | Suite | Tests | What's Tested |
 |-------|------:|--------------|
@@ -431,7 +431,7 @@ External API clients fully mocked — tests run fast and offline.
 
 ```bash
 git checkout -b feature/your-feature
-npm test                    # All 614 tests must pass
+npm test                    # All 615 tests must pass
 npm run lint                # Zero warnings
 npm run build               # Clean production build
 ```

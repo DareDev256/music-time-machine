@@ -185,6 +185,23 @@ describe("useAsyncData", () => {
     );
   });
 
+  // ── Idle-frame flash prevention ───────────────────────────────────
+
+  it("never exposes { loading: false, data: null } (idle-flash guard)", () => {
+    // Regression: useAsyncData used to report loading=false in the "idle"
+    // state before the effect dispatched FETCH. Consumers like the song page
+    // would hit `if (!song)` and flash "Song not found" for one frame.
+    const fetcher = vi.fn(() => new Promise<string>(() => {}));
+
+    const { result } = renderHook(() => useAsyncData(fetcher, []));
+
+    // On the very first synchronous render, before effects run:
+    // data must be null AND loading must be true — never false+null
+    expect(result.current.data).toBeNull();
+    expect(result.current.loading).toBe(true);
+    expect(result.current.error).toBeNull();
+  });
+
   // ── Type safety through public API ────────────────────────────────
 
   it("returns typed data matching the generic parameter", async () => {

@@ -86,7 +86,11 @@ export function useAsyncData<T>(
 
   return {
     data: state.data,
-    loading: state.status === "loading",
+    // Treat "idle" as loading — the effect will dispatch FETCH on the same
+    // tick, but React paints before effects run. Without this, consumers see
+    // one frame of { data: null, loading: false, error: null } which trips
+    // "not found" guards (e.g. song page shows "Song not found" flash).
+    loading: state.status === "loading" || state.status === "idle",
     error: state.error,
   };
 }
