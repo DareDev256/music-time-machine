@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.37.4] - 2026-04-11
+
+### Security
+- **Centralized request parameter validation** — new `src/utils/requestUtils.ts` provides hardened query parameter parsing for API routes. Defends against HTTP parameter pollution (duplicate key detection via `getAll()`), type coercion attacks (strict integer parsing rejects scientific notation, hex, floats, NaN, Infinity, and unsafe integers), unbounded pagination (server-side offset computation with configurable bounds prevents memory exhaustion), prototype pollution (`__proto__`/`constructor`/`prototype` blocked as param values), control character injection (CRLF/null byte rejection), parameter count limits (max 20 params per request), and injection via sort/filter params (enum allowlist via `Set.has()` — no regex). 30 test cases covering all attack vectors
+
+---
+
 ## [1.37.3] - 2026-04-09
 
 ### Fixed
