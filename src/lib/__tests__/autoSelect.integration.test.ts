@@ -195,6 +195,46 @@ describe("Auto-select — zero genre mappings", () => {
   });
 });
 
+// ── Mixed genre mapping (regression: genreless candidates diluting sample) ──
+
+describe("Auto-select — mixed genre mappings don't dilute inspection", () => {
+  it("genreless candidates don't consume inspection slots", () => {
+    // Scenario: limit=2, 4 candidates. First 2 have no genre mapping,
+    // last 2 have mapped IDs with distinct genres ("blinding-lights" = Synth-pop,
+    // "old-town-road" = Country). Before the fix, the 2 unmapped candidates
+    // would exhaust the inspection budget → 0 genres detected → diverse.
+    // After the fix, unmapped candidates are skipped → both mapped candidates
+    // are inspected → 2 distinct genres → best-match.
+    const catalog = [
+      withFeatures("unmapped-x", "NoGenreA", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("unmapped-y", "NoGenreB", { danceability: 0.70, energy: 0.70, valence: 0.70, tempo: 120 }),
+      withFeatures("blinding-lights", "Weeknd", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }),
+      withFeatures("old-town-road", "LNX", { danceability: 0.68, energy: 0.68, valence: 0.68, tempo: 118 }),
+    ];
+    getSimilarSongs(target, catalog, 2, { strategy: "auto" });
+    const insight = getAutoInsight();
+    expect(insight).not.toBeNull();
+    // With the fix, auto looks past genreless candidates and finds 2 distinct genres
+    expect(insight!.genresDetected.length).toBeGreaterThanOrEqual(2);
+    expect(insight!.resolved).toBe("best-match");
+  });
+
+  it("still resolves diverse when mapped candidates genuinely lack diversity", () => {
+    // 2 unmapped + 2 mapped candidates that share the SAME genre
+    // → even after skipping unmapped, only 1 genre detected → diverse
+    const catalog = [
+      withFeatures("unmapped-z", "NoGenreC", { danceability: 0.71, energy: 0.71, valence: 0.71, tempo: 121 }),
+      withFeatures("blinding-lights", "Weeknd", { danceability: 0.69, energy: 0.69, valence: 0.69, tempo: 119 }),
+      withFeatures("save-your-tears", "Weeknd2", { danceability: 0.68, energy: 0.68, valence: 0.68, tempo: 118 }),
+    ];
+    getSimilarSongs(target, catalog, 2, { strategy: "auto" });
+    const insight = getAutoInsight();
+    expect(insight).not.toBeNull();
+    // Both mapped songs are Synth-pop → 1 genre < threshold → diverse
+    expect(insight!.resolved).toBe("diverse");
+  });
+});
+
 // ── getAutoInsight state isolation ────────────────────────────────────
 
 describe("Auto-select — insight state isolation", () => {

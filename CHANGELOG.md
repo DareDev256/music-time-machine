@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.38.1] - 2026-04-12
+
+### Fixed
+- **Auto-strategy genre dilution in mixed catalogs** — `resolveStrategy` counted candidates without genre mappings toward the inspection budget, consuming slots that should have been reserved for genre-bearing candidates. In catalogs where some songs lack `songGenres` entries, this deflated the detected genre count and prematurely triggered "diverse" mode instead of "best-match". The fix skips genreless candidates when counting toward the inspection limit, so the strategy decision is always based on a full sample of genre-mapped data. 2 regression tests added (mixed mapping → best-match, same-genre mapping → diverse)
+
+---
+
 ## [1.38.0] - 2026-04-12
 
 ### Added

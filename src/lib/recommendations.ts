@@ -337,15 +337,20 @@ function resolveStrategy(
 
   const topGenres = new Set<string>();
   const inspectedArtists = new Set<string>();
-  let inspected = 0;
+  let withGenre = 0;
 
   for (const entry of scored) {
-    if (inspected >= limit) break;
+    if (withGenre >= limit) break;
     if (entry.artists.some((a) => inspectedArtists.has(a))) continue;
     for (const a of entry.artists) inspectedArtists.add(a);
     const genre = songGenres[entry.song.id];
-    if (genre) topGenres.add(genre);
-    inspected++;
+    if (genre) {
+      topGenres.add(genre);
+      withGenre++;
+    }
+    // Candidates without genre mappings are skipped for the inspection
+    // budget — they carry no genre signal and shouldn't dilute the sample
+    // that drives the best-match / diverse decision.
   }
 
   const resolved = topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
