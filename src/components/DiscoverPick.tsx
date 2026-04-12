@@ -1,15 +1,30 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Disc3, Sparkles } from "lucide-react";
+import { Disc3 } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
-import { pickNextSong, type PickResult } from "@/lib/pickNextSong";
-import { mockSongs } from "@/lib/mockData";
+import { pickNextSong, type PickResult, genreOf } from "@/lib/pickNextSong";
+import { mockSongs, catalogGenres } from "@/lib/mockData";
 
 type Phase = "idle" | "spinning" | "reveal";
+
+/**
+ * Compute which catalog genres the user has already explored
+ * based on their recently viewed songs.
+ */
+function useExploredGenres(recentSongIds: string[]): Set<string> {
+  return useMemo(() => {
+    const explored = new Set<string>();
+    for (const id of recentSongIds) {
+      const genre = genreOf(id);
+      if (genre !== "Unknown") explored.add(genre);
+    }
+    return explored;
+  }, [recentSongIds]);
+}
 
 export default function DiscoverPick() {
   const router = useRouter();
@@ -17,6 +32,13 @@ export default function DiscoverPick() {
   const [phase, setPhase] = useState<Phase>("idle");
   const [pick, setPick] = useState<PickResult | null>(null);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  const recentIds = useMemo(() => recentSongs.map((s) => s.id), [recentSongs]);
+  const exploredGenres = useExploredGenres(recentIds);
+
+  const totalGenres = catalogGenres.length;
+  const exploredCount = exploredGenres.size;
+  const allExplored = exploredCount >= totalGenres;
 
   // Clean up all pending timers on unmount — prevents state updates
   // and ghost navigation after the component is removed from the DOM
@@ -69,7 +91,7 @@ export default function DiscoverPick() {
         className="group relative overflow-hidden bg-card border border-border rounded-2xl px-5 py-3.5 sm:px-6 sm:py-4 transition-all hover:border-accent/40 hover:shadow-[0_0_20px_rgba(252,60,68,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-default w-full max-w-sm"
         whileHover={phase === "idle" ? { scale: 1.01 } : undefined}
         whileTap={phase === "idle" ? { scale: 0.98 } : undefined}
-        aria-label="Pick a random song to explore"
+        aria-label={`Pick a random song to explore. ${exploredCount} of ${totalGenres} genres discovered.`}
       >
         <AnimatePresence mode="wait">
           {phase === "idle" && (
@@ -84,7 +106,7 @@ export default function DiscoverPick() {
               <div className="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors">
                 <Disc3 className="w-4.5 h-4.5 text-accent" />
               </div>
-              <div className="text-left">
+              <div className="text-left min-w-0 flex-1">
                 <span className="text-sm font-semibold text-foreground block leading-tight">
                   Pick for Me
                 </span>
@@ -94,7 +116,12 @@ export default function DiscoverPick() {
                     : "Discover something new"}
                 </span>
               </div>
-              <Sparkles className="w-3.5 h-3.5 text-accent/50 ml-auto" />
+
+              {/* Genre Discovery Progress — compact dot ring */}
+              <GenreProgress
+                exploredGenres={exploredGenres}
+                allExplored={allExplored}
+              />
             </motion.div>
           )}
 
@@ -148,6 +175,92 @@ export default function DiscoverPick() {
           )}
         </AnimatePresence>
       </motion.button>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Genre Discovery Progress Ring                                      */
+/* ------------------------------------------------------------------ */
+
+/** Dot colors per genre — intentional palette, no generic Tailwind defaults */
+const GENRE_COLORS: Record<string, string> = {
+  "Alt/Indie": "#8B5CF6",   // violet — moody, alternative
+  "Country":   "#D97706",   // amber — warm, earthy
+  "Disco/Dance": "#EC4899", // pink — energetic, fun
+  "Funk":      "#F59E0B",   // gold — groovy, classic
+  "K-Pop":     "#06B6D4",   // cyan — bright, electric
+  "Pop":       "#3B82F6",   // blue — mainstream, universal
+  "R&B":       "#EF4444",   // red — soulful, passionate
+};
+
+const UNEXPLORED_COLOR = "currentColor";
+
+function GenreProgress({
+  exploredGenres,
+  allExplored,
+}: {
+  exploredGenres: Set<string>;
+  allExplored: boolean;
+}) {
+  return (
+    <div
+      className="flex items-center gap-1.5 flex-shrink-0 ml-auto"
+      aria-hidden="true"
+      title={
+        allExplored
+          ? "All genres explored!"
+          : `${exploredGenres.size}/${catalogGenres.length} genres`
+      }
+    >
+      {/* Dot ring — one per catalog genre */}
+      <div className="flex gap-[3px] items-center">
+        {catalogGenres.map((genre) => {
+          const isExplored = exploredGenres.has(genre);
+          return (
+            <motion.span
+              key={genre}
+              className="block rounded-full"
+              style={{
+                width: 6,
+                height: 6,
+                backgroundColor: isExplored
+                  ? GENRE_COLORS[genre] ?? "#FC3C44"
+                  : UNEXPLORED_COLOR,
+                opacity: isExplored ? 1 : 0.15,
+              }}
+              initial={false}
+              animate={
+                isExplored
+                  ? { scale: [1, 1.4, 1], opacity: 1 }
+                  : { scale: 1, opacity: 0.15 }
+              }
+              transition={
+                isExplored
+                  ? { duration: 0.35, ease: "easeOut" }
+                  : { duration: 0.2 }
+              }
+              title={`${genre}${isExplored ? " ✓" : ""}`}
+            />
+          );
+        })}
+      </div>
+
+      {/* Fraction label — only shown after first exploration */}
+      {exploredGenres.size > 0 && (
+        <motion.span
+          className="text-[10px] tabular-nums leading-none"
+          style={{
+            color: allExplored ? "#FC3C44" : "var(--foreground-secondary)",
+            fontWeight: allExplored ? 600 : 400,
+          }}
+          initial={{ opacity: 0, x: -4 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+        >
+          {exploredGenres.size}/{catalogGenres.length}
+        </motion.span>
+      )}
     </div>
   );
 }

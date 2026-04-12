@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.38.0] - 2026-04-12
+
+### Added
+- **Genre Discovery Progress Ring** on "Pick for Me" button — a row of color-coded dots (one per catalog genre) that illuminate as you explore new genres. Each genre gets an intentional color: violet for Alt/Indie, amber for Country, pink for Disco/Dance, gold for Funk, cyan for K-Pop, blue for Pop, red for R&B. Unexplored dots stay dimmed at 15% opacity and adapt to both light/dark themes. A fractional counter (e.g. "3/7") appears after your first exploration. Newly discovered genres animate with a spring-scale pop. Exploration state is derived from recently-viewed songs via memoized `useExploredGenres` hook. ARIA label updated to announce discovery progress for screen readers
+
+---
+
 ## [1.37.4] - 2026-04-11
 
 ### Security
