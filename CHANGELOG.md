@@ -2,6 +2,18 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.38.2] - 2026-04-13
+
+### Added
+- **Cache poisoning defense tests** — 11 tests covering `normalizeKey` security surface: NFC/NFD unicode normalization attacks, zero-width character injection, BOM bypass, control character stripping, and RTL override injection. Also tests `getStats()` (including zero-maxSize edge case) and `has()` expiry-triggered eviction behavior
+- **Timeline edge-case tests** — 10 tests covering future release dates, `peakMonth` boundary values (0, negative, very large), value-range invariants for all three metrics, ISO date format validation, and monotonic date ordering
+
+### Discovered (not yet fixed)
+- **Timeline `peakMonth=0` NaN bug** — `Math.exp(-0/0)` produces NaN on month 0, corrupting the first data point's spotify/youtube values
+- **Timeline billboard inversion overflow** — `101 - billboardPos` can produce negative values when `peak + random*10` exceeds 101; billboard values should be clamped to [1, 100]
+
+---
+
 ## [1.38.1] - 2026-04-12
 
 ### Fixed
