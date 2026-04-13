@@ -102,6 +102,57 @@ function decadeLabel(year: number): string {
   return `${Math.floor(year / 10) * 10}s`;
 }
 
+// ── Extracted helpers ─────────────────────────────────────────────────────
+
+/** Pre-parsed metadata for a song — avoids scattered genre/year lookups. */
+interface SongMeta {
+  genre: string | undefined;
+  year: number | null;
+  decade: string | null;
+}
+
+/**
+ * Extract genre, year, and decade for a song in one call.
+ * Replaces 6+ inline lookup sites across pickDiverse, getDiversityMeta,
+ * and resolveStrategy with a single consistent extraction.
+ */
+function extractSongMeta(song: SongData): SongMeta {
+  const genre = songGenres[song.id];
+  const year = safeYear(String(song.releaseDate ?? ""));
+  const decade = year !== null ? decadeLabel(year) : null;
+  return { genre, year, decade };
+}
+
+/**
+ * Yield scored entries with at most one entry per artist group.
+ * Encapsulates the artist-dedup pattern used by pickBestMatch,
+ * pickDiverse's inner loop, and resolveStrategy's inspection.
+ */
+function* uniqueByArtist(
+  scored: Iterable<ScoredSong>,
+  limit?: number,
+): Generator<ScoredSong> {
+  const seen = new Set<string>();
+  let count = 0;
+  for (const entry of scored) {
+    if (limit !== undefined && count >= limit) return;
+    if (entry.artists.some((a) => seen.has(a))) continue;
+    for (const a of entry.artists) seen.add(a);
+    yield entry;
+    count++;
+  }
+}
+
+/** Map a scored entry to the UI-facing PickResult shape. */
+function toPickResult(entry: ScoredSong, reasonOverride?: string): PickResult {
+  return {
+    song: entry.song,
+    reason: reasonOverride ?? entry.reason,
+    matchScore: clampScore(entry.score),
+    breakdown: entry.breakdown,
+  };
+}
+
 // ── Scoring ─────────────────────────────────────────────────────────────────
 
 /** Breakdown of how a recommendation score was computed. */
@@ -188,29 +239,23 @@ export function getDiversityMeta(
   const genres = new Set<string>();
   const eras = new Set<string>();
 
-  const targetYear = safeYear(String(target.releaseDate ?? ""));
-  if (targetYear !== null) {
-    eras.add(decadeLabel(targetYear));
-  }
+  const targetMeta = extractSongMeta(target);
+  if (targetMeta.decade) eras.add(targetMeta.decade);
 
   let genreKnown = 0;
   for (const { song } of picks) {
-    const genre = songGenres[song.id];
-    if (genre) {
-      genres.add(genre);
+    const meta = extractSongMeta(song);
+    if (meta.genre) {
+      genres.add(meta.genre);
       genreKnown++;
     }
-
-    const year = safeYear(String(song.releaseDate ?? ""));
-    if (year !== null) {
-      eras.add(decadeLabel(year));
-    }
+    if (meta.decade) eras.add(meta.decade);
   }
 
   const count = picks.length;
   const genreDenom = genreKnown > 0 ? genreKnown : count;
   const genreRatio = genres.size / genreDenom;
-  const eraBaseline = targetYear !== null ? 1 : 0;
+  const eraBaseline = targetMeta.year !== null ? 1 : 0;
   const eraRatio = Math.min(1, Math.max(0, (eras.size - eraBaseline) / ERA_FULL_SPREAD));
 
   const score = Math.min(100, Math.round(genreRatio * GENRE_WEIGHT + eraRatio * ERA_WEIGHT));
@@ -336,21 +381,18 @@ function resolveStrategy(
   if (requested !== "auto") return requested;
 
   const topGenres = new Set<string>();
-  const inspectedArtists = new Set<string>();
   let withGenre = 0;
 
-  for (const entry of scored) {
+  // uniqueByArtist handles the artist-dedup loop; we only consume entries
+  // whose genre mapping exists (genreless candidates don't count toward the
+  // inspection budget — they carry no signal for the best-match / diverse decision).
+  for (const entry of uniqueByArtist(scored)) {
     if (withGenre >= limit) break;
-    if (entry.artists.some((a) => inspectedArtists.has(a))) continue;
-    for (const a of entry.artists) inspectedArtists.add(a);
-    const genre = songGenres[entry.song.id];
+    const { genre } = extractSongMeta(entry.song);
     if (genre) {
       topGenres.add(genre);
       withGenre++;
     }
-    // Candidates without genre mappings are skipped for the inspection
-    // budget — they carry no genre signal and shouldn't dilute the sample
-    // that drives the best-match / diverse decision.
   }
 
   const resolved = topGenres.size < AUTO_DIVERSITY_THRESHOLD ? "diverse" : "best-match";
@@ -361,22 +403,7 @@ function resolveStrategy(
 // ── Pick strategies ──────────────────────────────────────────────────────
 
 function pickBestMatch(scored: ScoredSong[], limit: number): PickResult[] {
-  const picked: PickResult[] = [];
-  const seenArtists = new Set<string>();
-
-  for (const entry of scored) {
-    if (picked.length >= limit) break;
-    if (entry.artists.some((a) => seenArtists.has(a))) continue;
-    for (const a of entry.artists) seenArtists.add(a);
-    picked.push({
-      song: entry.song,
-      reason: entry.reason,
-      matchScore: clampScore(entry.score),
-      breakdown: entry.breakdown,
-    });
-  }
-
-  return picked;
+  return [...uniqueByArtist(scored, limit)].map((e) => toPickResult(e));
 }
 
 /**
@@ -402,14 +429,12 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
       if (entry.artists.some((a) => seenArtists.has(a))) continue;
 
       let effective = entry.score;
+      const meta = extractSongMeta(entry.song);
 
-      const genre = songGenres[entry.song.id];
-      const hasGenreBonus = !!(genre && !seenGenres.has(genre));
+      const hasGenreBonus = !!(meta.genre && !seenGenres.has(meta.genre));
       if (hasGenreBonus) effective += DIVERSITY_GENRE_BONUS;
-      const year = safeYear(String(entry.song.releaseDate ?? ""));
-      const hasEraBonus = year !== null && !seenEras.has(decadeLabel(year));
+      const hasEraBonus = meta.decade !== null && !seenEras.has(meta.decade);
       if (hasEraBonus) effective += DIVERSITY_ERA_BONUS;
-      // Collaboration bonus — songs with featured artists bridge audiences
       if (entry.artists.length > 1) effective += COLLAB_DIVERSITY_BONUS;
       effective += ((entry.song.spotify?.popularity ?? 0) / 100) * POPULARITY_WEIGHT;
 
@@ -425,10 +450,9 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
 
     const winner = remaining.splice(bestIdx, 1)[0];
     for (const a of winner.artists) seenArtists.add(a);
-    const genre = songGenres[winner.song.id];
-    if (genre) seenGenres.add(genre);
-    const year = safeYear(String(winner.song.releaseDate ?? ""));
-    if (year !== null) seenEras.add(decadeLabel(year));
+    const winnerMeta = extractSongMeta(winner.song);
+    if (winnerMeta.genre) seenGenres.add(winnerMeta.genre);
+    if (winnerMeta.decade) seenEras.add(winnerMeta.decade);
 
     // When diversity bonuses drove the selection, surface that rationale
     // instead of the generic audio-similarity reason. The first pick never
@@ -439,12 +463,7 @@ function pickDiverse(scored: ScoredSong[], limit: number): PickResult[] {
         ? "Different era"
         : winner.reason;
 
-    picked.push({
-      song: winner.song,
-      reason,
-      matchScore: clampScore(winner.score),
-      breakdown: winner.breakdown,
-    });
+    picked.push(toPickResult(winner, reason));
   }
 
   return picked;

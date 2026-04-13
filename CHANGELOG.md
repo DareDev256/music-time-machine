@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.39.0] - 2026-04-13
+
+### Changed
+- **Extract `extractSongMeta` helper** — consolidated 6+ scattered `songGenres[id]` + `safeYear(...)` + `decadeLabel(year)` inline lookups across `pickDiverse`, `getDiversityMeta`, and `resolveStrategy` into a single `extractSongMeta(song)` function returning `{ genre, year, decade }`. Eliminates inconsistency risk when metadata extraction logic changes
+- **Extract `uniqueByArtist` generator** — the artist-deduplication pattern (`seenArtists.has(a)` / `seenArtists.add(a)`) was duplicated in `pickBestMatch`, `pickDiverse`, and `resolveStrategy`. Now encapsulated in a reusable generator with optional limit parameter
+- **Extract `toPickResult` mapper** — both `pickBestMatch` and `pickDiverse` inlined the same `ScoredSong → PickResult` conversion with `clampScore`. Now a single function with optional reason override
+- **Simplify `pickBestMatch`** — reduced from 16 lines of imperative loop to a single expression: `[...uniqueByArtist(scored, limit)].map(toPickResult)`
+
+---
+
 ## [1.38.2] - 2026-04-13
 
 ### Added

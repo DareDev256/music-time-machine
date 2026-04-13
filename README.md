@@ -323,7 +323,7 @@ src/
 │   └── useRecentlyViewed.ts        # localStorage FIFO queue via useSyncExternalStore
 ├── lib/
 │   ├── timeMachine.ts              # Date-to-chart-#1 matching engine
-│   ├── recommendations.ts          # Audio feature similarity engine
+│   ├── recommendations.ts          # Audio feature similarity engine (extractSongMeta, uniqueByArtist, toPickResult helpers)
 │   ├── dataFetcher.ts              # Unified data layer (mock + real + cache)
 │   ├── cache.ts                    # TTL cache with max-size eviction
 │   ├── rateLimit.ts                # Token bucket rate limiter + input validators
@@ -338,7 +338,7 @@ src/
 │   ├── scoring-constants.ts         # Centralized scoring weights, bonuses, and thresholds
 │   ├── genre-utils.ts               # Genre lookup resolution from catalog genre IDs
 │   ├── spotify.ts / youtube.ts / genius.ts
-│   └── __tests__/                  # 615 tests across 44 suites
+│   └── __tests__/                  # 671 tests across 47 suites
 ├── utils/
 │   ├── parsers.ts                   # Hardened URL domain extraction with 5-layer validation
 │   ├── requestUtils.ts              # Centralized request param parsing with input validation
