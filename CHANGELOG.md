@@ -2,6 +2,13 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.39.1] - 2026-04-13
+
+### Added
+- **Auto-select edge-case tests** — 7 tests across 5 boundary conditions: limit=0 returns empty without crashing, artist-exclusion exhaustion (all candidates share target's artist), mood preference interaction with auto strategy resolution, limit exceeding catalog size graceful handling, and identical audio features score stability with NaN/Infinity guards
+
+---
+
 ## [1.39.0] - 2026-04-13
 
 ### Changed

@@ -6,9 +6,9 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.38.2-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-671_passing-brightgreen?style=flat-square)](src/lib/__tests__)
-[![Suites](https://img.shields.io/badge/suites-47-blue?style=flat-square)](src/lib/__tests__)
+[![Version](https://img.shields.io/badge/version-1.39.1-blue?style=flat-square)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-678_passing-brightgreen?style=flat-square)](src/lib/__tests__)
+[![Suites](https://img.shields.io/badge/suites-48-blue?style=flat-square)](src/lib/__tests__)
 [![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -23,7 +23,7 @@ One search. Four platforms. Every metric that matters.
 <table>
 <tr>
 <td align="center"><strong>38</strong><br><sub>Components</sub></td>
-<td align="center"><strong>671</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>678</strong><br><sub>Tests</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
 <td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
@@ -421,6 +421,7 @@ npx vitest --watch    # Watch mode
 | **genre-utils** | 6 | Genre lookup resolution, unknown fallback, case sensitivity, special character genres, type safety |
 | **apiErrorHandler** | 11 | `extractErrorMessage()` on Error instances, subclasses, string/null/undefined/number throws, `apiCatch()` logging with context prefix, typed fallback returns, console.error output verification |
 | **autoSelect.integration** | 13 | Strategy resolution edge cases: missing/undefined/partial strategy params, degenerate catalogs (empty, single candidate, all null Spotify), unmapped genre IDs forcing diverse fallback, `getAutoInsight` state isolation across sequential calls |
+| **autoSelect.edge** | 7 | Boundary conditions: limit=0, artist-exclusion exhaustion, mood+auto interaction, limit > catalog size, identical-feature score stability |
 | **PlatformShowdown** | 7 | Empty states, verdict classification, metric label rendering, balanced detection, battle bar proportions |
 | **TasteProfile** | 8 | Empty states (< 2 songs), archetype classification thresholds, genre chip rendering, feature bar accuracy, radar SVG path rendering, non-mock ID handling |
 
