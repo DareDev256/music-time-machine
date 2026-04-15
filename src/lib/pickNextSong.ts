@@ -141,9 +141,17 @@ export function pickNextSong(recentSongs: RecentSong[]): PickResult {
   const viewedGenres = new Map<string, number>();
   const viewedArtists = new Set<string>();
 
+  // Count unique songs per genre — not raw view entries.
+  // Without dedup, revisiting the same song inflates the genre penalty
+  // (−8 per re-view), which can bury unviewed candidates below the score > 0
+  // threshold and incorrectly trigger the "revisit" path.
+  const genreCounted = new Set<string>();
   for (const s of recentSongs) {
-    const genre = genreOf(s.id);
-    viewedGenres.set(genre, (viewedGenres.get(genre) ?? 0) + 1);
+    if (!genreCounted.has(s.id)) {
+      const genre = genreOf(s.id);
+      viewedGenres.set(genre, (viewedGenres.get(genre) ?? 0) + 1);
+      genreCounted.add(s.id);
+    }
     viewedArtists.add(primaryArtist(s.artist));
   }
 

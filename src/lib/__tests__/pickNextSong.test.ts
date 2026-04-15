@@ -232,6 +232,49 @@ describe("pickNextSong — top-N randomness", () => {
   });
 });
 
+// ── pickNextSong — re-view inflation regression ────────────────────────────────
+
+describe("pickNextSong — genre penalty deduplication", () => {
+  it("does not inflate genre penalty when the same song is re-viewed multiple times", () => {
+    // Simulate a user viewing song-a (Rock) 10 times — before the fix,
+    // the genre count for Rock would be 10, penalty = 80, burying song-c
+    // (also Rock) below the score > 0 threshold and incorrectly returning
+    // a "Revisit" for an already-viewed song instead of the unviewed song-c.
+    const now = Date.now();
+    const history = Array.from({ length: 10 }, (_, i) =>
+      recent("song-a", "Alpha", now - i * 1000),
+    );
+
+    vi.spyOn(Math, "random").mockReturnValue(0);
+    const result = pickNextSong(history);
+
+    // song-c is unviewed and should still be picked (Rock genre count = 1
+    // after dedup, not 10). It must NOT be song-a (revisit).
+    expect(result.id).not.toBe("song-a");
+    expect(result.reason).not.toBe("Revisit — it's been a while");
+  });
+
+  it("still penalizes genre correctly based on unique song count", () => {
+    // View both Rock songs (song-a + song-c) — Rock count = 2
+    // Then re-view song-a 5 more times. Rock count should stay 2, not 7.
+    const now = Date.now();
+    const history = [
+      recent("song-a", "Alpha", now - 7000),
+      recent("song-c", "Delta & Epsilon", now - 6000),
+      ...Array.from({ length: 5 }, (_, i) =>
+        recent("song-a", "Alpha", now - (5 - i) * 1000),
+      ),
+    ];
+
+    const result = pickNextSong(history);
+
+    // Unviewed songs (song-b Hip-Hop, song-d Jazz, song-e Electronic) all
+    // have unexplored genres — any of them is valid, but none is a revisit
+    expect(result.reason).not.toBe("Revisit — it's been a while");
+    expect(["song-b", "song-d", "song-e"]).toContain(result.id);
+  });
+});
+
 // ── pickNextSong — result shape contract ─────────────────────────────────────
 
 describe("pickNextSong — PickResult contract", () => {

@@ -2,6 +2,16 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.39.2] - 2026-04-15
+
+### Fixed
+- **Pick engine genre penalty inflation** — `pickNextSong` counted raw view entries (including re-views of the same song) when computing genre repeat penalties, causing the penalty to inflate by −8 per re-view instead of per unique song. After ~7 re-views of any song, all unviewed candidates in that genre could score ≤ 0 and be incorrectly filtered out, triggering the "Revisit" path despite fresh picks existing. Genre counts are now deduplicated by song ID
+
+### Added
+- **Re-view inflation regression tests** — 2 tests verifying genre penalty is based on unique songs, not raw view count, and that re-viewing a song 10× doesn't bury unviewed candidates
+
+---
+
 ## [1.39.1] - 2026-04-13
 
 ### Added
