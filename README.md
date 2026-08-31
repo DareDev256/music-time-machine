@@ -7,9 +7,7 @@
 One search. Four platforms. Every metric that matters.
 
 [![Version](https://img.shields.io/badge/version-1.39.2-blue?style=flat-square)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-680_passing-brightgreen?style=flat-square)](src/lib/__tests__)
 [![Suites](https://img.shields.io/badge/suites-48-blue?style=flat-square)](src/lib/__tests__)
-[![Health](https://img.shields.io/badge/health-/api/health-brightgreen?style=flat-square)](src/app/api/health/route.ts)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
@@ -22,11 +20,11 @@ One search. Four platforms. Every metric that matters.
 
 <table>
 <tr>
-<td align="center"><strong>38</strong><br><sub>Components</sub></td>
-<td align="center"><strong>680</strong><br><sub>Tests</sub></td>
+<td align="center"><strong>45</strong><br><sub>Components</sub></td>
+<td align="center"><strong>48</strong><br><sub>Test Suites</sub></td>
 <td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
-<td align="center"><strong>18</strong><br><sub>Curated Songs</sub></td>
+<td align="center"><strong>17</strong><br><sub>Curated Songs</sub></td>
 <td align="center"><strong>0</strong><br><sub>Config Required</sub></td>
 </tr>
 </table>
@@ -39,7 +37,7 @@ One search. Four platforms. Every metric that matters.
 
 Music data lives in silos. Spotify knows streams but not chart history. YouTube has views but no audio features. Billboard tracks positions but not engagement. Genius adds cultural context but no playback data.
 
-**Music Time Machine bridges all four** — so when you look up "Blinding Lights," you see 4.6B Spotify streams *and* 770M YouTube views *and* 90 weeks on Billboard *and* the Genius backstory, all on one screen.
+**Music Time Machine bridges all four.** Look up "Blinding Lights" and you get its Spotify streams, its YouTube views, its Billboard run and its Genius backstory on one screen. Out of the box those come from the curated catalog in `src/lib/mockData.ts`; set `USE_MOCK_DATA=false` with keys and the same view fills from the live APIs.
 
 ---
 
@@ -52,7 +50,7 @@ npm install
 npm run dev
 ```
 
-Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated songs — **no API keys required**.
+Open [localhost:3000](http://localhost:3000). Works immediately with 17 curated songs — **no API keys required**.
 
 > Want live data from any song on Spotify? Set `USE_MOCK_DATA=false` and add your keys. See the [API Setup Guide](docs/API_SETUP.md).
 
@@ -61,7 +59,7 @@ Open [localhost:3000](http://localhost:3000). Works immediately with 18 curated 
 ## Features
 
 ### 🔍 Search & Discover
-Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 18 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
+Real-time autocomplete with debounced API calls and keyboard navigation. Results appear instantly with album art thumbnails. The home page shows a trending grid of all 17 curated tracks with **genre and era filters** — tap any pill (Pop, R&B, Country, K-Pop, Alt/Indie, Disco/Dance, Funk) or era (2010s, 2020s) to slice the catalog with animated transitions.
 
 ### 🕰️ Music Timeline
 Interactive SVG scatter plot mapping every song by release date and Billboard peak chart position. Circle size encodes total Spotify streams; color encodes genre using the shared palette. Hover for rich tooltips, click to navigate. `#1` labels float above chart-toppers, non-hovered dots dim for focus, and the chart scrolls horizontally on mobile. Full keyboard accessibility with ARIA roles.
@@ -125,7 +123,7 @@ These are the design decisions that make this more than a CRUD app:
 
 | Pattern | What & Why |
 |---------|-----------|
-| **Mock-First Architecture** | Starts with realistic mock data for all 18 songs across 4 platforms. Real APIs enrich via `Promise.all` — if any call fails, mock data stays. Zero-config works perfectly, partial config works partially, full config works fully. The consumer never sees an empty state. |
+| **Mock-First Architecture** | Starts with realistic mock data for all 17 songs across 4 platforms. Real APIs enrich via `Promise.all` — if any call fails, mock data stays. Zero-config works perfectly, partial config works partially, full config works fully. The consumer never sees an empty state. |
 | **Token Bucket Rate Limiting** | Each API gets a token bucket with burst capacity and continuous refill — one multiplication, one comparison per request. Per-IP route limits return 429 with `Retry-After`. Stale buckets auto-evict to prevent memory leaks. |
 | **TTL Cache + LRU Eviction** | Generic `TTLCache` using `Map` insertion-order semantics for oldest-first eviction. Search cached 5 min (200 entries), songs cached 30 min (100 entries). Zero external dependencies. |
 | **Shared `formatCompact` Utility** | Unified B/M/K number formatting across all 3 API clients (Spotify, YouTube, Genius). Handles `number`, numeric `string`, `undefined`, and `null` inputs — one function instead of three with identical logic. |
