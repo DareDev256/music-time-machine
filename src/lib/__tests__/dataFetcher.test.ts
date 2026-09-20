@@ -75,10 +75,10 @@ describe("dataFetcher", () => {
         artist: "Test Artist",
         albumArt: "https://example.com/art.jpg",
         releaseDate: "TBD",            // truthy but unparseable
-        url: "https://genius.com/test",
         pageViews: "10K",
         description: "A test song",
-        annotations: 5,
+        annotationCount: 5,
+        lyricsUrl: "https://genius.com/test",
       });
 
       const song = await getSongData("genius:12345");

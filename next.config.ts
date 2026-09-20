@@ -15,7 +15,7 @@ const fallbackCsp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'strict-dynamic'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://i.scdn.co https://i.ytimg.com https://images.genius.com",
+  "img-src 'self' data: blob: https://i.scdn.co https://i.ytimg.com https://images.genius.com https://*.mzstatic.com",
   "font-src 'self' https://fonts.gstatic.com",
   "connect-src 'self' https://api.spotify.com https://accounts.spotify.com https://www.googleapis.com https://api.genius.com",
   "media-src 'self' https://p.scdn.co",
@@ -46,6 +46,12 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.genius.com",
         pathname: "/**",
+      },
+      {
+        // iTunes cover art (is1-ssl … is5-ssl.mzstatic.com)
+        protocol: "https",
+        hostname: "*.mzstatic.com",
+        pathname: "/image/**",
       },
     ],
   },

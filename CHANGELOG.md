@@ -2,6 +2,29 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [1.40.0] - 2026-09-20
+
+### Added
+- **Full Hot 100 history for the Time Machine card** — `data/hot100-number-ones.json` holds every Billboard Hot 100 #1 by issue week from 1958-08-04 to the current issue (3,556 rows), built by `data/scripts/hot100_number_ones.py` from Wikipedia's per-year lists (CC BY-SA). The script refuses to write on a year that parses to zero rows or on a broken weekly cadence. Replaces the 19-row hand-typed map that covered 2019–2024
+- **`src/lib/hot100.ts`** — `numberOneOn(date)` (run length + run start/end derived from consecutive weeks), `numberOnesBetween(from, to)`, `conceptionWindow(birth)` (266 days before, ±7), strict ISO date parsing; 13 tests
+- **`GET /api/number-one?date=YYYY-MM-DD`** — the #1 in effect on any date since 1958 plus the conception-window #1s, each with 600×600 cover art from the keyless iTunes Search API (`src/lib/coverArt.ts`, cached with a miss sentinel). 400 on a malformed date, 404 outside the chart's range; responses cached a week (chart history is immutable)
+- **"What you were conceived to"** — the Time Machine card now returns two results: the #1 on the date, and the #1(s) 38 weeks earlier. Any date since 1958-08-04; each result links to a YouTube search for the record
+- `docs/screenshots/2026-09-20_time-machine-card-{desktop,mobile}.png` — rendered proof
+
+### Changed
+- **`src/proxy.ts` absorbs `src/middleware.ts`** — Next 16.2 refuses a repo that ships both, so `main` had not built since the proxy landed. Path-traversal gate, API method restriction, `X-Request-Id` and the `X-Robots-Tag` on `/api/*` now live in the proxy alongside the CSP nonce; tests moved to `src/__tests__/proxy.test.ts`
+- `apiHandler.ts` uses Web Crypto `crypto.randomUUID()` instead of `node:crypto`, which the edge-runtime OG route could not load
+- CSP `img-src` and `images.remotePatterns` allow `*.mzstatic.com` (iTunes art)
+- `spotifyFetch` / `geniusFetch` / `youtubeFetch` return a loosely typed payload again (`safeJson<any>`); their callers had drifted from `safeJson`'s `unknown` default and `tsc` reported 30 errors
+
+### Removed
+- `src/lib/timeMachine.ts` and its 19-entry `historicalNumber1s` map, plus its tests
+
+### Fixed
+- Four test files no longer fail type-checking (`afterEach` import, stale `GeniusData` fields, an untyped mock tuple)
+
+---
+
 ## [1.39.2] - 2026-04-15
 
 ### Fixed

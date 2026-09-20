@@ -81,6 +81,7 @@ const ROUTE_LIMITS = {
   og: { maxTokens: 10, windowMs: 60_000 },        // 10 OG images/min
   catalog: { maxTokens: 10, windowMs: 60_000 },  // 10 catalog fetches/min
   health: { maxTokens: 6, windowMs: 60_000 },    // 6 health checks/min
+  numberOne: { maxTokens: 30, windowMs: 60_000 }, // 30 date lookups/min
 } as const;
 
 export type RouteName = keyof typeof ROUTE_LIMITS;

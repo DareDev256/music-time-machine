@@ -20,6 +20,7 @@ const ALLOWED_ORIGINS = new Set([
   "https://accounts.spotify.com",
   "https://www.googleapis.com",
   "https://api.genius.com",
+  "https://itunes.apple.com",
 ]);
 
 /**

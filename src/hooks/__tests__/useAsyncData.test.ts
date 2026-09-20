@@ -68,7 +68,7 @@ describe("useAsyncData", () => {
   // ── AbortController behaviour ─────────────────────────────────────
 
   it("passes AbortSignal to the fetcher", () => {
-    const fetcher = vi.fn(() => new Promise<null>(() => {}));
+    const fetcher = vi.fn((_signal: AbortSignal) => new Promise<null>(() => {}));
 
     renderHook(() => useAsyncData(fetcher, []));
 

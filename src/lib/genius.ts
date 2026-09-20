@@ -25,7 +25,9 @@ async function geniusFetch(endpoint: string) {
     throw new Error(`Genius API error: ${response.status}`);
   }
 
-  return safeJson(response);
+  // Third-party payloads are shaped by the caller; typed loosely here on purpose.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return safeJson<any>(response);
 }
 
 export async function searchGeniusSong(

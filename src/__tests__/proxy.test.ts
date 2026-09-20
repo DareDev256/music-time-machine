@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { middleware } from "@/middleware";
+import { proxy as middleware } from "@/proxy";
 import { NextRequest } from "next/server";
 
 // ── Helpers ────────────────────────────────────────────────────────────

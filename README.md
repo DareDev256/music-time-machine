@@ -6,7 +6,7 @@
 
 One search. Four platforms. Every metric that matters.
 
-[![Version](https://img.shields.io/badge/version-1.39.2-blue?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.40.0-blue?style=flat-square)](CHANGELOG.md)
 [![Suites](https://img.shields.io/badge/suites-48-blue?style=flat-square)](src/lib/__tests__)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
@@ -22,9 +22,9 @@ One search. Four platforms. Every metric that matters.
 <tr>
 <td align="center"><strong>45</strong><br><sub>Components</sub></td>
 <td align="center"><strong>48</strong><br><sub>Test Suites</sub></td>
-<td align="center"><strong>7</strong><br><sub>API Routes</sub></td>
+<td align="center"><strong>8</strong><br><sub>API Routes</sub></td>
 <td align="center"><strong>4</strong><br><sub>Platforms</sub></td>
-<td align="center"><strong>17</strong><br><sub>Curated Songs</sub></td>
+<td align="center"><strong>3,556</strong><br><sub>Hot 100 Weeks</sub></td>
 <td align="center"><strong>0</strong><br><sub>Config Required</sub></td>
 </tr>
 </table>
@@ -98,7 +98,7 @@ A horizontal scroll strip on the home page shows the last 8 songs you've explore
 Pick any two songs for a head-to-head metrics battle. Winner highlighting across streams, views, chart peak, weeks on chart, and page views. Tied metrics display with amber highlighting and a summary count.
 
 ### ⏰ Time Machine
-*"What was #1 on your birthday?"* Enter any date and see the Billboard chart-topper for that month, with historical data spanning 2019–2024.
+*"What was #1 on your birthday?"* Enter any date since **August 4, 1958** (the first Hot 100) and get the Billboard #1 in effect that week, its run length, real cover art, and a second card: **what you were conceived to** — the #1(s) 38 weeks earlier. Backed by `data/hot100-number-ones.json`, every issue week from 1958 to now, rebuilt from Wikipedia's per-year lists by `data/scripts/hot100_number_ones.py` (no API key; the script refuses to write a year that parses empty). Served by `GET /api/number-one?date=YYYY-MM-DD`.
 
 ### 🎤 Artist Profiles
 Explore any artist's top tracks, full discography grid, career timeline, and aggregate stats (monthly listeners, total streams).
@@ -381,7 +381,7 @@ npx vitest --watch    # Watch mode
 | **rateLimit** | 30 | Token bucket consumption/refill, per-IP route isolation, stale eviction, input validation (`isValidId`, `sanitizeQuery`) |
 | **mockData** | 21 | Catalog integrity, search matching, artist slug resolution, timeline sorting |
 | **dataFetcher** | 20 | Search, comparison engine, `lowerWins` inversion, `parseMetric` edge cases, artist lookup, catalog |
-| **Time Machine** | 19 | Exact month lookup, zero-padding, closest-month fallback, boundary snapping, data integrity |
+| **Hot 100** | 13 | Dataset coverage, week-in-effect lookup, run derivation, range queries, conception window, strict ISO dates, artist normalisation |
 | **comparison** | 12 | Winner analysis, tied metrics, head-to-head stat extraction |
 | **safeFetch** | 19 | SSRF origin allowlist, 10s timeout enforcement, caller signal precedence, malformed URL rejection, prototype pollution sanitization (`sanitizeJson`), recursive key stripping, depth cap enforcement |
 | **safeHref** | 12 | HTTPS passthrough, `javascript:`/`data:`/`vbscript:`/`http:`/`ftp:`/`file:` blocking, undefined/null/empty/malformed |

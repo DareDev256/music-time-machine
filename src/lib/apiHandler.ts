@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { randomUUID } from "node:crypto";
 import { checkRouteLimit, extractClientIp, rateLimitResponse, RouteName } from "./rateLimit";
 
 type RouteContext = { params: Promise<Record<string, string>> };
@@ -28,7 +27,8 @@ export function getErrorCount(): number {
  * Without it, finding the same request in multiple systems is guesswork.
  */
 export function generateRequestId(): string {
-  return randomUUID();
+  // Web Crypto: available in Node ≥19 and the Edge runtime (the OG route runs on edge).
+  return crypto.randomUUID();
 }
 
 /**
