@@ -1,0 +1,851 @@
+{
+ "month": "2025-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251115012636/https://hypem.com/popular",
+   "captured": "2025-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cherry Blue",
+     "artist": "Oneohtrix Point Never"
+    },
+    {
+     "rank": 2,
+     "song": "Radio Player",
+     "artist": "Josaleigh Pollett"
+    },
+    {
+     "rank": 3,
+     "song": "From The Blue",
+     "artist": "Girl As Wave"
+    },
+    {
+     "rank": 4,
+     "song": "Mercury",
+     "artist": "Automatic"
+    },
+    {
+     "rank": 5,
+     "song": "An Answer",
+     "artist": "The Mall"
+    },
+    {
+     "rank": 6,
+     "song": "Drift of Drummer",
+     "artist": "Guedra Guedra كدرة كدرة"
+    },
+    {
+     "rank": 7,
+     "song": "Sag",
+     "artist": "Tiberius"
+    },
+    {
+     "rank": 8,
+     "song": "Inframince",
+     "artist": "Lucrecia Dalt"
+    },
+    {
+     "rank": 9,
+     "song": "Vacation",
+     "artist": "Florist"
+    },
+    {
+     "rank": 10,
+     "song": "The Birds Outside Sang",
+     "artist": "Florist"
+    },
+    {
+     "rank": 11,
+     "song": "Magic, Alive!",
+     "artist": "McKinley Dixon"
+    },
+    {
+     "rank": 12,
+     "song": "Will You Dare",
+     "artist": "Wendy Eisenberg"
+    },
+    {
+     "rank": 13,
+     "song": "Vegetation Grows Thick",
+     "artist": "gyrofield"
+    },
+    {
+     "rank": 14,
+     "song": "Livin' Wrong",
+     "artist": "Tony Molina"
+    },
+    {
+     "rank": 15,
+     "song": "MOLLY",
+     "artist": "ECCA VANDAL"
+    },
+    {
+     "rank": 16,
+     "song": "Mammone",
+     "artist": "Rachel Kitchlew, SHOLTO, David Bardon"
+    },
+    {
+     "rank": 17,
+     "song": "Steal Wool feat. Pink Siifu",
+     "artist": "PremRock"
+    },
+    {
+     "rank": 18,
+     "song": "Forest of Hallucinations",
+     "artist": "Lamp Of Murmuur"
+    },
+    {
+     "rank": 19,
+     "song": "A Hate Inferior",
+     "artist": "Backengrillen"
+    },
+    {
+     "rank": 20,
+     "song": "Sitting",
+     "artist": "Tiberius"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251115200057/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2025-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mutt",
+     "artist": "Leon Thomas"
+    },
+    {
+     "rank": 2,
+     "song": "Thriller",
+     "artist": "Michael Jackson"
+    },
+    {
+     "rank": 3,
+     "song": "Come N Go",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 4,
+     "song": "Shake It To The Max (Fly)",
+     "artist": "MOLIY, Silent Addy, Skillibeng & Shenseea"
+    },
+    {
+     "rank": 5,
+     "song": "KO",
+     "artist": "NLE The Great"
+    },
+    {
+     "rank": 6,
+     "song": "Putting Ya Dine",
+     "artist": "Monaleo"
+    },
+    {
+     "rank": 7,
+     "song": "Have To.",
+     "artist": "Brent Faiyaz"
+    },
+    {
+     "rank": 8,
+     "song": "Blow My High",
+     "artist": "Dee Mula"
+    },
+    {
+     "rank": 9,
+     "song": "Yes",
+     "artist": "Ken Carson"
+    },
+    {
+     "rank": 10,
+     "song": "Affirmations",
+     "artist": "Flippa T"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20251115033219/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2025-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dopamine",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 2,
+     "song": "Nuketown Blues",
+     "artist": "Rooster"
+    },
+    {
+     "rank": 3,
+     "song": "Special",
+     "artist": "dexter in the newsagent"
+    },
+    {
+     "rank": 4,
+     "song": "ig reels",
+     "artist": "ivvys’"
+    },
+    {
+     "rank": 5,
+     "song": "Afterlife",
+     "artist": "Alex G"
+    },
+    {
+     "rank": 6,
+     "song": "Landgrab [ft. Earl Sweatshirt]",
+     "artist": "MAVI"
+    },
+    {
+     "rank": 7,
+     "song": "Alive",
+     "artist": "Youngboy Never Broke Again Playboi Carti"
+    },
+    {
+     "rank": 8,
+     "song": "Elderberry Wine",
+     "artist": "Wednesday"
+    },
+    {
+     "rank": 9,
+     "song": "MAKKA",
+     "artist": "Fakemink Ecco2k Mechatok"
+    },
+    {
+     "rank": 10,
+     "song": "New Threats From the Soul",
+     "artist": "Ryan Davis And The Roadhouse Band"
+    },
+    {
+     "rank": 11,
+     "song": "Henry, come on",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 12,
+     "song": "Dancing in the Club (MJ Lenderman Version)",
+     "artist": "This Is Lorelei"
+    },
+    {
+     "rank": 13,
+     "song": "This Is Real",
+     "artist": "Feeble Little Horse"
+    },
+    {
+     "rank": 14,
+     "song": "Special Request to All Nice and Decent Real Niggaz (Stop Hatin)",
+     "artist": "509 BMG"
+    },
+    {
+     "rank": 15,
+     "song": "To Be a Rose",
+     "artist": "Jenny Hval"
+    },
+    {
+     "rank": 16,
+     "song": "Cinderella",
+     "artist": "Model Actriz"
+    },
+    {
+     "rank": 17,
+     "song": "Easter Pink",
+     "artist": "fakemink"
+    },
+    {
+     "rank": 18,
+     "song": "Sickle Walk",
+     "artist": "YHWH Nailgun"
+    },
+    {
+     "rank": 19,
+     "song": "Reframing",
+     "artist": "Barker"
+    },
+    {
+     "rank": 20,
+     "song": "pop",
+     "artist": "skaiwater"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251114215645/https://www.billboard.com/charts/country-songs/",
+   "captured": "2025-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Choosin' Texas",
+     "artist": "Ella Langley"
+    },
+    {
+     "rank": 2,
+     "song": "Hell At Night",
+     "artist": "BigXthaPlug Featuring Ella Langley"
+    },
+    {
+     "rank": 3,
+     "song": "House Again",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 4,
+     "song": "Darlin'",
+     "artist": "Chase Matthew"
+    },
+    {
+     "rank": 5,
+     "song": "Better Me For You (Brown Eyes)",
+     "artist": "Max McNown"
+    },
+    {
+     "rank": 6,
+     "song": "Last One To Know",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 7,
+     "song": "Heavens To Betsy",
+     "artist": "Jackson Dean"
+    },
+    {
+     "rank": 8,
+     "song": "Ends Of The Earth",
+     "artist": "Ty Myers"
+    },
+    {
+     "rank": 9,
+     "song": "It Won't Be Long",
+     "artist": "George Birge"
+    },
+    {
+     "rank": 10,
+     "song": "Painted You Pretty",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 11,
+     "song": "Sober",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 12,
+     "song": "Need To",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 13,
+     "song": "Keeps Me Sane",
+     "artist": "Tyler Nance"
+    },
+    {
+     "rank": 14,
+     "song": "Damned If I Do",
+     "artist": "Vincent Mason"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251114232055/https://www.beatport.com/top-100",
+   "captured": "2025-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Positive (Extended Mix)",
+     "artist": "Jamback"
+    },
+    {
+     "rank": 2,
+     "song": "Jamaican (Bam Bam) (Extended Mix)",
+     "artist": "Hugel & SOLTO (FR)"
+    },
+    {
+     "rank": 3,
+     "song": "Be Without You (Extended Mix)",
+     "artist": "SOSA (UK)"
+    },
+    {
+     "rank": 4,
+     "song": "Love Songs (feat. Kosmo Kint) (Extended Mix)",
+     "artist": "Prospa & Kosmo Kint"
+    },
+    {
+     "rank": 5,
+     "song": "Diet Coke (Extended Mix)",
+     "artist": "Fallon (IE)"
+    },
+    {
+     "rank": 6,
+     "song": "I Cannot (Extended Mix)",
+     "artist": "Anti Up"
+    },
+    {
+     "rank": 7,
+     "song": "Same Man (DERON Rework) (Extended Mix)",
+     "artist": "DJ Delicious & DERON"
+    },
+    {
+     "rank": 8,
+     "song": "Love Parade (Extended Mix)",
+     "artist": "Da Hool, Cassian & YOTTO"
+    },
+    {
+     "rank": 9,
+     "song": "Fancy $hit (Extended Mix)",
+     "artist": "CID & Taylr Renee"
+    },
+    {
+     "rank": 10,
+     "song": "GOAT",
+     "artist": "BLOND:ISH, Broken Hill & DARCO 09"
+    },
+    {
+     "rank": 11,
+     "song": "Cry For You (Extended Mix)",
+     "artist": "SIDEPIECE"
+    },
+    {
+     "rank": 12,
+     "song": "Sound of You (Extended Mix)",
+     "artist": "TEED & ANOTR"
+    },
+    {
+     "rank": 13,
+     "song": "Bullshit (Extended Mix)",
+     "artist": "Matroda & KLP"
+    },
+    {
+     "rank": 14,
+     "song": "Till I Die",
+     "artist": "Solomun & Anyma (ofc)"
+    },
+    {
+     "rank": 15,
+     "song": "I Wanna Go (John Summit Extended Remix)",
+     "artist": "Britney Spears"
+    },
+    {
+     "rank": 16,
+     "song": "Talk of the Town",
+     "artist": "Sammy Virji, Fred again.. & Reggie"
+    },
+    {
+     "rank": 17,
+     "song": "Cocaine Inside My Blunts (Extended Mix)",
+     "artist": "Disco Lines"
+    },
+    {
+     "rank": 18,
+     "song": "Shake Your Body",
+     "artist": "ALISHA & Julian Fijma"
+    },
+    {
+     "rank": 19,
+     "song": "Time Again",
+     "artist": "RUZE & Ryan Nicholls"
+    },
+    {
+     "rank": 20,
+     "song": "Call You Back (Extended Mix)",
+     "artist": "Layton Giordani, Be No Rain & GENESI (ITA)"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251115200046/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2025-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Let The World Burn (Hoodtrap / Mylancore Remix)",
+     "artist": "Chris Grey, R3BEL & Kryd"
+    },
+    {
+     "rank": 2,
+     "song": "The Days",
+     "artist": "CHRYSTAL"
+    },
+    {
+     "rank": 3,
+     "song": "I Run",
+     "artist": "HAVEN."
+    },
+    {
+     "rank": 4,
+     "song": "Montagem Rugada",
+     "artist": "Sayfalse, Cape & JXNDRO"
+    },
+    {
+     "rank": 5,
+     "song": "Upside Down",
+     "artist": "Black Gryph0n & Baasik"
+    },
+    {
+     "rank": 6,
+     "song": "Make Me Feel",
+     "artist": "oskar med k"
+    },
+    {
+     "rank": 7,
+     "song": "Desire",
+     "artist": "Ian Asher & Olly Alexander"
+    },
+    {
+     "rank": 8,
+     "song": "Montagem Xonada",
+     "artist": "MXZI, dj Samir & DJ Javi26"
+    },
+    {
+     "rank": 9,
+     "song": "I Want Things To Be Beautiful",
+     "artist": "Devi McCallion"
+    },
+    {
+     "rank": 10,
+     "song": "No Batidao",
+     "artist": "ZXKAI & slxughter"
+    },
+    {
+     "rank": 11,
+     "song": "HARDSTYLE 2",
+     "artist": "Fred again.., KETTAMA & Shady Nasty"
+    },
+    {
+     "rank": 12,
+     "song": "Lua Na Praca",
+     "artist": "dj Samir, DJ Zarek, DJ DUDA & LUNxdiE"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251118132344/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2025-11-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Backseat",
+     "artist": "Balu Brigada"
+    },
+    {
+     "rank": 2,
+     "song": "Get The Message",
+     "artist": "The Paradox"
+    },
+    {
+     "rank": 3,
+     "song": "Slow & Easy",
+     "artist": "Rome Featuring Dirty Heads"
+    },
+    {
+     "rank": 4,
+     "song": "Zombie",
+     "artist": "YUNGBLUD"
+    },
+    {
+     "rank": 5,
+     "song": "Easy Come, Easy Go",
+     "artist": "The All-American Rejects"
+    },
+    {
+     "rank": 6,
+     "song": "Lucy",
+     "artist": "Mt. Joy"
+    },
+    {
+     "rank": 7,
+     "song": "Caramel",
+     "artist": "Sleep Token"
+    },
+    {
+     "rank": 8,
+     "song": "mangetout",
+     "artist": "Wet Leg"
+    },
+    {
+     "rank": 9,
+     "song": "Doubletake",
+     "artist": "Edgehill"
+    },
+    {
+     "rank": 10,
+     "song": "Dang",
+     "artist": "Rainbow Kitten Surprise"
+    },
+    {
+     "rank": 11,
+     "song": "World Apart",
+     "artist": "Bike Routes"
+    },
+    {
+     "rank": 12,
+     "song": "This Is The Killer Speaking",
+     "artist": "The Last Dinner Party"
+    },
+    {
+     "rank": 13,
+     "song": "Lost",
+     "artist": "almost monday"
+    },
+    {
+     "rank": 14,
+     "song": "Pay & Display",
+     "artist": "Lovejoy"
+    },
+    {
+     "rank": 15,
+     "song": "Above The Lake",
+     "artist": "James And The Cold Gun"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251117075951/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2025-11-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Fate of Ophelia",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Golden (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 3,
+     "song": "Man I Need",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 4,
+     "song": "Opalite",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 5,
+     "song": "back to friends",
+     "artist": "sombr"
+    },
+    {
+     "rank": 6,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 7,
+     "song": "So Easy (To Fall In Love)",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 8,
+     "song": "Travelin' Soldier",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 9,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 10,
+     "song": "Elizabeth Taylor",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 11,
+     "song": "Your Idol (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 12,
+     "song": "Soda Pop (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 13,
+     "song": "All I Want for Christmas Is You",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 14,
+     "song": "Father Figure",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 15,
+     "song": "Dracula",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 16,
+     "song": "I Got Better",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 17,
+     "song": "Rockin' Around The Christmas Tree",
+     "artist": "Brenda Lee"
+    },
+    {
+     "rank": 18,
+     "song": "Iris",
+     "artist": "The Goo Goo Dolls"
+    },
+    {
+     "rank": 19,
+     "song": "Dreams - 2004 Remaster",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 20,
+     "song": "Creep",
+     "artist": "Radiohead"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251115230221/https://kworb.net/charts/itunes/us.html",
+   "captured": "2025-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Fate of Ophelia",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "O Come, O Come Emmanuel",
+     "artist": "Skillet"
+    },
+    {
+     "rank": 3,
+     "song": "I Don't Care",
+     "artist": "Megadeth"
+    },
+    {
+     "rank": 4,
+     "song": "Golden",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 5,
+     "song": "Start Over",
+     "artist": "5 Seconds of Summer"
+    },
+    {
+     "rank": 6,
+     "song": "Walk My Walk",
+     "artist": "Breaking Rust"
+    },
+    {
+     "rank": 7,
+     "song": "Wishful Dreaming",
+     "artist": "5 Seconds of Summer"
+    },
+    {
+     "rank": 8,
+     "song": "I'll Find You",
+     "artist": "5 Seconds of Summer"
+    },
+    {
+     "rank": 9,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 10,
+     "song": "In My Life (Take 1)",
+     "artist": "The Beatles"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Tread On Me",
+     "artist": "Cain Walker"
+    },
+    {
+     "rank": 12,
+     "song": "Chest",
+     "artist": "5 Seconds of Summer"
+    },
+    {
+     "rank": 13,
+     "song": "Choosin' Texas",
+     "artist": "Ella Langley"
+    },
+    {
+     "rank": 14,
+     "song": "Man I Need",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 15,
+     "song": "Opalite",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 16,
+     "song": "Mystical Magical",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 17,
+     "song": "I Don't Care",
+     "artist": "Cain Walker"
+    },
+    {
+     "rank": 18,
+     "song": "The Wreck of the Edmund Fitzgerald",
+     "artist": "Gordon Lightfoot"
+    },
+    {
+     "rank": 19,
+     "song": "FEAR",
+     "artist": "NF"
+    },
+    {
+     "rank": 20,
+     "song": "Wondering Why",
+     "artist": "The Red Clay Strays"
+    }
+   ]
+  }
+ ]
+}

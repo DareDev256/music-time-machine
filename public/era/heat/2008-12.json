@@ -1,0 +1,346 @@
+{
+ "month": "2008-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081216002732/http://hotnewhiphop.com.:80/",
+   "captured": "2008-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sayin This",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 2,
+     "song": "Snap",
+     "artist": "T-Pain Ft. Lil' Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "U Already Know",
+     "artist": "Young Cash Ft. B.o.B."
+    },
+    {
+     "rank": 4,
+     "song": "Speechless",
+     "artist": "Razah Ft. Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "King Of The World",
+     "artist": "Razah"
+    },
+    {
+     "rank": 6,
+     "song": "When It Hurts (Remix)",
+     "artist": "Avant Ft. Red Cafe"
+    },
+    {
+     "rank": 7,
+     "song": "Meet The Problem Child",
+     "artist": "Willy Northpole"
+    },
+    {
+     "rank": 8,
+     "song": "Street Music (Prod. By Blunt)",
+     "artist": "Freeway"
+    },
+    {
+     "rank": 9,
+     "song": "Keep Dancing",
+     "artist": "Ciara Ft. The Dream"
+    },
+    {
+     "rank": 10,
+     "song": "Part Time Girl",
+     "artist": "Jagged Edge Ft. Nelly"
+    },
+    {
+     "rank": 11,
+     "song": "On Da Block Ft. Sean Kingston, Helluva & Royce Da 5'9\"",
+     "artist": "Chedda Boy Malik"
+    },
+    {
+     "rank": 12,
+     "song": "Fuck You",
+     "artist": "Electric Red"
+    },
+    {
+     "rank": 13,
+     "song": "Bag Man",
+     "artist": "Doeshun Ft. Young Dro"
+    },
+    {
+     "rank": 14,
+     "song": "Quarantine",
+     "artist": "Max B"
+    },
+    {
+     "rank": 15,
+     "song": "Don't Turn Back (Remix)",
+     "artist": "Girlicious Ft Colby O'Donis"
+    },
+    {
+     "rank": 16,
+     "song": "Cell Phone Watch (Ft. G'$ Up)",
+     "artist": "Lil Scrappy"
+    },
+    {
+     "rank": 17,
+     "song": "Deep In The South (Radio Edit)",
+     "artist": "Lil Flip"
+    },
+    {
+     "rank": 18,
+     "song": "Little Black Book",
+     "artist": "Jazmine Sullivan"
+    },
+    {
+     "rank": 19,
+     "song": "If This Is Love",
+     "artist": "Jazmine Sullivan"
+    },
+    {
+     "rank": 20,
+     "song": "Real Hard",
+     "artist": "Yung Joc"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20081216021807/http://hypem.com:80/popular",
+   "captured": "2008-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Womanizer",
+     "artist": "Lily Allen"
+    },
+    {
+     "rank": 2,
+     "song": "Paper Planes (DFA Remix)",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 3,
+     "song": "Happy Birthday (New Song - Teaser)",
+     "artist": "Royksopp"
+    },
+    {
+     "rank": 4,
+     "song": "Time to Pretend (BLOGULA RMX)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 5,
+     "song": "Womanizer (Britney Spears cover)",
+     "artist": "Ladyhawke"
+    },
+    {
+     "rank": 6,
+     "song": "Bounce (Dskotek Remix)",
+     "artist": "MSTRKRFT"
+    },
+    {
+     "rank": 7,
+     "song": "Put That Pussy On Me (Diplo To",
+     "artist": "Spank Rock"
+    },
+    {
+     "rank": 8,
+     "song": "Stay Fly with Deadmau5 (Mighty Mi Mix)",
+     "artist": "3 6 Mafia vs. Deadmau5 vs. Mighty Mi"
+    },
+    {
+     "rank": 9,
+     "song": "Breaking It Up",
+     "artist": "Lykke Li"
+    },
+    {
+     "rank": 10,
+     "song": "Interlude 5",
+     "artist": "MOONSTARR"
+    },
+    {
+     "rank": 11,
+     "song": "When We Were Young (Shazam Remix)",
+     "artist": "Sneaky Sound System"
+    },
+    {
+     "rank": 12,
+     "song": "Womanizer",
+     "artist": "Lily Allen"
+    },
+    {
+     "rank": 13,
+     "song": "Blindsided",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 14,
+     "song": "Gifted feat. Kanye West, Santogold & Lykke Li",
+     "artist": "N.A.S.A."
+    },
+    {
+     "rank": 15,
+     "song": "Did You Wrong (Frankmusik Remix)",
+     "artist": "The Clik Clik"
+    },
+    {
+     "rank": 16,
+     "song": "Womanizer (Britney Spears Cover)",
+     "artist": "Lily Allen"
+    },
+    {
+     "rank": 17,
+     "song": "Flashing Lights (Diplo Remix)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 18,
+     "song": "These Girls Are Dressed To Kill (Livyo Remix)",
+     "artist": "The Outrunners"
+    },
+    {
+     "rank": 19,
+     "song": "Gifted ft. Kanye West, Santogold & Lykke Li",
+     "artist": "N.A.S.A."
+    },
+    {
+     "rank": 20,
+     "song": "Blow Your Head",
+     "artist": "Diplo"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081216010745/http://2dopeboyz.com:80/",
+   "captured": "2008-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Coldest Winter (Fan Video)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "She Loves Everybody (Rmx) f. Shawn Chrystopher",
+     "artist": "Chester French"
+    },
+    {
+     "rank": 3,
+     "song": "There He Go f. Fabolous & Paul Cain",
+     "artist": "Red Cafe"
+    },
+    {
+     "rank": 4,
+     "song": "CDR Freestyle",
+     "artist": "Q Da Kid"
+    },
+    {
+     "rank": 5,
+     "song": "Street Music (Day 15)",
+     "artist": "Freeway"
+    },
+    {
+     "rank": 6,
+     "song": "Undescibable f. Busta Rhymes",
+     "artist": "Billy Danze"
+    },
+    {
+     "rank": 7,
+     "song": "Stop What You Doing",
+     "artist": "Mickey Factz, Naledge & Fresh Daily"
+    },
+    {
+     "rank": 8,
+     "song": "Gangster With An “A",
+     "artist": "Old Money"
+    },
+    {
+     "rank": 9,
+     "song": "Night Of The Living Dope (Johnny’s Revenge)",
+     "artist": "CurT@!n$"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081216011610/http://www.pigeonsandplanes.com:80/",
+   "captured": "2008-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Swag",
+     "artist": "Jamie Foxx ft. Rick Ross"
+    },
+    {
+     "rank": 2,
+     "song": "Skinny Love\" on Letterman",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 3,
+     "song": "If I Never See Your Face Again (Swizz Beats Remix)",
+     "artist": "Maroon 5"
+    },
+    {
+     "rank": 4,
+     "song": "Flume (Live Video) + 4 Bon Iver mp3s!",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 5,
+     "song": "The Prayer\" and Band of Horses - \"Funeral",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 6,
+     "song": "Ghostface Xmas",
+     "artist": "Ghostface Killah"
+    },
+    {
+     "rank": 7,
+     "song": "Heartless\" into \"Pinocchio's Story\" on SNL",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 8,
+     "song": "Heartless into Pinocchio's Story (Live Video)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 9,
+     "song": "Beach Baby + Bonus",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 10,
+     "song": "Pigeons and Planes' Greatest Hits",
+     "artist": "Charles Hamilton"
+    },
+    {
+     "rank": 11,
+     "song": "Ridin' For the South",
+     "artist": "Yung Daze"
+    }
+   ]
+  }
+ ]
+}

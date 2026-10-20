@@ -341,6 +341,246 @@
      "artist": "Lil Wayne Featuring Drake"
     }
    ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120115082918/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2012-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Let It Rain",
+     "artist": "David Nail Featuring Sarah Buxton"
+    },
+    {
+     "rank": 2,
+     "song": "Keep Me In Mind",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 3,
+     "song": "Drink In My Hand",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 4,
+     "song": "I Don't Want This Night To E...",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 5,
+     "song": "You",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 6,
+     "song": "Tattoos On This Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 7,
+     "song": "All Your Life",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 8,
+     "song": "Easy",
+     "artist": "Rascal Flatts Featuring Natasha Bedingfield"
+    },
+    {
+     "rank": 9,
+     "song": "Reality",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 10,
+     "song": "You Gonna Fly",
+     "artist": "Keith Urban"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120115075129/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2012-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lonely Boy",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 2,
+     "song": "These Days",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 3,
+     "song": "Paradise",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 4,
+     "song": "Cough Syrup",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 5,
+     "song": "Monarchy Of Roses",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 6,
+     "song": "The Sound Of Winter",
+     "artist": "Bush"
+    },
+    {
+     "rank": 7,
+     "song": "Aberdeen",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 8,
+     "song": "Dark Horses",
+     "artist": "Switchfoot"
+    },
+    {
+     "rank": 9,
+     "song": "Face To The Floor",
+     "artist": "Chevelle"
+    },
+    {
+     "rank": 10,
+     "song": "After Midnight",
+     "artist": "Blink-182"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120106082500/http://www.2dopeboyz.com:80/",
+   "captured": "2012-01-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rich Forever [Discussion]",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 2,
+     "song": "The Statement",
+     "artist": "D. Cash"
+    },
+    {
+     "rank": 3,
+     "song": "So What",
+     "artist": "Sheek Louch & Styles P"
+    },
+    {
+     "rank": 4,
+     "song": "Bag Of Money f. Wale & Meek Mill",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Look At This Sh!t: 2DBZ C-Section Edition",
+     "artist": "Playboy Tre"
+    },
+    {
+     "rank": 6,
+     "song": "Sinning Again",
+     "artist": "Grafh"
+    },
+    {
+     "rank": 7,
+     "song": "Shot Caller Freestyle [NoTags]",
+     "artist": "Young Jeezy"
+    },
+    {
+     "rank": 8,
+     "song": "Sino",
+     "artist": "The Niceguys"
+    },
+    {
+     "rank": 9,
+     "song": "Dance In The Reign",
+     "artist": "Phonte"
+    },
+    {
+     "rank": 10,
+     "song": "LA State Of Mind (FreEP)",
+     "artist": "I Self Devine"
+    },
+    {
+     "rank": 11,
+     "song": "✞rill Living 2.0",
+     "artist": "Chase N. Cashe (of Surf Club)"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120113100211/http://pigeonsandplanes.com/",
+   "captured": "2012-01-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Strange Clouds (Remix)",
+     "artist": "B.o.B ft. T.I. and Jeezy"
+    },
+    {
+     "rank": 2,
+     "song": "VOiCES",
+     "artist": "Tidus"
+    },
+    {
+     "rank": 3,
+     "song": "Guy Friends",
+     "artist": "Party Supplies"
+    },
+    {
+     "rank": 4,
+     "song": "Dumbin",
+     "artist": "Star Slinger ft. Reggie B"
+    },
+    {
+     "rank": 5,
+     "song": "Carver’s Kick",
+     "artist": "Straylings"
+    },
+    {
+     "rank": 6,
+     "song": "Marie Marie",
+     "artist": "Thieves Like Us"
+    },
+    {
+     "rank": 7,
+     "song": "Oh Lord",
+     "artist": "Kris Kasanova"
+    },
+    {
+     "rank": 8,
+     "song": "The Last Goodbye",
+     "artist": "The Kills"
+    },
+    {
+     "rank": 9,
+     "song": "Jerry’s Record Store",
+     "artist": "Mac Miller"
+    }
+   ]
   }
  ]
 }

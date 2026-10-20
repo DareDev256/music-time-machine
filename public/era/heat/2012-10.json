@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121013180832/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2012-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 2,
+     "song": "Whistle",
+     "artist": "Flo Rida"
+    },
+    {
+     "rank": 3,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 4,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 5,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Pop That",
+     "artist": "French Montana Featuring Rick Ross, Drake, Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Birthday Song",
+     "artist": "2 Chainz Featuring Kanye West"
+    },
+    {
+     "rank": 8,
+     "song": "Turn On The Lights",
+     "artist": "Future"
+    },
+    {
+     "rank": 9,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    },
+    {
+     "rank": 10,
+     "song": "I Cry",
+     "artist": "Flo Rida"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,261 @@
      "rank": 10,
      "song": "Birthday Song",
      "artist": "2 Chainz Featuring Kanye West"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121016103535/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2012-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "It Gets Dark",
+     "artist": "Holy Ghost!"
+    },
+    {
+     "rank": 2,
+     "song": "Werkin' Girls",
+     "artist": "Angel Haze"
+    },
+    {
+     "rank": 3,
+     "song": "White Dress",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 4,
+     "song": "New Ships",
+     "artist": "Benoit & Sergio"
+    },
+    {
+     "rank": 5,
+     "song": "The Fall",
+     "artist": "Rhye"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121014011720/http://www.billboard.com/charts/country-songs",
+   "captured": "2012-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "We Are Never Ever Getting Ba...",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Red",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 3,
+     "song": "Blown Away",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 4,
+     "song": "Wanted",
+     "artist": "Hunter Hayes"
+    },
+    {
+     "rank": 5,
+     "song": "Take A Little Ride",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 6,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 7,
+     "song": "Cowboys And Angels",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 8,
+     "song": "Kiss Tomorrow Goodbye",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 9,
+     "song": "Hard To Love",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 10,
+     "song": "Begin Again",
+     "artist": "Taylor Swift"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121018224023/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2012-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 2,
+     "song": "I Will Wait",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 3,
+     "song": "Ho Hey",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 4,
+     "song": "Little Black Submarines",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 5,
+     "song": "Too Close",
+     "artist": "Alex Clare"
+    },
+    {
+     "rank": 6,
+     "song": "Take A Walk",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 7,
+     "song": "Kill Your Heroes",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 8,
+     "song": "It's Time",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 9,
+     "song": "Some Nights",
+     "artist": "fun."
+    },
+    {
+     "rank": 10,
+     "song": "Little Talks",
+     "artist": "Of Monsters And Men"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121002010313/http://www.2dopeboyz.com/",
+   "captured": "2012-10-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Locked Out Of Heaven",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 2,
+     "song": "Mama Told Me f. Kelly Rowland",
+     "artist": "Big Boi"
+    },
+    {
+     "rank": 3,
+     "song": "How Do You Do: The Remixes (FreEP)",
+     "artist": "Mayer Hawthorne"
+    },
+    {
+     "rank": 4,
+     "song": "Flower Girl",
+     "artist": "OGM"
+    },
+    {
+     "rank": 5,
+     "song": "R.T.B. VINO MIX",
+     "artist": "Raven Sorvino (of Language Artz)"
+    },
+    {
+     "rank": 6,
+     "song": "Independent Living f. SwizZz & Hopsin",
+     "artist": "Dizzy Wright"
+    },
+    {
+     "rank": 7,
+     "song": "Fountain of Youth f. Rick Ross & Nipsey Hu$$le",
+     "artist": "Stalley"
+    },
+    {
+     "rank": 8,
+     "song": "Right Girl Wrong Time",
+     "artist": "Spree Wilson"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121025091803/http://pigeonsandplanes.com:80/",
+   "captured": "2012-10-25",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Freestyle I Wrote Down",
+     "artist": "Dremur"
+    },
+    {
+     "rank": 2,
+     "song": "Got Stoned And Mixed Really Old Records For Half An Hour",
+     "artist": "Diplo"
+    },
+    {
+     "rank": 3,
+     "song": "Oh Catherine, My Catherine",
+     "artist": "Widower"
+    },
+    {
+     "rank": 4,
+     "song": "White Sheet Beach",
+     "artist": "Fishing"
+    },
+    {
+     "rank": 5,
+     "song": "Mr. Frosty Man",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 6,
+     "song": "Wit’ It",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 7,
+     "song": "After Hours",
+     "artist": "AraabMuzik"
+    },
+    {
+     "rank": 8,
+     "song": "Curse The Night",
+     "artist": "The Raveonettes"
     }
    ]
   }

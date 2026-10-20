@@ -1,0 +1,951 @@
+{
+ "month": "2020-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200329210558/https://www.hotnewhiphop.com/top100/",
+   "captured": "2020-03-29",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Contact",
+     "artist": "Wiz Khalifa Feat. Tyga"
+    },
+    {
+     "rank": 2,
+     "song": "Coffin",
+     "artist": "Jessie Reyez Feat. Eminem"
+    },
+    {
+     "rank": 3,
+     "song": "\"W\"",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 4,
+     "song": "Tycoon",
+     "artist": "Future"
+    },
+    {
+     "rank": 5,
+     "song": "Turks",
+     "artist": "Nav Feat. Gunna"
+    },
+    {
+     "rank": 6,
+     "song": "Amazing Pt. 3",
+     "artist": "Dave East"
+    },
+    {
+     "rank": 7,
+     "song": "Fight The Feeling",
+     "artist": "Mac Miller Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Shoot Sideways",
+     "artist": "Conway & Alchemist Feat. ScHoolboy Q"
+    },
+    {
+     "rank": 9,
+     "song": "Escape From LA (Prod. By Metro Boomin)",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Will",
+     "artist": "Joyner Lucas"
+    },
+    {
+     "rank": 11,
+     "song": "Do The Most",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 12,
+     "song": "Believe It",
+     "artist": "PartyNextDoor Feat. Rihanna"
+    },
+    {
+     "rank": 13,
+     "song": "12.38",
+     "artist": "Childish Gambino Feat. 21 Savage"
+    },
+    {
+     "rank": 14,
+     "song": "Heartless (Vapor Wave Remix)",
+     "artist": "The Weeknd Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 15,
+     "song": "Time",
+     "artist": "Childish Gambino Feat. Ariana Grande"
+    },
+    {
+     "rank": 16,
+     "song": "You Choose",
+     "artist": "Trav Feat. Tory Lanez"
+    },
+    {
+     "rank": 17,
+     "song": "Poppin'",
+     "artist": "Jeezy"
+    },
+    {
+     "rank": 18,
+     "song": "Banana Split",
+     "artist": "Murda Beatz & YNW Melly Feat. Lil Durk"
+    },
+    {
+     "rank": 19,
+     "song": "P2 (Slowed & Reverb)",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 20,
+     "song": "War",
+     "artist": "Joyner Lucas Feat. Young Thug"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200315072028/https://hypem.com/popular",
+   "captured": "2020-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "25 Minutes",
+     "artist": "Jinka"
+    },
+    {
+     "rank": 2,
+     "song": "Airplane",
+     "artist": "MAGDALENA BAY"
+    },
+    {
+     "rank": 3,
+     "song": "I Love Music",
+     "artist": "BLONDAGE"
+    },
+    {
+     "rank": 4,
+     "song": "The Motor",
+     "artist": "The Wants"
+    },
+    {
+     "rank": 5,
+     "song": "Sweet",
+     "artist": "Porridge Radio"
+    },
+    {
+     "rank": 6,
+     "song": "Old Toy",
+     "artist": "MAX RAD"
+    },
+    {
+     "rank": 7,
+     "song": "Favourite Kind Of Girl feat. Flikka",
+     "artist": "Gotts Street Park"
+    },
+    {
+     "rank": 8,
+     "song": "Money",
+     "artist": "Lime Cordiale"
+    },
+    {
+     "rank": 9,
+     "song": "Locket",
+     "artist": "LILA DREW"
+    },
+    {
+     "rank": 10,
+     "song": "The Warm Shoulder",
+     "artist": "Mary Lattimore"
+    },
+    {
+     "rank": 11,
+     "song": "Stripes (feat. emawk & Beau Diako)",
+     "artist": "Ben Esser"
+    },
+    {
+     "rank": 12,
+     "song": "The Difference (feat. Toro y Moi)",
+     "artist": "Flume"
+    },
+    {
+     "rank": 13,
+     "song": "Overthinking (feat. narou)",
+     "artist": "Bearcubs"
+    },
+    {
+     "rank": 14,
+     "song": "Waiting Room (Fugazi cover)",
+     "artist": "Homesick Elephant"
+    },
+    {
+     "rank": 15,
+     "song": "GET DOWN DANCE",
+     "artist": "HĒIR"
+    },
+    {
+     "rank": 16,
+     "song": "Fool's Gold",
+     "artist": "Son of Cabe"
+    },
+    {
+     "rank": 17,
+     "song": "Zeitgeber",
+     "artist": "Manu Delago"
+    },
+    {
+     "rank": 18,
+     "song": "was it not",
+     "artist": "Marian Hill"
+    },
+    {
+     "rank": 19,
+     "song": "I Am Waiting (Rolling Stones Cover)",
+     "artist": "Ollabelle"
+    },
+    {
+     "rank": 20,
+     "song": "Get jealous",
+     "artist": "ShitKid"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200304043914/https://www.billboard.com/charts/rap-song",
+   "captured": "2020-03-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Box",
+     "artist": "Roddy Ricch"
+    },
+    {
+     "rank": 2,
+     "song": "Life Is Good",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Roxanne",
+     "artist": "Arizona Zervas"
+    },
+    {
+     "rank": 4,
+     "song": "Hot Girl Bummer",
+     "artist": "blackbear"
+    },
+    {
+     "rank": 5,
+     "song": "Ballin'",
+     "artist": "Mustard & Roddy Ricch"
+    },
+    {
+     "rank": 6,
+     "song": "BOP",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 7,
+     "song": "Woah",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 8,
+     "song": "High Fashion",
+     "artist": "Roddy Ricch Featuring Mustard"
+    },
+    {
+     "rank": 9,
+     "song": "Lil Top",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 10,
+     "song": "Falling",
+     "artist": "Trevor Daniel"
+    },
+    {
+     "rank": 11,
+     "song": "Dior",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 12,
+     "song": "Godzilla",
+     "artist": "Eminem Featuring Juice WRLD"
+    },
+    {
+     "rank": 13,
+     "song": "HIGHEST IN THE ROOM",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Sum 2 Prove",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 15,
+     "song": "Red Eye",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 16,
+     "song": "Numbers",
+     "artist": "A Boogie Wit da Hoodie Featuring Roddy Ricch, Gunna & London On Da Track"
+    },
+    {
+     "rank": 17,
+     "song": "Blueberry Faygo",
+     "artist": "Lil Mosey"
+    },
+    {
+     "rank": 18,
+     "song": "BEST ON EARTH",
+     "artist": "Russ & BIA"
+    },
+    {
+     "rank": 19,
+     "song": "Heart On Ice",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 20,
+     "song": "Fine By Time",
+     "artist": "YoungBoy Never Broke Again"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200312220413/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2020-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Box",
+     "artist": "Roddy Ricch"
+    },
+    {
+     "rank": 2,
+     "song": "Life Is Good",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Roxanne",
+     "artist": "Arizona Zervas"
+    },
+    {
+     "rank": 4,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 5,
+     "song": "Intentions",
+     "artist": "Justin Bieber Featuring Quavo"
+    },
+    {
+     "rank": 6,
+     "song": "Hot Girl Bummer",
+     "artist": "blackbear"
+    },
+    {
+     "rank": 7,
+     "song": "Woah",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 8,
+     "song": "Say So",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 9,
+     "song": "Heartless",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Heatin Up",
+     "artist": "Lil Baby & Gunna"
+    },
+    {
+     "rank": 11,
+     "song": "That Way",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 12,
+     "song": "Commercial",
+     "artist": "Lil Baby Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 13,
+     "song": "BOP",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 14,
+     "song": "Sum 2 Prove",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 15,
+     "song": "Live Off My Closet",
+     "artist": "Lil Baby Featuring Future"
+    },
+    {
+     "rank": 16,
+     "song": "High Fashion",
+     "artist": "Roddy Ricch Featuring Mustard"
+    },
+    {
+     "rank": 17,
+     "song": "Emotionally Scarred",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 18,
+     "song": "Falling",
+     "artist": "Trevor Daniel"
+    },
+    {
+     "rank": 19,
+     "song": "PTSD",
+     "artist": "G Herbo Featuring Chance The Rapper, Juice WRLD & Lil Uzi Vert"
+    },
+    {
+     "rank": 20,
+     "song": "Yummy",
+     "artist": "Justin Bieber"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20200315085454/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2020-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "POP",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 2,
+     "song": "Spotlight",
+     "artist": "Jessie Ware"
+    },
+    {
+     "rank": 3,
+     "song": "Gaslighter",
+     "artist": "Dixie Chicks"
+    },
+    {
+     "rank": 4,
+     "song": "Safaera [ft. Jowell & Randy and Ñengo Flow]",
+     "artist": "Bad Bunny"
+    },
+    {
+     "rank": 5,
+     "song": "Melt!",
+     "artist": "Kelly Lee Owens"
+    },
+    {
+     "rank": 6,
+     "song": "Garden Song",
+     "artist": "Phoebe Bridgers"
+    },
+    {
+     "rank": 7,
+     "song": "Gospel for a New Century",
+     "artist": "Yves Tumor"
+    },
+    {
+     "rank": 8,
+     "song": "Lilacs",
+     "artist": "Waxahatchee"
+    },
+    {
+     "rank": 9,
+     "song": "People, I’ve been sad",
+     "artist": "Christine and the Queens"
+    },
+    {
+     "rank": 10,
+     "song": "Sweet",
+     "artist": "Porridge Radio"
+    },
+    {
+     "rank": 11,
+     "song": "Polly",
+     "artist": "Moses Sumney"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200315074241/https://www.billboard.com/charts/country-songs",
+   "captured": "2020-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Bones",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 2,
+     "song": "10,000 Hours",
+     "artist": "Dan + Shay & Justin Bieber"
+    },
+    {
+     "rank": 3,
+     "song": "Homesick",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Kinfolks",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 5,
+     "song": "One Man Band",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 6,
+     "song": "I Hope",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 7,
+     "song": "Nobody But You",
+     "artist": "Blake Shelton Duet With Gwen Stefani"
+    },
+    {
+     "rank": 8,
+     "song": "Homemade",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 9,
+     "song": "Chasin' You",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 10,
+     "song": "What She Wants Tonight",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 11,
+     "song": "Slow Dance In A Parking Lot",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 12,
+     "song": "More Hearts Than Mine",
+     "artist": "Ingrid Andress"
+    },
+    {
+     "rank": 13,
+     "song": "We Back",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 14,
+     "song": "I Wish Grandpas Never Died",
+     "artist": "Riley Green"
+    },
+    {
+     "rank": 15,
+     "song": "Catch",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 16,
+     "song": "I Hope You're Happy Now",
+     "artist": "Carly Pearce & Lee Brice"
+    },
+    {
+     "rank": 17,
+     "song": "Does To Me",
+     "artist": "Luke Combs Featuring Eric Church"
+    },
+    {
+     "rank": 18,
+     "song": "homecoming queen?",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 19,
+     "song": "Beer Can't Fix",
+     "artist": "Thomas Rhett Featuring Jon Pardi"
+    },
+    {
+     "rank": 20,
+     "song": "After A Few",
+     "artist": "Travis Denning"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200312233409/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2020-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stupid Love",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 2,
+     "song": "RITMO (Bad Boys For Life)",
+     "artist": "The Black Eyed Peas X J Balvin"
+    },
+    {
+     "rank": 3,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 4,
+     "song": "Higher Love",
+     "artist": "Kygo X Whitney Houston"
+    },
+    {
+     "rank": 5,
+     "song": "Ride It.",
+     "artist": "DJ Regard"
+    },
+    {
+     "rank": 6,
+     "song": "Lose Control",
+     "artist": "Meduza x Becky Hill x GOODBOYS"
+    },
+    {
+     "rank": 7,
+     "song": "Good Things Fall Apart",
+     "artist": "Illenium & Jon Bellion"
+    },
+    {
+     "rank": 8,
+     "song": "Post Malone",
+     "artist": "Sam Feldt Featuring RANI"
+    },
+    {
+     "rank": 9,
+     "song": "Que Calor",
+     "artist": "Major Lazer & J Balvin Featuring El Alfa"
+    },
+    {
+     "rank": 10,
+     "song": "Takeaway",
+     "artist": "The Chainsmokers & Illenium Featuring Lennon Stella"
+    },
+    {
+     "rank": 11,
+     "song": "Family",
+     "artist": "The Chainsmokers With Kygo"
+    },
+    {
+     "rank": 12,
+     "song": "Drown",
+     "artist": "Martin Garrix Featuring Clinton Kane"
+    },
+    {
+     "rank": 13,
+     "song": "Crusade",
+     "artist": "Marshmello x SVDDEN DEATH"
+    },
+    {
+     "rank": 14,
+     "song": "Alone, Pt. II",
+     "artist": "Alan Walker & Ava Max"
+    },
+    {
+     "rank": 15,
+     "song": "Faith",
+     "artist": "Galantis & Dolly Parton Featuring Mr. Probz"
+    },
+    {
+     "rank": 16,
+     "song": "You Broke My Heart Again",
+     "artist": "Teqkoi & Aiko"
+    },
+    {
+     "rank": 17,
+     "song": "Used To Love",
+     "artist": "Martin Garrix & Dean Lewis"
+    },
+    {
+     "rank": 18,
+     "song": "Forever Yours (Tribute)",
+     "artist": "Kygo With Avicii & Sandro Cavazza"
+    },
+    {
+     "rank": 19,
+     "song": "Body Back",
+     "artist": "Gryffin Featuring Maia Wright"
+    },
+    {
+     "rank": 20,
+     "song": "I Feel Love",
+     "artist": "Sam Smith"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200330175927/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2020-03-30",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cradles",
+     "artist": "Sub Urban"
+    },
+    {
+     "rank": 2,
+     "song": "everything i wanted",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 3,
+     "song": "Novocaine",
+     "artist": "The Unlikely Candidates"
+    },
+    {
+     "rank": 4,
+     "song": "Oh Yeah!",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 5,
+     "song": "Life In The City",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 6,
+     "song": "The Best",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 7,
+     "song": "Used To Like",
+     "artist": "Neon Trees"
+    },
+    {
+     "rank": 8,
+     "song": "Black Madonna",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 9,
+     "song": "Deleter",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 10,
+     "song": "Caution",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 11,
+     "song": "The Hype",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 12,
+     "song": "loneliness for love",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 13,
+     "song": "Running Up That Hill",
+     "artist": "Meg Myers"
+    },
+    {
+     "rank": 14,
+     "song": "Lost In Yesterday",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 15,
+     "song": "Dissolve",
+     "artist": "Absofacto"
+    },
+    {
+     "rank": 16,
+     "song": "Bang!",
+     "artist": "AJR"
+    },
+    {
+     "rank": 17,
+     "song": "Van Horn",
+     "artist": "Saint Motel"
+    },
+    {
+     "rank": 18,
+     "song": "Shine A Little Light",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 19,
+     "song": "Your Love (Deja Vu)",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 20,
+     "song": "Let's Fall In Love For The Night",
+     "artist": "FINNEAS"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20200315193623/https://kworb.net/charts/itunes/us.html",
+   "captured": "2020-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sweet Night",
+     "artist": "V"
+    },
+    {
+     "rank": 2,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 3,
+     "song": "One Margarita",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Dance Monkey",
+     "artist": "Tones and I"
+    },
+    {
+     "rank": 5,
+     "song": "Intentions (feat. Quavo)",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 6,
+     "song": "Didn't I",
+     "artist": "OneRepublic"
+    },
+    {
+     "rank": 7,
+     "song": "Don't Start Now",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 8,
+     "song": "The Box",
+     "artist": "Roddy Ricch"
+    },
+    {
+     "rank": 9,
+     "song": "Circles",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 10,
+     "song": "Nobody But You (feat. Gwen Stefani)",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 11,
+     "song": "I Hope",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 12,
+     "song": "Caution",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 13,
+     "song": "everything i wanted",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 14,
+     "song": "Kings & Queens",
+     "artist": "Ava Max"
+    },
+    {
+     "rank": 15,
+     "song": "Memories",
+     "artist": "Maroon 5"
+    },
+    {
+     "rank": 16,
+     "song": "Godzilla (feat. Juice WRLD)",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 17,
+     "song": "Graves into Gardens (feat. Brandon Lake) [Live]",
+     "artist": "Elevation Worship"
+    },
+    {
+     "rank": 18,
+     "song": "I Love Me",
+     "artist": "Demi Lovato"
+    },
+    {
+     "rank": 19,
+     "song": "Adore You",
+     "artist": "Harry Styles"
+    },
+    {
+     "rank": 20,
+     "song": "Stupid Love",
+     "artist": "Lady Gaga"
+    }
+   ]
+  }
+ ]
+}

@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131005050208/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2013-10-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 2,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 3,
+     "song": "Berzerk",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 4,
+     "song": "All Me",
+     "artist": "Drake Featuring 2 Chainz & Big Sean"
+    },
+    {
+     "rank": 5,
+     "song": "Crooked Smile",
+     "artist": "J. Cole Featuring TLC"
+    },
+    {
+     "rank": 6,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 7,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 8,
+     "song": "Beware",
+     "artist": "Big Sean Featuring Lil Wayne & Jhene Aiko"
+    },
+    {
+     "rank": 9,
+     "song": "The Language",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Gas Pedal",
+     "artist": "Sage The Gemini Featuring IamSu"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,221 @@
      "rank": 10,
      "song": "Same Love",
      "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20131018082241/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Advanced Falconry",
+     "artist": "Mutual Benefit"
+    },
+    {
+     "rank": 2,
+     "song": "Love Is Lost (Hello Steve Reich Mix by James Murphy)",
+     "artist": "David Bowie"
+    },
+    {
+     "rank": 3,
+     "song": "Dope Song",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Blow It South",
+     "artist": "White Lung"
+    },
+    {
+     "rank": 5,
+     "song": "Eden",
+     "artist": "Ben Khan"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131016004555/http://www.billboard.com/charts/country-songs",
+   "captured": "2013-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "That's My Kind Of Night",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 2,
+     "song": "It Goes Like This",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 3,
+     "song": "Redneck Crazy",
+     "artist": "Tyler Farr"
+    },
+    {
+     "rank": 4,
+     "song": "Night Train",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 5,
+     "song": "Hey Girl",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 6,
+     "song": "Mine Would Be You",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 7,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 8,
+     "song": "Aw Naw",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 9,
+     "song": "Southern Girl",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 10,
+     "song": "Round Here",
+     "artist": "Florida Georgia Line"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131005044040/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-10-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 2,
+     "song": "Applause",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 3,
+     "song": "Summertime Sadness",
+     "artist": "Lana Del Rey & Cedric Gervais"
+    },
+    {
+     "rank": 4,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 5,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 6,
+     "song": "Work B**ch!",
+     "artist": "Britney Spears"
+    },
+    {
+     "rank": 7,
+     "song": "I Need Your Love",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    },
+    {
+     "rank": 8,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 9,
+     "song": "Stay The Night",
+     "artist": "Zedd Featuring Hayley Williams"
+    },
+    {
+     "rank": 10,
+     "song": "Animals",
+     "artist": "Martin Garrix"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131005033343/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2013-10-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Out Of My League",
+     "artist": "Fitz And The Tantrums"
+    },
+    {
+     "rank": 2,
+     "song": "Royals",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 3,
+     "song": "Pompeii",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 4,
+     "song": "Ways To Go",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 5,
+     "song": "Demons",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 6,
+     "song": "Come A Little Closer",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 7,
+     "song": "Safe And Sound",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 8,
+     "song": "Elephant",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 9,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 10,
+     "song": "Supersoaker",
+     "artist": "Kings Of Leon"
     }
    ]
   }

@@ -1,0 +1,951 @@
+{
+ "month": "2017-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171130000330/https://www.hotnewhiphop.com/top100/",
+   "captured": "2017-11-30",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Codeine Dreaming",
+     "artist": "Kodak Black Feat. Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "The Oracle (Cam'Ron Diss)",
+     "artist": "Mase"
+    },
+    {
+     "rank": 3,
+     "song": "Birmingham",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 4,
+     "song": "Dinner Time (Mase Diss)",
+     "artist": "Cam'ron"
+    },
+    {
+     "rank": 5,
+     "song": "Come Through And Chill",
+     "artist": "Miguel Feat. J. Cole"
+    },
+    {
+     "rank": 6,
+     "song": "Checc",
+     "artist": "Dave East Feat. Offset"
+    },
+    {
+     "rank": 7,
+     "song": "201519971800",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 8,
+     "song": "Yo Pi'erre!",
+     "artist": "Pi'erre Bourne Feat. Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Ill Mind Of Hopsin 9",
+     "artist": "Hopsin"
+    },
+    {
+     "rank": 10,
+     "song": "Bentley Truck",
+     "artist": "Dave East Feat. Chris Brown"
+    },
+    {
+     "rank": 11,
+     "song": "Balance (Prod. By Nineteen85)",
+     "artist": "Roy Woods Feat. dvsn"
+    },
+    {
+     "rank": 12,
+     "song": "Still Think Im Nothing",
+     "artist": "50 Cent Feat. Jeremih"
+    },
+    {
+     "rank": 13,
+     "song": "Soul Food (Prod. By C-Sick)",
+     "artist": "Fabolous & Jadakiss"
+    },
+    {
+     "rank": 14,
+     "song": "Theme Music",
+     "artist": "Fabolous & Jadakiss Feat. Swizz Beatz"
+    },
+    {
+     "rank": 15,
+     "song": "Summer In December",
+     "artist": "G-Eazy"
+    },
+    {
+     "rank": 16,
+     "song": "Red Light! (Prod. By Ronny J)",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 17,
+     "song": "Don't Try Me",
+     "artist": "Dave East Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 18,
+     "song": "Blueprint",
+     "artist": "Nipsey Hussle & Bino Rideaux Feat. Dave East"
+    },
+    {
+     "rank": 19,
+     "song": "Brand New Glizzy",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 20,
+     "song": "The Weekend (Remix)",
+     "artist": "Maino"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171115210035/https://hypem.com/popular",
+   "captured": "2017-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "This Is Not A Love Song",
+     "artist": "Bülow"
+    },
+    {
+     "rank": 2,
+     "song": "Stranded feat. Broods, Reggie Watts & Saro",
+     "artist": "Flight Facilities"
+    },
+    {
+     "rank": 3,
+     "song": "Tokyo",
+     "artist": "Annaland"
+    },
+    {
+     "rank": 4,
+     "song": "Around You OC & Verde Remix",
+     "artist": "Eli & Fur"
+    },
+    {
+     "rank": 5,
+     "song": "Toluca Lake",
+     "artist": "Tep No"
+    },
+    {
+     "rank": 6,
+     "song": "O CREWZINHO SANGO MIX",
+     "artist": "GOLDLINK"
+    },
+    {
+     "rank": 7,
+     "song": "Settle",
+     "artist": "Haulm"
+    },
+    {
+     "rank": 8,
+     "song": "Love Liike This (feat. Essie)",
+     "artist": "WITHOUT"
+    },
+    {
+     "rank": 9,
+     "song": "Ride or Die",
+     "artist": "Evalyn"
+    },
+    {
+     "rank": 10,
+     "song": "Intentions feat. Twin Shadow",
+     "artist": "Rainsford"
+    },
+    {
+     "rank": 11,
+     "song": "Long Way",
+     "artist": "LeyeT"
+    },
+    {
+     "rank": 12,
+     "song": "Reunion",
+     "artist": "Pretty Lights"
+    },
+    {
+     "rank": 13,
+     "song": "Silver Lining",
+     "artist": "Mt. Joy"
+    },
+    {
+     "rank": 14,
+     "song": "Circles On Circles",
+     "artist": "Bitchin Bajas"
+    },
+    {
+     "rank": 15,
+     "song": "Work It Out",
+     "artist": "RYD"
+    },
+    {
+     "rank": 16,
+     "song": "Strangers",
+     "artist": "Sigrid"
+    },
+    {
+     "rank": 17,
+     "song": "Portrait with Shadow",
+     "artist": "Robert Haigh"
+    },
+    {
+     "rank": 18,
+     "song": "At Night (The Cure Cover)",
+     "artist": "Frankie Rose"
+    },
+    {
+     "rank": 19,
+     "song": "The Magnificent Moon",
+     "artist": "Mildlife"
+    },
+    {
+     "rank": 20,
+     "song": "Slide (Bet)",
+     "artist": "Kamaiyah"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171114210626/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2017-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 2,
+     "song": "Bodak Yellow (Money Moves)",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 3,
+     "song": "1-800-273-8255",
+     "artist": "Logic Featuring Alessia Cara & Khalid"
+    },
+    {
+     "rank": 4,
+     "song": "Gucci Gang",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 5,
+     "song": "No Limit",
+     "artist": "G-Eazy Featuring A$AP Rocky & Cardi B"
+    },
+    {
+     "rank": 6,
+     "song": "I Get The Bag",
+     "artist": "Gucci Mane Featuring Migos"
+    },
+    {
+     "rank": 7,
+     "song": "Bank Account",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 9,
+     "song": "Rake It Up",
+     "artist": "Yo Gotti Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "MotorSport",
+     "artist": "Migos, Nicki Minaj & Cardi B"
+    },
+    {
+     "rank": 11,
+     "song": "I Fall Apart",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 12,
+     "song": "The Way Life Goes",
+     "artist": "Lil Uzi Vert Featuring Oh Wonder"
+    },
+    {
+     "rank": 13,
+     "song": "Ghostface Killers",
+     "artist": "21 Savage, Offset & Metro Boomin Featuring Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Pills And Automobiles",
+     "artist": "Chris Brown Featuring Yo Gotti, A Boogie Wit da Hoodie & Kodak Black"
+    },
+    {
+     "rank": 15,
+     "song": "Ric Flair Drip",
+     "artist": "Offset & Metro Boomin"
+    },
+    {
+     "rank": 16,
+     "song": "Crew",
+     "artist": "GoldLink Featuring Brent Faiyaz & Shy Glizzy"
+    },
+    {
+     "rank": 17,
+     "song": "Roll In Peace",
+     "artist": "Kodak Black Featuring XXXTENTACION"
+    },
+    {
+     "rank": 18,
+     "song": "Butterfly Effect",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 19,
+     "song": "Plain Jane",
+     "artist": "A$AP Ferg"
+    },
+    {
+     "rank": 20,
+     "song": "Let You Down",
+     "artist": "NF"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171114210621/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2017-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 2,
+     "song": "Bodak Yellow (Money Moves)",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 3,
+     "song": "1-800-273-8255",
+     "artist": "Logic Featuring Alessia Cara & Khalid"
+    },
+    {
+     "rank": 4,
+     "song": "Gucci Gang",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 5,
+     "song": "No Limit",
+     "artist": "G-Eazy Featuring A$AP Rocky & Cardi B"
+    },
+    {
+     "rank": 6,
+     "song": "I Get The Bag",
+     "artist": "Gucci Mane Featuring Migos"
+    },
+    {
+     "rank": 7,
+     "song": "Bank Account",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 9,
+     "song": "Rake It Up",
+     "artist": "Yo Gotti Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "MotorSport",
+     "artist": "Migos, Nicki Minaj & Cardi B"
+    },
+    {
+     "rank": 11,
+     "song": "Young Dumb & Broke",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 12,
+     "song": "I Fall Apart",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 13,
+     "song": "The Way Life Goes",
+     "artist": "Lil Uzi Vert Featuring Oh Wonder"
+    },
+    {
+     "rank": 14,
+     "song": "Ghostface Killers",
+     "artist": "21 Savage, Offset & Metro Boomin Featuring Travis Scott"
+    },
+    {
+     "rank": 15,
+     "song": "Do Re Mi",
+     "artist": "Blackbear"
+    },
+    {
+     "rank": 16,
+     "song": "The Weekend",
+     "artist": "SZA"
+    },
+    {
+     "rank": 17,
+     "song": "Pills And Automobiles",
+     "artist": "Chris Brown Featuring Yo Gotti, A Boogie Wit da Hoodie & Kodak Black"
+    },
+    {
+     "rank": 18,
+     "song": "Wild Thoughts",
+     "artist": "DJ Khaled Featuring Rihanna & Bryson Tiller"
+    },
+    {
+     "rank": 19,
+     "song": "Ric Flair Drip",
+     "artist": "Offset & Metro Boomin"
+    },
+    {
+     "rank": 20,
+     "song": "Crew",
+     "artist": "GoldLink Featuring Brent Faiyaz & Shy Glizzy"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20171115210305/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Intrepid",
+     "artist": "Pinegrove"
+    },
+    {
+     "rank": 2,
+     "song": "Still Serving",
+     "artist": "21 Savage, Offset & Metro Boomin"
+    },
+    {
+     "rank": 3,
+     "song": "IDK About You",
+     "artist": "Fever Ray"
+    },
+    {
+     "rank": 4,
+     "song": "The One to Wait",
+     "artist": "CCFX"
+    },
+    {
+     "rank": 5,
+     "song": "Crossfire/So Into You",
+     "artist": "Nai Palm"
+    },
+    {
+     "rank": 6,
+     "song": "Only Once Away My Son",
+     "artist": "Brian Eno & Kevin Shields"
+    },
+    {
+     "rank": 7,
+     "song": "808 State of Mind [ft. Shaun J. Wright & Alinka]",
+     "artist": "Honey Dijon"
+    },
+    {
+     "rank": 8,
+     "song": "Turn Out the Lights",
+     "artist": "Julien Baker"
+    },
+    {
+     "rank": 9,
+     "song": "Country",
+     "artist": "Porches"
+    },
+    {
+     "rank": 10,
+     "song": "Drink I’m Sippin On",
+     "artist": "Yaeji"
+    },
+    {
+     "rank": 11,
+     "song": "Mi Gente [ft. Beyoncé] (Remix)",
+     "artist": "J Balvin & Willy William"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171114210601/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2017-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "When It Rains It Pours",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 2,
+     "song": "What Ifs",
+     "artist": "Kane Brown Featuring Lauren Alaina"
+    },
+    {
+     "rank": 3,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 4,
+     "song": "Greatest Love Story",
+     "artist": "LANCO"
+    },
+    {
+     "rank": 5,
+     "song": "Unforgettable",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 6,
+     "song": "I'll Name The Dogs",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 7,
+     "song": "Every Little Thing",
+     "artist": "Carly Pearce"
+    },
+    {
+     "rank": 8,
+     "song": "Light It Up",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 9,
+     "song": "Small Town Boy",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 10,
+     "song": "Like I Loved You",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 11,
+     "song": "Losing Sleep",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 12,
+     "song": "Fix A Drink",
+     "artist": "Chris Janson"
+    },
+    {
+     "rank": 13,
+     "song": "Yours",
+     "artist": "Russell Dickerson"
+    },
+    {
+     "rank": 14,
+     "song": "I Could Use A Love Song",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 15,
+     "song": "Round Here Buzz",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 16,
+     "song": "Ask Me How I Know",
+     "artist": "Garth Brooks"
+    },
+    {
+     "rank": 17,
+     "song": "Smooth",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 18,
+     "song": "Broken Halos",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 19,
+     "song": "You Broke Up With Me",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 20,
+     "song": "All On Me",
+     "artist": "Devin Dawson"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171115044106/https://www.beatport.com/top-100",
+   "captured": "2017-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Drop It",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 2,
+     "song": "Love Stream",
+     "artist": "Mat.Joe"
+    },
+    {
+     "rank": 3,
+     "song": "Cola (Mousse T.'s Glitterbox Mix)",
+     "artist": "CamelPhat & Elderbrook"
+    },
+    {
+     "rank": 4,
+     "song": "Rock & Roll",
+     "artist": "Dennis Cruz"
+    },
+    {
+     "rank": 5,
+     "song": "Lovelee Dae",
+     "artist": "Blaze & Amine Edge & DANCE"
+    },
+    {
+     "rank": 6,
+     "song": "Hope",
+     "artist": "Matthias Meyer, Ryan Davis & Matthias Meyer & Ryan Davis"
+    },
+    {
+     "rank": 7,
+     "song": "Theme From S'Express (Detlef Remix)",
+     "artist": "S'Express"
+    },
+    {
+     "rank": 8,
+     "song": "Tweezer",
+     "artist": "Aitor Ronda"
+    },
+    {
+     "rank": 9,
+     "song": "Footsteps feat. Amy Douglas",
+     "artist": "Amy Douglas & Latmun"
+    },
+    {
+     "rank": 10,
+     "song": "Cola",
+     "artist": "CamelPhat & Elderbrook"
+    },
+    {
+     "rank": 11,
+     "song": "Live Again",
+     "artist": "Danny Tenaglia & Layton Giordani"
+    },
+    {
+     "rank": 12,
+     "song": "Magic Stick",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 13,
+     "song": "Mood Organs",
+     "artist": "Musumeci"
+    },
+    {
+     "rank": 14,
+     "song": "Sirens feat. Mizbee",
+     "artist": "Mark Jenkyns & Mizbee"
+    },
+    {
+     "rank": 15,
+     "song": "Shake Your Body (Club Mix)",
+     "artist": "Block & Crown"
+    },
+    {
+     "rank": 16,
+     "song": "One More Day (Extended Mix)",
+     "artist": "Aevion & Mr. Belt & Wezol"
+    },
+    {
+     "rank": 17,
+     "song": "A Star Called Akasha (Super Flu's Fragrance Of Moon Mix)",
+     "artist": "Oliver Koletzki"
+    },
+    {
+     "rank": 18,
+     "song": "House Dawgs",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 19,
+     "song": "Northern Soul feat. Richard Bedford (Extended Mix)",
+     "artist": "Above & Beyond & Richard Bedford"
+    },
+    {
+     "rank": 20,
+     "song": "Loud",
+     "artist": "Eats Everything"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171114210606/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2017-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 2,
+     "song": "Silence",
+     "artist": "Marshmello Featuring Khalid"
+    },
+    {
+     "rank": 3,
+     "song": "Wolves",
+     "artist": "Selena Gomez X Marshmello"
+    },
+    {
+     "rank": 4,
+     "song": "Let Me Go",
+     "artist": "Hailee Steinfeld & Alesso Featuring Florida Georgia Line & Watt"
+    },
+    {
+     "rank": 5,
+     "song": "Stay",
+     "artist": "Zedd & Alessia Cara"
+    },
+    {
+     "rank": 6,
+     "song": "No Promises",
+     "artist": "Cheat Codes Featuring Demi Lovato"
+    },
+    {
+     "rank": 7,
+     "song": "It Ain't Me",
+     "artist": "Kygo x Selena Gomez"
+    },
+    {
+     "rank": 8,
+     "song": "Faking It",
+     "artist": "Calvin Harris Featuring Kehlani & Lil Yachty"
+    },
+    {
+     "rank": 9,
+     "song": "Feels",
+     "artist": "Calvin Harris Featuring Pharrell Williams, Katy Perry & Big Sean"
+    },
+    {
+     "rank": 10,
+     "song": "I Miss You",
+     "artist": "Clean Bandit Featuring Julia Michaels"
+    },
+    {
+     "rank": 11,
+     "song": "Feels Great",
+     "artist": "Cheat Codes Featuring Fetty Wap & CVBZ"
+    },
+    {
+     "rank": 12,
+     "song": "Stargazing",
+     "artist": "Kygo Featuring Justin Jesso"
+    },
+    {
+     "rank": 13,
+     "song": "Dirty Sexy Money",
+     "artist": "David Guetta & Afrojack Featuring Charli XCX And French Montana"
+    },
+    {
+     "rank": 14,
+     "song": "Lonely Together",
+     "artist": "Avicii Featuring Rita Ora"
+    },
+    {
+     "rank": 15,
+     "song": "A Different Way",
+     "artist": "DJ Snake Featuring Lauv"
+    },
+    {
+     "rank": 16,
+     "song": "Stranger Things",
+     "artist": "Kygo Featuring OneRepublic"
+    },
+    {
+     "rank": 17,
+     "song": "Swish Swish",
+     "artist": "Katy Perry Featuring Nicki Minaj"
+    },
+    {
+     "rank": 18,
+     "song": "Best Friend",
+     "artist": "Sofi Tukker Featuring NERVO, The Knocks & Alisa Ueno"
+    },
+    {
+     "rank": 19,
+     "song": "2U",
+     "artist": "David Guetta Featuring Justin Bieber"
+    },
+    {
+     "rank": 20,
+     "song": "More Than You Know",
+     "artist": "Axwell & Ingrosso"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171114184235/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2017-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Feel It Still",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 2,
+     "song": "Thunder",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Walk On Water",
+     "artist": "Thirty Seconds To Mars"
+    },
+    {
+     "rank": 4,
+     "song": "Lay It On Me",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 5,
+     "song": "Up All Night",
+     "artist": "Beck"
+    },
+    {
+     "rank": 6,
+     "song": "Angela",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 7,
+     "song": "Whole Wide World",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 8,
+     "song": "The Sky Is A Neighborhood",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 9,
+     "song": "Wish I Knew You",
+     "artist": "The Revivalists"
+    },
+    {
+     "rank": 10,
+     "song": "One Foot",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 11,
+     "song": "Believer",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 12,
+     "song": "The Man",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 13,
+     "song": "No Roots",
+     "artist": "Alice Merton"
+    },
+    {
+     "rank": 14,
+     "song": "Vacation",
+     "artist": "The Dirty Heads"
+    },
+    {
+     "rank": 15,
+     "song": "So Tied Up",
+     "artist": "Cold War Kids Featuring Bishop Briggs"
+    },
+    {
+     "rank": 16,
+     "song": "Passion",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 17,
+     "song": "Sober Up",
+     "artist": "AJR Featuring Rivers Cuomo"
+    },
+    {
+     "rank": 18,
+     "song": "Sit Next To Me",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 19,
+     "song": "One Night Only",
+     "artist": "The Struts"
+    },
+    {
+     "rank": 20,
+     "song": "Legends",
+     "artist": "Sleeping With Sirens"
+    }
+   ]
+  }
+ ]
+}

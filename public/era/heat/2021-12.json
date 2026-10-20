@@ -1,0 +1,1171 @@
+{
+ "month": "2021-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211215152903/https://www.hotnewhiphop.com/top100/",
+   "captured": "2021-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Talking To My Scale",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 2,
+     "song": "Letter To Ye",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 3,
+     "song": "We Set The Trends",
+     "artist": "Jim Jones Feat. Migos"
+    },
+    {
+     "rank": 4,
+     "song": "Shine",
+     "artist": "Quando Rondo"
+    },
+    {
+     "rank": 5,
+     "song": "Starve",
+     "artist": "Peewee Longway"
+    },
+    {
+     "rank": 6,
+     "song": "Rapper Estates (Prod. By Vinylz & Boi-1da)",
+     "artist": "Rick Ross Feat. Benny The Butcher"
+    },
+    {
+     "rank": 7,
+     "song": "Top Of The World (Prod. By Harry Fraud)",
+     "artist": "Russ Feat. Jay Electronica"
+    },
+    {
+     "rank": 8,
+     "song": "Black Ball",
+     "artist": "NBA Youngboy"
+    },
+    {
+     "rank": 9,
+     "song": "TWINNEM (Holiday Version)",
+     "artist": "Coi Leray"
+    },
+    {
+     "rank": 10,
+     "song": "Warm Words In A Cold World",
+     "artist": "Rick Ross Feat. Future"
+    },
+    {
+     "rank": 11,
+     "song": "American Horror Story",
+     "artist": "EarthGang"
+    },
+    {
+     "rank": 12,
+     "song": "The Pulitzer (Prod. By Timbaland)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 13,
+     "song": "Burn (Prod. By Metro Boomin)",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 14,
+     "song": "I Don't Wanna Go Outside",
+     "artist": "C-Murder"
+    },
+    {
+     "rank": 15,
+     "song": "Mortgage Free",
+     "artist": "DJ Premier Feat. 2 Chainz"
+    },
+    {
+     "rank": 16,
+     "song": "Plentiful",
+     "artist": "Alicia Keys Feat. Pusha T"
+    },
+    {
+     "rank": 17,
+     "song": "Russ LA Leakers Freestyle #125",
+     "artist": "Russ"
+    },
+    {
+     "rank": 18,
+     "song": "Stuck With Me",
+     "artist": "YoungBoy Never Broke Again & Birdman"
+    },
+    {
+     "rank": 19,
+     "song": "Feline",
+     "artist": "Juice WRLD Feat. Polo G"
+    },
+    {
+     "rank": 20,
+     "song": "How Ya Kno",
+     "artist": "YoungBoy Never Broke Again"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211214225644/https://hypem.com/popular",
+   "captured": "2021-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heartbreaks + Setbacks +1 remix",
+     "artist": "Thundercat"
+    },
+    {
+     "rank": 2,
+     "song": "Wet Dream",
+     "artist": "Wet Leg"
+    },
+    {
+     "rank": 3,
+     "song": "Be Sweet",
+     "artist": "Japanese Breakfast"
+    },
+    {
+     "rank": 4,
+     "song": "Cutco",
+     "artist": "Speedy Ortiz"
+    },
+    {
+     "rank": 5,
+     "song": "Runners in the Night",
+     "artist": "The Rural Alberta Advantage"
+    },
+    {
+     "rank": 6,
+     "song": "Headphones",
+     "artist": "La Poré"
+    },
+    {
+     "rank": 7,
+     "song": "Always Together With You",
+     "artist": "Spiritualized"
+    },
+    {
+     "rank": 8,
+     "song": "Power of Mind, feat. Raw Poetic",
+     "artist": "Damu The Fudgemunk"
+    },
+    {
+     "rank": 9,
+     "song": "Postcard",
+     "artist": "Small Black"
+    },
+    {
+     "rank": 10,
+     "song": "Dimension M2",
+     "artist": "Stereolab"
+    },
+    {
+     "rank": 11,
+     "song": "Sin Control (Instrumental) (feat. Molly Lewis)",
+     "artist": "Trish Toledo"
+    },
+    {
+     "rank": 12,
+     "song": "I'm Still The Same",
+     "artist": "Henry Housman"
+    },
+    {
+     "rank": 13,
+     "song": "I'm Drunk Again This Christmas",
+     "artist": "Zach Schmidt"
+    },
+    {
+     "rank": 14,
+     "song": "Flaw In The Design",
+     "artist": "Home Front"
+    },
+    {
+     "rank": 15,
+     "song": "Ego",
+     "artist": "Moaning"
+    },
+    {
+     "rank": 16,
+     "song": "Birds Tricked into the Trees",
+     "artist": "DAMIEN JURADO"
+    },
+    {
+     "rank": 17,
+     "song": "Mohabbat",
+     "artist": "Arooj Aftab"
+    },
+    {
+     "rank": 18,
+     "song": "Skater's World with Eden Samara",
+     "artist": "Parris"
+    },
+    {
+     "rank": 19,
+     "song": "Terrence Parker - Love's Got Me High Marc Romboy's Systematic Soul Mix",
+     "artist": "Marc Romboy"
+    },
+    {
+     "rank": 20,
+     "song": "Chemz",
+     "artist": "Burial"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211214010720/https://www.billboard.com/charts/rap-song/",
+   "captured": "2021-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 2,
+     "song": "Way 2 Sexy",
+     "artist": "Drake Featuring Future & Young Thug"
+    },
+    {
+     "rank": 3,
+     "song": "Knife Talk",
+     "artist": "Drake Featuring 21 Savage & Project Pat"
+    },
+    {
+     "rank": 4,
+     "song": "Girls Want Girls",
+     "artist": "Drake Featuring Lil Baby"
+    },
+    {
+     "rank": 5,
+     "song": "Who Want Smoke??",
+     "artist": "Nardo Wick Featuring G Herbo, Lil Durk & 21 Savage"
+    },
+    {
+     "rank": 6,
+     "song": "Super Gremlin",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 7,
+     "song": "By Your Side",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 8,
+     "song": "Chosen",
+     "artist": "Blxst & Tyga Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 9,
+     "song": "Family Ties",
+     "artist": "Baby Keem & Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "Big Energy",
+     "artist": "Latto"
+    },
+    {
+     "rank": 11,
+     "song": "Sharing Locations",
+     "artist": "Meek Mill Featuring Lil Baby & Lil Durk"
+    },
+    {
+     "rank": 12,
+     "song": "Already Dead",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 13,
+     "song": "Bubbly",
+     "artist": "Young Thug With Drake & Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Bad Man (Smooth Criminal)",
+     "artist": "Polo G"
+    },
+    {
+     "rank": 15,
+     "song": "Fair Trade",
+     "artist": "Drake Featuring Travis Scott"
+    },
+    {
+     "rank": 16,
+     "song": "Poke It Out",
+     "artist": "Wale Featuring J. Cole"
+    },
+    {
+     "rank": 17,
+     "song": "Scorpio",
+     "artist": "Moneybagg Yo"
+    },
+    {
+     "rank": 18,
+     "song": "Baddest",
+     "artist": "Yung Bleu, Chris Brown & 2 Chainz"
+    },
+    {
+     "rank": 19,
+     "song": "Maybach",
+     "artist": "42 Dugg Featuring Future"
+    },
+    {
+     "rank": 20,
+     "song": "Too Easy",
+     "artist": "Gunna & Future"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211214010713/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2021-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 2,
+     "song": "Smokin Out The Window",
+     "artist": "Silk Sonic (Bruno Mars & Anderson .Paak)"
+    },
+    {
+     "rank": 3,
+     "song": "Essence",
+     "artist": "Wizkid Featuring Justin Bieber & Tems"
+    },
+    {
+     "rank": 4,
+     "song": "You Right",
+     "artist": "Doja Cat & The Weeknd"
+    },
+    {
+     "rank": 5,
+     "song": "Way 2 Sexy",
+     "artist": "Drake Featuring Future & Young Thug"
+    },
+    {
+     "rank": 6,
+     "song": "Knife Talk",
+     "artist": "Drake Featuring 21 Savage & Project Pat"
+    },
+    {
+     "rank": 7,
+     "song": "Girls Want Girls",
+     "artist": "Drake Featuring Lil Baby"
+    },
+    {
+     "rank": 8,
+     "song": "Who Want Smoke??",
+     "artist": "Nardo Wick Featuring G Herbo, Lil Durk & 21 Savage"
+    },
+    {
+     "rank": 9,
+     "song": "Super Gremlin",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 10,
+     "song": "By Your Side",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 11,
+     "song": "Chosen",
+     "artist": "Blxst & Tyga Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 12,
+     "song": "Have Mercy",
+     "artist": "Chloe"
+    },
+    {
+     "rank": 13,
+     "song": "Wild Side",
+     "artist": "Normani Featuring Cardi B"
+    },
+    {
+     "rank": 14,
+     "song": "Family Ties",
+     "artist": "Baby Keem & Kendrick Lamar"
+    },
+    {
+     "rank": 15,
+     "song": "Gyalis",
+     "artist": "Capella Grey"
+    },
+    {
+     "rank": 16,
+     "song": "Big Energy",
+     "artist": "Latto"
+    },
+    {
+     "rank": 17,
+     "song": "Sharing Locations",
+     "artist": "Meek Mill Featuring Lil Baby & Lil Durk"
+    },
+    {
+     "rank": 18,
+     "song": "No Love",
+     "artist": "Summer Walker & SZA"
+    },
+    {
+     "rank": 19,
+     "song": "Already Dead",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 20,
+     "song": "Bubbly",
+     "artist": "Young Thug With Drake & Travis Scott"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20211213231706/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2021-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "To Be Loved",
+     "artist": "Adele"
+    },
+    {
+     "rank": 2,
+     "song": "The Only Heartbreaker",
+     "artist": "Mitski"
+    },
+    {
+     "rank": 3,
+     "song": "Embryo",
+     "artist": "Jlin"
+    },
+    {
+     "rank": 4,
+     "song": "I Don’t Live Here Anymore",
+     "artist": "The War on Drugs"
+    },
+    {
+     "rank": 5,
+     "song": "Valentine",
+     "artist": "Snail Mail"
+    },
+    {
+     "rank": 6,
+     "song": "Quotations",
+     "artist": "Water From Your Eyes"
+    },
+    {
+     "rank": 7,
+     "song": "Little Things",
+     "artist": "Big Thief"
+    },
+    {
+     "rank": 8,
+     "song": "Hold U",
+     "artist": "Indigo De Souza"
+    },
+    {
+     "rank": 9,
+     "song": "Days Like These",
+     "artist": "Low"
+    },
+    {
+     "rank": 10,
+     "song": "Thot Shit",
+     "artist": "Megan Thee Stallion"
+    },
+    {
+     "rank": 11,
+     "song": "Like I Used To",
+     "artist": "Sharon Van Etten & Angel Olsen"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211215024159/https://www.billboard.com/charts/country-songs/",
+   "captured": "2021-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 2,
+     "song": "All Too Well (Taylor's Version)",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 3,
+     "song": "Thinking 'Bout You",
+     "artist": "Dustin Lynch Featuring Lauren Alaina Or MacKenzie Porter"
+    },
+    {
+     "rank": 4,
+     "song": "If I Didn't Love You",
+     "artist": "Jason Aldean & Carrie Underwood"
+    },
+    {
+     "rank": 5,
+     "song": "Buy Dirt",
+     "artist": "Jordan Davis Featuring Luke Bryan"
+    },
+    {
+     "rank": 6,
+     "song": "Cold As You",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "You Should Probably Leave",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 8,
+     "song": "Sand In My Boots",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 9,
+     "song": "Chasing After You",
+     "artist": "Ryan Hurd With Maren Morris"
+    },
+    {
+     "rank": 10,
+     "song": "Whiskey And Rain",
+     "artist": "Michael Ray"
+    },
+    {
+     "rank": 11,
+     "song": "One Mississippi",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 12,
+     "song": "Same Boat",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 13,
+     "song": "Pick Out A Christmas Tree",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 14,
+     "song": "'Til You Can't",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 15,
+     "song": "Tequila Little Time",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 16,
+     "song": "Freedom Was A Highway",
+     "artist": "Jimmie Allen & Brad Paisley"
+    },
+    {
+     "rank": 17,
+     "song": "Half Of My Hometown",
+     "artist": "Kelsea Ballerini Featuring Kenny Chesney"
+    },
+    {
+     "rank": 18,
+     "song": "Just About Over You",
+     "artist": "Priscilla Block"
+    },
+    {
+     "rank": 19,
+     "song": "Heart On Fire",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 20,
+     "song": "Drunk (And I Don't Wanna Go Home)",
+     "artist": "Elle King & Miranda Lambert"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211206231226/https://www.beatport.com/top-100",
+   "captured": "2021-12-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Do It To It (Extended Mix)",
+     "artist": "ACRAZE"
+    },
+    {
+     "rank": 2,
+     "song": "My Humps",
+     "artist": "Lee Foss & Joshwa"
+    },
+    {
+     "rank": 3,
+     "song": "Cold Heart (Claptone Extended Mix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 4,
+     "song": "You Give Me A Feeling",
+     "artist": "Vintage Culture & James Hype"
+    },
+    {
+     "rank": 5,
+     "song": "Passion",
+     "artist": "Wade"
+    },
+    {
+     "rank": 6,
+     "song": "Don't You Want Me (Purple Disco Machine Extended Mix)",
+     "artist": "The Human League"
+    },
+    {
+     "rank": 7,
+     "song": "California Dreamin' (feat. High Jinx) (Extended Mix)",
+     "artist": "Chris Lorenzo"
+    },
+    {
+     "rank": 8,
+     "song": "Give It To Me (Full Vocal Mix - Extended)",
+     "artist": "Matt Sassari"
+    },
+    {
+     "rank": 9,
+     "song": "Horizon",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 10,
+     "song": "Human (feat. Echoes) (Extended)",
+     "artist": "John Summit & Echoes (UK)"
+    },
+    {
+     "rank": 11,
+     "song": "A Drug From God (Extended Mix)",
+     "artist": "Chris Lake & NPC"
+    },
+    {
+     "rank": 12,
+     "song": "Wait A Minute (Extended Mix)",
+     "artist": "Biscits"
+    },
+    {
+     "rank": 13,
+     "song": "My City's On Fire (Club Edit)",
+     "artist": "Jimi Jules"
+    },
+    {
+     "rank": 14,
+     "song": "Fire (Extended Mix)",
+     "artist": "Mark Broom, Riva Starr & Star B"
+    },
+    {
+     "rank": 15,
+     "song": "Duro",
+     "artist": "CID"
+    },
+    {
+     "rank": 16,
+     "song": "Lauren (Extended)",
+     "artist": "Oden & Fatzo"
+    },
+    {
+     "rank": 17,
+     "song": "The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)",
+     "artist": "Age Of Love"
+    },
+    {
+     "rank": 18,
+     "song": "Run Again",
+     "artist": "Space Motion"
+    },
+    {
+     "rank": 19,
+     "song": "California Dreamin' (feat. High Jinx) (Vintage Culture Extended Remix)",
+     "artist": "Chris Lorenzo"
+    },
+    {
+     "rank": 20,
+     "song": "Dancing (Wh0 Extended Festival Remix)",
+     "artist": "Skytech, Neitan & DJ Kuba"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211213200037/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2021-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 2,
+     "song": "Pepas",
+     "artist": "Farruko"
+    },
+    {
+     "rank": 3,
+     "song": "Moth To A Flame",
+     "artist": "Swedish House Mafia & The Weeknd"
+    },
+    {
+     "rank": 4,
+     "song": "Do It To It",
+     "artist": "Acraze Featuring Cherish"
+    },
+    {
+     "rank": 5,
+     "song": "The Motto",
+     "artist": "Tiesto & Ava Max"
+    },
+    {
+     "rank": 6,
+     "song": "Don't Be Shy",
+     "artist": "Tiesto & Karol G"
+    },
+    {
+     "rank": 7,
+     "song": "In Da Getto",
+     "artist": "J Balvin & Skrillex"
+    },
+    {
+     "rank": 8,
+     "song": "El Incomprendido",
+     "artist": "Farruko, Victor Cardenas & DJ Adoni"
+    },
+    {
+     "rank": 9,
+     "song": "I Feel Good",
+     "artist": "Pitbull Featuring Anthony Watts & DJWS"
+    },
+    {
+     "rank": 10,
+     "song": "Where Are You Now",
+     "artist": "Lost Frequencies & Calum Scott"
+    },
+    {
+     "rank": 11,
+     "song": "Tell It To My Heart",
+     "artist": "Meduza Featuring Hozier"
+    },
+    {
+     "rank": 12,
+     "song": "Love Tonight",
+     "artist": "Shouse"
+    },
+    {
+     "rank": 13,
+     "song": "SG",
+     "artist": "DJ Snake, Ozuna, Lisa & Megan Thee Stallion"
+    },
+    {
+     "rank": 14,
+     "song": "I Can Feel It",
+     "artist": "Sickick"
+    },
+    {
+     "rank": 15,
+     "song": "Intimidated",
+     "artist": "KAYTRANADA Featuring H.E.R."
+    },
+    {
+     "rank": 16,
+     "song": "You Are My High",
+     "artist": "DJ Snake"
+    },
+    {
+     "rank": 17,
+     "song": "Out Out",
+     "artist": "Joel Corry, Jax Jones, Charli XCX & Saweetie"
+    },
+    {
+     "rank": 18,
+     "song": "Family",
+     "artist": "David Guetta Featuring Bebe Rexha, Ty Dolla $ign & A Boogie Wit da Hoodie"
+    },
+    {
+     "rank": 19,
+     "song": "Chasing Stars",
+     "artist": "Alesso, Marshmello & James Bay"
+    },
+    {
+     "rank": 20,
+     "song": "Man On The Moon",
+     "artist": "Alan Walker & Benjamin Ingrosso"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211218190720/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2021-12-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Beggin'",
+     "artist": "Maneskin"
+    },
+    {
+     "rank": 2,
+     "song": "Brightside",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 3,
+     "song": "Colorado",
+     "artist": "Milky Chance"
+    },
+    {
+     "rank": 4,
+     "song": "The Outside",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 5,
+     "song": "Taking Me Back",
+     "artist": "Jack White"
+    },
+    {
+     "rank": 6,
+     "song": "I Don't Wanna Talk (I Just Wanna Dance)",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 7,
+     "song": "Monsters",
+     "artist": "All Time Low Featuring blackbear"
+    },
+    {
+     "rank": 8,
+     "song": "Enemy",
+     "artist": "Imagine Dragons X JID"
+    },
+    {
+     "rank": 9,
+     "song": "Record Player",
+     "artist": "Daisy The Great X AJR"
+    },
+    {
+     "rank": 10,
+     "song": "What You Say",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 11,
+     "song": "Follow You",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 12,
+     "song": "Survivor",
+     "artist": "Nathaniel Rateliff & The Night Sweats"
+    },
+    {
+     "rank": 13,
+     "song": "Missing Piece",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 14,
+     "song": "Fleabag",
+     "artist": "YUNGBLUD"
+    },
+    {
+     "rank": 15,
+     "song": "Bad Dream",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 16,
+     "song": "My Universe",
+     "artist": "Coldplay x BTS"
+    },
+    {
+     "rank": 17,
+     "song": "Smile",
+     "artist": "Wolf Alice"
+    },
+    {
+     "rank": 18,
+     "song": "Monday",
+     "artist": "The Regrettes"
+    },
+    {
+     "rank": 19,
+     "song": "Time In Disguise",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 20,
+     "song": "Wake Me Up",
+     "artist": "Foals"
+    }
+   ]
+  },
+  {
+   "id": "spotify_viral",
+   "genre": "all",
+   "label": "Spotify · Viral 50 US (weekly, else daily)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211204033645/https://spotifycharts.com/viral/us/weekly/latest",
+   "captured": "2021-12-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "abcdefu",
+     "artist": "GAYLE"
+    },
+    {
+     "rank": 2,
+     "song": "Own Brand Freestyle",
+     "artist": "FelixThe1st, Dreya Mac, Finch Fetti"
+    },
+    {
+     "rank": 3,
+     "song": "30/90 (from \"tick, tick... BOOM!\" Soundtrack from the Netflix Film)",
+     "artist": "Andrew Garfield, Joshua Henry, Vanessa Hudgens, Robin de Jesus, Alexandra Shipp, MJ Rodriguez"
+    },
+    {
+     "rank": 4,
+     "song": "Come Over (Again)",
+     "artist": "Crawlers"
+    },
+    {
+     "rank": 5,
+     "song": "abcdefu - angrier",
+     "artist": "GAYLE"
+    },
+    {
+     "rank": 6,
+     "song": "Misery Meat",
+     "artist": "Sodikken"
+    },
+    {
+     "rank": 7,
+     "song": "3 BIG BALLS",
+     "artist": "DigBarGayRaps"
+    },
+    {
+     "rank": 8,
+     "song": "i won't run",
+     "artist": "Keanu Bicol"
+    },
+    {
+     "rank": 9,
+     "song": "SAD GIRLZ LUV MONEY Remix (feat. Kali Uchis and Moliy)",
+     "artist": "Amaarae"
+    },
+    {
+     "rank": 10,
+     "song": "Do It To It",
+     "artist": "ACRAZE, Cherish"
+    },
+    {
+     "rank": 11,
+     "song": "4:00A.M.",
+     "artist": "Taeko Onuki"
+    },
+    {
+     "rank": 12,
+     "song": "Chandelier",
+     "artist": "Will Paquin"
+    },
+    {
+     "rank": 13,
+     "song": "Notion",
+     "artist": "The Rare Occasions"
+    },
+    {
+     "rank": 14,
+     "song": "LOST IN PARADISE",
+     "artist": "ALI, AKLO"
+    },
+    {
+     "rank": 15,
+     "song": "Goodbye (from the series Arcane League of Legends)",
+     "artist": "Ramsey"
+    },
+    {
+     "rank": 16,
+     "song": "Cpr",
+     "artist": "cupcakKe"
+    },
+    {
+     "rank": 17,
+     "song": "Alien Blues",
+     "artist": "Vundabar"
+    },
+    {
+     "rank": 18,
+     "song": "Nothing",
+     "artist": "Bruno Major"
+    },
+    {
+     "rank": 19,
+     "song": "Я буду ебать",
+     "artist": "Moreart, IHI"
+    },
+    {
+     "rank": 20,
+     "song": "The Perfect Girl",
+     "artist": "Mareux"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20211215020255/https://kworb.net/charts/itunes/us.html",
+   "captured": "2021-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Chain (The Voice Performance)",
+     "artist": "Girl Named Tom"
+    },
+    {
+     "rank": 2,
+     "song": "abcdefu",
+     "artist": "GAYLE"
+    },
+    {
+     "rank": 3,
+     "song": "Easy On Me",
+     "artist": "Adele"
+    },
+    {
+     "rank": 4,
+     "song": "River (The Voice Performance)",
+     "artist": "Girl Named Tom"
+    },
+    {
+     "rank": 5,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 6,
+     "song": "All I Want For Christmas Is You",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 7,
+     "song": "Baby Now That I’ve Found You (The Voice Performance)",
+     "artist": "Girl Named Tom"
+    },
+    {
+     "rank": 8,
+     "song": "Dust In The Wind (The Voice Performance)",
+     "artist": "Girl Named Tom"
+    },
+    {
+     "rank": 9,
+     "song": "Rockin' Around the Christmas Tree (Single)",
+     "artist": "Brenda Lee"
+    },
+    {
+     "rank": 10,
+     "song": "The Cowboy In Me (Yellowstone Edition)",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 11,
+     "song": "Shivers",
+     "artist": "Ed Sheeran"
+    },
+    {
+     "rank": 12,
+     "song": "Over The Rainbow (The Voice Performance)",
+     "artist": "Wendy Moten"
+    },
+    {
+     "rank": 13,
+     "song": "AA",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 14,
+     "song": "I Can Feel It",
+     "artist": "Sickick"
+    },
+    {
+     "rank": 15,
+     "song": "Merry Christmas",
+     "artist": "Ed Sheeran & Elton John"
+    },
+    {
+     "rank": 16,
+     "song": "Santa's Gotta Dirty Job",
+     "artist": "Rich & Rowe"
+    },
+    {
+     "rank": 17,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 18,
+     "song": "Jingle Bell Rock",
+     "artist": "Bobby Helms"
+    },
+    {
+     "rank": 19,
+     "song": "Christmas Isn't Canceled (Just You)",
+     "artist": "Kelly Clarkson"
+    },
+    {
+     "rank": 20,
+     "song": "Santa Tell Me",
+     "artist": "Ariana Grande"
+    }
+   ]
+  }
+ ]
+}

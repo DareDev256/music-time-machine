@@ -1,0 +1,176 @@
+{
+ "month": "2009-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090414100725/http://hypem.com:80/popular",
+   "captured": "2009-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Shake Yer Dix (Tiga's Where Were You In '92 Remix)",
+     "artist": "Peaches"
+    },
+    {
+     "rank": 2,
+     "song": "Jungle Book",
+     "artist": "Major Notes"
+    },
+    {
+     "rank": 3,
+     "song": "Too cool for school (Original / Trevor Loveys Rmx / In Flagranti Rmx) [OUT NOW]",
+     "artist": "Don Diablo"
+    },
+    {
+     "rank": 4,
+     "song": "Use Somebody (Kings of Leon Cover)",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 5,
+     "song": "Take On Me (The Twelves Remix)",
+     "artist": "A-Ha"
+    },
+    {
+     "rank": 6,
+     "song": "Catbread (Original Mix)",
+     "artist": "Deadmau5"
+    },
+    {
+     "rank": 7,
+     "song": "Maybach Music (Part 2) (Feat. Kanye West, Lil' Wayne & T-Pain)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 8,
+     "song": "We Are Your Friends (Kid Legit Remix)",
+     "artist": "Justice vs. Simian Mobile Disco"
+    },
+    {
+     "rank": 9,
+     "song": "Young Hearts Spark Fire",
+     "artist": "Japandroids"
+    },
+    {
+     "rank": 10,
+     "song": "Sky Might Fall (ft. Rick Ross Remix)",
+     "artist": "KiD CuDi"
+    },
+    {
+     "rank": 11,
+     "song": "Keep The Lights On",
+     "artist": "Wave Machines"
+    },
+    {
+     "rank": 12,
+     "song": "Stronger Than Jesus",
+     "artist": "A Camp"
+    },
+    {
+     "rank": 13,
+     "song": "A Crush to Pass the Time (Don Diablo remix)",
+     "artist": "Plushgun"
+    },
+    {
+     "rank": 14,
+     "song": "Daniel (Edwin Van Cleef Remix)",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 15,
+     "song": "bump (kid legit remix)",
+     "artist": "spank rock"
+    },
+    {
+     "rank": 16,
+     "song": "Future Primitive",
+     "artist": "Papercuts"
+    },
+    {
+     "rank": 17,
+     "song": "Crystal Castles - Death (remix of White Lies)",
+     "artist": "Crystal Castles"
+    },
+    {
+     "rank": 18,
+     "song": "Love Like a Sunset",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 19,
+     "song": "Say Goodbye Hollywood",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 20,
+     "song": "The Gloaming (DJ Shadow Remix)",
+     "artist": "Radiohead & George W. Bush"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090411201402/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2009-04-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Die Slow",
+     "artist": "HEALTH"
+    },
+    {
+     "rank": 2,
+     "song": "Daniel",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 3,
+     "song": "It Gets Your Body Movin'",
+     "artist": "Suckers"
+    },
+    {
+     "rank": 4,
+     "song": "Rain On",
+     "artist": "Woods"
+    },
+    {
+     "rank": 5,
+     "song": "Is She There?",
+     "artist": "Nodzzz"
+    },
+    {
+     "rank": 6,
+     "song": "Skeletons",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 7,
+     "song": "1901",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 8,
+     "song": "Glass",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 9,
+     "song": "Young Hearts Spark Fire",
+     "artist": "Japandroids"
+    },
+    {
+     "rank": 10,
+     "song": "Wind Phoenix",
+     "artist": "Cymbals Eat Guitars"
+    }
+   ]
+  }
+ ]
+}

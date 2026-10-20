@@ -1,0 +1,621 @@
+{
+ "month": "2017-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170414131441/http://www.hotnewhiphop.com/",
+   "captured": "2017-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Loyalty",
+     "artist": "Kendrick Lamar Feat. Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Both (Remix)",
+     "artist": "Gucci Mane Feat. Drake & Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Peek A Boo",
+     "artist": "Lil Yachty Feat. Migos"
+    },
+    {
+     "rank": 4,
+     "song": "Harley",
+     "artist": "Lil Yachty"
+    },
+    {
+     "rank": 5,
+     "song": "Spice",
+     "artist": "Nef The Pharaoh Feat. Yhung To"
+    },
+    {
+     "rank": 6,
+     "song": "Kissing Strangers",
+     "artist": "DNCE Feat. Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Seize The Block",
+     "artist": "Migos"
+    },
+    {
+     "rank": 8,
+     "song": "Headlock (Prod. By Vinylz)",
+     "artist": "Cousin Stizz Feat. Offset"
+    },
+    {
+     "rank": 9,
+     "song": "New Choppa",
+     "artist": "Playboi Carti Feat. A$AP Rocky"
+    },
+    {
+     "rank": 10,
+     "song": "Black Spiderman",
+     "artist": "Logic Feat. Damian Lemar Hudson"
+    },
+    {
+     "rank": 11,
+     "song": "Trap Paris",
+     "artist": "Machine Gun Kelly Feat. Ty Dolla $ign & Quavo"
+    },
+    {
+     "rank": 12,
+     "song": "Candy Paint",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 13,
+     "song": "Pictures",
+     "artist": "$UICIDEBOY$ Feat. Maxo Kream"
+    },
+    {
+     "rank": 14,
+     "song": "Petty",
+     "artist": "Fre$h Feat. 50 Cent & 2 Chainz"
+    },
+    {
+     "rank": 15,
+     "song": "Nobody",
+     "artist": "Rotimi Feat. 50 Cent & T.I."
+    },
+    {
+     "rank": 16,
+     "song": "WYD (Prod. By Kev Rodgers & Kenif Muse)",
+     "artist": "Mir Fontane"
+    },
+    {
+     "rank": 17,
+     "song": "Good Goodbye",
+     "artist": "Linkin Park Feat. Pusha T & Stormzy"
+    },
+    {
+     "rank": 18,
+     "song": "I'm Trippin'",
+     "artist": "Future Feat. Juicy J"
+    },
+    {
+     "rank": 19,
+     "song": "Come Get Your Bitch (Prod. By Iamsu!)",
+     "artist": "Kool John Feat. Philthy Rich & Louie G The Don"
+    },
+    {
+     "rank": 20,
+     "song": "Way Back",
+     "artist": "TLC Feat. Snoop Dogg"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170415064149/http://hypem.com/popular",
+   "captured": "2017-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Call",
+     "artist": "SACRE"
+    },
+    {
+     "rank": 2,
+     "song": "Feel Good",
+     "artist": "Gryffin & Illenium"
+    },
+    {
+     "rank": 3,
+     "song": "A Violent Noise Four Tet remix",
+     "artist": "The xx"
+    },
+    {
+     "rank": 4,
+     "song": "OLYMP",
+     "artist": "Lia Lia"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Kill My Vibe Gryffin Remix",
+     "artist": "Sigrid"
+    },
+    {
+     "rank": 6,
+     "song": "Alaska +3 remixes",
+     "artist": "Maggie Rogers"
+    },
+    {
+     "rank": 7,
+     "song": "Mad Nice (feat. Black Thought & Vinny Price)",
+     "artist": "DANGERDOOM"
+    },
+    {
+     "rank": 8,
+     "song": "If You Wanted Me",
+     "artist": "Sacamano"
+    },
+    {
+     "rank": 9,
+     "song": "SWAMP",
+     "artist": "FUTURO PELO"
+    },
+    {
+     "rank": 10,
+     "song": "Wash Us Away",
+     "artist": "Paperwhite"
+    },
+    {
+     "rank": 11,
+     "song": "Love Is Mystical",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 12,
+     "song": "Night And Day",
+     "artist": "Allure"
+    },
+    {
+     "rank": 13,
+     "song": "Roads",
+     "artist": "Essex"
+    },
+    {
+     "rank": 14,
+     "song": "Bitch, Don't Kill My Vibe Emiljo A.C. Remix",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 15,
+     "song": "Too Bad (Prod. J Gramm)",
+     "artist": "IshDARR"
+    },
+    {
+     "rank": 16,
+     "song": "Gold Angel +1 remix",
+     "artist": "Minke"
+    },
+    {
+     "rank": 17,
+     "song": "Love Love Love",
+     "artist": "Moullinex"
+    },
+    {
+     "rank": 18,
+     "song": "Sweet Melodies Schier Remix",
+     "artist": "Lizzy Land"
+    },
+    {
+     "rank": 19,
+     "song": "#Grownupz",
+     "artist": "FEiN"
+    },
+    {
+     "rank": 20,
+     "song": "Summer Madness Rhythm Scholar Remix",
+     "artist": "Kool & The Gang"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170411175921/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2017-04-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 3,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 4,
+     "song": "I Feel It Coming",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 5,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 6,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 7,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 8,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 9,
+     "song": "Love On The Brain",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 10,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 11,
+     "song": "Passionfruit",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Location",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 13,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 14,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 15,
+     "song": "24K Magic",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 16,
+     "song": "Swang",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 17,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Look At Me!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 19,
+     "song": "Portland",
+     "artist": "Drake Featuring Quavo & Travis Scott"
+    },
+    {
+     "rank": 20,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170412175103/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-04-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "It Gets More Blue",
+     "artist": "Girlpool"
+    },
+    {
+     "rank": 2,
+     "song": "Desafío",
+     "artist": "Arca"
+    },
+    {
+     "rank": 3,
+     "song": "Mythological Beauty",
+     "artist": "Big Thief"
+    },
+    {
+     "rank": 4,
+     "song": "HUMBLE.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Sugar for the Pill",
+     "artist": "Slowdive"
+    },
+    {
+     "rank": 6,
+     "song": "The Heart Part 4",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 7,
+     "song": "Passionfruit",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Limerence",
+     "artist": "Yves Tumor"
+    },
+    {
+     "rank": 9,
+     "song": "Slip Away",
+     "artist": "Perfume Genius"
+    },
+    {
+     "rank": 10,
+     "song": "Get It Together [ft. Black Coffee & Jorja Smith]",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Somos Chulas (No Somos Pendejas)",
+     "artist": "Downtown Boys"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170411175901/http://www.billboard.com/charts/country-songs",
+   "captured": "2017-04-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 2,
+     "song": "The Fighter",
+     "artist": "Keith Urban Featuring Carrie Underwood"
+    },
+    {
+     "rank": 3,
+     "song": "Dirt On My Boots",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 4,
+     "song": "In Case You Didn't Know",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 5,
+     "song": "Craving You",
+     "artist": "Thomas Rhett Featuring Maren Morris"
+    },
+    {
+     "rank": 6,
+     "song": "Any Ol' Barstool",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 7,
+     "song": "Hurricane",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 8,
+     "song": "Fast",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 9,
+     "song": "You Look Good",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 10,
+     "song": "Hometown Girl",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 11,
+     "song": "Black",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 12,
+     "song": "Road Less Traveled",
+     "artist": "Lauren Alaina"
+    },
+    {
+     "rank": 13,
+     "song": "Speak To A Girl",
+     "artist": "Tim McGraw & Faith Hill"
+    },
+    {
+     "rank": 14,
+     "song": "God, Your Mama, And Me",
+     "artist": "Florida Georgia Line Featuring Backstreet Boys"
+    },
+    {
+     "rank": 15,
+     "song": "Tin Man",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 16,
+     "song": "Yeah Boy",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 17,
+     "song": "Better Man",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 18,
+     "song": "The Weekend",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 19,
+     "song": "How Not To",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 20,
+     "song": "Flatliner",
+     "artist": "Cole Swindell"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170412031856/https://www.beatport.com/top-100",
+   "captured": "2017-04-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Call You Back",
+     "artist": "Josh Butler & Bontan"
+    },
+    {
+     "rank": 2,
+     "song": "Hangin Out With Charlie",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 3,
+     "song": "The First Time",
+     "artist": "Bontan"
+    },
+    {
+     "rank": 4,
+     "song": "The Drums (Din Daa Daa) (feat. George Kranz)",
+     "artist": "Claptone"
+    },
+    {
+     "rank": 5,
+     "song": "Domino (Matador Remix)",
+     "artist": "Oxia"
+    },
+    {
+     "rank": 6,
+     "song": "Feel Alive (Extended Mix)",
+     "artist": "Lucas & Steve & Pep & Rash"
+    },
+    {
+     "rank": 7,
+     "song": "Uplift",
+     "artist": "Rafael Cerato & ARTBAT"
+    },
+    {
+     "rank": 8,
+     "song": "Live Stream",
+     "artist": "Mark Knight, Rene Amesz & Green Velvet"
+    },
+    {
+     "rank": 9,
+     "song": "Everybody's Dancin'",
+     "artist": "Latmun"
+    },
+    {
+     "rank": 10,
+     "song": "Another Dimension",
+     "artist": "Riva Starr"
+    },
+    {
+     "rank": 11,
+     "song": "Music Is The Answer (Hot Since 82 Remix)",
+     "artist": "Joe Goddard"
+    },
+    {
+     "rank": 12,
+     "song": "Personal Question",
+     "artist": "Bontan"
+    },
+    {
+     "rank": 13,
+     "song": "My Babe (Me & My Toothbrush Remix)",
+     "artist": "Alex Kenji"
+    },
+    {
+     "rank": 14,
+     "song": "From The Inside",
+     "artist": "Raw District"
+    },
+    {
+     "rank": 15,
+     "song": "Louder Than A Bomb (Dense & Pika Remix)",
+     "artist": "Tiga"
+    },
+    {
+     "rank": 16,
+     "song": "Uncompromising",
+     "artist": "Adana Twins"
+    },
+    {
+     "rank": 17,
+     "song": "The Answer (Oliver Heldens Extended Edit)",
+     "artist": "HI-LO"
+    },
+    {
+     "rank": 18,
+     "song": "Capsule",
+     "artist": "Pig&Dan & Adam Beyer"
+    },
+    {
+     "rank": 19,
+     "song": "Zulu",
+     "artist": "Brigado Crew & Crisstiano"
+    },
+    {
+     "rank": 20,
+     "song": "Fresh (Charles J Remix)",
+     "artist": "Frank Caro, Crazibiza & Alemany"
+    }
+   ]
+  }
+ ]
+}

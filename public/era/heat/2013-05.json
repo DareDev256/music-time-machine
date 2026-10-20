@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130507051127/http://www.billboard.com/charts/rap-song",
+   "captured": "2013-05-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 4,
+     "song": "Started From The Bottom",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Love Me",
+     "artist": "Lil Wayne Featuring Drake & Future"
+    },
+    {
+     "rank": 6,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "Gentleman",
+     "artist": "PSY"
+    },
+    {
+     "rank": 8,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas"
+    },
+    {
+     "rank": 9,
+     "song": "Bugatti",
+     "artist": "Ace Hood Featuring Future & Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,221 @@
      "rank": 10,
      "song": "Bugatti",
      "artist": "Ace Hood Featuring Future & Rick Ross"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130518205919/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Doin' It Right\" [ft. Panda Bear]",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 2,
+     "song": "Sea of Love",
+     "artist": "The National"
+    },
+    {
+     "rank": 3,
+     "song": "#Beautiful\" [ft. Miguel]",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 4,
+     "song": "Fool of Me\" [ft. Chet Faker]",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 5,
+     "song": "Ya Hey",
+     "artist": "Vampire Weekend"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130507083239/http://www.billboard.com/charts/country-songs",
+   "captured": "2013-05-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "Wagon Wheel",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 3,
+     "song": "Boys 'Round Here",
+     "artist": "Blake Shelton Featuring Pistol Annies & Friends"
+    },
+    {
+     "rank": 4,
+     "song": "Mama's Broken Heart",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 5,
+     "song": "Get Your Shine On",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 6,
+     "song": "Highway Don't Care",
+     "artist": "Tim McGraw With Taylor Swift"
+    },
+    {
+     "rank": 7,
+     "song": "Downtown",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 8,
+     "song": "If I Didn't Have You",
+     "artist": "Thompson Square"
+    },
+    {
+     "rank": 9,
+     "song": "Pirate Flag",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 10,
+     "song": "Sure Be Cool If You Did",
+     "artist": "Blake Shelton"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130523131150/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-05-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 2,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 3,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 4,
+     "song": "#thatPOWER",
+     "artist": "will.i.am Featuring Justin Bieber"
+    },
+    {
+     "rank": 5,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 6,
+     "song": "Alive",
+     "artist": "Krewella"
+    },
+    {
+     "rank": 7,
+     "song": "Gentleman",
+     "artist": "PSY"
+    },
+    {
+     "rank": 8,
+     "song": "Harlem Shake",
+     "artist": "Baauer"
+    },
+    {
+     "rank": 9,
+     "song": "Scream & Shout",
+     "artist": "will.i.am & Britney Spears"
+    },
+    {
+     "rank": 10,
+     "song": "I Need Your Love",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130507044757/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2013-05-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 2,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 3,
+     "song": "Panic Station",
+     "artist": "Muse"
+    },
+    {
+     "rank": 4,
+     "song": "Up In The Air",
+     "artist": "Thirty Seconds To Mars"
+    },
+    {
+     "rank": 5,
+     "song": "Safe And Sound",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 6,
+     "song": "Stubborn Love",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 7,
+     "song": "Mountain Sound",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 8,
+     "song": "Lover Of The Light",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 9,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 10,
+     "song": "My Songs Know What You Did In The Dark (Light Em Up)",
+     "artist": "Fall Out Boy"
     }
    ]
   }

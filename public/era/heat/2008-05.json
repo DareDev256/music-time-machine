@@ -1,0 +1,291 @@
+{
+ "month": "2008-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080515024447/http://www.hotnewhiphop.com:80/",
+   "captured": "2008-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lollipop (Remix)",
+     "artist": "Lil' Wayne Ft. Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Man Im Bout ft. Paul Wall & Slim Thug",
+     "artist": "Yung Chase"
+    },
+    {
+     "rank": 3,
+     "song": "Sunny Day",
+     "artist": "Akon"
+    },
+    {
+     "rank": 4,
+     "song": "Act Hard",
+     "artist": "Alfamega Ft. Young Dro"
+    },
+    {
+     "rank": 5,
+     "song": "Love Or Lust",
+     "artist": "Mario"
+    },
+    {
+     "rank": 6,
+     "song": "Lets Just Be",
+     "artist": "Ne-Yo"
+    },
+    {
+     "rank": 7,
+     "song": "Cutty Buddy",
+     "artist": "Mike Jones ft. Lil Wayne, Twista, & T-Pain"
+    },
+    {
+     "rank": 8,
+     "song": "Been Throwin Money",
+     "artist": "2 Pistols"
+    },
+    {
+     "rank": 9,
+     "song": "What It Is",
+     "artist": "Ya Boy"
+    },
+    {
+     "rank": 10,
+     "song": "Hold My Hand",
+     "artist": "Akon"
+    },
+    {
+     "rank": 11,
+     "song": "Yessir (prod. Pete Rock)",
+     "artist": "Kurupt"
+    },
+    {
+     "rank": 12,
+     "song": "Check Ya Swag",
+     "artist": "Young Bree Ft Shawty Redd & Killer Mike"
+    },
+    {
+     "rank": 13,
+     "song": "To The Top (Ft. Frankie J)",
+     "artist": "Omar Cruz"
+    },
+    {
+     "rank": 14,
+     "song": "Body On Me (Feat. Akon & Nelly) (Snip)",
+     "artist": "Ashanti"
+    },
+    {
+     "rank": 15,
+     "song": "Lakers Theme",
+     "artist": "Snoop Dogg Feat Kurupt"
+    },
+    {
+     "rank": 16,
+     "song": "Murph Derrty",
+     "artist": "Murphy Lee"
+    },
+    {
+     "rank": 17,
+     "song": "Strip Down",
+     "artist": "40 Glocc"
+    },
+    {
+     "rank": 18,
+     "song": "Smoke With Me",
+     "artist": "Daddy V Feat Snoop Dogg & Kurupt"
+    },
+    {
+     "rank": 19,
+     "song": "Train Of Thought",
+     "artist": "Jackie Boyz"
+    },
+    {
+     "rank": 20,
+     "song": "The Way I Do",
+     "artist": "Chrishan"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080518012005/http://hypem.com:80/popular",
+   "captured": "2008-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lost",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 2,
+     "song": "The Call",
+     "artist": "Regina Spektor"
+    },
+    {
+     "rank": 3,
+     "song": "Wearing My Rolex (Wiley Cover BBC Live Lounge 7th of May)",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 4,
+     "song": "Life in Technicolor",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 5,
+     "song": "Digital Love (Daft Punk Cover)",
+     "artist": "Alphabeat"
+    },
+    {
+     "rank": 6,
+     "song": "Lollipop (Remix - Feat. Kanye West)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Viva la Vida",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 8,
+     "song": "Creator",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 9,
+     "song": "Foundations (Metronomy Remix)",
+     "artist": "Kate Nash"
+    },
+    {
+     "rank": 10,
+     "song": "The Greatest Man That Ever Lived",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 11,
+     "song": "Jealousy Rides With Me",
+     "artist": "Death Cab For A Cutie"
+    },
+    {
+     "rank": 12,
+     "song": "$20",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 13,
+     "song": "L.E.S Artistes",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 14,
+     "song": "Say Aha",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 15,
+     "song": "Grapevine Fires",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 16,
+     "song": "Hearts On Fire",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 17,
+     "song": "I Run This (Remix)",
+     "artist": "Birdman ft. Lil' Wayne"
+    },
+    {
+     "rank": 18,
+     "song": "All Falls Down (Kaberon remix)",
+     "artist": "KanyeWest"
+    },
+    {
+     "rank": 19,
+     "song": "Dream Scream",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 20,
+     "song": "L.E.S. Artistes (XXXChange remix)",
+     "artist": "Santogold"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080514022031/http://2dopeboyz.com:80/",
+   "captured": "2008-05-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lollipop (rmx) f. Kanye West",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Girls Like",
+     "artist": "Rapper Big Pooh"
+    },
+    {
+     "rank": 3,
+     "song": "Slide on Over",
+     "artist": "Nate Kane (Eminem’s Brother)"
+    },
+    {
+     "rank": 4,
+     "song": "Cutty Buddy f. Lil Wayne, Twista & T-Pain",
+     "artist": "Mike Jones"
+    },
+    {
+     "rank": 5,
+     "song": "Fall Back f. Chester French",
+     "artist": "Idle Warship"
+    },
+    {
+     "rank": 6,
+     "song": "911 is a Joke",
+     "artist": "The Game"
+    },
+    {
+     "rank": 7,
+     "song": "Murph Derrty",
+     "artist": "Murphy Lee"
+    },
+    {
+     "rank": 8,
+     "song": "Beat the Speakers Up",
+     "artist": "Buff1"
+    },
+    {
+     "rank": 9,
+     "song": "Breaking Up x Lost in the Rock (Unreleased)",
+     "artist": "Stack Bundles"
+    },
+    {
+     "rank": 10,
+     "song": "I Like the Way She Do It",
+     "artist": "G-Unit"
+    },
+    {
+     "rank": 11,
+     "song": "Yessir",
+     "artist": "Kurupt"
+    }
+   ]
+  }
+ ]
+}

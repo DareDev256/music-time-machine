@@ -1,0 +1,776 @@
+{
+ "month": "2019-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190117005853/https://www.hotnewhiphop.com/top100/",
+   "captured": "2019-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jumpin On A Jet",
+     "artist": "Future Feat. Southside"
+    },
+    {
+     "rank": 2,
+     "song": "Lost In The Fire",
+     "artist": "The Weeknd & DJ Gesaffelstein"
+    },
+    {
+     "rank": 3,
+     "song": "Floss In The Bank (Prod. By d.a. doman)",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 4,
+     "song": "Gangsta Walk Freestyle",
+     "artist": "Yelawolf"
+    },
+    {
+     "rank": 5,
+     "song": "Babyface Savage",
+     "artist": "Bhad Bhabie Feat. Tory Lanez"
+    },
+    {
+     "rank": 6,
+     "song": "Believer",
+     "artist": "Imagine Dragons Feat. Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Nights Like This",
+     "artist": "Kehlani Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 8,
+     "song": "Without Me Remix",
+     "artist": "Halsey Feat. Juice WRLD"
+    },
+    {
+     "rank": 9,
+     "song": "Floss In The Bank (Prod. By d.a. doman)",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 10,
+     "song": "3 Options",
+     "artist": "Quando Rondo Feat. Boosie Badazz"
+    },
+    {
+     "rank": 11,
+     "song": "I Do This On The Regular",
+     "artist": "DJ Kay Slay Feat. Kevin Gates"
+    },
+    {
+     "rank": 12,
+     "song": "Kick Yo Door",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 13,
+     "song": "NASA",
+     "artist": "Future Feat. French Montana"
+    },
+    {
+     "rank": 14,
+     "song": "Spendin'",
+     "artist": "iLoveMakonnen Feat. Gucci Mane"
+    },
+    {
+     "rank": 15,
+     "song": "Plan Of Attack",
+     "artist": "Curren$y Feat. Trademark Da Skydiver"
+    },
+    {
+     "rank": 16,
+     "song": "Saturday Nights Remix",
+     "artist": "Khalid Feat. Kane Brown"
+    },
+    {
+     "rank": 17,
+     "song": "Silent Ride",
+     "artist": "Boogie"
+    },
+    {
+     "rank": 18,
+     "song": "More Than A Woman (Prod. By Timbaland)",
+     "artist": "Aaliyah"
+    },
+    {
+     "rank": 19,
+     "song": "You (Remix)",
+     "artist": "Jacquees Feat. Blueface"
+    },
+    {
+     "rank": 20,
+     "song": "Look What I Got",
+     "artist": "Big K.R.I.T."
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190112203222/https://hypem.com/popular",
+   "captured": "2019-01-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "BITTER END",
+     "artist": "YOUNG & SICK"
+    },
+    {
+     "rank": 2,
+     "song": "I'm Never Gonna Let You Down Again",
+     "artist": "Balthazar"
+    },
+    {
+     "rank": 3,
+     "song": "Ordinary Pleasure",
+     "artist": "Toro y Moi"
+    },
+    {
+     "rank": 4,
+     "song": "Vibrant (feat. Pell)",
+     "artist": "Brasstracks"
+    },
+    {
+     "rank": 5,
+     "song": "07:00PM VAHINE",
+     "artist": "SACRE"
+    },
+    {
+     "rank": 6,
+     "song": "Don't Miss It",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 7,
+     "song": "I'm Alright (feat. R.LUM.R)",
+     "artist": "Brasstracks"
+    },
+    {
+     "rank": 8,
+     "song": "And Tragic",
+     "artist": "ViVii"
+    },
+    {
+     "rank": 9,
+     "song": "hungry hippo remix",
+     "artist": "Aminé"
+    },
+    {
+     "rank": 10,
+     "song": "livin my best life!",
+     "artist": "Laura Les"
+    },
+    {
+     "rank": 11,
+     "song": "trippy",
+     "artist": "mindchatter"
+    },
+    {
+     "rank": 12,
+     "song": "Babyface Savage (feat. Tory Lanez)",
+     "artist": "Bhad Bhabie"
+    },
+    {
+     "rank": 13,
+     "song": "Celebrate",
+     "artist": "angelic milk"
+    },
+    {
+     "rank": 14,
+     "song": "Pretty Sure",
+     "artist": "Kita Menari"
+    },
+    {
+     "rank": 15,
+     "song": "Brontohouse Lawrence' Born To House Remix",
+     "artist": "Glitterbug"
+    },
+    {
+     "rank": 16,
+     "song": "Talking Straight",
+     "artist": "Rolling Blackouts Coastal Fever"
+    },
+    {
+     "rank": 17,
+     "song": "Growing Pains",
+     "artist": "American Wolf"
+    },
+    {
+     "rank": 18,
+     "song": "(The Knocks Remix)",
+     "artist": "The Best You Ever Had"
+    },
+    {
+     "rank": 19,
+     "song": "Coasting",
+     "artist": "TEN FÉ"
+    },
+    {
+     "rank": 20,
+     "song": "girls",
+     "artist": "girl in red"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190102105442/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2019-01-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sunflower (Spider-Man: Into The Spider-Verse)",
+     "artist": "Post Malone & Swae Lee"
+    },
+    {
+     "rank": 2,
+     "song": "Drip Too Hard",
+     "artist": "Lil Baby & Gunna"
+    },
+    {
+     "rank": 3,
+     "song": "ZEZE",
+     "artist": "Kodak Black Featuring Travis Scott & Offset"
+    },
+    {
+     "rank": 4,
+     "song": "Mo Bamba",
+     "artist": "Sheck Wes"
+    },
+    {
+     "rank": 5,
+     "song": "Wake Up In The Sky",
+     "artist": "Gucci Mane X Bruno Mars X Kodak Black"
+    },
+    {
+     "rank": 6,
+     "song": "Money",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 7,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 8,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 9,
+     "song": "Leave Me Alone",
+     "artist": "Flipp Dinero"
+    },
+    {
+     "rank": 10,
+     "song": "Going Bad",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 11,
+     "song": "A Lot",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 12,
+     "song": "Trip",
+     "artist": "Ella Mai"
+    },
+    {
+     "rank": 13,
+     "song": "Wow.",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 14,
+     "song": "Better",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 15,
+     "song": "Uproar",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 16,
+     "song": "Swervin",
+     "artist": "A Boogie Wit da Hoodie Featuring 6ix9ine"
+    },
+    {
+     "rank": 17,
+     "song": "Can't Leave Without It",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 18,
+     "song": "Ring",
+     "artist": "Cardi B Featuring Kehlani"
+    },
+    {
+     "rank": 19,
+     "song": "Dangerous",
+     "artist": "Meek Mill Featuring Jeremih & PnB Rock"
+    },
+    {
+     "rank": 20,
+     "song": "Startender",
+     "artist": "A Boogie Wit da Hoodie Featuring Offset & Tyga"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190118023724/https://www.billboard.com/charts/country-songs",
+   "captured": "2019-01-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 2,
+     "song": "Meant To Be",
+     "artist": "Bebe Rexha & Florida Georgia Line"
+    },
+    {
+     "rank": 3,
+     "song": "She Got The Best Of Me",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 4,
+     "song": "Lose It",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Best Shot",
+     "artist": "Jimmie Allen"
+    },
+    {
+     "rank": 6,
+     "song": "Beautiful Crazy",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "Good Girl",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 8,
+     "song": "Sixteen",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 9,
+     "song": "Burning Man",
+     "artist": "Dierks Bentley Featuring Brothers Osborne"
+    },
+    {
+     "rank": 10,
+     "song": "Girl Like You",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 11,
+     "song": "Drunk Me",
+     "artist": "Mitchell Tenpenny"
+    },
+    {
+     "rank": 12,
+     "song": "This Is It",
+     "artist": "Scotty McCreery"
+    },
+    {
+     "rank": 13,
+     "song": "Millionaire",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 14,
+     "song": "Take It From Me",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 15,
+     "song": "What Makes You Country",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 16,
+     "song": "Down To The Honkytonk",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 17,
+     "song": "Love Wins",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 18,
+     "song": "Here Tonight",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 19,
+     "song": "Make It Sweet",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 20,
+     "song": "Burn Out",
+     "artist": "Midland"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190112204014/https://www.beatport.com/top-100",
+   "captured": "2019-01-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Along Came Polly",
+     "artist": "Rebuke"
+    },
+    {
+     "rank": 2,
+     "song": "Upperground",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 3,
+     "song": "Atlas",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 4,
+     "song": "The Ciggie",
+     "artist": "Cloonee"
+    },
+    {
+     "rank": 5,
+     "song": "Breathe",
+     "artist": "CamelPhat, Jem Cooke & Cristoph"
+    },
+    {
+     "rank": 6,
+     "song": "Hanging Tree",
+     "artist": "Michael Bibi"
+    },
+    {
+     "rank": 7,
+     "song": "Police In Helicopter (Benny L Remix)",
+     "artist": "John Holt"
+    },
+    {
+     "rank": 8,
+     "song": "Praise You (Purple Disco Machine Extended Remix)",
+     "artist": "Fatboy Slim"
+    },
+    {
+     "rank": 9,
+     "song": "Do It Like This (Extended Mix)",
+     "artist": "Biscits"
+    },
+    {
+     "rank": 10,
+     "song": "Losing It (Extended)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 11,
+     "song": "Push Pull (Club Mix)",
+     "artist": "OFFAIAH"
+    },
+    {
+     "rank": 12,
+     "song": "Danzer",
+     "artist": "Darius Syrossian"
+    },
+    {
+     "rank": 13,
+     "song": "Back Into Consciousness",
+     "artist": "Spektre"
+    },
+    {
+     "rank": 14,
+     "song": "Take It (Extended Mix)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 15,
+     "song": "Moments",
+     "artist": "Saison"
+    },
+    {
+     "rank": 16,
+     "song": "All I Need (Extended Mix)",
+     "artist": "Tim Baresko & Shiba San"
+    },
+    {
+     "rank": 17,
+     "song": "Cashmere",
+     "artist": "Hidden Empire"
+    },
+    {
+     "rank": 18,
+     "song": "Can't Help The Way That I Feel (David Penn Remix)",
+     "artist": "Sneaky Sound System"
+    },
+    {
+     "rank": 19,
+     "song": "Aguella",
+     "artist": "Sllash & Doppe"
+    },
+    {
+     "rank": 20,
+     "song": "I Feel Love (Kevin McKay Remix)",
+     "artist": "Start The Party"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190117045443/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2019-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Taki Taki",
+     "artist": "DJ Snake Featuring Selena Gomez, Ozuna & Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "Close To Me",
+     "artist": "Ellie Goulding X Diplo Featuring Swae Lee"
+    },
+    {
+     "rank": 3,
+     "song": "The Middle",
+     "artist": "Zedd, Maren Morris & Grey"
+    },
+    {
+     "rank": 4,
+     "song": "This Feeling",
+     "artist": "The Chainsmokers Featuring Kelsea Ballerini"
+    },
+    {
+     "rank": 5,
+     "song": "Electricity",
+     "artist": "Silk City x Dua Lipa"
+    },
+    {
+     "rank": 6,
+     "song": "Body",
+     "artist": "Loud Luxury Featuring Brando"
+    },
+    {
+     "rank": 7,
+     "song": "One Kiss",
+     "artist": "Calvin Harris & Dua Lipa"
+    },
+    {
+     "rank": 8,
+     "song": "I Found You",
+     "artist": "Benny Blanco & Calvin Harris"
+    },
+    {
+     "rank": 9,
+     "song": "Darkside",
+     "artist": "Alan Walker Featuring Au/Ra & Tomine Harket"
+    },
+    {
+     "rank": 10,
+     "song": "Say My Name",
+     "artist": "David Guetta, Bebe Rexha & J Balvin"
+    },
+    {
+     "rank": 11,
+     "song": "Hope",
+     "artist": "The Chainsmokers Featuring Winona Oak"
+    },
+    {
+     "rank": 12,
+     "song": "Promises",
+     "artist": "Calvin Harris & Sam Smith"
+    },
+    {
+     "rank": 13,
+     "song": "So Close",
+     "artist": "NOTD & Felix Jaehn Featuring Georgia Ku & Captain Cuts"
+    },
+    {
+     "rank": 14,
+     "song": "Happy Now",
+     "artist": "Zedd & Elley Duhe"
+    },
+    {
+     "rank": 15,
+     "song": "Waste It On Me",
+     "artist": "Steve Aoki Featuring BTS"
+    },
+    {
+     "rank": 16,
+     "song": "In My Mind",
+     "artist": "Dynoro & Gigi D'Agostino"
+    },
+    {
+     "rank": 17,
+     "song": "Toy",
+     "artist": "Netta"
+    },
+    {
+     "rank": 18,
+     "song": "Happy Now",
+     "artist": "Kygo Featuring Sandro Cavazza"
+    },
+    {
+     "rank": 19,
+     "song": "Don't Leave Me Alone",
+     "artist": "David Guetta Featuring Anne-Marie"
+    },
+    {
+     "rank": 20,
+     "song": "Don't Kill My High",
+     "artist": "Lost Kings Featuring Wiz Khalifa & Social House"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190111115225/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2019-01-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "My Blood",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 3,
+     "song": "Guiding Light",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 4,
+     "song": "You're Somebody Else",
+     "artist": "flora cash"
+    },
+    {
+     "rank": 5,
+     "song": "Natural",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 6,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 7,
+     "song": "You Should See Me In A Crown",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 8,
+     "song": "Pressure",
+     "artist": "Muse"
+    },
+    {
+     "rank": 9,
+     "song": "Can't Knock The Hustle",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 10,
+     "song": "These Are My Friends",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 11,
+     "song": "Love It If We Made It",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 12,
+     "song": "Superposition",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 13,
+     "song": "\"99\"",
+     "artist": "Barns Courtney"
+    },
+    {
+     "rank": 14,
+     "song": "Worst Nites",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 15,
+     "song": "Back Down",
+     "artist": "Bob Moses"
+    },
+    {
+     "rank": 16,
+     "song": "Fast Talk",
+     "artist": "Houses"
+    },
+    {
+     "rank": 17,
+     "song": "Every Step That I Take",
+     "artist": "Tom Morello Featuring Portugal. The Man And Whethan"
+    },
+    {
+     "rank": 18,
+     "song": "Home",
+     "artist": "morgxn Featuring WALK THE MOON"
+    },
+    {
+     "rank": 19,
+     "song": "Northern Lights",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 20,
+     "song": "Make It Up As I Go",
+     "artist": "Mike Shinoda Featuring k.flay"
+    }
+   ]
+  }
+ ]
+}

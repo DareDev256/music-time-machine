@@ -1,0 +1,946 @@
+{
+ "month": "2016-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160314212149/http://www.hotnewhiphop.com/top100/",
+   "captured": "2016-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Uber Everywhere (Official)",
+     "artist": "Travi$ Scott"
+    },
+    {
+     "rank": 2,
+     "song": "Gotta Lotta",
+     "artist": "Lil Wayne & 2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "Real Addresses",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 4,
+     "song": "Tim Duncan (Prod. By C-Sick)",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 5,
+     "song": "My Love (Remix)",
+     "artist": "Majid Jordan Feat. Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Trap Anthem",
+     "artist": "A$AP Ferg Feat. Migos"
+    },
+    {
+     "rank": 7,
+     "song": "Countin",
+     "artist": "Lil Uzi Vert Feat. 2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "I Don't Care",
+     "artist": "A$AP Ferg Feat. Marty Baller"
+    },
+    {
+     "rank": 9,
+     "song": "What The Fuck Right Now",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 10,
+     "song": "Instant Friend",
+     "artist": "Fetty Wap & Monty"
+    },
+    {
+     "rank": 11,
+     "song": "This Is It",
+     "artist": "Flatbush Zombies"
+    },
+    {
+     "rank": 12,
+     "song": "How I Feel",
+     "artist": "Roy Wood$"
+    },
+    {
+     "rank": 13,
+     "song": "Anyway / Everyday (Prod. By Nard & B)",
+     "artist": "Trouble & Fetty Wap"
+    },
+    {
+     "rank": 14,
+     "song": "Brooklyn's Own (Prod. By Statik Selektah)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 15,
+     "song": "Panda (Remix)",
+     "artist": "Joell Ortiz"
+    },
+    {
+     "rank": 16,
+     "song": "Gucci Said (Remix)",
+     "artist": "Que Feat. Juicy J"
+    },
+    {
+     "rank": 17,
+     "song": "Farrakhan (Prod. By Teddy Walton)",
+     "artist": "Joey Fatts Feat. Vince Staples"
+    },
+    {
+     "rank": 18,
+     "song": "Uber Everywhere",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 19,
+     "song": "Trouble (Mastered) (Prod. By StreetRunner)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 20,
+     "song": "Lick Read (Prod. By Ducko McFli)",
+     "artist": "Jace Feat. Jeremih"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160316034704/http://hypem.com/popular",
+   "captured": "2016-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Run",
+     "artist": "Tourist"
+    },
+    {
+     "rank": 2,
+     "song": "My Love (Remix)",
+     "artist": "Majid Jordan"
+    },
+    {
+     "rank": 3,
+     "song": "WHERE THE HELL ARE MY FRIENDS",
+     "artist": "LANY"
+    },
+    {
+     "rank": 4,
+     "song": "Run Happy Accidents Remix",
+     "artist": "Alison Wonderland"
+    },
+    {
+     "rank": 5,
+     "song": "What if I go?",
+     "artist": "Mura Masa"
+    },
+    {
+     "rank": 6,
+     "song": "Say My Name (feat. Zyra) Hayden James Remix",
+     "artist": "ODESZA"
+    },
+    {
+     "rank": 7,
+     "song": "Bittersweet Symphony Androma Remix",
+     "artist": "The Verve"
+    },
+    {
+     "rank": 8,
+     "song": "Renegades (feat. Gabriella) (Remix)",
+     "artist": "SAXITY"
+    },
+    {
+     "rank": 9,
+     "song": "Two Feet Off The Ground",
+     "artist": "Sara Hartman"
+    },
+    {
+     "rank": 10,
+     "song": "Through The Yard",
+     "artist": "Kauf"
+    },
+    {
+     "rank": 11,
+     "song": "SKY IS THE LIMIT COOKIN SOUL REMIX",
+     "artist": "NOTORIOUS B.I.G."
+    },
+    {
+     "rank": 12,
+     "song": "Something Good",
+     "artist": "Lost Kings"
+    },
+    {
+     "rank": 13,
+     "song": "Unstoppable Mogul Remix",
+     "artist": "Paperwhite"
+    },
+    {
+     "rank": 14,
+     "song": "Walking On The Moon J-Art & Madan Remix",
+     "artist": "The Police"
+    },
+    {
+     "rank": 15,
+     "song": "You're Good But I'm Better",
+     "artist": "Kill J"
+    },
+    {
+     "rank": 16,
+     "song": "Don't Let Me Down Win & Woo Remix",
+     "artist": "The Chainsmokers feat. Daya"
+    },
+    {
+     "rank": 17,
+     "song": "One Last Night Hippie Sabotage Remix",
+     "artist": "Vaults"
+    },
+    {
+     "rank": 18,
+     "song": "I Took a Pill in Ibiza (Feat Kayla Diamond)",
+     "artist": "Kiso"
+    },
+    {
+     "rank": 19,
+     "song": "Ocean Drive Hayden James Remix",
+     "artist": "Duke Dumont"
+    },
+    {
+     "rank": 20,
+     "song": "Open Arms",
+     "artist": "RKCB X Demo Taped"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160315234600/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2016-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Me, Myself & I",
+     "artist": "G-Eazy x Bebe Rexha"
+    },
+    {
+     "rank": 2,
+     "song": "Down In The DM",
+     "artist": "Yo Gotti Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "2 Phones",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 4,
+     "song": "Jumpman",
+     "artist": "Drake & Future"
+    },
+    {
+     "rank": 5,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Summer Sixteen",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Low Life",
+     "artist": "Future Featuring The Weeknd"
+    },
+    {
+     "rank": 8,
+     "song": "Best Friend",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 9,
+     "song": "Really Really",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 10,
+     "song": "Panda",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 11,
+     "song": "Jimmy Choo",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 12,
+     "song": "Untitled 02 l 06.23.2014.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 13,
+     "song": "Cut It",
+     "artist": "O.T. Genasis Featuring Young Dolph"
+    },
+    {
+     "rank": 14,
+     "song": "Might Be",
+     "artist": "Luke Nasty"
+    },
+    {
+     "rank": 15,
+     "song": "Promise",
+     "artist": "Kid Ink Featuring Fetty Wap"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160315061940/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2016-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Work",
+     "artist": "Rihanna Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Me, Myself & I",
+     "artist": "G-Eazy x Bebe Rexha"
+    },
+    {
+     "rank": 3,
+     "song": "Down In The DM",
+     "artist": "Yo Gotti Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Don't",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 5,
+     "song": "Back To Sleep",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 6,
+     "song": "The Hills",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 7,
+     "song": "Jumpman",
+     "artist": "Drake & Future"
+    },
+    {
+     "rank": 8,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "2 Phones",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 10,
+     "song": "Oui",
+     "artist": "Jeremih"
+    },
+    {
+     "rank": 11,
+     "song": "In The Night",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 12,
+     "song": "Summer Sixteen",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Say It",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 14,
+     "song": "Here",
+     "artist": "Alessia Cara"
+    },
+    {
+     "rank": 15,
+     "song": "Exchange",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 16,
+     "song": "Best Friend",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 17,
+     "song": "Low Life",
+     "artist": "Future Featuring The Weeknd"
+    },
+    {
+     "rank": 18,
+     "song": "Really Really",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 19,
+     "song": "Needed Me",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 20,
+     "song": "Jimmy Choo",
+     "artist": "Fetty Wap"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20160315050936/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2016-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "On the Lips",
+     "artist": "Frankie Cosmos"
+    },
+    {
+     "rank": 2,
+     "song": "Passage",
+     "artist": "Wadada Leo Smith & Vijay Iyer"
+    },
+    {
+     "rank": 3,
+     "song": "Closing Shot",
+     "artist": "Lindstrøm"
+    },
+    {
+     "rank": 4,
+     "song": "Drone Bomb Me",
+     "artist": "ANOHNI"
+    },
+    {
+     "rank": 5,
+     "song": "untitled 05 | 09.21.2014",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "X-Communicate",
+     "artist": "Kristin Kontrol"
+    },
+    {
+     "rank": 7,
+     "song": "Things Are Moving",
+     "artist": "Angry Angles"
+    },
+    {
+     "rank": 8,
+     "song": "Taken",
+     "artist": "Anna Meredith"
+    },
+    {
+     "rank": 9,
+     "song": "Your Best American Girl",
+     "artist": "Mitski"
+    },
+    {
+     "rank": 10,
+     "song": "Earth to Heaven",
+     "artist": "Esperanza Spalding"
+    },
+    {
+     "rank": 11,
+     "song": "Hungry",
+     "artist": "White Lung"
+    },
+    {
+     "rank": 12,
+     "song": "A Hundred Ropes",
+     "artist": "Minor Victories"
+    },
+    {
+     "rank": 13,
+     "song": "The Big Big Beat",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 14,
+     "song": "Good to Love",
+     "artist": "FKA twigs"
+    },
+    {
+     "rank": 15,
+     "song": "Give Violence a Chance",
+     "artist": "G.L.O.S.S."
+    },
+    {
+     "rank": 16,
+     "song": "Castrati Stack",
+     "artist": "Tim Hecker"
+    },
+    {
+     "rank": 17,
+     "song": "The Introduction",
+     "artist": "J Dilla"
+    },
+    {
+     "rank": 18,
+     "song": "Ensen Dhaif",
+     "artist": "Emel Mathlouthi"
+    },
+    {
+     "rank": 19,
+     "song": "Ultralight Beam [ft. Chance the Rapper, The-Dream, Kelly Price, and Kirk Franklin]",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 20,
+     "song": "AS CRUST",
+     "artist": "Amnesia Scanner"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160315233042/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2016-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "You Should Be Here",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 2,
+     "song": "Die A Happy Man",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 3,
+     "song": "Heartbeat",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 4,
+     "song": "Drunk On Your Love",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 5,
+     "song": "My Church",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 6,
+     "song": "Came Here To Forget",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 7,
+     "song": "Beautiful Drug",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 8,
+     "song": "Humble And Kind",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 9,
+     "song": "Confession",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 10,
+     "song": "Somewhere On A Beach",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 11,
+     "song": "Snapback",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 12,
+     "song": "Think Of You",
+     "artist": "Chris Young Duet With Cassadee Pope"
+    },
+    {
+     "rank": 13,
+     "song": "Backroad Song",
+     "artist": "Granger Smith"
+    },
+    {
+     "rank": 14,
+     "song": "I Like The Sound Of That",
+     "artist": "Rascal Flatts"
+    },
+    {
+     "rank": 15,
+     "song": "Home Alone Tonight",
+     "artist": "Luke Bryan Featuring Karen Fairchild"
+    },
+    {
+     "rank": 16,
+     "song": "Nobody To Blame",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 17,
+     "song": "Break On Me.",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 18,
+     "song": "American Country Love Song",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 19,
+     "song": "T-Shirt",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 20,
+     "song": "Little Bit Of You",
+     "artist": "Chase Bryant"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160312134724/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2016-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Roses",
+     "artist": "The Chainsmokers Featuring Rozes"
+    },
+    {
+     "rank": 2,
+     "song": "Never Forget You",
+     "artist": "Zara Larsson & MNEK"
+    },
+    {
+     "rank": 3,
+     "song": "Sugar",
+     "artist": "Robin Schulz Featuring Francesco Yates"
+    },
+    {
+     "rank": 4,
+     "song": "Middle",
+     "artist": "DJ Snake Featuring Bipolar Sunshine"
+    },
+    {
+     "rank": 5,
+     "song": "Lean On",
+     "artist": "Major Lazer & DJ Snake Featuring M0"
+    },
+    {
+     "rank": 6,
+     "song": "Don't Let Me Down",
+     "artist": "The Chainsmokers Featuring Daya"
+    },
+    {
+     "rank": 7,
+     "song": "How Deep Is Your Love",
+     "artist": "Calvin Harris & Disciples"
+    },
+    {
+     "rank": 8,
+     "song": "Dessert",
+     "artist": "Dawin"
+    },
+    {
+     "rank": 9,
+     "song": "Fast Car",
+     "artist": "Jonas Blue Featuring Dakota"
+    },
+    {
+     "rank": 10,
+     "song": "Bang My Head",
+     "artist": "David Guetta Featuring Sia & Fetty Wap"
+    },
+    {
+     "rank": 11,
+     "song": "Stay",
+     "artist": "Kygo Featuring Maty Noyes"
+    },
+    {
+     "rank": 12,
+     "song": "Faded",
+     "artist": "Alan Walker"
+    },
+    {
+     "rank": 13,
+     "song": "Light It Up",
+     "artist": "Major Lazer Featuring Nyla"
+    },
+    {
+     "rank": 14,
+     "song": "Candyman",
+     "artist": "Zedd & Aloe Blacc"
+    },
+    {
+     "rank": 15,
+     "song": "In My Room",
+     "artist": "Yellow Claw & DJ Mustard Featuring Ty Dolla $ign & Tyga"
+    },
+    {
+     "rank": 16,
+     "song": "Magnets",
+     "artist": "Disclosure Featuring Lorde"
+    },
+    {
+     "rank": 17,
+     "song": "Working For It",
+     "artist": "ZHU x Skrillex x THEY"
+    },
+    {
+     "rank": 18,
+     "song": "Never Be Like You",
+     "artist": "Flume Featuring Kai"
+    },
+    {
+     "rank": 19,
+     "song": "Running Out",
+     "artist": "Matoma & Astrid S"
+    },
+    {
+     "rank": 20,
+     "song": "Coming Over",
+     "artist": "Dillon Francis & Kygo Featuring James Hersey"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160316083045/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2016-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Trip Switch",
+     "artist": "Nothing But Thieves"
+    },
+    {
+     "rank": 2,
+     "song": "Mountain At My Gates",
+     "artist": "Foals"
+    },
+    {
+     "rank": 3,
+     "song": "Adventure Of A Lifetime",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 4,
+     "song": "Unsteady",
+     "artist": "X Ambassadors"
+    },
+    {
+     "rank": 5,
+     "song": "Stressed Out",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 6,
+     "song": "Ride",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 7,
+     "song": "Mess Around",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 8,
+     "song": "First",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 9,
+     "song": "Spirits",
+     "artist": "The Strumbellas"
+    },
+    {
+     "rank": 10,
+     "song": "Walking On A Dream",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 11,
+     "song": "Ophelia",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 12,
+     "song": "Genghis Khan",
+     "artist": "Miike Snow"
+    },
+    {
+     "rank": 13,
+     "song": "Victorious",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 14,
+     "song": "Kiss This",
+     "artist": "The Struts"
+    },
+    {
+     "rank": 15,
+     "song": "Renegades",
+     "artist": "X Ambassadors"
+    },
+    {
+     "rank": 16,
+     "song": "Gone",
+     "artist": "JR JR"
+    },
+    {
+     "rank": 17,
+     "song": "Woman Woman",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 18,
+     "song": "Under The Influence",
+     "artist": "Elle King"
+    },
+    {
+     "rank": 19,
+     "song": "High Dive",
+     "artist": "Andrew McMahon In The Wilderness"
+    },
+    {
+     "rank": 20,
+     "song": "Give Me A Try",
+     "artist": "The Wombats"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20160317175942/http://2dopeboyz.com/",
+   "captured": "2016-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Might Be (Remix)",
+     "artist": "DJ Luke Nasty feat. 2 Chainz & Maino"
+    },
+    {
+     "rank": 2,
+     "song": "No Hook",
+     "artist": "Lil Yachty feat. Quavo"
+    },
+    {
+     "rank": 3,
+     "song": "Bus Ride",
+     "artist": "Kaytranada feat. Karriem Riggins"
+    },
+    {
+     "rank": 4,
+     "song": "By Chance",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 5,
+     "song": "Somewhere Further Than Here",
+     "artist": "Steff Marvin feat. Mixtape"
+    },
+    {
+     "rank": 6,
+     "song": "Right Away",
+     "artist": "JR Castro"
+    },
+    {
+     "rank": 7,
+     "song": "Today",
+     "artist": "J.R."
+    },
+    {
+     "rank": 8,
+     "song": "Changes",
+     "artist": "Berner feat. Mistah F.A.B"
+    },
+    {
+     "rank": 9,
+     "song": "The Way it Go pt.2",
+     "artist": "A$AP Ant & Fat Trel"
+    },
+    {
+     "rank": 10,
+     "song": "Shoe-icide Squad",
+     "artist": "Horseshoe Gang"
+    },
+    {
+     "rank": 11,
+     "song": "Halftime Show",
+     "artist": "Cozz"
+    },
+    {
+     "rank": 12,
+     "song": "Drive In",
+     "artist": "Stefan Ponce feat. theMIND & Julian Bell"
+    },
+    {
+     "rank": 13,
+     "song": "Bounce",
+     "artist": "2 Chainz & Lil Wayne"
+    },
+    {
+     "rank": 14,
+     "song": "Ill Mind Of Hopsin 8",
+     "artist": "Hopsin"
+    },
+    {
+     "rank": 15,
+     "song": "This Is It\" x '3001: A Laced Odyssey' (Stream)",
+     "artist": "Flatbush ZOMBiES"
+    }
+   ]
+  }
+ ]
+}

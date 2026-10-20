@@ -17,6 +17,8 @@ export default async function Home({ searchParams }: { searchParams: Search }) {
     : null;
   return (
     <main>
+      {/* The flight's data, requested before hydration (React hoists this into <head>). */}
+      <link rel="preload" href="/era/flight.json" as="fetch" crossOrigin="anonymous" />
       <h1 className="sr-only">
         Was Playing: name a song and fly back to the week it was playing
       </h1>

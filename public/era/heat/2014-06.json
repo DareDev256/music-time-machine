@@ -173,6 +173,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140618211443/http://www.billboard.com/charts/rap-song",
+   "captured": "2014-06-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "Believe Me",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Timber",
+     "artist": "Pitbull Featuring Ke$ha"
+    },
+    {
+     "rank": 4,
+     "song": "Pills N Potions",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Move That Doh",
+     "artist": "Future Featuring Pharrell, Pusha T & Casino"
+    },
+    {
+     "rank": 6,
+     "song": "Cut Her Off",
+     "artist": "KCamp Featuring 2 Chainz"
+    },
+    {
+     "rank": 7,
+     "song": "Work",
+     "artist": "Iggy Azalea"
+    },
+    {
+     "rank": 8,
+     "song": "Trophies",
+     "artist": "Young Money Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "We Dem Boyz",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "Wild Wild Love",
+     "artist": "Pitbull Featuring G.R.L."
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -229,6 +289,251 @@
      "rank": 10,
      "song": "Show Me",
      "artist": "Kid Ink Featuring Chris Brown"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140613055818/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2014-06-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Murmurs",
+     "artist": "Hundred Waters"
+    },
+    {
+     "rank": 2,
+     "song": "Face Again",
+     "artist": "How to Dress Well"
+    },
+    {
+     "rank": 3,
+     "song": "Brill Bruisers",
+     "artist": "The New Pornographers"
+    },
+    {
+     "rank": 4,
+     "song": "North Circular",
+     "artist": "Real Lies"
+    },
+    {
+     "rank": 5,
+     "song": "Serious Business",
+     "artist": "United Nations"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140621201705/http://www.billboard.com/charts/country-songs",
+   "captured": "2014-06-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "This Is How We Roll",
+     "artist": "Florida Georgia Line Featuring Luke Bryan"
+    },
+    {
+     "rank": 2,
+     "song": "Play It Again",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 3,
+     "song": "Beachin'",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 4,
+     "song": "My Eyes",
+     "artist": "Blake Shelton Featuring Gwen Sebastian"
+    },
+    {
+     "rank": 5,
+     "song": "Drunk On A Plane",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 6,
+     "song": "I Don't Dance",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 7,
+     "song": "Lettin' The Night Roll",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 8,
+     "song": "Beat Of The Music",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 9,
+     "song": "Who I Am With You",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 10,
+     "song": "Bartender",
+     "artist": "Lady Antebellum"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140614132748/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2014-06-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fever",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 2,
+     "song": "Bad Blood",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 3,
+     "song": "Come With Me Now",
+     "artist": "KONGOS"
+    },
+    {
+     "rank": 4,
+     "song": "I Wanna Get Better",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 5,
+     "song": "The Walker",
+     "artist": "Fitz And The Tantrums"
+    },
+    {
+     "rank": 6,
+     "song": "Why'd You Only Call Me When You're High?",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 7,
+     "song": "Do I Wanna Know?",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 8,
+     "song": "Giants",
+     "artist": "Bear Hands"
+    },
+    {
+     "rank": 9,
+     "song": "Dangerous",
+     "artist": "Big Data Featuring Joywave"
+    },
+    {
+     "rank": 10,
+     "song": "Lazaretto",
+     "artist": "Jack White"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140625035029/http://2dopeboyz.com/",
+   "captured": "2014-06-25",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mary",
+     "artist": "Rickie Jacobs"
+    },
+    {
+     "rank": 2,
+     "song": "Family Matters",
+     "artist": "Matik Estrada & Childish Major"
+    },
+    {
+     "rank": 3,
+     "song": "Clouds",
+     "artist": "Show Tufli"
+    },
+    {
+     "rank": 4,
+     "song": "Bag It Up f. Future & Casino",
+     "artist": "Young Scooter"
+    },
+    {
+     "rank": 5,
+     "song": "Keepers Of The Lost Art",
+     "artist": "Shabaam Sahdeeq"
+    },
+    {
+     "rank": 6,
+     "song": "Charlie Brown (Revisited)",
+     "artist": "Jared Evan"
+    },
+    {
+     "rank": 7,
+     "song": "Doug Stamper f. Hannibal Buress",
+     "artist": "Open Mike Eagle"
+    },
+    {
+     "rank": 8,
+     "song": "Death Warrant f. Sticky Fingaz & Tech N9ne",
+     "artist": "Sadistik"
+    },
+    {
+     "rank": 9,
+     "song": "Time Bomb",
+     "artist": "André DeSaint"
+    },
+    {
+     "rank": 10,
+     "song": "Perspective",
+     "artist": "Blueprint"
+    },
+    {
+     "rank": 11,
+     "song": "Apex",
+     "artist": "Toki Wright & Big Cats!"
+    },
+    {
+     "rank": 12,
+     "song": "Think I’m Lyin’ f. Lil Wayne & Tyga",
+     "artist": "Hood"
+    },
+    {
+     "rank": 13,
+     "song": "Peroxide f. Dam-Funk",
+     "artist": "MED, Blu & Madlib"
+    },
+    {
+     "rank": 14,
+     "song": "No Hate In My Blood",
+     "artist": "Boldy James"
+    },
+    {
+     "rank": 15,
+     "song": "KK f. Project Pat & Juicy J",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 16,
+     "song": "Free the Madness f. MGK",
+     "artist": "Steve Aoki"
     }
    ]
   }

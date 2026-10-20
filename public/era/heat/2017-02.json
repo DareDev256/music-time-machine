@@ -1,0 +1,561 @@
+{
+ "month": "2017-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170216024610/http://www.hotnewhiphop.com/",
+   "captured": "2017-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Some Way",
+     "artist": "Nav Feat. The Weeknd"
+    },
+    {
+     "rank": 2,
+     "song": "Victory",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 3,
+     "song": "Shape Of You (Remix)",
+     "artist": "Wale"
+    },
+    {
+     "rank": 4,
+     "song": "NNGE (Never Not Getting Enough)",
+     "artist": "Oddisee Feat. Toine"
+    },
+    {
+     "rank": 5,
+     "song": "GBKW (God Bless Kanye West)",
+     "artist": "Murs"
+    },
+    {
+     "rank": 6,
+     "song": "Mine (Prod. By Cookin Soul)",
+     "artist": "Tink & G Herbo"
+    },
+    {
+     "rank": 7,
+     "song": "Jaded",
+     "artist": "Rome Fortune"
+    },
+    {
+     "rank": 8,
+     "song": "Validation",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 9,
+     "song": "VSVSVSV (Prod. By Nard & B)",
+     "artist": "24hrs"
+    },
+    {
+     "rank": 10,
+     "song": "We Still A Win (Remix)",
+     "artist": "Popcaan Feat. Shyne"
+    },
+    {
+     "rank": 11,
+     "song": "Some Kinda Way",
+     "artist": "Elijah Blake"
+    },
+    {
+     "rank": 12,
+     "song": "Undercover",
+     "artist": "LJay Currie"
+    },
+    {
+     "rank": 13,
+     "song": "Nothing Even Matters (Cover)",
+     "artist": "Sevyn Streeter Feat. Luke James"
+    },
+    {
+     "rank": 14,
+     "song": "Water",
+     "artist": "Kodak Black Feat. A Boogie Wit Da Hoodie"
+    },
+    {
+     "rank": 15,
+     "song": "Friend Zone",
+     "artist": "Thundercat"
+    },
+    {
+     "rank": 16,
+     "song": "Cold",
+     "artist": "Maroon 5 Feat. Future"
+    },
+    {
+     "rank": 17,
+     "song": "Take It All In",
+     "artist": "Russ Feat. Rexx Life Raj"
+    },
+    {
+     "rank": 18,
+     "song": "Flex On My X",
+     "artist": "Splacc Feat. RJ"
+    },
+    {
+     "rank": 19,
+     "song": "Golden",
+     "artist": "King Louie"
+    },
+    {
+     "rank": 20,
+     "song": "R&B",
+     "artist": "King Louie Feat. Bread Doe & Jessie Reyez"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170214213912/http://hypem.com/popular",
+   "captured": "2017-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Good Vibes (feat. Cosmos & Creature)",
+     "artist": "PLS&TY"
+    },
+    {
+     "rank": 2,
+     "song": "Flow",
+     "artist": "Crooked Colours"
+    },
+    {
+     "rank": 3,
+     "song": "Tezeta",
+     "artist": "Mulatu Astatke"
+    },
+    {
+     "rank": 4,
+     "song": "Out Of Love",
+     "artist": "Two Friends feat. Cosmos & Creature"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Leave Oshi Remix",
+     "artist": "Snakehips & MØ"
+    },
+    {
+     "rank": 6,
+     "song": "Nobody Knows (feat. WYNNE)",
+     "artist": "Autograf"
+    },
+    {
+     "rank": 7,
+     "song": "What You Need (feat. NÏKA) Mielo Remix",
+     "artist": "BAYNK"
+    },
+    {
+     "rank": 8,
+     "song": "Young Hearts",
+     "artist": "NoMBe"
+    },
+    {
+     "rank": 9,
+     "song": "Turbo Killer",
+     "artist": "Carpenter Brut"
+    },
+    {
+     "rank": 10,
+     "song": "Six Feet Under BLU J Remix",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 11,
+     "song": "Put A Flower In Your Pocket",
+     "artist": "The Arcs"
+    },
+    {
+     "rank": 12,
+     "song": "Horns STéLOUSE Remix",
+     "artist": "Bryce Fox"
+    },
+    {
+     "rank": 13,
+     "song": "I Thought You Needed My Love (feat Odd Year)",
+     "artist": "Memoryy"
+    },
+    {
+     "rank": 14,
+     "song": "Can I Kick It Rhythm Scholar Remix",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 15,
+     "song": "Walls To Build Mall Grab Remix",
+     "artist": "Kllo"
+    },
+    {
+     "rank": 16,
+     "song": "The Weeknd – Starboy Koni Remix",
+     "artist": "Koni"
+    },
+    {
+     "rank": 17,
+     "song": "Gamesofluck",
+     "artist": "Parcels"
+    },
+    {
+     "rank": 18,
+     "song": "Growing Up",
+     "artist": "PHIL GOOD"
+    },
+    {
+     "rank": 19,
+     "song": "Kerala",
+     "artist": "bonobo"
+    },
+    {
+     "rank": 20,
+     "song": "Lucky Girl",
+     "artist": "Fazerdaze"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170219032235/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2017-02-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 2,
+     "song": "Bad Things",
+     "artist": "Machine Gun Kelly x Camila Cabello"
+    },
+    {
+     "rank": 3,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 4,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Starboy",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 6,
+     "song": "Love On The Brain",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 7,
+     "song": "Black Beatles",
+     "artist": "Rae Sremmurd Featuring Gucci Mane"
+    },
+    {
+     "rank": 8,
+     "song": "24K Magic",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 9,
+     "song": "I Feel It Coming",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 10,
+     "song": "Caroline",
+     "artist": "Amine"
+    },
+    {
+     "rank": 11,
+     "song": "No Favors",
+     "artist": "Big Sean Featuring Eminem"
+    },
+    {
+     "rank": 12,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 13,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 14,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 15,
+     "song": "Moves",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 16,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 17,
+     "song": "Juju On That Beat (TZ Anthem)",
+     "artist": "Zay Hilfigerrr & Zayion McCall"
+    },
+    {
+     "rank": 18,
+     "song": "Love Me Now",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 19,
+     "song": "Party",
+     "artist": "Chris Brown Featuring Usher & Gucci Mane"
+    },
+    {
+     "rank": 20,
+     "song": "Deja Vu",
+     "artist": "J. Cole"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170213042951/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Minnesota",
+     "artist": "The Courtneys"
+    },
+    {
+     "rank": 2,
+     "song": "Big for Your Boots",
+     "artist": "Stormzy"
+    },
+    {
+     "rank": 3,
+     "song": "Ballad of the Dying Man",
+     "artist": "Father John Misty"
+    },
+    {
+     "rank": 4,
+     "song": "Undercover",
+     "artist": "Kehlani"
+    },
+    {
+     "rank": 5,
+     "song": "This Old Dog",
+     "artist": "Mac DeMarco"
+    },
+    {
+     "rank": 6,
+     "song": "Thinning",
+     "artist": "Snail Mail"
+    },
+    {
+     "rank": 7,
+     "song": "Show You the Way [ft. Michael McDonald & Kenny Loggins]",
+     "artist": "Thundercat"
+    },
+    {
+     "rank": 8,
+     "song": "Real Death",
+     "artist": "Mount Eerie"
+    },
+    {
+     "rank": 9,
+     "song": "Nyakinyua Rise",
+     "artist": "Jlin"
+    },
+    {
+     "rank": 10,
+     "song": "Replica",
+     "artist": "The xx"
+    },
+    {
+     "rank": 11,
+     "song": "Nothing Feels Natural",
+     "artist": "Priests"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170214233909/https://www.beatport.com/top-100",
+   "captured": "2017-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hit The Road Jack (Extended Mix)",
+     "artist": "Throttle"
+    },
+    {
+     "rank": 2,
+     "song": "Same Man",
+     "artist": "Franky Rizardo"
+    },
+    {
+     "rank": 3,
+     "song": "Swagon feat. Ossey James",
+     "artist": "Detlef & Ossey James"
+    },
+    {
+     "rank": 4,
+     "song": "Tunnel Vision (Don Diablo Extended Edit)",
+     "artist": "Zonderling"
+    },
+    {
+     "rank": 5,
+     "song": "Saving Light (feat. HALIENE)",
+     "artist": "Gareth Emery & Standerwick"
+    },
+    {
+     "rank": 6,
+     "song": "Chemistry",
+     "artist": "Pig&Dan"
+    },
+    {
+     "rank": 7,
+     "song": "Sheeple",
+     "artist": "Green Velvet & Prok & Fitch"
+    },
+    {
+     "rank": 8,
+     "song": "Shakti Pan feat. Sven",
+     "artist": "Kellerkind"
+    },
+    {
+     "rank": 9,
+     "song": "Dead End Thrills (Patrice Baumel Remix)",
+     "artist": "Cubicolor"
+    },
+    {
+     "rank": 10,
+     "song": "Final Credits",
+     "artist": "Midland"
+    },
+    {
+     "rank": 11,
+     "song": "Can't You See",
+     "artist": "Leon (Italy) & Simone Liberali"
+    },
+    {
+     "rank": 12,
+     "song": "Awakened",
+     "artist": "Ilario Alicante"
+    },
+    {
+     "rank": 13,
+     "song": "Nevermind (Oliver Huntemann Remix)",
+     "artist": "Victor Ruiz"
+    },
+    {
+     "rank": 14,
+     "song": "Baby (Extended Mix)",
+     "artist": "Bakermat"
+    },
+    {
+     "rank": 15,
+     "song": "Times",
+     "artist": "Ilario Alicante"
+    },
+    {
+     "rank": 16,
+     "song": "Lizard King",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 17,
+     "song": "Everybody",
+     "artist": "Dennis Cruz"
+    },
+    {
+     "rank": 18,
+     "song": "Pisco",
+     "artist": "Isolee"
+    },
+    {
+     "rank": 19,
+     "song": "What the F**k (Santé Remix)",
+     "artist": "Roland Clark"
+    },
+    {
+     "rank": 20,
+     "song": "Blackrays Feat. Hendrik Burkhard",
+     "artist": "Olivier Giacomotto, Noir & Hendrik Burkhard"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170227005851/http://2dopeboyz.com/",
+   "captured": "2017-02-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Uh Huh",
+     "artist": "NARCOTECHS"
+    },
+    {
+     "rank": 2,
+     "song": "The Preface",
+     "artist": "Roga Raph"
+    },
+    {
+     "rank": 3,
+     "song": "Bars Weekly 8",
+     "artist": "Kahlee & Muds"
+    },
+    {
+     "rank": 4,
+     "song": "Cherry Juice",
+     "artist": "Will Sessions feat. Allan Barnes of The Blackbyrds"
+    },
+    {
+     "rank": 5,
+     "song": "Deeper",
+     "artist": "JR Castro"
+    },
+    {
+     "rank": 6,
+     "song": "High Quota",
+     "artist": "GQ Nothin Pretty feat. Tragedy Khadafi"
+    },
+    {
+     "rank": 7,
+     "song": "Scary Hours",
+     "artist": "Casablanca"
+    },
+    {
+     "rank": 8,
+     "song": "MOB Freestyle",
+     "artist": "Lil Bibby"
+    }
+   ]
+  }
+ ]
+}

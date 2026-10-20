@@ -1,0 +1,246 @@
+{
+ "month": "2008-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20081106170836/http://hypem.com:80/popular",
+   "captured": "2008-11-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bittersweet Electric Sky Touch (GlowTape!'s String Cheese Mash Up)",
+     "artist": "The Verve VS MGMT & Justice VS Kanye W…"
+    },
+    {
+     "rank": 2,
+     "song": "Whatever You Like [DiscoTech Rmx]",
+     "artist": "T.I."
+    },
+    {
+     "rank": 3,
+     "song": "Anyway (Feat. Kid Cudi)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 4,
+     "song": "Pass This On (Dahlback & Dahlback Remix)",
+     "artist": "The Knife"
+    },
+    {
+     "rank": 5,
+     "song": "See The Light (Calvin Harris Remix)",
+     "artist": "The Hours"
+    },
+    {
+     "rank": 6,
+     "song": "Kennedy",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 7,
+     "song": "Estelle (feat. Kanye West) vs The Ting Tings - Shut Up, American Boy",
+     "artist": "Estelle & Kanye West vs The Ting Tings…"
+    },
+    {
+     "rank": 8,
+     "song": "Suddenly Everyhing Has Changed",
+     "artist": "The Postal Service"
+    },
+    {
+     "rank": 9,
+     "song": "Therapy feat. Kanye West",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 10,
+     "song": "Jump Crazy (Dj E-V Mix)",
+     "artist": "Pittbull vs Van Halen"
+    },
+    {
+     "rank": 11,
+     "song": "Spaceman",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 12,
+     "song": "Heartless (Full Song)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 13,
+     "song": "Signs (MMMAthias remix)",
+     "artist": "Bloc Party"
+    },
+    {
+     "rank": 14,
+     "song": "Anyway",
+     "artist": "KanYe West ft. Kid Cudi"
+    },
+    {
+     "rank": 15,
+     "song": "A Change Is Gonna Come",
+     "artist": "Sam Cooke"
+    },
+    {
+     "rank": 16,
+     "song": "Pull Up the People (Brad Walsh Remix)",
+     "artist": "MIA"
+    },
+    {
+     "rank": 17,
+     "song": "Save Ur Soul",
+     "artist": "M.I.A. ft. DJ Blaqstarr"
+    },
+    {
+     "rank": 18,
+     "song": "Anyway (808's & Heartbreak)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 19,
+     "song": "Destrokk",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 20,
+     "song": "Taken Away (Teat Cru Planetarium Field Trip Remix)",
+     "artist": "Digitalism"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081112082041/http://2dopeboyz.com:80/",
+   "captured": "2008-11-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I’m Supposed to Ball",
+     "artist": "Swizz Beatz"
+    },
+    {
+     "rank": 2,
+     "song": "Miss Donna Karan",
+     "artist": "Dom Kennedy"
+    },
+    {
+     "rank": 3,
+     "song": "I Do It For Hip-Hop f. Jay-Z & Nas (Live)",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 4,
+     "song": "Stop f. The Game, Sly Polaroid, Rick Ross & DJ Khaled",
+     "artist": "DJ Pharris"
+    },
+    {
+     "rank": 5,
+     "song": "Streetlights x Tell Everybody That You Know f. Lil Wayne",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "True Feelings",
+     "artist": "88-Keys"
+    },
+    {
+     "rank": 7,
+     "song": "So Fresh",
+     "artist": "Evidence & Alchemist"
+    },
+    {
+     "rank": 8,
+     "song": "Amazin’ f. Young Jeezy",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 9,
+     "song": "Get Fresh",
+     "artist": "Kid Sister"
+    },
+    {
+     "rank": 10,
+     "song": "The Mighty f. Donwill",
+     "artist": "Ced Hughes"
+    },
+    {
+     "rank": 11,
+     "song": "Mind Of Mustafa pt. 4",
+     "artist": "MeLo-X"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081102072010/http://www.pigeonsandplanes.com:80/",
+   "captured": "2008-11-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Songs from Gossip in the Grain",
+     "artist": "Ray LaMontagne"
+    },
+    {
+     "rank": 2,
+     "song": "How I Do",
+     "artist": "Ne-Yo ft. Fabulous"
+    },
+    {
+     "rank": 3,
+     "song": "L.E.S. Artistes",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 4,
+     "song": "He Doesn't Know Why",
+     "artist": "Fleet Foxes"
+    },
+    {
+     "rank": 5,
+     "song": "4:13 Dream",
+     "artist": "The Cure"
+    },
+    {
+     "rank": 6,
+     "song": "Lost Boys",
+     "artist": "Notorious B.I.G. ft. Lil' Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Hard to Swallow",
+     "artist": "Detox Retox"
+    },
+    {
+     "rank": 8,
+     "song": "Wonderwall (live and remix)",
+     "artist": "Cat Power"
+    },
+    {
+     "rank": 9,
+     "song": "Therapy",
+     "artist": "T-Pain ft. Kanye West"
+    },
+    {
+     "rank": 10,
+     "song": "Computer Love",
+     "artist": "Ghostface Killah"
+    },
+    {
+     "rank": 11,
+     "song": "There Are Maybe Ten Or Twelve",
+     "artist": "A.C. Newman"
+    }
+   ]
+  }
+ ]
+}

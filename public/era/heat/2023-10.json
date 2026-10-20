@@ -1,0 +1,886 @@
+{
+ "month": "2023-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231013154155/https://hypem.com/popular",
+   "captured": "2023-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Coronation",
+     "artist": "Peter Johnston RVA"
+    },
+    {
+     "rank": 2,
+     "song": "Deep Empty (DMT Feelings)",
+     "artist": "Born Days"
+    },
+    {
+     "rank": 3,
+     "song": "Little Things",
+     "artist": "Big Thief"
+    },
+    {
+     "rank": 4,
+     "song": "Hajnal",
+     "artist": "Venetian Snares"
+    },
+    {
+     "rank": 5,
+     "song": "Un Deux Trois",
+     "artist": "MUNYA"
+    },
+    {
+     "rank": 6,
+     "song": "Alone",
+     "artist": "A Beacon School"
+    },
+    {
+     "rank": 7,
+     "song": "Folsom Prison Blues +1 remix",
+     "artist": "Johnny Cash"
+    },
+    {
+     "rank": 8,
+     "song": "Alien",
+     "artist": "Samantha Urbani"
+    },
+    {
+     "rank": 9,
+     "song": "Brand New Colony",
+     "artist": "The Beths, Pickle Darling & Car Seat Hea…"
+    },
+    {
+     "rank": 10,
+     "song": "Buenas Noches",
+     "artist": "BoomBox"
+    },
+    {
+     "rank": 11,
+     "song": "Cruel Intentions",
+     "artist": "Carpool"
+    },
+    {
+     "rank": 12,
+     "song": "Cause = Time",
+     "artist": "Broken Social Scene"
+    },
+    {
+     "rank": 13,
+     "song": "Better Views",
+     "artist": "Klaverson"
+    },
+    {
+     "rank": 14,
+     "song": "You Knew",
+     "artist": "Róisín Murphy"
+    },
+    {
+     "rank": 15,
+     "song": "Every Part Of You",
+     "artist": "Icarus"
+    },
+    {
+     "rank": 16,
+     "song": "Mosquito (Extended)",
+     "artist": "1tbsp"
+    },
+    {
+     "rank": 17,
+     "song": "Pending In The Pattern",
+     "artist": "Simo Cell & Abdullah Miniawy"
+    },
+    {
+     "rank": 18,
+     "song": "behind the waterfall",
+     "artist": "Simo Cell"
+    },
+    {
+     "rank": 19,
+     "song": "First Breath After Coma",
+     "artist": "explosions in the sky"
+    },
+    {
+     "rank": 20,
+     "song": "Slow Knife",
+     "artist": "Kuedo"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231016205342/https://www.billboard.com/charts/rap-song/",
+   "captured": "2023-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 2,
+     "song": "Fukumean",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 3,
+     "song": "Barbie World",
+     "artist": "Nicki Minaj & Ice Spice With Aqua"
+    },
+    {
+     "rank": 4,
+     "song": "All My Life",
+     "artist": "Lil Durk Featuring J. Cole"
+    },
+    {
+     "rank": 5,
+     "song": "Agora Hills",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 6,
+     "song": "I Know ?",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 7,
+     "song": "Peaches & Eggplants",
+     "artist": "Young Nudy Featuring 21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "Meltdown",
+     "artist": "Travis Scott Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Great Gatsby",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 10,
+     "song": "Bongos",
+     "artist": "Cardi B & Megan Thee Stallion"
+    },
+    {
+     "rank": 11,
+     "song": "Boyz Don't Cry",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 12,
+     "song": "Lil Boo Thang",
+     "artist": "Paul Russell"
+    },
+    {
+     "rank": 13,
+     "song": "Turks & Caicos",
+     "artist": "Rod Wave Featuring 21 Savage"
+    },
+    {
+     "rank": 14,
+     "song": "Fight The Feeling",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 15,
+     "song": "Call Your Friends",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 16,
+     "song": "Come See Me",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 17,
+     "song": "SkeeYee",
+     "artist": "Sexyy Red"
+    },
+    {
+     "rank": 18,
+     "song": "500lbs",
+     "artist": "Lil Tecca"
+    },
+    {
+     "rank": 19,
+     "song": "Deli",
+     "artist": "Ice Spice"
+    },
+    {
+     "rank": 20,
+     "song": "Telekinesis",
+     "artist": "Travis Scott Featuring SZA & Future"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231014190602/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2023-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 2,
+     "song": "Snooze",
+     "artist": "SZA"
+    },
+    {
+     "rank": 3,
+     "song": "Fukumean",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 4,
+     "song": "Barbie World",
+     "artist": "Nicki Minaj & Ice Spice With Aqua"
+    },
+    {
+     "rank": 5,
+     "song": "Slime You Out",
+     "artist": "Drake Featuring SZA"
+    },
+    {
+     "rank": 6,
+     "song": "All My Life",
+     "artist": "Lil Durk Featuring J. Cole"
+    },
+    {
+     "rank": 7,
+     "song": "Good Good",
+     "artist": "Usher, Summer Walker & 21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "What It Is (Block Boy)",
+     "artist": "Doechii Featuring Kodak Black"
+    },
+    {
+     "rank": 9,
+     "song": "Agora Hills",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 10,
+     "song": "I Know ?",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 11,
+     "song": "Peaches & Eggplants",
+     "artist": "Young Nudy Featuring 21 Savage"
+    },
+    {
+     "rank": 12,
+     "song": "Meltdown",
+     "artist": "Travis Scott Featuring Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Great Gatsby",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 14,
+     "song": "Bongos",
+     "artist": "Cardi B & Megan Thee Stallion"
+    },
+    {
+     "rank": 15,
+     "song": "Boyz Don't Cry",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 16,
+     "song": "Turks & Caicos",
+     "artist": "Rod Wave Featuring 21 Savage"
+    },
+    {
+     "rank": 17,
+     "song": "Fight The Feeling",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 18,
+     "song": "Call Your Friends",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 19,
+     "song": "Come See Me",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 20,
+     "song": "SkeeYee",
+     "artist": "Sexyy Red"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231017143938/https://www.billboard.com/charts/country-songs/",
+   "captured": "2023-10-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fast Car",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 2,
+     "song": "I Remember Everything",
+     "artist": "Zach Bryan Featuring Kacey Musgraves"
+    },
+    {
+     "rank": 3,
+     "song": "Last Night",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 4,
+     "song": "Thinkin' Bout Me",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 5,
+     "song": "Need A Favor",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 6,
+     "song": "Religiously",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 7,
+     "song": "Watermelon Moonshine",
+     "artist": "Lainey Wilson"
+    },
+    {
+     "rank": 8,
+     "song": "Wild Ones",
+     "artist": "Jessie Murph & Jelly Roll"
+    },
+    {
+     "rank": 9,
+     "song": "White Horse",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 10,
+     "song": "Save Me",
+     "artist": "Jelly Roll With Lainey Wilson"
+    },
+    {
+     "rank": 11,
+     "song": "Try That In A Small Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 12,
+     "song": "Rich Men North Of Richmond",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 13,
+     "song": "Hey Driver",
+     "artist": "Zach Bryan Featuring The War And Treaty"
+    },
+    {
+     "rank": 14,
+     "song": "Everything I Love",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 15,
+     "song": "Truck Bed",
+     "artist": "HARDY"
+    },
+    {
+     "rank": 16,
+     "song": "Sarah's Place",
+     "artist": "Zach Bryan Featuring Noah Kahan"
+    },
+    {
+     "rank": 17,
+     "song": "Can't Have Mine",
+     "artist": "Dylan Scott"
+    },
+    {
+     "rank": 18,
+     "song": "Tourniquet",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 19,
+     "song": "Standing Room Only",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 20,
+     "song": "God Gave Me A Girl",
+     "artist": "Russell Dickerson"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231014143129/https://www.beatport.com/top-100",
+   "captured": "2023-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dress Code (Extended Mix)",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 2,
+     "song": "Legacy (Extended Mix)",
+     "artist": "John Summit & VLTRA (IT)"
+    },
+    {
+     "rank": 3,
+     "song": "Saving Up (Extended)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 4,
+     "song": "Drums (Extended Version)",
+     "artist": "James Hype & Kim Petras"
+    },
+    {
+     "rank": 5,
+     "song": "Losing Control (Extended Mix)",
+     "artist": "Odd Mob & OMNOM"
+    },
+    {
+     "rank": 6,
+     "song": "365",
+     "artist": "Camden Cox & Biscits"
+    },
+    {
+     "rank": 7,
+     "song": "Aria (Extended Mix)",
+     "artist": "Argy & Omnya"
+    },
+    {
+     "rank": 8,
+     "song": "Jealous (Extended Mix)",
+     "artist": "Mochakk"
+    },
+    {
+     "rank": 9,
+     "song": "Somebody That I Used To Know (Extended Mix)",
+     "artist": "Kevin McKay & James Cole"
+    },
+    {
+     "rank": 10,
+     "song": "Atmosphere (Extended Mix)",
+     "artist": "Kita Alexander & FISHER (OZ)"
+    },
+    {
+     "rank": 11,
+     "song": "Sunshine (My Girl) (Extended Mix)",
+     "artist": "Wuki"
+    },
+    {
+     "rank": 12,
+     "song": "Up N' Down (feat. JmNPR) (Extended Mix)",
+     "artist": "Deeper Purpose, BRN & JmNPR"
+    },
+    {
+     "rank": 13,
+     "song": "Midtown Playground",
+     "artist": "Chris Stussy"
+    },
+    {
+     "rank": 14,
+     "song": "Baddadan (Extended Mix)",
+     "artist": "Trigga, Chase & Status, Irah, Flowdan & Bou"
+    },
+    {
+     "rank": 15,
+     "song": "Liquor & Cigarettes",
+     "artist": "Chase & Status, Hedex & ArrDee"
+    },
+    {
+     "rank": 16,
+     "song": "More Baby (Extended Mix)",
+     "artist": "Aluna & Chris Lake"
+    },
+    {
+     "rank": 17,
+     "song": "Vois sur ton chemin (Extended Techno Mix)",
+     "artist": "BENNETT (DE)"
+    },
+    {
+     "rank": 18,
+     "song": "Lady (Hear Me Tonight) (Extended Mix)",
+     "artist": "Mark Knight & James Hurr"
+    },
+    {
+     "rank": 19,
+     "song": "(It Goes Like) Nanana",
+     "artist": "Peggy Gou"
+    },
+    {
+     "rank": 20,
+     "song": "Fine Day Anthem (Extended Mix)",
+     "artist": "Boys Noize & Skrillex"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231014062623/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2023-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm Good (Blue)",
+     "artist": "David Guetta & Bebe Rexha"
+    },
+    {
+     "rank": 2,
+     "song": "Strangers",
+     "artist": "Kenya Grace"
+    },
+    {
+     "rank": 3,
+     "song": "Ecstacy",
+     "artist": "SUICIDAL-IDOL"
+    },
+    {
+     "rank": 4,
+     "song": "Baby Don't Hurt Me",
+     "artist": "David Guetta, Anne-Marie & Coi Leray"
+    },
+    {
+     "rank": 5,
+     "song": "Rush",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 6,
+     "song": "Got Me Started",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 7,
+     "song": "GMFU",
+     "artist": "Odetari & 6arelyhuman"
+    },
+    {
+     "rank": 8,
+     "song": "I Love You Hoe",
+     "artist": "Odetari & 9lives"
+    },
+    {
+     "rank": 9,
+     "song": "Luces de Tecno",
+     "artist": "Feid"
+    },
+    {
+     "rank": 10,
+     "song": "Back On 74",
+     "artist": "Jungle"
+    },
+    {
+     "rank": 11,
+     "song": "(It Goes Like) Nanana",
+     "artist": "Peggy Gou"
+    },
+    {
+     "rank": 12,
+     "song": "Elovrga",
+     "artist": "Alex Favela x Grupo Marca Registrada x Joaquin Medina"
+    },
+    {
+     "rank": 13,
+     "song": "Lovely Bastards",
+     "artist": "yatashigang & ZWE1HVNDXR"
+    },
+    {
+     "rank": 14,
+     "song": "Prada",
+     "artist": "casso, RAYE & D-Block Europe"
+    },
+    {
+     "rank": 15,
+     "song": "Both",
+     "artist": "Tiesto, 21 Savage & BIA"
+    },
+    {
+     "rank": 16,
+     "song": "Ferxxo 151",
+     "artist": "Feid & ICON"
+    },
+    {
+     "rank": 17,
+     "song": "Good Loyal Thots",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 18,
+     "song": "Look Don't Touch",
+     "artist": "Odetari & cade clair"
+    },
+    {
+     "rank": 19,
+     "song": "Memory Reboot",
+     "artist": "VOJ & Narvent"
+    },
+    {
+     "rank": 20,
+     "song": "Other Boys",
+     "artist": "Marshmello & Dove Cameron"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231017150955/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2023-10-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "One More Time",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 2,
+     "song": "Under You",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 3,
+     "song": "We Didn't Start The Fire",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 4,
+     "song": "Honey (Are U Coming?)",
+     "artist": "Maneskin"
+    },
+    {
+     "rank": 5,
+     "song": "Lost",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 6,
+     "song": "Dial Drunk",
+     "artist": "Noah Kahan With Post Malone"
+    },
+    {
+     "rank": 7,
+     "song": "Just Pretend",
+     "artist": "Bad Omens"
+    },
+    {
+     "rank": 8,
+     "song": "Loving You",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 9,
+     "song": "Rescue Me",
+     "artist": "Dirty Heads"
+    },
+    {
+     "rank": 10,
+     "song": "Your Side Of Town",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 11,
+     "song": "Running Out Of Time",
+     "artist": "Paramore"
+    },
+    {
+     "rank": 12,
+     "song": "Daylight",
+     "artist": "David Kushner"
+    },
+    {
+     "rank": 13,
+     "song": "Summer Of Luv",
+     "artist": "Portugal. The Man Featuring Unknown Mortal Orchestra"
+    },
+    {
+     "rank": 14,
+     "song": "Pull Me Through",
+     "artist": "Royal Blood"
+    },
+    {
+     "rank": 15,
+     "song": "ALL CAPS",
+     "artist": "Weathers Featuring John The Ghost"
+    },
+    {
+     "rank": 16,
+     "song": "Run Away With Me",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 17,
+     "song": "Say Yes To Heaven",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 18,
+     "song": "About You",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 19,
+     "song": "Hold Me Like A Grudge",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 20,
+     "song": "Lost",
+     "artist": "Bring Me The Horizon"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20231015211013/https://kworb.net/charts/itunes/us.html",
+   "captured": "2023-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cruel Summer",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Lil Boo Thang",
+     "artist": "Paul Russell"
+    },
+    {
+     "rank": 3,
+     "song": "I Remember Everything (feat. Kacey Musgraves)",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 5,
+     "song": "White Horse",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 6,
+     "song": "It Takes A Woman",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 7,
+     "song": "Save Me (with Lainey Wilson)",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 8,
+     "song": "In The Room (feat. Tasha Cobbs Leonard)",
+     "artist": "Maverick City Music, Naomi Raine & Chandler Moore"
+    },
+    {
+     "rank": 9,
+     "song": "Thinkin’ Bout Me",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 10,
+     "song": "Rich Men North of Richmond",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 11,
+     "song": "Lose Control",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 12,
+     "song": "Need A Favor",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 13,
+     "song": "Wild Ones",
+     "artist": "Jessie Murph & Jelly Roll"
+    },
+    {
+     "rank": 14,
+     "song": "...Ready For It?",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 15,
+     "song": "Fast Car",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 16,
+     "song": "Anti-Hero",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 17,
+     "song": "Rockstar",
+     "artist": "Nickelback"
+    },
+    {
+     "rank": 18,
+     "song": "Water",
+     "artist": "Tyla"
+    },
+    {
+     "rank": 19,
+     "song": "Dance The Night",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 20,
+     "song": "Watermelon Moonshine",
+     "artist": "Lainey Wilson"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "month": "2008-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080829182409/http://hypem.com/popular",
+   "captured": "2008-08-29",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "D.A.N.C.E. [More Mash Than Smash Brain Remix]",
+     "artist": "Justice"
+    },
+    {
+     "rank": 2,
+     "song": "Summertime (Crookers Remix)",
+     "artist": "Wiley"
+    },
+    {
+     "rank": 3,
+     "song": "I Will Follow You Into The Dark (Death Cab for Cutie cover)",
+     "artist": "Amanda Palmer"
+    },
+    {
+     "rank": 4,
+     "song": "Walking On A Dream",
+     "artist": "Empire of the Sun"
+    },
+    {
+     "rank": 5,
+     "song": "One Month Off",
+     "artist": "Bloc Party"
+    },
+    {
+     "rank": 6,
+     "song": "Wonderback (Prod. by Cookin Soul)",
+     "artist": "Jay-Z vs Oasis"
+    },
+    {
+     "rank": 7,
+     "song": "Shut Up And Let Me Go (Left/Right Remix)",
+     "artist": "The Ting Tings"
+    },
+    {
+     "rank": 8,
+     "song": "Electric Feel (Aeroplane Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 9,
+     "song": "Handlebars (DJ Shadow Remix)",
+     "artist": "Flobots"
+    },
+    {
+     "rank": 10,
+     "song": "Blood On Our Hands (Justice Remix)",
+     "artist": "Death From Above 1979"
+    },
+    {
+     "rank": 11,
+     "song": "Sex On Fire",
+     "artist": "Kings of Leon"
+    },
+    {
+     "rank": 12,
+     "song": "I'm Good, I'm Gone (Black Kids Remix)",
+     "artist": "Lykke Li"
+    },
+    {
+     "rank": 13,
+     "song": "Kids (Soulwax Nite Version) (256k)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 14,
+     "song": "Pump Up The Volume (Flosstradamus Remix)",
+     "artist": "Cool Kids"
+    },
+    {
+     "rank": 15,
+     "song": "Disturbia (TRU Remix)",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 16,
+     "song": "Gettin It (Feat Lil Wayne)",
+     "artist": "The Cool Kids"
+    },
+    {
+     "rank": 17,
+     "song": "In The Summer (Sumertime) (Crookers Remix)",
+     "artist": "Wiley"
+    },
+    {
+     "rank": 18,
+     "song": "Lights Out (David Rubato Remix)",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 19,
+     "song": "Kids (Soulwax Nite Version)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 20,
+     "song": "Big Girl Now (featuring Lady Gaga)",
+     "artist": "New Kids on the Block"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080809000146/http://2dopeboyz.com/",
+   "captured": "2008-08-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Close To Me",
+     "artist": "El Prez"
+    },
+    {
+     "rank": 2,
+     "song": "NSC: The Series",
+     "artist": "2DopeBoyz x BK Cyph"
+    },
+    {
+     "rank": 3,
+     "song": "Roll My Shit",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 4,
+     "song": "RockMeTV Freestyle",
+     "artist": "Mickey Factz x Sadat X"
+    },
+    {
+     "rank": 5,
+     "song": "In Between x Lupe Fiasco - Gangsta (Unreleased)",
+     "artist": "Rhymefest"
+    },
+    {
+     "rank": 6,
+     "song": "Sorry for the Hurtin f. Gage",
+     "artist": "CL Smooth"
+    },
+    {
+     "rank": 7,
+     "song": "Freestyles",
+     "artist": "Styles P x Sheek Louch x D-Block"
+    },
+    {
+     "rank": 8,
+     "song": "OnDaSpot Freestyle",
+     "artist": "Murs"
+    },
+    {
+     "rank": 9,
+     "song": "Touchdown f. Raheem DeVaughn (Behind The Scenes)",
+     "artist": "The Game"
+    }
+   ]
+  }
+ ]
+}

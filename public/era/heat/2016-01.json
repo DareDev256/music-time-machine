@@ -1,0 +1,856 @@
+{
+ "month": "2016-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160115092925/http://www.hotnewhiphop.com/top100/",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Real Friends/No More Parties In LA",
+     "artist": "Kanye West Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Whole Lotta Lovin'",
+     "artist": "DJ Mustard & Travi$ Scott"
+    },
+    {
+     "rank": 3,
+     "song": "Do It To You",
+     "artist": "The Game Feat. Trey Songz"
+    },
+    {
+     "rank": 4,
+     "song": "Facts",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Wonderful",
+     "artist": "Travi$ Scott Feat. The Weeknd"
+    },
+    {
+     "rank": 6,
+     "song": "Back To Business (Prod. By Swiff D)",
+     "artist": "Dr. Dre Feat. T.I."
+    },
+    {
+     "rank": 7,
+     "song": "Make A Lot (Prod. By Metro Boomin)",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "King City",
+     "artist": "Majid Jordan"
+    },
+    {
+     "rank": 9,
+     "song": "Low Life",
+     "artist": "The Weeknd Feat. Future"
+    },
+    {
+     "rank": 10,
+     "song": "By Chance (Prod. By Mike Will Made It)",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 11,
+     "song": "What A Year",
+     "artist": "Big Sean Feat. Pharrell"
+    },
+    {
+     "rank": 12,
+     "song": "Make You Smile",
+     "artist": "Fetty Wap Feat. Bleek Blaze"
+    },
+    {
+     "rank": 13,
+     "song": "Milly Rock (Remix)",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 14,
+     "song": "#BDAY",
+     "artist": "Tank Feat. Chris Brown"
+    },
+    {
+     "rank": 15,
+     "song": "Glorious Thugs",
+     "artist": "Flatbush Zombies"
+    },
+    {
+     "rank": 16,
+     "song": "A-Team",
+     "artist": "Travi$ Scott"
+    },
+    {
+     "rank": 17,
+     "song": "Bake Sale (Snippet)",
+     "artist": "Wiz Khalifa & Travi$ Scott"
+    },
+    {
+     "rank": 18,
+     "song": "Gone Too Far",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 19,
+     "song": "Azillion",
+     "artist": "Iggy Azalea"
+    },
+    {
+     "rank": 20,
+     "song": "All Good",
+     "artist": "Trae Tha Truth Feat. Rick Ross"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160115000757/http://hypem.com:80/popular",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Genghis Khan Louis The Child Remix",
+     "artist": "Miike Snow"
+    },
+    {
+     "rank": 2,
+     "song": "Waiting",
+     "artist": "Oliver Heldens & Throttle"
+    },
+    {
+     "rank": 3,
+     "song": "In2",
+     "artist": "Kehlani x WSTRN"
+    },
+    {
+     "rank": 4,
+     "song": "To My Soul",
+     "artist": "Jerry Folk"
+    },
+    {
+     "rank": 5,
+     "song": "Afterlife (feat. Echos)",
+     "artist": "Illenium"
+    },
+    {
+     "rank": 6,
+     "song": "Heaven Kiso Remix",
+     "artist": "Shaun Frank & KSHMR"
+    },
+    {
+     "rank": 7,
+     "song": "Room In Here feat. The Game & Sonyae Elise",
+     "artist": "anderson .paak"
+    },
+    {
+     "rank": 8,
+     "song": "Glorious Thugs",
+     "artist": "Flatbush ZOMBiES"
+    },
+    {
+     "rank": 9,
+     "song": "Share My Dreams",
+     "artist": "MYNGA"
+    },
+    {
+     "rank": 10,
+     "song": "Say A Prayer For Me",
+     "artist": "RÜFÜS/RÜFÜS DU SOL"
+    },
+    {
+     "rank": 11,
+     "song": "Secrets & Lies",
+     "artist": "Fort Romeau"
+    },
+    {
+     "rank": 12,
+     "song": "Falling Out (feat. Lido)",
+     "artist": "Cosmo's Midnight"
+    },
+    {
+     "rank": 13,
+     "song": "Without You",
+     "artist": "Caius"
+    },
+    {
+     "rank": 14,
+     "song": "Affection",
+     "artist": "Cigarettes After Sex"
+    },
+    {
+     "rank": 15,
+     "song": "Something For Nothing",
+     "artist": "Rationale"
+    },
+    {
+     "rank": 16,
+     "song": "Proud Autograf Remix",
+     "artist": "Temptations"
+    },
+    {
+     "rank": 17,
+     "song": "Easier Said",
+     "artist": "Sunflower Bean"
+    },
+    {
+     "rank": 18,
+     "song": "Midnight",
+     "artist": "Lane 8"
+    },
+    {
+     "rank": 19,
+     "song": "Renaissance kid Remix",
+     "artist": "Steve James"
+    },
+    {
+     "rank": 20,
+     "song": "The Sneeze",
+     "artist": "argonaut&wasp"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160115214125/http://www.billboard.com/charts/rap-song",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Jumpman",
+     "artist": "Drake & Future"
+    },
+    {
+     "rank": 3,
+     "song": "White Iverson",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "679",
+     "artist": "Fetty Wap Featuring Remy Boyz"
+    },
+    {
+     "rank": 5,
+     "song": "Antidote",
+     "artist": "Travi$ Scott"
+    },
+    {
+     "rank": 6,
+     "song": "Me, Myself & I",
+     "artist": "G-Eazy x Bebe Rexha"
+    },
+    {
+     "rank": 7,
+     "song": "Down In The DM",
+     "artist": "Yo Gotti"
+    },
+    {
+     "rank": 8,
+     "song": "Again",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 9,
+     "song": "Where Ya At",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Hit The Quan",
+     "artist": "iLoveMemphis"
+    },
+    {
+     "rank": 11,
+     "song": "Back Up",
+     "artist": "DeJ Loaf Featuring Big Sean"
+    },
+    {
+     "rank": 12,
+     "song": "Bet You Can't Do It Like Me",
+     "artist": "DLOW"
+    },
+    {
+     "rank": 13,
+     "song": "Best Friend",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "Big Rings",
+     "artist": "Drake & Future"
+    },
+    {
+     "rank": 15,
+     "song": "WTF (Where They From)",
+     "artist": "Missy Elliott Featuring Pharrell Williams"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160117064301/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2016-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Here",
+     "artist": "Alessia Cara"
+    },
+    {
+     "rank": 3,
+     "song": "The Hills",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 4,
+     "song": "Jumpman",
+     "artist": "Drake & Future"
+    },
+    {
+     "rank": 5,
+     "song": "White Iverson",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 6,
+     "song": "In The Night",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 7,
+     "song": "Don't",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 8,
+     "song": "679",
+     "artist": "Fetty Wap Featuring Remy Boyz"
+    },
+    {
+     "rank": 9,
+     "song": "Antidote",
+     "artist": "Travi$ Scott"
+    },
+    {
+     "rank": 10,
+     "song": "Can't Feel My Face",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 11,
+     "song": "Me, Myself & I",
+     "artist": "G-Eazy x Bebe Rexha"
+    },
+    {
+     "rank": 12,
+     "song": "Say It",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 13,
+     "song": "Down In The DM",
+     "artist": "Yo Gotti"
+    },
+    {
+     "rank": 14,
+     "song": "Again",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 15,
+     "song": "Exchange",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 16,
+     "song": "Where Ya At",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 17,
+     "song": "Back To Sleep",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 18,
+     "song": "Hit The Quan",
+     "artist": "iLoveMemphis"
+    },
+    {
+     "rank": 19,
+     "song": "Back Up",
+     "artist": "DeJ Loaf Featuring Big Sean"
+    },
+    {
+     "rank": 20,
+     "song": "Bet You Can't Do It Like Me",
+     "artist": "DLOW"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20160115015245/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sun City Creeps",
+     "artist": "Woods"
+    },
+    {
+     "rank": 2,
+     "song": "Trill Friends",
+     "artist": "Erykah Badu"
+    },
+    {
+     "rank": 3,
+     "song": "Come Down",
+     "artist": "Anderson .Paak"
+    },
+    {
+     "rank": 4,
+     "song": "Be Apart",
+     "artist": "Porches"
+    },
+    {
+     "rank": 5,
+     "song": "Untitled 2",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160115175437/http://www.billboard.com/charts/country-songs",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Die A Happy Man",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 2,
+     "song": "Break Up In A Small Town",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 3,
+     "song": "Home Alone Tonight",
+     "artist": "Luke Bryan Featuring Karen Fairchild"
+    },
+    {
+     "rank": 4,
+     "song": "Burning House",
+     "artist": "Cam"
+    },
+    {
+     "rank": 5,
+     "song": "Gonna Know We Were Here",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 6,
+     "song": "Stay A Little Longer",
+     "artist": "Brothers Osborne"
+    },
+    {
+     "rank": 7,
+     "song": "I Love This Life",
+     "artist": "LoCash"
+    },
+    {
+     "rank": 8,
+     "song": "I Got The Boy",
+     "artist": "Jana Kramer"
+    },
+    {
+     "rank": 9,
+     "song": "I'm Comin' Over",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 10,
+     "song": "Backroad Song",
+     "artist": "Granger Smith"
+    },
+    {
+     "rank": 11,
+     "song": "Beautiful Drug",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 12,
+     "song": "Gonna",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 13,
+     "song": "Break On Me.",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 14,
+     "song": "Dibs",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 15,
+     "song": "Heartbeat",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 16,
+     "song": "Top Of The World",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 17,
+     "song": "Strip It Down",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 18,
+     "song": "Mr. Misunderstood",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 19,
+     "song": "Confession",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 20,
+     "song": "We Went",
+     "artist": "Randy Houser"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160115004316/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2016-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Roses",
+     "artist": "The Chainsmokers Featuring ROZES"
+    },
+    {
+     "rank": 2,
+     "song": "Lean On",
+     "artist": "Major Lazer & DJ Snake Featuring M0"
+    },
+    {
+     "rank": 3,
+     "song": "Where Are U Now",
+     "artist": "Skrillex & Diplo With Justin Bieber"
+    },
+    {
+     "rank": 4,
+     "song": "How Deep Is Your Love",
+     "artist": "Calvin Harris & Disciples"
+    },
+    {
+     "rank": 5,
+     "song": "Dessert",
+     "artist": "Dawin"
+    },
+    {
+     "rank": 6,
+     "song": "Sugar",
+     "artist": "Robin Schulz Featuring Francesco Yates"
+    },
+    {
+     "rank": 7,
+     "song": "Bang My Head",
+     "artist": "David Guetta Featuring Sia & Fetty Wap"
+    },
+    {
+     "rank": 8,
+     "song": "Be Right There",
+     "artist": "Diplo & Sleepy Tom"
+    },
+    {
+     "rank": 9,
+     "song": "Hold My Hand",
+     "artist": "Jess Glynne"
+    },
+    {
+     "rank": 10,
+     "song": "Magnets",
+     "artist": "Disclosure Featuring Lorde"
+    },
+    {
+     "rank": 11,
+     "song": "Middle",
+     "artist": "DJ Snake Featuring Bipolar Sunshine"
+    },
+    {
+     "rank": 12,
+     "song": "Stay",
+     "artist": "Kygo Featuring Maty Noyes"
+    },
+    {
+     "rank": 13,
+     "song": "Daddy",
+     "artist": "PSY Featuring CL"
+    },
+    {
+     "rank": 14,
+     "song": "Omen",
+     "artist": "Disclosure Featuring Sam Smith"
+    },
+    {
+     "rank": 15,
+     "song": "In My Room",
+     "artist": "Yellow Claw & DJ Mustard Featuring Ty Dolla $ign & Tyga"
+    },
+    {
+     "rank": 16,
+     "song": "Never Forget You",
+     "artist": "Zara Larsson & MNEK"
+    },
+    {
+     "rank": 17,
+     "song": "Running Out",
+     "artist": "Matoma & Astrid S"
+    },
+    {
+     "rank": 18,
+     "song": "The Buzz",
+     "artist": "Hermitude Featuring Big K.R.I.T., Mataya & Young Tapz"
+    },
+    {
+     "rank": 19,
+     "song": "Light It Up",
+     "artist": "Major Lazer Featuring Nyla"
+    },
+    {
+     "rank": 20,
+     "song": "Ocean Drive",
+     "artist": "Duke Dumont"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20160116160147/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2016-01-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stressed Out",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Mess Around",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 3,
+     "song": "First",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 4,
+     "song": "Adventure Of A Lifetime",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 5,
+     "song": "Nightlight",
+     "artist": "Silversun Pickups"
+    },
+    {
+     "rank": 6,
+     "song": "Fire And The Flood",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 7,
+     "song": "S.O.B.",
+     "artist": "Nathaniel Rateliff & The Night Sweats"
+    },
+    {
+     "rank": 8,
+     "song": "The Ghosts Of Beverly Drive",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 9,
+     "song": "Trip Switch",
+     "artist": "Nothing But Thieves"
+    },
+    {
+     "rank": 10,
+     "song": "Renegades",
+     "artist": "X Ambassadors"
+    },
+    {
+     "rank": 11,
+     "song": "Unsteady",
+     "artist": "X Ambassadors"
+    },
+    {
+     "rank": 12,
+     "song": "Ex's & Oh's",
+     "artist": "Elle King"
+    },
+    {
+     "rank": 13,
+     "song": "Mountain At My Gates",
+     "artist": "Foals"
+    },
+    {
+     "rank": 14,
+     "song": "Roots",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 15,
+     "song": "2 Heads",
+     "artist": "Coleman Hell"
+    },
+    {
+     "rank": 16,
+     "song": "Thank God For Girls",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 17,
+     "song": "Magnets",
+     "artist": "Disclosure Featuring Lorde"
+    },
+    {
+     "rank": 18,
+     "song": "Ditmas",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 19,
+     "song": "Love Me",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 20,
+     "song": "Saint Cecilia",
+     "artist": "Foo Fighters"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20160117161045/http://2dopeboyz.com/",
+   "captured": "2016-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Triple Threat Freestyle",
+     "artist": "JSWISS"
+    },
+    {
+     "rank": 2,
+     "song": "Wavy",
+     "artist": "Ty Dolla $ign feat. Joe Moses"
+    },
+    {
+     "rank": 3,
+     "song": "John F. Hennessy",
+     "artist": "Creative Gold"
+    },
+    {
+     "rank": 4,
+     "song": "15 Minutes Away",
+     "artist": "Zerry Ziggz"
+    },
+    {
+     "rank": 5,
+     "song": "Supreme Aftermath",
+     "artist": "Blak Madeen feat. LP"
+    },
+    {
+     "rank": 6,
+     "song": "We Luv It",
+     "artist": "Dax (of Mpire) feat. Nutso & Kaeson"
+    },
+    {
+     "rank": 7,
+     "song": "Who's Next",
+     "artist": "Soulbrotha feat. Q-Ball & Curt Cazal"
+    },
+    {
+     "rank": 8,
+     "song": "Digital Warfare",
+     "artist": "Beneficence feat. Inspectah Deck"
+    },
+    {
+     "rank": 9,
+     "song": "Al Sharpton",
+     "artist": "Future"
+    },
+    {
+     "rank": 10,
+     "song": "What's Understood",
+     "artist": "Nyck Caution feat. Joey Bada$$"
+    },
+    {
+     "rank": 11,
+     "song": "Forest Hills Drive: Homecoming",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 12,
+     "song": "King City",
+     "artist": "Majid Jordan"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,891 @@
+{
+ "month": "2018-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180717004044/https://www.hotnewhiphop.com/top100/",
+   "captured": "2018-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Upscale",
+     "artist": "Future & Young Thug Feat. Quavo"
+    },
+    {
+     "rank": 2,
+     "song": "WOAH",
+     "artist": "Bow Wow Feat. Diddy"
+    },
+    {
+     "rank": 3,
+     "song": "Fortnite",
+     "artist": "Murda Beatz Feat. Yung Bans"
+    },
+    {
+     "rank": 4,
+     "song": "Wasted",
+     "artist": "Juice WRLD Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 5,
+     "song": "Feels Like Summer",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 6,
+     "song": "Intro Edition",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 7,
+     "song": "Oh Yeah",
+     "artist": "Fabolous Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 8,
+     "song": "Demon Love",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 9,
+     "song": "Clout Cobain",
+     "artist": "Denzel Curry"
+    },
+    {
+     "rank": 10,
+     "song": "My Bitches Love Me (Prod. By London On Da Track)",
+     "artist": "Young Thug Feat. Migos"
+    },
+    {
+     "rank": 11,
+     "song": "Self Care",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 12,
+     "song": "Summertime Magic",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 13,
+     "song": "Boo'd Up (Remix)",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 14,
+     "song": "Nasty One",
+     "artist": "Lil Kim"
+    },
+    {
+     "rank": 15,
+     "song": "Reach For The Stars",
+     "artist": "Wiz Khalifa Feat. Bone Thugs-N-Harmony"
+    },
+    {
+     "rank": 16,
+     "song": "Uh Uh",
+     "artist": "Chief Keef Feat. Playboi Carti"
+    },
+    {
+     "rank": 17,
+     "song": "Nowadays",
+     "artist": "PnB Rock"
+    },
+    {
+     "rank": 18,
+     "song": "Imma Get It",
+     "artist": "Tommie Feat. Spice"
+    },
+    {
+     "rank": 19,
+     "song": "Leave Me",
+     "artist": "Rich The Kid"
+    },
+    {
+     "rank": 20,
+     "song": "Shoot (Prod. By Play-N-Skillz)",
+     "artist": "Desiigner"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180717200841/https://hypem.com/popular",
+   "captured": "2018-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rabbit",
+     "artist": "Moon Panda"
+    },
+    {
+     "rank": 2,
+     "song": "Don't You Forget About Me",
+     "artist": "T-E-E-D"
+    },
+    {
+     "rank": 3,
+     "song": "Muanapoto",
+     "artist": "TSHEGUE"
+    },
+    {
+     "rank": 4,
+     "song": "Looking For Knives",
+     "artist": "DYAN"
+    },
+    {
+     "rank": 5,
+     "song": "Lost Arts",
+     "artist": "L'Orange"
+    },
+    {
+     "rank": 6,
+     "song": "Easy Money",
+     "artist": "Westerman"
+    },
+    {
+     "rank": 7,
+     "song": "Crooked",
+     "artist": "Steve Void"
+    },
+    {
+     "rank": 8,
+     "song": "Absence",
+     "artist": "Dyan"
+    },
+    {
+     "rank": 9,
+     "song": "desert rose",
+     "artist": "yellow shoots"
+    },
+    {
+     "rank": 10,
+     "song": "When, Pt.2 : Grace",
+     "artist": "Simba Andrews ✪"
+    },
+    {
+     "rank": 11,
+     "song": "Wonderland",
+     "artist": "Jinka"
+    },
+    {
+     "rank": 12,
+     "song": "Out There (vocal Mix)",
+     "artist": "Corren Cavini"
+    },
+    {
+     "rank": 13,
+     "song": "Worm Can",
+     "artist": "Ohmfield"
+    },
+    {
+     "rank": 14,
+     "song": "Chasing the Muse",
+     "artist": "Valley Queen"
+    },
+    {
+     "rank": 15,
+     "song": "Jimmy",
+     "artist": "Jimmy"
+    },
+    {
+     "rank": 16,
+     "song": "The Border",
+     "artist": "Astronauts, etc."
+    },
+    {
+     "rank": 17,
+     "song": "Bound to Lose",
+     "artist": "Refs"
+    },
+    {
+     "rank": 18,
+     "song": "Miles Away",
+     "artist": "Rvdical The Kid"
+    },
+    {
+     "rank": 19,
+     "song": "Stay Tonight",
+     "artist": "Niterunner"
+    },
+    {
+     "rank": 20,
+     "song": "I Am",
+     "artist": "Darto"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180717161915/https://www.billboard.com/charts/rap-song",
+   "captured": "2018-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 2,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 5,
+     "song": "Psycho",
+     "artist": "Post Malone Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 6,
+     "song": "Sad!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 7,
+     "song": "Nonstop",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 9,
+     "song": "I'm Upset",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Yes Indeed",
+     "artist": "Lil Baby & Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Taste",
+     "artist": "Tyga Featuring Offset"
+    },
+    {
+     "rank": 12,
+     "song": "Mob Ties",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Apes**t",
+     "artist": "The Carters"
+    },
+    {
+     "rank": 14,
+     "song": "Moonlight",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 15,
+     "song": "Be Careful",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 16,
+     "song": "Emotionless",
+     "artist": "Drake"
+    },
+    {
+     "rank": 17,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 18,
+     "song": "Elevate",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Can't Take A Joke",
+     "artist": "Drake"
+    },
+    {
+     "rank": 20,
+     "song": "Big Bank",
+     "artist": "YG Featuring 2 Chainz, Big Sean & Nicki Minaj"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180717200344/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jet Black",
+     "artist": "Channel Tres"
+    },
+    {
+     "rank": 2,
+     "song": "Sports",
+     "artist": "Viagra Boys"
+    },
+    {
+     "rank": 3,
+     "song": "Never Bend (Remix) [ft. Lil Uzi Vert]",
+     "artist": "03 Greedo"
+    },
+    {
+     "rank": 4,
+     "song": "No Angel",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 5,
+     "song": "Over and Out",
+     "artist": "Nine Inch Nails"
+    },
+    {
+     "rank": 6,
+     "song": "Stay Woke [ft. Miguel]",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 7,
+     "song": "Boys",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 8,
+     "song": "Nobody",
+     "artist": "Mitski"
+    },
+    {
+     "rank": 9,
+     "song": "Rose in Harlem",
+     "artist": "Teyana Taylor"
+    },
+    {
+     "rank": 10,
+     "song": "Overload",
+     "artist": "Georgia Anne Muldrow"
+    },
+    {
+     "rank": 11,
+     "song": "Is It Cold in the Water?",
+     "artist": "SOPHIE"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180718055510/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-07-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 2,
+     "song": "Get Along",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 3,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Simple",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 5,
+     "song": "Mercy",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 6,
+     "song": "One Number Away",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "I Was Jack (You Were Diane)",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 8,
+     "song": "Drowns The Whiskey",
+     "artist": "Jason Aldean Featuring Miranda Lambert"
+    },
+    {
+     "rank": 9,
+     "song": "Up Down",
+     "artist": "Morgan Wallen Featuring Florida Georgia Line"
+    },
+    {
+     "rank": 10,
+     "song": "You Make It Easy",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 11,
+     "song": "Life Changes",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 12,
+     "song": "Take Back Home Girl",
+     "artist": "Chris Lane Featuring Tori Kelly"
+    },
+    {
+     "rank": 13,
+     "song": "Kiss Somebody",
+     "artist": "Morgan Evans"
+    },
+    {
+     "rank": 14,
+     "song": "Coming Home",
+     "artist": "Keith Urban Featuring Julia Michaels"
+    },
+    {
+     "rank": 15,
+     "song": "Sunrise, Sunburn, Sunset",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 16,
+     "song": "Hotel Key",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 17,
+     "song": "Cry Pretty",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 18,
+     "song": "Talk You Out Of It",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 19,
+     "song": "Downtown's Dead",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 20,
+     "song": "Hooked",
+     "artist": "Dylan Scott"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180717201550/https://www.beatport.com/top-100",
+   "captured": "2018-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Losing It (Extended)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "Cafe Del Mar (Tale Of Us Renaissance Remix)",
+     "artist": "Energy 52"
+    },
+    {
+     "rank": 3,
+     "song": "Buggin' feat. Jem Cooke",
+     "artist": "Hot Since 82"
+    },
+    {
+     "rank": 4,
+     "song": "Your Mind",
+     "artist": "Adam Beyer & Bart Skils"
+    },
+    {
+     "rank": 5,
+     "song": "E SAMBA 2018",
+     "artist": "Junior Jack & Tube & Berger"
+    },
+    {
+     "rank": 6,
+     "song": "HAL",
+     "artist": "Tiga & Kolsch"
+    },
+    {
+     "rank": 7,
+     "song": "Born Slippy (Reincarnation Mix)",
+     "artist": "Andrew Meller"
+    },
+    {
+     "rank": 8,
+     "song": "The Solution",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 9,
+     "song": "At Night (Purple Disco Machine Extended Remix)",
+     "artist": "Shakedown"
+    },
+    {
+     "rank": 10,
+     "song": "At Night (Peggy Gou's Acid Journey Remix)",
+     "artist": "Shakedown"
+    },
+    {
+     "rank": 11,
+     "song": "Blade Runner (Maceo Plex Renaissance Remix)",
+     "artist": "Remake"
+    },
+    {
+     "rank": 12,
+     "song": "DMT",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 13,
+     "song": "Say Something",
+     "artist": "Nasser Baker"
+    },
+    {
+     "rank": 14,
+     "song": "Finder (Carl Cox Remix)",
+     "artist": "Ninetoes"
+    },
+    {
+     "rank": 15,
+     "song": "Jack My Yum",
+     "artist": "Tiger Stripes"
+    },
+    {
+     "rank": 16,
+     "song": "Anonymous",
+     "artist": "Josh Butler"
+    },
+    {
+     "rank": 17,
+     "song": "Pez",
+     "artist": "Green Velvet & Mihalis Safras"
+    },
+    {
+     "rank": 18,
+     "song": "Electric Feel (Extended Mix)",
+     "artist": "PAX"
+    },
+    {
+     "rank": 19,
+     "song": "Babarabatiri (David Penn Remix)",
+     "artist": "Todd Terry & Gypsymen"
+    },
+    {
+     "rank": 20,
+     "song": "Hidden T",
+     "artist": "Enrico Sangiuliano"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180718123328/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2018-07-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "One Kiss",
+     "artist": "Calvin Harris & Dua Lipa"
+    },
+    {
+     "rank": 2,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 3,
+     "song": "Jackie Chan",
+     "artist": "Tiesto & Dzeko Featuring Preme & Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "Ocean",
+     "artist": "Martin Garrix Featuring Khalid"
+    },
+    {
+     "rank": 5,
+     "song": "Solo",
+     "artist": "Clean Bandit Featuring Demi Lovato"
+    },
+    {
+     "rank": 6,
+     "song": "Remind Me To Forget",
+     "artist": "Kygo Featuring Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "Silence",
+     "artist": "Marshmello Featuring Khalid"
+    },
+    {
+     "rank": 8,
+     "song": "Born To Be Yours",
+     "artist": "Kygo & Imagine Dragons"
+    },
+    {
+     "rank": 9,
+     "song": "Wolves",
+     "artist": "Selena Gomez X Marshmello"
+    },
+    {
+     "rank": 10,
+     "song": "Rise",
+     "artist": "Jonas Blue Featuring Jack & Jack"
+    },
+    {
+     "rank": 11,
+     "song": "Body",
+     "artist": "Loud Luxury Featuring Brando"
+    },
+    {
+     "rank": 12,
+     "song": "Better Not",
+     "artist": "Louis The Child Featuring Wafia"
+    },
+    {
+     "rank": 13,
+     "song": "Flames",
+     "artist": "David Guetta & Sia"
+    },
+    {
+     "rank": 14,
+     "song": "Somebody",
+     "artist": "The Chainsmokers & Drew Love"
+    },
+    {
+     "rank": 15,
+     "song": "If You're Over Me",
+     "artist": "Years & Years"
+    },
+    {
+     "rank": 16,
+     "song": "Finest Hour",
+     "artist": "Cash Cash Featuring Abir"
+    },
+    {
+     "rank": 17,
+     "song": "Only You",
+     "artist": "Cheat Codes & Little Mix"
+    },
+    {
+     "rank": 18,
+     "song": "Fly",
+     "artist": "Marshmello Featuring Leah Culver"
+    },
+    {
+     "rank": 19,
+     "song": "Ride Or Die",
+     "artist": "The Knocks Featuring Foster The People"
+    },
+    {
+     "rank": 20,
+     "song": "Karma",
+     "artist": "Years & Years"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180718131437/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2018-07-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Feel Like I'm Drowning",
+     "artist": "Two Feet"
+    },
+    {
+     "rank": 2,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 3,
+     "song": "Quarter Past Midnight",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 4,
+     "song": "Whatever It Takes",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 5,
+     "song": "Africa",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 6,
+     "song": "Sit Next To Me",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 7,
+     "song": "Jumpsuit",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 8,
+     "song": "Kamikaze",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 9,
+     "song": "Colors",
+     "artist": "Beck"
+    },
+    {
+     "rank": 10,
+     "song": "Burn The House Down",
+     "artist": "AJR"
+    },
+    {
+     "rank": 11,
+     "song": "You Worry Me",
+     "artist": "Nathaniel Rateliff & The Night Sweats"
+    },
+    {
+     "rank": 12,
+     "song": "&Run",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 13,
+     "song": "Hunger",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 14,
+     "song": "Gold Rush",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 15,
+     "song": "Give Yourself A Try",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 16,
+     "song": "Nevermind",
+     "artist": "Dennis Lloyd"
+    },
+    {
+     "rank": 17,
+     "song": "Lash Out",
+     "artist": "Alice Merton"
+    },
+    {
+     "rank": 18,
+     "song": "White Flag",
+     "artist": "Bishop Briggs"
+    },
+    {
+     "rank": 19,
+     "song": "Four Out Of Five",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 20,
+     "song": "Fever Pitch",
+     "artist": "Rainbow Kitten Surprise"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180714104708/http://2dopeboyz.com/",
+   "captured": "2018-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wraith",
+     "artist": "Ro Ransom"
+    },
+    {
+     "rank": 2,
+     "song": "SHOOT",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 3,
+     "song": "Like I Used To",
+     "artist": "Tinashe"
+    },
+    {
+     "rank": 4,
+     "song": "Banging",
+     "artist": "Jim Jones feat. Mozzy"
+    },
+    {
+     "rank": 5,
+     "song": "Morphine",
+     "artist": "Princess Nokia"
+    },
+    {
+     "rank": 6,
+     "song": "Better",
+     "artist": "Estelle"
+    },
+    {
+     "rank": 7,
+     "song": "Tucked Off Shawty / Touchdown",
+     "artist": "Rexx Life Raj"
+    },
+    {
+     "rank": 8,
+     "song": "Fresh Prince of Belaire",
+     "artist": "Dave East & Rick Ross"
+    }
+   ]
+  }
+ ]
+}

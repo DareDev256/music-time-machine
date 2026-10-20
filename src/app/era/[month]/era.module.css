@@ -117,3 +117,6 @@
   .table td { padding: 8px 8px 8px 0; }
   .heatList li { padding: 7px 0; }
 }
+.moreSources { margin-top: 18px; }
+.moreSources > summary { font-size: 12px; letter-spacing: .14em; }
+.moreSources[open] > .heat { margin-top: 16px; }

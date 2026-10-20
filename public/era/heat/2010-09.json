@@ -336,6 +336,291 @@
      "artist": "Nicki Minaj"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100915025705/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2010-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ready for the World",
+     "artist": "How to Dress Well"
+    },
+    {
+     "rank": 2,
+     "song": "Eyesore",
+     "artist": "Women"
+    },
+    {
+     "rank": 3,
+     "song": "Helicopter",
+     "artist": "Deerhunter"
+    },
+    {
+     "rank": 4,
+     "song": "Monster\" [ft. Justin Vernon, Rick Ross, Jay-Z, and Nicki Minaj]",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Home",
+     "artist": "Glasser"
+    },
+    {
+     "rank": 6,
+     "song": "Slow",
+     "artist": "Twin Shadow"
+    },
+    {
+     "rank": 7,
+     "song": "Heirloom",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 8,
+     "song": "Fuck You",
+     "artist": "Cee-Lo"
+    },
+    {
+     "rank": 9,
+     "song": "Decisions [ft. Yüksel Arslan]",
+     "artist": "How to Dress Well"
+    },
+    {
+     "rank": 10,
+     "song": "Returnal\" [ft. Antony]",
+     "artist": "Oneohtrix Point Never"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100914144923/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2010-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pretty Good At Drinkin' Beer",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 2,
+     "song": "Our Kind Of Love",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 3,
+     "song": "Love Like Crazy",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 4,
+     "song": "All About Tonight",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 5,
+     "song": "The Boys of Fall",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 6,
+     "song": "Smile",
+     "artist": "Uncle Kracker"
+    },
+    {
+     "rank": 7,
+     "song": "I'm In",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 8,
+     "song": "All Over Me",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 9,
+     "song": "Roll With It",
+     "artist": "Easton Corbin"
+    },
+    {
+     "rank": 10,
+     "song": "Little White Church",
+     "artist": "Little Big Town"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100909083229/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2010-09-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Catalyst",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 2,
+     "song": "Animal",
+     "artist": "Neon Trees"
+    },
+    {
+     "rank": 3,
+     "song": "In One Ear",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 4,
+     "song": "Lay Me Down",
+     "artist": "The Dirty Heads Featuring Rome"
+    },
+    {
+     "rank": 5,
+     "song": "Lisztomania",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 6,
+     "song": "Crossfire",
+     "artist": "Brandon Flowers"
+    },
+    {
+     "rank": 7,
+     "song": "Savior",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 8,
+     "song": "Impossible",
+     "artist": "Anberlin"
+    },
+    {
+     "rank": 9,
+     "song": "Little Lion Man",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 10,
+     "song": "The Sound (John M. Perkins' ...",
+     "artist": "Switchfoot"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100901005601/http://www.2dopeboyz.com:80/",
+   "captured": "2010-09-01",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Clockin’ Lotsa Dollarz f. Bun B & Sir Mix-A-Lot",
+     "artist": "GLC"
+    },
+    {
+     "rank": 2,
+     "song": "Everyday Struggle f. Raekwon",
+     "artist": "Faith Evans"
+    },
+    {
+     "rank": 3,
+     "song": "RoxTar",
+     "artist": "Kokayi"
+    },
+    {
+     "rank": 4,
+     "song": "What Am I Supposed To Do",
+     "artist": "Nickelus F"
+    },
+    {
+     "rank": 5,
+     "song": "Love Song pt.4",
+     "artist": "Jean Grae"
+    },
+    {
+     "rank": 6,
+     "song": "Knowledge Be the Key f. Rakaa Iriscience",
+     "artist": "El Da Sensai & The Returners"
+    },
+    {
+     "rank": 7,
+     "song": "Star (Pimps In Canada In 3D) f. The Lessondary",
+     "artist": "Che Grand"
+    },
+    {
+     "rank": 8,
+     "song": "Heavyweights f. Adam Bomb & eLZhi",
+     "artist": "TassNata"
+    },
+    {
+     "rank": 9,
+     "song": "New Campus Kingpin",
+     "artist": "Mickey Factz"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100921015917/http://pigeonsandplanes.com:80/",
+   "captured": "2010-09-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Just The Way You Are (Remix)",
+     "artist": "Bruno Mars ft. Lupe Fiasco"
+    },
+    {
+     "rank": 2,
+     "song": "Jump Down ft. The Cool Kids",
+     "artist": "Travis Barker"
+    },
+    {
+     "rank": 3,
+     "song": "Planet Fitness",
+     "artist": "Shortman Score & Frank Ramz"
+    },
+    {
+     "rank": 4,
+     "song": "Groove Me ft. Theophilus London",
+     "artist": "Maximum Balloon"
+    },
+    {
+     "rank": 5,
+     "song": "Helicopter",
+     "artist": "Deerhunter"
+    },
+    {
+     "rank": 6,
+     "song": "Go ft. Jim Jones & Curren$y",
+     "artist": "Ski Beatz"
+    },
+    {
+     "rank": 7,
+     "song": "Ruthless",
+     "artist": "Video + MP3! Ima Robot"
+    },
+    {
+     "rank": 8,
+     "song": "Solid Ground",
+     "artist": "Maps & Atlases"
+    }
+   ]
   }
  ]
 }

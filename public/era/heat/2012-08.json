@@ -341,6 +341,291 @@
      "artist": "Trey Songz Featuring T.I."
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120816211558/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2012-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mother of the World",
+     "artist": "Swans"
+    },
+    {
+     "rank": 2,
+     "song": "My Kind of Woman",
+     "artist": "Mac DeMarco"
+    },
+    {
+     "rank": 3,
+     "song": "Sweet Talk",
+     "artist": "Jessie Ware"
+    },
+    {
+     "rank": 4,
+     "song": "Till We Ghosts",
+     "artist": "Petite Noir"
+    },
+    {
+     "rank": 5,
+     "song": "After Light\" [ft. AlunaGeorge]",
+     "artist": "Rustie"
+    },
+    {
+     "rank": 6,
+     "song": "Chained",
+     "artist": "The xx"
+    },
+    {
+     "rank": 7,
+     "song": "Flood's New Light",
+     "artist": "Thee Oh Sees"
+    },
+    {
+     "rank": 8,
+     "song": "Yet Again",
+     "artist": "Grizzly Bear"
+    },
+    {
+     "rank": 9,
+     "song": "Lord Knows",
+     "artist": "Dum Dum Girls"
+    },
+    {
+     "rank": 10,
+     "song": "Flange Face\" [ft. Miguel Atwood-Ferguson]",
+     "artist": "The Gaslamp Killer"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120817085358/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2012-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Angel Eyes",
+     "artist": "Love And Theft"
+    },
+    {
+     "rank": 2,
+     "song": "(Kissed You) Good Night",
+     "artist": "Gloriana"
+    },
+    {
+     "rank": 3,
+     "song": "Come Over",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 4,
+     "song": "Over",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 5,
+     "song": "Pontoon",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 6,
+     "song": "Time Is Love",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 7,
+     "song": "Postcard From Paris",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 8,
+     "song": "Why Ya Wanna",
+     "artist": "Jana Kramer"
+    },
+    {
+     "rank": 9,
+     "song": "For You",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 10,
+     "song": "Wanted",
+     "artist": "Hunter Hayes"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120815062207/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2012-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Some Nights",
+     "artist": "fun."
+    },
+    {
+     "rank": 2,
+     "song": "Burn It Down",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 3,
+     "song": "Oh Love",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 4,
+     "song": "Too Close",
+     "artist": "Alex Clare"
+    },
+    {
+     "rank": 5,
+     "song": "Little Talks",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 6,
+     "song": "It's Time",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "Runaways",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 8,
+     "song": "Ho Hey",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 9,
+     "song": "Gold On The Ceiling",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 10,
+     "song": "Tongue Tied",
+     "artist": "Grouplove"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120808221552/http://www.2dopeboyz.com/",
+   "captured": "2012-08-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "iPhones & Bad B*tches f. Dom Kennedy, Bad Lucc & Skeme",
+     "artist": "Problem"
+    },
+    {
+     "rank": 2,
+     "song": "Ode To The Stars",
+     "artist": "Sound FX"
+    },
+    {
+     "rank": 3,
+     "song": "Ain’t Bout That Life",
+     "artist": "Skeme"
+    },
+    {
+     "rank": 4,
+     "song": "Born To Win f. Maffew Ragazino",
+     "artist": "Eddie B & Shabaam Sahdeeq"
+    },
+    {
+     "rank": 5,
+     "song": "Andre “Paypa” Thomas (FreEP)",
+     "artist": "Paypa"
+    },
+    {
+     "rank": 6,
+     "song": "Chase To Nowhere",
+     "artist": "QuESt"
+    },
+    {
+     "rank": 7,
+     "song": "Lord Knows What f. Roc Marciano",
+     "artist": "Double A.B. & Dub Sonata"
+    },
+    {
+     "rank": 8,
+     "song": "Perrier & Rose f. Smoke DZA",
+     "artist": "Nakim"
+    },
+    {
+     "rank": 9,
+     "song": "The World Is Not Enough",
+     "artist": "Asher Roth"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120814042625/http://pigeonsandplanes.com:80/",
+   "captured": "2012-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Purple Kisses",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 2,
+     "song": "BC",
+     "artist": "Cold Showers"
+    },
+    {
+     "rank": 3,
+     "song": "Lamborghini Angels",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 4,
+     "song": "Bout It, Bout It",
+     "artist": "Freddie Gibbs ft. Kirko Bangz"
+    },
+    {
+     "rank": 5,
+     "song": "You’re The One (Deadboy Remix)",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 6,
+     "song": "The House That Heaven Built",
+     "artist": "Japandroids"
+    },
+    {
+     "rank": 7,
+     "song": "Varðeldur",
+     "artist": "Sigur Rós"
+    },
+    {
+     "rank": 8,
+     "song": "Rhymin’ Slang",
+     "artist": "JJ DOOM"
+    }
+   ]
   }
  ]
 }

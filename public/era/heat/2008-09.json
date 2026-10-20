@@ -1,0 +1,171 @@
+{
+ "month": "2008-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080915032514/http://hypem.com:80/popular?",
+   "captured": "2008-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Manhattan",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 2,
+     "song": "Wake Up Mr. West",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "Electric Feel (Justice Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 4,
+     "song": "Love Lockdown",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Paper Planes (Dskotek Remix)",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 6,
+     "song": "Sex On Fire",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 7,
+     "song": "Young Folks",
+     "artist": "The Kooks"
+    },
+    {
+     "rank": 8,
+     "song": "Notion",
+     "artist": "Kings of Leon"
+    },
+    {
+     "rank": 9,
+     "song": "Love Lockdown",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 10,
+     "song": "I'm Too Fat To Be A Hipster (Mightyfools Remix)",
+     "artist": "OH SNAP!!"
+    },
+    {
+     "rank": 11,
+     "song": "Planisphre (Final)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 12,
+     "song": "Stork And Owl",
+     "artist": "TV On The Radio"
+    },
+    {
+     "rank": 13,
+     "song": "Be Somebody",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 14,
+     "song": "Kids (Soulwax remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 15,
+     "song": "Closer",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 16,
+     "song": "Do You Want to (Metronomy Remix)",
+     "artist": "Franz Ferdinand"
+    },
+    {
+     "rank": 17,
+     "song": "Electric Feel [James Rutledge Remix]",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 18,
+     "song": "Love Lockdown",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 19,
+     "song": "Swagger Like Us (Cobra Krames Edit)",
+     "artist": "T.I. ft.. Kanye West, Jay-Z & Lil Wayn…"
+    },
+    {
+     "rank": 20,
+     "song": "Magic",
+     "artist": "Ladyhawke"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080914124247/http://2dopeboyz.com:80/",
+   "captured": "2008-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "In My Bag (rmx)",
+     "artist": "SeDrew Price, Freeway & JD Era"
+    },
+    {
+     "rank": 2,
+     "song": "American Dreamin x The 7 Day Theory (Mixtapes)",
+     "artist": "Rain"
+    },
+    {
+     "rank": 3,
+     "song": "Glow f. Elzhi & Royce Da 5′9″",
+     "artist": "Jake One"
+    },
+    {
+     "rank": 4,
+     "song": "Ain’t I (rmx) f. T.I. & Young Dro (Behind the Scenes pt.2)",
+     "artist": "Yung L.A."
+    },
+    {
+     "rank": 5,
+     "song": "Love Lockdown Freestyle",
+     "artist": "Jin"
+    },
+    {
+     "rank": 6,
+     "song": "40 Days, 40 Nights",
+     "artist": "XV"
+    },
+    {
+     "rank": 7,
+     "song": "So Fly f. Slim Of 112",
+     "artist": "Sandman"
+    },
+    {
+     "rank": 8,
+     "song": "Big Boy f. Mack 10, Jim Jones & The Game",
+     "artist": "Big Wy"
+    },
+    {
+     "rank": 9,
+     "song": "Droppin’ Some Shit f. Skull Gang",
+     "artist": "Juelz Santana"
+    }
+   ]
+  }
+ ]
+}

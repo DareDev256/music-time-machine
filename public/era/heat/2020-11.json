@@ -1,0 +1,1106 @@
+{
+ "month": "2020-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115112209/https://www.hotnewhiphop.com/top100/",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Masether",
+     "artist": "Masika Kalysha"
+    },
+    {
+     "rank": 2,
+     "song": "Guillotine",
+     "artist": "Wheezy Feat. Future"
+    },
+    {
+     "rank": 3,
+     "song": "Quarantine Thick",
+     "artist": "2 Chainz Feat. Mulatto"
+    },
+    {
+     "rank": 4,
+     "song": "Checkmate",
+     "artist": "Vado Feat. Dave East"
+    },
+    {
+     "rank": 5,
+     "song": "Around",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 6,
+     "song": "Wonderland",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 7,
+     "song": "Nah Nah Nah (Remix)",
+     "artist": "Kanye West Feat. DaBaby"
+    },
+    {
+     "rank": 8,
+     "song": "Who Wants What",
+     "artist": "Russ Feat. Ab-Soul"
+    },
+    {
+     "rank": 9,
+     "song": "That's Him (Remix)",
+     "artist": "Mistah F.A.B. Feat. Snoop Dogg"
+    },
+    {
+     "rank": 10,
+     "song": "Wave Blues",
+     "artist": "French Montana Feat. Benny The Butcher"
+    },
+    {
+     "rank": 11,
+     "song": "The Bounce",
+     "artist": "Jay-Z Feat. Kanye West"
+    },
+    {
+     "rank": 12,
+     "song": "Ballads",
+     "artist": "J.I.D Feat. Conway"
+    },
+    {
+     "rank": 13,
+     "song": "Maniac",
+     "artist": "Kid Cudi Feat. Cage"
+    },
+    {
+     "rank": 14,
+     "song": "So Crazy",
+     "artist": "Davido Feat. Lil Baby"
+    },
+    {
+     "rank": 15,
+     "song": "Crazy Story",
+     "artist": "King Von"
+    },
+    {
+     "rank": 16,
+     "song": "Lions, Bengals, Bears (Freestyle)",
+     "artist": "Wale & DJ Money"
+    },
+    {
+     "rank": 17,
+     "song": "Trench Bitch",
+     "artist": "Blac Youngsta Feat. Lil Durk"
+    },
+    {
+     "rank": 18,
+     "song": "Spain",
+     "artist": "Kodak Black Feat. Tory Lanez"
+    },
+    {
+     "rank": 19,
+     "song": "Rolling 50 Deep",
+     "artist": "DJ Kay Slay Feat. Sheek Louch"
+    },
+    {
+     "rank": 20,
+     "song": "All Week",
+     "artist": "Rod Wave"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115112041/https://www.billboard.com/charts/rap-song",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mood",
+     "artist": "24kGoldn Featuring iann dior"
+    },
+    {
+     "rank": 2,
+     "song": "Laugh Now Cry Later",
+     "artist": "Drake Featuring Lil Durk"
+    },
+    {
+     "rank": 3,
+     "song": "Lemonade",
+     "artist": "Internet Money & Gunna Featuring Don Toliver & NAV"
+    },
+    {
+     "rank": 4,
+     "song": "WAP",
+     "artist": "Cardi B Featuring Megan Thee Stallion"
+    },
+    {
+     "rank": 5,
+     "song": "For The Night",
+     "artist": "Pop Smoke Featuring Lil Baby & DaBaby"
+    },
+    {
+     "rank": 6,
+     "song": "Rockstar",
+     "artist": "DaBaby Featuring Roddy Ricch"
+    },
+    {
+     "rank": 7,
+     "song": "Said Sum",
+     "artist": "Moneybagg Yo"
+    },
+    {
+     "rank": 8,
+     "song": "Whats Poppin",
+     "artist": "Jack Harlow Featuring DaBaby, Tory Lanez & Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "What You Know Bout Love",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 10,
+     "song": "The Woo",
+     "artist": "Pop Smoke Featuring 50 Cent & Roddy Ricch"
+    },
+    {
+     "rank": 11,
+     "song": "Rags2Riches",
+     "artist": "Rod Wave Featuring ATR Son Son"
+    },
+    {
+     "rank": 12,
+     "song": "Mood Swings",
+     "artist": "Pop Smoke Featuring Lil Tjay"
+    },
+    {
+     "rank": 13,
+     "song": "Tyler Herro",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 14,
+     "song": "Mr. Right Now",
+     "artist": "21 Savage & Metro Boomin Featuring Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Franchise",
+     "artist": "Travis Scott Featuring Young Thug & M.I.A."
+    },
+    {
+     "rank": 16,
+     "song": "Popstar",
+     "artist": "DJ Khaled Featuring Drake"
+    },
+    {
+     "rank": 17,
+     "song": "24",
+     "artist": "Money Man Featuring Lil Baby"
+    },
+    {
+     "rank": 18,
+     "song": "Wishing Well",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 19,
+     "song": "Tap In",
+     "artist": "Saweetie"
+    },
+    {
+     "rank": 20,
+     "song": "Don't Stop",
+     "artist": "Megan Thee Stallion Featuring Young Thug"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115023917/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Laugh Now Cry Later",
+     "artist": "Drake Featuring Lil Durk"
+    },
+    {
+     "rank": 2,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 3,
+     "song": "Lemonade",
+     "artist": "Internet Money & Gunna Featuring Don Toliver & NAV"
+    },
+    {
+     "rank": 4,
+     "song": "WAP",
+     "artist": "Cardi B Featuring Megan Thee Stallion"
+    },
+    {
+     "rank": 5,
+     "song": "For The Night",
+     "artist": "Pop Smoke Featuring Lil Baby & DaBaby"
+    },
+    {
+     "rank": 6,
+     "song": "Rockstar",
+     "artist": "DaBaby Featuring Roddy Ricch"
+    },
+    {
+     "rank": 7,
+     "song": "Go Crazy",
+     "artist": "Chris Brown & Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "Said Sum",
+     "artist": "Moneybagg Yo"
+    },
+    {
+     "rank": 9,
+     "song": "Whats Poppin",
+     "artist": "Jack Harlow Featuring DaBaby, Tory Lanez & Lil Wayne"
+    },
+    {
+     "rank": 10,
+     "song": "What You Know Bout Love",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 11,
+     "song": "The Woo",
+     "artist": "Pop Smoke Featuring 50 Cent & Roddy Ricch"
+    },
+    {
+     "rank": 12,
+     "song": "Rags2Riches",
+     "artist": "Rod Wave Featuring ATR Son Son"
+    },
+    {
+     "rank": 13,
+     "song": "Mood Swings",
+     "artist": "Pop Smoke Featuring Lil Tjay"
+    },
+    {
+     "rank": 14,
+     "song": "Tyler Herro",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 15,
+     "song": "Mr. Right Now",
+     "artist": "21 Savage & Metro Boomin Featuring Drake"
+    },
+    {
+     "rank": 16,
+     "song": "Franchise",
+     "artist": "Travis Scott Featuring Young Thug & M.I.A."
+    },
+    {
+     "rank": 17,
+     "song": "Popstar",
+     "artist": "DJ Khaled Featuring Drake"
+    },
+    {
+     "rank": 18,
+     "song": "24",
+     "artist": "Money Man Featuring Lil Baby"
+    },
+    {
+     "rank": 19,
+     "song": "Wishing Well",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 20,
+     "song": "U 2 Luv",
+     "artist": "Ne-Yo & Jeremih"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115023920/https://www.billboard.com/charts/country-songs",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Hope",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 2,
+     "song": "Forever After All",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 3,
+     "song": "More Than My Hometown",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 4,
+     "song": "One Of Them Girls",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 5,
+     "song": "Got What I Got",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 6,
+     "song": "Love You Like I Used To",
+     "artist": "Russell Dickerson"
+    },
+    {
+     "rank": 7,
+     "song": "One Beer",
+     "artist": "HARDY Featuring Lauren Alaina & Devin Dawson"
+    },
+    {
+     "rank": 8,
+     "song": "Pretty Heart",
+     "artist": "Parker McCollum"
+    },
+    {
+     "rank": 9,
+     "song": "Better Together",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 10,
+     "song": "Happy Anywhere",
+     "artist": "Blake Shelton Featuring Gwen Stefani"
+    },
+    {
+     "rank": 11,
+     "song": "Everywhere But On",
+     "artist": "Matt Stell"
+    },
+    {
+     "rank": 12,
+     "song": "Lovin' On You",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 13,
+     "song": "I Should Probably Go To Bed",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 14,
+     "song": "Big, Big Plans",
+     "artist": "Chris Lane"
+    },
+    {
+     "rank": 15,
+     "song": "Ain't Always The Cowboy",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 16,
+     "song": "Starting Over",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 17,
+     "song": "7 Summers",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 18,
+     "song": "Good Time",
+     "artist": "Niko Moon"
+    },
+    {
+     "rank": 19,
+     "song": "Champagne Night",
+     "artist": "Lady A"
+    },
+    {
+     "rank": 20,
+     "song": "Hole In The Bottle",
+     "artist": "Kelsea Ballerini"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201112025951/https://www.beatport.com/top-100",
+   "captured": "2020-11-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Home (Club Mix)",
+     "artist": "Solomun"
+    },
+    {
+     "rank": 2,
+     "song": "Tornado",
+     "artist": "Volkoder & Sam Supplier"
+    },
+    {
+     "rank": 3,
+     "song": "Children (Extended Mix)",
+     "artist": "Robert Miles & Tinlicker"
+    },
+    {
+     "rank": 4,
+     "song": "So Hooked On Your Lovin (Gorgon City Extended Remix)",
+     "artist": "Selace"
+    },
+    {
+     "rank": 5,
+     "song": "Your Lovin'",
+     "artist": "Christian Smith"
+    },
+    {
+     "rank": 6,
+     "song": "Let It Go feat. Marc E. Bassy (Dom Dolla Extended Remix)",
+     "artist": "Louie Vega, The Martinez Brothers & Marc E. Bassy"
+    },
+    {
+     "rank": 7,
+     "song": "Cut and Shut",
+     "artist": "Serum"
+    },
+    {
+     "rank": 8,
+     "song": "Thin Line (Extended Mix)",
+     "artist": "John Summit & GUZ (NL)"
+    },
+    {
+     "rank": 9,
+     "song": "Witching Hour (Extended Mix)",
+     "artist": "CamelPhat & Will Easton"
+    },
+    {
+     "rank": 10,
+     "song": "Suga (David Penn Extended Mix)",
+     "artist": "Technasia & Green Velvet"
+    },
+    {
+     "rank": 11,
+     "song": "Fur (Extended Mix)",
+     "artist": "Endor"
+    },
+    {
+     "rank": 12,
+     "song": "Phobos",
+     "artist": "Space 92"
+    },
+    {
+     "rank": 13,
+     "song": "Diva",
+     "artist": "Phibes"
+    },
+    {
+     "rank": 14,
+     "song": "Set You Free feat. Faber",
+     "artist": "Maur"
+    },
+    {
+     "rank": 15,
+     "song": "Propane (Extended)",
+     "artist": "Green Velvet & Mason Maynard"
+    },
+    {
+     "rank": 16,
+     "song": "Work It (Extended Club Mix)",
+     "artist": "Kevin McKay & Milos Pesovic"
+    },
+    {
+     "rank": 17,
+     "song": "Sinking VIP",
+     "artist": "Enei"
+    },
+    {
+     "rank": 18,
+     "song": "Dustpig",
+     "artist": "Fabrication"
+    },
+    {
+     "rank": 19,
+     "song": "Pub Grub (VIP)",
+     "artist": "Hedex & Bou"
+    },
+    {
+     "rank": 20,
+     "song": "Soundboy Killer",
+     "artist": "Phibes"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115112751/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "ily",
+     "artist": "surf mesa Featuring Emilee"
+    },
+    {
+     "rank": 2,
+     "song": "Roses (Imanbek Remix)",
+     "artist": "SAINt JHN"
+    },
+    {
+     "rank": 3,
+     "song": "Rain On Me",
+     "artist": "Lady Gaga & Ariana Grande"
+    },
+    {
+     "rank": 4,
+     "song": "Head & Heart",
+     "artist": "Joel Corry X MNEK"
+    },
+    {
+     "rank": 5,
+     "song": "Breaking Me",
+     "artist": "Topic & A7S"
+    },
+    {
+     "rank": 6,
+     "song": "Lose Somebody",
+     "artist": "Kygo & OneRepublic"
+    },
+    {
+     "rank": 7,
+     "song": "OK Not To Be OK",
+     "artist": "Marshmello & Demi Lovato"
+    },
+    {
+     "rank": 8,
+     "song": "Nightlight",
+     "artist": "ILLENIUM"
+    },
+    {
+     "rank": 9,
+     "song": "Paradise",
+     "artist": "Meduza & Dermot Kennedy"
+    },
+    {
+     "rank": 10,
+     "song": "Tick Tock",
+     "artist": "Clean Bandit & Mabel Featuring 24kGoldn"
+    },
+    {
+     "rank": 11,
+     "song": "Too Much",
+     "artist": "Marshmello & Imanbek Featuring Usher"
+    },
+    {
+     "rank": 12,
+     "song": "Fire For You",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 13,
+     "song": "Jerusalema",
+     "artist": "Master KG Featuring Burna Boy & Nomcebo Zikode"
+    },
+    {
+     "rank": 14,
+     "song": "Funny",
+     "artist": "Zedd & Jasmine Thompson"
+    },
+    {
+     "rank": 15,
+     "song": "The Business",
+     "artist": "Tiesto"
+    },
+    {
+     "rank": 16,
+     "song": "Inside Out",
+     "artist": "Zedd & Griff"
+    },
+    {
+     "rank": 17,
+     "song": "The End",
+     "artist": "Alesso x Charlotte Lawrence"
+    },
+    {
+     "rank": 18,
+     "song": "Lasting Lover",
+     "artist": "Sigala. & James Arthur"
+    },
+    {
+     "rank": 19,
+     "song": "911",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 20,
+     "song": "Sour Candy",
+     "artist": "Lady Gaga & BLACKPINK"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201115174732/https://www.billboard.com/charts/alternative-airplay",
+   "captured": "2020-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Monsters",
+     "artist": "All Time Low Featuring blackbear"
+    },
+    {
+     "rank": 2,
+     "song": "Are You Bored Yet?",
+     "artist": "Wallows Featuring Clairo"
+    },
+    {
+     "rank": 3,
+     "song": "Bloody Valentine",
+     "artist": "Machine Gun Kelly"
+    },
+    {
+     "rank": 4,
+     "song": "Can I Call You Tonight?",
+     "artist": "Dayglow"
+    },
+    {
+     "rank": 5,
+     "song": "Mariposa",
+     "artist": "Peach Tree Rascals"
+    },
+    {
+     "rank": 6,
+     "song": "Hallucinogenics",
+     "artist": "Matt Maeson"
+    },
+    {
+     "rank": 7,
+     "song": "Come & Go",
+     "artist": "Juice WRLD x Marshmello"
+    },
+    {
+     "rank": 8,
+     "song": "Leave Me Alone",
+     "artist": "I Dont Know How But They Found Me"
+    },
+    {
+     "rank": 9,
+     "song": "Level Of Concern",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 10,
+     "song": "Fire For You",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 11,
+     "song": "Overwhelmed",
+     "artist": "Royal & The Serpent"
+    },
+    {
+     "rank": 12,
+     "song": "Mood",
+     "artist": "24kGoldn Featuring iann dior"
+    },
+    {
+     "rank": 13,
+     "song": "Trouble's Coming",
+     "artist": "Royal Blood"
+    },
+    {
+     "rank": 14,
+     "song": "Skin And Bones",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 15,
+     "song": "Death Bed",
+     "artist": "Powfu Featuring beabadoobee"
+    },
+    {
+     "rank": 16,
+     "song": "Is It True",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 17,
+     "song": "Tangerine",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 18,
+     "song": "No Other Way",
+     "artist": "SHAED"
+    },
+    {
+     "rank": 19,
+     "song": "Care",
+     "artist": "beabadoobee"
+    },
+    {
+     "rank": 20,
+     "song": "My Ex's Best Friend",
+     "artist": "Machine Gun Kelly X blackbear"
+    }
+   ]
+  },
+  {
+   "id": "spotify_viral",
+   "genre": "all",
+   "label": "Spotify · Viral 50 US (weekly, else daily)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201103014732/https://spotifycharts.com/viral/us/daily/latest",
+   "captured": "2020-11-03",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Die Very Rough",
+     "artist": "Mario Judah"
+    },
+    {
+     "rank": 2,
+     "song": "E-GIRLS ARE RUINING MY LIFE!",
+     "artist": "CORPSE, Savage Ga$p"
+    },
+    {
+     "rank": 3,
+     "song": "Drip Like ME",
+     "artist": "Kenndog"
+    },
+    {
+     "rank": 4,
+     "song": "Monster Mash",
+     "artist": "Bobby \"Boris\" Pickett, The Crypt-Kickers"
+    },
+    {
+     "rank": 5,
+     "song": "Whoopty",
+     "artist": "CJ"
+    },
+    {
+     "rank": 6,
+     "song": "Touch You",
+     "artist": "遠野高志, 加島優, 矢口恭介, ジミー, 百合絢斗, 田村唯, 明美圭一, 糸目幸士郎, 鹿谷樹"
+    },
+    {
+     "rank": 7,
+     "song": "HIT EM WHERE IT HURTS",
+     "artist": "PawPaw Rod"
+    },
+    {
+     "rank": 8,
+     "song": "Cat Girls Are Ruining My Life!",
+     "artist": "CORPSE"
+    },
+    {
+     "rank": 9,
+     "song": "Deep End",
+     "artist": "Fousheé"
+    },
+    {
+     "rank": 10,
+     "song": "Dirt Road",
+     "artist": "Kidd G"
+    },
+    {
+     "rank": 11,
+     "song": "Miss YOU!",
+     "artist": "CORPSE"
+    },
+    {
+     "rank": 12,
+     "song": "Spooky, Scary Skeletons - Undead Tombstone Remix",
+     "artist": "Andrew Gold"
+    },
+    {
+     "rank": 13,
+     "song": "This Is Halloween",
+     "artist": "The Citizens of Halloween"
+    },
+    {
+     "rank": 14,
+     "song": "moment",
+     "artist": "lildeath"
+    },
+    {
+     "rank": 15,
+     "song": "The Crypt Jam",
+     "artist": "The Crypt Keeper"
+    },
+    {
+     "rank": 16,
+     "song": "Astronaut In The Ocean",
+     "artist": "Masked Wolf"
+    },
+    {
+     "rank": 17,
+     "song": "Ghostbusters",
+     "artist": "Ray Parker Jr."
+    },
+    {
+     "rank": 18,
+     "song": "Put Your Records On",
+     "artist": "Ritt Momney"
+    },
+    {
+     "rank": 19,
+     "song": "White Tee",
+     "artist": "CORPSE"
+    },
+    {
+     "rank": 20,
+     "song": "Halloween Theme - Main Title",
+     "artist": "John Carpenter"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201102045010/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2020-11-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "WAP",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "Mood",
+     "artist": "24kGoldn"
+    },
+    {
+     "rank": 3,
+     "song": "Runnin",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 4,
+     "song": "Mr. Right Now",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 5,
+     "song": "For The Night",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 6,
+     "song": "Lemonade",
+     "artist": "Internet Money"
+    },
+    {
+     "rank": 7,
+     "song": "Laugh Now Cry Later",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Glock In My Lap",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 9,
+     "song": "Wonder",
+     "artist": "Shawn Mendes"
+    },
+    {
+     "rank": 10,
+     "song": "Holy",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 11,
+     "song": "Dreams - 2004 Remaster",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 12,
+     "song": "What You Know Bout Love",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 13,
+     "song": "Rich Nigga Shit",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 14,
+     "song": "ROCKSTAR",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 15,
+     "song": "Many Men",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 16,
+     "song": "Slidin",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 17,
+     "song": "WHATS POPPIN",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 18,
+     "song": "Wishing Well",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 19,
+     "song": "Dynamite",
+     "artist": "BTS"
+    },
+    {
+     "rank": 20,
+     "song": "Come & Go",
+     "artist": "Juice WRLD"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20201112004003/https://www.kworb.net/charts/itunes/us.html",
+   "captured": "2020-11-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What's Your Country Song",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 2,
+     "song": "Forever After All",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 3,
+     "song": "Bang!",
+     "artist": "AJR"
+    },
+    {
+     "rank": 4,
+     "song": "Good As You",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Mood (feat. iann dior)",
+     "artist": "24kGoldn"
+    },
+    {
+     "rank": 6,
+     "song": "Holy (feat. Chance the Rapper)",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 7,
+     "song": "Kings & Queens",
+     "artist": "Ava Max"
+    },
+    {
+     "rank": 8,
+     "song": "Lonely",
+     "artist": "Justin Bieber & benny blanco"
+    },
+    {
+     "rank": 9,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Be Like That",
+     "artist": "Kane Brown, Swae Lee, Khalid"
+    },
+    {
+     "rank": 11,
+     "song": "Starting Over",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 12,
+     "song": "positions",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 13,
+     "song": "Tennessee Whiskey",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 14,
+     "song": "Levitating (feat. DaBaby)",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 15,
+     "song": "If the World Was Ending (feat. Julia Michaels)",
+     "artist": "JP Saxe & Julia Michaels"
+    },
+    {
+     "rank": 16,
+     "song": "More Than My Hometown",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 17,
+     "song": "Dreams",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 18,
+     "song": "No Lives Matter",
+     "artist": "Tom MacDonald"
+    },
+    {
+     "rank": 19,
+     "song": "Diamonds",
+     "artist": "Sam Smith"
+    },
+    {
+     "rank": 20,
+     "song": "Dakiti",
+     "artist": "Bad Bunny & Jhay Cortez"
+    }
+   ]
+  }
+ ]
+}

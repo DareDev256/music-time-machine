@@ -1,0 +1,171 @@
+{
+ "month": "2008-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080715025809/http://hypem.com:80/popular",
+   "captured": "2008-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Let There Be Light (EPsilon Remix)",
+     "artist": "Justice (Remix: EPsilon)"
+    },
+    {
+     "rank": 2,
+     "song": "Mammoth (Erol Alkan Rework)",
+     "artist": "Interpol"
+    },
+    {
+     "rank": 3,
+     "song": "Electric Feel (Justice Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 4,
+     "song": "Kansas City (Tomboy Remix)",
+     "artist": "Sneaky Sound System"
+    },
+    {
+     "rank": 5,
+     "song": "I'm Not Gonna Teach Your Boyfriend How To Dance With You",
+     "artist": "Black Kids"
+    },
+    {
+     "rank": 6,
+     "song": "Love in this Club (Sta remix)",
+     "artist": "Usher feat. Young Jeezy"
+    },
+    {
+     "rank": 7,
+     "song": "Maneater (Crookers Remix)",
+     "artist": "Nelly Furtado"
+    },
+    {
+     "rank": 8,
+     "song": "Hospital Beds (Cold War Kids Cover)",
+     "artist": "Florence And The Machine"
+    },
+    {
+     "rank": 9,
+     "song": "Violet Hill (Coldplay Cover)",
+     "artist": "The Kooks"
+    },
+    {
+     "rank": 10,
+     "song": "Bucky Done Gun (Billion Dollar Djs Remix for Kicks)",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 11,
+     "song": "If I Viva La Vida (Starters Remix)",
+     "artist": "Coldplay vs Nas"
+    },
+    {
+     "rank": 12,
+     "song": "Electric Feel (Justice Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 13,
+     "song": "Destination Overdrive (DFA Remix)",
+     "artist": "Chromeo"
+    },
+    {
+     "rank": 14,
+     "song": "1234 (Feist Cover)",
+     "artist": "Bikini"
+    },
+    {
+     "rank": 15,
+     "song": "Face (Teenagers remix)",
+     "artist": "The Black Ghosts"
+    },
+    {
+     "rank": 16,
+     "song": "Love Is A Losing Game (Truth & Soul Remix)",
+     "artist": "Amy Winehouse"
+    },
+    {
+     "rank": 17,
+     "song": "Digital Pu$$y (Kid Color Mash-up)",
+     "artist": "Daft Punk vs Bangers & Cash"
+    },
+    {
+     "rank": 18,
+     "song": "Fuckingham Palace (Modeselektor Remix)",
+     "artist": "Alter Ego"
+    },
+    {
+     "rank": 19,
+     "song": "switchblade (dances with white girls remix)",
+     "artist": "HEARTS REVOLUTION"
+    },
+    {
+     "rank": 20,
+     "song": "Indie, Suddenly Everything Has Changed (The Flaming Lips Cover)",
+     "artist": "The Postal Service"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080710071123/http://2dopeboyz.com:80/",
+   "captured": "2008-07-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Hurt Game",
+     "artist": "Shadowkat Nightson & Rhymefest"
+    },
+    {
+     "rank": 2,
+     "song": "Drama (C-no Evil Remix) f. GZA x More!",
+     "artist": "RZA"
+    },
+    {
+     "rank": 3,
+     "song": "Tight Pants x Elucid - Code of the Streets",
+     "artist": "Spec Boogie"
+    },
+    {
+     "rank": 4,
+     "song": "Lookin Boy (rmx) f. Cassidy, Yung Joc & R. Kelly",
+     "artist": "Hot Stylz"
+    },
+    {
+     "rank": 5,
+     "song": "V for Vendetta",
+     "artist": "XV"
+    },
+    {
+     "rank": 6,
+     "song": "Stages",
+     "artist": "Reks"
+    },
+    {
+     "rank": 7,
+     "song": "Soundscan x Move On",
+     "artist": "Young Buck"
+    },
+    {
+     "rank": 8,
+     "song": "My Drive Thru",
+     "artist": "N.E.R.D."
+    },
+    {
+     "rank": 9,
+     "song": "Africa Feat D’Angelo (The Leak #29)",
+     "artist": "Mickey Factz"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,676 @@
+{
+ "month": "2017-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170316063813/http://www.hotnewhiphop.com:80/top100/?",
+   "captured": "2017-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Frauds",
+     "artist": "Nicki Minaj Feat. Drake"
+    },
+    {
+     "rank": 2,
+     "song": "It's A Vibe (Prod. By Murda Beatz)",
+     "artist": "2 Chainz Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 3,
+     "song": "Changed It",
+     "artist": "Nicki Minaj Feat. Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Smartphone",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 5,
+     "song": "Regret In Your Tears",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "Chanel",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 7,
+     "song": "Trap Trap Trap",
+     "artist": "Rick Ross Feat. Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "She On My Dick",
+     "artist": "Rick Ross Feat. Gucci Mane"
+    },
+    {
+     "rank": 9,
+     "song": "Outlet (Prod. By Vinylz & SoundsbyCT)",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 10,
+     "song": "Chanel (Remix) [Radio Rip]",
+     "artist": "Frank Ocean Feat. A$AP Rocky"
+    },
+    {
+     "rank": 11,
+     "song": "My Corner",
+     "artist": "Raekwon Feat. Lil Wayne"
+    },
+    {
+     "rank": 12,
+     "song": "Woke Up Like This",
+     "artist": "Playboi Carti Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 13,
+     "song": "Drowning (Water)",
+     "artist": "A Boogie Wit Da Hoodie Feat. Kodak Black"
+    },
+    {
+     "rank": 14,
+     "song": "Life of the Party",
+     "artist": "Young Chris Feat. Lil Wayne"
+    },
+    {
+     "rank": 15,
+     "song": "That's How I Feel",
+     "artist": "Young Dolph Feat. Gucci Mane"
+    },
+    {
+     "rank": 16,
+     "song": "Lookin",
+     "artist": "Playboi Carti Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 17,
+     "song": "Jet Li",
+     "artist": "Chief Keef Feat. Gucci Mane"
+    },
+    {
+     "rank": 18,
+     "song": "Hot Sauce",
+     "artist": "Young M.A"
+    },
+    {
+     "rank": 19,
+     "song": "Grindin",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 20,
+     "song": "2 Fux",
+     "artist": "Ace Hood"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170318045619/http://hypem.com/popular",
+   "captured": "2017-03-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Unholy War",
+     "artist": "Jacob Banks"
+    },
+    {
+     "rank": 2,
+     "song": "Breathe ARMNHMR Remix",
+     "artist": "Adventure Club feat. SONDAR"
+    },
+    {
+     "rank": 3,
+     "song": "Everything Black (feat. Mike Taylor)",
+     "artist": "Unlike Pluto"
+    },
+    {
+     "rank": 4,
+     "song": "Nightcrawler",
+     "artist": "ZHU"
+    },
+    {
+     "rank": 5,
+     "song": "The City Don't Care",
+     "artist": "Leon Else"
+    },
+    {
+     "rank": 6,
+     "song": "West Coast Lenno Remix",
+     "artist": "Pretty Sister"
+    },
+    {
+     "rank": 7,
+     "song": "Moving As One",
+     "artist": "LOYAL"
+    },
+    {
+     "rank": 8,
+     "song": "Thoughts (feat Mar-G)",
+     "artist": "Dukwa"
+    },
+    {
+     "rank": 9,
+     "song": "Oh! Centra",
+     "artist": "Javelin"
+    },
+    {
+     "rank": 10,
+     "song": "Nirvana",
+     "artist": "RYDER"
+    },
+    {
+     "rank": 11,
+     "song": "Petals",
+     "artist": "TOPS"
+    },
+    {
+     "rank": 12,
+     "song": "Having A Coke With You",
+     "artist": "New Jackson"
+    },
+    {
+     "rank": 13,
+     "song": "Champagne Supernova (Oasis Cover)",
+     "artist": "Yumi Zouma"
+    },
+    {
+     "rank": 14,
+     "song": "Ultraviolence Datsik Remix",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 15,
+     "song": "Chanel",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 16,
+     "song": "Stuck",
+     "artist": "OSHUN"
+    },
+    {
+     "rank": 17,
+     "song": "Anyone",
+     "artist": "Crystal Bats"
+    },
+    {
+     "rank": 18,
+     "song": "Wake",
+     "artist": "chrome sparks"
+    },
+    {
+     "rank": 19,
+     "song": "take me on",
+     "artist": "joan"
+    },
+    {
+     "rank": 20,
+     "song": "Man On The Moon",
+     "artist": "POWERS"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170322202640/http://www.billboard.com/charts/rap-song",
+   "captured": "2017-03-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 2,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 3,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 4,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 5,
+     "song": "No Frauds",
+     "artist": "Nicki Minaj, Drake & Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 7,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 8,
+     "song": "Bad Things",
+     "artist": "Machine Gun Kelly x Camila Cabello"
+    },
+    {
+     "rank": 9,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 11,
+     "song": "Swang",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 12,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 13,
+     "song": "Goosebumps",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Both",
+     "artist": "Gucci Mane Featuring Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Deja Vu",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 16,
+     "song": "Look At Me!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 17,
+     "song": "Shining",
+     "artist": "DJ Khaled Featuring Beyonce & JAY Z"
+    },
+    {
+     "rank": 18,
+     "song": "Changed It",
+     "artist": "Nicki Minaj & Lil Wayne"
+    },
+    {
+     "rank": 19,
+     "song": "Moves",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 20,
+     "song": "Draco",
+     "artist": "Future"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170322113706/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2017-03-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 2,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 3,
+     "song": "I Feel It Coming",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 4,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 5,
+     "song": "Love On The Brain",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 7,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 8,
+     "song": "No Frauds",
+     "artist": "Nicki Minaj, Drake & Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 10,
+     "song": "24K Magic",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 11,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 12,
+     "song": "Bad Things",
+     "artist": "Machine Gun Kelly x Camila Cabello"
+    },
+    {
+     "rank": 13,
+     "song": "Starboy",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 14,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 16,
+     "song": "Swang",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 17,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 18,
+     "song": "Location",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 19,
+     "song": "Party",
+     "artist": "Chris Brown Featuring Usher & Gucci Mane"
+    },
+    {
+     "rank": 20,
+     "song": "Slide",
+     "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170316095458/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Chanel",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 2,
+     "song": "Baybee",
+     "artist": "Jay Som"
+    },
+    {
+     "rank": 3,
+     "song": "Third of May / Ōdaigahara",
+     "artist": "Fleet Foxes"
+    },
+    {
+     "rank": 4,
+     "song": "Everyday",
+     "artist": "Sacred Paws"
+    },
+    {
+     "rank": 5,
+     "song": "Pa’lante",
+     "artist": "Hurray for the Riff Raff"
+    },
+    {
+     "rank": 6,
+     "song": "How We Met, the Long Version",
+     "artist": "Jens Lekman"
+    },
+    {
+     "rank": 7,
+     "song": "Green Light",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 8,
+     "song": "Bobby",
+     "artist": "Alex G"
+    },
+    {
+     "rank": 9,
+     "song": "Cold Apartment",
+     "artist": "Vagabon"
+    },
+    {
+     "rank": 10,
+     "song": "Anoche",
+     "artist": "Arca"
+    },
+    {
+     "rank": 11,
+     "song": "Jungelknugen (Four Tet Remix)",
+     "artist": "Todd Terje"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170315013958/https://www.beatport.com/top-100",
+   "captured": "2017-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Domino (Matador Remix)",
+     "artist": "Oxia"
+    },
+    {
+     "rank": 2,
+     "song": "Music Is The Answer (Hot Since 82 Remix)",
+     "artist": "Joe Goddard"
+    },
+    {
+     "rank": 3,
+     "song": "Egyptian Lover (Latmun Remix)",
+     "artist": "The Golden Boy"
+    },
+    {
+     "rank": 4,
+     "song": "Call You Back",
+     "artist": "Josh Butler & Bontan"
+    },
+    {
+     "rank": 5,
+     "song": "Everybody's Dancin'",
+     "artist": "Latmun"
+    },
+    {
+     "rank": 6,
+     "song": "Same Man",
+     "artist": "Franky Rizardo"
+    },
+    {
+     "rank": 7,
+     "song": "Down With Tha",
+     "artist": "Waze & Odyssey"
+    },
+    {
+     "rank": 8,
+     "song": "Hit The Road Jack (Extended Mix)",
+     "artist": "Throttle"
+    },
+    {
+     "rank": 9,
+     "song": "Go (Victor Ruiz Remix)",
+     "artist": "Moby"
+    },
+    {
+     "rank": 10,
+     "song": "Another Club",
+     "artist": "Radio Slave"
+    },
+    {
+     "rank": 11,
+     "song": "Aba",
+     "artist": "Kidnap Kid & Lane 8"
+    },
+    {
+     "rank": 12,
+     "song": "Go (Victor Ruiz Warehouse Mix)",
+     "artist": "Moby"
+    },
+    {
+     "rank": 13,
+     "song": "Funk Phenomena (Extended Mix)",
+     "artist": "Armand Van Helden & ANOTR"
+    },
+    {
+     "rank": 14,
+     "song": "Lizard King",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 15,
+     "song": "Pause (Oliver Koletzki & Reinier Zonneveld Remix)",
+     "artist": "Sian"
+    },
+    {
+     "rank": 16,
+     "song": "My Babe (Me & My Toothbrush Remix)",
+     "artist": "Alex Kenji"
+    },
+    {
+     "rank": 17,
+     "song": "Where It Begins",
+     "artist": "Layton Giordani"
+    },
+    {
+     "rank": 18,
+     "song": "Shakti Pan feat. Sven",
+     "artist": "Kellerkind"
+    },
+    {
+     "rank": 19,
+     "song": "Zulu",
+     "artist": "Max Chapman & George Smeddles"
+    },
+    {
+     "rank": 20,
+     "song": "Tunnel Vision (Don Diablo Extended Edit)",
+     "artist": "Zonderling"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170305062857/http://2dopeboyz.com/",
+   "captured": "2017-03-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "TIME: The Kalief Browder Story",
+     "artist": "An Extended Look At JAY Z"
+    },
+    {
+     "rank": 2,
+     "song": "Houdini",
+     "artist": "MadeinTYO feat. Smokepurpp"
+    },
+    {
+     "rank": 3,
+     "song": "Children of the Rage",
+     "artist": "OG Maco feat. Album"
+    },
+    {
+     "rank": 4,
+     "song": "Thinkin’ Bout A Check",
+     "artist": "Scotty ATL feat. Bankroll Fresh"
+    },
+    {
+     "rank": 5,
+     "song": "Hitchcock",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 6,
+     "song": "Badabing’s Theme",
+     "artist": "Smoke DZA"
+    },
+    {
+     "rank": 7,
+     "song": "Marathon Man",
+     "artist": "Qu’ality feat. Kris Kasanova"
+    },
+    {
+     "rank": 8,
+     "song": "So Wrong",
+     "artist": "Erick Lottary"
+    },
+    {
+     "rank": 9,
+     "song": "Grateful",
+     "artist": "Sylvan LaCue"
+    }
+   ]
+  }
+ ]
+}

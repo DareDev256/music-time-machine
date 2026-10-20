@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130719184041/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2013-07-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 2,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 3,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 4,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 5,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 6,
+     "song": "U.O.E.N.O.",
+     "artist": "Rocko Featuring Future & Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas Or Rihanna"
+    },
+    {
+     "rank": 8,
+     "song": "Tom Ford",
+     "artist": "Jay Z"
+    },
+    {
+     "rank": 9,
+     "song": "Rich As F**k",
+     "artist": "Lil Wayne Featuring 2 Chainz"
+    },
+    {
+     "rank": 10,
+     "song": "Tapout",
+     "artist": "Rich Gang Featuring Lil Wayne, Birdman, Future, Mack Maine, Nicki Minaj"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,271 @@
      "rank": 10,
      "song": "Bitch, Don't Kill My Vibe",
      "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130716013819/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hang on to Life",
+     "artist": "Ariel Pink / Jorge Elbrecht"
+    },
+    {
+     "rank": 2,
+     "song": "Feds Watching\" [ft. Pharrell]",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "4:30 A.M.",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 4,
+     "song": "Kerou's Lament",
+     "artist": "Ellery James Roberts"
+    },
+    {
+     "rank": 5,
+     "song": "Bipp",
+     "artist": "Sophie"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130716093257/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2013-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "Boys 'Round Here",
+     "artist": "Blake Shelton Featuring Pistol Annies & Friends"
+    },
+    {
+     "rank": 3,
+     "song": "I Want Crazy",
+     "artist": "Hunter Hayes"
+    },
+    {
+     "rank": 4,
+     "song": "Crash My Party",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 5,
+     "song": "Wagon Wheel",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 6,
+     "song": "Runnin' Outta Moonlight",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 7,
+     "song": "Don't Ya",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 8,
+     "song": "DONE.",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 9,
+     "song": "Hey Pretty Girl",
+     "artist": "Kip Moore"
+    },
+    {
+     "rank": 10,
+     "song": "Highway Don't Care",
+     "artist": "Tim McGraw With Taylor Swift"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130719134354/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-07-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 2,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 3,
+     "song": "I Need Your Love",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    },
+    {
+     "rank": 4,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 5,
+     "song": "Right Now",
+     "artist": "Rihanna Featuring David Guetta"
+    },
+    {
+     "rank": 6,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 7,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 8,
+     "song": "Bubble Butt",
+     "artist": "Major Lazer Featuring Bruno Mars, Tyga & Mystic"
+    },
+    {
+     "rank": 9,
+     "song": "Scream & Shout",
+     "artist": "will.i.am & Britney Spears"
+    },
+    {
+     "rank": 10,
+     "song": "Play Hard",
+     "artist": "David Guetta Featuring Ne-Yo & Akon"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130719021454/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2013-07-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 2,
+     "song": "Safe And Sound",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 3,
+     "song": "Demons",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 4,
+     "song": "Harlem",
+     "artist": "New Politics"
+    },
+    {
+     "rank": 5,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 6,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "Came Back Haunted",
+     "artist": "Nine Inch Nails"
+    },
+    {
+     "rank": 8,
+     "song": "Out Of My League",
+     "artist": "Fitz And The Tantrums"
+    },
+    {
+     "rank": 9,
+     "song": "Royals",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 10,
+     "song": "If So",
+     "artist": "Atlas Genius"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130722094100/http://pigeonsandplanes.com:80/",
+   "captured": "2013-07-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Black Skinhead",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Prisms",
+     "artist": "Ides"
+    },
+    {
+     "rank": 3,
+     "song": "Irresponsibility",
+     "artist": "ForteBowie"
+    },
+    {
+     "rank": 4,
+     "song": "The Weight In Gold",
+     "artist": "Forest Swords"
+    },
+    {
+     "rank": 5,
+     "song": "Others On The Board",
+     "artist": "Zilla Rocca, SelfSays, Castle, David Little, & Has-Lo"
+    },
+    {
+     "rank": 6,
+     "song": "Odd Look (Remix)",
+     "artist": "Kavinsky ft. The Weeknd"
+    },
+    {
+     "rank": 7,
+     "song": "Butcher’s Hook",
+     "artist": "Arthur Beatrice"
+    },
+    {
+     "rank": 8,
+     "song": "You Know You Like It",
+     "artist": "AlunaGeorge"
     }
    ]
   }

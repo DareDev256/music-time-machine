@@ -326,6 +326,301 @@
      "artist": "Usher"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100513035756/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2010-05-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "32 leaves dipped in blackness making clouds forming altered carbon",
+     "artist": "Shabazz Palaces"
+    },
+    {
+     "rank": 2,
+     "song": "Tell 'Em",
+     "artist": "Sleigh Bells"
+    },
+    {
+     "rank": 3,
+     "song": "Celestica",
+     "artist": "Crystal Castles"
+    },
+    {
+     "rank": 4,
+     "song": "Dancing on My Own",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 5,
+     "song": "All I Want",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 6,
+     "song": "Burn Bridges",
+     "artist": "Dom"
+    },
+    {
+     "rank": 7,
+     "song": "Shutterbugg",
+     "artist": "Big Boi"
+    },
+    {
+     "rank": 8,
+     "song": "Year's Not Long",
+     "artist": "Male Bonding"
+    },
+    {
+     "rank": 9,
+     "song": "Window Seat",
+     "artist": "Erykah Badu"
+    },
+    {
+     "rank": 10,
+     "song": "Drunk Girls",
+     "artist": "LCD Soundsystem"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100514212427/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2010-05-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Man I Want To Be",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 2,
+     "song": "Gimmie That Girl",
+     "artist": "Joe Nichols"
+    },
+    {
+     "rank": 3,
+     "song": "Ain't Back Yet",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 4,
+     "song": "American Honey",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 5,
+     "song": "The House That Built Me",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 6,
+     "song": "I Gotta Get To You",
+     "artist": "George Strait"
+    },
+    {
+     "rank": 7,
+     "song": "Backwoods",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 8,
+     "song": "Keep On Lovin' You",
+     "artist": "Steel Magnolia"
+    },
+    {
+     "rank": 9,
+     "song": "Unstoppable",
+     "artist": "Rascal Flatts"
+    },
+    {
+     "rank": 10,
+     "song": "Hell On The Heart",
+     "artist": "Eric Church"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100518200011/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2010-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lay Me Down",
+     "artist": "The Dirty Heads Featuring Rome"
+    },
+    {
+     "rank": 2,
+     "song": "Between The Lines",
+     "artist": "Stone Temple Pilots"
+    },
+    {
+     "rank": 3,
+     "song": "Resistance",
+     "artist": "Muse"
+    },
+    {
+     "rank": 4,
+     "song": "Uprising",
+     "artist": "Muse"
+    },
+    {
+     "rank": 5,
+     "song": "Mountain Man",
+     "artist": "Crash Kings"
+    },
+    {
+     "rank": 6,
+     "song": "Savior",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 7,
+     "song": "1901",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 8,
+     "song": "This Is War",
+     "artist": "Thirty Seconds To Mars"
+    },
+    {
+     "rank": 9,
+     "song": "The Good Life",
+     "artist": "Three Days Grace"
+    },
+    {
+     "rank": 10,
+     "song": "The Royal We",
+     "artist": "Silversun Pickups"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100514092602/http://www.2dopeboyz.com:80/",
+   "captured": "2010-05-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Popular Demand f. Cam’ron",
+     "artist": "Bring It Back: Clipse"
+    },
+    {
+     "rank": 2,
+     "song": "OMG (rmx)",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 3,
+     "song": "They Ain’t Wanna Hear Me",
+     "artist": "Shawn Chrystopher"
+    },
+    {
+     "rank": 4,
+     "song": "Beamer, Benz Or Bentley (rmx) f. Ludacris, Yo Gotti, Jadakiss & The-Dream",
+     "artist": "Lloyd Banks"
+    },
+    {
+     "rank": 5,
+     "song": "ADD SUV f. Pharrell (Teaser)",
+     "artist": "Uffie"
+    },
+    {
+     "rank": 6,
+     "song": "Let’s Have a Drink",
+     "artist": "Young Buck"
+    },
+    {
+     "rank": 7,
+     "song": "Coffee & Cigarettes",
+     "artist": "The RZA x GZA & Bill Murray"
+    },
+    {
+     "rank": 8,
+     "song": "MayDay",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 9,
+     "song": "Future So Bright f. Woody (rmx)",
+     "artist": "ESSO"
+    },
+    {
+     "rank": 10,
+     "song": "No Hook f. Skeme",
+     "artist": "DJ Spintelect"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100511194616/http://pigeonsandplanes.com:80/",
+   "captured": "2010-05-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Champagne",
+     "artist": "The-Dream feat. Diddy"
+    },
+    {
+     "rank": 2,
+     "song": "July",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Love Is A Drug",
+     "artist": "The Kickdrums"
+    },
+    {
+     "rank": 4,
+     "song": "XXXO",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 5,
+     "song": "Find Your Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Next Time (Just Wright)",
+     "artist": "Common Ft. Queen Latifah"
+    },
+    {
+     "rank": 7,
+     "song": "Deuces",
+     "artist": "Tyga & Chris Brown Ft. Kevin McCall"
+    },
+    {
+     "rank": 8,
+     "song": "Knights of Cydonia",
+     "artist": "Muse"
+    },
+    {
+     "rank": 9,
+     "song": "Hurry Up and Wait",
+     "artist": "Nocando"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,286 @@
+{
+ "month": "2008-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080416035430/http://www.hotnewhiphop.com:80/",
+   "captured": "2008-04-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Im So Fy",
+     "artist": "DJ Green Lantern Ft Akon, Fabolous & Fat Joe"
+    },
+    {
+     "rank": 2,
+     "song": "Addiction (Feat. Cassie)",
+     "artist": "Ryan Leslie"
+    },
+    {
+     "rank": 3,
+     "song": "Ride With A G",
+     "artist": "Roccett"
+    },
+    {
+     "rank": 4,
+     "song": "Banger On My Lap",
+     "artist": "Crooked I"
+    },
+    {
+     "rank": 5,
+     "song": "Murder This Shit",
+     "artist": "Ya Boy"
+    },
+    {
+     "rank": 6,
+     "song": "Gangsta Party",
+     "artist": "Jay Rock"
+    },
+    {
+     "rank": 7,
+     "song": "We Need Barack",
+     "artist": "DJ Green Lantern Feat Mavado & Barack Obama"
+    },
+    {
+     "rank": 8,
+     "song": "Hey Lil Mama (Remix)",
+     "artist": "Vic Damone Ft Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "Ride With The Mack Feat. Lil' Wayne",
+     "artist": "Mack Maine"
+    },
+    {
+     "rank": 10,
+     "song": "I'm Still A Problem (Feat. Lil' Scrappy)",
+     "artist": "J-Bo"
+    },
+    {
+     "rank": 11,
+     "song": "Got It Locked",
+     "artist": "Snoop Dogg"
+    },
+    {
+     "rank": 12,
+     "song": "Money Rules The World",
+     "artist": "Lloyd Banks"
+    },
+    {
+     "rank": 13,
+     "song": "Fallin In Love (Feat. Ray L)",
+     "artist": "Akon"
+    },
+    {
+     "rank": 14,
+     "song": "Body On Me",
+     "artist": "Nelly ft. Akon"
+    },
+    {
+     "rank": 15,
+     "song": "Smokin' King Kong (Prod. Dr Dre)",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 16,
+     "song": "Beam Me Up (Feat. T-Pain & Rick Ross)",
+     "artist": "Tay Dizm"
+    },
+    {
+     "rank": 17,
+     "song": "I Got It Like That",
+     "artist": "Young Buck & C-Bo"
+    },
+    {
+     "rank": 18,
+     "song": "See Me In Da Club",
+     "artist": "Jim Jones Ft. M.O.E. Betta"
+    },
+    {
+     "rank": 19,
+     "song": "A Town",
+     "artist": "J Bo"
+    },
+    {
+     "rank": 20,
+     "song": "Cheat On Her",
+     "artist": "Messy Marv ft. J. Holiday"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080415034356/http://hypem.com:80/popular",
+   "captured": "2008-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pork And Beans (Preview)",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 2,
+     "song": "That One Night",
+     "artist": "The Hunted"
+    },
+    {
+     "rank": 3,
+     "song": "Pork And Beans",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 4,
+     "song": "Kids",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 5,
+     "song": "Never Forget (Cut Copy Lifelike Mix)",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 6,
+     "song": "Can You Dig It?",
+     "artist": "Violet Vector and the Lovely Lovelies"
+    },
+    {
+     "rank": 7,
+     "song": "Le voyage de Sahar",
+     "artist": "Anouar Brahem"
+    },
+    {
+     "rank": 8,
+     "song": "I Bet You Look Good On The Dancefloor",
+     "artist": "Baby Charles"
+    },
+    {
+     "rank": 9,
+     "song": "4 Minutes (Timbaland Remix)",
+     "artist": "Madonna Ft. Timbaland and Justin Timbe…"
+    },
+    {
+     "rank": 10,
+     "song": "Destrokk",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 11,
+     "song": "American Boy (Estelle Live Lounge Cover)",
+     "artist": "Sam Sparro"
+    },
+    {
+     "rank": 12,
+     "song": "Hands Down featuring Michael Stipe",
+     "artist": "Dashboard Confessional"
+    },
+    {
+     "rank": 13,
+     "song": "Love It All",
+     "artist": "The Kooks"
+    },
+    {
+     "rank": 14,
+     "song": "Drop-Dirty",
+     "artist": "Ying Yang Twins"
+    },
+    {
+     "rank": 15,
+     "song": "Heaven",
+     "artist": "Health"
+    },
+    {
+     "rank": 16,
+     "song": "Da Funk (HOMEWORK Maximum Overdrive)",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 17,
+     "song": "Divine (Midnight Juggernauts Remix)",
+     "artist": "Sebastien Tellier"
+    },
+    {
+     "rank": 18,
+     "song": "Lights And Music",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 19,
+     "song": "Where Da G's (El-P Remix)",
+     "artist": "Dizzee Rascal"
+    },
+    {
+     "rank": 20,
+     "song": "Crimewave (Crystal Castles Vs Health Remix)",
+     "artist": "Health"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080415164700/http://2dopeboyz.com:80/",
+   "captured": "2008-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Honey (AEON Remix)",
+     "artist": "Erykah Badu"
+    },
+    {
+     "rank": 2,
+     "song": "Burner In My Lap",
+     "artist": "Crooked I"
+    },
+    {
+     "rank": 3,
+     "song": "Birthday Girl f. Patrick Stump",
+     "artist": "The Roots"
+    },
+    {
+     "rank": 4,
+     "song": "You’re Welcome",
+     "artist": "Jay-Z & Mary J Blige"
+    },
+    {
+     "rank": 5,
+     "song": "Soulja Boyz II Men",
+     "artist": "The Real"
+    },
+    {
+     "rank": 6,
+     "song": "Big Dreamers (Lawtown Remix)",
+     "artist": "Statik Selektah"
+    },
+    {
+     "rank": 7,
+     "song": "Hey Lil Mama (rmx) f. Lil Wayne",
+     "artist": "Vic Damone"
+    },
+    {
+     "rank": 8,
+     "song": "Big Pimpin w/ Bun B (Live in Houston)",
+     "artist": "Jay-Z"
+    },
+    {
+     "rank": 9,
+     "song": "Somos Latinos f. Nubia",
+     "artist": "Cuban Link"
+    },
+    {
+     "rank": 10,
+     "song": "Paris, Tokyo",
+     "artist": "Lupe Fiasco"
+    }
+   ]
+  }
+ ]
+}

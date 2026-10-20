@@ -171,6 +171,271 @@
      "artist": "Trinidad James"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130214091522/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Terror Pulse",
+     "artist": "KEN mode"
+    },
+    {
+     "rank": 2,
+     "song": "Wakin on a Pretty Day",
+     "artist": "Kurt Vile"
+    },
+    {
+     "rank": 3,
+     "song": "Mute",
+     "artist": "Youth Lagoon"
+    },
+    {
+     "rank": 4,
+     "song": "Retrograde",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 5,
+     "song": "Pacing",
+     "artist": "Julianna Barwick"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130201054229/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2013-02-01",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Every Storm (Runs Out Of Rain)",
+     "artist": "Gary Allan"
+    },
+    {
+     "rank": 2,
+     "song": "Better Dig Two",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 3,
+     "song": "Wanted",
+     "artist": "Hunter Hayes"
+    },
+    {
+     "rank": 4,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 5,
+     "song": "The Only Way I Know",
+     "artist": "Jason Aldean With Luke Bryan & Eric Church"
+    },
+    {
+     "rank": 6,
+     "song": "How Country Feels",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 7,
+     "song": "Sure Be Cool If You Did",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 8,
+     "song": "One Of Those Nights",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 9,
+     "song": "We Are Never Ever Getting Back Together",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 10,
+     "song": "Two Black Cadillacs",
+     "artist": "Carrie Underwood"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130207201738/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-02-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Scream & Shout",
+     "artist": "will.i.am & Britney Spears"
+    },
+    {
+     "rank": 2,
+     "song": "Don't You Worry Child",
+     "artist": "Swedish House Mafia Featuring John Martin"
+    },
+    {
+     "rank": 3,
+     "song": "Sweet Nothing",
+     "artist": "Calvin Harris Featuring Florence Welch"
+    },
+    {
+     "rank": 4,
+     "song": "Let Me Love You (Until You Learn To Love Yourself)",
+     "artist": "Ne-Yo"
+    },
+    {
+     "rank": 5,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 6,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 7,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 8,
+     "song": "Rest Of My Life",
+     "artist": "Ludacris Featuring Usher & David Guetta"
+    },
+    {
+     "rank": 9,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 10,
+     "song": "She Wolf (Falling To Pieces)",
+     "artist": "David Guetta Featuring Sia"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130213183948/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2013-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 2,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Little Black Submarines",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 4,
+     "song": "I Will Wait",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 5,
+     "song": "Mountain Sound",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 6,
+     "song": "Trojans",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 7,
+     "song": "Ho Hey",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 8,
+     "song": "The Pit",
+     "artist": "Silversun Pickups"
+    },
+    {
+     "rank": 9,
+     "song": "Carry On",
+     "artist": "fun."
+    },
+    {
+     "rank": 10,
+     "song": "Stubborn Love",
+     "artist": "The Lumineers"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130215234029/http://www.2dopeboyz.com/",
+   "captured": "2013-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "We Up f. Kendrick Lamar & Kidd Kidd",
+     "artist": "50 Cent"
+    },
+    {
+     "rank": 2,
+     "song": "V-Day (FreEP)",
+     "artist": "Vado"
+    },
+    {
+     "rank": 3,
+     "song": "Home",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 4,
+     "song": "G. Wilikers f. SRH",
+     "artist": "Maffew Ragazino"
+    },
+    {
+     "rank": 5,
+     "song": "Snow Angel f. Trouble Andrew",
+     "artist": "Theophilus London"
+    },
+    {
+     "rank": 6,
+     "song": "PWRTRP",
+     "artist": "YC The Cynic"
+    },
+    {
+     "rank": 7,
+     "song": "She Loves Me, She Loves Me Not (FreEP)",
+     "artist": "Co$$"
+    },
+    {
+     "rank": 8,
+     "song": "Lord As My Witness",
+     "artist": "Troy Ave"
+    }
+   ]
   }
  ]
 }

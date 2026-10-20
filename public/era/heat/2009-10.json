@@ -1,0 +1,361 @@
+{
+ "month": "2009-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091018234446/http://hypem.com:80/popular",
+   "captured": "2009-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Business Man (Black Noise Means Business Remix)",
+     "artist": "Crookers feat. Wiley & Thomas Jules"
+    },
+    {
+     "rank": 2,
+     "song": "Sweet Disposition",
+     "artist": "The Temper Trap"
+    },
+    {
+     "rank": 3,
+     "song": "California Waiting",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 4,
+     "song": "Solar Midnite",
+     "artist": "Lupe Fiasco Feat. Japanese Cartoon"
+    },
+    {
+     "rank": 5,
+     "song": "He Got Game",
+     "artist": "Public Enemy Feat. Stephen Stills"
+    },
+    {
+     "rank": 6,
+     "song": "Boat Behind",
+     "artist": "Kings of Convenience"
+    },
+    {
+     "rank": 7,
+     "song": "Earthquake (Treasure Fingers' Epicwave mix)",
+     "artist": "Little Boots"
+    },
+    {
+     "rank": 8,
+     "song": "Jay-Z - Sunshine",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 9,
+     "song": "Blister in the Sun",
+     "artist": "Violent Femmes"
+    },
+    {
+     "rank": 10,
+     "song": "Hearing Damage",
+     "artist": "Thom Yorke"
+    },
+    {
+     "rank": 11,
+     "song": "Hey You (Crystal Fighters Remix)",
+     "artist": "Pony Pony Run Run"
+    },
+    {
+     "rank": 12,
+     "song": "Shine Blockas (Feat. Gucci Mane)",
+     "artist": "Big Boi"
+    },
+    {
+     "rank": 13,
+     "song": "Hold The Line (Public Speakers Remix)",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 14,
+     "song": "Ignition (Remix)",
+     "artist": "R Kelly"
+    },
+    {
+     "rank": 15,
+     "song": "FUSE",
+     "artist": "Hudson Mohawke"
+    },
+    {
+     "rank": 16,
+     "song": "Heart Skipped A Beat",
+     "artist": "The XX"
+    },
+    {
+     "rank": 17,
+     "song": "Fascination (MMMatthias Remix)",
+     "artist": "NightWaves"
+    },
+    {
+     "rank": 18,
+     "song": "Say Something",
+     "artist": "Timbaland ft. Drake"
+    },
+    {
+     "rank": 19,
+     "song": "My Secret Lover (Diplo Remix)",
+     "artist": "Private"
+    },
+    {
+     "rank": 20,
+     "song": "2 Atoms In A Molecule",
+     "artist": "Noah And The Whale"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091013120747/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2009-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pretty Wings",
+     "artist": "Maxwell"
+    },
+    {
+     "rank": 2,
+     "song": "Break Up",
+     "artist": "Mario Featuring Gucci Mane & Sean Garrett"
+    },
+    {
+     "rank": 3,
+     "song": "Successful",
+     "artist": "Drake Featuring Trey Songz & Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Run This Town",
+     "artist": "Jay-Z, Rihanna & Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Wasted",
+     "artist": "Gucci Mane Featuring Plies Or OJ Da Juiceman"
+    },
+    {
+     "rank": 6,
+     "song": "Under",
+     "artist": "Pleasure P"
+    },
+    {
+     "rank": 7,
+     "song": "God In Me",
+     "artist": "Mary Mary Featuring Kierra \"KiKi\" Sheard"
+    },
+    {
+     "rank": 8,
+     "song": "Number One",
+     "artist": "R. Kelly Featuring Keri Hilson"
+    },
+    {
+     "rank": 9,
+     "song": "Forever",
+     "artist": "Drake Featuring Kanye West, Lil Wayne & Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "Bad Habits",
+     "artist": "Maxwell"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091010093022/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2009-10-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Baby Can't Stop (Aeroplane Remix)",
+     "artist": "Lindstrøm & Christabelle"
+    },
+    {
+     "rank": 2,
+     "song": "Rollerskate (Radio Edit)",
+     "artist": "Matias Aguayo"
+    },
+    {
+     "rank": 3,
+     "song": "Lust for Life",
+     "artist": "Girls"
+    },
+    {
+     "rank": 4,
+     "song": "11th Dimension",
+     "artist": "Julian Casablancas"
+    },
+    {
+     "rank": 5,
+     "song": "Surf Solar (7\" Edit)",
+     "artist": "Fuck Buttons"
+    },
+    {
+     "rank": 6,
+     "song": "Shelia",
+     "artist": "Atlas Sound"
+    },
+    {
+     "rank": 7,
+     "song": "The Sea Is a Good Place to Think of the Future",
+     "artist": "Los Campesinos!"
+    },
+    {
+     "rank": 8,
+     "song": "I Felt Stupid",
+     "artist": "The Drums"
+    },
+    {
+     "rank": 9,
+     "song": "All Yr Songs",
+     "artist": "Diamond Rings"
+    },
+    {
+     "rank": 10,
+     "song": "10 Bricks",
+     "artist": "Raekwon"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091013130723/http://www.billboard.com/charts/country-songs",
+   "captured": "2009-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "American Ride",
+     "artist": "Toby Keith"
+    },
+    {
+     "rank": 2,
+     "song": "Gettin' You Home (The Black ...",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 3,
+     "song": "Only You Can Love Me This Wa...",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 4,
+     "song": "Toes",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 5,
+     "song": "Small Town USA",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 6,
+     "song": "Welcome To The Future",
+     "artist": "Brad Paisley"
+    },
+    {
+     "rank": 7,
+     "song": "Big Green Tractor",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 8,
+     "song": "Cowboy Casanova",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 9,
+     "song": "I'm Alive",
+     "artist": "Kenny Chesney With Dave Matthews"
+    },
+    {
+     "rank": 10,
+     "song": "Need You Now",
+     "artist": "Lady Antebellum"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091006041324/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-10-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Golden Encore",
+     "artist": "The White Panda"
+    },
+    {
+     "rank": 2,
+     "song": "Life Is Better",
+     "artist": "Q-Tip ft. Norah Jones"
+    },
+    {
+     "rank": 3,
+     "song": "Papers",
+     "artist": "Usher"
+    },
+    {
+     "rank": 4,
+     "song": "Bittersweet",
+     "artist": "Wale ft. Colin Munroe"
+    },
+    {
+     "rank": 5,
+     "song": "Horchata",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 6,
+     "song": "I Got This",
+     "artist": "Young Jeezy"
+    },
+    {
+     "rank": 7,
+     "song": "These Are Listed Buildings",
+     "artist": "Los Campesinos"
+    },
+    {
+     "rank": 8,
+     "song": "Killin Dem",
+     "artist": "Jovi Rockwell"
+    },
+    {
+     "rank": 9,
+     "song": "Hell Of A Life",
+     "artist": "T.I."
+    },
+    {
+     "rank": 10,
+     "song": "New Moon Rising",
+     "artist": "Wolfmother"
+    },
+    {
+     "rank": 11,
+     "song": "Time",
+     "artist": "Video + MP3! Mr. Hudson"
+    }
+   ]
+  }
+ ]
+}

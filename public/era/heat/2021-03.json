@@ -1,0 +1,1171 @@
+{
+ "month": "2021-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20210315234850/http://www.hotnewhiphop.com/",
+   "captured": "2021-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heartless (Live From LA)",
+     "artist": "Roddy Ricch"
+    },
+    {
+     "rank": 2,
+     "song": "Skittles",
+     "artist": "Clever Feat. Lil Baby"
+    },
+    {
+     "rank": 3,
+     "song": "No Brakes",
+     "artist": "Slimelife Shawty"
+    },
+    {
+     "rank": 4,
+     "song": "Deebo",
+     "artist": "Courtney Bell Feat. Icewear Vezzo"
+    },
+    {
+     "rank": 5,
+     "song": "You Ain't Gotta Lie (Momma Said)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "She Make It Clap",
+     "artist": "Soulja Boy"
+    },
+    {
+     "rank": 7,
+     "song": "I Ain't Scared",
+     "artist": "NBA Youngboy"
+    },
+    {
+     "rank": 8,
+     "song": "Everything Beautiful",
+     "artist": "Clever"
+    },
+    {
+     "rank": 9,
+     "song": "Fck Boys",
+     "artist": "Blxst Feat. Russ"
+    },
+    {
+     "rank": 10,
+     "song": "Like You Know",
+     "artist": "Lord Apex"
+    },
+    {
+     "rank": 11,
+     "song": "5 Ways",
+     "artist": "Shakewell"
+    },
+    {
+     "rank": 12,
+     "song": "Cosmosis",
+     "artist": "Tony Allen Feat. Skepta & Ben Okri"
+    },
+    {
+     "rank": 13,
+     "song": "Same",
+     "artist": "LB Spiffy"
+    },
+    {
+     "rank": 14,
+     "song": "Yes Or No",
+     "artist": "Lil Eazzyy Feat. IV Jay"
+    },
+    {
+     "rank": 15,
+     "song": "Mama Stay",
+     "artist": "WSTRN"
+    },
+    {
+     "rank": 16,
+     "song": "TIME FOR YOU",
+     "artist": "FRVRFRIDAY"
+    },
+    {
+     "rank": 17,
+     "song": "All To Me",
+     "artist": "Giveon"
+    },
+    {
+     "rank": 18,
+     "song": "Dreams",
+     "artist": "Clever"
+    },
+    {
+     "rank": 19,
+     "song": "It's Alright",
+     "artist": "Vado Feat. Lloyd Banks & Shemon Luster"
+    },
+    {
+     "rank": 20,
+     "song": "Famous",
+     "artist": "Sk8 Feat. Tyla Yahweh"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210316065603/https://hypem.com/popular",
+   "captured": "2021-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Young Jazzy",
+     "artist": "Slick Walk"
+    },
+    {
+     "rank": 2,
+     "song": "Know It",
+     "artist": "Coco O."
+    },
+    {
+     "rank": 3,
+     "song": "Zumo (feat. Fly Anakin)",
+     "artist": "Sal Dulu"
+    },
+    {
+     "rank": 4,
+     "song": "Parking Lot",
+     "artist": "The Weather Station"
+    },
+    {
+     "rank": 5,
+     "song": "Aija",
+     "artist": "il:lo"
+    },
+    {
+     "rank": 6,
+     "song": "La Vida Es Un Carnaval Doc & Jes Moombahton Remix",
+     "artist": "Celia Cruz"
+    },
+    {
+     "rank": 7,
+     "song": "Find Your Way Home",
+     "artist": "Octo Octa"
+    },
+    {
+     "rank": 8,
+     "song": "Yes! I Am A Long Way From Home",
+     "artist": "Mogwai"
+    },
+    {
+     "rank": 9,
+     "song": "Helpless Circumstance",
+     "artist": "Cool Ghouls"
+    },
+    {
+     "rank": 10,
+     "song": "Take Me Somewhere Nice",
+     "artist": "Mogwai"
+    },
+    {
+     "rank": 11,
+     "song": "Hunted by a Freak",
+     "artist": "Mogwai"
+    },
+    {
+     "rank": 12,
+     "song": "Almost Ready",
+     "artist": "Dinosaur Jr."
+    },
+    {
+     "rank": 13,
+     "song": "Rano Pano +1 remix",
+     "artist": "Mogwai"
+    },
+    {
+     "rank": 14,
+     "song": "All My Friends",
+     "artist": "Boys"
+    },
+    {
+     "rank": 15,
+     "song": "End of Time",
+     "artist": "Boys"
+    },
+    {
+     "rank": 16,
+     "song": "Undertaker",
+     "artist": "Bry Webb"
+    },
+    {
+     "rank": 17,
+     "song": "Ritchie Sacramento",
+     "artist": "Mogwai"
+    },
+    {
+     "rank": 18,
+     "song": "Old Ways",
+     "artist": "Bleach Lab"
+    },
+    {
+     "rank": 19,
+     "song": "Bombay +1 remix",
+     "artist": "El Guincho"
+    },
+    {
+     "rank": 20,
+     "song": "Die World +1 remix",
+     "artist": "Lebanon Hanover"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210315190953/https://www.billboard.com/charts/rap-song",
+   "captured": "2021-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Up",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "Mood",
+     "artist": "24kGoldn Featuring iann dior"
+    },
+    {
+     "rank": 3,
+     "song": "Calling My Phone",
+     "artist": "Lil Tjay Featuring 6LACK"
+    },
+    {
+     "rank": 4,
+     "song": "What You Know Bout Love",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 5,
+     "song": "Back In Blood",
+     "artist": "Pooh Shiesty Featuring Lil Durk"
+    },
+    {
+     "rank": 6,
+     "song": "For The Night",
+     "artist": "Pop Smoke Featuring Lil Baby & DaBaby"
+    },
+    {
+     "rank": 7,
+     "song": "Beat Box",
+     "artist": "SpotemGottem Featuring Pooh Shiesty Or DaBaby"
+    },
+    {
+     "rank": 8,
+     "song": "Whoopty",
+     "artist": "CJ"
+    },
+    {
+     "rank": 9,
+     "song": "Best Friend",
+     "artist": "Saweetie Featuring Doja Cat"
+    },
+    {
+     "rank": 10,
+     "song": "On Me",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 11,
+     "song": "Throat Baby (Go Baby)",
+     "artist": "BRS Kash"
+    },
+    {
+     "rank": 12,
+     "song": "No More Parties",
+     "artist": "Coi Leray Featuring Lil Durk"
+    },
+    {
+     "rank": 13,
+     "song": "Cry Baby",
+     "artist": "Megan Thee Stallion Featuring DaBaby"
+    },
+    {
+     "rank": 14,
+     "song": "Astronaut In The Ocean",
+     "artist": "Masked Wolf"
+    },
+    {
+     "rank": 15,
+     "song": "Time Today",
+     "artist": "Moneybagg Yo"
+    },
+    {
+     "rank": 16,
+     "song": "Body",
+     "artist": "Megan Thee Stallion"
+    },
+    {
+     "rank": 17,
+     "song": "Buss It",
+     "artist": "Erica Banks"
+    },
+    {
+     "rank": 18,
+     "song": "AP",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 19,
+     "song": "Masterpiece",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 20,
+     "song": "Neighbors",
+     "artist": "Pooh Shiesty Featuring BIG30"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210315025541/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2021-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Up",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 3,
+     "song": "Go Crazy",
+     "artist": "Chris Brown & Young Thug"
+    },
+    {
+     "rank": 4,
+     "song": "Calling My Phone",
+     "artist": "Lil Tjay Featuring 6LACK"
+    },
+    {
+     "rank": 5,
+     "song": "What You Know Bout Love",
+     "artist": "Pop Smoke"
+    },
+    {
+     "rank": 6,
+     "song": "Back In Blood",
+     "artist": "Pooh Shiesty Featuring Lil Durk"
+    },
+    {
+     "rank": 7,
+     "song": "For The Night",
+     "artist": "Pop Smoke Featuring Lil Baby & DaBaby"
+    },
+    {
+     "rank": 8,
+     "song": "Beat Box",
+     "artist": "SpotemGottem Featuring Pooh Shiesty Or DaBaby"
+    },
+    {
+     "rank": 9,
+     "song": "Whoopty",
+     "artist": "CJ"
+    },
+    {
+     "rank": 10,
+     "song": "You're Mines Still",
+     "artist": "Yung Bleu Featuring Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Best Friend",
+     "artist": "Saweetie Featuring Doja Cat"
+    },
+    {
+     "rank": 12,
+     "song": "Good Days",
+     "artist": "SZA"
+    },
+    {
+     "rank": 13,
+     "song": "On Me",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 14,
+     "song": "Streets",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 15,
+     "song": "Throat Baby (Go Baby)",
+     "artist": "BRS Kash"
+    },
+    {
+     "rank": 16,
+     "song": "No More Parties",
+     "artist": "Coi Leray Featuring Lil Durk"
+    },
+    {
+     "rank": 17,
+     "song": "Cry Baby",
+     "artist": "Megan Thee Stallion Featuring DaBaby"
+    },
+    {
+     "rank": 18,
+     "song": "Damage",
+     "artist": "H.E.R."
+    },
+    {
+     "rank": 19,
+     "song": "Astronaut In The Ocean",
+     "artist": "Masked Wolf"
+    },
+    {
+     "rank": 20,
+     "song": "Time Today",
+     "artist": "Moneybagg Yo"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20210316152823/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2021-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Be Sweet",
+     "artist": "Japanese Breakfast"
+    },
+    {
+     "rank": 2,
+     "song": "Don’t Judge Me",
+     "artist": "FKA twigs, Headie One & Fred again.."
+    },
+    {
+     "rank": 3,
+     "song": "Hard Drive",
+     "artist": "Cassandra Jenkins"
+    },
+    {
+     "rank": 4,
+     "song": "Robber",
+     "artist": "The Weather Station"
+    },
+    {
+     "rank": 5,
+     "song": "anything",
+     "artist": "Adrianne Lenker"
+    },
+    {
+     "rank": 6,
+     "song": "Lost One",
+     "artist": "Jazmine Sullivan"
+    },
+    {
+     "rank": 7,
+     "song": "Bunker [ft. Shannen SP]",
+     "artist": "Nazar"
+    },
+    {
+     "rank": 8,
+     "song": "Furies",
+     "artist": "Moor Mother & billy woods"
+    },
+    {
+     "rank": 9,
+     "song": "America",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 10,
+     "song": "Girls in the Hood",
+     "artist": "Megan Thee Stallion"
+    },
+    {
+     "rank": 11,
+     "song": "Night Echoes",
+     "artist": "Kareem Ali"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210315025649/https://www.billboard.com/charts/country-songs",
+   "captured": "2021-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Good Time",
+     "artist": "Niko Moon"
+    },
+    {
+     "rank": 2,
+     "song": "I Hope",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 3,
+     "song": "Better Together",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 4,
+     "song": "Just The Way",
+     "artist": "Parmalee x Blanco Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Down To One",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 6,
+     "song": "The Good Ones",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 7,
+     "song": "What's Your Country Song",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 8,
+     "song": "Starting Over",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 9,
+     "song": "Long Live",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 10,
+     "song": "Beers And Sunshine",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 11,
+     "song": "Lady",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 12,
+     "song": "Wasted On You",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 13,
+     "song": "Forever After All",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 14,
+     "song": "Momma's House",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 15,
+     "song": "Sand In My Boots",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 16,
+     "song": "Hell Of A View",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 17,
+     "song": "Somebody Like That",
+     "artist": "Tenille Arts"
+    },
+    {
+     "rank": 18,
+     "song": "One Too Many",
+     "artist": "Keith Urban Duet With P!nk"
+    },
+    {
+     "rank": 19,
+     "song": "Almost Maybes",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 20,
+     "song": "Made For You",
+     "artist": "Jake Owen"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210323010137/https://www.beatport.com/top-100",
+   "captured": "2021-03-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rasputin (Extended Mix)",
+     "artist": "Majestic & Boney M."
+    },
+    {
+     "rank": 2,
+     "song": "Set U Free (Extended Mix)",
+     "artist": "GUZ (NL)"
+    },
+    {
+     "rank": 3,
+     "song": "Marea (We've Lost Dancing)",
+     "artist": "The Blessed Madonna & Fred again.."
+    },
+    {
+     "rank": 4,
+     "song": "Jumpin' (Extended)",
+     "artist": "CID & Westend"
+    },
+    {
+     "rank": 5,
+     "song": "Shella feat. Chimpo (Halogenix Remix)",
+     "artist": "Chimpo & Kings Of The Rollers"
+    },
+    {
+     "rank": 6,
+     "song": "H O U S E Feat. Missy",
+     "artist": "Missy & Gettoblaster"
+    },
+    {
+     "rank": 7,
+     "song": "Best of Me (CamelPhat Remix)",
+     "artist": "Sailor & I & ARTBAT"
+    },
+    {
+     "rank": 8,
+     "song": "The World You See",
+     "artist": "Cristoph, Franky Wah & Artche"
+    },
+    {
+     "rank": 9,
+     "song": "The Shake (Extended Mix)",
+     "artist": "Ellis Moss"
+    },
+    {
+     "rank": 10,
+     "song": "You've Done Enough (Extended Mix)",
+     "artist": "Drama & Gorgon City"
+    },
+    {
+     "rank": 11,
+     "song": "Couple Guinness feat. Suku",
+     "artist": "Suku & Selecta J-Man"
+    },
+    {
+     "rank": 12,
+     "song": "Sun Goes Down (Extended Mix)",
+     "artist": "Cloonee"
+    },
+    {
+     "rank": 13,
+     "song": "Clubhouse Casual",
+     "artist": "Murphy & Joe McKenna"
+    },
+    {
+     "rank": 14,
+     "song": "Friday (Dopamine Re-edit) [Extended]",
+     "artist": "Riton, Nightcrawlers & Mufasa & Hypeman"
+    },
+    {
+     "rank": 15,
+     "song": "Slim Is Alive",
+     "artist": "Richard Grey & Lissat"
+    },
+    {
+     "rank": 16,
+     "song": "Ask Me (Extended)",
+     "artist": "Armand Van Helden, A-Trak & Duck Sauce"
+    },
+    {
+     "rank": 17,
+     "song": "Move Ya Body (Extended Mix)",
+     "artist": "Kevin McKay"
+    },
+    {
+     "rank": 18,
+     "song": "I Need Someone (feat. Nathan Ball & Caleb Femi) [Yotto Remix] (Extended Mix)",
+     "artist": "Faithless, Nathan Ball & Caleb Femi"
+    },
+    {
+     "rank": 19,
+     "song": "The Sequel (Extended Mix)",
+     "artist": "Tita Lau"
+    },
+    {
+     "rank": 20,
+     "song": "Girlz (L-Side Remix)",
+     "artist": "Potential Badboy, MC Fats & Yush"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210317212502/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2021-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Goosebumps",
+     "artist": "Travis Scott & HVME"
+    },
+    {
+     "rank": 2,
+     "song": "The Business",
+     "artist": "Tiesto"
+    },
+    {
+     "rank": 3,
+     "song": "Roses (Imanbek Remix)",
+     "artist": "SAINt JHN"
+    },
+    {
+     "rank": 4,
+     "song": "Selfish Love",
+     "artist": "DJ Snake & Selena Gomez"
+    },
+    {
+     "rank": 5,
+     "song": "ily",
+     "artist": "Surf Mesa Featuring Emilee"
+    },
+    {
+     "rank": 6,
+     "song": "Rain On Me",
+     "artist": "Lady Gaga & Ariana Grande"
+    },
+    {
+     "rank": 7,
+     "song": "Paradise",
+     "artist": "Meduza & Dermot Kennedy"
+    },
+    {
+     "rank": 8,
+     "song": "Lasting Lover",
+     "artist": "Sigala. & James Arthur"
+    },
+    {
+     "rank": 9,
+     "song": "Head & Heart",
+     "artist": "Joel Corry X MNEK"
+    },
+    {
+     "rank": 10,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 11,
+     "song": "One More Time",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 12,
+     "song": "Your Love (9PM)",
+     "artist": "ATB x Topic x A7S"
+    },
+    {
+     "rank": 13,
+     "song": "Friday",
+     "artist": "Riton X Nightcrawlers Featuring Mufasa & Hypeman"
+    },
+    {
+     "rank": 14,
+     "song": "Bed",
+     "artist": "Joel Corry X RAYE X David Guetta"
+    },
+    {
+     "rank": 15,
+     "song": "Around The World",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 16,
+     "song": "Higher",
+     "artist": "Clean Bandit Featuring iann dior"
+    },
+    {
+     "rank": 17,
+     "song": "Hate You + Love You",
+     "artist": "Cheat Codes & AJ Mitchell"
+    },
+    {
+     "rank": 18,
+     "song": "Harder, Better, Faster, Stronger",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 19,
+     "song": "Opportunities (Let's Make Lots Of Money)",
+     "artist": "Pet Shop Boys"
+    },
+    {
+     "rank": 20,
+     "song": "Stronger",
+     "artist": "Sam Feldt Featuring Kesha"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210318063408/https://www.billboard.com/charts/alternative-airplay",
+   "captured": "2021-03-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heat Waves",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 2,
+     "song": "My Ex's Best Friend",
+     "artist": "Machine Gun Kelly X blackbear"
+    },
+    {
+     "rank": 3,
+     "song": "Skin And Bones",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 4,
+     "song": "Monsters",
+     "artist": "All Time Low Featuring blackbear"
+    },
+    {
+     "rank": 5,
+     "song": "Sofia",
+     "artist": "Clairo"
+    },
+    {
+     "rank": 6,
+     "song": "Without You",
+     "artist": "The Kid LAROI"
+    },
+    {
+     "rank": 7,
+     "song": "The Bandit",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 8,
+     "song": "Therefore I Am",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 9,
+     "song": "All My Favorite Songs",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 10,
+     "song": "Waiting On A War",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 11,
+     "song": "Deep End",
+     "artist": "Foushee"
+    },
+    {
+     "rank": 12,
+     "song": "Estella",
+     "artist": "KennyHoopla X Travis Barker"
+    },
+    {
+     "rank": 13,
+     "song": "Way Less Sad",
+     "artist": "AJR"
+    },
+    {
+     "rank": 14,
+     "song": "Dirty",
+     "artist": "grandson"
+    },
+    {
+     "rank": 15,
+     "song": "Bloody Valentine",
+     "artist": "Machine Gun Kelly"
+    },
+    {
+     "rank": 16,
+     "song": "Violent",
+     "artist": "carolesdaughter"
+    },
+    {
+     "rank": 17,
+     "song": "You",
+     "artist": "benny blanco, Marshmello & Vance Joy"
+    },
+    {
+     "rank": 18,
+     "song": "All About You",
+     "artist": "The Knocks Featuring Foster The People"
+    },
+    {
+     "rank": 19,
+     "song": "Fake Friend",
+     "artist": "nothing,nowhere."
+    },
+    {
+     "rank": 20,
+     "song": "Happy Endings",
+     "artist": "Mike Shinoda Featuring iann dior & UPSAHL"
+    }
+   ]
+  },
+  {
+   "id": "spotify_viral",
+   "genre": "all",
+   "label": "Spotify · Viral 50 US (weekly, else daily)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210302222404/https://spotifycharts.com/viral/us/daily/latest",
+   "captured": "2021-03-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Моя голова винтом",
+     "artist": "kostromin"
+    },
+    {
+     "rank": 2,
+     "song": "SugarCrash!",
+     "artist": "ElyOtto"
+    },
+    {
+     "rank": 3,
+     "song": "Wellerman - Sea Shanty / 220 KID x Billen Ted Remix",
+     "artist": "Nathan Evans"
+    },
+    {
+     "rank": 4,
+     "song": "telepatía",
+     "artist": "Kali Uchis"
+    },
+    {
+     "rank": 5,
+     "song": "Astronaut In The Ocean",
+     "artist": "Masked Wolf"
+    },
+    {
+     "rank": 6,
+     "song": "Track Star",
+     "artist": "Mooski"
+    },
+    {
+     "rank": 7,
+     "song": "Tokyo",
+     "artist": "Leat'eq"
+    },
+    {
+     "rank": 8,
+     "song": "Wellerman - Sea Shanty",
+     "artist": "Nathan Evans"
+    },
+    {
+     "rank": 9,
+     "song": "Roadtrip",
+     "artist": "Dream, PmBata"
+    },
+    {
+     "rank": 10,
+     "song": "ROLLIN N CONTROLLIN FREESTYLE",
+     "artist": "DUSTY LOCANE"
+    },
+    {
+     "rank": 11,
+     "song": "Heartbreak Anniversary",
+     "artist": "Giveon"
+    },
+    {
+     "rank": 12,
+     "song": "Friday (feat. Mufasa & Hypeman) - Dopamine Re-Edit",
+     "artist": "Riton, Nightcrawlers"
+    },
+    {
+     "rank": 13,
+     "song": "Hot N*gga",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 14,
+     "song": "Bobby Bitch",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 15,
+     "song": "So Pretty",
+     "artist": "Reyanna Maria"
+    },
+    {
+     "rank": 16,
+     "song": "Fiel",
+     "artist": "Los Legendarios, Wisin, Jhay Cortez"
+    },
+    {
+     "rank": 17,
+     "song": "Up",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 18,
+     "song": "Best Friend (feat. Doja Cat)",
+     "artist": "Saweetie"
+    },
+    {
+     "rank": 19,
+     "song": "Isabelle",
+     "artist": "Zach Hood"
+    },
+    {
+     "rank": 20,
+     "song": "Pierre",
+     "artist": "Ryn Weaver"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210314114328/https://kworb.net/charts/itunes/us.html",
+   "captured": "2021-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Leave The Door Open",
+     "artist": "Bruno Mars, Anderson .Paak & Silk Sonic"
+    },
+    {
+     "rank": 2,
+     "song": "Astronaut In The Ocean",
+     "artist": "Masked Wolf"
+    },
+    {
+     "rank": 3,
+     "song": "On The Ground",
+     "artist": "ROSÉ"
+    },
+    {
+     "rank": 4,
+     "song": "My Head & My Heart",
+     "artist": "Ava Max"
+    },
+    {
+     "rank": 5,
+     "song": "Up",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 6,
+     "song": "Don't Start Now",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 7,
+     "song": "Beautiful Mistakes",
+     "artist": "Maroon 5 & Megan Thee Stallion"
+    },
+    {
+     "rank": 8,
+     "song": "Follow You",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 9,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "If You Love Her",
+     "artist": "Forest Blakk"
+    },
+    {
+     "rank": 11,
+     "song": "Sweet Night",
+     "artist": "V"
+    },
+    {
+     "rank": 12,
+     "song": "Hold On To Me",
+     "artist": "Lauren Daigle"
+    },
+    {
+     "rank": 13,
+     "song": "drivers license",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 14,
+     "song": "The Good Ones",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 15,
+     "song": "Levitating (feat. DaBaby)",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 16,
+     "song": "The Business",
+     "artist": "Tiësto"
+    },
+    {
+     "rank": 17,
+     "song": "Save Your Tears",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 18,
+     "song": "Best Friend (feat. Doja Cat)",
+     "artist": "Saweetie"
+    },
+    {
+     "rank": 19,
+     "song": "Hypotheticals",
+     "artist": "Lake Street Dive"
+    },
+    {
+     "rank": 20,
+     "song": "LOST (feat. Hopsin)",
+     "artist": "NF"
+    }
+   ]
+  }
+ ]
+}

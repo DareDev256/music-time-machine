@@ -281,6 +281,186 @@
      "artist": "Sade"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100213072231/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2010-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "New York Is Killing Me",
+     "artist": "Gil Scott-Heron"
+    },
+    {
+     "rank": 2,
+     "song": "Odessa",
+     "artist": "Caribou"
+    },
+    {
+     "rank": 3,
+     "song": "Yellow Wings",
+     "artist": "Keepaway"
+    },
+    {
+     "rank": 4,
+     "song": "Facelove",
+     "artist": "PS I Love You"
+    },
+    {
+     "rank": 5,
+     "song": "Little Freak\" [ft. Nicki Minaj]",
+     "artist": "Usher"
+    },
+    {
+     "rank": 6,
+     "song": "Colouring of Pigeons\" [ft. Mt. Sims and Planningtorock]",
+     "artist": "The Knife"
+    },
+    {
+     "rank": 7,
+     "song": "Exhibit C",
+     "artist": "Jay Electronica"
+    },
+    {
+     "rank": 8,
+     "song": "Chase the Tear",
+     "artist": "Portishead"
+    },
+    {
+     "rank": 9,
+     "song": "Soldier of Love",
+     "artist": "Sade"
+    },
+    {
+     "rank": 10,
+     "song": "When I Look at You",
+     "artist": "Emalkay"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100216221022/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2010-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Why Don't We Just Dance",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 2,
+     "song": "The Truth",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 3,
+     "song": "American Saturday Night",
+     "artist": "Brad Paisley"
+    },
+    {
+     "rank": 4,
+     "song": "History In The Making",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 5,
+     "song": "White Liar",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 6,
+     "song": "That's How Country Boys Roll",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 7,
+     "song": "Cryin' For Me (Wayman's Song...",
+     "artist": "Toby Keith"
+    },
+    {
+     "rank": 8,
+     "song": "Temporary Home",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 9,
+     "song": "Hillbilly Bone",
+     "artist": "Blake Shelton Featuring Trace Adkins"
+    },
+    {
+     "rank": 10,
+     "song": "Southern Voice",
+     "artist": "Tim McGraw"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100214172239/http://www.pigeonsandplanes.com:80/",
+   "captured": "2010-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jump Up In The Air",
+     "artist": "Erykah Badu Ft. Lil' Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Down For Y'all",
+     "artist": "B.o.B."
+    },
+    {
+     "rank": 3,
+     "song": "Memories",
+     "artist": "David Guetta ft. Kid Cudi"
+    },
+    {
+     "rank": 4,
+     "song": "This Plane",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 5,
+     "song": "Sprite Commercial",
+     "artist": "Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Eat You Alive",
+     "artist": "Lil' Wayne Ft. Ludacris"
+    },
+    {
+     "rank": 7,
+     "song": "Ambling Alp",
+     "artist": "The Very Best"
+    },
+    {
+     "rank": 8,
+     "song": "Oh No!",
+     "artist": "Marina and the Diamonds"
+    },
+    {
+     "rank": 9,
+     "song": "Tight Rope",
+     "artist": "Janelle Monáe feat. Big Boi"
+    },
+    {
+     "rank": 10,
+     "song": "Sex, Drugs, and Alcohol",
+     "artist": "Ninjasonik"
+    }
+   ]
   }
  ]
 }

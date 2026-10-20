@@ -1,0 +1,731 @@
+{
+ "month": "2018-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180131203430/https://www.hotnewhiphop.com/top100/",
+   "captured": "2018-01-31",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Big Bad Wolf",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Bloody Mary",
+     "artist": "Lil Wayne Feat. Juelz Santana"
+    },
+    {
+     "rank": 3,
+     "song": "Above",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 4,
+     "song": "5IVE $TAR$",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 5,
+     "song": "Money Bags Freestyle (Dean Blunt Meditation)",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 6,
+     "song": "Run It (Prod. By Timbaland)",
+     "artist": "Joyner Lucas Feat. Meek Mill"
+    },
+    {
+     "rank": 7,
+     "song": "Walk It Talk It",
+     "artist": "Migos Feat. Drake"
+    },
+    {
+     "rank": 8,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Go Brazy",
+     "artist": "Lil Wayne Feat. Jay Jones"
+    },
+    {
+     "rank": 10,
+     "song": "Alive",
+     "artist": "Lil Jon Feat. Offset"
+    },
+    {
+     "rank": 11,
+     "song": "Roll In Peace (Remix)",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 12,
+     "song": "Thought It Was A Drought",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 13,
+     "song": "White Sand",
+     "artist": "Migos Feat. Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "All Of Them",
+     "artist": "Rich The Kid & Playboi Carti"
+    },
+    {
+     "rank": 15,
+     "song": "Main Things",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 16,
+     "song": "Supastars",
+     "artist": "Migos"
+    },
+    {
+     "rank": 17,
+     "song": "Wrote My Way Out",
+     "artist": "Royce Da 5'9\" , Black Thought & Joyner Lucas Feat. Aloe Blacc"
+    },
+    {
+     "rank": 18,
+     "song": "Diplomatic Immunity",
+     "artist": "Vic Mensa"
+    },
+    {
+     "rank": 19,
+     "song": "Hold Me Now (Metro Boomin Mix)",
+     "artist": "Metro Boomin"
+    },
+    {
+     "rank": 20,
+     "song": "Uber",
+     "artist": "Ace Hood"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180118012524/https://hypem.com/popular",
+   "captured": "2018-01-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "How Long Jerry Folk Remix",
+     "artist": "Charlie Puth"
+    },
+    {
+     "rank": 2,
+     "song": "Take Shelter",
+     "artist": "Palace Winter"
+    },
+    {
+     "rank": 3,
+     "song": "The One To Wait",
+     "artist": "CCFX"
+    },
+    {
+     "rank": 4,
+     "song": "Another Light",
+     "artist": "Henry Green"
+    },
+    {
+     "rank": 5,
+     "song": "Juliet + Caesar",
+     "artist": "Cautious Clay"
+    },
+    {
+     "rank": 6,
+     "song": "Best Me",
+     "artist": "Sylvan LaCue"
+    },
+    {
+     "rank": 7,
+     "song": "Gap In The Clouds",
+     "artist": "Yellow Days"
+    },
+    {
+     "rank": 8,
+     "song": "Giants",
+     "artist": "Sure Sure"
+    },
+    {
+     "rank": 9,
+     "song": "Tripping Out SO|KA love edit",
+     "artist": "Curtis Mayfield"
+    },
+    {
+     "rank": 10,
+     "song": "I Fall Apart Young Bombs Remix",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 11,
+     "song": "Hardest Part",
+     "artist": "Kaptan"
+    },
+    {
+     "rank": 12,
+     "song": "Last Call (feat. Elouiz)",
+     "artist": "LO"
+    },
+    {
+     "rank": 13,
+     "song": "Pews",
+     "artist": "N A D I N E"
+    },
+    {
+     "rank": 14,
+     "song": "On My Own (feat. Emily Terran)",
+     "artist": "Aire Atlantica"
+    },
+    {
+     "rank": 15,
+     "song": "Passion",
+     "artist": "Mokoa"
+    },
+    {
+     "rank": 16,
+     "song": "Zombie Live",
+     "artist": "The Cranberries"
+    },
+    {
+     "rank": 17,
+     "song": "Everafter",
+     "artist": "Me Not You"
+    },
+    {
+     "rank": 18,
+     "song": "Call Me Arcando Remix",
+     "artist": "Tritonal"
+    },
+    {
+     "rank": 19,
+     "song": "Strangers LUXXURY Remix",
+     "artist": "Distiller Music"
+    },
+    {
+     "rank": 20,
+     "song": "Strange but True",
+     "artist": "Western Scene"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180124231421/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2018-01-24",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 2,
+     "song": "Finesse",
+     "artist": "Bruno Mars & Cardi B"
+    },
+    {
+     "rank": 3,
+     "song": "No Limit",
+     "artist": "G-Eazy Featuring A$AP Rocky & Cardi B"
+    },
+    {
+     "rank": 4,
+     "song": "MotorSport",
+     "artist": "Migos, Nicki Minaj & Cardi B"
+    },
+    {
+     "rank": 5,
+     "song": "Gucci Gang",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 6,
+     "song": "Love.",
+     "artist": "Kendrick Lamar Featuring Zacari"
+    },
+    {
+     "rank": 7,
+     "song": "Gummo",
+     "artist": "6ix9ine"
+    },
+    {
+     "rank": 8,
+     "song": "Let You Down",
+     "artist": "NF"
+    },
+    {
+     "rank": 9,
+     "song": "Him & I",
+     "artist": "G-Eazy & Halsey"
+    },
+    {
+     "rank": 10,
+     "song": "Bartier Cardi",
+     "artist": "Cardi B Featuring 21 Savage"
+    },
+    {
+     "rank": 11,
+     "song": "I Fall Apart",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 12,
+     "song": "I Get The Bag",
+     "artist": "Gucci Mane Featuring Migos"
+    },
+    {
+     "rank": 13,
+     "song": "Plain Jane",
+     "artist": "A$AP Ferg"
+    },
+    {
+     "rank": 14,
+     "song": "Sky Walker",
+     "artist": "Miguel Featuring Travis Scott"
+    },
+    {
+     "rank": 15,
+     "song": "River",
+     "artist": "Eminem Featuring Ed Sheeran"
+    },
+    {
+     "rank": 16,
+     "song": "Roll In Peace",
+     "artist": "Kodak Black Featuring XXXTENTACION"
+    },
+    {
+     "rank": 17,
+     "song": "The Way Life Goes",
+     "artist": "Lil Uzi Vert Featuring Nicki Minaj"
+    },
+    {
+     "rank": 18,
+     "song": "Lemon",
+     "artist": "N*E*R*D & Rihanna"
+    },
+    {
+     "rank": 19,
+     "song": "Ric Flair Drip",
+     "artist": "Offset & Metro Boomin"
+    },
+    {
+     "rank": 20,
+     "song": "Pills And Automobiles",
+     "artist": "Chris Brown Featuring Yo Gotti, A Boogie Wit da Hoodie & Kodak Black"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180117202755/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "My My My!",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 2,
+     "song": "Crayons",
+     "artist": "CupcakKe"
+    },
+    {
+     "rank": 3,
+     "song": "Party Here",
+     "artist": "Octavian"
+    },
+    {
+     "rank": 4,
+     "song": "Stir Fry",
+     "artist": "Migos"
+    },
+    {
+     "rank": 5,
+     "song": "Backseat [ft. Carly Rae Jepsen]",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 6,
+     "song": "Sticky",
+     "artist": "Ravyn Lenae"
+    },
+    {
+     "rank": 7,
+     "song": "Tonya Harding",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 8,
+     "song": "Beach Life in Death",
+     "artist": "Car Seat Headrest"
+    },
+    {
+     "rank": 9,
+     "song": "Blissing Me",
+     "artist": "Björk"
+    },
+    {
+     "rank": 10,
+     "song": "Intrepid",
+     "artist": "Pinegrove"
+    },
+    {
+     "rank": 11,
+     "song": "Still Serving",
+     "artist": "21 Savage, Offset & Metro Boomin"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180116225541/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-01-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Meant To Be",
+     "artist": "Bebe Rexha & Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 3,
+     "song": "Marry Me",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 4,
+     "song": "Like I Loved You",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 5,
+     "song": "What Ifs",
+     "artist": "Kane Brown Featuring Lauren Alaina"
+    },
+    {
+     "rank": 6,
+     "song": "Yours",
+     "artist": "Russell Dickerson"
+    },
+    {
+     "rank": 7,
+     "song": "Greatest Love Story",
+     "artist": "LANCO"
+    },
+    {
+     "rank": 8,
+     "song": "I'll Name The Dogs",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 9,
+     "song": "Round Here Buzz",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 10,
+     "song": "When It Rains It Pours",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 11,
+     "song": "I Could Use A Love Song",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 12,
+     "song": "Losing Sleep",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 13,
+     "song": "You Broke Up With Me",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 14,
+     "song": "Unforgettable",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 15,
+     "song": "Light It Up",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 16,
+     "song": "Written In The Sand",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 17,
+     "song": "Five More Minutes",
+     "artist": "Scotty McCreery"
+    },
+    {
+     "rank": 18,
+     "song": "Legends",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 19,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 20,
+     "song": "All On Me",
+     "artist": "Devin Dawson"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180113081608/https://www.beatport.com/top-100",
+   "captured": "2018-01-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What a Bam",
+     "artist": "George Privatti & Guille Placencia"
+    },
+    {
+     "rank": 2,
+     "song": "The Groovy Cat (Extended Mix)",
+     "artist": "PAWSA"
+    },
+    {
+     "rank": 3,
+     "song": "Be Sharp Say Nowt",
+     "artist": "Patrick Topping"
+    },
+    {
+     "rank": 4,
+     "song": "Black Beauty",
+     "artist": "Hidden Empire"
+    },
+    {
+     "rank": 5,
+     "song": "Reverie",
+     "artist": "Audiojack"
+    },
+    {
+     "rank": 6,
+     "song": "Strand",
+     "artist": "Stephan Bodzin"
+    },
+    {
+     "rank": 7,
+     "song": "Stella",
+     "artist": "Thomas Schumacher"
+    },
+    {
+     "rank": 8,
+     "song": "Call Upon Me",
+     "artist": "Franky Rizardo"
+    },
+    {
+     "rank": 9,
+     "song": "Stop It",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 10,
+     "song": "La La Land (Walker & Royce Remix)",
+     "artist": "Green Velvet"
+    },
+    {
+     "rank": 11,
+     "song": "So Crazy",
+     "artist": "Leandro Da Silva"
+    },
+    {
+     "rank": 12,
+     "song": "Cola",
+     "artist": "CamelPhat & Elderbrook"
+    },
+    {
+     "rank": 13,
+     "song": "Désolé",
+     "artist": "DAVI & Definition"
+    },
+    {
+     "rank": 14,
+     "song": "Tweezer",
+     "artist": "Aitor Ronda"
+    },
+    {
+     "rank": 15,
+     "song": "Puffy (Extended Mix)",
+     "artist": "95 North & Mason Maynard"
+    },
+    {
+     "rank": 16,
+     "song": "Loving You Baby (Weiss Remix)",
+     "artist": "The Tribe Of Good"
+    },
+    {
+     "rank": 17,
+     "song": "Got To Go",
+     "artist": "Earth n Days"
+    },
+    {
+     "rank": 18,
+     "song": "In The Mix",
+     "artist": "Funk The Beat"
+    },
+    {
+     "rank": 19,
+     "song": "Love Stream",
+     "artist": "Mat.Joe"
+    },
+    {
+     "rank": 20,
+     "song": "Grooves On The Vinyl (Extended Mix)",
+     "artist": "Gorgon City"
+    }
+   ]
+  },
+  {
+   "id": "spotify_viral",
+   "genre": "all",
+   "label": "Spotify · Viral 50 US (weekly, else daily)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180121030447/https://spotifycharts.com/viral/us/daily/latest",
+   "captured": "2018-01-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "King's Dead (with Kendrick Lamar, Future & James Blake)",
+     "artist": "Jay Rock"
+    },
+    {
+     "rank": 2,
+     "song": "Oprah 75th Golden Globes Cecil B. DeMille Award Acceptance Speech",
+     "artist": "Oprah Winfrey"
+    },
+    {
+     "rank": 3,
+     "song": "Mine",
+     "artist": "Bazzi"
+    },
+    {
+     "rank": 4,
+     "song": "After The Storm (feat. Tyler, The Creator & Bootsy Collins)",
+     "artist": "Kali Uchis"
+    },
+    {
+     "rank": 5,
+     "song": "My My My!",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 6,
+     "song": "Kissing Tree",
+     "artist": "The Spencer Lee Band"
+    },
+    {
+     "rank": 7,
+     "song": "ICY GRL",
+     "artist": "Saweetie"
+    },
+    {
+     "rank": 8,
+     "song": "Rewrite The Stars",
+     "artist": "Zac Efron"
+    },
+    {
+     "rank": 9,
+     "song": "Medicine",
+     "artist": "Queen Naija"
+    },
+    {
+     "rank": 10,
+     "song": "Supernova",
+     "artist": "Ansel Elgort"
+    },
+    {
+     "rank": 11,
+     "song": "This Is Me",
+     "artist": "Keala Settle"
+    },
+    {
+     "rank": 12,
+     "song": "The Champion",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 13,
+     "song": "Dreams",
+     "artist": "The Cranberries"
+    },
+    {
+     "rank": 14,
+     "song": "Laughing on the Outside",
+     "artist": "Bernadette Carroll"
+    },
+    {
+     "rank": 15,
+     "song": "EL BAÑO",
+     "artist": "Enrique Iglesias"
+    },
+    {
+     "rank": 16,
+     "song": "Spotlight",
+     "artist": "Marshmello"
+    },
+    {
+     "rank": 17,
+     "song": "Yellow Lights",
+     "artist": "Harry Hudson"
+    },
+    {
+     "rank": 18,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 19,
+     "song": "KEKE",
+     "artist": "6ix9ine"
+    },
+    {
+     "rank": 20,
+     "song": "Linger",
+     "artist": "The Cranberries"
+    }
+   ]
+  }
+ ]
+}

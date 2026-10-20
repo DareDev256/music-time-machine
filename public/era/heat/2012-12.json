@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121228201144/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2012-12-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Cry",
+     "artist": "Flo Rida"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 4,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 6,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 7,
+     "song": "Don't Stop The Party",
+     "artist": "Pitbull Featuring TJR"
+    },
+    {
+     "rank": 8,
+     "song": "I'm Different",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 9,
+     "song": "No Worries",
+     "artist": "Lil Wayne Featuring Detail"
+    },
+    {
+     "rank": 10,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,211 @@
      "rank": 10,
      "song": "Bandz A Make Her Dance",
      "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121215152934/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2012-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hit Me",
+     "artist": "Mystikal"
+    },
+    {
+     "rank": 2,
+     "song": "Song for Zula",
+     "artist": "Phosphorescent"
+    },
+    {
+     "rank": 3,
+     "song": "Aaliyah\" [ft. Jessie Ware]",
+     "artist": "Katy B"
+    },
+    {
+     "rank": 4,
+     "song": "Breathe",
+     "artist": "Twigs"
+    },
+    {
+     "rank": 5,
+     "song": "Fresh Eyes",
+     "artist": "Nautic"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121228220955/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2012-12-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "We Are Never Ever Getting Ba...",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 3,
+     "song": "Wanted",
+     "artist": "Hunter Hayes"
+    },
+    {
+     "rank": 4,
+     "song": "Better Dig Two",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 5,
+     "song": "Every Storm (Runs Out Of Rai...",
+     "artist": "Gary Allan"
+    },
+    {
+     "rank": 6,
+     "song": "Goodbye In Her Eyes",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 7,
+     "song": "Til My Last Day",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 8,
+     "song": "How Country Feels",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 9,
+     "song": "Beer Money",
+     "artist": "Kip Moore"
+    },
+    {
+     "rank": 10,
+     "song": "The Only Way I Know",
+     "artist": "Jason Aldean With Luke Bryan & Eric Church"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121227135806/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2012-12-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 2,
+     "song": "I Will Wait",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 3,
+     "song": "Little Black Submarines",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 4,
+     "song": "Ho Hey",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 5,
+     "song": "Trojans",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 6,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "Take A Walk",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 8,
+     "song": "Mountain Sound",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 9,
+     "song": "We Come Running",
+     "artist": "Youngblood Hawke"
+    },
+    {
+     "rank": 10,
+     "song": "It's Time",
+     "artist": "Imagine Dragons"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121222152319/http://www.2dopeboyz.com/",
+   "captured": "2012-12-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "World Famous f. Sean Price & Meyhem Lauren",
+     "artist": "Labba"
+    },
+    {
+     "rank": 2,
+     "song": "Lion Pride",
+     "artist": "Styles P"
+    },
+    {
+     "rank": 3,
+     "song": "Hills And Valleys",
+     "artist": "Erick Arc Elliott (of Flatbush ZOMBiES)"
+    },
+    {
+     "rank": 4,
+     "song": "I’m Feelin’ It",
+     "artist": "Pill"
+    },
+    {
+     "rank": 5,
+     "song": "Everyday Is Christmas (FreEP)",
+     "artist": "Planet Asia & Gold Chain Music"
+    },
+    {
+     "rank": 6,
+     "song": "Soul Assassins Radio Freestyle",
+     "artist": "Jay Rock"
+    },
+    {
+     "rank": 7,
+     "song": "Black Panamera (rmx) f. Wale",
+     "artist": "Magazeen"
+    },
+    {
+     "rank": 8,
+     "song": "Pretty Flacko (rmx) f. Gucci Mane, Fozzie Bear & Pharrell",
+     "artist": "A$AP Rocky"
     }
    ]
   }

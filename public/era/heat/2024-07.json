@@ -1,0 +1,996 @@
+{
+ "month": "2024-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240715004131/https://hypem.com/popular",
+   "captured": "2024-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Like The Way You Kiss Me Dance Yourself Clean Remix",
+     "artist": "Artemas"
+    },
+    {
+     "rank": 2,
+     "song": "Shame",
+     "artist": "The Parade"
+    },
+    {
+     "rank": 3,
+     "song": "telephone",
+     "artist": "Julia-Sophie"
+    },
+    {
+     "rank": 4,
+     "song": "The City Never Felt So Good",
+     "artist": "1tbsp"
+    },
+    {
+     "rank": 5,
+     "song": "När lingonen mognar (Lingonberries Forever)",
+     "artist": "Träden (Träd Gräs och Stenar)"
+    },
+    {
+     "rank": 6,
+     "song": "The Last Goodbye (feat. Bettye LaVette) Odd Mob Remix",
+     "artist": "ODESZA"
+    },
+    {
+     "rank": 7,
+     "song": "Shellshock Keenan Mathias Edit",
+     "artist": "Koreless"
+    },
+    {
+     "rank": 8,
+     "song": "Broke My Heart Harry Hayes Remix",
+     "artist": "Caribou"
+    },
+    {
+     "rank": 9,
+     "song": "I Went Swimming",
+     "artist": "Soot Sprite"
+    },
+    {
+     "rank": 10,
+     "song": "Bad Things",
+     "artist": "The Wedding Present"
+    },
+    {
+     "rank": 11,
+     "song": "Interstate 5",
+     "artist": "The Wedding Present"
+    },
+    {
+     "rank": 12,
+     "song": "give me a reason",
+     "artist": "bad tuner"
+    },
+    {
+     "rank": 13,
+     "song": "Planetary Clairvoyance (They Grow Inside Pt 2)",
+     "artist": "Tomb Mold"
+    },
+    {
+     "rank": 14,
+     "song": "Falling Under",
+     "artist": "a.s.o."
+    },
+    {
+     "rank": 15,
+     "song": "Emergentia EP Version",
+     "artist": "Everything is Nothing"
+    },
+    {
+     "rank": 16,
+     "song": "Trippin' Like I Do",
+     "artist": "Mystic Braves"
+    },
+    {
+     "rank": 17,
+     "song": "Bloodstained Tissue old version",
+     "artist": "Liv Sommer"
+    },
+    {
+     "rank": 18,
+     "song": "No Way Out",
+     "artist": "Tara Lily"
+    },
+    {
+     "rank": 19,
+     "song": "Des Chips Des Leffes En Terrasse 3",
+     "artist": "Radio Gâtine"
+    },
+    {
+     "rank": 20,
+     "song": "Side A: kanagawa",
+     "artist": "August Fanon & iLL-Sugi"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240719075522/https://www.billboard.com/charts/rap-song/",
+   "captured": "2024-07-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Like That",
+     "artist": "Future, Metro Boomin & Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Houdini",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 4,
+     "song": "Wanna Be",
+     "artist": "GloRilla & Megan Thee Stallion"
+    },
+    {
+     "rank": 5,
+     "song": "Tobey",
+     "artist": "Eminem, Big Sean & BabyTron"
+    },
+    {
+     "rank": 6,
+     "song": "Whiskey Whiskey",
+     "artist": "Moneybagg Yo Featuring Morgan Wallen"
+    },
+    {
+     "rank": 7,
+     "song": "TGIF",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 8,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 9,
+     "song": "Yeah Glo!",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 10,
+     "song": "Mamushi",
+     "artist": "Megan Thee Stallion Featuring Yuki Chiba"
+    },
+    {
+     "rank": 11,
+     "song": "Get It Sexyy",
+     "artist": "Sexyy Red"
+    },
+    {
+     "rank": 12,
+     "song": "BAND4BAND",
+     "artist": "Central Cee & Lil Baby"
+    },
+    {
+     "rank": 13,
+     "song": "Euphoria",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 14,
+     "song": "Kehlani",
+     "artist": "Jordan Adetunji"
+    },
+    {
+     "rank": 15,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 16,
+     "song": "Type Shit",
+     "artist": "Future, Metro Boomin, Travis Scott & Playboi Carti"
+    },
+    {
+     "rank": 17,
+     "song": "One Of Wun",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 18,
+     "song": "U My Everything",
+     "artist": "Sexyy Red & Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Okay",
+     "artist": "JT"
+    },
+    {
+     "rank": 20,
+     "song": "Parking Lot",
+     "artist": "Mustard & Travis Scott"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240715190032/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2024-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Million Dollar Baby",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 3,
+     "song": "Like That",
+     "artist": "Future, Metro Boomin & Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Houdini",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 5,
+     "song": "Saturn",
+     "artist": "SZA"
+    },
+    {
+     "rank": 6,
+     "song": "Wanna Be",
+     "artist": "GloRilla & Megan Thee Stallion"
+    },
+    {
+     "rank": 7,
+     "song": "TGIF",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 8,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 9,
+     "song": "Yeah Glo!",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 10,
+     "song": "Devil Is A Lie",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 11,
+     "song": "Get It Sexyy",
+     "artist": "Sexyy Red"
+    },
+    {
+     "rank": 12,
+     "song": "BAND4BAND",
+     "artist": "Central Cee & Lil Baby"
+    },
+    {
+     "rank": 13,
+     "song": "Kehlani",
+     "artist": "Jordan Adetunji"
+    },
+    {
+     "rank": 14,
+     "song": "Euphoria",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 15,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 16,
+     "song": "Type Shit",
+     "artist": "Future, Metro Boomin, Travis Scott & Playboi Carti"
+    },
+    {
+     "rank": 17,
+     "song": "One Of Wun",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 18,
+     "song": "Nasty",
+     "artist": "Tinashe"
+    },
+    {
+     "rank": 19,
+     "song": "U My Everything",
+     "artist": "Sexyy Red & Drake"
+    },
+    {
+     "rank": 20,
+     "song": "Otaku Hot Girl",
+     "artist": "Megan Thee Stallion"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20240715015628/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2024-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The girl, so confusing version with lorde",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "Von Dutch",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 3,
+     "song": "Life Is",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 4,
+     "song": "Oral",
+     "artist": "Bjork Rosalia"
+    },
+    {
+     "rank": 5,
+     "song": "Will Anybody Ever Love Me?",
+     "artist": "Sufjan Stevens?"
+    },
+    {
+     "rank": 6,
+     "song": "I Got Heaven",
+     "artist": "Mannequin Pussy"
+    },
+    {
+     "rank": 7,
+     "song": "Pet Rock",
+     "artist": "L’Rain"
+    },
+    {
+     "rank": 8,
+     "song": "So You Are Tired",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 9,
+     "song": "Bad Idea Right?",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 10,
+     "song": "Knockin",
+     "artist": "MJ Lenderman"
+    },
+    {
+     "rank": 11,
+     "song": "Psychedelic Switch",
+     "artist": "Carly Rae Jepsen"
+    },
+    {
+     "rank": 12,
+     "song": "Vampire Empire",
+     "artist": "Big Thief"
+    },
+    {
+     "rank": 13,
+     "song": "Rush",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 14,
+     "song": "Vampire",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 15,
+     "song": "Rosa Rugosa",
+     "artist": "Olof Dreijer"
+    },
+    {
+     "rank": 16,
+     "song": "The Hillbillies",
+     "artist": "Baby Keem Kendrick Lamar"
+    },
+    {
+     "rank": 17,
+     "song": "The Universe",
+     "artist": "Róisín Murphy"
+    },
+    {
+     "rank": 18,
+     "song": "One Touch",
+     "artist": "Bambii"
+    },
+    {
+     "rank": 19,
+     "song": "Shiver",
+     "artist": "Fever Ray"
+    },
+    {
+     "rank": 20,
+     "song": "CooCool",
+     "artist": "Róisín Murphy"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240716005301/https://www.billboard.com/charts/country-songs/",
+   "captured": "2024-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 2,
+     "song": "I Had Some Help",
+     "artist": "Post Malone Featuring Morgan Wallen"
+    },
+    {
+     "rank": 3,
+     "song": "Cowgirls",
+     "artist": "Morgan Wallen Featuring ERNEST"
+    },
+    {
+     "rank": 4,
+     "song": "Pink Skies",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 5,
+     "song": "Pour Me A Drink",
+     "artist": "Post Malone Featuring Blake Shelton"
+    },
+    {
+     "rank": 6,
+     "song": "I Remember Everything",
+     "artist": "Zach Bryan Featuring Kacey Musgraves"
+    },
+    {
+     "rank": 7,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 8,
+     "song": "Austin",
+     "artist": "Dasha"
+    },
+    {
+     "rank": 9,
+     "song": "Whiskey Whiskey",
+     "artist": "Moneybagg Yo Featuring Morgan Wallen"
+    },
+    {
+     "rank": 10,
+     "song": "High Road",
+     "artist": "Koe Wetzel & Jessie Murph"
+    },
+    {
+     "rank": 11,
+     "song": "I Am Not Okay",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 12,
+     "song": "Ain't No Love In Oklahoma",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 13,
+     "song": "You Look Like You Love Me",
+     "artist": "Ella Langley Featuring Riley Green"
+    },
+    {
+     "rank": 14,
+     "song": "Dirt Cheap",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 15,
+     "song": "Bulletproof",
+     "artist": "Nate Smith"
+    },
+    {
+     "rank": 16,
+     "song": "Cowboys Cry Too",
+     "artist": "Kelsea Ballerini & Noah Kahan"
+    },
+    {
+     "rank": 17,
+     "song": "We Ride",
+     "artist": "Bryan Martin"
+    },
+    {
+     "rank": 18,
+     "song": "Wine Into Whiskey",
+     "artist": "Tucker Wetmore"
+    },
+    {
+     "rank": 19,
+     "song": "Wind Up Missin' You",
+     "artist": "Tucker Wetmore"
+    },
+    {
+     "rank": 20,
+     "song": "Think I'm In Love With You",
+     "artist": "Chris Stapleton"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240712075000/https://www.beatport.com/top-100",
+   "captured": "2024-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "TOO COOL TO BE CARELESS (Extended Mix)",
+     "artist": "PAWSA"
+    },
+    {
+     "rank": 2,
+     "song": "Move (feat. Malachiii)",
+     "artist": "Adam Port, Keinemusik, Stryv & Malachiii"
+    },
+    {
+     "rank": 3,
+     "song": "It's That Time (FISHER Remix - Extended Mix)",
+     "artist": "Marlon Hoffstadt, FISHER (OZ) & DJ Daddy Trance"
+    },
+    {
+     "rank": 4,
+     "song": "PICK UP THE PHONE (feat. Nate Dogg) (Extended Mix)",
+     "artist": "PAWSA"
+    },
+    {
+     "rank": 5,
+     "song": "Who's That Girl (JL & Afterman Mix)",
+     "artist": "Afterman & Yvvan Back"
+    },
+    {
+     "rank": 6,
+     "song": "She's Gone, Dance On (Extended Mix)",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 7,
+     "song": "La Verdolaga feat. Totó La Momposina (Extended Mix)",
+     "artist": "Toto La Momposina & Hugel"
+    },
+    {
+     "rank": 8,
+     "song": "girl$ (Extended)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 9,
+     "song": "Get Busy (Odd Mob Extended Club Mix)",
+     "artist": "Sean Paul & Odd Mob"
+    },
+    {
+     "rank": 10,
+     "song": "Yamore (Extended)",
+     "artist": "Salif Keita, Cesaria Evora, MoBlack, Franc Fala & Benja (NL)"
+    },
+    {
+     "rank": 11,
+     "song": "Blue Berries (Extended Mix)",
+     "artist": "Sem Jacobs & Tagmann"
+    },
+    {
+     "rank": 12,
+     "song": "Tell Me What You Want (Extended Mix)",
+     "artist": "Oden & Fatzo & Poppy Baskcomb"
+    },
+    {
+     "rank": 13,
+     "song": "Famax",
+     "artist": "RAFFA GUIDO"
+    },
+    {
+     "rank": 14,
+     "song": "BLOW (WHITE GIRL IN TOWN) [feat. Kilo Ali] (Extended Mix)",
+     "artist": "Sosa UK & Kilo Ali"
+    },
+    {
+     "rank": 15,
+     "song": "In And Out Of Love feat. Sharon Den Adel (Extended Mix)",
+     "artist": "Armin van Buuren, Rivo & Sharon Den Adel"
+    },
+    {
+     "rank": 16,
+     "song": "I Love It (Extended Mix)",
+     "artist": "Dubdogz & DLMT"
+    },
+    {
+     "rank": 17,
+     "song": "Andalucia (Extended Mix)",
+     "artist": "Hugel & GROSSOMODDO"
+    },
+    {
+     "rank": 18,
+     "song": "Move On Up (Mark Knight Remix) (Extended Mix)",
+     "artist": "Curtis Mayfield"
+    },
+    {
+     "rank": 19,
+     "song": "Last Night (Anyma x Layton Giordani Extended Remix)",
+     "artist": "Layton Giordani, Anyma (ofc) & Loofy"
+    },
+    {
+     "rank": 20,
+     "song": "You & Me (Rivo Extended Mix)",
+     "artist": "Disclosure & Eliza Doolittle"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240715190136/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2024-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 2,
+     "song": "Illusion",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 3,
+     "song": "360",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 4,
+     "song": "Houdini",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 5,
+     "song": "I Don't Wanna Wait",
+     "artist": "David Guetta & OneRepublic"
+    },
+    {
+     "rank": 6,
+     "song": "Girl, So Confusing",
+     "artist": "Charli XCX With Lorde"
+    },
+    {
+     "rank": 7,
+     "song": "Training Season",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 8,
+     "song": "Von Dutch",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 9,
+     "song": "365",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 10,
+     "song": "Yes, And?",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 11,
+     "song": "Stumblin' In",
+     "artist": "CYRIL"
+    },
+    {
+     "rank": 12,
+     "song": "Whatever",
+     "artist": "Kygo With Ava Max"
+    },
+    {
+     "rank": 13,
+     "song": "Contigo",
+     "artist": "Karol G & Tiesto"
+    },
+    {
+     "rank": 14,
+     "song": "Apple",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 15,
+     "song": "Talk Talk",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 16,
+     "song": "Sympathy Is A Knife",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 17,
+     "song": "Club Classics",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 18,
+     "song": "Addicted",
+     "artist": "ZERB, The Chainsmokers & Ink"
+    },
+    {
+     "rank": 19,
+     "song": "B2B",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 20,
+     "song": "Everything Is Romantic",
+     "artist": "Charli XCX"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240715112627/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2024-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 2,
+     "song": "Dilemma",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 3,
+     "song": "Murder On The Dancefloor (triple j Like A Version)",
+     "artist": "Royel Otis"
+    },
+    {
+     "rank": 4,
+     "song": "Creatures In Heaven",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 5,
+     "song": "Wreckage",
+     "artist": "Pearl Jam"
+    },
+    {
+     "rank": 6,
+     "song": "The Craving",
+     "artist": "Twenty One Pilots"
+    },
+    {
+     "rank": 7,
+     "song": "End Of Beginning",
+     "artist": "Djo"
+    },
+    {
+     "rank": 8,
+     "song": "Landmines",
+     "artist": "Sum 41"
+    },
+    {
+     "rank": 9,
+     "song": "Eyes Closed",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 10,
+     "song": "Scared To Start",
+     "artist": "Michael Marcagi"
+    },
+    {
+     "rank": 11,
+     "song": "Lunch",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 12,
+     "song": "Leave A Light On",
+     "artist": "Papa Roach"
+    },
+    {
+     "rank": 13,
+     "song": "Home",
+     "artist": "Good Neighbours"
+    },
+    {
+     "rank": 14,
+     "song": "Make It All Right",
+     "artist": "The Offspring"
+    },
+    {
+     "rank": 15,
+     "song": "The Break",
+     "artist": "Blame My Youth"
+    },
+    {
+     "rank": 16,
+     "song": "feelslikeimfallinginlove",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 17,
+     "song": "Panoramic View",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 18,
+     "song": "Feel Like That",
+     "artist": "Sublime & Stick Figure With Bradley Nowell"
+    },
+    {
+     "rank": 19,
+     "song": "Sinner",
+     "artist": "The Last Dinner Party"
+    },
+    {
+     "rank": 20,
+     "song": "On The Game",
+     "artist": "The Black Keys"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240712162857/https://kworb.net/charts/itunes/us.html",
+   "captured": "2024-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 2,
+     "song": "Woman's World",
+     "artist": "Katy Perry"
+    },
+    {
+     "rank": 3,
+     "song": "Lose Control",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 4,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "I Had Some Help (feat. Morgan Wallen)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 6,
+     "song": "Lies Lies Lies",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 7,
+     "song": "I Like It",
+     "artist": "Alesso & Nate Smith"
+    },
+    {
+     "rank": 8,
+     "song": "I Am Not Okay",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 9,
+     "song": "Revelation (feat. Sonya Isaacs)",
+     "artist": "John Rich"
+    },
+    {
+     "rank": 10,
+     "song": "Tobey",
+     "artist": "Eminem, Big Sean & BabyTron"
+    },
+    {
+     "rank": 11,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 12,
+     "song": "Somebody Save Me",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 13,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 14,
+     "song": "Pour Me A Drink (feat. Blake Shelton)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 15,
+     "song": "you look like you love me",
+     "artist": "Ella Langley & Riley Green"
+    },
+    {
+     "rank": 16,
+     "song": "MILLION DOLLAR BABY",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 17,
+     "song": "Pink Skies",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 18,
+     "song": "Good Luck, Babe!",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 19,
+     "song": "Cowgirls (feat. ERNEST)",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 20,
+     "song": "Please Please Please",
+     "artist": "Sabrina Carpenter"
+    }
+   ]
+  }
+ ]
+}

@@ -10,7 +10,7 @@ import RememberForm from "@/components/era/RememberForm";
 import Industry from "@/components/era/Industry";
 import {
   weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, numberOneOn, numberOnesThrough, chartsThrough, weeksInMonth,
-  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow,
+  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow, type HeatSource,
 } from "@/lib/era/data";
 import { cardLine } from "@/lib/era/cardLine";
 import { coverArtFor } from "@/lib/coverArt";
@@ -61,6 +61,42 @@ function movement(r: ChartRow) {
   if (r.last > r.rank) return <span className={s.up}>▲ {r.last - r.rank}</span>;
   if (r.last < r.rank) return <span>▼ {r.rank - r.last}</span>;
   return <span>=</span>;
+}
+
+
+function HeatColumn({ src, isMine }: { src: HeatSource; isMine: (artist: string) => boolean }) {
+  return (
+    <div className={s.heatCol}>
+                <div className={s.heatHead}>
+                  <span className={s.heatLabel}>{src.label.replace(/\s*\(.*\)\s*$/, "")}</span>
+                  <span className={s.source}>
+                    {src.list === "front" ? "Front page, newest first. " : ""}
+                    <a href={src.capture} target="_blank" rel="noopener noreferrer">Archived {plainDate(src.captured)} ↗</a>
+                  </span>
+                </div>
+                <ol className={s.heatList}>
+                  {src.rows.slice(0, 5).map((r) => (
+                    <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
+                      <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
+                      <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
+                    </li>
+                  ))}
+                </ol>
+                {src.rows.length > 5 && (
+                  <details className={s.more}>
+                    <summary>{Math.min(src.rows.length, 20) - 5} more</summary>
+                    <ol className={s.heatList} start={6}>
+                      {src.rows.slice(5, 20).map((r) => (
+                        <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
+                          <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
+                          <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                )}
+              </div>
+  );
 }
 
 export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Search }): Promise<Metadata> {
@@ -119,6 +155,13 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const archivedTop10 = new Map((heatAll?.sources ?? []).filter((x) => BILLBOARD_LANE[x.id]).map((x) => [BILLBOARD_LANE[x.id], x]));
   const heatSources = (heatAll?.sources ?? []).filter((x) => !BILLBOARD_LANE[x.id]);
   const heat = heatSources.length ? { ...heatAll!, sources: heatSources } : null;
+  // What a visitor recognises first: the blogs and Hype Machine, then critics, then the streaming-era charts.
+  const HEAT_ORDER = ["hotnewhiphop", "hypem", "pitchfork_bnt", "spotify_viral", "kworb_spotify_us", "blog_2dopeboyz", "blog_pigeonsandplanes", "beatport_top100", "kworb_itunes_us"];
+  const rank = (id: string) => { const i = HEAT_ORDER.indexOf(id); return i < 0 ? HEAT_ORDER.length : i; };
+  const heatOrdered = [...heatSources].sort((a, b) => rank(a.id) - rank(b.id));
+  const redditCount = redditFor(month)?.length ?? 0;
+  const heatVisible = heatOrdered.slice(0, Math.max(1, 4 - redditCount));
+  const heatExtra = heatOrdered.slice(heatVisible.length);
   const heatSpan = heatMonthSpan();
   const reddit = redditFor(month);
   const through = chartsThrough();
@@ -279,6 +322,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
           </div>
         )}
         {heat || reddit ? (
+          <>
           <div className={s.heat}>
             {reddit?.map((src) => (
               <div key={src.id} className={s.heatCol}>
@@ -300,39 +344,17 @@ export default async function EraPage({ params, searchParams }: { params: Params
                 </ol>
               </div>
             ))}
-            {heat?.sources.map((src) => (
-              <div key={src.id} className={s.heatCol}>
-                <div className={s.heatHead}>
-                  <span className={s.heatLabel}>{src.label.replace(/\s*\(.*\)\s*$/, "")}</span>
-                  <span className={s.source}>
-                    {src.list === "front" ? "Front page, newest first. " : ""}
-                    <a href={src.capture} target="_blank" rel="noopener noreferrer">Archived {plainDate(src.captured)} ↗</a>
-                  </span>
-                </div>
-                <ol className={s.heatList}>
-                  {src.rows.slice(0, 5).map((r) => (
-                    <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
-                      <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
-                      <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
-                    </li>
-                  ))}
-                </ol>
-                {src.rows.length > 5 && (
-                  <details className={s.more}>
-                    <summary>{Math.min(src.rows.length, 20) - 5} more</summary>
-                    <ol className={s.heatList} start={6}>
-                      {src.rows.slice(5, 20).map((r) => (
-                        <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
-                          <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
-                          <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
-                        </li>
-                      ))}
-                    </ol>
-                  </details>
-                )}
-              </div>
-            ))}
+            {heatVisible.map((src) => <HeatColumn key={src.id} src={src} isMine={isMine} />)}
           </div>
+          {heatExtra.length > 0 && (
+            <details className={`${s.more} ${s.moreSources}`}>
+              <summary>More from {monthName(month)}: {heatExtra.map((x) => x.label.replace(/\s*·.*$/, "").replace(/\s*\(.*\)\s*$/, "")).join(", ")}</summary>
+              <div className={s.heat}>
+                {heatExtra.map((src) => <HeatColumn key={src.id} src={src} isMine={isMine} />)}
+              </div>
+            </details>
+          )}
+          </>
         ) : (
           <p id="off" className={s.emptyNote}>
             {heatSpan && month < heatSpan[0]

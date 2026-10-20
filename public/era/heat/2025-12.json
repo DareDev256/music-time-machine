@@ -1,0 +1,731 @@
+{
+ "month": "2025-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251215025121/https://hypem.com/popular",
+   "captured": "2025-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Satisfaction Skank",
+     "artist": "Fatboy Slim, The Rolling Stones"
+    },
+    {
+     "rank": 2,
+     "song": "I Want You (Fever)",
+     "artist": "Momma"
+    },
+    {
+     "rank": 3,
+     "song": "Easy",
+     "artist": "Prewn"
+    },
+    {
+     "rank": 4,
+     "song": "Echo in the Field",
+     "artist": "kelly moran"
+    },
+    {
+     "rank": 5,
+     "song": "Finally Found!",
+     "artist": "Swordes"
+    },
+    {
+     "rank": 6,
+     "song": "Sankofa",
+     "artist": "The Cosmic Tones Research Trio"
+    },
+    {
+     "rank": 7,
+     "song": "Мockingbird",
+     "artist": "The Diasonics"
+    },
+    {
+     "rank": 8,
+     "song": "Vespers",
+     "artist": "Model/Actriz"
+    },
+    {
+     "rank": 9,
+     "song": "Hey! Mr. Sky",
+     "artist": "Jackie-O Motherfucker"
+    },
+    {
+     "rank": 10,
+     "song": "Polytunnel",
+     "artist": "Richard Dawson"
+    },
+    {
+     "rank": 11,
+     "song": "Not My Order",
+     "artist": "Swansea Sound"
+    },
+    {
+     "rank": 12,
+     "song": "Total euphoria",
+     "artist": "caroline"
+    },
+    {
+     "rank": 13,
+     "song": "Salay “Titi Ch’iri Siqititi\"",
+     "artist": "Los Thuthanaka"
+    },
+    {
+     "rank": 14,
+     "song": "I Can't Fall",
+     "artist": "This is Lorelei"
+    },
+    {
+     "rank": 15,
+     "song": "How it Feels",
+     "artist": "Cold Specks"
+    },
+    {
+     "rank": 16,
+     "song": "Steal Wool feat. Pink Siifu",
+     "artist": "PremRock"
+    },
+    {
+     "rank": 17,
+     "song": "Shaking",
+     "artist": "Laika Songs"
+    },
+    {
+     "rank": 18,
+     "song": "I Would Die 4 U",
+     "artist": "Prince"
+    },
+    {
+     "rank": 19,
+     "song": "'Til Tomorrow (feat. Machinedrum)",
+     "artist": "Bianca Oblivion"
+    },
+    {
+     "rank": 20,
+     "song": "Sitting",
+     "artist": "Tiberius"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251211090927/https://www.billboard.com/charts/rap-song/",
+   "captured": "2025-12-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hell At Night",
+     "artist": "BigXthaPlug Featuring Ella Langley"
+    },
+    {
+     "rank": 2,
+     "song": "4 Raws",
+     "artist": "EsDeeKid"
+    },
+    {
+     "rank": 3,
+     "song": "Come N Go",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 4,
+     "song": "Phantom",
+     "artist": "EsDeeKid & Rico Ace"
+    },
+    {
+     "rank": 5,
+     "song": "LV Sandals",
+     "artist": "EsDeekid, fakemink & Rico Ace"
+    },
+    {
+     "rank": 6,
+     "song": "Century",
+     "artist": "EsDeeKid"
+    },
+    {
+     "rank": 7,
+     "song": "Friend Do",
+     "artist": "Belly Gang Ku$hington Featuring YKNIECE"
+    },
+    {
+     "rank": 8,
+     "song": "Putting Ya Dine",
+     "artist": "Monaleo"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251215200156/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2025-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mutt",
+     "artist": "Leon Thomas"
+    },
+    {
+     "rank": 2,
+     "song": "4 Raws",
+     "artist": "EsDeeKid"
+    },
+    {
+     "rank": 3,
+     "song": "Come N Go",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 4,
+     "song": "Phantom",
+     "artist": "EsDeeKid & Rico Ace"
+    },
+    {
+     "rank": 5,
+     "song": "LV Sandals",
+     "artist": "EsDeekid, fakemink & Rico Ace"
+    },
+    {
+     "rank": 6,
+     "song": "Century",
+     "artist": "EsDeeKid"
+    },
+    {
+     "rank": 7,
+     "song": "Friend Do",
+     "artist": "Belly Gang Ku$hington Featuring YKNIECE"
+    },
+    {
+     "rank": 8,
+     "song": "Putting Ya Dine",
+     "artist": "Monaleo"
+    },
+    {
+     "rank": 9,
+     "song": "Rottweiler",
+     "artist": "EsDeeKid"
+    },
+    {
+     "rank": 10,
+     "song": "Blow My High",
+     "artist": "Dee Mula"
+    },
+    {
+     "rank": 11,
+     "song": "Cali Man",
+     "artist": "EsDeeKid & Rico Ace"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251216184451/https://www.billboard.com/charts/country-songs/",
+   "captured": "2025-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Choosin' Texas",
+     "artist": "Ella Langley"
+    },
+    {
+     "rank": 2,
+     "song": "Hell At Night",
+     "artist": "BigXthaPlug Featuring Ella Langley"
+    },
+    {
+     "rank": 3,
+     "song": "House Again",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 4,
+     "song": "Better Me For You (Brown Eyes)",
+     "artist": "Max McNown"
+    },
+    {
+     "rank": 5,
+     "song": "Last One To Know",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 6,
+     "song": "Bad State Of Mind",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 7,
+     "song": "Misery",
+     "artist": "Treaty Oak Revival Featuring Muscadine Bloodline"
+    },
+    {
+     "rank": 8,
+     "song": "It Won't Be Long",
+     "artist": "George Birge"
+    },
+    {
+     "rank": 9,
+     "song": "Ends Of The Earth",
+     "artist": "Ty Myers"
+    },
+    {
+     "rank": 10,
+     "song": "Shit Hill",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 11,
+     "song": "Port A",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 12,
+     "song": "Withdrawals",
+     "artist": "Treaty Oak Revival Featuring Gannon Fremin & CCREV"
+    },
+    {
+     "rank": 13,
+     "song": "West Texas Degenerate",
+     "artist": "Treaty Oak Revival Featuring William Clark Green"
+    },
+    {
+     "rank": 14,
+     "song": "Painted You Pretty",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 15,
+     "song": "Keeps Me Sane",
+     "artist": "Tyler Nance"
+    },
+    {
+     "rank": 16,
+     "song": "Sunflower",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 17,
+     "song": "Happy Face",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 18,
+     "song": "Stay A While",
+     "artist": "Treaty Oak Revival"
+    },
+    {
+     "rank": 19,
+     "song": "Need To",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 20,
+     "song": "Sober",
+     "artist": "Hudson Westbrook"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251215091745/https://www.beatport.com/top-100",
+   "captured": "2025-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Positive (Extended Mix)",
+     "artist": "Jamback"
+    },
+    {
+     "rank": 2,
+     "song": "Caramelle (Extended Mix)",
+     "artist": "Mesto"
+    },
+    {
+     "rank": 3,
+     "song": "Jamaican (Bam Bam) (Extended Mix)",
+     "artist": "Hugel & SOLTO (FR)"
+    },
+    {
+     "rank": 4,
+     "song": "Free (You Got To Live) (Extended Mix)",
+     "artist": "Ultra Nate & Hugel"
+    },
+    {
+     "rank": 5,
+     "song": "Kids (Extended Mix)",
+     "artist": "Fezzo"
+    },
+    {
+     "rank": 6,
+     "song": "Take Your Places (Extended Mix)",
+     "artist": "Westend & SIDEPIECE"
+    },
+    {
+     "rank": 7,
+     "song": "Temptation (Extended Mix)",
+     "artist": "Smokey Bubblin' B, Guy Burns & James Poole"
+    },
+    {
+     "rank": 8,
+     "song": "Coming Up (It's Dare) (Extended Version)",
+     "artist": "Odd Mob, OMNOM & HYPERBEAM"
+    },
+    {
+     "rank": 9,
+     "song": "Your Mind (HNTR Remix)",
+     "artist": "Adam Beyer, Bart Skils & HNTR"
+    },
+    {
+     "rank": 10,
+     "song": "Pull Up (Extended Mix)",
+     "artist": "Discip"
+    },
+    {
+     "rank": 11,
+     "song": "Behaviour (feat. A.D.O.R.) (feat. A.D.O.R.)",
+     "artist": "James Hype & A.D.O.R."
+    },
+    {
+     "rank": 12,
+     "song": "Come Inside",
+     "artist": "Chopper (UK)"
+    },
+    {
+     "rank": 13,
+     "song": "How Deep Are Your Dreams?",
+     "artist": "Cloonee"
+    },
+    {
+     "rank": 14,
+     "song": "Attention",
+     "artist": "Nick Curly & Joëlla Jackson"
+    },
+    {
+     "rank": 15,
+     "song": "Party Out (Extended)",
+     "artist": "Riordan & A+"
+    },
+    {
+     "rank": 16,
+     "song": "EZ (Extended Mix)",
+     "artist": "Puku & ACRAZE"
+    },
+    {
+     "rank": 17,
+     "song": "Hold It Down (DARE) (Extended Mix)",
+     "artist": "Layton Giordani"
+    },
+    {
+     "rank": 18,
+     "song": "Edge of Desire (Franky Rizardo Extended Remix)",
+     "artist": "Franky Rizardo, Jonas Blue & Malive"
+    },
+    {
+     "rank": 19,
+     "song": "Give It All (Extended Mix)",
+     "artist": "Emanuel Satie"
+    },
+    {
+     "rank": 20,
+     "song": "Love Songs (feat. Kosmo Kint) (Extended Mix)",
+     "artist": "Prospa & Kosmo Kint"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251215200244/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2025-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Let The World Burn (Hoodtrap / Mylancore Remix)",
+     "artist": "Chris Grey, R3BEL & Kryd"
+    },
+    {
+     "rank": 2,
+     "song": "I Run",
+     "artist": "HAVEN. Featuring Kaitlin Aragon"
+    },
+    {
+     "rank": 3,
+     "song": "The Days",
+     "artist": "CHRYSTAL"
+    },
+    {
+     "rank": 4,
+     "song": "No Batidao",
+     "artist": "ZXKAI & slxughter"
+    },
+    {
+     "rank": 5,
+     "song": "Make Me Feel",
+     "artist": "oskar med k"
+    },
+    {
+     "rank": 6,
+     "song": "Desire",
+     "artist": "Ian Asher & Olly Alexander"
+    },
+    {
+     "rank": 7,
+     "song": "Montagem Rugada",
+     "artist": "Sayfalse, Cape & JXNDRO"
+    },
+    {
+     "rank": 8,
+     "song": "Upside Down",
+     "artist": "Black Gryph0n & Baasik"
+    },
+    {
+     "rank": 9,
+     "song": "Montagem Miau",
+     "artist": "Lenar"
+    },
+    {
+     "rank": 10,
+     "song": "I Want Things To Be Beautiful",
+     "artist": "Devi McCallion"
+    },
+    {
+     "rank": 11,
+     "song": "Confess Your Love Funk",
+     "artist": "-Prey, ZMAJOR, zxnc & Emrld!"
+    },
+    {
+     "rank": 12,
+     "song": "Montagem Xonada",
+     "artist": "MXZI, dj Samir & DJ Javi26"
+    },
+    {
+     "rank": 13,
+     "song": "Acelerada",
+     "artist": "sma$her & MXZI"
+    },
+    {
+     "rank": 14,
+     "song": "Talk Of The Town",
+     "artist": "Fred again.., Sammy Virji & Reggie"
+    },
+    {
+     "rank": 15,
+     "song": "Winny",
+     "artist": "Fred again.., Sammy Virji & Winny"
+    },
+    {
+     "rank": 16,
+     "song": "Bad Happening Funk",
+     "artist": "ZMAJOR, dearukia, SEKIMANE & zxnc"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251223032626/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2025-12-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get The Message",
+     "artist": "The Paradox"
+    },
+    {
+     "rank": 2,
+     "song": "Zombie",
+     "artist": "YUNGBLUD"
+    },
+    {
+     "rank": 3,
+     "song": "mangetout",
+     "artist": "Wet Leg"
+    },
+    {
+     "rank": 4,
+     "song": "Lucy",
+     "artist": "Mt. Joy"
+    },
+    {
+     "rank": 5,
+     "song": "Caramel",
+     "artist": "Sleep Token"
+    },
+    {
+     "rank": 6,
+     "song": "Doubletake",
+     "artist": "Edgehill"
+    },
+    {
+     "rank": 7,
+     "song": "Look Out For Me",
+     "artist": "Turnstile"
+    },
+    {
+     "rank": 8,
+     "song": "Lost",
+     "artist": "almost monday"
+    },
+    {
+     "rank": 9,
+     "song": "Who's Your Boyfriend",
+     "artist": "Royel Otis"
+    },
+    {
+     "rank": 10,
+     "song": "World Apart",
+     "artist": "Bike Routes"
+    },
+    {
+     "rank": 11,
+     "song": "Tonight Tonight",
+     "artist": "Stephen Wilson Jr."
+    },
+    {
+     "rank": 12,
+     "song": "Cobra",
+     "artist": "Geese"
+    },
+    {
+     "rank": 13,
+     "song": "KILL THE GHOST",
+     "artist": "little image"
+    },
+    {
+     "rank": 14,
+     "song": "Pay & Display",
+     "artist": "Lovejoy"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251215102750/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2025-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rockin' Around The Christmas Tree",
+     "artist": "Brenda Lee"
+    },
+    {
+     "rank": 2,
+     "song": "Jingle Bell Rock",
+     "artist": "Bobby Helms"
+    },
+    {
+     "rank": 3,
+     "song": "All I Want for Christmas Is You",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 4,
+     "song": "Last Christmas",
+     "artist": "Wham!"
+    },
+    {
+     "rank": 5,
+     "song": "Let It Snow! Let It Snow! Let It Snow!",
+     "artist": "Dean Martin"
+    },
+    {
+     "rank": 6,
+     "song": "The Christmas Song (Merry Christmas To You)",
+     "artist": "Nat King Cole"
+    },
+    {
+     "rank": 7,
+     "song": "It's the Most Wonderful Time of the Year",
+     "artist": "Andy Williams"
+    },
+    {
+     "rank": 8,
+     "song": "Santa Tell Me",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 9,
+     "song": "Underneath the Tree",
+     "artist": "Kelly Clarkson"
+    },
+    {
+     "rank": 10,
+     "song": "Sleigh Ride",
+     "artist": "The Ronettes"
+    },
+    {
+     "rank": 11,
+     "song": "Man I Need",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 12,
+     "song": "Golden (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 13,
+     "song": "The Fate of Ophelia",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 14,
+     "song": "It's Beginning to Look a Lot Like Christmas",
+     "artist": "Michael Bublé"
+    },
+    {
+     "rank": 15,
+     "song": "Christmas (Baby Please Come Home)",
+     "artist": "Darlene Love"
+    },
+    {
+     "rank": 16,
+     "song": "Holly Jolly Christmas",
+     "artist": "Michael Bublé"
+    },
+    {
+     "rank": 17,
+     "song": "Feliz Navidad",
+     "artist": "José Feliciano"
+    },
+    {
+     "rank": 18,
+     "song": "White Christmas - 1947 Version (w/ Ken Darby Singers , John Scott Trotter & His Orchestra )",
+     "artist": "Bing Crosby"
+    },
+    {
+     "rank": 19,
+     "song": "Run Rudolph Run - Single Version",
+     "artist": "Chuck Berry"
+    },
+    {
+     "rank": 20,
+     "song": "Please Come Home for Christmas - Eagles 2013 Remaster",
+     "artist": "Eagles"
+    }
+   ]
+  }
+ ]
+}

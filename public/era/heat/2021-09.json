@@ -1,0 +1,996 @@
+{
+ "month": "2021-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20210915204334/https://www.hotnewhiphop.com/",
+   "captured": "2021-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Footwork in a Forest Fire",
+     "artist": "Injury Reserve"
+    },
+    {
+     "rank": 2,
+     "song": "Champagne Poetry",
+     "artist": "IDK"
+    },
+    {
+     "rank": 3,
+     "song": "Replay",
+     "artist": "Tems"
+    },
+    {
+     "rank": 4,
+     "song": "Clique",
+     "artist": "Kanye West Feat. Jay-Z & Big Sean"
+    },
+    {
+     "rank": 5,
+     "song": "Soundtrack 2 My Life",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 6,
+     "song": "Just Fine",
+     "artist": "Kitty Cash Feat. Kiana Ledé"
+    },
+    {
+     "rank": 7,
+     "song": "5500 Degrees KeyMix",
+     "artist": "Lakeyah"
+    },
+    {
+     "rank": 8,
+     "song": "Come Again",
+     "artist": "BlueBucksClan"
+    },
+    {
+     "rank": 9,
+     "song": "Crazy",
+     "artist": "Mariana Velletto"
+    },
+    {
+     "rank": 10,
+     "song": "V12",
+     "artist": "iann dior Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 11,
+     "song": "Bounce",
+     "artist": "NO1-NOAH"
+    },
+    {
+     "rank": 12,
+     "song": "Residue",
+     "artist": "Derez De'Shon Feat. Money Mu"
+    },
+    {
+     "rank": 13,
+     "song": "Prayer",
+     "artist": "Twista"
+    },
+    {
+     "rank": 14,
+     "song": "Louisville, KY Freestyle",
+     "artist": "Money Man Feat. BC Jroc"
+    },
+    {
+     "rank": 15,
+     "song": "Nueva Vida",
+     "artist": "Farina Feat. Lil Durk & Play-N-Skillz"
+    },
+    {
+     "rank": 16,
+     "song": "Casamigos",
+     "artist": "Soulja Boy"
+    },
+    {
+     "rank": 17,
+     "song": "So What?",
+     "artist": "Uncle Murda Feat. Eli Fross"
+    },
+    {
+     "rank": 18,
+     "song": "Grabba (Remix)",
+     "artist": "Ron Suno Feat. Dusty Locane"
+    },
+    {
+     "rank": 19,
+     "song": "Vice Lord Poetry",
+     "artist": "Freddie Gibbs"
+    },
+    {
+     "rank": 20,
+     "song": "first order of business",
+     "artist": "Baby Keem"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210914021111/https://hypem.com/popular",
+   "captured": "2021-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "orfeu",
+     "artist": "mokina"
+    },
+    {
+     "rank": 2,
+     "song": "These Things Will Come To Be",
+     "artist": "DJ Seinfeld"
+    },
+    {
+     "rank": 3,
+     "song": "Pond House",
+     "artist": "Saint Etienne"
+    },
+    {
+     "rank": 4,
+     "song": "I Don't Wanna Talk (I Just Wanna Dance)",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 5,
+     "song": "Heat Sweat",
+     "artist": "All The Rest"
+    },
+    {
+     "rank": 6,
+     "song": "Everything Dies",
+     "artist": "Kraków Loves Adana"
+    },
+    {
+     "rank": 7,
+     "song": "Stolen",
+     "artist": "Ruby Haunt"
+    },
+    {
+     "rank": 8,
+     "song": "Roman Candle",
+     "artist": "Ruby Haunt"
+    },
+    {
+     "rank": 9,
+     "song": "She's Like the Wind Annie Version",
+     "artist": "Annie"
+    },
+    {
+     "rank": 10,
+     "song": "Une Foule",
+     "artist": "Gaspar Claus"
+    },
+    {
+     "rank": 11,
+     "song": "Let’s Sing Let’s Dance",
+     "artist": "박혜진 Park Hye Jin"
+    },
+    {
+     "rank": 12,
+     "song": "September",
+     "artist": "The Stick Figures"
+    },
+    {
+     "rank": 13,
+     "song": "UMAN Spirit",
+     "artist": "UMAN"
+    },
+    {
+     "rank": 14,
+     "song": "Ah Yeh Full Length Version",
+     "artist": "Beak>"
+    },
+    {
+     "rank": 15,
+     "song": "G.A.F.F.",
+     "artist": "Tropical Fuck Storm"
+    },
+    {
+     "rank": 16,
+     "song": "Thinking About You (Radio Slave feat. Thomas Gandey Remix) (METAPHYSICAL)",
+     "artist": "Sailor & I"
+    },
+    {
+     "rank": 17,
+     "song": "Race for Caress",
+     "artist": "School of X"
+    },
+    {
+     "rank": 18,
+     "song": "Away",
+     "artist": "School of X"
+    },
+    {
+     "rank": 19,
+     "song": "Forgot Me on the Moon",
+     "artist": "School of X"
+    },
+    {
+     "rank": 20,
+     "song": "Bad Love",
+     "artist": "School of X"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210915002308/https://www.billboard.com/charts/rap-song",
+   "captured": "2021-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Way 2 Sexy",
+     "artist": "Drake Featuring Future & Young Thug"
+    },
+    {
+     "rank": 2,
+     "song": "Girls Want Girls",
+     "artist": "Drake Featuring Lil Baby"
+    },
+    {
+     "rank": 3,
+     "song": "Fair Trade",
+     "artist": "Drake Featuring Travis Scott"
+    },
+    {
+     "rank": 4,
+     "song": "Champagne Poetry",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Knife Talk",
+     "artist": "Drake Featuring 21 Savage & Project Pat"
+    },
+    {
+     "rank": 6,
+     "song": "In The Bible",
+     "artist": "Drake Featuring Lil Durk & Giveon"
+    },
+    {
+     "rank": 7,
+     "song": "Papi's Home",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "TSU",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Love All",
+     "artist": "Drake Featuring JAY-Z"
+    },
+    {
+     "rank": 10,
+     "song": "No Friends In The Industry",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "N 2 Deep",
+     "artist": "Drake Featuring Future"
+    },
+    {
+     "rank": 12,
+     "song": "Pipe Down",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "7am On Bridle Path",
+     "artist": "Drake"
+    },
+    {
+     "rank": 14,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 15,
+     "song": "IMY2",
+     "artist": "Drake Featuring Kid Cudi"
+    },
+    {
+     "rank": 16,
+     "song": "You Only Live Twice",
+     "artist": "Drake Featuring Lil Wayne & Rick Ross"
+    },
+    {
+     "rank": 17,
+     "song": "Hurricane",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 18,
+     "song": "The Remorse",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Off The Grid",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 20,
+     "song": "Family Ties",
+     "artist": "Baby Keem & Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210915022428/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2021-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Way 2 Sexy",
+     "artist": "Drake Featuring Future & Young Thug"
+    },
+    {
+     "rank": 2,
+     "song": "Girls Want Girls",
+     "artist": "Drake Featuring Lil Baby"
+    },
+    {
+     "rank": 3,
+     "song": "Fair Trade",
+     "artist": "Drake Featuring Travis Scott"
+    },
+    {
+     "rank": 4,
+     "song": "Champagne Poetry",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Knife Talk",
+     "artist": "Drake Featuring 21 Savage & Project Pat"
+    },
+    {
+     "rank": 6,
+     "song": "In The Bible",
+     "artist": "Drake Featuring Lil Durk & Giveon"
+    },
+    {
+     "rank": 7,
+     "song": "Papi's Home",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "TSU",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Love All",
+     "artist": "Drake Featuring JAY-Z"
+    },
+    {
+     "rank": 10,
+     "song": "No Friends In The Industry",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "N 2 Deep",
+     "artist": "Drake Featuring Future"
+    },
+    {
+     "rank": 12,
+     "song": "Pipe Down",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "7am On Bridle Path",
+     "artist": "Drake"
+    },
+    {
+     "rank": 14,
+     "song": "Race My Mind",
+     "artist": "Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 16,
+     "song": "IMY2",
+     "artist": "Drake Featuring Kid Cudi"
+    },
+    {
+     "rank": 17,
+     "song": "You Only Live Twice",
+     "artist": "Drake Featuring Lil Wayne & Rick Ross"
+    },
+    {
+     "rank": 18,
+     "song": "Fountains",
+     "artist": "Drake Featuring Tems"
+    },
+    {
+     "rank": 19,
+     "song": "Get Along Better",
+     "artist": "Drake Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 20,
+     "song": "Hurricane",
+     "artist": "Kanye West"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210915073918/https://www.billboard.com/charts/country-songs",
+   "captured": "2021-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 2,
+     "song": "If I Didn't Love You",
+     "artist": "Jason Aldean & Carrie Underwood"
+    },
+    {
+     "rank": 3,
+     "song": "Waves",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Things A Man Oughta Know",
+     "artist": "Lainey Wilson"
+    },
+    {
+     "rank": 5,
+     "song": "Country Again",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 6,
+     "song": "Forever After All",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "Chasing After You",
+     "artist": "Ryan Hurd With Maren Morris"
+    },
+    {
+     "rank": 8,
+     "song": "Cold Beer Calling My Name",
+     "artist": "Jameson Rodgers Featuring Luke Combs"
+    },
+    {
+     "rank": 9,
+     "song": "I Was On A Boat That Day",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 10,
+     "song": "Famous Friends",
+     "artist": "Chris Young + Kane Brown"
+    },
+    {
+     "rank": 11,
+     "song": "Memory I Don't Mess With",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 12,
+     "song": "You Time",
+     "artist": "Scotty McCreery"
+    },
+    {
+     "rank": 13,
+     "song": "Buy Dirt",
+     "artist": "Jordan Davis Featuring Luke Bryan"
+    },
+    {
+     "rank": 14,
+     "song": "Cold As You",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 15,
+     "song": "Drunk (And I Don't Wanna Go Home)",
+     "artist": "Elle King & Miranda Lambert"
+    },
+    {
+     "rank": 16,
+     "song": "We Didn't Have Much",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 17,
+     "song": "Memory",
+     "artist": "Kane Brown X blackbear"
+    },
+    {
+     "rank": 18,
+     "song": "My Boy",
+     "artist": "Elvie Shane"
+    },
+    {
+     "rank": 19,
+     "song": "You Should Probably Leave",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 20,
+     "song": "Thinking 'Bout You",
+     "artist": "Dustin Lynch Featuring Lauren Alaina Or MacKenzie Porter"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210911120739/https://www.beatport.com/top-100",
+   "captured": "2021-09-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)",
+     "artist": "Age Of Love"
+    },
+    {
+     "rank": 2,
+     "song": "Do It To It (Extended Mix)",
+     "artist": "ACRAZE"
+    },
+    {
+     "rank": 3,
+     "song": "Party's Jumpin feat. Ossey James",
+     "artist": "Joshwa (UK) & Ossey James"
+    },
+    {
+     "rank": 4,
+     "song": "Confusion",
+     "artist": "&ME, Rampa, Adam Port, Keinemusik & Ali Love"
+    },
+    {
+     "rank": 5,
+     "song": "Stupidisco (David Penn Extended Remix)",
+     "artist": "Junior Jack"
+    },
+    {
+     "rank": 6,
+     "song": "Drinkee (Vintage Culture & John Summit Extended Mix)",
+     "artist": "Sofi Tukker"
+    },
+    {
+     "rank": 7,
+     "song": "Up All Night (Extended Mix)",
+     "artist": "OFFAIAH"
+    },
+    {
+     "rank": 8,
+     "song": "Get This Party Started (Extended Mix)",
+     "artist": "Westend"
+    },
+    {
+     "rank": 9,
+     "song": "Morenita feat. Cumbiafrica (Extended Mix)",
+     "artist": "Hugel"
+    },
+    {
+     "rank": 10,
+     "song": "Whispers In The Wind",
+     "artist": "Michael Bibi"
+    },
+    {
+     "rank": 11,
+     "song": "OUT OUT (feat. Charli XCX & Saweetie) [Extended]",
+     "artist": "Charli Xcx, Jax Jones, Joel Corry & Saweetie"
+    },
+    {
+     "rank": 12,
+     "song": "Power (Extended Mix)",
+     "artist": "Maur & Solardo"
+    },
+    {
+     "rank": 13,
+     "song": "How I Feel (Biscits Extended Mix)",
+     "artist": "Martin Ikin & Hayley May"
+    },
+    {
+     "rank": 14,
+     "song": "Techno Disco feat. Kay Elizabeth (Extended Mix)",
+     "artist": "Hilit Kolet & Kay Elizabeth"
+    },
+    {
+     "rank": 15,
+     "song": "Sometimes (Extended Mix)",
+     "artist": "Martin Ikin"
+    },
+    {
+     "rank": 16,
+     "song": "Free (Extended Mix)",
+     "artist": "Roland Clark, Vintage Culture & Fancy Inc"
+    },
+    {
+     "rank": 17,
+     "song": "Sientelo",
+     "artist": "Camo & Krooked & Mefjus"
+    },
+    {
+     "rank": 18,
+     "song": "Marea (We've Lost Dancing)",
+     "artist": "The Blessed Madonna & Fred again.."
+    },
+    {
+     "rank": 19,
+     "song": "Flame (Extended Mix)",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 20,
+     "song": "Not My Lover",
+     "artist": "Richard Grey & Lissat"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210917004018/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2021-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pepas",
+     "artist": "Farruko"
+    },
+    {
+     "rank": 2,
+     "song": "In Da Getto",
+     "artist": "J Balvin & Skrillex"
+    },
+    {
+     "rank": 3,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 4,
+     "song": "You",
+     "artist": "Regard x Troye Sivan x Tate McRae"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Be Shy",
+     "artist": "Tiesto & Karol G"
+    },
+    {
+     "rank": 6,
+     "song": "You Are My High",
+     "artist": "DJ Snake"
+    },
+    {
+     "rank": 7,
+     "song": "Goosebumps",
+     "artist": "Travis Scott & HVME"
+    },
+    {
+     "rank": 8,
+     "song": "The Business",
+     "artist": "Tiesto"
+    },
+    {
+     "rank": 9,
+     "song": "Love Tonight",
+     "artist": "Shouse"
+    },
+    {
+     "rank": 10,
+     "song": "Heartbreak Anthem",
+     "artist": "Galantis, David Guetta & Little Mix"
+    },
+    {
+     "rank": 11,
+     "song": "Chasing Stars",
+     "artist": "Alesso, Marshmello & James Bay"
+    },
+    {
+     "rank": 12,
+     "song": "En Mi Cuarto",
+     "artist": "Jhay Cortez & Skrillex"
+    },
+    {
+     "rank": 13,
+     "song": "Out Out",
+     "artist": "Joel Corry, Jax Jones, Charli XCX & Saweetie"
+    },
+    {
+     "rank": 14,
+     "song": "911 (A. G. Cook Remix)",
+     "artist": "Lady Gaga & Charli XCX"
+    },
+    {
+     "rank": 15,
+     "song": "Run It",
+     "artist": "DJ Snake, Rick Ross & Rich Brian"
+    },
+    {
+     "rank": 16,
+     "song": "Love Me Now",
+     "artist": "Kygo Featuring Zoe Wees"
+    },
+    {
+     "rank": 17,
+     "song": "Plastic Doll",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 18,
+     "song": "Believe Me",
+     "artist": "Navos"
+    },
+    {
+     "rank": 19,
+     "song": "Lifetime",
+     "artist": "Swedish House Mafia Featuring Ty Dolla $ign & 070 Shake"
+    },
+    {
+     "rank": 20,
+     "song": "Free Woman (Clarence Clarity Remix)",
+     "artist": "Lady Gaga & Rina Sawayama"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210915050940/https://www.billboard.com/charts/alternative-airplay",
+   "captured": "2021-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Saturday",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Serotonin",
+     "artist": "girl in red"
+    },
+    {
+     "rank": 3,
+     "song": "Follow You",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 4,
+     "song": "Wrecked",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 5,
+     "song": "Monsters",
+     "artist": "All Time Low Featuring blackbear"
+    },
+    {
+     "rank": 6,
+     "song": "Distorted Light Beam",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 7,
+     "song": "transparentsoul",
+     "artist": "Willow Featuring Travis Barker"
+    },
+    {
+     "rank": 8,
+     "song": "All My Favorite Songs",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 9,
+     "song": "Beggin'",
+     "artist": "Maneskin"
+    },
+    {
+     "rank": 10,
+     "song": "My Ex's Best Friend",
+     "artist": "Machine Gun Kelly X blackbear"
+    },
+    {
+     "rank": 11,
+     "song": "Missing Piece",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 12,
+     "song": "Making A Fire",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 13,
+     "song": "We Are Between",
+     "artist": "Modest Mouse"
+    },
+    {
+     "rank": 14,
+     "song": "Stop Making This Hurt",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 15,
+     "song": "Way Less Sad",
+     "artist": "AJR"
+    },
+    {
+     "rank": 16,
+     "song": "Can You Handle My Love??",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 17,
+     "song": "Freaks",
+     "artist": "Surf Curse"
+    },
+    {
+     "rank": 18,
+     "song": "NDA",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 19,
+     "song": "A-O-K",
+     "artist": "Tai Verdes"
+    },
+    {
+     "rank": 20,
+     "song": "What You Say",
+     "artist": "Cold War Kids"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20210914211551/https://kworb.net/charts/itunes/us.html",
+   "captured": "2021-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 2,
+     "song": "Shivers",
+     "artist": "Ed Sheeran"
+    },
+    {
+     "rank": 3,
+     "song": "Bad Habits",
+     "artist": "Ed Sheeran"
+    },
+    {
+     "rank": 4,
+     "song": "STAY",
+     "artist": "The Kid LAROI & Justin Bieber"
+    },
+    {
+     "rank": 5,
+     "song": "If I Didn't Love You",
+     "artist": "Jason Aldean & Carrie Underwood"
+    },
+    {
+     "rank": 6,
+     "song": "Have Mercy",
+     "artist": "Chlöe"
+    },
+    {
+     "rank": 7,
+     "song": "Fancy Like (feat. Kesha)",
+     "artist": "Walker Hayes & Kesha"
+    },
+    {
+     "rank": 8,
+     "song": "Buy Dirt (feat. Luke Bryan)",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 9,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 10,
+     "song": "Way 2 Sexy (feat. Future & Young Thug)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Scars in Heaven",
+     "artist": "Casting Crowns"
+    },
+    {
+     "rank": 12,
+     "song": "LALISA",
+     "artist": "LISA"
+    },
+    {
+     "rank": 13,
+     "song": "Nothing Else Matters (feat. WATT, Elton John, Yo-Yo Ma, Robert Trujillo & Chad Smith)",
+     "artist": "Miley Cyrus"
+    },
+    {
+     "rank": 14,
+     "song": "INDUSTRY BABY",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 15,
+     "song": "Beggin",
+     "artist": "Måneskin"
+    },
+    {
+     "rank": 16,
+     "song": "Shallow",
+     "artist": "Lady Gaga & Bradley Cooper"
+    },
+    {
+     "rank": 17,
+     "song": "Heat Waves",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 18,
+     "song": "good 4 u",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 19,
+     "song": "Ghost",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 20,
+     "song": "My Jesus",
+     "artist": "Anne Wilson"
+    }
+   ]
+  }
+ ]
+}

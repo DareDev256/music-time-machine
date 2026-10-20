@@ -1,0 +1,841 @@
+{
+ "month": "2019-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190630085627/https://www.hotnewhiphop.com/top100/",
+   "captured": "2019-06-30",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Need A Stack",
+     "artist": "Chris Brown Feat. Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "The Story Of Foofy (50 Cent Diss)",
+     "artist": "Young Buck"
+    },
+    {
+     "rank": 3,
+     "song": "Pullin",
+     "artist": "Fat Joe , Dre & Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Gone",
+     "artist": "Jeezy Feat. Master P"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Check On Me",
+     "artist": "Chris Brown Feat. Justin Bieber"
+    },
+    {
+     "rank": 6,
+     "song": "Special (Prod. By Murda Beatz & Cubeatz)",
+     "artist": "Gucci Mane Feat. Anuel AA"
+    },
+    {
+     "rank": 7,
+     "song": "ICE (Prod. By Turbo)",
+     "artist": "Gucci Mane Feat. Lil Baby"
+    },
+    {
+     "rank": 8,
+     "song": "Addiction",
+     "artist": "Big K.R.I.T. Feat. Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "Return Of The Mack",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 10,
+     "song": "Loving Every Minute",
+     "artist": "Vybz Kartel"
+    },
+    {
+     "rank": 11,
+     "song": "West Side",
+     "artist": "The Game"
+    },
+    {
+     "rank": 12,
+     "song": "Broke And Stupid",
+     "artist": "Joyner Lucas"
+    },
+    {
+     "rank": 13,
+     "song": "Unified",
+     "artist": "Khao Feat. Nipsey Hussle"
+    },
+    {
+     "rank": 14,
+     "song": "Bang",
+     "artist": "G-Eazy Feat. Tyga"
+    },
+    {
+     "rank": 15,
+     "song": "On GOD",
+     "artist": "DJ Mustard Feat. A$AP Ferg"
+    },
+    {
+     "rank": 16,
+     "song": "Situation",
+     "artist": "Trina Feat. Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "Act A Fool",
+     "artist": "Rick Ross Feat. Wale"
+    },
+    {
+     "rank": 18,
+     "song": "Push It",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 19,
+     "song": "Three Point Stance",
+     "artist": "Juicy J Feat. Megan Thee Stallion"
+    },
+    {
+     "rank": 20,
+     "song": "Beautiful People",
+     "artist": "Ed Sheeran Feat. Khalid"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190615211509/https://hypem.com/popular",
+   "captured": "2019-06-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Divinity (ODESZA Remix) (feat. Amy Millan)",
+     "artist": "Porter Robinson"
+    },
+    {
+     "rank": 2,
+     "song": "Marijuana",
+     "artist": "chrome sparks"
+    },
+    {
+     "rank": 3,
+     "song": "Crystalised NOKO Remix",
+     "artist": "The xx"
+    },
+    {
+     "rank": 4,
+     "song": "Pop Culture",
+     "artist": "Madeon"
+    },
+    {
+     "rank": 5,
+     "song": "Merry Christmas Mr. Lawrence",
+     "artist": "Anamanaguchi"
+    },
+    {
+     "rank": 6,
+     "song": "Heart Mountain",
+     "artist": "Seablite"
+    },
+    {
+     "rank": 7,
+     "song": "SERENADE",
+     "artist": "Freddie Joachim"
+    },
+    {
+     "rank": 8,
+     "song": "Puzzles",
+     "artist": "Noé"
+    },
+    {
+     "rank": 9,
+     "song": "Clovers",
+     "artist": "Barrie"
+    },
+    {
+     "rank": 10,
+     "song": "Grey Area",
+     "artist": "Carter Reeves"
+    },
+    {
+     "rank": 11,
+     "song": "Northern Lights Antenna Remix",
+     "artist": "Satin Jackets feat. David Harks"
+    },
+    {
+     "rank": 12,
+     "song": "Claustro",
+     "artist": "Burial"
+    },
+    {
+     "rank": 13,
+     "song": "We Can Go",
+     "artist": "Beak>"
+    },
+    {
+     "rank": 14,
+     "song": "Fail Safe",
+     "artist": "William Tyler"
+    },
+    {
+     "rank": 15,
+     "song": "Here If You Need",
+     "artist": "Callum Pitt"
+    },
+    {
+     "rank": 16,
+     "song": "Young Milk",
+     "artist": "Company Ink"
+    },
+    {
+     "rank": 17,
+     "song": "The Funeral +6 remixes",
+     "artist": "Band Of Horses"
+    },
+    {
+     "rank": 18,
+     "song": "Foam",
+     "artist": "Divino Niño"
+    },
+    {
+     "rank": 19,
+     "song": "Strange Overtones Yuksek Dub",
+     "artist": "Poolside"
+    },
+    {
+     "rank": 20,
+     "song": "Wavelength",
+     "artist": "Mattson 2"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190617090815/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2019-06-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Old Town Road",
+     "artist": "Lil Nas X Featuring Billy Ray Cyrus"
+    },
+    {
+     "rank": 2,
+     "song": "Talk",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 3,
+     "song": "Wow.",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "Sunflower (Spider-Man: Into The Spider-Verse)",
+     "artist": "Post Malone & Swae Lee"
+    },
+    {
+     "rank": 5,
+     "song": "Suge",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 6,
+     "song": "Press",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 7,
+     "song": "The London",
+     "artist": "Young Thug, J. Cole & Travis Scott"
+    },
+    {
+     "rank": 8,
+     "song": "Truth Hurts",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 9,
+     "song": "Pop Out",
+     "artist": "Polo G Featuring Lil Tjay"
+    },
+    {
+     "rank": 10,
+     "song": "Middle Child",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 11,
+     "song": "Earfquake",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 12,
+     "song": "Act Up",
+     "artist": "City Girls"
+    },
+    {
+     "rank": 13,
+     "song": "Pure Water",
+     "artist": "Mustard & Migos"
+    },
+    {
+     "rank": 14,
+     "song": "Look Back At It",
+     "artist": "A Boogie Wit da Hoodie"
+    },
+    {
+     "rank": 15,
+     "song": "Envy Me",
+     "artist": "Calboy"
+    },
+    {
+     "rank": 16,
+     "song": "Please Me",
+     "artist": "Cardi B & Bruno Mars"
+    },
+    {
+     "rank": 17,
+     "song": "Close Friends",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 18,
+     "song": "Go Loko",
+     "artist": "YG, Tyga & Jon Z"
+    },
+    {
+     "rank": 19,
+     "song": "Wish Wish",
+     "artist": "DJ Khaled Featuring Cardi B & 21 Savage"
+    },
+    {
+     "rank": 20,
+     "song": "A Lot",
+     "artist": "21 Savage"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20190616214132/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2019-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Incapable",
+     "artist": "Róisín Murphy"
+    },
+    {
+     "rank": 2,
+     "song": "Gretel",
+     "artist": "(Sandy) Alex G"
+    },
+    {
+     "rank": 3,
+     "song": "He",
+     "artist": "Jai Paul"
+    },
+    {
+     "rank": 4,
+     "song": "Do You Love Her Now",
+     "artist": "Jai Paul"
+    },
+    {
+     "rank": 5,
+     "song": "Hurry on Home",
+     "artist": "Sleater-Kinney"
+    },
+    {
+     "rank": 6,
+     "song": "Bags",
+     "artist": "Clairo"
+    },
+    {
+     "rank": 7,
+     "song": "Roses That Cry",
+     "artist": "Empath"
+    },
+    {
+     "rank": 8,
+     "song": "Hello Sunshine",
+     "artist": "Bruce Springsteen"
+    },
+    {
+     "rank": 9,
+     "song": "Cellophane",
+     "artist": "FKA twigs"
+    },
+    {
+     "rank": 10,
+     "song": "Drunk II",
+     "artist": "Mannequin Pussy"
+    },
+    {
+     "rank": 11,
+     "song": "Before I Let Go",
+     "artist": "Beyoncé"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190617002024/https://www.billboard.com/charts/country-songs",
+   "captured": "2019-06-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "God's Country",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 2,
+     "song": "Whiskey Glasses",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 3,
+     "song": "Look What God Gave Her",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 4,
+     "song": "Rumor",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 5,
+     "song": "Beer Never Broke My Heart",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 6,
+     "song": "Good As You",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Miss Me More",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 8,
+     "song": "Speechless",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 9,
+     "song": "Love Someone",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 10,
+     "song": "GIRL",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 11,
+     "song": "Knockin' Boots",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 12,
+     "song": "All To Myself",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 13,
+     "song": "On My Way To You",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 14,
+     "song": "Some Of It",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 15,
+     "song": "Talk You Out Of It",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 16,
+     "song": "Rearview Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 17,
+     "song": "Shut Up About Politics",
+     "artist": "John Rich Featuring The Five"
+    },
+    {
+     "rank": 18,
+     "song": "Raised On Country",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 19,
+     "song": "The Ones That Didn't Make It Back Home",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 20,
+     "song": "Every Little Honky Tonk Bar",
+     "artist": "George Strait"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190617042819/https://www.beatport.com/top-100",
+   "captured": "2019-06-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "You Little Beauty (Extended)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "Return to Oz (Artbat Remix)",
+     "artist": "Monolink"
+    },
+    {
+     "rank": 3,
+     "song": "Ballers",
+     "artist": "DJ S.K.T"
+    },
+    {
+     "rank": 4,
+     "song": "Tell Me Are We",
+     "artist": "WhoMadeWho & Rampa"
+    },
+    {
+     "rank": 5,
+     "song": "Waves (Jamie Jones Re-edit)",
+     "artist": "Jamie Jones & Raumakustik"
+    },
+    {
+     "rank": 6,
+     "song": "Music Is the Answer",
+     "artist": "Mike Vale"
+    },
+    {
+     "rank": 7,
+     "song": "Snake",
+     "artist": "PAX"
+    },
+    {
+     "rank": 8,
+     "song": "Sacred Cycles (Adam Beyer/Bart Skils/Layton Giordani Renaissance Remix)",
+     "artist": "Pete Lazonby"
+    },
+    {
+     "rank": 9,
+     "song": "Stay With Me (Extended)",
+     "artist": "Chris Lake"
+    },
+    {
+     "rank": 10,
+     "song": "It'll All Be Over (DJ Koze Remix)",
+     "artist": "Gerry Read"
+    },
+    {
+     "rank": 11,
+     "song": "Be Someone (Extended Mix)",
+     "artist": "CamelPhat & Jake Bugg"
+    },
+    {
+     "rank": 12,
+     "song": "SOL (Extended Mix)",
+     "artist": "KC Lights"
+    },
+    {
+     "rank": 13,
+     "song": "The Sonic Busters",
+     "artist": "George Privatti & Guille Placencia"
+    },
+    {
+     "rank": 14,
+     "song": "Otto's Chant",
+     "artist": "Skream & Michael Bibi"
+    },
+    {
+     "rank": 15,
+     "song": "Work It (Soulwax Remix)",
+     "artist": "Marie Davidson"
+    },
+    {
+     "rank": 16,
+     "song": "Inside My Head (Extended Mix)",
+     "artist": "Eli Brown & Noizu"
+    },
+    {
+     "rank": 17,
+     "song": "Let Me Love You (Extended Mix)",
+     "artist": "Weiss (UK)"
+    },
+    {
+     "rank": 18,
+     "song": "RAW",
+     "artist": "KiNK"
+    },
+    {
+     "rank": 19,
+     "song": "Vibrancy",
+     "artist": "UMEK"
+    },
+    {
+     "rank": 20,
+     "song": "Caress Me",
+     "artist": "Ben Hemsley"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190617043829/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2019-06-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 2,
+     "song": "Here With Me",
+     "artist": "Marshmello Featuring CHVRCHES"
+    },
+    {
+     "rank": 3,
+     "song": "Call You Mine",
+     "artist": "The Chainsmokers & Bebe Rexha"
+    },
+    {
+     "rank": 4,
+     "song": "Close To Me",
+     "artist": "Ellie Goulding X Diplo Featuring Swae Lee"
+    },
+    {
+     "rank": 5,
+     "song": "Taki Taki",
+     "artist": "DJ Snake Featuring Selena Gomez, Ozuna & Cardi B"
+    },
+    {
+     "rank": 6,
+     "song": "Who Do You Love",
+     "artist": "The Chainsmokers Featuring 5 Seconds Of Summer"
+    },
+    {
+     "rank": 7,
+     "song": "SOS",
+     "artist": "Avicii Featuring Aloe Blacc"
+    },
+    {
+     "rank": 8,
+     "song": "Summer Days",
+     "artist": "Martin Garrix Featuring Macklemore & Patrick Stump"
+    },
+    {
+     "rank": 9,
+     "song": "This Feeling",
+     "artist": "The Chainsmokers Featuring Kelsea Ballerini"
+    },
+    {
+     "rank": 10,
+     "song": "Good Things Fall Apart",
+     "artist": "Illenium & Jon Bellion"
+    },
+    {
+     "rank": 11,
+     "song": "Piece Of Your Heart",
+     "artist": "Meduza Featuring GOODBOYS"
+    },
+    {
+     "rank": 12,
+     "song": "Carry On",
+     "artist": "Kygo & Rita Ora"
+    },
+    {
+     "rank": 13,
+     "song": "On My Way",
+     "artist": "Alan Walker, Sabrina Carpenter & Farruko"
+    },
+    {
+     "rank": 14,
+     "song": "Ritual",
+     "artist": "Tiesto, Jonas Blue & Rita Ora"
+    },
+    {
+     "rank": 15,
+     "song": "Not Ok",
+     "artist": "Kygo & Chelsea Cutler"
+    },
+    {
+     "rank": 16,
+     "song": "All My Friends",
+     "artist": "Madeon"
+    },
+    {
+     "rank": 17,
+     "song": "WTF",
+     "artist": "HUGEL Featuring Amber Van Day"
+    },
+    {
+     "rank": 18,
+     "song": "Spicy",
+     "artist": "Herve Pagez & Diplo Featuring Charli XCX"
+    },
+    {
+     "rank": 19,
+     "song": "Lily",
+     "artist": "Alan Walker, K-391 & Emelie Hollow"
+    },
+    {
+     "rank": 20,
+     "song": "All Day And Night",
+     "artist": "Jax Jones, Martin Solveig & Madison Beer"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20190624035656/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2019-06-24",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Gloria",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 2,
+     "song": "Trampoline",
+     "artist": "SHAED"
+    },
+    {
+     "rank": 3,
+     "song": "Longshot",
+     "artist": "Catfish And The Bottlemen"
+    },
+    {
+     "rank": 4,
+     "song": "Hurt",
+     "artist": "Oliver Tree"
+    },
+    {
+     "rank": 5,
+     "song": "100 Bad Days",
+     "artist": "AJR"
+    },
+    {
+     "rank": 6,
+     "song": "Missed Connection",
+     "artist": "The Head And The Heart"
+    },
+    {
+     "rank": 7,
+     "song": "Alligator",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 8,
+     "song": "High Hopes",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 9,
+     "song": "still feel.",
+     "artist": "half alive"
+    },
+    {
+     "rank": 10,
+     "song": "Bad Guy",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 11,
+     "song": "Blame It On My Youth",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 12,
+     "song": "Bury A Friend",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 13,
+     "song": "Beloved",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 14,
+     "song": "Lo/Hi",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 15,
+     "song": "Cringe",
+     "artist": "Matt Maeson"
+    },
+    {
+     "rank": 16,
+     "song": "3 Nights",
+     "artist": "Dominic Fike"
+    },
+    {
+     "rank": 17,
+     "song": "Choke",
+     "artist": "I Dont Know How But They Found Me"
+    },
+    {
+     "rank": 18,
+     "song": "Ready To Let Go",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 19,
+     "song": "Hey Look Ma, I Made It",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 20,
+     "song": "Maybe, I'm Afraid",
+     "artist": "lovelytheband"
+    }
+   ]
+  }
+ ]
+}

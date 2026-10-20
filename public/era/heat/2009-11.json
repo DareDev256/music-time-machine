@@ -1,0 +1,246 @@
+{
+ "month": "2009-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091121051318/http://hotnewhiphop.com:80/?",
+   "captured": "2009-11-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love Come Down (Remix)(Feat. Jim Jones, Fabolous, And Red Cafe)",
+     "artist": "Dirty Money"
+    },
+    {
+     "rank": 2,
+     "song": "Angels (Remix)(Feat. Rick Ross)",
+     "artist": "Dirty Money"
+    },
+    {
+     "rank": 3,
+     "song": "Get Rich Shit",
+     "artist": "TK & Fly Society"
+    },
+    {
+     "rank": 4,
+     "song": "Til The Club Close",
+     "artist": "Terrell Anthony"
+    },
+    {
+     "rank": 5,
+     "song": "Bitch Look At Me Now",
+     "artist": "Chrishan feat Marcel, Young Rocky, Chris King & J Watts"
+    },
+    {
+     "rank": 6,
+     "song": "Drunk In The Club",
+     "artist": "Bei Maejor"
+    },
+    {
+     "rank": 7,
+     "song": "Hate'N on Me",
+     "artist": "K-Boy feat Meme"
+    },
+    {
+     "rank": 8,
+     "song": "Who We Are",
+     "artist": "MIC feat Tha Vill & Truth"
+    },
+    {
+     "rank": 9,
+     "song": "Tru Story (Snippet)",
+     "artist": "Juice"
+    },
+    {
+     "rank": 10,
+     "song": "Choose Me (Feat. JW)",
+     "artist": "Young Cash"
+    },
+    {
+     "rank": 11,
+     "song": "Heavy In The Streets (Feat. Yung Ralph, Pill & Big Bank Black)",
+     "artist": "Alley Boy"
+    },
+    {
+     "rank": 12,
+     "song": "Breakfast (In & Out)",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 13,
+     "song": "Audio Dope",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 14,
+     "song": "Club Love (Remix) (Feat. E-40)",
+     "artist": "Cataracs"
+    },
+    {
+     "rank": 15,
+     "song": "Clear (Feat. Akon)",
+     "artist": "Kardinal Offishall"
+    },
+    {
+     "rank": 16,
+     "song": "Coochie",
+     "artist": "The Black Keys Feat. Ludacris and Ol' Dirty Bastard"
+    },
+    {
+     "rank": 17,
+     "song": "Wanna Be Heard",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 18,
+     "song": "Pain",
+     "artist": "Jadakiss"
+    },
+    {
+     "rank": 19,
+     "song": "Love Me (Feat. Maino)",
+     "artist": "J-Cash"
+    },
+    {
+     "rank": 20,
+     "song": "What Set You Claim (Feat. Juelz Santana)",
+     "artist": "J.R. Writer"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091122050119/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2009-11-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Norway",
+     "artist": "Beach House"
+    },
+    {
+     "rank": 2,
+     "song": "When I'm With You",
+     "artist": "Best Coast"
+    },
+    {
+     "rank": 3,
+     "song": "Spring (Air France Remix)",
+     "artist": "Saint Etienne"
+    },
+    {
+     "rank": 4,
+     "song": "A New Chance (The Juan MacLean Remix)",
+     "artist": "The Tough Alliance"
+    },
+    {
+     "rank": 5,
+     "song": "Little Dreamer (Jones Remix)\" [ft. Victoria Legrand]",
+     "artist": "Future Islands"
+    },
+    {
+     "rank": 6,
+     "song": "Love Cry",
+     "artist": "Four Tet"
+    },
+    {
+     "rank": 7,
+     "song": "Close Chorus",
+     "artist": "A Sunny Day in Glasgow"
+    },
+    {
+     "rank": 8,
+     "song": "Watching the Planets",
+     "artist": "The Flaming Lips"
+    },
+    {
+     "rank": 9,
+     "song": "Empire State of Mind\" [ft. Alicia Keys]",
+     "artist": "Jay-Z"
+    },
+    {
+     "rank": 10,
+     "song": "Havin' My Baby",
+     "artist": "Think About Life"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091126055919/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-11-26",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm So Appalled",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Drop It Low",
+     "artist": "Ester Dean ft. Lil Wayne & Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "Chewed Up",
+     "artist": "Felt"
+    },
+    {
+     "rank": 4,
+     "song": "How You LIke Me Now",
+     "artist": "The Heavy"
+    },
+    {
+     "rank": 5,
+     "song": "Nothin On You",
+     "artist": "B.o.B feat. Bruno Mars"
+    },
+    {
+     "rank": 6,
+     "song": "Say Something",
+     "artist": "Timbaland Ft. Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Listen",
+     "artist": "Juvenile"
+    },
+    {
+     "rank": 8,
+     "song": "In My Bag",
+     "artist": "Usher ft. TI"
+    },
+    {
+     "rank": 9,
+     "song": "What Would I Want? Sky",
+     "artist": "Animal Collective"
+    },
+    {
+     "rank": 10,
+     "song": "Empire State Of Mind Pt 2",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 11,
+     "song": "Diary",
+     "artist": "Wale Ft. Marsha Ambrosius"
+    },
+    {
+     "rank": 12,
+     "song": "Pregnant",
+     "artist": "R.Kelly ft. Tyrese, Robin Thicke & The-Dream"
+    }
+   ]
+  }
+ ]
+}

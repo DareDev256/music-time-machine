@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130915012351/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2013-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 2,
+     "song": "Berzerk",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 3,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 4,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 5,
+     "song": "Gas Pedal",
+     "artist": "Sage The Gemini Featuring IamSu"
+    },
+    {
+     "rank": 6,
+     "song": "Crooked Smile",
+     "artist": "J. Cole Featuring TLC"
+    },
+    {
+     "rank": 7,
+     "song": "Beware",
+     "artist": "Big Sean Featuring Lil Wayne & Jhene Aiko"
+    },
+    {
+     "rank": 8,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 9,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 10,
+     "song": "Type Of Way",
+     "artist": "Rich Homie Quan"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,276 @@
      "rank": 10,
      "song": "Beware",
      "artist": "Big Sean Featuring Lil Wayne & Jhene Aiko"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130914063005/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Watered Down",
+     "artist": "Swearin'"
+    },
+    {
+     "rank": 2,
+     "song": "Chamakay",
+     "artist": "Blood Orange"
+    },
+    {
+     "rank": 3,
+     "song": "Reflektor",
+     "artist": "Arcade Fire"
+    },
+    {
+     "rank": 4,
+     "song": "Lost It to Trying",
+     "artist": "Son Lux"
+    },
+    {
+     "rank": 5,
+     "song": "Gunshotta",
+     "artist": "Machinedrum"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130915004821/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2013-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "That's My Kind Of Night",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 2,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 3,
+     "song": "Round Here",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 4,
+     "song": "Night Train",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 5,
+     "song": "Redneck Crazy",
+     "artist": "Tyler Farr"
+    },
+    {
+     "rank": 6,
+     "song": "It Goes Like This",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 7,
+     "song": "Little Bit Of Everything",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 8,
+     "song": "Hey Girl",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 9,
+     "song": "All Over The Road",
+     "artist": "Easton Corbin"
+    },
+    {
+     "rank": 10,
+     "song": "Mine Would Be You",
+     "artist": "Blake Shelton"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130914130143/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 2,
+     "song": "Summertime Sadness",
+     "artist": "Lana Del Rey & Cedric Gervais"
+    },
+    {
+     "rank": 3,
+     "song": "Applause",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 4,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 5,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 6,
+     "song": "I Need Your Love",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    },
+    {
+     "rank": 7,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 8,
+     "song": "Turn The Night Up",
+     "artist": "Enrique Iglesias"
+    },
+    {
+     "rank": 9,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 10,
+     "song": "This Is What It Feels Like",
+     "artist": "Armin van Buuren Featuring Trevor Guthrie"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130915042749/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2013-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Royals",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 2,
+     "song": "Demons",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Out Of My League",
+     "artist": "Fitz And The Tantrums"
+    },
+    {
+     "rank": 4,
+     "song": "Ways To Go",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 5,
+     "song": "Safe And Sound",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 6,
+     "song": "Pompeii",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 7,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 8,
+     "song": "Come A Little Closer",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 9,
+     "song": "Elephant",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 10,
+     "song": "Harlem",
+     "artist": "New Politics"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130910041752/http://www.2dopeboyz.com/",
+   "captured": "2013-09-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Say Dat Then",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 2,
+     "song": "23 f. Miley Cyrus, Wiz Khalifa & Juicy J",
+     "artist": "Mike WiLL Made-It"
+    },
+    {
+     "rank": 3,
+     "song": "Foes f. Word Mann",
+     "artist": "Vic Spencer"
+    },
+    {
+     "rank": 4,
+     "song": "Make Money",
+     "artist": "Gerald Walker"
+    },
+    {
+     "rank": 5,
+     "song": "On&On",
+     "artist": "GoldLink"
+    },
+    {
+     "rank": 6,
+     "song": "Trust In Me f. Maffew Ragazino",
+     "artist": "Sean Born"
+    },
+    {
+     "rank": 7,
+     "song": "Shine On",
+     "artist": "Planet Asia"
+    },
+    {
+     "rank": 8,
+     "song": "Midnight Rage",
+     "artist": "Jordan Bratton"
+    },
+    {
+     "rank": 9,
+     "song": "I Don’t Give A",
+     "artist": "Nicki Minaj"
     }
    ]
   }

@@ -336,6 +336,186 @@
      "artist": "Drake"
     }
    ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110923112106/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2011-09-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Take A Back Road",
+     "artist": "Rodney Atkins"
+    },
+    {
+     "rank": 2,
+     "song": "Made In America",
+     "artist": "Toby Keith"
+    },
+    {
+     "rank": 3,
+     "song": "You And Tequila",
+     "artist": "Kenny Chesney Featuring Grace Potter"
+    },
+    {
+     "rank": 4,
+     "song": "Barefoot Blue Jean Night",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 5,
+     "song": "Long Hot Summer",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 6,
+     "song": "Here For A Good Time",
+     "artist": "George Strait"
+    },
+    {
+     "rank": 7,
+     "song": "Just Fishin'",
+     "artist": "Trace Adkins"
+    },
+    {
+     "rank": 8,
+     "song": "God Gave Me You",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 9,
+     "song": "Remind Me",
+     "artist": "Brad Paisley Duet With Carrie Underwood"
+    },
+    {
+     "rank": 10,
+     "song": "Crazy Girl",
+     "artist": "Eli Young Band"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110924051227/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2011-09-24",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Walk",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 2,
+     "song": "The Adventures Of Rain Danc...",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 3,
+     "song": "Up All Night",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 4,
+     "song": "Pumped Up Kicks",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 5,
+     "song": "The Sound Of Winter",
+     "artist": "Bush"
+    },
+    {
+     "rank": 6,
+     "song": "Sail",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 7,
+     "song": "Make It Stop (September's Ch...",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 8,
+     "song": "Whirring",
+     "artist": "The Joy Formidable"
+    },
+    {
+     "rank": 9,
+     "song": "Irresistible Force",
+     "artist": "Jane's Addiction"
+    },
+    {
+     "rank": 10,
+     "song": "Roll Away Your Stone",
+     "artist": "Mumford & Sons"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110910153241/http://www.2dopeboyz.com/",
+   "captured": "2011-09-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lay It On Me BTS",
+     "artist": "Kelly Rowland"
+    },
+    {
+     "rank": 2,
+     "song": "Peso (Live At Santos Party House In NYC)",
+     "artist": "ASAP Rocky"
+    },
+    {
+     "rank": 3,
+     "song": "Batteries f. Trae Tha Truth",
+     "artist": "XV"
+    },
+    {
+     "rank": 4,
+     "song": "Drop It Down f. Redman",
+     "artist": "Saukrates"
+    },
+    {
+     "rank": 5,
+     "song": "Blue Jeans",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 6,
+     "song": "The Realist",
+     "artist": "Sha Stimuli"
+    },
+    {
+     "rank": 7,
+     "song": "Hard White (Up in The Club) f. Lil Jon (Preview)",
+     "artist": "Yelawolf"
+    },
+    {
+     "rank": 8,
+     "song": "Break My Heart (rmx pt.2) f. Swizz Beatz, Raekwon & Wretch 32",
+     "artist": "Estelle"
+    },
+    {
+     "rank": 9,
+     "song": "Man Down",
+     "artist": "MnkeyWrench"
+    },
+    {
+     "rank": 10,
+     "song": "So Disgusting",
+     "artist": "Talib Kweli"
+    }
+   ]
   }
  ]
 }

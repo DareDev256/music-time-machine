@@ -1,0 +1,481 @@
+{
+ "month": "2009-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091212213839/http://www.hotnewhiphop.com:80/",
+   "captured": "2009-12-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What You Want (Feat. Mack Maine)",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 2,
+     "song": "U Need To Stop",
+     "artist": "D.P. Da Prophet feat Lil Meta"
+    },
+    {
+     "rank": 3,
+     "song": "Set It Off",
+     "artist": "Rick Ross feat David Correy"
+    },
+    {
+     "rank": 4,
+     "song": "Number 1 Fan",
+     "artist": "Rocki feat Pries"
+    },
+    {
+     "rank": 5,
+     "song": "Outta This World",
+     "artist": "P-N-C feat Mullage"
+    },
+    {
+     "rank": 6,
+     "song": "I'm Ill (Feat. Fabolous)",
+     "artist": "Red Cafe"
+    },
+    {
+     "rank": 7,
+     "song": "Me & You",
+     "artist": "Jaystonez feat Jeremih & Gizelle"
+    },
+    {
+     "rank": 8,
+     "song": "Gotta Get It Remix",
+     "artist": "Lil Chuckee & Juvenile"
+    },
+    {
+     "rank": 9,
+     "song": "Shiester",
+     "artist": "Alley Boy"
+    },
+    {
+     "rank": 10,
+     "song": "Say Ahh (Remix) (Feat. Young Jeezy)",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 11,
+     "song": "Yeah! (Feat. Dorrough & Gucci Mane)",
+     "artist": "Blanco"
+    },
+    {
+     "rank": 12,
+     "song": "Songs On Her Radio",
+     "artist": "Chris Holloway"
+    },
+    {
+     "rank": 13,
+     "song": "Dopeboy Swag (Feat. Red Cafe)",
+     "artist": "Masspike Miles"
+    },
+    {
+     "rank": 14,
+     "song": "Never Heard of Ya (Prod by Kuddie Fresh of Tha Bizness)",
+     "artist": "K-Boy tha Prince"
+    },
+    {
+     "rank": 15,
+     "song": "Muh Fuckin Best",
+     "artist": "Dubby feat Young Rook"
+    },
+    {
+     "rank": 16,
+     "song": "I Am Essay Potna",
+     "artist": "Essay Potna"
+    },
+    {
+     "rank": 17,
+     "song": "So Roxy",
+     "artist": "Brisco"
+    },
+    {
+     "rank": 18,
+     "song": "Number 23",
+     "artist": "Dorrough"
+    },
+    {
+     "rank": 19,
+     "song": "Boosie We Gone Miss You [Prod. By Q-Red]",
+     "artist": "Lil' Boosie"
+    },
+    {
+     "rank": 20,
+     "song": "Gone But Not Forgotten [Prod. By Big Wayne]",
+     "artist": "Lil' Boosie"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091218190323/http://hypem.com:80/popular",
+   "captured": "2009-12-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Paradise Circus",
+     "artist": "Massive Attack"
+    },
+    {
+     "rank": 2,
+     "song": "Where Is My Mind (Bassnectar Remix)",
+     "artist": "The Pixies"
+    },
+    {
+     "rank": 3,
+     "song": "Cudderisback (Feat. Vampire Weekend)",
+     "artist": "KiD CuDi"
+    },
+    {
+     "rank": 4,
+     "song": "Videotape (Xaphoon's Dubstep Remix)",
+     "artist": "Radiohead"
+    },
+    {
+     "rank": 5,
+     "song": "Escape (Dirty Noise Edit)",
+     "artist": "Toxic Avenger"
+    },
+    {
+     "rank": 6,
+     "song": "Walking On A Dream (Treasure Fingers Remix)",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 7,
+     "song": "Murderer (Diplo & Jayou Remix)",
+     "artist": "The Partysquad"
+    },
+    {
+     "rank": 8,
+     "song": "One Life Stand (album Version)",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 9,
+     "song": "The Prayer",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 10,
+     "song": "Starts With One (CLASSIXX Remix)",
+     "artist": "Shiny Toy Guns"
+    },
+    {
+     "rank": 11,
+     "song": "Talkin' In My Sleep (The Bloody Beetroots Remix)",
+     "artist": "The Bloody Beetroots"
+    },
+    {
+     "rank": 12,
+     "song": "Walking Backwards (Dutch Uncles Remix)",
+     "artist": "Bombay Bicycle Club"
+    },
+    {
+     "rank": 13,
+     "song": "the dance of the dead original",
+     "artist": "Tape Deck Bros"
+    },
+    {
+     "rank": 14,
+     "song": "Home",
+     "artist": "Edward Sharpe & The Magnetic Zeros"
+    },
+    {
+     "rank": 15,
+     "song": "Goldigger (Tugboat Edit)",
+     "artist": "Diplo"
+    },
+    {
+     "rank": 16,
+     "song": "Neighborhood #3 (Power Out)",
+     "artist": "The Arcade Fire"
+    },
+    {
+     "rank": 17,
+     "song": "Ice Ice Baby (The Disco Villains Remix)",
+     "artist": "Vanilla Ice"
+    },
+    {
+     "rank": 18,
+     "song": "Gravity Rides Everything",
+     "artist": "Modest Mouse"
+    },
+    {
+     "rank": 19,
+     "song": "Shades (Original Mix)",
+     "artist": "Popof"
+    },
+    {
+     "rank": 20,
+     "song": "Starry Eyed (Jakwob Remix)",
+     "artist": "Ellie Goulding"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091207013711/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2009-12-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Papers",
+     "artist": "Usher"
+    },
+    {
+     "rank": 2,
+     "song": "I Invented Sex",
+     "artist": "Trey Songz Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Empire State Of Mind",
+     "artist": "Jay-Z + Alicia Keys"
+    },
+    {
+     "rank": 4,
+     "song": "Money To Blow",
+     "artist": "Birdman Featuring Lil Wayne & Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Bad Habits",
+     "artist": "Maxwell"
+    },
+    {
+     "rank": 6,
+     "song": "Pretty Wings",
+     "artist": "Maxwell"
+    },
+    {
+     "rank": 7,
+     "song": "Baby By Me",
+     "artist": "50 Cent Featuring Ne-Yo"
+    },
+    {
+     "rank": 8,
+     "song": "It Kills Me",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 9,
+     "song": "Forever",
+     "artist": "Drake Featuring Kanye West, Lil Wayne & Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "Wasted",
+     "artist": "Gucci Mane Featuring Plies Or OJ Da Juiceman"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091214233233/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2009-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "When I Look at You",
+     "artist": "Emalkay"
+    },
+    {
+     "rank": 2,
+     "song": "Take It In",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 3,
+     "song": "What Would I Want? Sky",
+     "artist": "Animal Collective"
+    },
+    {
+     "rank": 4,
+     "song": "Norway",
+     "artist": "Beach House"
+    },
+    {
+     "rank": 5,
+     "song": "When I'm With You",
+     "artist": "Best Coast"
+    },
+    {
+     "rank": 6,
+     "song": "Spring (Air France Remix)",
+     "artist": "Saint Etienne"
+    },
+    {
+     "rank": 7,
+     "song": "A New Chance (The Juan MacLean Remix)",
+     "artist": "The Tough Alliance"
+    },
+    {
+     "rank": 8,
+     "song": "Little Dreamer (Jones Remix)\" [ft. Victoria Legrand]",
+     "artist": "Future Islands"
+    },
+    {
+     "rank": 9,
+     "song": "Love Cry",
+     "artist": "Four Tet"
+    },
+    {
+     "rank": 10,
+     "song": "Close Chorus",
+     "artist": "A Sunny Day in Glasgow"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20091213002539/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2009-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Need You Now",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 2,
+     "song": "Do I",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 3,
+     "song": "Consider Me Gone",
+     "artist": "Reba"
+    },
+    {
+     "rank": 4,
+     "song": "Bonfire",
+     "artist": "Craig Morgan"
+    },
+    {
+     "rank": 5,
+     "song": "I Wanna Make You Close Your ...",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 6,
+     "song": "Cowboy Casanova",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 7,
+     "song": "Red Light",
+     "artist": "David Nail"
+    },
+    {
+     "rank": 8,
+     "song": "Southern Voice",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 9,
+     "song": "Fifteen",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 10,
+     "song": "White Liar",
+     "artist": "Miranda Lambert"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20091214100500/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hell No",
+     "artist": "Sondre Lerche & Regina Spektor"
+    },
+    {
+     "rank": 2,
+     "song": "Drug Dealer Girl",
+     "artist": "Mike Posner"
+    },
+    {
+     "rank": 3,
+     "song": "Say Something",
+     "artist": "Timbaland Ft. Drake"
+    },
+    {
+     "rank": 4,
+     "song": "None Shall Pass (Remix)",
+     "artist": "Video + MP3! Bossasaurus vs. Aesop Rock"
+    },
+    {
+     "rank": 5,
+     "song": "Material",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "BASTARD",
+     "artist": "Metal On Metal"
+    },
+    {
+     "rank": 7,
+     "song": "Say Ahh",
+     "artist": "Trey Songz ft. Young Jeezy"
+    },
+    {
+     "rank": 8,
+     "song": "Vinterbarn",
+     "artist": "Music Video! Fredrik"
+    },
+    {
+     "rank": 9,
+     "song": "Madder Red",
+     "artist": "Yeasayer"
+    },
+    {
+     "rank": 10,
+     "song": "I'm Ill",
+     "artist": "Red Cafe ft. Fabolous"
+    },
+    {
+     "rank": 11,
+     "song": "Wishing On A Star",
+     "artist": "Jim Jones Ft. Rev Run"
+    },
+    {
+     "rank": 12,
+     "song": "By and By",
+     "artist": "Lay Low"
+    },
+    {
+     "rank": 13,
+     "song": "Jivin' and Shivin' (Fuck Frank)",
+     "artist": "Andrew John Long"
+    }
+   ]
+  }
+ ]
+}

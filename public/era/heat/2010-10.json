@@ -341,6 +341,236 @@
      "artist": "Alicia Keys"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20101012102227/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2010-10-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Heat\" [ft. Raekwon]",
+     "artist": "Twista"
+    },
+    {
+     "rank": 2,
+     "song": "2 Forms of Anger",
+     "artist": "Brian Eno"
+    },
+    {
+     "rank": 3,
+     "song": "MmmHmm\" [ft. Thundercat]",
+     "artist": "Flying Lotus"
+    },
+    {
+     "rank": 4,
+     "song": "Runaway\" [ft. Pusha T]",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Angela Surf City",
+     "artist": "The Walkmen"
+    },
+    {
+     "rank": 6,
+     "song": "I Only Know (What I Know Now)",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 7,
+     "song": "Fever Dreaming",
+     "artist": "No Age"
+    },
+    {
+     "rank": 8,
+     "song": "Kaili",
+     "artist": "Caribou"
+    },
+    {
+     "rank": 9,
+     "song": "I Can't Wait",
+     "artist": "Twin Shadow"
+    },
+    {
+     "rank": 10,
+     "song": "Parade",
+     "artist": "Tyler the Creator"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101013093012/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2010-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Boys of Fall",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 2,
+     "song": "All Over Me",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 3,
+     "song": "Come Back Song",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 4,
+     "song": "Roll With It",
+     "artist": "Easton Corbin"
+    },
+    {
+     "rank": 5,
+     "song": "Stuck Like Glue",
+     "artist": "Sugarland"
+    },
+    {
+     "rank": 6,
+     "song": "Our Kind Of Love",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 7,
+     "song": "Mine",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 8,
+     "song": "Farmer's Daughter",
+     "artist": "Rodney Atkins"
+    },
+    {
+     "rank": 9,
+     "song": "As She's Walking Away",
+     "artist": "Zac Brown Band Featuring Alan Jackson"
+    },
+    {
+     "rank": 10,
+     "song": "Little White Church",
+     "artist": "Little Big Town"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101011042837/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2010-10-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Radioactive",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 2,
+     "song": "Little Lion Man",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 3,
+     "song": "Tighten Up",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 4,
+     "song": "Animal",
+     "artist": "Neon Trees"
+    },
+    {
+     "rank": 5,
+     "song": "My Best Theory",
+     "artist": "Jimmy Eat World"
+    },
+    {
+     "rank": 6,
+     "song": "Impossible",
+     "artist": "Anberlin"
+    },
+    {
+     "rank": 7,
+     "song": "Lay Me Down",
+     "artist": "The Dirty Heads Featuring Rome"
+    },
+    {
+     "rank": 8,
+     "song": "The Sound (John M. Perkins' ...",
+     "artist": "Switchfoot"
+    },
+    {
+     "rank": 9,
+     "song": "Say You'll Haunt Me",
+     "artist": "Stone Sour"
+    },
+    {
+     "rank": 10,
+     "song": "Lisztomania",
+     "artist": "Phoenix"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20101014175434/http://pigeonsandplanes.com/",
+   "captured": "2010-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Young Blood (Remix)",
+     "artist": "The Naked & Famous ft. Chiddy Bang"
+    },
+    {
+     "rank": 2,
+     "song": "Something About It",
+     "artist": "Black Cotton"
+    },
+    {
+     "rank": 3,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Ft. Drake & Chrisette Michele"
+    },
+    {
+     "rank": 4,
+     "song": "The Spirit Was Gone",
+     "artist": "Antony and the Johnsons"
+    },
+    {
+     "rank": 5,
+     "song": "Like A G6 (Remix)",
+     "artist": "Far East Movement ft. 50 Cent"
+    },
+    {
+     "rank": 6,
+     "song": "The People",
+     "artist": "The Dean’s List"
+    },
+    {
+     "rank": 7,
+     "song": "Cameras vs Like A Boss (Skratch Bastid Remix)",
+     "artist": "Matt & Kim vs Slim Thug"
+    },
+    {
+     "rank": 8,
+     "song": "In For The Kill (Remix)",
+     "artist": "La Roux ft. Kanye West"
+    }
+   ]
   }
  ]
 }

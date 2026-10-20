@@ -166,7 +166,7 @@ def mk(rows, ranked=True):
 
 def parse_hypem(h):
     rows = []
-    for blk in re.findall(r'<h3 class="track_name">(.*?)</h3>', h, re.S):
+    for blk in re.findall(r'<h3 (?:class="track_name"|id="track_name_[^"]*")[^>]*>(.*?)</h3>', h, re.S):
         a = re.search(r'<a[^>]*class="artist"[^>]*>(.*?)</a>', blk, re.S)
         t = re.search(r'<a[^>]*href="/(?:track|item)/[^"]*"[^>]*>(.*?)</a>', blk, re.S)
         if a and t:
@@ -532,6 +532,7 @@ def fetch_source(net, sid, ym):
             last_fail = {"status": "none", "reason": "no 200 capture in month for %s" % url}
             continue
         res = None
+        tried = 0
         for ts, orig in caps:  # closest to the 15th first; fall through only if it yields nothing usable
             raw_url = "https://web.archive.org/web/%sid_/%s" % (ts, orig)
             body, err = cached_get(net, "page_%s_%s.html" % (ts, slug(orig)), raw_url)
@@ -553,7 +554,8 @@ def fetch_source(net, sid, ym):
                    "_ranked": kind != "front", "status": "parsed"}
             if len(rws) >= MIN_ROWS.get(sid, 8):
                 break
-            if not rws and len(body) > 30000:  # a full page that parses to nothing = unknown layout; more captures would not help
+            tried += 1
+            if not rws and len(body) > 30000 and tried >= 2:  # two full pages that parse to nothing = unknown layout
                 break
         if res is None:
             continue

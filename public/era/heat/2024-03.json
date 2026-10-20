@@ -1,0 +1,731 @@
+{
+ "month": "2024-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240304191003/https://www.billboard.com/charts/rap-song/",
+   "captured": "2024-03-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 2,
+     "song": "Carnival",
+     "artist": "¥$: Kanye West & Ty Dolla $ign Featuring Rich The Kid & Playboi Carti"
+    },
+    {
+     "rank": 3,
+     "song": "Agora Hills",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 4,
+     "song": "Redrum",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 5,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 6,
+     "song": "Never Lose Me",
+     "artist": "Flo Milli"
+    },
+    {
+     "rank": 7,
+     "song": "Rich Baby Daddy",
+     "artist": "Drake Featuring Sexyy Red & SZA"
+    },
+    {
+     "rank": 8,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 9,
+     "song": "Everybody",
+     "artist": "Nicki Minaj Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 10,
+     "song": "Breathe",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 11,
+     "song": "Lil Boo Thang",
+     "artist": "Paul Russell"
+    },
+    {
+     "rank": 12,
+     "song": "Surround Sound",
+     "artist": "JID Featuring 21 Savage & Baby Tate"
+    },
+    {
+     "rank": 13,
+     "song": "Get In With Me",
+     "artist": "BossMan Dlow"
+    },
+    {
+     "rank": 14,
+     "song": "Burn",
+     "artist": "¥$: Kanye West & Ty Dolla $ign"
+    },
+    {
+     "rank": 15,
+     "song": "First Person Shooter",
+     "artist": "Drake Featuring J. Cole"
+    },
+    {
+     "rank": 16,
+     "song": "Fuk Sumn",
+     "artist": "¥$: Kanye West & Ty Dolla $ign"
+    },
+    {
+     "rank": 17,
+     "song": "Back To Me",
+     "artist": "¥$: Kanye West & Ty Dolla $ign"
+    },
+    {
+     "rank": 18,
+     "song": "One Call",
+     "artist": "Rich Amiri"
+    },
+    {
+     "rank": 19,
+     "song": "You Broke My Heart",
+     "artist": "Drake"
+    },
+    {
+     "rank": 20,
+     "song": "Think U The Shit (Fart)",
+     "artist": "Ice Spice"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240316200252/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2024-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Carnival",
+     "artist": "¥$: Kanye West & Ty Dolla $ign Featuring Rich The Kid & Playboi Carti"
+    },
+    {
+     "rank": 2,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 3,
+     "song": "Snooze",
+     "artist": "SZA"
+    },
+    {
+     "rank": 4,
+     "song": "Agora Hills",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 5,
+     "song": "Redrum",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 6,
+     "song": "Saturn",
+     "artist": "SZA"
+    },
+    {
+     "rank": 7,
+     "song": "Water",
+     "artist": "Tyla"
+    },
+    {
+     "rank": 8,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 9,
+     "song": "Made For Me",
+     "artist": "Muni Long"
+    },
+    {
+     "rank": 10,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 11,
+     "song": "Never Lose Me",
+     "artist": "Flo Milli"
+    },
+    {
+     "rank": 12,
+     "song": "Like What (Freestyle)",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 13,
+     "song": "Rich Baby Daddy",
+     "artist": "Drake Featuring Sexyy Red & SZA"
+    },
+    {
+     "rank": 14,
+     "song": "Surround Sound",
+     "artist": "JID Featuring 21 Savage & Baby Tate"
+    },
+    {
+     "rank": 15,
+     "song": "Everybody",
+     "artist": "Nicki Minaj Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 16,
+     "song": "FE!N",
+     "artist": "Travis Scott Featuring Playboi Carti"
+    },
+    {
+     "rank": 17,
+     "song": "Yeah Glo!",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 18,
+     "song": "Breathe",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 19,
+     "song": "Get In With Me",
+     "artist": "BossMan Dlow"
+    },
+    {
+     "rank": 20,
+     "song": "You Broke My Heart",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20240312111742/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2024-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Life Is",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 2,
+     "song": "Right Back to It [ft. MJ Lenderman]",
+     "artist": "Waxahatchee"
+    },
+    {
+     "rank": 3,
+     "song": "Oral",
+     "artist": "Björk & Rosalía"
+    },
+    {
+     "rank": 4,
+     "song": "Will Anybody Ever Love Me?",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 5,
+     "song": "I Got Heaven",
+     "artist": "Mannequin Pussy"
+    },
+    {
+     "rank": 6,
+     "song": "Pet Rock",
+     "artist": "L’Rain"
+    },
+    {
+     "rank": 7,
+     "song": "So You Are Tired",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 8,
+     "song": "Bad Idea Right?",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 9,
+     "song": "Knockin",
+     "artist": "MJ Lenderman"
+    },
+    {
+     "rank": 10,
+     "song": "Psychedelic Switch",
+     "artist": "Carly Rae Jepsen"
+    },
+    {
+     "rank": 11,
+     "song": "Vampire Empire",
+     "artist": "Big Thief"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240312023217/https://www.beatport.com/top-100",
+   "captured": "2024-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jamming (FISHER Rework)",
+     "artist": "Bob Marley & The Wailers & FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "Somebody (2024) (Extended Mix)",
+     "artist": "Chris Lake, Gotye, Kimbra, Sante Sansone & FISHER (OZ)"
+    },
+    {
+     "rank": 3,
+     "song": "Sweet Disposition (John Summit & Silver Panda Extended Remix)",
+     "artist": "The Temper Trap"
+    },
+    {
+     "rank": 4,
+     "song": "You & Me (Rivo Extended Mix)",
+     "artist": "Disclosure & Eliza Doolittle"
+    },
+    {
+     "rank": 5,
+     "song": "Behemoth",
+     "artist": "Simula"
+    },
+    {
+     "rank": 6,
+     "song": "Last Night (Extended Mix)",
+     "artist": "Loofy"
+    },
+    {
+     "rank": 7,
+     "song": "It's Not Right But It's Okay (Extended)",
+     "artist": "Mr. Belt & Wezol"
+    },
+    {
+     "rank": 8,
+     "song": "Patadas de Ahogado / LATIN MAFIA (Extended Rework)",
+     "artist": "Hugel"
+    },
+    {
+     "rank": 9,
+     "song": "BEATS FOR THE UNDERGROUND",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 10,
+     "song": "Machete (A.M.C Remix)",
+     "artist": "A.M.C & Sota"
+    },
+    {
+     "rank": 11,
+     "song": "To The Beat",
+     "artist": "Cloonee & Dances"
+    },
+    {
+     "rank": 12,
+     "song": "Shiver (Extended Mix)",
+     "artist": "John Summit & Hayla"
+    },
+    {
+     "rank": 13,
+     "song": "Hey Hey (Jack Back Extended Remix)",
+     "artist": "Dennis Ferrer"
+    },
+    {
+     "rank": 14,
+     "song": "Run (Part 1)",
+     "artist": "Sofia & Mozey"
+    },
+    {
+     "rank": 15,
+     "song": "Baiana",
+     "artist": "Space Motion"
+    },
+    {
+     "rank": 16,
+     "song": "We You (Adam Ten Extended Remix)",
+     "artist": "Super Flu"
+    },
+    {
+     "rank": 17,
+     "song": "Bitch, Don't Kill My Vibe (Extended Mix)",
+     "artist": "Liquid Rose & Trace (UZ)"
+    },
+    {
+     "rank": 18,
+     "song": "When I Push",
+     "artist": "Layton Giordani, Eli Brown & OFFAIAH"
+    },
+    {
+     "rank": 19,
+     "song": "Famax",
+     "artist": "RAFFA GUIDO"
+    },
+    {
+     "rank": 20,
+     "song": "Low Rider (Kyle Watson Remix)",
+     "artist": "War"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240316200251/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2024-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Houdini",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 2,
+     "song": "Yes, And?",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 3,
+     "song": "Training Season",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 4,
+     "song": "Strangers",
+     "artist": "Kenya Grace"
+    },
+    {
+     "rank": 5,
+     "song": "Murder On The Dancefloor",
+     "artist": "Sophie Ellis-Bextor"
+    },
+    {
+     "rank": 6,
+     "song": "Contigo",
+     "artist": "Karol G & Tiesto"
+    },
+    {
+     "rank": 7,
+     "song": "Von Dutch",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 8,
+     "song": "Whatever",
+     "artist": "Kygo With Ava Max"
+    },
+    {
+     "rank": 9,
+     "song": "Lighter",
+     "artist": "Galantis, David Guetta & 5 Seconds Of Summer"
+    },
+    {
+     "rank": 10,
+     "song": "Shiver",
+     "artist": "John Summit & Hayla"
+    },
+    {
+     "rank": 11,
+     "song": "Insane",
+     "artist": "Black Gryph0n & Baasik"
+    },
+    {
+     "rank": 12,
+     "song": "stayinit",
+     "artist": "Fred again.. x Lil Yachty x Overmono"
+    },
+    {
+     "rank": 13,
+     "song": "Lovers In A Past Life",
+     "artist": "Calvin Harris & Rag'n'Bone Man"
+    },
+    {
+     "rank": 14,
+     "song": "My House",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 15,
+     "song": "Smoke It Off!",
+     "artist": "Lumi Athena & jnhygs"
+    },
+    {
+     "rank": 16,
+     "song": "Elovrga",
+     "artist": "Alex Favela x Grupo Marca Registrada x Joaquin Medina"
+    },
+    {
+     "rank": 17,
+     "song": "Dance Alone",
+     "artist": "Sia & Kylie Minogue"
+    },
+    {
+     "rank": 18,
+     "song": "Funked Up",
+     "artist": "xxanteria & isq"
+    },
+    {
+     "rank": 19,
+     "song": "*H+3+POISON*7luCJlo0T6...",
+     "artist": "vyrval"
+    },
+    {
+     "rank": 20,
+     "song": "Dance You Outta My Head",
+     "artist": "Cat Janice"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240314082343/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2024-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Landmines",
+     "artist": "Sum 41"
+    },
+    {
+     "rank": 2,
+     "song": "Beautiful People (Stay High)",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 3,
+     "song": "Neon Pill",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 4,
+     "song": "Dilemma",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 5,
+     "song": "One More Time",
+     "artist": "blink-182"
+    },
+    {
+     "rank": 6,
+     "song": "Overcompensate",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 7,
+     "song": "Friendly Fire",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 8,
+     "song": "Nothing Matters",
+     "artist": "The Last Dinner Party"
+    },
+    {
+     "rank": 9,
+     "song": "Loving You",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 10,
+     "song": "Dark Matter",
+     "artist": "Pearl Jam"
+    },
+    {
+     "rank": 11,
+     "song": "A Symptom Of Being Human",
+     "artist": "Shinedown"
+    },
+    {
+     "rank": 12,
+     "song": "Run Away With Me",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 13,
+     "song": "The Glass",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 14,
+     "song": "Nice To Know You",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 15,
+     "song": "Good People",
+     "artist": "Mumford & Sons & Pharrell Williams"
+    },
+    {
+     "rank": 16,
+     "song": "Mustang",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 17,
+     "song": "The Death Of Peace Of Mind",
+     "artist": "Bad Omens"
+    },
+    {
+     "rank": 18,
+     "song": "Blame Brett",
+     "artist": "The Beaches"
+    },
+    {
+     "rank": 19,
+     "song": "So Much (For) Stardust",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 20,
+     "song": "Murder On The Dancefloor (triple j Like A Version)",
+     "artist": "Royel Otis"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240315051117/https://kworb.net/charts/itunes/us.html",
+   "captured": "2024-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lose Control",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 2,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 3,
+     "song": "GOOD DAY",
+     "artist": "Forrest Frank"
+    },
+    {
+     "rank": 4,
+     "song": "we can't be friends (wait for your love) [string version]",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 5,
+     "song": "TEXAS HOLD 'EM",
+     "artist": "Beyoncé"
+    },
+    {
+     "rank": 6,
+     "song": "What Was I Made For? (From The Motion Picture \"Barbie\")",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 7,
+     "song": "we can't be friends (wait for your love)",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 8,
+     "song": "Lose Control (Live at The Ryman)",
+     "artist": "Teddy Swims & Freak Freely"
+    },
+    {
+     "rank": 9,
+     "song": "we can't be friends (wait for your love)",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 10,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 11,
+     "song": "Lose Control (Piano Version)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 12,
+     "song": "Lose Control (Sped Up)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 13,
+     "song": "Lose Control (Strings Version)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 14,
+     "song": "Lose Control (BBC Radio 1 Live Lounge Session)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 15,
+     "song": "Lose Control (Slowed Down)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 16,
+     "song": "Lose Control (goddard. Remix)",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 17,
+     "song": "Made For Me",
+     "artist": "Muni Long"
+    },
+    {
+     "rank": 18,
+     "song": "Shadow",
+     "artist": "Livingston"
+    },
+    {
+     "rank": 19,
+     "song": "Lose Control (Live)",
+     "artist": "Teddy Swims & Freak Freely"
+    },
+    {
+     "rank": 20,
+     "song": "we can't be friends (wait for your love) [a cappella]",
+     "artist": "Ariana Grande"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,941 @@
+{
+ "month": "2019-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20191216033808/https://www.hotnewhiphop.com/",
+   "captured": "2019-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Gray Area",
+     "artist": "Kaytranada Feat. Mick Jenkins"
+    },
+    {
+     "rank": 2,
+     "song": "Gidget",
+     "artist": "Free Nationals Feat. Anderson .Paak"
+    },
+    {
+     "rank": 3,
+     "song": "Fill The Room Up",
+     "artist": "Smokepurpp Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 4,
+     "song": "Freddy Krueger",
+     "artist": "Rich Homie Quan"
+    },
+    {
+     "rank": 5,
+     "song": "One Second",
+     "artist": "Stormzy Feat. H.E.R."
+    },
+    {
+     "rank": 6,
+     "song": "Ill Advised (Prod. By Alchemist)",
+     "artist": "Boldy James"
+    },
+    {
+     "rank": 7,
+     "song": "Midsection",
+     "artist": "Kaytranada Feat. Pharrell"
+    },
+    {
+     "rank": 8,
+     "song": "Ice Cold",
+     "artist": "K Camp"
+    },
+    {
+     "rank": 9,
+     "song": "Richer Than Ever",
+     "artist": "Fivio Foreign Feat. Rich The Kid"
+    },
+    {
+     "rank": 10,
+     "song": "Juggernaut",
+     "artist": "Yung Mal"
+    },
+    {
+     "rank": 11,
+     "song": "Stay The Night",
+     "artist": "Kyle Dion"
+    },
+    {
+     "rank": 12,
+     "song": "Partys Over",
+     "artist": "Ray J Feat. K. Michelle"
+    },
+    {
+     "rank": 13,
+     "song": "VB Worldwide",
+     "artist": "Van Buren Boys"
+    },
+    {
+     "rank": 14,
+     "song": "WOW!",
+     "artist": "Allan Kingdom"
+    },
+    {
+     "rank": 15,
+     "song": "Futsal Shuffle 2020",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 16,
+     "song": "Go In",
+     "artist": "Lil Tjay"
+    },
+    {
+     "rank": 17,
+     "song": "The Rivington",
+     "artist": "Free Nationals Feat. Conway , Westside Gunn & Joyce Wrice"
+    },
+    {
+     "rank": 18,
+     "song": "Better Late Than Never",
+     "artist": "KXNG CROOKED"
+    },
+    {
+     "rank": 19,
+     "song": "No Days Off",
+     "artist": "Smoke Boys"
+    },
+    {
+     "rank": 20,
+     "song": "Don't Waste My Time",
+     "artist": "Usher Feat. Ella Mai"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191215213224/https://hypem.com/popular",
+   "captured": "2019-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Back To Her",
+     "artist": "STORME"
+    },
+    {
+     "rank": 2,
+     "song": "The Barrel",
+     "artist": "Aldous Harding"
+    },
+    {
+     "rank": 3,
+     "song": "Sweet Release",
+     "artist": "Harry Nathan"
+    },
+    {
+     "rank": 4,
+     "song": "Dream Spectrum",
+     "artist": "Mokhov"
+    },
+    {
+     "rank": 5,
+     "song": "Flirted With You All My Life",
+     "artist": "Vic Chesnutt"
+    },
+    {
+     "rank": 6,
+     "song": "Pra Você Amigo",
+     "artist": "Seu Jorge & Rogê"
+    },
+    {
+     "rank": 7,
+     "song": "Before You Sleep",
+     "artist": "TYSON KRAFT"
+    },
+    {
+     "rank": 8,
+     "song": "Okay",
+     "artist": "sad face."
+    },
+    {
+     "rank": 9,
+     "song": "You're Not Always On My Mind",
+     "artist": "Quivers"
+    },
+    {
+     "rank": 10,
+     "song": "La Plage",
+     "artist": "Bibi Club"
+    },
+    {
+     "rank": 11,
+     "song": "Can I Go On",
+     "artist": "Sleater-Kinney"
+    },
+    {
+     "rank": 12,
+     "song": "Someone To Keep You Warm",
+     "artist": "Alexandria Maillot"
+    },
+    {
+     "rank": 13,
+     "song": "Cross My Mind",
+     "artist": "Joe Hertz"
+    },
+    {
+     "rank": 14,
+     "song": "Stars Are The Light",
+     "artist": "Moon Duo"
+    },
+    {
+     "rank": 15,
+     "song": "Without No Fear",
+     "artist": "Urchin"
+    },
+    {
+     "rank": 16,
+     "song": "Joy",
+     "artist": "Jefre Cantu-Ledesma"
+    },
+    {
+     "rank": 17,
+     "song": "Shy",
+     "artist": "Hether"
+    },
+    {
+     "rank": 18,
+     "song": "Overview Effect 1972 (feat M.I.L.K.)",
+     "artist": "The Geek X VRV & Møme"
+    },
+    {
+     "rank": 19,
+     "song": "YLMD full version",
+     "artist": "HUSSY"
+    },
+    {
+     "rank": 20,
+     "song": "Hold Us Down",
+     "artist": "FYFE"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191204230745/https://www.billboard.com/charts/rap-song",
+   "captured": "2019-12-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Roxanne",
+     "artist": "Arizona Zervas"
+    },
+    {
+     "rank": 2,
+     "song": "Truth Hurts",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 3,
+     "song": "BOP",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 4,
+     "song": "Panini",
+     "artist": "Lil Nas X"
+    },
+    {
+     "rank": 5,
+     "song": "HIGHEST IN THE ROOM",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 6,
+     "song": "Ballin'",
+     "artist": "Mustard Featuring Roddy Ricch"
+    },
+    {
+     "rank": 7,
+     "song": "Hot",
+     "artist": "Young Thug Featuring Gunna"
+    },
+    {
+     "rank": 8,
+     "song": "Woah",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 9,
+     "song": "Ran$om",
+     "artist": "Lil Tecca"
+    },
+    {
+     "rank": 10,
+     "song": "Bandit",
+     "artist": "Juice WRLD & YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 11,
+     "song": "On Chill",
+     "artist": "Wale Featuring Jeremih"
+    },
+    {
+     "rank": 12,
+     "song": "Baby",
+     "artist": "Lil Baby & DaBaby"
+    },
+    {
+     "rank": 13,
+     "song": "Goodbyes",
+     "artist": "Post Malone Featuring Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "Falling",
+     "artist": "Trevor Daniel"
+    },
+    {
+     "rank": 15,
+     "song": "Hot Girl Bummer",
+     "artist": "blackbear"
+    },
+    {
+     "rank": 16,
+     "song": "Time",
+     "artist": "NF"
+    },
+    {
+     "rank": 17,
+     "song": "Money In The Grave",
+     "artist": "Drake Featuring Rick Ross"
+    },
+    {
+     "rank": 18,
+     "song": "Heart On Ice",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 19,
+     "song": "223's",
+     "artist": "YNW Melly & 9lokknine"
+    },
+    {
+     "rank": 20,
+     "song": "Who Needs Love",
+     "artist": "Trippie Redd"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191216093343/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2019-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heartless",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 2,
+     "song": "Good As Hell",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 3,
+     "song": "Roxanne",
+     "artist": "Arizona Zervas"
+    },
+    {
+     "rank": 4,
+     "song": "Blinding Lights",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 5,
+     "song": "BOP",
+     "artist": "DaBaby"
+    },
+    {
+     "rank": 6,
+     "song": "No Guidance",
+     "artist": "Chris Brown Featuring Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Ballin'",
+     "artist": "Mustard Featuring Roddy Ricch"
+    },
+    {
+     "rank": 8,
+     "song": "Panini",
+     "artist": "Lil Nas X"
+    },
+    {
+     "rank": 9,
+     "song": "HIGHEST IN THE ROOM",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 10,
+     "song": "Truth Hurts",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 11,
+     "song": "Hot",
+     "artist": "Young Thug Featuring Gunna"
+    },
+    {
+     "rank": 12,
+     "song": "Woah",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 13,
+     "song": "On Chill",
+     "artist": "Wale Featuring Jeremih"
+    },
+    {
+     "rank": 14,
+     "song": "Bandit",
+     "artist": "Juice WRLD & YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 15,
+     "song": "Falling",
+     "artist": "Trevor Daniel"
+    },
+    {
+     "rank": 16,
+     "song": "Baby",
+     "artist": "Lil Baby & DaBaby"
+    },
+    {
+     "rank": 17,
+     "song": "Playing Games",
+     "artist": "Summer Walker"
+    },
+    {
+     "rank": 18,
+     "song": "Hot Girl Bummer",
+     "artist": "blackbear"
+    },
+    {
+     "rank": 19,
+     "song": "Heat",
+     "artist": "Chris Brown Featuring Gunna"
+    },
+    {
+     "rank": 20,
+     "song": "Juicy",
+     "artist": "Doja Cat & Tyga"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20191216005048/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2019-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bromley",
+     "artist": "Joy Overmono"
+    },
+    {
+     "rank": 2,
+     "song": "Fox",
+     "artist": "Dogleg"
+    },
+    {
+     "rank": 3,
+     "song": "sad day",
+     "artist": "FKA twigs"
+    },
+    {
+     "rank": 4,
+     "song": "Inner Paths (to Outer Space)",
+     "artist": "Blood Incantation"
+    },
+    {
+     "rank": 5,
+     "song": "Ghosteen",
+     "artist": "Nick Cave & the Bad Seeds"
+    },
+    {
+     "rank": 6,
+     "song": "Love Without Possession",
+     "artist": "Mount Eerie & Julie Doiron"
+    },
+    {
+     "rank": 7,
+     "song": "Lark",
+     "artist": "Angel Olsen"
+    },
+    {
+     "rank": 8,
+     "song": "Dirty Laundry",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 9,
+     "song": "The Greatest",
+     "artist": "Lana Del Rey"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191216093336/https://www.billboard.com/charts/country-songs",
+   "captured": "2019-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "10,000 Hours",
+     "artist": "Dan + Shay & Justin Bieber"
+    },
+    {
+     "rank": 2,
+     "song": "One Man Band",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 3,
+     "song": "Even Though I'm Leaving",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 4,
+     "song": "The Bones",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 5,
+     "song": "One Thing Right",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 6,
+     "song": "Remember You Young",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 7,
+     "song": "We Were",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 8,
+     "song": "What If I Never Get Over You",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 9,
+     "song": "Ridin' Roads",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 10,
+     "song": "Heartache Medication",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 11,
+     "song": "Kinfolks",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 12,
+     "song": "We Back",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 13,
+     "song": "Homesick",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 14,
+     "song": "Tip Of My Tongue",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 15,
+     "song": "I Hope",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 16,
+     "song": "homecoming queen?",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 17,
+     "song": "What She Wants Tonight",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 18,
+     "song": "More Hearts Than Mine",
+     "artist": "Ingrid Andress"
+    },
+    {
+     "rank": 19,
+     "song": "Make Me Want To",
+     "artist": "Jimmie Allen"
+    },
+    {
+     "rank": 20,
+     "song": "Heartless",
+     "artist": "Diplo Presents Thomas Wesley Featuring Morgan Wallen"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191211191256/https://www.beatport.com/top-100",
+   "captured": "2019-12-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Move Your Body (Extended Mix)",
+     "artist": "Marshall Jefferson & Solardo"
+    },
+    {
+     "rank": 2,
+     "song": "Jolean (Extended Mix)",
+     "artist": "Claude VonStroke, Green Velvet & Get Real"
+    },
+    {
+     "rank": 3,
+     "song": "Free Your Body",
+     "artist": "Chris Lake & Solardo"
+    },
+    {
+     "rank": 4,
+     "song": "Pour The Milk (Extended Mix)",
+     "artist": "Robbie Doherty & Keees."
+    },
+    {
+     "rank": 5,
+     "song": "Rabbit Hole (Extended Mix)",
+     "artist": "CamelPhat & Jem Cooke"
+    },
+    {
+     "rank": 6,
+     "song": "Soldier (Club Mix)",
+     "artist": "OFFAIAH"
+    },
+    {
+     "rank": 7,
+     "song": "Headnoise (Get Hype) feat. Dope Earth Alien (Extended Mix)",
+     "artist": "Martin Ikin & Dope Earth Alien"
+    },
+    {
+     "rank": 8,
+     "song": "More Life (Extended Mix)",
+     "artist": "Torren Foot"
+    },
+    {
+     "rank": 9,
+     "song": "Hooked (Extended)",
+     "artist": "Martin Ikin"
+    },
+    {
+     "rank": 10,
+     "song": "Managing the Moments",
+     "artist": "UMEK"
+    },
+    {
+     "rank": 11,
+     "song": "Midnight",
+     "artist": "HOSH, 1979 & Jalja"
+    },
+    {
+     "rank": 12,
+     "song": "Plastic Dreams (Nicole Moudaber Renaissance Remix)",
+     "artist": "Jaydee"
+    },
+    {
+     "rank": 13,
+     "song": "Roped In (Extended Mix)",
+     "artist": "Gorgon City"
+    },
+    {
+     "rank": 14,
+     "song": "Don't Call Me Baby (Mousse T. Remix)",
+     "artist": "Madison Avenue"
+    },
+    {
+     "rank": 15,
+     "song": "Turn Me On (Extended)",
+     "artist": "Riton, Oliver Heldens & Vula"
+    },
+    {
+     "rank": 16,
+     "song": "San Frandisco (Extended Mix)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 17,
+     "song": "Lose Control (Extended Mix)",
+     "artist": "Meduza Music"
+    },
+    {
+     "rank": 18,
+     "song": "Galactic Highways",
+     "artist": "ANNA"
+    },
+    {
+     "rank": 19,
+     "song": "Don't Start Now (Purple Disco Machine Remix) [Extended]",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 20,
+     "song": "AC/ID",
+     "artist": "A*S*Y*S & T78"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191212151622/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2019-12-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 2,
+     "song": "RITMO (Bad Boys For Life)",
+     "artist": "The Black Eyed Peas X J Balvin"
+    },
+    {
+     "rank": 3,
+     "song": "Ride It.",
+     "artist": "DJ Regard"
+    },
+    {
+     "rank": 4,
+     "song": "Higher Love",
+     "artist": "Kygo X Whitney Houston"
+    },
+    {
+     "rank": 5,
+     "song": "Good Things Fall Apart",
+     "artist": "Illenium & Jon Bellion"
+    },
+    {
+     "rank": 6,
+     "song": "Que Calor",
+     "artist": "Major Lazer & J Balvin Featuring El Alfa"
+    },
+    {
+     "rank": 7,
+     "song": "Lose Control",
+     "artist": "Meduza x Becky Hill x GOODBOYS"
+    },
+    {
+     "rank": 8,
+     "song": "Takeaway",
+     "artist": "The Chainsmokers & Illenium Featuring Lennon Stella"
+    },
+    {
+     "rank": 9,
+     "song": "Post Malone",
+     "artist": "Sam Feldt Featuring RANI"
+    },
+    {
+     "rank": 10,
+     "song": "Griztronics",
+     "artist": "GRiZ & Subtronics"
+    },
+    {
+     "rank": 11,
+     "song": "Baila Conmigo",
+     "artist": "Dayvi & Victor Cardenas Featuring Kelly Ruiz"
+    },
+    {
+     "rank": 12,
+     "song": "I'm Not Alright",
+     "artist": "Loud Luxury And Bryce Vine"
+    },
+    {
+     "rank": 13,
+     "song": "God Is A Dancer",
+     "artist": "Tiesto & Mabel"
+    },
+    {
+     "rank": 14,
+     "song": "I Feel Love",
+     "artist": "Sam Smith"
+    },
+    {
+     "rank": 15,
+     "song": "Faith",
+     "artist": "Galantis & Dolly Parton Featuring Mr. Probz"
+    },
+    {
+     "rank": 16,
+     "song": "Turn Me On",
+     "artist": "Riton X Oliver Heldens Featuring Vula"
+    },
+    {
+     "rank": 17,
+     "song": "Used To Love",
+     "artist": "Martin Garrix & Dean Lewis"
+    },
+    {
+     "rank": 18,
+     "song": "In Your Arms",
+     "artist": "Illenium & X Ambassadors"
+    },
+    {
+     "rank": 19,
+     "song": "Trouble",
+     "artist": "VASSY"
+    },
+    {
+     "rank": 20,
+     "song": "Body On My",
+     "artist": "Loud Luxury Featuring brando, Pitbull & Nicky Jam"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20191212024219/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2019-12-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Hype",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Orphans",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 3,
+     "song": "Running Up That Hill",
+     "artist": "Meg Myers"
+    },
+    {
+     "rank": 4,
+     "song": "Dissolve",
+     "artist": "Absofacto"
+    },
+    {
+     "rank": 5,
+     "song": "All The Good Girls Go To Hell",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 6,
+     "song": "The End Of The Game",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 7,
+     "song": "Might Be Right",
+     "artist": "White Reaper"
+    },
+    {
+     "rank": 8,
+     "song": "Trampoline",
+     "artist": "SHAED"
+    },
+    {
+     "rank": 9,
+     "song": "When Am I Gonna Lose You",
+     "artist": "Local Natives"
+    },
+    {
+     "rank": 10,
+     "song": "10/10",
+     "artist": "Rex Orange County"
+    },
+    {
+     "rank": 11,
+     "song": "Doin' Time",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 12,
+     "song": "2all",
+     "artist": "Catfish And The Bottlemen"
+    },
+    {
+     "rank": 13,
+     "song": "Dance Monkey",
+     "artist": "Tones And I"
+    },
+    {
+     "rank": 14,
+     "song": "Novocaine",
+     "artist": "The Unlikely Candidates"
+    },
+    {
+     "rank": 15,
+     "song": "16",
+     "artist": "Highly Suspect"
+    },
+    {
+     "rank": 16,
+     "song": "Blind Leading The Blind",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 17,
+     "song": "The Best",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 18,
+     "song": "I Really Wish I Hated You",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 19,
+     "song": "Dear Future Self (Hands Up)",
+     "artist": "Fall Out Boy Featuring Wyclef Jean"
+    },
+    {
+     "rank": 20,
+     "song": "Father Of All...",
+     "artist": "Green Day"
+    }
+   ]
+  }
+ ]
+}

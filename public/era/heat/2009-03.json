@@ -1,0 +1,406 @@
+{
+ "month": "2009-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090303212906/http://www.hotnewhiphop.com:80/",
+   "captured": "2009-03-03",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sky Might Fall (Prod By Kanye West)",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 2,
+     "song": "Take the Pain (Prod By L.E.S.)",
+     "artist": "Schoolboy Q"
+    },
+    {
+     "rank": 3,
+     "song": "Next To Blow (Feat Sel Davis)",
+     "artist": "Stage"
+    },
+    {
+     "rank": 4,
+     "song": "Turnin Me On (Official Remix) (Prod. By Polow Da Don)",
+     "artist": "Keri Hilson Ft. T-Pain & Lil' Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "Keep Winning",
+     "artist": "Archie Eversole Ft. Ray Lavender"
+    },
+    {
+     "rank": 6,
+     "song": "Whole Thang (Prod. By King David)",
+     "artist": "Darryl J Ft. Young Buck"
+    },
+    {
+     "rank": 7,
+     "song": "Turn My Swag On (Remix)",
+     "artist": "Soulja Boy Ft. Busta Rhymes"
+    },
+    {
+     "rank": 8,
+     "song": "Mind On My Money",
+     "artist": "Brinx Ft. Busta Rhymes"
+    },
+    {
+     "rank": 9,
+     "song": "If You Were My Girlfriend",
+     "artist": "Frankie J"
+    },
+    {
+     "rank": 10,
+     "song": "Lights Go Out",
+     "artist": "J. Holiday"
+    },
+    {
+     "rank": 11,
+     "song": "Grand Royal (Prod. By DJ Premier)",
+     "artist": "Capone-N-Norega"
+    },
+    {
+     "rank": 12,
+     "song": "Lemme Luv U Girl",
+     "artist": "Day26"
+    },
+    {
+     "rank": 13,
+     "song": "Monster",
+     "artist": "Ya Boy, Cik.Money, Roscoe, Y.Faze, Rio Banga, Laps"
+    },
+    {
+     "rank": 14,
+     "song": "Pants Sagg (Prod. By Scoop DeVille)",
+     "artist": "Ya Boy"
+    },
+    {
+     "rank": 15,
+     "song": "Whatcha Lookin At",
+     "artist": "The Finest Ft. Max B & Wiz Khalifa"
+    },
+    {
+     "rank": 16,
+     "song": "Hey Girl (Snippet)",
+     "artist": "Keri Hilson Ft. T-Pain & Lil' Jon"
+    },
+    {
+     "rank": 17,
+     "song": "Turning Me On (Remix)",
+     "artist": "Keri Hilson & Lil Wayne Ft. Rosco"
+    },
+    {
+     "rank": 18,
+     "song": "Stick Up Muzic",
+     "artist": "Raekwon Ft. Busta Rhymes & Uncle Murda"
+    },
+    {
+     "rank": 19,
+     "song": "Young Mula Freestyle",
+     "artist": "Lil' Twist"
+    },
+    {
+     "rank": 20,
+     "song": "Jumpin In My Bag",
+     "artist": "Cassidy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090316213554/http://hypem.com:80/popular",
+   "captured": "2009-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Paper Planes - Remix For The Children by Adrock",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 2,
+     "song": "Girlfriend",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 3,
+     "song": "Stand Up For Me, Myself and I",
+     "artist": "Don Diablo vs De la Soul"
+    },
+    {
+     "rank": 4,
+     "song": "Lisztomania",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 5,
+     "song": "Part of Me (LA Riots Remix)",
+     "artist": "Chris Cornell feat. Timbaland"
+    },
+    {
+     "rank": 6,
+     "song": "Heads Up - The Bloody Beetroot",
+     "artist": "Sound Of Stereo"
+    },
+    {
+     "rank": 7,
+     "song": "Knocked Up (Rodeo Mash Up)",
+     "artist": "Kings Of Leon Vs. Lykke Li"
+    },
+    {
+     "rank": 8,
+     "song": "Clap Song (Bonus Track)",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 9,
+     "song": "Lay It Down (the Golden Filter Remix)",
+     "artist": "Peter Bjorn & John"
+    },
+    {
+     "rank": 10,
+     "song": "In For The Kill (Skream's Let's Get Ravey Mix)",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 11,
+     "song": "Zero",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 12,
+     "song": "Dat New New (VIKING Remix)",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 13,
+     "song": "Vision One",
+     "artist": "Royksopp"
+    },
+    {
+     "rank": 14,
+     "song": "Dancing Box (Sleeparchive rmx)",
+     "artist": "Modeselektor"
+    },
+    {
+     "rank": 15,
+     "song": "Love Lockdown (LMFAO Remix)",
+     "artist": "Kanye West & LMFAO"
+    },
+    {
+     "rank": 16,
+     "song": "New In Town (Fred Falke Remix Vocal)",
+     "artist": "Little Boots"
+    },
+    {
+     "rank": 17,
+     "song": "Mo Money Mo Problems (Laidback Luke Bootleg)",
+     "artist": "Notorious BIG (ft. Puff Daddy & Mase)"
+    },
+    {
+     "rank": 18,
+     "song": "Univorn vs. Gravity",
+     "artist": "Girl Talk"
+    },
+    {
+     "rank": 19,
+     "song": "Out There on the Ice",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 20,
+     "song": "More (Prod. Simian Mobile Disco)",
+     "artist": "Peaches"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090317203402/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2009-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Skeletons",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 2,
+     "song": "1901",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 3,
+     "song": "Glass",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 4,
+     "song": "Young Hearts Spark Fire",
+     "artist": "Japandroids"
+    },
+    {
+     "rank": 5,
+     "song": "Wind Phoenix",
+     "artist": "Cymbals Eat Guitars"
+    },
+    {
+     "rank": 6,
+     "song": "My Girls",
+     "artist": "Animal Collective"
+    },
+    {
+     "rank": 7,
+     "song": "The Breeze/My Baby Cries\" (Kath Bloom cover)",
+     "artist": "Bill Callahan"
+    },
+    {
+     "rank": 8,
+     "song": "Black Lake",
+     "artist": "Real Estate"
+    },
+    {
+     "rank": 9,
+     "song": "Sunlight",
+     "artist": "tUnE-yArDs"
+    },
+    {
+     "rank": 10,
+     "song": "Knotty Pine",
+     "artist": "Dirty Projectors"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090315171244/http://2dopeboyz.com:80/",
+   "captured": "2009-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "My Crew [Radio Rip]",
+     "artist": "Saigon"
+    },
+    {
+     "rank": 2,
+     "song": "It’s A Wrap",
+     "artist": "$hamrock"
+    },
+    {
+     "rank": 3,
+     "song": "Remember The Times [NoDJ]",
+     "artist": "Fashawn"
+    },
+    {
+     "rank": 4,
+     "song": "Radio",
+     "artist": "Lloyd Banks"
+    },
+    {
+     "rank": 5,
+     "song": "Chinatown Wars (Original x Remix) [Full/CDQ]",
+     "artist": "Ghostface Killa & DOOM"
+    },
+    {
+     "rank": 6,
+     "song": "In My Sleep",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 7,
+     "song": "Goon Music f. Beanie Sigel, French Montana, Scarlet O’Harlem & Mac Mustard",
+     "artist": "Max B"
+    },
+    {
+     "rank": 8,
+     "song": "One f. Akon",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 9,
+     "song": "I Run (rmx) f. Chamillionaire & Z-Ro",
+     "artist": "Slim Thug"
+    },
+    {
+     "rank": 10,
+     "song": "Chinatown Wars [Full/Radio Rip]",
+     "artist": "Ghostface Killah & DOOM"
+    },
+    {
+     "rank": 11,
+     "song": "Lyricist Lounge",
+     "artist": "Bermuda Triangle"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090316003134/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Crowd Participation",
+     "artist": "Japanese Cartoon (Lupe Fiasco's Project)"
+    },
+    {
+     "rank": 2,
+     "song": "Batty Boyz",
+     "artist": "DOOM"
+    },
+    {
+     "rank": 3,
+     "song": "Prom Queen (Russ Castella Remix)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Chinatown Wars (Original + Remix)",
+     "artist": "Ghostface Killah & DOOM"
+    },
+    {
+     "rank": 5,
+     "song": "Bang",
+     "artist": "Rye Rye ft. M.I.A."
+    },
+    {
+     "rank": 6,
+     "song": "No You Girls",
+     "artist": "Franz Ferdinand"
+    },
+    {
+     "rank": 7,
+     "song": "Rome\" and \"Armistice",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 8,
+     "song": "Faces",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 9,
+     "song": "New In Town",
+     "artist": "Little Boots"
+    }
+   ]
+  }
+ ]
+}

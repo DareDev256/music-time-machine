@@ -1,0 +1,181 @@
+{
+ "month": "2008-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20081014162452/http://hypem.com:80/popular",
+   "captured": "2008-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Take Me Out (Daft Punk Remix)",
+     "artist": "Franz Ferdinand"
+    },
+    {
+     "rank": 2,
+     "song": "The Gloaming (DJ Shadow Remix)",
+     "artist": "Radiohead & George W. Bush"
+    },
+    {
+     "rank": 3,
+     "song": "Of Moons Birds and Monsters (Holy Ghost! Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 4,
+     "song": "Kids (Soulwax Nite Version)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 5,
+     "song": "Single Ladies (Put a Ring on It)",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 6,
+     "song": "Womanizer (The Teenagers Remix)",
+     "artist": "Britney Spears"
+    },
+    {
+     "rank": 7,
+     "song": "Steroids (ft. Uffie)",
+     "artist": "Mr. Oizo"
+    },
+    {
+     "rank": 8,
+     "song": "Music Sounds Better 2008 (DiscoTech Remix)",
+     "artist": "Stardust"
+    },
+    {
+     "rank": 9,
+     "song": "Crimewave (LA Riots Remix)",
+     "artist": "Crystal Castles Vs. HEALTH"
+    },
+    {
+     "rank": 10,
+     "song": "Breaking It Up (Punks Jump Up)",
+     "artist": "Lykke Li"
+    },
+    {
+     "rank": 11,
+     "song": "Baby I'm Yours",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 12,
+     "song": "I'm A Lady (Diplo Mix Ft Amanda Blank)",
+     "artist": "Santogold"
+    },
+    {
+     "rank": 13,
+     "song": "If I Were A Boy",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 14,
+     "song": "Genesis",
+     "artist": "Justice"
+    },
+    {
+     "rank": 15,
+     "song": "Boyz (Hatchmatik Remix) BEAT INTRO",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 16,
+     "song": "Swagger Like Us Feat Jay-Z, Lil Wayne & Kanye West",
+     "artist": "T.I."
+    },
+    {
+     "rank": 17,
+     "song": "Two Takes It",
+     "artist": "Mr. Oizo"
+    },
+    {
+     "rank": 18,
+     "song": "BMF, What It Is",
+     "artist": "Sophia Fresh feat. Kanye West"
+    },
+    {
+     "rank": 19,
+     "song": "Human",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 20,
+     "song": "Stronger (Mano remix)",
+     "artist": "Kanye West"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20081014164342/http://2dopeboyz.com:80/",
+   "captured": "2008-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Slaughterhouse f. Royce Da 5′9″, Crooked I, Nino Bless & Joell Ortiz",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 2,
+     "song": "Move",
+     "artist": "Q-Tip"
+    },
+    {
+     "rank": 3,
+     "song": "Can You Help Me",
+     "artist": "Gillie Da Kid"
+    },
+    {
+     "rank": 4,
+     "song": "I’m So Paid f. Lil Wayne & Young Jeezy",
+     "artist": "Akon"
+    },
+    {
+     "rank": 5,
+     "song": "Go Hard (Behind The Scenes Video)",
+     "artist": "DJ Khaled x T-Pain x Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "Monday Morning Quarterback",
+     "artist": "BK Cyph"
+    },
+    {
+     "rank": 7,
+     "song": "R.E.S.T.A.R.T. (Universal Mind Control Redux)",
+     "artist": "Che Grand"
+    },
+    {
+     "rank": 8,
+     "song": "Get Over It",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "All My Life f. Lil Wayne",
+     "artist": "Jay Rock"
+    },
+    {
+     "rank": 10,
+     "song": "Mrs. Officer/Comfortable Video Shoot",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 11,
+     "song": "Single Ladies (Put a Ring On It)",
+     "artist": "Beyonce"
+    }
+   ]
+  }
+ ]
+}

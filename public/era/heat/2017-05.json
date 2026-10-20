@@ -1,0 +1,1006 @@
+{
+ "month": "2017-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170518201811/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2017-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get Mine",
+     "artist": "Bryson Tiller Feat. Young Thug"
+    },
+    {
+     "rank": 2,
+     "song": "Green & Purple",
+     "artist": "Travis Scott Feat. Playboi Carti"
+    },
+    {
+     "rank": 3,
+     "song": "Honey",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 4,
+     "song": "Butterfly Effect (Prod. By Murda Beatz)",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 5,
+     "song": "RAF (Radio Rip)",
+     "artist": "A$AP Rocky Feat. Frank Ocean"
+    },
+    {
+     "rank": 6,
+     "song": "A Man",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 7,
+     "song": "Die Young",
+     "artist": "Chris Brown Feat. Nas"
+    },
+    {
+     "rank": 8,
+     "song": "Rollin",
+     "artist": "Calvin Harris Feat. Future"
+    },
+    {
+     "rank": 9,
+     "song": "Bank Roll",
+     "artist": "Diplo Feat. Justin Bieber"
+    },
+    {
+     "rank": 10,
+     "song": "Paper Over Here",
+     "artist": "Quavo"
+    },
+    {
+     "rank": 11,
+     "song": "Outlet (Prod. By Vinylz & SoundsbyCT)",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 12,
+     "song": "Somethin Tells Me",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 13,
+     "song": "Backboard (Prod. By Maaly Raw & Murda Beatz)",
+     "artist": "Meek Mill Feat. Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "Leanin'",
+     "artist": "Juicy J Feat. Chris Brown"
+    },
+    {
+     "rank": 15,
+     "song": "E.T.",
+     "artist": "B.o.B Feat. Lil Wayne"
+    },
+    {
+     "rank": 16,
+     "song": "looking for a star (CANT GET YOU OUT OF MY HEAD) (Prod. By Diplo)",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 17,
+     "song": "Passit (Passion Fruit Weedmix)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 18,
+     "song": "I'm The One",
+     "artist": "DJ Khaled Feat. Justin Bieber"
+    },
+    {
+     "rank": 19,
+     "song": "Army Green & Navy Blue",
+     "artist": "Juicy J Feat. Lil Wayne"
+    },
+    {
+     "rank": 20,
+     "song": "Free Blac Youngtsa",
+     "artist": "Young Thug"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170515200653/http://hypem.com:80/popular",
+   "captured": "2017-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Life Story",
+     "artist": "Ólafur Arnalds & Nils Frahm"
+    },
+    {
+     "rank": 2,
+     "song": "Solo Louis Futon Flip",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 3,
+     "song": "Ocean City",
+     "artist": "Pacific Coliseum"
+    },
+    {
+     "rank": 4,
+     "song": "In And Out Of Love",
+     "artist": "Vera"
+    },
+    {
+     "rank": 5,
+     "song": "A Woman",
+     "artist": "saib."
+    },
+    {
+     "rank": 6,
+     "song": "Holla",
+     "artist": "LANKS"
+    },
+    {
+     "rank": 7,
+     "song": "Closer",
+     "artist": "POWERS"
+    },
+    {
+     "rank": 8,
+     "song": "Systematic Feat. Nas",
+     "artist": "DJ Shadow"
+    },
+    {
+     "rank": 9,
+     "song": "Dream You Up",
+     "artist": "PLGRMS"
+    },
+    {
+     "rank": 10,
+     "song": "You Don't Know About Me",
+     "artist": "Ella Vos"
+    },
+    {
+     "rank": 11,
+     "song": "OLYMP",
+     "artist": "Lia Lia"
+    },
+    {
+     "rank": 12,
+     "song": "Heartlines feat. Meadowlark",
+     "artist": "EMBRZ"
+    },
+    {
+     "rank": 13,
+     "song": "The Nile (feat. Rae Morris)",
+     "artist": "Sivu"
+    },
+    {
+     "rank": 14,
+     "song": "Kool Aid",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 15,
+     "song": "Keep Running",
+     "artist": "Tei Shi"
+    },
+    {
+     "rank": 16,
+     "song": "Swimming",
+     "artist": "Furniteur"
+    },
+    {
+     "rank": 17,
+     "song": "Everytime I See The Light",
+     "artist": "Peaking Lights"
+    },
+    {
+     "rank": 18,
+     "song": "You Used To Hold Me Kastra Remix",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 19,
+     "song": "Be Happy The White Panda Remix",
+     "artist": "FRND"
+    },
+    {
+     "rank": 20,
+     "song": "Pills",
+     "artist": "Yung"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170515152959/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2017-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm The One",
+     "artist": "DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 4,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 5,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 6,
+     "song": "DNA.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 7,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 8,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 9,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 10,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 11,
+     "song": "Swang",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 12,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 13,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 14,
+     "song": "Both",
+     "artist": "Gucci Mane Featuring Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 16,
+     "song": "Love.",
+     "artist": "Kendrick Lamar Featuring Zacari"
+    },
+    {
+     "rank": 17,
+     "song": "Look At Me!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 18,
+     "song": "Drowning",
+     "artist": "A Boogie Wit da Hoodie Featuring Kodak Black"
+    },
+    {
+     "rank": 19,
+     "song": "Loyalty.",
+     "artist": "Kendrick Lamar Featuring Rihanna"
+    },
+    {
+     "rank": 20,
+     "song": "Element.",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170516113548/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2017-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 2,
+     "song": "I'm The One",
+     "artist": "DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 5,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 6,
+     "song": "iSpy",
+     "artist": "KYLE Featuring Lil Yachty"
+    },
+    {
+     "rank": 7,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 8,
+     "song": "DNA.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 9,
+     "song": "Location",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 10,
+     "song": "Passionfruit",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 12,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 13,
+     "song": "Swang",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 14,
+     "song": "Slide",
+     "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+    },
+    {
+     "rank": 15,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 16,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 17,
+     "song": "24K Magic",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 18,
+     "song": "Redbone",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 19,
+     "song": "Both",
+     "artist": "Gucci Mane Featuring Drake"
+    },
+    {
+     "rank": 20,
+     "song": "I Feel It Coming",
+     "artist": "The Weeknd Featuring Daft Punk"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170516075421/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2017-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "If You're Here",
+     "artist": "Cornelius"
+    },
+    {
+     "rank": 2,
+     "song": "Close But Not Quite [ft. Sampha]",
+     "artist": "Everything Is Recorded"
+    },
+    {
+     "rank": 3,
+     "song": "Fool’s Errand",
+     "artist": "Fleet Foxes"
+    },
+    {
+     "rank": 4,
+     "song": "The System Only Dreams in Total Darkness",
+     "artist": "The National"
+    },
+    {
+     "rank": 5,
+     "song": "Call the Police/American Dream",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 6,
+     "song": "Want You Back",
+     "artist": "Haim"
+    },
+    {
+     "rank": 7,
+     "song": "World A",
+     "artist": "DJ Sports"
+    },
+    {
+     "rank": 8,
+     "song": "One More Love Song",
+     "artist": "Mac DeMarco"
+    },
+    {
+     "rank": 9,
+     "song": "Shine a Light [ft. Thaddillac]",
+     "artist": "Shabazz Palaces"
+    },
+    {
+     "rank": 10,
+     "song": "J-Boy",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 11,
+     "song": "Thinking of a Place",
+     "artist": "The War on Drugs"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170515190036/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2017-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 2,
+     "song": "In Case You Didn't Know",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 3,
+     "song": "Hurricane",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 4,
+     "song": "The Fighter",
+     "artist": "Keith Urban Featuring Carrie Underwood"
+    },
+    {
+     "rank": 5,
+     "song": "Dirt On My Boots",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 6,
+     "song": "Black",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 7,
+     "song": "Hometown Girl",
+     "artist": "Josh Turner"
+    },
+    {
+     "rank": 8,
+     "song": "If I Told You",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 9,
+     "song": "Yeah Boy",
+     "artist": "Kelsea Ballerini"
+    },
+    {
+     "rank": 10,
+     "song": "The Weekend",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 11,
+     "song": "God, Your Mama, And Me",
+     "artist": "Florida Georgia Line Featuring Backstreet Boys"
+    },
+    {
+     "rank": 12,
+     "song": "Any Ol' Barstool",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 13,
+     "song": "How Not To",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 14,
+     "song": "Craving You",
+     "artist": "Thomas Rhett Featuring Maren Morris"
+    },
+    {
+     "rank": 15,
+     "song": "My Girl",
+     "artist": "Dylan Scott"
+    },
+    {
+     "rank": 16,
+     "song": "You Look Good",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 17,
+     "song": "Flatliner",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 18,
+     "song": "Every Time I Hear That Song",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 19,
+     "song": "Drinkin' Problem",
+     "artist": "Midland"
+    },
+    {
+     "rank": 20,
+     "song": "Yours If You Want It",
+     "artist": "Rascal Flatts"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170517050308/https://www.beatport.com/top-100",
+   "captured": "2017-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hangin' Out With Charlie",
+     "artist": "CamelPhat"
+    },
+    {
+     "rank": 2,
+     "song": "Tarantula (7 Year Itch Rework)",
+     "artist": "Pleasurekraft"
+    },
+    {
+     "rank": 3,
+     "song": "Mad",
+     "artist": "Dennis Cruz"
+    },
+    {
+     "rank": 4,
+     "song": "Out Of Time",
+     "artist": "Sasha & Poliça"
+    },
+    {
+     "rank": 5,
+     "song": "Deep Musique (Rampa Remix)",
+     "artist": "Osunlade & Pastaboys"
+    },
+    {
+     "rank": 6,
+     "song": "Halcyon",
+     "artist": "Dee Montero"
+    },
+    {
+     "rank": 7,
+     "song": "The First Time",
+     "artist": "Bontan"
+    },
+    {
+     "rank": 8,
+     "song": "BOOM (Extended Mix)",
+     "artist": "Tiesto & Sevenn"
+    },
+    {
+     "rank": 9,
+     "song": "Children (Dream Version) (Remastered)",
+     "artist": "Robert Miles"
+    },
+    {
+     "rank": 10,
+     "song": "Glutes",
+     "artist": "Patrice Baumel"
+    },
+    {
+     "rank": 11,
+     "song": "Love's Gonna Get You (Extended Mix)",
+     "artist": "Fedde Le Grand & D.O.D"
+    },
+    {
+     "rank": 12,
+     "song": "The Drums (Din Daa Daa) (feat. George Kranz)",
+     "artist": "Claptone"
+    },
+    {
+     "rank": 13,
+     "song": "Karma",
+     "artist": "H.O.S.H."
+    },
+    {
+     "rank": 14,
+     "song": "Call You Back",
+     "artist": "Josh Butler & Bontan"
+    },
+    {
+     "rank": 15,
+     "song": "Don't Hurt feat. Brezy (Extended Mix)",
+     "artist": "Mike Williams & Brezy"
+    },
+    {
+     "rank": 16,
+     "song": "Follow You Down (Oliver Schories Remix)",
+     "artist": "Just Her"
+    },
+    {
+     "rank": 17,
+     "song": "Evolve or Die",
+     "artist": "Hot Since 82"
+    },
+    {
+     "rank": 18,
+     "song": "Cultural Decline (Extended Mix)",
+     "artist": "ANOTR"
+    },
+    {
+     "rank": 19,
+     "song": "Found You (Make Me Yours) (Extended Mix)",
+     "artist": "Throttle"
+    },
+    {
+     "rank": 20,
+     "song": "Down (Franky Rizardo Extended Remix)",
+     "artist": "Marian Hill"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170515150159/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2017-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 2,
+     "song": "It Ain't Me",
+     "artist": "Kygo x Selena Gomez"
+    },
+    {
+     "rank": 3,
+     "song": "Stay",
+     "artist": "Zedd & Alessia Cara"
+    },
+    {
+     "rank": 4,
+     "song": "Rockabye",
+     "artist": "Clean Bandit Featuring Sean Paul & Anne-Marie"
+    },
+    {
+     "rank": 5,
+     "song": "Closer",
+     "artist": "The Chainsmokers Featuring Halsey"
+    },
+    {
+     "rank": 6,
+     "song": "Paris",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 7,
+     "song": "Slide",
+     "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+    },
+    {
+     "rank": 8,
+     "song": "Let Me Love You",
+     "artist": "DJ Snake Featuring Justin Bieber"
+    },
+    {
+     "rank": 9,
+     "song": "First Time",
+     "artist": "Kygo & Ellie Goulding"
+    },
+    {
+     "rank": 10,
+     "song": "Scared To Be Lonely",
+     "artist": "Martin Garrix & Dua Lipa"
+    },
+    {
+     "rank": 11,
+     "song": "Call On Me",
+     "artist": "Starley"
+    },
+    {
+     "rank": 12,
+     "song": "No Promises",
+     "artist": "Cheat Codes Featuring Demi Lovato"
+    },
+    {
+     "rank": 13,
+     "song": "Symphony",
+     "artist": "Clean Bandit Featuring Zara Larsson"
+    },
+    {
+     "rank": 14,
+     "song": "You Don't Know Me",
+     "artist": "Jax Jones Featuring RAYE"
+    },
+    {
+     "rank": 15,
+     "song": "I Love You",
+     "artist": "Axwell & Ingrosso Featuring Kid Ink"
+    },
+    {
+     "rank": 16,
+     "song": "Run Up",
+     "artist": "Major Lazer Featuring PARTYNEXTDOOR & Nicki Minaj"
+    },
+    {
+     "rank": 17,
+     "song": "Andromeda",
+     "artist": "Gorillaz Featuring D.R.A.M."
+    },
+    {
+     "rank": 18,
+     "song": "The One",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 19,
+     "song": "Break Up Every Night",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 20,
+     "song": "Shooting Stars",
+     "artist": "Bag Raiders"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170515153942/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2017-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wish I Knew You",
+     "artist": "The Revivalists"
+    },
+    {
+     "rank": 2,
+     "song": "Believer",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Love Is Mystical",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 4,
+     "song": "Blame",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 5,
+     "song": "Cold Cold Cold",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 6,
+     "song": "Feel It Still",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 7,
+     "song": "Sweet Disaster",
+     "artist": "DREAMERS"
+    },
+    {
+     "rank": 8,
+     "song": "Human",
+     "artist": "Rag'n'Bone Man"
+    },
+    {
+     "rank": 9,
+     "song": "High",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 10,
+     "song": "Green Light",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Take The Money",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 12,
+     "song": "Middle Fingers",
+     "artist": "MISSIO"
+    },
+    {
+     "rank": 13,
+     "song": "Take It All Back",
+     "artist": "Judah & The Lion"
+    },
+    {
+     "rank": 14,
+     "song": "Reverend",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 15,
+     "song": "Feels Like Summer",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 16,
+     "song": "In Cold Blood",
+     "artist": "alt-J"
+    },
+    {
+     "rank": 17,
+     "song": "One Of Us",
+     "artist": "New Politics"
+    },
+    {
+     "rank": 18,
+     "song": "Hard Times",
+     "artist": "Paramore"
+    },
+    {
+     "rank": 19,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 20,
+     "song": "Too Much To Think",
+     "artist": "311"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170520173101/http://2dopeboyz.com/",
+   "captured": "2017-05-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Self M.Ade",
+     "artist": "Young M.A"
+    },
+    {
+     "rank": 2,
+     "song": "Bodybag Mentality",
+     "artist": "Vic Spencer"
+    },
+    {
+     "rank": 3,
+     "song": "Stay",
+     "artist": "Goapele feat. BJ The Chicago Kid"
+    },
+    {
+     "rank": 4,
+     "song": "BADSIDE",
+     "artist": "BIA"
+    },
+    {
+     "rank": 5,
+     "song": "Rider",
+     "artist": "Phora"
+    },
+    {
+     "rank": 6,
+     "song": "Sacrifices",
+     "artist": "Big Sean feat. Migos"
+    },
+    {
+     "rank": 7,
+     "song": "Quitting",
+     "artist": "Khary feat. Latrell James"
+    },
+    {
+     "rank": 8,
+     "song": "When I Die",
+     "artist": "Jay Prince"
+    },
+    {
+     "rank": 9,
+     "song": "Catch It",
+     "artist": "Tee Grizzley"
+    }
+   ]
+  }
+ ]
+}

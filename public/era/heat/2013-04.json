@@ -111,6 +111,151 @@
      "artist": "Innocent?"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130414034330/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Seer",
+     "artist": "Jenny Hval"
+    },
+    {
+     "rank": 2,
+     "song": "Overgrown",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 3,
+     "song": "Acrylics",
+     "artist": "TNGHT"
+    },
+    {
+     "rank": 4,
+     "song": "Monomania",
+     "artist": "Deerhunter"
+    },
+    {
+     "rank": 5,
+     "song": "God Made the World",
+     "artist": "Cold Cave"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130404175242/http://www.billboard.com/charts/country-songs",
+   "captured": "2013-04-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wagon Wheel",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 2,
+     "song": "Sure Be Cool If You Did",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 3,
+     "song": "Downtown",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 4,
+     "song": "Mama's Broken Heart",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 5,
+     "song": "Get Your Shine On",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 6,
+     "song": "I Drive Your Truck",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 7,
+     "song": "If I Didn't Have You",
+     "artist": "Thompson Square"
+    },
+    {
+     "rank": 8,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 9,
+     "song": "Pirate Flag",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 10,
+     "song": "Somebody's Heartbreak",
+     "artist": "Hunter Hayes"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130420043627/http://pigeonsandplanes.com/",
+   "captured": "2013-04-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pollen",
+     "artist": "YellowStraps & Le Motel"
+    },
+    {
+     "rank": 2,
+     "song": "Black Satin Living Room",
+     "artist": "SAFE"
+    },
+    {
+     "rank": 3,
+     "song": "You & Me",
+     "artist": "Disclosure ft. Eliza Doolittle"
+    },
+    {
+     "rank": 4,
+     "song": "How Many Drinks? (Remix)",
+     "artist": "Miguel ft. Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Bloodflows",
+     "artist": "SOHN"
+    },
+    {
+     "rank": 6,
+     "song": "Late Night (Koreless Remix)",
+     "artist": "Foals"
+    },
+    {
+     "rank": 7,
+     "song": "Beaches",
+     "artist": "Tideup"
+    },
+    {
+     "rank": 8,
+     "song": "Black Velvet",
+     "artist": "Nacho Picasso & Avatar Darko"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,671 @@
+{
+ "month": "2025-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250810132017/https://hypem.com/popular",
+   "captured": "2025-08-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "It's You I'm Thinking Of",
+     "artist": "Sally Dige"
+    },
+    {
+     "rank": 2,
+     "song": "Not Checkers",
+     "artist": "Laurence Guy"
+    },
+    {
+     "rank": 3,
+     "song": "Don't Wanna Wait",
+     "artist": "Laurence Guy"
+    },
+    {
+     "rank": 4,
+     "song": "Comafields",
+     "artist": "Burial"
+    },
+    {
+     "rank": 5,
+     "song": "stay close by",
+     "artist": "Tamar Berk"
+    },
+    {
+     "rank": 6,
+     "song": "Always Calling",
+     "artist": "Packaging"
+    },
+    {
+     "rank": 7,
+     "song": "Pierced.",
+     "artist": "Jouska"
+    },
+    {
+     "rank": 8,
+     "song": "Moodified",
+     "artist": "rRoxymore"
+    },
+    {
+     "rank": 9,
+     "song": "Take This Heart And Lock It Up",
+     "artist": "Murry Hammond"
+    },
+    {
+     "rank": 10,
+     "song": "Cinnamon",
+     "artist": "Band of Muses"
+    },
+    {
+     "rank": 11,
+     "song": "Sag",
+     "artist": "Tiberius"
+    },
+    {
+     "rank": 12,
+     "song": "As Far As You Know (feat. alyorra) (prod. 1rokit & Rexiroh)",
+     "artist": "Corey Lingo"
+    },
+    {
+     "rank": 13,
+     "song": "De Laatste Rit",
+     "artist": "Ghost Assembly feat. Oliver Cross"
+    },
+    {
+     "rank": 14,
+     "song": "Heaven",
+     "artist": "Toro y Moi"
+    },
+    {
+     "rank": 15,
+     "song": "Dog Days",
+     "artist": "ovrkast."
+    },
+    {
+     "rank": 16,
+     "song": "Walk Into My Life",
+     "artist": "Future Gods"
+    },
+    {
+     "rank": 17,
+     "song": "contraband (the plug has bags of me)",
+     "artist": "Open Mike Eagle"
+    },
+    {
+     "rank": 18,
+     "song": "Love Letter",
+     "artist": "Woody & Jeremy"
+    },
+    {
+     "rank": 19,
+     "song": "Inept Apollo",
+     "artist": "Nation of Language"
+    },
+    {
+     "rank": 20,
+     "song": "Waxcap",
+     "artist": "Djrum"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250816190731/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2025-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mutt",
+     "artist": "Leon Thomas"
+    },
+    {
+     "rank": 2,
+     "song": "Shake It To The Max (Fly)",
+     "artist": "MOLIY, Silent Addy, Skillibeng & Shenseea"
+    },
+    {
+     "rank": 3,
+     "song": "Whim Whamiee",
+     "artist": "PLUTO & YKNIECE"
+    },
+    {
+     "rank": 4,
+     "song": "Blow My High",
+     "artist": "Dee Mula"
+    },
+    {
+     "rank": 5,
+     "song": "Put It ONG",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 6,
+     "song": "Went West",
+     "artist": "BabyChiefDoit"
+    },
+    {
+     "rank": 7,
+     "song": "Cant Go Broke (Remix)",
+     "artist": "Zeddy Will"
+    },
+    {
+     "rank": 8,
+     "song": "Come N Go",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 9,
+     "song": "Rockin",
+     "artist": "Shoreline Mafia, OhGeesy & Fenix Flexin"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250813111456/https://www.beatport.com/top-100",
+   "captured": "2025-08-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get Stupid",
+     "artist": "Julian Fijma"
+    },
+    {
+     "rank": 2,
+     "song": "TESLA (Extended Mix)",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 3,
+     "song": "Edge of Desire (Extended Mix)",
+     "artist": "Jonas Blue & Malive"
+    },
+    {
+     "rank": 4,
+     "song": "Liquor Store (Extended Mix)",
+     "artist": "Nate Dogg & Kolter"
+    },
+    {
+     "rank": 5,
+     "song": "Waterfalls (Extended Mix)",
+     "artist": "Bobby Harvey, James Hype & Sam Harper"
+    },
+    {
+     "rank": 6,
+     "song": "Walking On A Dream (BLOND:ISH Extended Remix)",
+     "artist": "Empire Of The Sun & BLOND:ISH"
+    },
+    {
+     "rank": 7,
+     "song": "Verano En NY",
+     "artist": "Toman"
+    },
+    {
+     "rank": 8,
+     "song": "Cola (ARTBAT Extended Remix)",
+     "artist": "CamelPhat, Elderbrook & ARTBAT"
+    },
+    {
+     "rank": 9,
+     "song": "I Don't Trust A Soul (Extended Mix)",
+     "artist": "Ship Wrek & Disco Lines"
+    },
+    {
+     "rank": 10,
+     "song": "Sitting In The Sun (Walking In The Rain) (Walking In The Rain)",
+     "artist": "DumitrEscu"
+    },
+    {
+     "rank": 11,
+     "song": "Body Language",
+     "artist": "Samm (BE)"
+    },
+    {
+     "rank": 12,
+     "song": "London's On Fire (Extended Mix)",
+     "artist": "Audio Bullys, Chris Lorenzo & Max Styler"
+    },
+    {
+     "rank": 13,
+     "song": "Like I Like It",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 14,
+     "song": "You Are In My System (Philip George Extended Mix)",
+     "artist": "Kerri Chandler, Dennis Quin & Philip George"
+    },
+    {
+     "rank": 15,
+     "song": "At Night (Anyma x Layton Giordani Extended Remix)",
+     "artist": "Shakedown, Layton Giordani & Anyma (ofc)"
+    },
+    {
+     "rank": 16,
+     "song": "WTF",
+     "artist": "SCRIPT"
+    },
+    {
+     "rank": 17,
+     "song": "Control (Extended Mix)",
+     "artist": "HILLS (US) & Dansyn"
+    },
+    {
+     "rank": 18,
+     "song": "Backtrack Blow Up (Max Styler Remix)",
+     "artist": "Samantha Loveridge"
+    },
+    {
+     "rank": 19,
+     "song": "Versatile (Extended)",
+     "artist": "L.P. Rhythm"
+    },
+    {
+     "rank": 20,
+     "song": "Cash Out (EXTENDED MIX)",
+     "artist": "Bobby Shmurda & SIDEPIECE"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250816190724/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2025-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Days",
+     "artist": "CHRYSTAL"
+    },
+    {
+     "rank": 2,
+     "song": "Passo Bem Solto",
+     "artist": "ATLXS"
+    },
+    {
+     "rank": 3,
+     "song": "Dia Delicia",
+     "artist": "Nakama & MC Staff"
+    },
+    {
+     "rank": 4,
+     "song": "Make Me Feel",
+     "artist": "oskar med k"
+    },
+    {
+     "rank": 5,
+     "song": "Luna Bala",
+     "artist": "Yb Wasg'ood & Ariis"
+    },
+    {
+     "rank": 6,
+     "song": "Mente Ma",
+     "artist": "Nakama & MC Staff"
+    },
+    {
+     "rank": 7,
+     "song": "Montagem Tomada",
+     "artist": "MXZI"
+    },
+    {
+     "rank": 8,
+     "song": "Messy",
+     "artist": "Laszewo"
+    },
+    {
+     "rank": 9,
+     "song": "Tell You Straight",
+     "artist": "jigitz"
+    },
+    {
+     "rank": 10,
+     "song": "Los Voltaje",
+     "artist": "Sayfalse, Yb Wasg'Ood & Ariis"
+    },
+    {
+     "rank": 11,
+     "song": "Focus",
+     "artist": "John Summit Featuring CLOVES"
+    },
+    {
+     "rank": 12,
+     "song": "The Less I Know The Better",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 13,
+     "song": "Heavy Love",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 14,
+     "song": "I Love You So Jumpstyle",
+     "artist": "HUSSVRX"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250810014232/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2025-08-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Never Enough",
+     "artist": "Turnstile"
+    },
+    {
+     "rank": 2,
+     "song": "Back To Friends",
+     "artist": "sombr"
+    },
+    {
+     "rank": 3,
+     "song": "Sally, When The Wine Runs Out",
+     "artist": "Role Model"
+    },
+    {
+     "rank": 4,
+     "song": "Catch These Fists",
+     "artist": "Wet Leg"
+    },
+    {
+     "rank": 5,
+     "song": "Moody",
+     "artist": "Royel Otis"
+    },
+    {
+     "rank": 6,
+     "song": "Jupiter",
+     "artist": "almost monday Featuring Jordana"
+    },
+    {
+     "rank": 7,
+     "song": "Hot Stuff",
+     "artist": "Blue October"
+    },
+    {
+     "rank": 8,
+     "song": "Backseat",
+     "artist": "Balu Brigada"
+    },
+    {
+     "rank": 9,
+     "song": "Lovesick Lullaby",
+     "artist": "YUNGBLUD"
+    },
+    {
+     "rank": 10,
+     "song": "Slow & Easy",
+     "artist": "Rome Featuring Dirty Heads"
+    },
+    {
+     "rank": 11,
+     "song": "Undressed",
+     "artist": "sombr"
+    },
+    {
+     "rank": 12,
+     "song": "Get The Message",
+     "artist": "The Paradox"
+    },
+    {
+     "rank": 13,
+     "song": "Easy Come, Easy Go",
+     "artist": "The All-American Rejects"
+    },
+    {
+     "rank": 14,
+     "song": "Communicating",
+     "artist": "Bad Suns"
+    },
+    {
+     "rank": 15,
+     "song": "Blurry Lights",
+     "artist": "Ax And The Hatchetmen With Albert Hammond Jr"
+    },
+    {
+     "rank": 16,
+     "song": "Human",
+     "artist": "The Ramona Flowers"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250817103739/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2025-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Golden (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 2,
+     "song": "Your Idol (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 3,
+     "song": "The Subway",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 4,
+     "song": "Soda Pop (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 5,
+     "song": "How It’s Done (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 6,
+     "song": "back to friends",
+     "artist": "sombr"
+    },
+    {
+     "rank": 7,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 8,
+     "song": "What It Sounds Like (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 9,
+     "song": "DAISIES",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 10,
+     "song": "Takedown (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 11,
+     "song": "Free (w/ Jinu , Ejae , Andrew Choi , KPop Demon Hunters Cast )",
+     "artist": "RUMI"
+    },
+    {
+     "rank": 12,
+     "song": "Love Me Not",
+     "artist": "Ravyn Lenae"
+    },
+    {
+     "rank": 13,
+     "song": "What I Want (w/ Tate McRae )",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 14,
+     "song": "Dreams - 2004 Remaster",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 15,
+     "song": "undressed",
+     "artist": "sombr"
+    },
+    {
+     "rank": 16,
+     "song": "YUKON",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 17,
+     "song": "I Got Better",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 18,
+     "song": "Manchild",
+     "artist": "Sabrina Carpenter"
+    },
+    {
+     "rank": 19,
+     "song": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 20,
+     "song": "Sugar On My Tongue",
+     "artist": "Tyler, The Creator"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250816202518/https://kworb.net/charts/itunes/us.html",
+   "captured": "2025-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Imaginary Playerz",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "Golden",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 3,
+     "song": "The Devil Is A Democrat",
+     "artist": "Tom MacDonald"
+    },
+    {
+     "rank": 4,
+     "song": "Late Great Heartbreak",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 5,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 6,
+     "song": "Hard Fought Hallelujah",
+     "artist": "Brandon Lake & Jelly Roll"
+    },
+    {
+     "rank": 7,
+     "song": "Better Me For You (Brown Eyes)",
+     "artist": "Max McNown"
+    },
+    {
+     "rank": 8,
+     "song": "Soda Pop",
+     "artist": "Saja Boys, Andrew Choi, Neckwav, Danny Chung, Kevin Woo, samUIL Lee & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 9,
+     "song": "What It Sounds Like",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 10,
+     "song": "Pink Pony Club",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 11,
+     "song": "Imaginary Playerz",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 12,
+     "song": "So So Good (Live)",
+     "artist": "Phil Wickham, Brandon Lake & Elevation Worship"
+    },
+    {
+     "rank": 13,
+     "song": "Annihilate Me",
+     "artist": "I Prevail"
+    },
+    {
+     "rank": 14,
+     "song": "Awake and Alive",
+     "artist": "Skillet"
+    },
+    {
+     "rank": 15,
+     "song": "It Depends (feat. Bryson Tiller)",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 16,
+     "song": "Coming Around Again",
+     "artist": "Alanis Morissette & Carly Simon"
+    },
+    {
+     "rank": 17,
+     "song": "Your Idol",
+     "artist": "Saja Boys, Andrew Choi, Neckwav, Danny Chung, Kevin Woo, samUIL Lee & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 18,
+     "song": "How It’s Done",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 19,
+     "song": "Free",
+     "artist": "Rumi, JINU, EJAE, Andrew Choi & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 20,
+     "song": "Bedroom Posters",
+     "artist": "Yellowcard"
+    }
+   ]
+  }
+ ]
+}

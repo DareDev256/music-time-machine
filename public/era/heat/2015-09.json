@@ -1,0 +1,891 @@
+{
+ "month": "2015-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150905060032/http://www.hotnewhiphop.com/top100/",
+   "captured": "2015-09-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Nightcrawler",
+     "artist": "Travi$ Scott Feat. Chief Keef"
+    },
+    {
+     "rank": 2,
+     "song": "Hotline Bling (Cha Cha Remix) (CDQ)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Bottom Of The Bottle",
+     "artist": "Curren$y Feat. Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Foreclosures",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "God",
+     "artist": "Jeezy"
+    },
+    {
+     "rank": 6,
+     "song": "Why I Do It",
+     "artist": "August Alsina Feat. Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Easy Bake",
+     "artist": "Jay Rock Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "No Problems (Prod. By Honorable C.N.O.T.E)",
+     "artist": "Gucci Mane Feat. Rich Homie Quan"
+    },
+    {
+     "rank": 9,
+     "song": "Money Dance (Prod. By Jake One)",
+     "artist": "Rick Ross Feat. The-Dream"
+    },
+    {
+     "rank": 10,
+     "song": "OK Alright",
+     "artist": "Travi$ Scott Feat. ScHoolboy Q"
+    },
+    {
+     "rank": 11,
+     "song": "Off The Rip (Remix)",
+     "artist": "French Montana Feat. ASAP Rocky"
+    },
+    {
+     "rank": 12,
+     "song": "Gangsta Way",
+     "artist": "Chris Brown Feat. French Montana"
+    },
+    {
+     "rank": 13,
+     "song": "Turn Ya Back",
+     "artist": "Rick Ross Feat. Gucci Mane"
+    },
+    {
+     "rank": 14,
+     "song": "Go Hard Or Go Home Pt. 2",
+     "artist": "Wiz Khalifa Feat. French Montana"
+    },
+    {
+     "rank": 15,
+     "song": "Change",
+     "artist": "K Camp Feat. Jeremih"
+    },
+    {
+     "rank": 16,
+     "song": "Trap Niggas (Freestyle)",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 17,
+     "song": "What Do You Mean?",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 18,
+     "song": "Free Meal (Horseshoe Gang Diss)",
+     "artist": "Funk Volume"
+    },
+    {
+     "rank": 19,
+     "song": "Decline (Freestyle)",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 20,
+     "song": "Run The Check Up",
+     "artist": "Jeezy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150915050758/http://hypem.com:80/popular",
+   "captured": "2015-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Clearest Blue",
+     "artist": "Chvrches"
+    },
+    {
+     "rank": 2,
+     "song": "The Verge Halogen Remix",
+     "artist": "Owl City Feat. Aloe Blacc"
+    },
+    {
+     "rank": 3,
+     "song": "Rocket Man",
+     "artist": "Astronauts Etc feat. Toro Y Moi"
+    },
+    {
+     "rank": 4,
+     "song": "Nostalgia RAC Mix",
+     "artist": "Doe Paoro"
+    },
+    {
+     "rank": 5,
+     "song": "The Ghosts of Beverly Drive Tycho Remix",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 6,
+     "song": "Lights feat. pennybirdrabbit",
+     "artist": "EMBRZ"
+    },
+    {
+     "rank": 7,
+     "song": "Unravel Me",
+     "artist": "Jojee"
+    },
+    {
+     "rank": 8,
+     "song": "Whatever feat. KOLAJ",
+     "artist": "Kaskade"
+    },
+    {
+     "rank": 9,
+     "song": "Back At The Start (feat. K. Flay)",
+     "artist": "Viceroy"
+    },
+    {
+     "rank": 10,
+     "song": "Speak Easy",
+     "artist": "Mansionair"
+    },
+    {
+     "rank": 11,
+     "song": "Oh My Love Kat Krazy Remix",
+     "artist": "The Score"
+    },
+    {
+     "rank": 12,
+     "song": "Good For You KASBO Remix",
+     "artist": "Selena Gomez feat. A$AP Rocky"
+    },
+    {
+     "rank": 13,
+     "song": "get your love",
+     "artist": "leo kalyan"
+    },
+    {
+     "rank": 14,
+     "song": "Shadow",
+     "artist": "Chromatics"
+    },
+    {
+     "rank": 15,
+     "song": "Open Season Gryffin Remix",
+     "artist": "Josef Salvat"
+    },
+    {
+     "rank": 16,
+     "song": "Walls",
+     "artist": "Slaptop"
+    },
+    {
+     "rank": 17,
+     "song": "MENTON",
+     "artist": "Palace Winter"
+    },
+    {
+     "rank": 18,
+     "song": "Love Me Badder ROOM8 Remix",
+     "artist": "Elliphant"
+    },
+    {
+     "rank": 19,
+     "song": "How Hard I Try Robotaki Remix",
+     "artist": "filous"
+    },
+    {
+     "rank": 20,
+     "song": "INSTINCT",
+     "artist": "R I T U A L"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150913091353/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2015-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Watch Me",
+     "artist": "Silento"
+    },
+    {
+     "rank": 2,
+     "song": "679",
+     "artist": "Fetty Wap Featuring Remy Boyz"
+    },
+    {
+     "rank": 3,
+     "song": "Trap Queen",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 4,
+     "song": "My Way",
+     "artist": "Fetty Wap Featuring Monty"
+    },
+    {
+     "rank": 5,
+     "song": "Downtown",
+     "artist": "Macklemore & Ryan Lewis Featuring Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz"
+    },
+    {
+     "rank": 6,
+     "song": "See You Again",
+     "artist": "Wiz Khalifa Featuring Charlie Puth"
+    },
+    {
+     "rank": 7,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Hit The Quan",
+     "artist": "@iHeartMemphis"
+    },
+    {
+     "rank": 9,
+     "song": "All Eyes On You",
+     "artist": "Meek Mill Featuring Chris Brown & Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Flex (Ooh Ooh Ooh)",
+     "artist": "Rich Homie Quan"
+    },
+    {
+     "rank": 11,
+     "song": "Back To Back",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Again",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 13,
+     "song": "Where Ya At",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 14,
+     "song": "This Could Be Us",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 15,
+     "song": "I Don't Like It, I Love It",
+     "artist": "Flo Rida Featuring Robin Thicke & Verdine White"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150913182023/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2015-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Feel My Face",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 2,
+     "song": "The Hills",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 3,
+     "song": "Watch Me",
+     "artist": "Silento"
+    },
+    {
+     "rank": 4,
+     "song": "679",
+     "artist": "Fetty Wap Featuring Remy Boyz"
+    },
+    {
+     "rank": 5,
+     "song": "Trap Queen",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 6,
+     "song": "My Way",
+     "artist": "Fetty Wap Featuring Monty"
+    },
+    {
+     "rank": 7,
+     "song": "Downtown",
+     "artist": "Macklemore & Ryan Lewis Featuring Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz"
+    },
+    {
+     "rank": 8,
+     "song": "See You Again",
+     "artist": "Wiz Khalifa Featuring Charlie Puth"
+    },
+    {
+     "rank": 9,
+     "song": "Hotline Bling",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Hit The Quan",
+     "artist": "@iHeartMemphis"
+    },
+    {
+     "rank": 11,
+     "song": "All Eyes On You",
+     "artist": "Meek Mill Featuring Chris Brown & Nicki Minaj"
+    },
+    {
+     "rank": 12,
+     "song": "Classic Man",
+     "artist": "Jidenna Featuring Roman GianArthur"
+    },
+    {
+     "rank": 13,
+     "song": "Flex (Ooh Ooh Ooh)",
+     "artist": "Rich Homie Quan"
+    },
+    {
+     "rank": 14,
+     "song": "Back To Back",
+     "artist": "Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Again",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 16,
+     "song": "Prisoner",
+     "artist": "The Weeknd Featuring Lana Del Rey"
+    },
+    {
+     "rank": 17,
+     "song": "Planes",
+     "artist": "Jeremih Featuring J. Cole"
+    },
+    {
+     "rank": 18,
+     "song": "Where Ya At",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Tell Your Friends",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 20,
+     "song": "B**** Better Have My Money",
+     "artist": "Rihanna"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20150913165929/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2015-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Foreclosures",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 2,
+     "song": "Shadow",
+     "artist": "Chromatics"
+    },
+    {
+     "rank": 3,
+     "song": "I Bite Through It",
+     "artist": "Oneohtrix Point Never"
+    },
+    {
+     "rank": 4,
+     "song": "Standard",
+     "artist": "Empress Of"
+    },
+    {
+     "rank": 5,
+     "song": "Sea Calls Me Home",
+     "artist": "Julia Holter"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150917051333/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2015-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "House Party",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 2,
+     "song": "Buy Me A Boat",
+     "artist": "Chris Janson"
+    },
+    {
+     "rank": 3,
+     "song": "Crash And Burn",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 4,
+     "song": "John Cougar, John Deere, John 3:16",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 5,
+     "song": "Strip It Down",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 6,
+     "song": "Lose My Mind",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 7,
+     "song": "Save It For A Rainy Day",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 8,
+     "song": "Burning House",
+     "artist": "Cam"
+    },
+    {
+     "rank": 9,
+     "song": "Fly",
+     "artist": "Maddie & Tae"
+    },
+    {
+     "rank": 10,
+     "song": "Kick The Dust Up",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 11,
+     "song": "Anything Goes",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 12,
+     "song": "Break Up With Him",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 13,
+     "song": "Smoke Break",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 14,
+     "song": "I'm Comin' Over",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 15,
+     "song": "Let Me See Ya Girl",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 16,
+     "song": "Nothin' Like You",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 17,
+     "song": "Gonna Wanna Tonight",
+     "artist": "Chase Rice"
+    },
+    {
+     "rank": 18,
+     "song": "Loving You Easy",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 19,
+     "song": "Sangria",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 20,
+     "song": "Real Life",
+     "artist": "Jake Owen"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150913053222/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2015-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lean On",
+     "artist": "Major Lazer & DJ Snake Featuring M0"
+    },
+    {
+     "rank": 2,
+     "song": "Where Are U Now",
+     "artist": "Skrillex & Diplo With Justin Bieber"
+    },
+    {
+     "rank": 3,
+     "song": "Hey Mama",
+     "artist": "David Guetta Featuring Nicki Minaj, Bebe Rexha & Afrojack"
+    },
+    {
+     "rank": 4,
+     "song": "How Deep Is Your Love",
+     "artist": "Calvin Harris & Disciples"
+    },
+    {
+     "rank": 5,
+     "song": "You Know You Like It",
+     "artist": "DJ Snake & AlunaGeorge"
+    },
+    {
+     "rank": 6,
+     "song": "Beautiful Now",
+     "artist": "Zedd Featuring Jon Bellion"
+    },
+    {
+     "rank": 7,
+     "song": "Omen",
+     "artist": "Disclosure Featuring Sam Smith"
+    },
+    {
+     "rank": 8,
+     "song": "Hold My Hand",
+     "artist": "Jess Glynne"
+    },
+    {
+     "rank": 9,
+     "song": "SummerThing!",
+     "artist": "Afrojack Featuring Mike Taylor"
+    },
+    {
+     "rank": 10,
+     "song": "Ain't Nobody (Loves Me Better)",
+     "artist": "Felix Jaehn Featuring Jasmine Thompson"
+    },
+    {
+     "rank": 11,
+     "song": "Waiting For Love",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 12,
+     "song": "Stole The Show",
+     "artist": "Kygo Featuring Parson James"
+    },
+    {
+     "rank": 13,
+     "song": "Powerful",
+     "artist": "Major Lazer Featuring Ellie Goulding & Tarrus Riley"
+    },
+    {
+     "rank": 14,
+     "song": "Sugar",
+     "artist": "Robin Schulz Featuring Francesco Yates"
+    },
+    {
+     "rank": 15,
+     "song": "Roses",
+     "artist": "The Chainsmokers Featuring ROZES"
+    },
+    {
+     "rank": 16,
+     "song": "Coming Over",
+     "artist": "Dillon Francis & Kygo Featuring James Hersey"
+    },
+    {
+     "rank": 17,
+     "song": "Show Me Love",
+     "artist": "Sam Feldt Featuring Kimberly Anne"
+    },
+    {
+     "rank": 18,
+     "song": "For A Better Day",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 19,
+     "song": "B**** I'm Madonna",
+     "artist": "Madonna Featuring Nicki Minaj"
+    },
+    {
+     "rank": 20,
+     "song": "Something Better",
+     "artist": "Audien Featuring Lady Antebellum"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150913042857/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2015-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ex's & Oh's",
+     "artist": "Elle King"
+    },
+    {
+     "rank": 2,
+     "song": "First",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 3,
+     "song": "Renegades",
+     "artist": "X Ambassadors"
+    },
+    {
+     "rank": 4,
+     "song": "Dreams",
+     "artist": "Beck"
+    },
+    {
+     "rank": 5,
+     "song": "Tear In My Heart",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 6,
+     "song": "I Am",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 7,
+     "song": "The Wolf",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 8,
+     "song": "Could Have Been Me",
+     "artist": "The Struts"
+    },
+    {
+     "rank": 9,
+     "song": "Ship To Wreck",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 10,
+     "song": "2 Heads",
+     "artist": "Coleman Hell"
+    },
+    {
+     "rank": 11,
+     "song": "Hallelujah",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 12,
+     "song": "Different Colors",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 13,
+     "song": "Sedona",
+     "artist": "Houndmouth"
+    },
+    {
+     "rank": 14,
+     "song": "The Ghosts Of Beverly Drive",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 15,
+     "song": "Cecilia And The Satellite",
+     "artist": "Andrew McMahon In The Wilderness"
+    },
+    {
+     "rank": 16,
+     "song": "Electric Love",
+     "artist": "BORNS"
+    },
+    {
+     "rank": 17,
+     "song": "Outside",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 18,
+     "song": "Molecules",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 19,
+     "song": "S.O.B.",
+     "artist": "Nathaniel Rateliff & The Night Sweats"
+    },
+    {
+     "rank": 20,
+     "song": "Outta My Mind",
+     "artist": "The ARCS"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20150915131154/https://2dopeboyz.com/",
+   "captured": "2015-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Belly Of the Beast",
+     "artist": "EarthGang"
+    },
+    {
+     "rank": 2,
+     "song": "Dark Liquor",
+     "artist": "Tunji Ige"
+    },
+    {
+     "rank": 3,
+     "song": "In Your Atmosphere",
+     "artist": "AK (of The Underachievers)"
+    },
+    {
+     "rank": 4,
+     "song": "Bust It Open",
+     "artist": "Scotty ATL feat. B.o.B"
+    },
+    {
+     "rank": 5,
+     "song": "Kissing On Your Neck (Remix)",
+     "artist": "Soundz feat. Jeremih"
+    },
+    {
+     "rank": 6,
+     "song": "Best Friend",
+     "artist": "J.R. feat. Trey Songz"
+    },
+    {
+     "rank": 7,
+     "song": "Best Friend",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "Wild Livin",
+     "artist": "Montage"
+    },
+    {
+     "rank": 9,
+     "song": "We Must Stand",
+     "artist": "Sadat X & El Da Sensei"
+    },
+    {
+     "rank": 10,
+     "song": "Pastor Young’s Letter",
+     "artist": "Jeezy"
+    },
+    {
+     "rank": 11,
+     "song": "GO:OD AM",
+     "artist": "Mac Miller feat. LP"
+    },
+    {
+     "rank": 12,
+     "song": "Flicka Da Wrist (Freestyle)",
+     "artist": "T.I."
+    },
+    {
+     "rank": 13,
+     "song": "Came Up",
+     "artist": "Post Malone feat. Key!"
+    },
+    {
+     "rank": 14,
+     "song": "I Just Wanna Rap",
+     "artist": "Chris Rivers feat. Nitty Scott, MC & Whispers"
+    },
+    {
+     "rank": 15,
+     "song": "They Luv Dat",
+     "artist": "Twista"
+    },
+    {
+     "rank": 16,
+     "song": "Vice City",
+     "artist": "Jay Rock feat. Black Hippy"
+    },
+    {
+     "rank": 17,
+     "song": "That's Love",
+     "artist": "Marc E. Bassy feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 18,
+     "song": "Tell Your Friends (Remix)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Anomalies",
+     "artist": "Buffalo Black feat. Lord Byron"
+    }
+   ]
+  }
+ ]
+}

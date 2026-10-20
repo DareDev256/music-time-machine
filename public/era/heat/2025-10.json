@@ -1,0 +1,696 @@
+{
+ "month": "2025-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251015063254/https://hypem.com/popular",
+   "captured": "2025-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bodhidharma",
+     "artist": "Agriculture"
+    },
+    {
+     "rank": 2,
+     "song": "Spider Ballad",
+     "artist": "Kieran Hebden + William Tyler"
+    },
+    {
+     "rank": 3,
+     "song": "Peacock Tail",
+     "artist": "Boards of Canada"
+    },
+    {
+     "rank": 4,
+     "song": "Dayvan Cowboy +1 remix",
+     "artist": "Boards Of Canada"
+    },
+    {
+     "rank": 5,
+     "song": "Star 6 9",
+     "artist": "Snooper"
+    },
+    {
+     "rank": 6,
+     "song": "From A to B",
+     "artist": "Clarice Jensen"
+    },
+    {
+     "rank": 7,
+     "song": "Polygon Window",
+     "artist": "Aphex Twin"
+    },
+    {
+     "rank": 8,
+     "song": "8th Deadly Sin",
+     "artist": "Miki Berenyi Trio"
+    },
+    {
+     "rank": 9,
+     "song": "Kushimoto Bushi (Cumbia)",
+     "artist": "Minyo Crusaders"
+    },
+    {
+     "rank": 10,
+     "song": "The Season",
+     "artist": "gosh diggity"
+    },
+    {
+     "rank": 11,
+     "song": "Raise the Chalice",
+     "artist": "SUNN O)))"
+    },
+    {
+     "rank": 12,
+     "song": "Fena",
+     "artist": "Impérieux"
+    },
+    {
+     "rank": 13,
+     "song": "Your Modern Heart",
+     "artist": "Club 8"
+    },
+    {
+     "rank": 14,
+     "song": "Painting of a Tree",
+     "artist": "Tiberius"
+    },
+    {
+     "rank": 15,
+     "song": "How it Feels",
+     "artist": "Cold Specks"
+    },
+    {
+     "rank": 16,
+     "song": "StepBack2023",
+     "artist": "Reek0"
+    },
+    {
+     "rank": 17,
+     "song": "Reminiscence غروب",
+     "artist": "Yasmine Hamdan"
+    },
+    {
+     "rank": 18,
+     "song": "Everyone Falls Asleep In Their Own Time",
+     "artist": "Sophia Stel"
+    },
+    {
+     "rank": 19,
+     "song": "The gash",
+     "artist": "Truck Violence"
+    },
+    {
+     "rank": 20,
+     "song": "4x4",
+     "artist": "SPNT"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251018094203/https://www.billboard.com/charts/country-songs/",
+   "captured": "2025-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hell At Night",
+     "artist": "BigXthaPlug Featuring Ella Langley"
+    },
+    {
+     "rank": 2,
+     "song": "House Again",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 3,
+     "song": "Last One To Know",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 4,
+     "song": "Better Me For You (Brown Eyes)",
+     "artist": "Max McNown"
+    },
+    {
+     "rank": 5,
+     "song": "Darlin'",
+     "artist": "Chase Matthew"
+    },
+    {
+     "rank": 6,
+     "song": "Heavens To Betsy",
+     "artist": "Jackson Dean"
+    },
+    {
+     "rank": 7,
+     "song": "Keeps Me Sane",
+     "artist": "Tyler Nance"
+    },
+    {
+     "rank": 8,
+     "song": "Ends Of The Earth",
+     "artist": "Ty Myers"
+    },
+    {
+     "rank": 9,
+     "song": "Sober",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 10,
+     "song": "Need To",
+     "artist": "Gavin Adcock"
+    },
+    {
+     "rank": 11,
+     "song": "Painted You Pretty",
+     "artist": "Hudson Westbrook"
+    },
+    {
+     "rank": 12,
+     "song": "People Hatin'",
+     "artist": "The Red Clay Strays"
+    },
+    {
+     "rank": 13,
+     "song": "Damned If I Do",
+     "artist": "Vincent Mason"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251016092232/https://www.beatport.com/top-100",
+   "captured": "2025-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love Songs (feat. Kosmo Kint) (Extended Mix)",
+     "artist": "Prospa & Kosmo Kint"
+    },
+    {
+     "rank": 2,
+     "song": "Diet Coke (Extended Mix)",
+     "artist": "Fallon (IE)"
+    },
+    {
+     "rank": 3,
+     "song": "LA NOCHE (Extended Mix)",
+     "artist": "Chris Lake, Skrillex & ANITA B QUEEN"
+    },
+    {
+     "rank": 4,
+     "song": "Afterparty (Extended Mix)",
+     "artist": "Gaddi & HILLS (US)"
+    },
+    {
+     "rank": 5,
+     "song": "Cry For You (Extended Mix)",
+     "artist": "SIDEPIECE"
+    },
+    {
+     "rank": 6,
+     "song": "Love Parade (Extended Mix)",
+     "artist": "Da Hool, Cassian & YOTTO"
+    },
+    {
+     "rank": 7,
+     "song": "Fancy $hit (Extended Mix)",
+     "artist": "CID & Taylr Renee"
+    },
+    {
+     "rank": 8,
+     "song": "A Place You Wanna Go (Good Life) (Good Life)",
+     "artist": "bullet tooth"
+    },
+    {
+     "rank": 9,
+     "song": "Murder Mystery",
+     "artist": "Jamie Jones"
+    },
+    {
+     "rank": 10,
+     "song": "Gets Like That (Extended)",
+     "artist": "Max Dean & Luke Dean"
+    },
+    {
+     "rank": 11,
+     "song": "Galvanize (Chris Lake Extended Mix)",
+     "artist": "Chris Lake & The Chemical Brothers"
+    },
+    {
+     "rank": 12,
+     "song": "PYHU (Put Your Hands Up) (Put Your Hands Up)",
+     "artist": "Kurd Maverick & Hugel"
+    },
+    {
+     "rank": 13,
+     "song": "Where You Are (Millero Extended Remix)",
+     "artist": "John Summit & HAYLA"
+    },
+    {
+     "rank": 14,
+     "song": "Lady (Hear Me Tonight) - Remix (Extended)",
+     "artist": "Modjo, Sparrow & Barbossa, Koshi & Daymaan"
+    },
+    {
+     "rank": 15,
+     "song": "Edge of Desire (Extended Mix)",
+     "artist": "Jonas Blue & Malive"
+    },
+    {
+     "rank": 16,
+     "song": "Space Pump ((Space Jam) (Extended Mix))",
+     "artist": "Vinter (BR)"
+    },
+    {
+     "rank": 17,
+     "song": "Focus feat. CLOVES (EdiP Extended Remix)",
+     "artist": "John Summit & cloves"
+    },
+    {
+     "rank": 18,
+     "song": "Ain't Nobody (Extended Mix)",
+     "artist": "Mr. Belt & Wezol & RUZE"
+    },
+    {
+     "rank": 19,
+     "song": "crystallized feat. Inéz (Playa Dub)",
+     "artist": "Inez & John Summit"
+    },
+    {
+     "rank": 20,
+     "song": "What A Life (OMRI. Extended Remix)",
+     "artist": "Stevie Appleton, John Summit & GUZ (NL)"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251013190129/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2025-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Days",
+     "artist": "CHRYSTAL"
+    },
+    {
+     "rank": 2,
+     "song": "Passo Bem Solto",
+     "artist": "ATLXS"
+    },
+    {
+     "rank": 3,
+     "song": "Make Me Feel",
+     "artist": "oskar med k"
+    },
+    {
+     "rank": 4,
+     "song": "Montagem Xonada",
+     "artist": "MXZI, dj Samir & DJ Javi26"
+    },
+    {
+     "rank": 5,
+     "song": "Montagem Rugada",
+     "artist": "Sayfalse, Cape & JXNDRO"
+    },
+    {
+     "rank": 6,
+     "song": "Acelerada",
+     "artist": "sma$her & MXZI"
+    },
+    {
+     "rank": 7,
+     "song": "Mente Ma",
+     "artist": "Nakama & MC Staff"
+    },
+    {
+     "rank": 8,
+     "song": "Jax Toy!",
+     "artist": "Jakeneutron Featuring Michael Kovach & Amanda Hufford"
+    },
+    {
+     "rank": 9,
+     "song": "Luna Bala",
+     "artist": "Yb Wasg'ood & Ariis"
+    },
+    {
+     "rank": 10,
+     "song": "Desire",
+     "artist": "Ian Asher & Olly Alexander"
+    },
+    {
+     "rank": 11,
+     "song": "Dia Delicia",
+     "artist": "Nakama & MC Staff"
+    },
+    {
+     "rank": 12,
+     "song": "Montagem Supersonic",
+     "artist": "KHAOS & Jmilton"
+    },
+    {
+     "rank": 13,
+     "song": "Doors Light Funk",
+     "artist": "DJ VTTT77"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251007105030/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2025-10-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sally, When The Wine Runs Out",
+     "artist": "Role Model"
+    },
+    {
+     "rank": 2,
+     "song": "Moody",
+     "artist": "Royel Otis"
+    },
+    {
+     "rank": 3,
+     "song": "Backseat",
+     "artist": "Balu Brigada"
+    },
+    {
+     "rank": 4,
+     "song": "Never Enough",
+     "artist": "Turnstile"
+    },
+    {
+     "rank": 5,
+     "song": "Back To Friends",
+     "artist": "sombr"
+    },
+    {
+     "rank": 6,
+     "song": "Get The Message",
+     "artist": "The Paradox"
+    },
+    {
+     "rank": 7,
+     "song": "Slow & Easy",
+     "artist": "Rome Featuring Dirty Heads"
+    },
+    {
+     "rank": 8,
+     "song": "Easy Come, Easy Go",
+     "artist": "The All-American Rejects"
+    },
+    {
+     "rank": 9,
+     "song": "Zombie",
+     "artist": "YUNGBLUD"
+    },
+    {
+     "rank": 10,
+     "song": "Lucy",
+     "artist": "Mt. Joy"
+    },
+    {
+     "rank": 11,
+     "song": "Caramel",
+     "artist": "Sleep Token"
+    },
+    {
+     "rank": 12,
+     "song": "This Is The Killer Speaking",
+     "artist": "The Last Dinner Party"
+    },
+    {
+     "rank": 13,
+     "song": "12 To 12",
+     "artist": "sombr"
+    },
+    {
+     "rank": 14,
+     "song": "Dang",
+     "artist": "Rainbow Kitten Surprise"
+    },
+    {
+     "rank": 15,
+     "song": "Undressed",
+     "artist": "sombr"
+    },
+    {
+     "rank": 16,
+     "song": "Above The Lake",
+     "artist": "James And The Cold Gun"
+    },
+    {
+     "rank": 17,
+     "song": "World Apart",
+     "artist": "Bike Routes"
+    },
+    {
+     "rank": 18,
+     "song": "mangetout",
+     "artist": "Wet Leg"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251017151814/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2025-10-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Fate of Ophelia",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Opalite",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 3,
+     "song": "Elizabeth Taylor",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 4,
+     "song": "Father Figure",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 5,
+     "song": "Wood",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 6,
+     "song": "Actually Romantic",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 7,
+     "song": "Wi$h Li$t",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 8,
+     "song": "Eldest Daughter",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 9,
+     "song": "CANCELLED!",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 10,
+     "song": "The Life of a Showgirl (w/ Sabrina Carpenter )",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 11,
+     "song": "Ruin The Friendship",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 12,
+     "song": "Honey",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 13,
+     "song": "Golden (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    },
+    {
+     "rank": 14,
+     "song": "TIT FOR TAT",
+     "artist": "Tate McRae"
+    },
+    {
+     "rank": 15,
+     "song": "back to friends",
+     "artist": "sombr"
+    },
+    {
+     "rank": 16,
+     "song": "Man I Need",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 17,
+     "song": "Your Idol (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 18,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 19,
+     "song": "Soda Pop (w/ Andrew Choi , Neckwav , Danny Chung , KEVIN WOO , samUIL Lee , KPop Demon Hunters Cast )",
+     "artist": "Saja Boys"
+    },
+    {
+     "rank": 20,
+     "song": "How It’s Done (w/ Ejae , AUDREY NUNA , REI AMI , KPop Demon Hunters Cast )",
+     "artist": "HUNTR/X"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20251015134303/https://kworb.net/charts/itunes/us.html",
+   "captured": "2025-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Fate of Ophelia",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Make Heaven Crowded",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 3,
+     "song": "Golden",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 4,
+     "song": "Untitled (How Does It Feel)",
+     "artist": "D'Angelo"
+    },
+    {
+     "rank": 5,
+     "song": "Lady",
+     "artist": "D'Angelo"
+    },
+    {
+     "rank": 6,
+     "song": "Brown Sugar",
+     "artist": "D'Angelo"
+    },
+    {
+     "rank": 7,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 8,
+     "song": "Someone You Loved",
+     "artist": "Lewis Capaldi"
+    },
+    {
+     "rank": 9,
+     "song": "At This Moment",
+     "artist": "Billy Vera & The Beaters"
+    },
+    {
+     "rank": 10,
+     "song": "Man I Need",
+     "artist": "Olivia Dean"
+    },
+    {
+     "rank": 11,
+     "song": "Cruisin'",
+     "artist": "D'Angelo"
+    },
+    {
+     "rank": 12,
+     "song": "Hard Fought Hallelujah",
+     "artist": "Brandon Lake & Jelly Roll"
+    },
+    {
+     "rank": 13,
+     "song": "Soda Pop",
+     "artist": "Saja Boys, Andrew Choi, Neckwav, Danny Chung, Kevin Woo, samUIL Lee & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 14,
+     "song": "Sally, When The Wine Runs Out",
+     "artist": "ROLE MODEL"
+    },
+    {
+     "rank": 15,
+     "song": "Heaven's Breath",
+     "artist": "The Avett Brothers, Mike Patton & AVTT/PTTN"
+    },
+    {
+     "rank": 16,
+     "song": "The Older I Get",
+     "artist": "Bryan Andrews"
+    },
+    {
+     "rank": 17,
+     "song": "The Fall",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 18,
+     "song": "If It Was Up To Me",
+     "artist": "Ben Fuller & Carrie Underwood"
+    },
+    {
+     "rank": 19,
+     "song": "What It Sounds Like",
+     "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast"
+    },
+    {
+     "rank": 20,
+     "song": "Rescue",
+     "artist": "Lauren Daigle"
+    }
+   ]
+  }
+ ]
+}

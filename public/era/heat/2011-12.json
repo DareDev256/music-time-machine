@@ -321,6 +321,236 @@
      "artist": "Rick Ross Featuring Nicki Minaj"
     }
    ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111213065933/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2011-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "We Owned The Night",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 2,
+     "song": "Tattoos On This Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 3,
+     "song": "Keep Me In Mind",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 4,
+     "song": "Baggage Claim",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 5,
+     "song": "Country Must Be Country Wide",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 6,
+     "song": "God Gave Me You",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 7,
+     "song": "Let It Rain",
+     "artist": "David Nail"
+    },
+    {
+     "rank": 8,
+     "song": "Easy",
+     "artist": "Rascal Flatts Featuring Natasha Bedingfield"
+    },
+    {
+     "rank": 9,
+     "song": "I Got You",
+     "artist": "Thompson Square"
+    },
+    {
+     "rank": 10,
+     "song": "Drink In My Hand",
+     "artist": "Eric Church"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111218202659/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2011-12-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lonely Boy",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 2,
+     "song": "Paradise",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 3,
+     "song": "The Sound Of Winter",
+     "artist": "Bush"
+    },
+    {
+     "rank": 4,
+     "song": "Cough Syrup",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 5,
+     "song": "Dark Horses",
+     "artist": "Switchfoot"
+    },
+    {
+     "rank": 6,
+     "song": "These Days",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 7,
+     "song": "Walk",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 8,
+     "song": "Monarchy Of Roses",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 9,
+     "song": "Face To The Floor",
+     "artist": "Chevelle"
+    },
+    {
+     "rank": 10,
+     "song": "Aberdeen",
+     "artist": "Cage The Elephant"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111214062929/http://www.2dopeboyz.com:80/",
+   "captured": "2011-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "undun (Short Film)",
+     "artist": "The Roots"
+    },
+    {
+     "rank": 2,
+     "song": "We Found Love (rmx)",
+     "artist": "Cam’ron"
+    },
+    {
+     "rank": 3,
+     "song": "Ok Y’all f. Fabolous (BTS Video)",
+     "artist": "Vado"
+    },
+    {
+     "rank": 4,
+     "song": "Original Don f. The Partysquad",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 5,
+     "song": "Pabst & Jazz f. Hassani Kwess & Kenny Keys",
+     "artist": "Asher Roth"
+    },
+    {
+     "rank": 6,
+     "song": "Original f. ‘Sh*t & Lil Wayne",
+     "artist": "Mystikal"
+    },
+    {
+     "rank": 7,
+     "song": "Keep It Real (On The Real) f. Mean Doe Green",
+     "artist": "Chuuwee"
+    },
+    {
+     "rank": 8,
+     "song": "Scared Money (rmx) f. 2 Chainz & Slim The Mobster",
+     "artist": "N.O.R.E."
+    },
+    {
+     "rank": 9,
+     "song": "Rack City Freestyle",
+     "artist": "Wale & Black Cobain"
+    },
+    {
+     "rank": 10,
+     "song": "EZ Street Show Freestyle",
+     "artist": "Common"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111217072912/http://pigeonsandplanes.com:80/",
+   "captured": "2011-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rhymin’ Slang (Dave Sitek Remix)",
+     "artist": "JJ DOOM (Jneiro Jarel + DOOM)"
+    },
+    {
+     "rank": 2,
+     "song": "The Next Time Around",
+     "artist": "Lost Ones: Little Joy"
+    },
+    {
+     "rank": 3,
+     "song": "Shades",
+     "artist": "Phlo Finister"
+    },
+    {
+     "rank": 4,
+     "song": "We Don’t Have To Do Anything",
+     "artist": "The Dogs"
+    },
+    {
+     "rank": 5,
+     "song": "Sprawl II (Mountains Beyond Mountains)",
+     "artist": "Interactive Video: Arcade Fire"
+    },
+    {
+     "rank": 6,
+     "song": "Monster",
+     "artist": "Meg Myers"
+    },
+    {
+     "rank": 7,
+     "song": "Prom King",
+     "artist": "Rockie Fresh"
+    },
+    {
+     "rank": 8,
+     "song": "Chain Music",
+     "artist": "Wale"
+    }
+   ]
   }
  ]
 }

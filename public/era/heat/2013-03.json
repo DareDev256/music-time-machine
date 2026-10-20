@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130317085416/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2013-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 2,
+     "song": "Started From The Bottom",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Love Me",
+     "artist": "Lil Wayne Featuring Drake & Future"
+    },
+    {
+     "rank": 4,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 5,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 7,
+     "song": "Poetic Justice",
+     "artist": "Kendrick Lamar Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 9,
+     "song": "All Gold Everything",
+     "artist": "Trinidad James"
+    },
+    {
+     "rank": 10,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,216 @@
      "rank": 10,
      "song": "All Gold Everything",
      "artist": "Trinidad James"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130312114051/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2013-03-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Suit & Tie (Four Tet Remix)",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 2,
+     "song": "Demon to Lean On",
+     "artist": "Wavves"
+    },
+    {
+     "rank": 3,
+     "song": "A Tooth for an Eye",
+     "artist": "The Knife"
+    },
+    {
+     "rank": 4,
+     "song": "Varsity",
+     "artist": "Smith Westerns"
+    },
+    {
+     "rank": 5,
+     "song": "5AM in Toronto",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130318134805/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2013-03-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Harlem Shake",
+     "artist": "Baauer"
+    },
+    {
+     "rank": 2,
+     "song": "Scream & Shout",
+     "artist": "will.i.am & Britney Spears"
+    },
+    {
+     "rank": 3,
+     "song": "Don't You Worry Child",
+     "artist": "Swedish House Mafia Featuring John Martin"
+    },
+    {
+     "rank": 4,
+     "song": "Feel This Moment",
+     "artist": "Pitbull Featuring Christina Aguilera"
+    },
+    {
+     "rank": 5,
+     "song": "Sweet Nothing",
+     "artist": "Calvin Harris Featuring Florence Welch"
+    },
+    {
+     "rank": 6,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 7,
+     "song": "I Love It",
+     "artist": "Icona Pop Featuring Charli XCX"
+    },
+    {
+     "rank": 8,
+     "song": "Alive",
+     "artist": "Krewella"
+    },
+    {
+     "rank": 9,
+     "song": "As Your Friend",
+     "artist": "Afrojack Featuring Chris Brown"
+    },
+    {
+     "rank": 10,
+     "song": "Levitate",
+     "artist": "Hadouken!"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130326051345/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2013-03-26",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 2,
+     "song": "Mountain Sound",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 3,
+     "song": "Stubborn Love",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 4,
+     "song": "The Pit",
+     "artist": "Silversun Pickups"
+    },
+    {
+     "rank": 5,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 6,
+     "song": "Little Black Submarines",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 7,
+     "song": "Trojans",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 8,
+     "song": "Safe And Sound",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 9,
+     "song": "Lover Of The Light",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 10,
+     "song": "Carry On",
+     "artist": "fun."
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130329041219/http://www.2dopeboyz.com/",
+   "captured": "2013-03-29",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Everlasting",
+     "artist": "Rapsody"
+    },
+    {
+     "rank": 2,
+     "song": "Housewife",
+     "artist": "Kyle Lucas"
+    },
+    {
+     "rank": 3,
+     "song": "Remember Me?",
+     "artist": "Outasight"
+    },
+    {
+     "rank": 4,
+     "song": "Double Excel",
+     "artist": "ANTHM"
+    },
+    {
+     "rank": 5,
+     "song": "Kill The King f. Deacon the Villain",
+     "artist": "Sadistik"
+    },
+    {
+     "rank": 6,
+     "song": "Bussin’ At Dese Haters",
+     "artist": "Pill"
+    },
+    {
+     "rank": 7,
+     "song": "Brooklyn",
+     "artist": "Maino & The Mafia"
+    },
+    {
+     "rank": 8,
+     "song": "For Real",
+     "artist": "Rittz"
+    },
+    {
+     "rank": 9,
+     "song": "Pillars f. Brother Ali",
+     "artist": "Jasiri X"
     }
    ]
   }

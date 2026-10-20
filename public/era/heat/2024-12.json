@@ -1,0 +1,996 @@
+{
+ "month": "2024-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241217195422/https://hypem.com/popular",
+   "captured": "2024-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fantasy Girl",
+     "artist": "Donna Blue"
+    },
+    {
+     "rank": 2,
+     "song": "虹の彷徨 / Ramble In The Rainbow",
+     "artist": "TAMTAM"
+    },
+    {
+     "rank": 3,
+     "song": "I’m A Man",
+     "artist": "Kim Gordon"
+    },
+    {
+     "rank": 4,
+     "song": "River",
+     "artist": "𝐝𝐚𝐬𝐭𝐞."
+    },
+    {
+     "rank": 5,
+     "song": "Ranking Full Stop",
+     "artist": "The Beat"
+    },
+    {
+     "rank": 6,
+     "song": "Touch",
+     "artist": "Lori And The Chameleons"
+    },
+    {
+     "rank": 7,
+     "song": "Intro + Changes (excerpt)",
+     "artist": "Rafael Toral"
+    },
+    {
+     "rank": 8,
+     "song": "Wild Winter",
+     "artist": "Smoke Fairies"
+    },
+    {
+     "rank": 9,
+     "song": "Hard Candy Christmas",
+     "artist": "The Sewing Club"
+    },
+    {
+     "rank": 10,
+     "song": "Who's That Walking on my Rooftop?",
+     "artist": "Freedom Fry"
+    },
+    {
+     "rank": 11,
+     "song": "High Above (feat. Cleopold)",
+     "artist": "ZUSO"
+    },
+    {
+     "rank": 12,
+     "song": "Dance With Me",
+     "artist": "Liam Bailey"
+    },
+    {
+     "rank": 13,
+     "song": "Loved",
+     "artist": "Four Tet"
+    },
+    {
+     "rank": 14,
+     "song": "Burrowing",
+     "artist": "Ryann Gonsalves"
+    },
+    {
+     "rank": 15,
+     "song": "Tennis Court Light, Snow",
+     "artist": "Lia Kohl"
+    },
+    {
+     "rank": 16,
+     "song": "Etel",
+     "artist": "Body Meπa"
+    },
+    {
+     "rank": 17,
+     "song": "Stupid in the Dark",
+     "artist": "Xiu Xiu"
+    },
+    {
+     "rank": 18,
+     "song": "So Far Out Of Love",
+     "artist": "Malibu"
+    },
+    {
+     "rank": 19,
+     "song": "The Last Year",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 20,
+     "song": "Do you wanna",
+     "artist": "Astrid Sonne"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241216152608/https://www.billboard.com/charts/rap-song/",
+   "captured": "2024-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "TV Off",
+     "artist": "Kendrick Lamar Featuring Lefty Gunplay"
+    },
+    {
+     "rank": 2,
+     "song": "Luther",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 3,
+     "song": "Squabble Up",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Wacced Out Murals",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Hey Now",
+     "artist": "Kendrick Lamar Featuring Dody6"
+    },
+    {
+     "rank": 6,
+     "song": "Sticky",
+     "artist": "Tyler, The Creator Featuring GloRilla, Sexyy Red & Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Whatchu Kno About Me",
+     "artist": "GloRilla & Sexyy Red"
+    },
+    {
+     "rank": 8,
+     "song": "Dodger Blue",
+     "artist": "Kendrick Lamar Featuring Wallie the Sensei, Siete7x & Roddy Ricch"
+    },
+    {
+     "rank": 9,
+     "song": "Reincarnated",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "Peekaboo",
+     "artist": "Kendrick Lamar Featuring AzChike"
+    },
+    {
+     "rank": 11,
+     "song": "Man At The Garden",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 12,
+     "song": "Heart Pt. 6",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 13,
+     "song": "Empty Out Your Pockets",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 14,
+     "song": "Gloria",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 15,
+     "song": "Misfit",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 16,
+     "song": "GNX",
+     "artist": "Kendrick Lamar Featuring Hitta J3, YoungThreat & Peysoh"
+    },
+    {
+     "rank": 17,
+     "song": "TGIF",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 18,
+     "song": "Kehlani",
+     "artist": "Jordan Adetunji"
+    },
+    {
+     "rank": 19,
+     "song": "Help Me",
+     "artist": "Real Boston Richey"
+    },
+    {
+     "rank": 20,
+     "song": "AGATS2 (Insecure)",
+     "artist": "Juice WRLD & Nicki Minaj"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241214200051/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2024-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "TV Off",
+     "artist": "Kendrick Lamar Featuring Lefty Gunplay"
+    },
+    {
+     "rank": 2,
+     "song": "Luther",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 3,
+     "song": "Squabble Up",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Timeless",
+     "artist": "The Weeknd & Playboi Carti"
+    },
+    {
+     "rank": 5,
+     "song": "Wacced Out Murals",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Hey Now",
+     "artist": "Kendrick Lamar Featuring Dody6"
+    },
+    {
+     "rank": 7,
+     "song": "Sticky",
+     "artist": "Tyler, The Creator Featuring GloRilla, Sexyy Red & Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "Whatchu Kno About Me",
+     "artist": "GloRilla & Sexyy Red"
+    },
+    {
+     "rank": 9,
+     "song": "Dodger Blue",
+     "artist": "Kendrick Lamar Featuring Wallie the Sensei, Siete7x & Roddy Ricch"
+    },
+    {
+     "rank": 10,
+     "song": "Reincarnated",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 11,
+     "song": "Peekaboo",
+     "artist": "Kendrick Lamar Featuring AzChike"
+    },
+    {
+     "rank": 12,
+     "song": "Man At The Garden",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 13,
+     "song": "Heart Pt. 6",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 14,
+     "song": "Empty Out Your Pockets",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 15,
+     "song": "Gloria",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 16,
+     "song": "Like Him",
+     "artist": "Tyler, The Creator Featuring Lola Young"
+    },
+    {
+     "rank": 17,
+     "song": "Misfit",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 18,
+     "song": "GNX",
+     "artist": "Kendrick Lamar Featuring Hitta J3, YoungThreat & Peysoh"
+    },
+    {
+     "rank": 19,
+     "song": "TGIF",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 20,
+     "song": "Kehlani",
+     "artist": "Jordan Adetunji"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241217185911/https://www.billboard.com/charts/country-songs/",
+   "captured": "2024-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 2,
+     "song": "I Had Some Help",
+     "artist": "Post Malone Featuring Morgan Wallen"
+    },
+    {
+     "rank": 3,
+     "song": "Love Somebody",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 4,
+     "song": "I Am Not Okay",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 5,
+     "song": "High Road",
+     "artist": "Koe Wetzel & Jessie Murph"
+    },
+    {
+     "rank": 6,
+     "song": "Lies Lies Lies",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 7,
+     "song": "Wind Up Missin' You",
+     "artist": "Tucker Wetmore"
+    },
+    {
+     "rank": 8,
+     "song": "You Look Like You Love Me",
+     "artist": "Ella Langley Featuring Riley Green"
+    },
+    {
+     "rank": 9,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 10,
+     "song": "I Never Lie",
+     "artist": "Zach Top"
+    },
+    {
+     "rank": 11,
+     "song": "Liar",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 12,
+     "song": "I'm Gonna Love You",
+     "artist": "Cody Johnson & Carrie Underwood"
+    },
+    {
+     "rank": 13,
+     "song": "Pour Me A Drink",
+     "artist": "Post Malone Featuring Blake Shelton"
+    },
+    {
+     "rank": 14,
+     "song": "Good News",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 15,
+     "song": "4x4xU",
+     "artist": "Lainey Wilson"
+    },
+    {
+     "rank": 16,
+     "song": "Think I'm In Love With You",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 17,
+     "song": "Indigo",
+     "artist": "Sam Barber Featuring Avery Anna"
+    },
+    {
+     "rank": 18,
+     "song": "Guy For That",
+     "artist": "Post Malone Featuring Luke Combs"
+    },
+    {
+     "rank": 19,
+     "song": "Cowboy Songs",
+     "artist": "George Birge"
+    },
+    {
+     "rank": 20,
+     "song": "High Road",
+     "artist": "Zach Bryan"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241214022937/https://www.beatport.com/top-100",
+   "captured": "2024-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stephanie",
+     "artist": "Cloonee, Young M.A & InntRaw"
+    },
+    {
+     "rank": 2,
+     "song": "Say My Name (Extended Remix)",
+     "artist": "Florence + The Machine & Morgan Seatree"
+    },
+    {
+     "rank": 3,
+     "song": "Dirty Cash (Money Talks) (Extended Mix)",
+     "artist": "Adventures Of Stevie V & PAWSA"
+    },
+    {
+     "rank": 4,
+     "song": "Upside Down (Extended)",
+     "artist": "Eats Everything"
+    },
+    {
+     "rank": 5,
+     "song": "It Feels So Good (Extended Mix)",
+     "artist": "Sonique, Matt Sassari & Hugel"
+    },
+    {
+     "rank": 6,
+     "song": "This Rhythm (feat. RAHH) (feat. RAHH)",
+     "artist": "Prospa & RAHH"
+    },
+    {
+     "rank": 7,
+     "song": "Majnuna (Extended Mix)",
+     "artist": "Hugel, Randoree & GROSSOMODDO"
+    },
+    {
+     "rank": 8,
+     "song": "palm of my hands (Odd Mob Extended Remix)",
+     "artist": "John Summit & venbee"
+    },
+    {
+     "rank": 9,
+     "song": "Left To Right (James Hype Edit)",
+     "artist": "Klubbheads & Thomas Newson"
+    },
+    {
+     "rank": 10,
+     "song": "Say What (feat. Chuala) (feat. Chuala)",
+     "artist": "&ME, Rampa, Adam Port, Keinemusik & chuala"
+    },
+    {
+     "rank": 11,
+     "song": "Round + Round",
+     "artist": "Disrupta, Mila Falls & Sota"
+    },
+    {
+     "rank": 12,
+     "song": "MERTHER (Extended Mix)",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 13,
+     "song": "Valerie (Extended Mix)",
+     "artist": "CASSIMM"
+    },
+    {
+     "rank": 14,
+     "song": "Freak (Extended Mix)",
+     "artist": "Biscits"
+    },
+    {
+     "rank": 15,
+     "song": "Damager",
+     "artist": "Interplanetary Criminal & Sammy Virji"
+    },
+    {
+     "rank": 16,
+     "song": "Expensive Taste (Extended Mix)",
+     "artist": "HILLS (US)"
+    },
+    {
+     "rank": 17,
+     "song": "Firewhip (Viralata Mix)",
+     "artist": "Beltran (BR)"
+    },
+    {
+     "rank": 18,
+     "song": "Falling Back",
+     "artist": "Obskür"
+    },
+    {
+     "rank": 19,
+     "song": "TOO COOL TO BE CARELESS (Extended Mix)",
+     "artist": "PAWSA"
+    },
+    {
+     "rank": 20,
+     "song": "Set Me Free feat. Robert Courtois (Extended Mix)",
+     "artist": "Nic Fanciulli & Robert Courtois"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241214183413/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2024-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 2,
+     "song": "Apple",
+     "artist": "Charli xcx"
+    },
+    {
+     "rank": 3,
+     "song": "360",
+     "artist": "Charli xcx"
+    },
+    {
+     "rank": 4,
+     "song": "Guess",
+     "artist": "Charli xcx Featuring Billie Eilish"
+    },
+    {
+     "rank": 5,
+     "song": "Houdini",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 6,
+     "song": "Holiday Road",
+     "artist": "Kesha"
+    },
+    {
+     "rank": 7,
+     "song": "Forever Young",
+     "artist": "David Guetta, Alphaville & Ava Max"
+    },
+    {
+     "rank": 8,
+     "song": "Sympathy Is A Knife",
+     "artist": "Charli xcx Featuring Ariana Grande"
+    },
+    {
+     "rank": 9,
+     "song": "Move",
+     "artist": "Adam Port & Stryv Featuring Malachiii"
+    },
+    {
+     "rank": 10,
+     "song": "Sao Paulo",
+     "artist": "The Weeknd & Anitta"
+    },
+    {
+     "rank": 11,
+     "song": "365",
+     "artist": "Charli xcx Featuring Shygirl"
+    },
+    {
+     "rank": 12,
+     "song": "Under Your Spell",
+     "artist": "Snow Strippers"
+    },
+    {
+     "rank": 13,
+     "song": "Talk Talk",
+     "artist": "Charli xcx Featuring Troye Sivan"
+    },
+    {
+     "rank": 14,
+     "song": "Keep Up",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 15,
+     "song": "Funk Do Bounce",
+     "artist": "Ariis"
+    },
+    {
+     "rank": 16,
+     "song": "Girl, So Confusing",
+     "artist": "Charli xcx With Lorde"
+    },
+    {
+     "rank": 17,
+     "song": "Did I Tell U That I Miss U",
+     "artist": "adore"
+    },
+    {
+     "rank": 18,
+     "song": "Joyride",
+     "artist": "Kesha"
+    },
+    {
+     "rank": 19,
+     "song": "Bulletproof",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 20,
+     "song": "Pasaporte",
+     "artist": "Rauw Alejandro & Mr. Naisgai"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241213051206/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2024-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sad In Carolina",
+     "artist": "Dexter And The Moonrocks"
+    },
+    {
+     "rank": 2,
+     "song": "Dopamine",
+     "artist": "Sum 41"
+    },
+    {
+     "rank": 3,
+     "song": "Stargazing",
+     "artist": "Myles Smith"
+    },
+    {
+     "rank": 4,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 5,
+     "song": "The Emptiness Machine",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 6,
+     "song": "Bobby Sox",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 7,
+     "song": "Can't Slow Down",
+     "artist": "almost monday"
+    },
+    {
+     "rank": 8,
+     "song": "That's How I'm Feeling",
+     "artist": "Jack White"
+    },
+    {
+     "rank": 9,
+     "song": "A Tear In Space (Airlock)",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 10,
+     "song": "All In My Head",
+     "artist": "blink-182"
+    },
+    {
+     "rank": 11,
+     "song": "Detroit",
+     "artist": "Badflower"
+    },
+    {
+     "rank": 12,
+     "song": "Beaches",
+     "artist": "beabadoobee"
+    },
+    {
+     "rank": 13,
+     "song": "Ok, But This Is The Last Time",
+     "artist": "The Offspring"
+    },
+    {
+     "rank": 14,
+     "song": "A Fragile Thing",
+     "artist": "The Cure"
+    },
+    {
+     "rank": 15,
+     "song": "Sailor Song",
+     "artist": "Gigi Perez"
+    },
+    {
+     "rank": 16,
+     "song": "Arrow",
+     "artist": "The Head And The Heart"
+    },
+    {
+     "rank": 17,
+     "song": "Kinky",
+     "artist": "bby"
+    },
+    {
+     "rank": 18,
+     "song": "So Cold",
+     "artist": "Balu Brigada"
+    },
+    {
+     "rank": 19,
+     "song": "Neverender",
+     "artist": "Justice & Tame Impala"
+    },
+    {
+     "rank": 20,
+     "song": "Routines In The Night",
+     "artist": "Twenty One Pilots"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241211202928/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2024-12-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "tv off (w/ Lefty Gunplay )",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "luther",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "squabble up",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Rockin' Around The Christmas Tree",
+     "artist": "Brenda Lee"
+    },
+    {
+     "rank": 5,
+     "song": "Jingle Bell Rock",
+     "artist": "Bobby Helms"
+    },
+    {
+     "rank": 6,
+     "song": "All I Want for Christmas Is You",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 7,
+     "song": "Last Christmas",
+     "artist": "Wham!"
+    },
+    {
+     "rank": 8,
+     "song": "That’s So True",
+     "artist": "Gracie Abrams"
+    },
+    {
+     "rank": 9,
+     "song": "Die With A Smile (w/ Bruno Mars )",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 10,
+     "song": "Sticky (w/ GloRilla , Sexyy Red , Lil Wayne )",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 11,
+     "song": "Sailor Song",
+     "artist": "Gigi Perez"
+    },
+    {
+     "rank": 12,
+     "song": "It's the Most Wonderful Time of the Year",
+     "artist": "Andy Williams"
+    },
+    {
+     "rank": 13,
+     "song": "Let It Snow! Let It Snow! Let It Snow!",
+     "artist": "Dean Martin"
+    },
+    {
+     "rank": 14,
+     "song": "APT. (w/ Bruno Mars )",
+     "artist": "ROSÉ"
+    },
+    {
+     "rank": 15,
+     "song": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 16,
+     "song": "Santa Tell Me",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 17,
+     "song": "Who",
+     "artist": "Jimin"
+    },
+    {
+     "rank": 18,
+     "song": "hey now (w/ Dody6 )",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 19,
+     "song": "Timeless (w/ Playboi Carti )",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 20,
+     "song": "wacced out murals",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20241213005219/https://kworb.net/charts/itunes/us.html",
+   "captured": "2024-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "APT.",
+     "artist": "ROSÉ & Bruno Mars"
+    },
+    {
+     "rank": 2,
+     "song": "Don't Mind If I Do (feat. Ella Langley)",
+     "artist": "Riley Green"
+    },
+    {
+     "rank": 3,
+     "song": "All I Want for Christmas Is You",
+     "artist": "Mariah Carey"
+    },
+    {
+     "rank": 4,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 5,
+     "song": "Another Part Of Me",
+     "artist": "Snoop Dogg, Dr. Dre & Sting"
+    },
+    {
+     "rank": 6,
+     "song": "you look like you love me",
+     "artist": "Ella Langley & Riley Green"
+    },
+    {
+     "rank": 7,
+     "song": "Stargazing",
+     "artist": "Myles Smith"
+    },
+    {
+     "rank": 8,
+     "song": "Die With A Smile",
+     "artist": "Lady Gaga & Bruno Mars"
+    },
+    {
+     "rank": 9,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 10,
+     "song": "Love The Hell Out Of You (From The Motion Picture 'It Ends With Us')",
+     "artist": "Lewis Capaldi"
+    },
+    {
+     "rank": 11,
+     "song": "Rockin' Around the Christmas Tree",
+     "artist": "Brenda Lee"
+    },
+    {
+     "rank": 12,
+     "song": "Good News",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 13,
+     "song": "Lose Control",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 14,
+     "song": "Everybody Wants to Rule the World",
+     "artist": "Tears for Fears"
+    },
+    {
+     "rank": 15,
+     "song": "A Holly Jolly Christmas (Single Version)",
+     "artist": "Burl Ives"
+    },
+    {
+     "rank": 16,
+     "song": "Love Somebody",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 17,
+     "song": "The Sound of Silence",
+     "artist": "Disturbed"
+    },
+    {
+     "rank": 18,
+     "song": "I Am Not Okay",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 19,
+     "song": "Defying Gravity (feat. Ariana Grande)",
+     "artist": "Cynthia Erivo"
+    },
+    {
+     "rank": 20,
+     "song": "Last Christmas (Single Version)",
+     "artist": "Wham!"
+    }
+   ]
+  }
+ ]
+}

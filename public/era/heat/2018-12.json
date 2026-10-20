@@ -1,0 +1,731 @@
+{
+ "month": "2018-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20181215182801/https://www.hotnewhiphop.com/",
+   "captured": "2018-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Malcolm X.X.X.",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 2,
+     "song": "Save The Day",
+     "artist": "Ski Mask the Slump God & Jacquees Feat. LouGotCash"
+    },
+    {
+     "rank": 3,
+     "song": "Rain Dance",
+     "artist": "Kid Ink Feat. Valee & Fuzz Rico"
+    },
+    {
+     "rank": 4,
+     "song": "Raggamuffin",
+     "artist": "Koffee"
+    },
+    {
+     "rank": 5,
+     "song": "Gnarly",
+     "artist": "Kodak Black Feat. Lil Pump"
+    },
+    {
+     "rank": 6,
+     "song": "Startender",
+     "artist": "A Boogie Wit Da Hoodie Feat. Tyga & Offset"
+    },
+    {
+     "rank": 7,
+     "song": "Big Racks",
+     "artist": "Cassius Jay Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 8,
+     "song": "Eastside",
+     "artist": "Method Man Feat. Snoop Dogg & INTeLL"
+    },
+    {
+     "rank": 9,
+     "song": "Energy",
+     "artist": "Big K.R.I.T."
+    },
+    {
+     "rank": 10,
+     "song": "YUSO (Prod. By d.a. doman)",
+     "artist": "Kid Ink Feat. Lil Wayne & Saweetie"
+    },
+    {
+     "rank": 11,
+     "song": "Hide",
+     "artist": "Juice WRLD Feat. Seezyn"
+    },
+    {
+     "rank": 12,
+     "song": "That’s Yo Money",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 13,
+     "song": "imagine",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 14,
+     "song": "Where It’s At",
+     "artist": "Saba"
+    },
+    {
+     "rank": 15,
+     "song": "Chanel Slides",
+     "artist": "Dreezy Feat. Kash Doll"
+    },
+    {
+     "rank": 16,
+     "song": "White Parents Are Gonna Hate This",
+     "artist": "SAINt JHN"
+    },
+    {
+     "rank": 17,
+     "song": "Double Up",
+     "artist": "YFN Lucci Feat. Rich The Kid"
+    },
+    {
+     "rank": 18,
+     "song": "Solo De Mi",
+     "artist": "Bad Bunny"
+    },
+    {
+     "rank": 19,
+     "song": "All I Really Want For Christmas",
+     "artist": "Lil Jon Feat. Kool-Aid Man"
+    },
+    {
+     "rank": 20,
+     "song": "Alley Oop",
+     "artist": "Yung Gravy Feat. Lil Baby"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20181228010731/https://www.billboard.com/charts/rap-song",
+   "captured": "2018-12-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sunflower (Spider-Man: Into The Spider-Verse)",
+     "artist": "Post Malone & Swae Lee"
+    },
+    {
+     "rank": 2,
+     "song": "ZEZE",
+     "artist": "Kodak Black Featuring Travis Scott & Offset"
+    },
+    {
+     "rank": 3,
+     "song": "Drip Too Hard",
+     "artist": "Lil Baby & Gunna"
+    },
+    {
+     "rank": 4,
+     "song": "Wake Up In The Sky",
+     "artist": "Gucci Mane X Bruno Mars X Kodak Black"
+    },
+    {
+     "rank": 5,
+     "song": "Mo Bamba",
+     "artist": "Sheck Wes"
+    },
+    {
+     "rank": 6,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 7,
+     "song": "Going Bad",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 9,
+     "song": "Money",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 10,
+     "song": "Leave Me Alone",
+     "artist": "Flipp Dinero"
+    },
+    {
+     "rank": 11,
+     "song": "Calling My Spirit",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 12,
+     "song": "Uproar",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 13,
+     "song": "BAD!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 14,
+     "song": "Dangerous",
+     "artist": "Meek Mill Featuring Jeremih & PnB Rock"
+    },
+    {
+     "rank": 15,
+     "song": "Ring",
+     "artist": "Cardi B Featuring Kehlani"
+    },
+    {
+     "rank": 16,
+     "song": "MoshPit",
+     "artist": "Kodak Black Featuring Juice WRLD"
+    },
+    {
+     "rank": 17,
+     "song": "Armed And Dangerous",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 18,
+     "song": "Talk To Me",
+     "artist": "Tory Lanez & Rich The Kid"
+    },
+    {
+     "rank": 19,
+     "song": "FEFE",
+     "artist": "6ix9ine Featuring Nicki Minaj & Murda Beatz"
+    },
+    {
+     "rank": 20,
+     "song": "Backin' It Up",
+     "artist": "Pardison Fontaine Featuring Cardi B"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20181216162034/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2018-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Going Bad",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "ZEZE",
+     "artist": "Kodak Black Featuring Travis Scott & Offset"
+    },
+    {
+     "rank": 3,
+     "song": "Drip Too Hard",
+     "artist": "Lil Baby & Gunna"
+    },
+    {
+     "rank": 4,
+     "song": "Mo Bamba",
+     "artist": "Sheck Wes"
+    },
+    {
+     "rank": 5,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 6,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 7,
+     "song": "Sunflower (Spider-Man: Into The Spider-Verse)",
+     "artist": "Post Malone & Swae Lee"
+    },
+    {
+     "rank": 8,
+     "song": "Wake Up In The Sky",
+     "artist": "Gucci Mane X Bruno Mars X Kodak Black"
+    },
+    {
+     "rank": 9,
+     "song": "What's Free",
+     "artist": "Meek Mill Featuring Rick Ross & JAY-Z"
+    },
+    {
+     "rank": 10,
+     "song": "Trip",
+     "artist": "Ella Mai"
+    },
+    {
+     "rank": 11,
+     "song": "Money",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 12,
+     "song": "On Me",
+     "artist": "Meek Mill Featuring Cardi B"
+    },
+    {
+     "rank": 13,
+     "song": "Dangerous",
+     "artist": "Meek Mill Featuring Jeremih & PnB Rock"
+    },
+    {
+     "rank": 14,
+     "song": "Leave Me Alone",
+     "artist": "Flipp Dinero"
+    },
+    {
+     "rank": 15,
+     "song": "Better",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 16,
+     "song": "Uptown Vibes",
+     "artist": "Meek Mill Featuring Fabolous & Anuel AA"
+    },
+    {
+     "rank": 17,
+     "song": "MAMA",
+     "artist": "6ix9ine Featuring Nicki Minaj & Kanye West"
+    },
+    {
+     "rank": 18,
+     "song": "KIKA",
+     "artist": "6ix9ine Featuring Tory Lanez"
+    },
+    {
+     "rank": 19,
+     "song": "Pure Cocaine",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 20,
+     "song": "Uproar",
+     "artist": "Lil Wayne"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20181217081236/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "thank u, next",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 2,
+     "song": "Don’t Come Out the House",
+     "artist": "Metro Boomin"
+    },
+    {
+     "rank": 3,
+     "song": "This Time Around",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 4,
+     "song": "Wanted",
+     "artist": "Sheck Wes"
+    },
+    {
+     "rank": 5,
+     "song": "High [ft. Elton John]",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 6,
+     "song": "Honey",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 7,
+     "song": "Heaven",
+     "artist": "Charly Bliss"
+    },
+    {
+     "rank": 8,
+     "song": "symbol",
+     "artist": "Adrianne Lenker"
+    },
+    {
+     "rank": 9,
+     "song": "New Patek",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 10,
+     "song": "Venice Bitch",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 11,
+     "song": "Ace [ft. Smino and Saba]",
+     "artist": "Noname"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20181213163549/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "She Got The Best Of Me",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 2,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 3,
+     "song": "Lose It",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Meant To Be",
+     "artist": "Bebe Rexha & Florida Georgia Line"
+    },
+    {
+     "rank": 5,
+     "song": "Drunk Me",
+     "artist": "Mitchell Tenpenny"
+    },
+    {
+     "rank": 6,
+     "song": "Best Shot",
+     "artist": "Jimmie Allen"
+    },
+    {
+     "rank": 7,
+     "song": "Burning Man",
+     "artist": "Dierks Bentley Featuring Brothers Osborne"
+    },
+    {
+     "rank": 8,
+     "song": "Good Girl",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 9,
+     "song": "Sixteen",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 10,
+     "song": "Girl Like You",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 11,
+     "song": "Last Shot",
+     "artist": "Kip Moore"
+    },
+    {
+     "rank": 12,
+     "song": "This Is It",
+     "artist": "Scotty McCreery"
+    },
+    {
+     "rank": 13,
+     "song": "Turnin' Me On",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 14,
+     "song": "Millionaire",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 15,
+     "song": "Beautiful Crazy",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 16,
+     "song": "Take It From Me",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 17,
+     "song": "Desperate Man",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 18,
+     "song": "Down To The Honkytonk",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 19,
+     "song": "What Makes You Country",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 20,
+     "song": "Burn Out",
+     "artist": "Midland"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20181211120609/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2018-12-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Taki Taki",
+     "artist": "DJ Snake Featuring Selena Gomez, Ozuna & Cardi B"
+    },
+    {
+     "rank": 2,
+     "song": "The Middle",
+     "artist": "Zedd, Maren Morris & Grey"
+    },
+    {
+     "rank": 3,
+     "song": "This Feeling",
+     "artist": "The Chainsmokers Featuring Kelsea Ballerini"
+    },
+    {
+     "rank": 4,
+     "song": "Close To Me",
+     "artist": "Ellie Goulding X Diplo Featuring Swae Lee"
+    },
+    {
+     "rank": 5,
+     "song": "Electricity",
+     "artist": "Silk City x Dua Lipa"
+    },
+    {
+     "rank": 6,
+     "song": "Jackie Chan",
+     "artist": "Tiesto & Dzeko Featuring Preme & Post Malone"
+    },
+    {
+     "rank": 7,
+     "song": "One Kiss",
+     "artist": "Calvin Harris & Dua Lipa"
+    },
+    {
+     "rank": 8,
+     "song": "Promises",
+     "artist": "Calvin Harris & Sam Smith"
+    },
+    {
+     "rank": 9,
+     "song": "Waste It On Me",
+     "artist": "Steve Aoki Featuring BTS"
+    },
+    {
+     "rank": 10,
+     "song": "Darkside",
+     "artist": "Alan Walker Featuring Au/Ra & Tomine Harket"
+    },
+    {
+     "rank": 11,
+     "song": "Say My Name",
+     "artist": "David Guetta, Bebe Rexha & J Balvin"
+    },
+    {
+     "rank": 12,
+     "song": "Happy Now",
+     "artist": "Kygo Featuring Sandro Cavazza"
+    },
+    {
+     "rank": 13,
+     "song": "Ocean",
+     "artist": "Martin Garrix Featuring Khalid"
+    },
+    {
+     "rank": 14,
+     "song": "Toy",
+     "artist": "Netta"
+    },
+    {
+     "rank": 15,
+     "song": "I Found You",
+     "artist": "Benny Blanco & Calvin Harris"
+    },
+    {
+     "rank": 16,
+     "song": "In My Mind",
+     "artist": "Dynoro & Gigi D'Agostino"
+    },
+    {
+     "rank": 17,
+     "song": "Happy Now",
+     "artist": "Zedd & Elley Duhe"
+    },
+    {
+     "rank": 18,
+     "song": "Beach House",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 19,
+     "song": "Don't Leave Me Alone",
+     "artist": "David Guetta Featuring Anne-Marie"
+    },
+    {
+     "rank": 20,
+     "song": "Jaleo",
+     "artist": "Nicky Jam & Steve Aoki"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20181213145626/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2018-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 2,
+     "song": "My Blood",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 3,
+     "song": "Guiding Light",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 4,
+     "song": "Natural",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 5,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 6,
+     "song": "You're Somebody Else",
+     "artist": "flora cash"
+    },
+    {
+     "rank": 7,
+     "song": "She's Kerosene",
+     "artist": "The Interrupters"
+    },
+    {
+     "rank": 8,
+     "song": "You Should See Me In A Crown",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 9,
+     "song": "All My Friends",
+     "artist": "The Revivalists"
+    },
+    {
+     "rank": 10,
+     "song": "Pressure",
+     "artist": "Muse"
+    },
+    {
+     "rank": 11,
+     "song": "These Are My Friends",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 12,
+     "song": "Can't Knock The Hustle",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 13,
+     "song": "Body Talks",
+     "artist": "The Struts"
+    },
+    {
+     "rank": 14,
+     "song": "Burn The House Down",
+     "artist": "AJR"
+    },
+    {
+     "rank": 15,
+     "song": "Love It If We Made It",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 16,
+     "song": "Superposition",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 17,
+     "song": "\"99\"",
+     "artist": "Barns Courtney"
+    },
+    {
+     "rank": 18,
+     "song": "Shame",
+     "artist": "Elle King"
+    },
+    {
+     "rank": 19,
+     "song": "Back Down",
+     "artist": "Bob Moses"
+    },
+    {
+     "rank": 20,
+     "song": "Worst Nites",
+     "artist": "Foster The People"
+    }
+   ]
+  }
+ ]
+}

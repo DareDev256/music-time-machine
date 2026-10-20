@@ -1,0 +1,886 @@
+{
+ "month": "2024-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240516193611/https://hypem.com/popular",
+   "captured": "2024-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hex",
+     "artist": "Jon Mckiel"
+    },
+    {
+     "rank": 2,
+     "song": "The Games You Play",
+     "artist": "Broadcast"
+    },
+    {
+     "rank": 3,
+     "song": "Moonlight Shuffle",
+     "artist": "Patrick Jahn & Erobique"
+    },
+    {
+     "rank": 4,
+     "song": "Apathy",
+     "artist": "White Poppy"
+    },
+    {
+     "rank": 5,
+     "song": "Tire Swing",
+     "artist": "M. Vaughan"
+    },
+    {
+     "rank": 6,
+     "song": "Burning In Our Name",
+     "artist": "Max Blansjaar"
+    },
+    {
+     "rank": 7,
+     "song": "Put On",
+     "artist": "Galcher Lustwerk"
+    },
+    {
+     "rank": 8,
+     "song": "Frog In Boiling Water",
+     "artist": "DIIV"
+    },
+    {
+     "rank": 9,
+     "song": "Brother's Gonna Work It Out +1 remix",
+     "artist": "Willie Hutch"
+    },
+    {
+     "rank": 10,
+     "song": "Living is Easy",
+     "artist": "Agriculture"
+    },
+    {
+     "rank": 11,
+     "song": "Long Way Home",
+     "artist": "Myriam Gendron"
+    },
+    {
+     "rank": 12,
+     "song": "Christmas Dream",
+     "artist": "Old Sea Brigade"
+    },
+    {
+     "rank": 13,
+     "song": "This Corrosion",
+     "artist": "Lambchop"
+    },
+    {
+     "rank": 14,
+     "song": "Different Than",
+     "artist": "A Giant Dog"
+    },
+    {
+     "rank": 15,
+     "song": "Meant to Be",
+     "artist": "Sound of Fractures"
+    },
+    {
+     "rank": 16,
+     "song": "Would Be",
+     "artist": "Las Nubes"
+    },
+    {
+     "rank": 17,
+     "song": "Deep Call",
+     "artist": "Coral Morphologic & Nick León"
+    },
+    {
+     "rank": 18,
+     "song": "Bad Company",
+     "artist": "Yazmin Lacey"
+    },
+    {
+     "rank": 19,
+     "song": "Unlimited",
+     "artist": "Khotin"
+    },
+    {
+     "rank": 20,
+     "song": "Malik Al Shabazz and the People of the Shahada",
+     "artist": "Wadada Leo Smith"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515002353/https://www.billboard.com/charts/rap-song/",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Euphoria",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Like That",
+     "artist": "Future, Metro Boomin & Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Family Matters",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Meet The Grahams",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Push Ups",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 8,
+     "song": "Get It Sexyy",
+     "artist": "Sexyy Red"
+    },
+    {
+     "rank": 9,
+     "song": "Type Shit",
+     "artist": "Future, Metro Boomin, Travis Scott & Playboi Carti"
+    },
+    {
+     "rank": 10,
+     "song": "Yeah Glo!",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 11,
+     "song": "Wanna Be",
+     "artist": "GloRilla & Megan Thee Stallion"
+    },
+    {
+     "rank": 12,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 13,
+     "song": "Redrum",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 14,
+     "song": "Never Lose Me",
+     "artist": "Flo Milli"
+    },
+    {
+     "rank": 15,
+     "song": "Carnival",
+     "artist": "¥$: Ye & Ty Dolla $ign Featuring Rich The Kid & Playboi Carti"
+    },
+    {
+     "rank": 16,
+     "song": "FE!N",
+     "artist": "Travis Scott Featuring Playboi Carti"
+    },
+    {
+     "rank": 17,
+     "song": "Get In With Me",
+     "artist": "BossMan DLow"
+    },
+    {
+     "rank": 18,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 19,
+     "song": "Tell Ur Girlfriend",
+     "artist": "Lay Bankz"
+    },
+    {
+     "rank": 20,
+     "song": "Bandit",
+     "artist": "Don Toliver"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515225241/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Million Dollar Baby",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 3,
+     "song": "Euphoria",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Like That",
+     "artist": "Future, Metro Boomin & Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Family Matters",
+     "artist": "Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Meet The Grahams",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 7,
+     "song": "Saturn",
+     "artist": "SZA"
+    },
+    {
+     "rank": 8,
+     "song": "Push Ups",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Lovin On Me",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 10,
+     "song": "Get It Sexyy",
+     "artist": "Sexyy Red"
+    },
+    {
+     "rank": 11,
+     "song": "Type Shit",
+     "artist": "Future, Metro Boomin, Travis Scott & Playboi Carti"
+    },
+    {
+     "rank": 12,
+     "song": "Yeah Glo!",
+     "artist": "GloRilla"
+    },
+    {
+     "rank": 13,
+     "song": "Wanna Be",
+     "artist": "GloRilla & Megan Thee Stallion"
+    },
+    {
+     "rank": 14,
+     "song": "Whatever She Wants",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 15,
+     "song": "Redrum",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 16,
+     "song": "Never Lose Me",
+     "artist": "Flo Milli"
+    },
+    {
+     "rank": 17,
+     "song": "Act II: Date @ 8",
+     "artist": "4Batz Featuring Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Carnival",
+     "artist": "¥$: Ye & Ty Dolla $ign Featuring Rich The Kid & Playboi Carti"
+    },
+    {
+     "rank": 19,
+     "song": "Made For Me",
+     "artist": "Muni Long"
+    },
+    {
+     "rank": 20,
+     "song": "FE!N",
+     "artist": "Travis Scott Featuring Playboi Carti"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515112020/https://www.billboard.com/charts/country-songs/",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 2,
+     "song": "I Remember Everything",
+     "artist": "Zach Bryan Featuring Kacey Musgraves"
+    },
+    {
+     "rank": 3,
+     "song": "Austin",
+     "artist": "Dasha"
+    },
+    {
+     "rank": 4,
+     "song": "Texas Hold 'Em",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 5,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 6,
+     "song": "Cowgirls",
+     "artist": "Morgan Wallen Featuring ERNEST"
+    },
+    {
+     "rank": 7,
+     "song": "Where The Wild Things Are",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 8,
+     "song": "Where It Ends",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 9,
+     "song": "Wild Ones",
+     "artist": "Jessie Murph & Jelly Roll"
+    },
+    {
+     "rank": 10,
+     "song": "Wildflowers And Wild Horses",
+     "artist": "Lainey Wilson"
+    },
+    {
+     "rank": 11,
+     "song": "Bulletproof",
+     "artist": "Nate Smith"
+    },
+    {
+     "rank": 12,
+     "song": "Back Then Right Now",
+     "artist": "Tyler Hubbard"
+    },
+    {
+     "rank": 13,
+     "song": "Tucson Too Late",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 14,
+     "song": "Halfway To Hell",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 15,
+     "song": "Wind Up Missin' You",
+     "artist": "Tucker Wetmore"
+    },
+    {
+     "rank": 16,
+     "song": "We Ride",
+     "artist": "Bryan Martin"
+    },
+    {
+     "rank": 17,
+     "song": "Dirt Cheap",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 18,
+     "song": "Wine Into Whiskey",
+     "artist": "Tucker Wetmore"
+    },
+    {
+     "rank": 19,
+     "song": "II Most Wanted",
+     "artist": "Beyonce & Miley Cyrus"
+    },
+    {
+     "rank": 20,
+     "song": "Spin You Around (1/24)",
+     "artist": "Morgan Wallen"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240516192728/https://www.beatport.com/top-100",
+   "captured": "2024-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Waiting For Tonight (Extended Mix)",
+     "artist": "Jennifer Lopez & FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "How You Feel",
+     "artist": "ANOTR, Leven Kali & Erik Bandt"
+    },
+    {
+     "rank": 3,
+     "song": "It's Not Right But It's Okay (Extended)",
+     "artist": "Mr. Belt & Wezol"
+    },
+    {
+     "rank": 4,
+     "song": "Summertime Blues (Extended Mix)",
+     "artist": "Chris Lake, Nathan Nicholson & Sammy Virji"
+    },
+    {
+     "rank": 5,
+     "song": "Amana",
+     "artist": "Maz (BR) & VXSION"
+    },
+    {
+     "rank": 6,
+     "song": "Pedro (Extended Mix)",
+     "artist": "Raffaella Carra, Agatino Romero & Jaxomy"
+    },
+    {
+     "rank": 7,
+     "song": "Bitch, Don't Kill My Vibe (Extended Mix)",
+     "artist": "Liquid Rose & Trace (UZ)"
+    },
+    {
+     "rank": 8,
+     "song": "Lights Out (Extended Mix)",
+     "artist": "Max Styler"
+    },
+    {
+     "rank": 9,
+     "song": "On Again",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 10,
+     "song": "PATT (Party All The Time) (Adam Beyer, Layton Giordani & Green Velvet Remix)",
+     "artist": "Sharam"
+    },
+    {
+     "rank": 11,
+     "song": "Your Love (Diplo Remix)",
+     "artist": "Diplo & The Outfield"
+    },
+    {
+     "rank": 12,
+     "song": "Locomotiv",
+     "artist": "Formula & T-Lex"
+    },
+    {
+     "rank": 13,
+     "song": "You & Me (Rivo Extended Mix)",
+     "artist": "Disclosure & Eliza Doolittle"
+    },
+    {
+     "rank": 14,
+     "song": "Shake It (Extended Mix)",
+     "artist": "Wuki & Trace (UZ)"
+    },
+    {
+     "rank": 15,
+     "song": "Last Night (Extended Mix)",
+     "artist": "Loofy"
+    },
+    {
+     "rank": 16,
+     "song": "The Drill",
+     "artist": "Liva K"
+    },
+    {
+     "rank": 17,
+     "song": "Needin' U (Extended Mix)",
+     "artist": "David Morales, Wh0, Sam Frandisco & Steve Martano"
+    },
+    {
+     "rank": 18,
+     "song": "Buscando Money (HUGEL & Jesús Fernández Extended Remix)",
+     "artist": "Tayson Kryss & TWENTY SIX"
+    },
+    {
+     "rank": 19,
+     "song": "TAKA (Extended Mix)",
+     "artist": "Skrillex, Ahadadream, Priya Ragu & contra (US)"
+    },
+    {
+     "rank": 20,
+     "song": "Thandaza (feat. Alan Dixon, Arabic Piano)",
+     "artist": "&ME, Rampa, Adam Port, Keinemusik, Alan Dixon & Arabic Piano"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515164008/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 2,
+     "song": "Illusion",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 3,
+     "song": "Houdini",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 4,
+     "song": "Training Season",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 5,
+     "song": "Yes, And?",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 6,
+     "song": "I Don't Wanna Wait",
+     "artist": "David Guetta & OneRepublic"
+    },
+    {
+     "rank": 7,
+     "song": "Back On 74",
+     "artist": "Jungle"
+    },
+    {
+     "rank": 8,
+     "song": "Contigo",
+     "artist": "Karol G & Tiesto"
+    },
+    {
+     "rank": 9,
+     "song": "Whatever",
+     "artist": "Kygo With Ava Max"
+    },
+    {
+     "rank": 10,
+     "song": "Strangers",
+     "artist": "Kenya Grace"
+    },
+    {
+     "rank": 11,
+     "song": "Murder On The Dancefloor",
+     "artist": "Sophie Ellis-Bextor"
+    },
+    {
+     "rank": 12,
+     "song": "Falling Forever",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 13,
+     "song": "Addicted",
+     "artist": "ZERB, The Chainsmokers & Ink"
+    },
+    {
+     "rank": 14,
+     "song": "Neverender",
+     "artist": "Justice & Tame Impala"
+    },
+    {
+     "rank": 15,
+     "song": "For Life",
+     "artist": "Kygo With Zak Abel & Nile Rodgers"
+    },
+    {
+     "rank": 16,
+     "song": "Pedro",
+     "artist": "Jaxomy, Agatino Romero & Raffaella Carra"
+    },
+    {
+     "rank": 17,
+     "song": "These Words",
+     "artist": "Badger & Natasha Bedingfield"
+    },
+    {
+     "rank": 18,
+     "song": "Faster N Harder",
+     "artist": "6arelyhuman"
+    },
+    {
+     "rank": 19,
+     "song": "Shiver",
+     "artist": "John Summit & Hayla"
+    },
+    {
+     "rank": 20,
+     "song": "Teka",
+     "artist": "DJ Snake & Peso Pluma"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515223126/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dilemma",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 2,
+     "song": "Overcompensate",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 3,
+     "song": "Neon Pill",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 4,
+     "song": "Eyes Closed",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 5,
+     "song": "Landmines",
+     "artist": "Sum 41"
+    },
+    {
+     "rank": 6,
+     "song": "Murder On The Dancefloor (triple j Like A Version)",
+     "artist": "Royel Otis"
+    },
+    {
+     "rank": 7,
+     "song": "The Glass",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 8,
+     "song": "Mustang",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 9,
+     "song": "End Of Beginning",
+     "artist": "Djo"
+    },
+    {
+     "rank": 10,
+     "song": "Creatures In Heaven",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 11,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 12,
+     "song": "Scared To Start",
+     "artist": "Michael Marcagi"
+    },
+    {
+     "rank": 13,
+     "song": "One More Time",
+     "artist": "blink-182"
+    },
+    {
+     "rank": 14,
+     "song": "Wreckage",
+     "artist": "Pearl Jam"
+    },
+    {
+     "rank": 15,
+     "song": "Tiny Moves",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 16,
+     "song": "Broken Man",
+     "artist": "St. Vincent"
+    },
+    {
+     "rank": 17,
+     "song": "Leave A Light On",
+     "artist": "Papa Roach"
+    },
+    {
+     "rank": 18,
+     "song": "Pretty Vicious",
+     "artist": "The Struts"
+    },
+    {
+     "rank": 19,
+     "song": "Friendly Fire",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 20,
+     "song": "Home",
+     "artist": "Good Neighbours"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20240515233551/https://kworb.net/charts/itunes/us.html",
+   "captured": "2024-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Had Some Help (feat. Morgan Wallen)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 2,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 3,
+     "song": "MILLION DOLLAR BABY",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 4,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Lose Control",
+     "artist": "Teddy Swims"
+    },
+    {
+     "rank": 6,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 7,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 8,
+     "song": "Feel Like Hell Today",
+     "artist": "Cooper Alan"
+    },
+    {
+     "rank": 9,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 10,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 11,
+     "song": "Stargazing",
+     "artist": "Myles Smith"
+    },
+    {
+     "rank": 12,
+     "song": "Espresso",
+     "artist": "Sabrina Carpenter"
+    },
+    {
+     "rank": 13,
+     "song": "I Had Some Help (feat. Morgan Wallen)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 14,
+     "song": "Fortnight (feat. Post Malone)",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 15,
+     "song": "euphoria",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 16,
+     "song": "MILLION DOLLAR BABY (VHS)",
+     "artist": "Tommy Richman"
+    },
+    {
+     "rank": 17,
+     "song": "HIND'S HALL",
+     "artist": "Macklemore"
+    },
+    {
+     "rank": 18,
+     "song": "Ronald",
+     "artist": "Falling In Reverse, Tech N9ne & Alex Terrible"
+    },
+    {
+     "rank": 19,
+     "song": "Austin",
+     "artist": "Dasha"
+    },
+    {
+     "rank": 20,
+     "song": "White Horse",
+     "artist": "Chris Stapleton"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "month": "2008-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080129174407/http://www.hotnewhiphop.com:80/?",
+   "captured": "2008-01-29",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Just Fine (Official Remix)",
+     "artist": "Mary J. Blidge Feat. Swizz Beatz & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Another Day In Paradise (Stargate Mix 2008)",
+     "artist": "Brandy & Ray J"
+    },
+    {
+     "rank": 3,
+     "song": "Sexual Eruption Remix (Feat. Robyn)",
+     "artist": "Snoop Dogg"
+    },
+    {
+     "rank": 4,
+     "song": "Feels Good To Be Here",
+     "artist": "Shawty Lo"
+    },
+    {
+     "rank": 5,
+     "song": "Another Brick",
+     "artist": "Shawty Lo"
+    },
+    {
+     "rank": 6,
+     "song": "Bottom Girl",
+     "artist": "G-Unit"
+    },
+    {
+     "rank": 7,
+     "song": "Southside Nigga (I'm Leavin)",
+     "artist": "G-Unit"
+    },
+    {
+     "rank": 8,
+     "song": "Devil In A Dress (Feat. Ja Rule & Harry-O)",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 9,
+     "song": "I Want You (Feat. Pleasure P)",
+     "artist": "Xplicit"
+    },
+    {
+     "rank": 10,
+     "song": "Blind To You (NY Giants Dub Mix)",
+     "artist": "Collie Buddz"
+    },
+    {
+     "rank": 11,
+     "song": "Scream",
+     "artist": "Papoose"
+    },
+    {
+     "rank": 12,
+     "song": "My Own Way",
+     "artist": "Sammie"
+    },
+    {
+     "rank": 13,
+     "song": "Good 2 You",
+     "artist": "Brain McKnight"
+    },
+    {
+     "rank": 14,
+     "song": "You Know",
+     "artist": "I-15"
+    },
+    {
+     "rank": 15,
+     "song": "Rep My Zone",
+     "artist": "Shawty Lo"
+    },
+    {
+     "rank": 16,
+     "song": "Hig Maintenence",
+     "artist": "Shawty Lo"
+    },
+    {
+     "rank": 17,
+     "song": "Can U Feel It",
+     "artist": "XL"
+    },
+    {
+     "rank": 18,
+     "song": "Hard To Kill",
+     "artist": "Uncle Murder"
+    },
+    {
+     "rank": 19,
+     "song": "Livin Tha Life",
+     "artist": "Prodigy"
+    },
+    {
+     "rank": 20,
+     "song": "Creepin Low",
+     "artist": "G-Unit Philly"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080115093741/http://hypem.com:80/popular?",
+   "captured": "2008-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "1234 (My! Gay! Husband! Get Up Kid Edit)",
+     "artist": "Feist"
+    },
+    {
+     "rank": 2,
+     "song": "She Dares All Things",
+     "artist": "Panda Riot"
+    },
+    {
+     "rank": 3,
+     "song": "Skeleton Song",
+     "artist": "Kate Nash"
+    },
+    {
+     "rank": 4,
+     "song": "And It Rained All Night Burial Remix",
+     "artist": "Thom Yorke"
+    },
+    {
+     "rank": 5,
+     "song": "I'm Free (Hot Chip Remix)",
+     "artist": "The Rolling Stones"
+    },
+    {
+     "rank": 6,
+     "song": "Hide And Seek",
+     "artist": "Imogen Heap"
+    },
+    {
+     "rank": 7,
+     "song": "Like Flowers At Night",
+     "artist": "Panda Riot"
+    },
+    {
+     "rank": 8,
+     "song": "Fortune Teller",
+     "artist": "Robert Plant & Alison Krauss"
+    },
+    {
+     "rank": 9,
+     "song": "the nicest thing",
+     "artist": "kate nash"
+    },
+    {
+     "rank": 10,
+     "song": "Rebellion (Lies)",
+     "artist": "The Arcade Fire"
+    },
+    {
+     "rank": 11,
+     "song": "foundations",
+     "artist": "kate nash"
+    },
+    {
+     "rank": 12,
+     "song": "We Don't Matter",
+     "artist": "Tu Mama"
+    },
+    {
+     "rank": 13,
+     "song": "The Lunatics (Have Taken over the Asylum)",
+     "artist": "Fun Boy Three"
+    },
+    {
+     "rank": 14,
+     "song": "Camera (SebastiAn Remix)",
+     "artist": "Editors"
+    },
+    {
+     "rank": 15,
+     "song": "The Limit To Your Love",
+     "artist": "Feist"
+    },
+    {
+     "rank": 16,
+     "song": "Foundations (Metronomy Remix)",
+     "artist": "Kate Nash"
+    },
+    {
+     "rank": 17,
+     "song": "Daft Punk Is Playing At My House (Soulwax Shibuya Re-Remix)",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 18,
+     "song": "Can't Help Falling in Love (Elvis cover)",
+     "artist": "Eels"
+    },
+    {
+     "rank": 19,
+     "song": "House Of Cards",
+     "artist": "Radiohead"
+    },
+    {
+     "rank": 20,
+     "song": "Kiss Kiss (A!AN AST0R Remix)",
+     "artist": "Chris Brown feat T. Pain"
+    }
+   ]
+  }
+ ]
+}

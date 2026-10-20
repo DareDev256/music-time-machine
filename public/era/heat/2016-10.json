@@ -1,0 +1,936 @@
+{
+ "month": "2016-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161018002208/http://www.hotnewhiphop.com/top100/",
+   "captured": "2016-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Let Me Explain",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 2,
+     "song": "Light It Up",
+     "artist": "Big Sean & 2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "Circles",
+     "artist": "Pusha T Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 4,
+     "song": "Key To The Streets (Remix)",
+     "artist": "YFN Lucci Feat. 2 Chainz"
+    },
+    {
+     "rank": 5,
+     "song": "Do You Mind",
+     "artist": "DJ Khaled Feat. Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "H.G.T.V. (Prod. By Mike Will Made It)",
+     "artist": "Pusha T"
+    },
+    {
+     "rank": 7,
+     "song": "Timmy Turner (Remix) (Official/CDQ)",
+     "artist": "Desiigner Feat. Kanye West"
+    },
+    {
+     "rank": 8,
+     "song": "Blue Jay Season",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 9,
+     "song": "Brand New (Prod. By ISM & Geoffro)",
+     "artist": "Ty Dolla $ign & Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "Icy Lil Bitch (Prod. By Zaytoven)",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 11,
+     "song": "Dang!",
+     "artist": "Mac Miller Feat. Anderson .Paak"
+    },
+    {
+     "rank": 12,
+     "song": "Famous (Alternate/Original)",
+     "artist": "Kanye West Feat. Young Thug"
+    },
+    {
+     "rank": 13,
+     "song": "Girls Wanna Have Fun (Prod. By London On Da Track)",
+     "artist": "Usher Feat. Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "Radar",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 15,
+     "song": "Outlet (Preview) (Prod. By Vinylz & CT)",
+     "artist": "Desiigner & DJ SpinKing"
+    },
+    {
+     "rank": 16,
+     "song": "Mark My Words",
+     "artist": "Nipsey Hussle Feat. Rick Ross"
+    },
+    {
+     "rank": 17,
+     "song": "Paid For",
+     "artist": "French Montana Feat. Max B"
+    },
+    {
+     "rank": 18,
+     "song": "Intro",
+     "artist": "DJ Drama Feat. Lil Wayne"
+    },
+    {
+     "rank": 19,
+     "song": "Too Bad I Have To Destroy You Now (Demo)",
+     "artist": "Kid Cudi Feat. Kanye West"
+    },
+    {
+     "rank": 20,
+     "song": "Dont Wanna Know (Prod. By Benny Blanco)",
+     "artist": "Maroon 5 Feat. Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161014153001/http://hypem.com/popular",
+   "captured": "2016-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "ALL NIGHT (KAYTRANADA EXTENDED JOINT)",
+     "artist": "KAYTRANADA"
+    },
+    {
+     "rank": 2,
+     "song": "Phone Down",
+     "artist": "Lost Kings"
+    },
+    {
+     "rank": 3,
+     "song": "Innerbloom Lane 8 Remix",
+     "artist": "RÜFÜS"
+    },
+    {
+     "rank": 4,
+     "song": "Days Of Lavender AMTRAC REMIX",
+     "artist": "Promises Ltd."
+    },
+    {
+     "rank": 5,
+     "song": "Quantum Immortality",
+     "artist": "Crywolf"
+    },
+    {
+     "rank": 6,
+     "song": "SOLANGE - CRANES IN THE SKY KAYTRANADA DJ EDIT",
+     "artist": "KAYTRANADA"
+    },
+    {
+     "rank": 7,
+     "song": "White Ferrari JG Edit",
+     "artist": "Jacques Greene"
+    },
+    {
+     "rank": 8,
+     "song": "Tokyo Drift",
+     "artist": "mallrat"
+    },
+    {
+     "rank": 9,
+     "song": "All Night (feat. Knox Fortune)",
+     "artist": "Chance The Rapper"
+    },
+    {
+     "rank": 10,
+     "song": "L'Amour le Jour (radio edit)",
+     "artist": "Le Couleur"
+    },
+    {
+     "rank": 11,
+     "song": "Stay (feat. Chelsea Cutler)",
+     "artist": "Chet Porter"
+    },
+    {
+     "rank": 12,
+     "song": "Trouble",
+     "artist": "Girl Ray"
+    },
+    {
+     "rank": 13,
+     "song": "Names",
+     "artist": "Von Sell"
+    },
+    {
+     "rank": 14,
+     "song": "Paradise Awaits RUFUS Remix",
+     "artist": "ZHU"
+    },
+    {
+     "rank": 15,
+     "song": "In The Morning",
+     "artist": "Kaskade Vs ZHU"
+    },
+    {
+     "rank": 16,
+     "song": "Only",
+     "artist": "Sunday"
+    },
+    {
+     "rank": 17,
+     "song": "Bushmills",
+     "artist": "Yppah"
+    },
+    {
+     "rank": 18,
+     "song": "D E E P in N Y (feat. D.O.C. & Goodmorning)",
+     "artist": "B O B B Y N O U R M A N D"
+    },
+    {
+     "rank": 19,
+     "song": "Learning To Fly",
+     "artist": "DEEP SEA ARCADE"
+    },
+    {
+     "rank": 20,
+     "song": "For Real",
+     "artist": "mallrat"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161014173935/http://www.billboard.com/charts/rap-song",
+   "captured": "2016-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Broccoli",
+     "artist": "D.R.A.M. Featuring Lil Yachty"
+    },
+    {
+     "rank": 2,
+     "song": "Too Good",
+     "artist": "Drake Featuring Rihanna"
+    },
+    {
+     "rank": 3,
+     "song": "Sucker For Pain",
+     "artist": "Lil Wayne, Wiz Khalifa & Imagine Dragons With Logic & Ty Dolla $ign Feat. X Ambassadors"
+    },
+    {
+     "rank": 4,
+     "song": "OOOUUU",
+     "artist": "Young M.A"
+    },
+    {
+     "rank": 5,
+     "song": "Panda",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 6,
+     "song": "Tiimmy Turner",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 7,
+     "song": "For Free",
+     "artist": "DJ Khaled Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Black Beatles",
+     "artist": "Rae Sremmurd Featuring Gucci Mane"
+    },
+    {
+     "rank": 9,
+     "song": "Chill Bill",
+     "artist": "Rob $tone Featuring J. Davi$ & Spooks"
+    },
+    {
+     "rank": 10,
+     "song": "Caroline",
+     "artist": "Amine"
+    },
+    {
+     "rank": 11,
+     "song": "Pick Up The Phone",
+     "artist": "Young Thug And Travis Scott Featuring Quavo"
+    },
+    {
+     "rank": 12,
+     "song": "No Problem",
+     "artist": "Chance The Rapper Featuring Lil Wayne & 2 Chainz"
+    },
+    {
+     "rank": 13,
+     "song": "Do You Mind",
+     "artist": "DJ Khaled Featuring Nicki Minaj, Chris Brown & August Alsina"
+    },
+    {
+     "rank": 14,
+     "song": "Father Stretch My Hands Pt. 1",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 15,
+     "song": "1 Night",
+     "artist": "Lil Yachty"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161015092131/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2016-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Starboy",
+     "artist": "The Weeknd Featuring Daft Punk"
+    },
+    {
+     "rank": 2,
+     "song": "Broccoli",
+     "artist": "D.R.A.M. Featuring Lil Yachty"
+    },
+    {
+     "rank": 3,
+     "song": "Needed Me",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 4,
+     "song": "One Dance",
+     "artist": "Drake Featuring WizKid & Kyla"
+    },
+    {
+     "rank": 5,
+     "song": "Too Good",
+     "artist": "Drake Featuring Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "Luv",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 7,
+     "song": "Sucker For Pain",
+     "artist": "Lil Wayne, Wiz Khalifa & Imagine Dragons With Logic & Ty Dolla $ign Feat. X Ambassadors"
+    },
+    {
+     "rank": 8,
+     "song": "OOOUUU",
+     "artist": "Young M.A"
+    },
+    {
+     "rank": 9,
+     "song": "Panda",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 10,
+     "song": "Tiimmy Turner",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 11,
+     "song": "Controlla",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "For Free",
+     "artist": "DJ Khaled Featuring Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Black Beatles",
+     "artist": "Rae Sremmurd Featuring Gucci Mane"
+    },
+    {
+     "rank": 14,
+     "song": "No Limit",
+     "artist": "Usher Featuring Young Thug"
+    },
+    {
+     "rank": 15,
+     "song": "Chill Bill",
+     "artist": "Rob $tone Featuring J. Davi$ & Spooks"
+    },
+    {
+     "rank": 16,
+     "song": "Caroline",
+     "artist": "Amine"
+    },
+    {
+     "rank": 17,
+     "song": "Pick Up The Phone",
+     "artist": "Young Thug And Travis Scott Featuring Quavo"
+    },
+    {
+     "rank": 18,
+     "song": "No Problem",
+     "artist": "Chance The Rapper Featuring Lil Wayne & 2 Chainz"
+    },
+    {
+     "rank": 19,
+     "song": "Do You Mind",
+     "artist": "DJ Khaled Featuring Nicki Minaj, Chris Brown & August Alsina"
+    },
+    {
+     "rank": 20,
+     "song": "Fade",
+     "artist": "Kanye West"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20161016035805/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2016-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "JJ",
+     "artist": "Priests"
+    },
+    {
+     "rank": 2,
+     "song": "Get Bigger/ Do U Luv",
+     "artist": "NxWorries"
+    },
+    {
+     "rank": 3,
+     "song": "Cranes in the Sky",
+     "artist": "Solange"
+    },
+    {
+     "rank": 4,
+     "song": "Don't Touch My Hair [ft. Sampha]",
+     "artist": "Solange"
+    },
+    {
+     "rank": 5,
+     "song": "Lonely World",
+     "artist": "Moses Sumney"
+    },
+    {
+     "rank": 6,
+     "song": "Told You I'd Be With the Guys",
+     "artist": "Cherry Glazerr"
+    },
+    {
+     "rank": 7,
+     "song": "Really Doe [ft. Kendrick Lamar, Ab-Soul, and Earl Sweatshirt]",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 8,
+     "song": "Lyk Dis",
+     "artist": "NxWorries"
+    },
+    {
+     "rank": 9,
+     "song": "I Need You",
+     "artist": "Nick Cave & the Bad Seeds"
+    },
+    {
+     "rank": 10,
+     "song": "Lonesome Sound",
+     "artist": "Merchandise"
+    },
+    {
+     "rank": 11,
+     "song": "Do You Need My Love",
+     "artist": "Weyes Blood"
+    },
+    {
+     "rank": 12,
+     "song": "CBM",
+     "artist": "Kelly Lee Owens"
+    },
+    {
+     "rank": 13,
+     "song": "Blood on Me",
+     "artist": "Sampha"
+    },
+    {
+     "rank": 14,
+     "song": "33 ‘GOD’",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 15,
+     "song": "Drowning [ft. BADBADNOTGOOD]",
+     "artist": "Mick Jenkins"
+    },
+    {
+     "rank": 16,
+     "song": "Dear Tommy",
+     "artist": "Chromatics"
+    },
+    {
+     "rank": 17,
+     "song": "Kanye West",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 18,
+     "song": "Prima Donna [ft. A$AP Rocky]",
+     "artist": "Vince Staples"
+    },
+    {
+     "rank": 19,
+     "song": "Sister",
+     "artist": "Angel Olsen"
+    },
+    {
+     "rank": 20,
+     "song": "Bum Bum Bum",
+     "artist": "Cass McCombs"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161013081538/http://www.billboard.com/charts/country-songs",
+   "captured": "2016-10-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Setting The World On Fire",
+     "artist": "Kenny Chesney Featuring P!nk"
+    },
+    {
+     "rank": 2,
+     "song": "Blue Ain't Your Color",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 3,
+     "song": "It Don't Hurt Like It Used To",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 4,
+     "song": "Middle Of A Memory",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 5,
+     "song": "H.O.L.Y.",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 6,
+     "song": "Move",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 7,
+     "song": "I Know Somebody",
+     "artist": "LoCash"
+    },
+    {
+     "rank": 8,
+     "song": "May We All",
+     "artist": "Florida Georgia Line Featuring Tim McGraw"
+    },
+    {
+     "rank": 9,
+     "song": "I Met A Girl",
+     "artist": "William Michael Morgan"
+    },
+    {
+     "rank": 10,
+     "song": "Rock On",
+     "artist": "Tucker Beathard"
+    },
+    {
+     "rank": 11,
+     "song": "Vice",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 12,
+     "song": "A Little More Summertime",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 13,
+     "song": "Different For Girls",
+     "artist": "Dierks Bentley Featuring Elle King"
+    },
+    {
+     "rank": 14,
+     "song": "Sleep Without You",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 15,
+     "song": "Forever Country",
+     "artist": "Artists Of Then, Now & Forever"
+    },
+    {
+     "rank": 16,
+     "song": "Song For Another Time",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 17,
+     "song": "Wanna Be That Song",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 18,
+     "song": "80s Mercedes",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 19,
+     "song": "Lovin' Lately",
+     "artist": "Big & Rich Featuring Tim McGraw"
+    },
+    {
+     "rank": 20,
+     "song": "How I'll Always Be",
+     "artist": "Tim McGraw"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161012233158/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2016-10-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Closer",
+     "artist": "The Chainsmokers Featuring Halsey"
+    },
+    {
+     "rank": 2,
+     "song": "Cold Water",
+     "artist": "Major Lazer Featuring Justin Bieber & MO"
+    },
+    {
+     "rank": 3,
+     "song": "Let Me Love You",
+     "artist": "DJ Snake Featuring Justin Bieber"
+    },
+    {
+     "rank": 4,
+     "song": "Don't Let Me Down",
+     "artist": "The Chainsmokers Featuring Daya"
+    },
+    {
+     "rank": 5,
+     "song": "This Is What You Came For",
+     "artist": "Calvin Harris Featuring Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "My Way",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 7,
+     "song": "In The Name Of Love",
+     "artist": "Martin Garrix & Bebe Rexha"
+    },
+    {
+     "rank": 8,
+     "song": "This Girl",
+     "artist": "Kungs vs Cookin' On 3 Burners"
+    },
+    {
+     "rank": 9,
+     "song": "Never Be Like You",
+     "artist": "Flume Featuring Kai"
+    },
+    {
+     "rank": 10,
+     "song": "Purple Lamborghini",
+     "artist": "Skrillex & Rick Ross"
+    },
+    {
+     "rank": 11,
+     "song": "Alone",
+     "artist": "Marshmello"
+    },
+    {
+     "rank": 12,
+     "song": "Perfect Strangers",
+     "artist": "Jonas Blue Featuring JP Cooper"
+    },
+    {
+     "rank": 13,
+     "song": "The Ocean",
+     "artist": "Mike Perry Featuring Shy Martin"
+    },
+    {
+     "rank": 14,
+     "song": "Let Me Hold You (Turn Me On)",
+     "artist": "Cheat Codes & Dante Klein"
+    },
+    {
+     "rank": 15,
+     "song": "Bailar",
+     "artist": "Deorro Featuring Elvis Crespo"
+    },
+    {
+     "rank": 16,
+     "song": "Ignite (2016 League Of Legends World Championship)",
+     "artist": "Zedd"
+    },
+    {
+     "rank": 17,
+     "song": "Inside Out",
+     "artist": "The Chainsmokers Featuring Charlee"
+    },
+    {
+     "rank": 18,
+     "song": "Love On Me",
+     "artist": "Galantis & Hook N Sling"
+    },
+    {
+     "rank": 19,
+     "song": "Believer",
+     "artist": "Major Lazer & Showtek"
+    },
+    {
+     "rank": 20,
+     "song": "Whole Heart",
+     "artist": "Gryffin And Bipolar Sunshine"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161015001332/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2016-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heathens",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Good Grief",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 3,
+     "song": "Bang Bang",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 4,
+     "song": "All We Ever Knew",
+     "artist": "The Head And The Heart"
+    },
+    {
+     "rank": 5,
+     "song": "Trouble",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 6,
+     "song": "You Don't Get Me High Anymore",
+     "artist": "Phantogram"
+    },
+    {
+     "rank": 7,
+     "song": "Waste A Moment",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 8,
+     "song": "Way Down We Go",
+     "artist": "Kaleo"
+    },
+    {
+     "rank": 9,
+     "song": "Bored To Death",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 10,
+     "song": "River",
+     "artist": "Bishop Briggs"
+    },
+    {
+     "rank": 11,
+     "song": "Ophelia",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 12,
+     "song": "Welcome To Your Life",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 13,
+     "song": "Take It All Back",
+     "artist": "Judah & The Lion"
+    },
+    {
+     "rank": 14,
+     "song": "Life Itself",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 15,
+     "song": "Ride",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 16,
+     "song": "Sure And Certain",
+     "artist": "Jimmy Eat World"
+    },
+    {
+     "rank": 17,
+     "song": "High And Low",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 18,
+     "song": "Wow",
+     "artist": "Beck"
+    },
+    {
+     "rank": 19,
+     "song": "Low Life",
+     "artist": "X Ambassadors Featuring Jamie N Commons"
+    },
+    {
+     "rank": 20,
+     "song": "Talk Too Much",
+     "artist": "COIN"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20161018033932/http://2dopeboyz.com/",
+   "captured": "2016-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "D4L",
+     "artist": "Sevyn Streeter feat. The-Dream"
+    },
+    {
+     "rank": 2,
+     "song": "Check On Me",
+     "artist": "DJ Esco feat. Future & Fabolous"
+    },
+    {
+     "rank": 3,
+     "song": "Die For It",
+     "artist": "GhostWridah"
+    },
+    {
+     "rank": 4,
+     "song": "6:50 Demo",
+     "artist": "Marion Write feat. LP"
+    },
+    {
+     "rank": 5,
+     "song": "3AM",
+     "artist": "OnCue"
+    },
+    {
+     "rank": 6,
+     "song": "Last Soldier",
+     "artist": "James Fauntleroy"
+    },
+    {
+     "rank": 7,
+     "song": "Pull Up",
+     "artist": "Migos"
+    },
+    {
+     "rank": 8,
+     "song": "How Long",
+     "artist": "Davido feat. Tinashe"
+    },
+    {
+     "rank": 9,
+     "song": "I Gotta Ask",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 10,
+     "song": "Black Woman Is God",
+     "artist": "The Black Opera"
+    },
+    {
+     "rank": 11,
+     "song": "Runnin 3x",
+     "artist": "24hrs"
+    },
+    {
+     "rank": 12,
+     "song": "Huey Knew",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 13,
+     "song": "No Sleep",
+     "artist": "Eearz feat. Chief Keef"
+    }
+   ]
+  }
+ ]
+}

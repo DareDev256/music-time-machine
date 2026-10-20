@@ -173,6 +173,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141113163229/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2014-11-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hot Boy",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 2,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 3,
+     "song": "I Don't F**k With You",
+     "artist": "Big Sean Featuring E-40"
+    },
+    {
+     "rank": 4,
+     "song": "Lifestyle",
+     "artist": "Rich Gang Featuring Young Thug & Rich Homie Quan"
+    },
+    {
+     "rank": 5,
+     "song": "No Type",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 6,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Only",
+     "artist": "Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "i",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 9,
+     "song": "0 To 100 / The Catch Up",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Try Me",
+     "artist": "DeJ Loaf"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -229,6 +289,221 @@
      "rank": 10,
      "song": "Hold You Down",
      "artist": "DJ Khaled Featuring Chris Brown, August Alsina, Future & Jeremih"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20141116151855/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2014-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Content Nausea",
+     "artist": "Parkay Quarts"
+    },
+    {
+     "rank": 2,
+     "song": "Ice Princess",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 3,
+     "song": "Hit Em",
+     "artist": "Migos"
+    },
+    {
+     "rank": 4,
+     "song": "Bored in the USA",
+     "artist": "Father John Misty"
+    },
+    {
+     "rank": 5,
+     "song": "Back, Baby",
+     "artist": "Jessica Pratt"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141116154247/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2014-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Something In The Water",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 2,
+     "song": "Burnin' It Down",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 3,
+     "song": "Leave The Night On",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 4,
+     "song": "Day Drinking",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 5,
+     "song": "Neon Light",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 6,
+     "song": "Somewhere In My Car",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 7,
+     "song": "Shotgun Rider",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 8,
+     "song": "Girl In A Country Song",
+     "artist": "Maddie & Tae"
+    },
+    {
+     "rank": 9,
+     "song": "Dirt",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 10,
+     "song": "Sunshine & Whiskey",
+     "artist": "Frankie Ballard"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141113164244/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2014-11-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blame",
+     "artist": "Calvin Harris Featuring John Newman"
+    },
+    {
+     "rank": 2,
+     "song": "Rather Be",
+     "artist": "Clean Bandit Featuring Jess Glynne"
+    },
+    {
+     "rank": 3,
+     "song": "Waves",
+     "artist": "Mr. Probz"
+    },
+    {
+     "rank": 4,
+     "song": "Break Free",
+     "artist": "Ariana Grande Featuring Zedd"
+    },
+    {
+     "rank": 5,
+     "song": "Heroes (We Could Be)",
+     "artist": "Alesso Featuring Tove Lo"
+    },
+    {
+     "rank": 6,
+     "song": "A Sky Full Of Stars",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 7,
+     "song": "Turn Down For What",
+     "artist": "DJ Snake & Lil Jon"
+    },
+    {
+     "rank": 8,
+     "song": "Summer",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 9,
+     "song": "Dangerous",
+     "artist": "David Guetta Featuring Sam Martin"
+    },
+    {
+     "rank": 10,
+     "song": "Outside",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141116233031/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2014-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stolen Dance",
+     "artist": "Milky Chance"
+    },
+    {
+     "rank": 2,
+     "song": "Take Me To Church",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 3,
+     "song": "Something From Nothing",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 4,
+     "song": "Left Hand Free",
+     "artist": "alt-J"
+    },
+    {
+     "rank": 5,
+     "song": "Riptide",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 6,
+     "song": "Flaws",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 7,
+     "song": "Dangerous",
+     "artist": "Big Data Featuring Joywave"
+    },
+    {
+     "rank": 8,
+     "song": "Centuries",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 9,
+     "song": "Gotta Get Away",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 10,
+     "song": "Yellow Flicker Beat",
+     "artist": "Lorde"
     }
    ]
   }

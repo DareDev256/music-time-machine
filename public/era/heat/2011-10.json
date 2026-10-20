@@ -341,6 +341,226 @@
      "artist": "Drake"
     }
    ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111015014432/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2011-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Long Hot Summer",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 2,
+     "song": "Made In America",
+     "artist": "Toby Keith"
+    },
+    {
+     "rank": 3,
+     "song": "God Gave Me You",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 4,
+     "song": "Here For A Good Time",
+     "artist": "George Strait"
+    },
+    {
+     "rank": 5,
+     "song": "Take A Back Road",
+     "artist": "Rodney Atkins"
+    },
+    {
+     "rank": 6,
+     "song": "Crazy Girl",
+     "artist": "Eli Young Band"
+    },
+    {
+     "rank": 7,
+     "song": "Just Fishin'",
+     "artist": "Trace Adkins"
+    },
+    {
+     "rank": 8,
+     "song": "Barefoot Blue Jean Night",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 9,
+     "song": "Sparks Fly",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 10,
+     "song": "Baggage Claim",
+     "artist": "Miranda Lambert"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111016235037/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2011-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Walk",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 2,
+     "song": "The Adventures Of Rain Danc...",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 3,
+     "song": "The Sound Of Winter",
+     "artist": "Bush"
+    },
+    {
+     "rank": 4,
+     "song": "Up All Night",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 5,
+     "song": "Pumped Up Kicks",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 6,
+     "song": "Make It Stop (September's Ch...",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 7,
+     "song": "Sail",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 8,
+     "song": "Cough Syrup",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 9,
+     "song": "Irresistible Force",
+     "artist": "Jane's Addiction"
+    },
+    {
+     "rank": 10,
+     "song": "Helena Beat",
+     "artist": "Foster The People"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111015034428/http://www.2dopeboyz.com:80/",
+   "captured": "2011-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Grand Experiment",
+     "artist": "Doomtree"
+    },
+    {
+     "rank": 2,
+     "song": "Fly Together f. Rick Ross & Ryan Leslie",
+     "artist": "Red Cafe"
+    },
+    {
+     "rank": 3,
+     "song": "Live At the Tunnel",
+     "artist": "Aasim"
+    },
+    {
+     "rank": 4,
+     "song": "All The Shine",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 5,
+     "song": "Prob’s A Problem f. Snoop Dogg",
+     "artist": "Problem"
+    },
+    {
+     "rank": 6,
+     "song": "Quickie (rmx) f. Big Sean",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "College Girl",
+     "artist": "Phil Ade"
+    },
+    {
+     "rank": 8,
+     "song": "Girls Like You",
+     "artist": "Miguel"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111020222940/http://pigeonsandplanes.com:80/?",
+   "captured": "2011-10-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Undiscovered First",
+     "artist": "Feist"
+    },
+    {
+     "rank": 2,
+     "song": "LightWork",
+     "artist": "Lupe Fiasco (ft. Ellie Goulding x Bassnectar)"
+    },
+    {
+     "rank": 3,
+     "song": "Eatfish",
+     "artist": "Gonjasufi ft. Blu"
+    },
+    {
+     "rank": 4,
+     "song": "Bigger Than You",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 5,
+     "song": "Epic",
+     "artist": "B.o.B ft. Playboy Tre & Meek Mill"
+    },
+    {
+     "rank": 6,
+     "song": "Oblivion",
+     "artist": "Grimes"
+    },
+    {
+     "rank": 7,
+     "song": "We Found Love",
+     "artist": "Rihanna ft. Calvin Harris"
+    },
+    {
+     "rank": 8,
+     "song": "Stay Gold (AraabMUZIK Remix)",
+     "artist": "The Big Pink"
+    }
+   ]
   }
  ]
 }

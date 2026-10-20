@@ -1,0 +1,951 @@
+{
+ "month": "2022-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220913081431/https://www.hotnewhiphop.com/top100/",
+   "captured": "2022-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Game 6",
+     "artist": "Dave East"
+    },
+    {
+     "rank": 2,
+     "song": "Early Mornings",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 3,
+     "song": "Warm Up (The Game Diss Track)",
+     "artist": "Pat Stay Feat. Kaleb Simmonds"
+    },
+    {
+     "rank": 4,
+     "song": "Purge Me",
+     "artist": "NBA Youngboy"
+    },
+    {
+     "rank": 5,
+     "song": "Upgrade U",
+     "artist": "Beyoncé Feat. Jay-Z"
+    },
+    {
+     "rank": 6,
+     "song": "Super Freaky Girl (Queen mix)",
+     "artist": "Nicki Minaj Feat. JT"
+    },
+    {
+     "rank": 7,
+     "song": "Plan B (Remix)",
+     "artist": "Megan Thee Stallion Feat. Lil Kim"
+    },
+    {
+     "rank": 8,
+     "song": "Our Destiny",
+     "artist": "A$AP Rocky Feat. Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Outside",
+     "artist": "Bryson Tiller"
+    },
+    {
+     "rank": 10,
+     "song": "Walk Out",
+     "artist": "Prodigy Feat. DJ Premier"
+    },
+    {
+     "rank": 11,
+     "song": "More Thoughts (2019)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 12,
+     "song": "Freak Like Me/Surprise (Spotify Singles)",
+     "artist": "Chlöe"
+    },
+    {
+     "rank": 13,
+     "song": "Detox",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 14,
+     "song": "Ghetto Superstar (Prod. By DJ Mustard & Southside)",
+     "artist": "Roddy Ricch Feat. Doe Boy"
+    },
+    {
+     "rank": 15,
+     "song": "Shoot It Myself",
+     "artist": "EST Gee Feat. Future"
+    },
+    {
+     "rank": 16,
+     "song": "Leak It",
+     "artist": "Ari Lennox Feat. Chlöe"
+    },
+    {
+     "rank": 17,
+     "song": "Backwords Part 2",
+     "artist": "Joyner Lucas Feat. Funk Flex"
+    },
+    {
+     "rank": 18,
+     "song": "Rounds",
+     "artist": "John Legend Feat. Rick Ross"
+    },
+    {
+     "rank": 19,
+     "song": "Body & A Face",
+     "artist": "Baka Not Nice"
+    },
+    {
+     "rank": 20,
+     "song": "No Limit",
+     "artist": "Money Man , Key Glock & Yung Bleu Feat. Babyface Ray"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220915192804/https://hypem.com/popular",
+   "captured": "2022-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Give No Fucks",
+     "artist": "DRAMA"
+    },
+    {
+     "rank": 2,
+     "song": "Freelance",
+     "artist": "Toro y Moi"
+    },
+    {
+     "rank": 3,
+     "song": "Naked +1 remix",
+     "artist": "TOKiMONSTA"
+    },
+    {
+     "rank": 4,
+     "song": "You, Still",
+     "artist": "the FRIGHTNRS"
+    },
+    {
+     "rank": 5,
+     "song": "Feelings",
+     "artist": "TAEHEE"
+    },
+    {
+     "rank": 6,
+     "song": "UPSIDE DOWN",
+     "artist": "Karaboudjan"
+    },
+    {
+     "rank": 7,
+     "song": "Gonna Lose",
+     "artist": "Built To Spill"
+    },
+    {
+     "rank": 8,
+     "song": "John Cage (Edit)",
+     "artist": "Ross From Friends"
+    },
+    {
+     "rank": 9,
+     "song": "dayaway",
+     "artist": "dayaway"
+    },
+    {
+     "rank": 10,
+     "song": "Fortune Teller",
+     "artist": "sea lemon"
+    },
+    {
+     "rank": 11,
+     "song": "Van Gogh",
+     "artist": "Pr0files"
+    },
+    {
+     "rank": 12,
+     "song": "Vitamin C +1 remix",
+     "artist": "Can"
+    },
+    {
+     "rank": 13,
+     "song": "Do My Thing",
+     "artist": "thea"
+    },
+    {
+     "rank": 14,
+     "song": "Sussudio NICOLAAS Remix",
+     "artist": "Phil Collins"
+    },
+    {
+     "rank": 15,
+     "song": "Subete Urimono",
+     "artist": "Aunt Sally"
+    },
+    {
+     "rank": 16,
+     "song": "Into The Silence feat. DíSA",
+     "artist": "Trentemøller"
+    },
+    {
+     "rank": 17,
+     "song": "Richard III",
+     "artist": "Supergrass"
+    },
+    {
+     "rank": 18,
+     "song": "SNAP TO IT!",
+     "artist": "Close Counters"
+    },
+    {
+     "rank": 19,
+     "song": "Silence is Golden",
+     "artist": "The Beths"
+    },
+    {
+     "rank": 20,
+     "song": "It's Not Just Me, It's Everybody",
+     "artist": "Weyes Blood"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220918092800/https://www.billboard.com/charts/rap-song/",
+   "captured": "2022-09-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Super Freaky Girl",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Wait For U",
+     "artist": "Future Featuring Drake & Tems"
+    },
+    {
+     "rank": 3,
+     "song": "First Class",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 4,
+     "song": "Vegas",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 5,
+     "song": "Jimmy Cooks",
+     "artist": "Drake Featuring 21 Savage"
+    },
+    {
+     "rank": 6,
+     "song": "Detox",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 7,
+     "song": "Staying Alive",
+     "artist": "DJ Khaled Featuring Drake & Lil Baby"
+    },
+    {
+     "rank": 8,
+     "song": "Betty (Get Money)",
+     "artist": "Yung Gravy"
+    },
+    {
+     "rank": 9,
+     "song": "In A Minute",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 10,
+     "song": "Talk",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 11,
+     "song": "God Did",
+     "artist": "DJ Khaled Featuring Rick Ross, Lil Wayne, JAY-Z, John Legend & Fridayy"
+    },
+    {
+     "rank": 12,
+     "song": "Dah Dah DahDah",
+     "artist": "Nardo Wick"
+    },
+    {
+     "rank": 13,
+     "song": "Hot Shit",
+     "artist": "Cardi B, Ye & Lil Durk"
+    },
+    {
+     "rank": 14,
+     "song": "Sleazy Flow",
+     "artist": "SleazyWorld Go Featuring Lil Baby"
+    },
+    {
+     "rank": 15,
+     "song": "F.N.F. (Let's Go)",
+     "artist": "Hitkidd & GloRilla"
+    },
+    {
+     "rank": 16,
+     "song": "Beat The Odds",
+     "artist": "Lil Tjay"
+    },
+    {
+     "rank": 17,
+     "song": "Sticky",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Beautiful",
+     "artist": "DJ Khaled Featuring Future & SZA"
+    },
+    {
+     "rank": 19,
+     "song": "Alone",
+     "artist": "Rod Wave"
+    },
+    {
+     "rank": 20,
+     "song": "Sweetest Pie",
+     "artist": "Megan Thee Stallion & Dua Lipa"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220917191743/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2022-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad Habit",
+     "artist": "Steve Lacy"
+    },
+    {
+     "rank": 2,
+     "song": "About Damn Time",
+     "artist": "Lizzo"
+    },
+    {
+     "rank": 3,
+     "song": "Super Freaky Girl",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Wait For U",
+     "artist": "Future Featuring Drake & Tems"
+    },
+    {
+     "rank": 5,
+     "song": "Break My Soul",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 6,
+     "song": "First Class",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 7,
+     "song": "Jimmy Cooks",
+     "artist": "Drake Featuring 21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "Detox",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 9,
+     "song": "Staying Alive",
+     "artist": "DJ Khaled Featuring Drake & Lil Baby"
+    },
+    {
+     "rank": 10,
+     "song": "In A Minute",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 11,
+     "song": "Talk",
+     "artist": "Yeat"
+    },
+    {
+     "rank": 12,
+     "song": "God Did",
+     "artist": "DJ Khaled Featuring Rick Ross, Lil Wayne, JAY-Z, John Legend & Fridayy"
+    },
+    {
+     "rank": 13,
+     "song": "Dah Dah DahDah",
+     "artist": "Nardo Wick"
+    },
+    {
+     "rank": 14,
+     "song": "Under The Influence",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 15,
+     "song": "Die For You",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 16,
+     "song": "Hot Shit",
+     "artist": "Cardi B, Ye & Lil Durk"
+    },
+    {
+     "rank": 17,
+     "song": "Free Mind",
+     "artist": "Tems"
+    },
+    {
+     "rank": 18,
+     "song": "Sleazy Flow",
+     "artist": "SleazyWorld Go Featuring Lil Baby"
+    },
+    {
+     "rank": 19,
+     "song": "F.N.F. (Let's Go)",
+     "artist": "Hitkidd & GloRilla"
+    },
+    {
+     "rank": 20,
+     "song": "Beat The Odds",
+     "artist": "Lil Tjay"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20220920172518/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2022-09-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bull Believer",
+     "artist": "Wednesday"
+    },
+    {
+     "rank": 2,
+     "song": "Midnight Legend [ft. Mykki Blanco]",
+     "artist": "Special Interest"
+    },
+    {
+     "rank": 3,
+     "song": "Virgo’s Groove",
+     "artist": "Beyoncé"
+    },
+    {
+     "rank": 4,
+     "song": "Gotsta Get Paid",
+     "artist": "Rico Nasty"
+    },
+    {
+     "rank": 5,
+     "song": "Let the Lights On",
+     "artist": "Sorry"
+    },
+    {
+     "rank": 6,
+     "song": "Pharmacist",
+     "artist": "Alvvays"
+    },
+    {
+     "rank": 7,
+     "song": "Cash In Cash Out [ft. 21 Savage and Tyler, the Creator]",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 8,
+     "song": "Spitting Off the Edge of the World [ft. Perfume Genius]",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 9,
+     "song": "Weather Alive",
+     "artist": "Beth Orton"
+    },
+    {
+     "rank": 10,
+     "song": "Mother I Sober [ft. Beth Gibbons]",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 11,
+     "song": "The Heart Part 5",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220914103527/https://www.billboard.com/charts/country-songs/",
+   "captured": "2022-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "You Proof",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 2,
+     "song": "The Kind Of Love We Make",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 3,
+     "song": "Wasted On You",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 4,
+     "song": "She Had Me At Heads Carolina",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 5,
+     "song": "5 Foot 9",
+     "artist": "Tyler Hubbard"
+    },
+    {
+     "rank": 6,
+     "song": "Last Night Lonely",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 7,
+     "song": "Something In The Orange",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 8,
+     "song": "Rock And A Hard Place",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 9,
+     "song": "Son Of A Sinner",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 10,
+     "song": "Fall In Love",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 11,
+     "song": "Truth About You",
+     "artist": "Mitchell Tenpenny"
+    },
+    {
+     "rank": 12,
+     "song": "With A Woman You Love",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 13,
+     "song": "Like I Love Country Music",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 14,
+     "song": "Wishful Drinking",
+     "artist": "Ingrid Andress With Sam Hunt"
+    },
+    {
+     "rank": 15,
+     "song": "Pick Me Up",
+     "artist": "Gabby Barrett"
+    },
+    {
+     "rank": 16,
+     "song": "Whiskey On You",
+     "artist": "Nate Smith"
+    },
+    {
+     "rank": 17,
+     "song": "She Likes It",
+     "artist": "Russell Dickerson & Jake Scott"
+    },
+    {
+     "rank": 18,
+     "song": "Ghost Story",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 19,
+     "song": "Where It Ends",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 20,
+     "song": "What My World Spins Around",
+     "artist": "Jordan Davis"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220917191842/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2022-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Break My Soul",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 2,
+     "song": "Hold Me Closer",
+     "artist": "Elton John & Britney Spears"
+    },
+    {
+     "rank": 3,
+     "song": "Numb",
+     "artist": "Marshmello & Khalid"
+    },
+    {
+     "rank": 4,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 5,
+     "song": "I'm Good (Blue)",
+     "artist": "David Guetta & Bebe Rexha"
+    },
+    {
+     "rank": 6,
+     "song": "Bzrp Music Sessions, Vol. 52",
+     "artist": "Bizarrap & Quevedo"
+    },
+    {
+     "rank": 7,
+     "song": "Don't You Worry",
+     "artist": "Black Eyed Peas, Shakira + David Guetta"
+    },
+    {
+     "rank": 8,
+     "song": "Murder In My Mind",
+     "artist": "Kordhell"
+    },
+    {
+     "rank": 9,
+     "song": "Massive",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Make You Say",
+     "artist": "Zedd, Maren Morris & BEAUZ"
+    },
+    {
+     "rank": 11,
+     "song": "Thique",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 12,
+     "song": "Pure/Honey",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 13,
+     "song": "Summer Renaissance",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 14,
+     "song": "All That Really Matters",
+     "artist": "ILLENIUM & Teddy Swims"
+    },
+    {
+     "rank": 15,
+     "song": "Stay With Me",
+     "artist": "Calvin Harris, Justin Timberlake, Halsey & Pharrell Williams"
+    },
+    {
+     "rank": 16,
+     "song": "Ferrari",
+     "artist": "James Hype & Miggy Dela Rosa"
+    },
+    {
+     "rank": 17,
+     "song": "B.O.T.A. (Baddest Of Them All)",
+     "artist": "Eliza Rose & Interplanetary Criminal"
+    },
+    {
+     "rank": 18,
+     "song": "Escape",
+     "artist": "Kx5 Featuring Hayla"
+    },
+    {
+     "rank": 19,
+     "song": "Lost Without You",
+     "artist": "Kygo With Dean Lewis"
+    },
+    {
+     "rank": 20,
+     "song": "Nazareno",
+     "artist": "Farruko"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220915143553/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2022-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Boy",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 2,
+     "song": "Bones",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Clarity",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 4,
+     "song": "Supermodel",
+     "artist": "Maneskin"
+    },
+    {
+     "rank": 5,
+     "song": "Here To Forever",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 6,
+     "song": "Ramon Ayala",
+     "artist": "Giovannie & The Hired Guns"
+    },
+    {
+     "rank": 7,
+     "song": "Life's Been Good",
+     "artist": "Dirty Heads"
+    },
+    {
+     "rank": 8,
+     "song": "Tippa My Tongue",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 9,
+     "song": "Running Up That Hill (A Deal With God)",
+     "artist": "Kate Bush"
+    },
+    {
+     "rank": 10,
+     "song": "I Won't",
+     "artist": "AJR"
+    },
+    {
+     "rank": 11,
+     "song": "Tek It",
+     "artist": "Cafune"
+    },
+    {
+     "rank": 12,
+     "song": "Black Summer",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 13,
+     "song": "Enemy",
+     "artist": "Imagine Dragons X JID"
+    },
+    {
+     "rank": 14,
+     "song": "Sex, Drugs, Etc.",
+     "artist": "Beach Weather"
+    },
+    {
+     "rank": 15,
+     "song": "What's The Trick?",
+     "artist": "Jack White"
+    },
+    {
+     "rank": 16,
+     "song": "Want Want",
+     "artist": "Maggie Rogers"
+    },
+    {
+     "rank": 17,
+     "song": "Don't Let The Light Go Out",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 18,
+     "song": "Cracker Island",
+     "artist": "Gorillaz Featuring Thundercat"
+    },
+    {
+     "rank": 19,
+     "song": "Grace",
+     "artist": "Marcus Mumford"
+    },
+    {
+     "rank": 20,
+     "song": "Behind Your Walls",
+     "artist": "The Offspring"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220915180508/https://kworb.net/charts/itunes/us.html",
+   "captured": "2022-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Thank God",
+     "artist": "Kane Brown & Katelyn Brown"
+    },
+    {
+     "rank": 2,
+     "song": "I'm Good (Blue)",
+     "artist": "David Guetta & Bebe Rexha"
+    },
+    {
+     "rank": 3,
+     "song": "Hold Me Closer",
+     "artist": "Elton John & Britney Spears"
+    },
+    {
+     "rank": 4,
+     "song": "You Proof",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 5,
+     "song": "Sounds Like Something I'd Do",
+     "artist": "Drake Milligan"
+    },
+    {
+     "rank": 6,
+     "song": "Bring Me to Life",
+     "artist": "Evanescence"
+    },
+    {
+     "rank": 7,
+     "song": "I Ain't Worried",
+     "artist": "OneRepublic"
+    },
+    {
+     "rank": 8,
+     "song": "wait in the truck",
+     "artist": "HARDY & Lainey Wilson"
+    },
+    {
+     "rank": 9,
+     "song": "You (feat. Gerald Albright)",
+     "artist": "Jesse Powell"
+    },
+    {
+     "rank": 10,
+     "song": "凤亲凰",
+     "artist": "Miles Guo"
+    },
+    {
+     "rank": 11,
+     "song": "Son Of A Sinner",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 12,
+     "song": "Unstoppable",
+     "artist": "Sia"
+    },
+    {
+     "rank": 13,
+     "song": "Spirit In the Sky",
+     "artist": "Norman Greenbaum"
+    },
+    {
+     "rank": 14,
+     "song": "The Kind of Love We Make",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 15,
+     "song": "She Had Me At Heads Carolina",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 16,
+     "song": "Wasted On You",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 17,
+     "song": "American Pie (Full Length Version)",
+     "artist": "Don Mclean"
+    },
+    {
+     "rank": 18,
+     "song": "Have You Ever Seen the Rain",
+     "artist": "Creedence Clearwater Revival"
+    },
+    {
+     "rank": 19,
+     "song": "As It Was",
+     "artist": "Harry Styles"
+    },
+    {
+     "rank": 20,
+     "song": "Summer of '69",
+     "artist": "Bryan Adams"
+    }
+   ]
+  }
+ ]
+}

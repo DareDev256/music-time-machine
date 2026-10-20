@@ -1,0 +1,1106 @@
+{
+ "month": "2025-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250409160642/https://hypem.com/popular",
+   "captured": "2025-04-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Reframing",
+     "artist": "Barker"
+    },
+    {
+     "rank": 2,
+     "song": "Days After Days",
+     "artist": "Soot Sprite"
+    },
+    {
+     "rank": 3,
+     "song": "New Thing",
+     "artist": "Avery Friedman"
+    },
+    {
+     "rank": 4,
+     "song": "Stay",
+     "artist": "Sea Lemon"
+    },
+    {
+     "rank": 5,
+     "song": "oblivious",
+     "artist": "georgia, georgia"
+    },
+    {
+     "rank": 6,
+     "song": "Pricks J.Deere 420 Remix",
+     "artist": "Hoara"
+    },
+    {
+     "rank": 7,
+     "song": "Polytunnel",
+     "artist": "Richard Dawson"
+    },
+    {
+     "rank": 8,
+     "song": "Never Rest",
+     "artist": "Great Grandpa"
+    },
+    {
+     "rank": 9,
+     "song": "Daze",
+     "artist": "Kara-Lis Coverdale"
+    },
+    {
+     "rank": 10,
+     "song": "HIP ROLL feat. NAB",
+     "artist": "GourmetDeluxxx"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Let This Feeling",
+     "artist": "Vanessa Amara"
+    },
+    {
+     "rank": 12,
+     "song": "Non-Dramatic Breakup Song",
+     "artist": "Linnea's Garden"
+    },
+    {
+     "rank": 13,
+     "song": "Your Soul Is Perfect (Supreme Uniter) with Radha Botofasina",
+     "artist": "Surya Botofasina"
+    },
+    {
+     "rank": 14,
+     "song": "WALKED THE SUN",
+     "artist": "JVLY"
+    },
+    {
+     "rank": 15,
+     "song": "Next To You",
+     "artist": "Jess Kerber"
+    },
+    {
+     "rank": 16,
+     "song": "Call Her Up",
+     "artist": "Siltbreeze Records"
+    },
+    {
+     "rank": 17,
+     "song": "Sickle Walk",
+     "artist": "YHWH Nailgun"
+    },
+    {
+     "rank": 18,
+     "song": "For the Cold Country",
+     "artist": "Black Country, New Road"
+    },
+    {
+     "rank": 19,
+     "song": "Souffle souffle",
+     "artist": "Lou-Adriane Cassidy"
+    },
+    {
+     "rank": 20,
+     "song": "Garden Song",
+     "artist": "Cry Out"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250408183332/https://www.billboard.com/charts/rap-song/",
+   "captured": "2025-04-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Luther",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 2,
+     "song": "Nokia",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "TV Off",
+     "artist": "Kendrick Lamar Featuring Lefty Gunplay"
+    },
+    {
+     "rank": 5,
+     "song": "Squabble Up",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Dark Thoughts",
+     "artist": "Lil Tecca"
+    },
+    {
+     "rank": 7,
+     "song": "Denial Is A River",
+     "artist": "Doechii"
+    },
+    {
+     "rank": 8,
+     "song": "Rather Lie",
+     "artist": "Playboi Carti & The Weeknd"
+    },
+    {
+     "rank": 9,
+     "song": "Evil J0rdan",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 10,
+     "song": "Gimme A Hug",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Vanish Mode",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 12,
+     "song": "Peekaboo",
+     "artist": "Kendrick Lamar Featuring AzChike"
+    },
+    {
+     "rank": 13,
+     "song": "They Want To Be You",
+     "artist": "Lil Durk Featuring Future"
+    },
+    {
+     "rank": 14,
+     "song": "No Pole",
+     "artist": "Don Toliver"
+    },
+    {
+     "rank": 15,
+     "song": "1000 Times",
+     "artist": "Lil Durk Featuring Lil Baby"
+    },
+    {
+     "rank": 16,
+     "song": "Can't Hide It",
+     "artist": "Lil Durk Featuring Jhene Aiko"
+    },
+    {
+     "rank": 17,
+     "song": "Tweaker",
+     "artist": "GELO"
+    },
+    {
+     "rank": 18,
+     "song": "Shaking When I Pray",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 19,
+     "song": "Keep On Sippin'",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 20,
+     "song": "Turn Up A Notch",
+     "artist": "Lil Durk"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250415113119/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2025-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Luther",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 2,
+     "song": "Nokia",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "TV Off",
+     "artist": "Kendrick Lamar Featuring Lefty Gunplay"
+    },
+    {
+     "rank": 5,
+     "song": "Mutt",
+     "artist": "Leon Thomas"
+    },
+    {
+     "rank": 6,
+     "song": "Squabble Up",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 7,
+     "song": "30 For 30",
+     "artist": "SZA With Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Timeless",
+     "artist": "The Weeknd & Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Dark Thoughts",
+     "artist": "Lil Tecca"
+    },
+    {
+     "rank": 10,
+     "song": "Denial Is A River",
+     "artist": "Doechii"
+    },
+    {
+     "rank": 11,
+     "song": "Rather Lie",
+     "artist": "Playboi Carti & The Weeknd"
+    },
+    {
+     "rank": 12,
+     "song": "Residuals",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 13,
+     "song": "Evil J0rdan",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 14,
+     "song": "Cry For Me",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 15,
+     "song": "Gimme A Hug",
+     "artist": "Drake"
+    },
+    {
+     "rank": 16,
+     "song": "Vanish Mode",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 17,
+     "song": "Somebody Loves Me",
+     "artist": "PARTYNEXTDOOR & Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Peekaboo",
+     "artist": "Kendrick Lamar Featuring AzChike"
+    },
+    {
+     "rank": 19,
+     "song": "They Want To Be You",
+     "artist": "Lil Durk Featuring Future"
+    },
+    {
+     "rank": 20,
+     "song": "Heart Of A Woman",
+     "artist": "Summer Walker"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20250406201209/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2025-04-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dancing in the Club (MJ Lenderman Version)",
+     "artist": "This Is Lorelei"
+    },
+    {
+     "rank": 2,
+     "song": "This Is Real",
+     "artist": "Feeble Little Horse"
+    },
+    {
+     "rank": 3,
+     "song": "Special Request to All Nice and Decent Real Niggaz (Stop Hatin)",
+     "artist": "509 BMG"
+    },
+    {
+     "rank": 4,
+     "song": "To Be a Rose",
+     "artist": "Jenny Hval"
+    },
+    {
+     "rank": 5,
+     "song": "Cinderella",
+     "artist": "Model Actriz"
+    },
+    {
+     "rank": 6,
+     "song": "Easter Pink",
+     "artist": "fakemink"
+    },
+    {
+     "rank": 7,
+     "song": "Sickle Walk",
+     "artist": "YHWH Nailgun"
+    },
+    {
+     "rank": 8,
+     "song": "Reframing",
+     "artist": "Barker"
+    },
+    {
+     "rank": 9,
+     "song": "pop",
+     "artist": "skaiwater"
+    },
+    {
+     "rank": 10,
+     "song": "JRJRJR",
+     "artist": "Jane Remover"
+    },
+    {
+     "rank": 11,
+     "song": "lEgs In tHe aIr",
+     "artist": "TisaKorean"
+    },
+    {
+     "rank": 12,
+     "song": "SPANK\\!",
+     "artist": "HiTech"
+    },
+    {
+     "rank": 13,
+     "song": "Bumblebee",
+     "artist": "Chuckyy"
+    },
+    {
+     "rank": 14,
+     "song": "Magic I Want U",
+     "artist": "Jane Remover"
+    },
+    {
+     "rank": 15,
+     "song": "Holy, Holy",
+     "artist": "Geordie Greep"
+    },
+    {
+     "rank": 16,
+     "song": "The girl, so confusing version with lorde",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 17,
+     "song": "Von Dutch",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 18,
+     "song": "Life Is",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 19,
+     "song": "Oral",
+     "artist": "Bjork Rosalia"
+    },
+    {
+     "rank": 20,
+     "song": "Will Anybody Ever Love Me?",
+     "artist": "Sufjan Stevens?"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250429102610/https://www.billboard.com/charts/country-songs/",
+   "captured": "2025-04-29",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 2,
+     "song": "I'm The Problem",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 3,
+     "song": "I Ain't Coming Back",
+     "artist": "Morgan Wallen & Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "All The Way",
+     "artist": "BigXthaPlug Featuring Bailey Zimmerman"
+    },
+    {
+     "rank": 5,
+     "song": "Just In Case",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 6,
+     "song": "I Had Some Help",
+     "artist": "Post Malone Featuring Morgan Wallen"
+    },
+    {
+     "rank": 7,
+     "song": "Love Somebody",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 8,
+     "song": "I Never Lie",
+     "artist": "Zach Top"
+    },
+    {
+     "rank": 9,
+     "song": "Worst Way",
+     "artist": "Riley Green"
+    },
+    {
+     "rank": 10,
+     "song": "Good News",
+     "artist": "Shaboozey"
+    },
+    {
+     "rank": 11,
+     "song": "Weren't For The Wind",
+     "artist": "Ella Langley"
+    },
+    {
+     "rank": 12,
+     "song": "I'm A Little Crazy",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 13,
+     "song": "Indigo",
+     "artist": "Sam Barber Featuring Avery Anna"
+    },
+    {
+     "rank": 14,
+     "song": "Am I Okay?",
+     "artist": "Megan Moroney"
+    },
+    {
+     "rank": 15,
+     "song": "Smile",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 16,
+     "song": "The Giver",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 17,
+     "song": "Fix What You Didn't Break",
+     "artist": "Nate Smith"
+    },
+    {
+     "rank": 18,
+     "song": "Holy Smokes",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 19,
+     "song": "Somethin' 'Bout A Woman",
+     "artist": "Thomas Rhett Featuring Teddy Swims"
+    },
+    {
+     "rank": 20,
+     "song": "Friends Like That",
+     "artist": "John Morgan Featuring Jason Aldean"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250425091242/https://www.beatport.com/top-100",
+   "captured": "2025-04-25",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The One (Extended Mix)",
+     "artist": "Jocelyn Brown, Luke Alessi & Chloé Caillet"
+    },
+    {
+     "rank": 2,
+     "song": "Don't Stop (Extended Mix)",
+     "artist": "Prospa"
+    },
+    {
+     "rank": 3,
+     "song": "Toxic (Extended Mix)",
+     "artist": "Chris Lake & Ragie Ban"
+    },
+    {
+     "rank": 4,
+     "song": "BANG BANG (Extended Mix)",
+     "artist": "PAWSA & Malachiii"
+    },
+    {
+     "rank": 5,
+     "song": "In the Moment (Adriatique Extended Remix)",
+     "artist": "RÜFÜS DU SOL"
+    },
+    {
+     "rank": 6,
+     "song": "The Less I Know The Better (Extended Mix)",
+     "artist": "Mau P"
+    },
+    {
+     "rank": 7,
+     "song": "Life Is Simple (Move Your Body) (Move Your Body)",
+     "artist": "Marshall Jefferson, Maesic & Salomé Das"
+    },
+    {
+     "rank": 8,
+     "song": "I Know You Want To (Extended Mix)",
+     "artist": "Max Styler"
+    },
+    {
+     "rank": 9,
+     "song": "Got The Funk (Extended Mix)",
+     "artist": "Low Steppa & Capri (UK)"
+    },
+    {
+     "rank": 10,
+     "song": "Lick (Extended Mix)",
+     "artist": "SIDEPIECE"
+    },
+    {
+     "rank": 11,
+     "song": "Stay (Extended Mix)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 12,
+     "song": "Curveball",
+     "artist": "Max Dean, Luke Dean & Locky (UK)"
+    },
+    {
+     "rank": 13,
+     "song": "Calabria",
+     "artist": "AFROKHIN, BDT (KZ) & SB (KZ)"
+    },
+    {
+     "rank": 14,
+     "song": "Mind Games",
+     "artist": "Discip"
+    },
+    {
+     "rank": 15,
+     "song": "Obsession (Extended Mix)",
+     "artist": "Taylr Renee & AYYBO"
+    },
+    {
+     "rank": 16,
+     "song": "In My Head (Extended Mix)",
+     "artist": "Chris Lake & Amber Mark"
+    },
+    {
+     "rank": 17,
+     "song": "It's Not Right (&friends Remake)",
+     "artist": "Emanuele Esposito, Gianni Romano, Helen Tesfazghi & &friends"
+    },
+    {
+     "rank": 18,
+     "song": "Feel The Vibration",
+     "artist": "Kanine"
+    },
+    {
+     "rank": 19,
+     "song": "Ease My Mind (Extended Mix)",
+     "artist": "Chris Lake & Abel Balder"
+    },
+    {
+     "rank": 20,
+     "song": "Tutti Frutti",
+     "artist": "FIRZA"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250414190601/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2025-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Miles On It",
+     "artist": "Marshmello & Kane Brown"
+    },
+    {
+     "rank": 2,
+     "song": "The Days",
+     "artist": "CHRYSTAL"
+    },
+    {
+     "rank": 3,
+     "song": "Forever Young",
+     "artist": "David Guetta, Alphaville & Ava Max"
+    },
+    {
+     "rank": 4,
+     "song": "Light Years",
+     "artist": "John Summit Featuring Inez"
+    },
+    {
+     "rank": 5,
+     "song": "Slow Motion",
+     "artist": "Marshmello X Jonas Brothers"
+    },
+    {
+     "rank": 6,
+     "song": "Neverender",
+     "artist": "Justice & Tame Impala"
+    },
+    {
+     "rank": 7,
+     "song": "Move",
+     "artist": "Adam Port & Stryv Featuring Malachiii"
+    },
+    {
+     "rank": 8,
+     "song": "Passo Bem Solto",
+     "artist": "ATLXS"
+    },
+    {
+     "rank": 9,
+     "song": "Heavy Love",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 10,
+     "song": "Chess",
+     "artist": "joyful"
+    },
+    {
+     "rank": 11,
+     "song": "flashes",
+     "artist": "ROZ & Yng Lvcas"
+    },
+    {
+     "rank": 12,
+     "song": "Dreamin'",
+     "artist": "Dom Dolla Featuring Daya"
+    },
+    {
+     "rank": 13,
+     "song": "Beautiful People",
+     "artist": "David Guetta & Sia"
+    },
+    {
+     "rank": 14,
+     "song": "Nunca Muda?",
+     "artist": "Scythermane & NXGHT!"
+    },
+    {
+     "rank": 15,
+     "song": "Montagem Tomada",
+     "artist": "MXZI"
+    },
+    {
+     "rank": 16,
+     "song": "Toxic",
+     "artist": "Chris Lake & Ragie Ban"
+    },
+    {
+     "rank": 17,
+     "song": "Worlds Apart",
+     "artist": "Marshmello & Ar/Co"
+    },
+    {
+     "rank": 18,
+     "song": "Somedays",
+     "artist": "Sonny Fodera, Jazzy & D.O.D"
+    },
+    {
+     "rank": 19,
+     "song": "Smoke The Pain Away",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 20,
+     "song": "Focus",
+     "artist": "John Summit Featuring CLOVES"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250414144319/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2025-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Metaverse",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 2,
+     "song": "Messy",
+     "artist": "Lola Young"
+    },
+    {
+     "rank": 3,
+     "song": "So Cold",
+     "artist": "Balu Brigada"
+    },
+    {
+     "rank": 4,
+     "song": "Rushmere",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 5,
+     "song": "The Night Before",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 6,
+     "song": "God Needs The Devil",
+     "artist": "Jonah Kagen"
+    },
+    {
+     "rank": 7,
+     "song": "Too Sweet",
+     "artist": "Hozier"
+    },
+    {
+     "rank": 8,
+     "song": "Arrow",
+     "artist": "The Head And The Heart"
+    },
+    {
+     "rank": 9,
+     "song": "Sailor Song",
+     "artist": "Gigi Perez"
+    },
+    {
+     "rank": 10,
+     "song": "Basic Being Basic",
+     "artist": "Djo"
+    },
+    {
+     "rank": 11,
+     "song": "Same Old Song",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 12,
+     "song": "Three Six Five",
+     "artist": "Shinedown"
+    },
+    {
+     "rank": 13,
+     "song": "Heavy Is The Crown",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 14,
+     "song": "Stargazing",
+     "artist": "Myles Smith"
+    },
+    {
+     "rank": 15,
+     "song": "Ripple",
+     "artist": "Good Neighbours"
+    },
+    {
+     "rank": 16,
+     "song": "Archbishop Harold Holmes",
+     "artist": "Jack White"
+    },
+    {
+     "rank": 17,
+     "song": "Ritalin",
+     "artist": "Dexter And The Moonrocks"
+    },
+    {
+     "rank": 18,
+     "song": "Nice To Meet You",
+     "artist": "Myles Smith"
+    },
+    {
+     "rank": 19,
+     "song": "Up From The Bottom",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 20,
+     "song": "Barbarian",
+     "artist": "AWOLNATION"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250418203658/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2025-04-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "NOKIA",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "luther",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 4,
+     "song": "Die With A Smile (w/ Bruno Mars )",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 5,
+     "song": "Just In Case",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 6,
+     "song": "Dark Thoughts",
+     "artist": "Lil Tecca"
+    },
+    {
+     "rank": 7,
+     "song": "Sports car",
+     "artist": "Tate McRae"
+    },
+    {
+     "rank": 8,
+     "song": "All The Way (w/ Bailey Zimmerman )",
+     "artist": "BigXthaPlug"
+    },
+    {
+     "rank": 9,
+     "song": "tv off (w/ Lefty Gunplay )",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 11,
+     "song": "No One Noticed",
+     "artist": "The Marías"
+    },
+    {
+     "rank": 12,
+     "song": "Pink Pony Club",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 13,
+     "song": "Timeless (w/ Playboi Carti )",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 14,
+     "song": "Sailor Song",
+     "artist": "Gigi Perez"
+    },
+    {
+     "rank": 15,
+     "song": "Not Like Us",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 16,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 17,
+     "song": "That’s So True",
+     "artist": "Gracie Abrams"
+    },
+    {
+     "rank": 18,
+     "song": "I'm The Problem",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 19,
+     "song": "I Had Some Help (Feat. Morgan Wallen) (w/ Morgan Wallen )",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 20,
+     "song": "All The Stars (w/ SZA )",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20250415202621/https://kworb.net/charts/itunes/us.html",
+   "captured": "2025-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ordinary",
+     "artist": "Alex Warren"
+    },
+    {
+     "rank": 2,
+     "song": "NOKIA",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Anxiety",
+     "artist": "Doechii"
+    },
+    {
+     "rank": 4,
+     "song": "Pink Pony Club",
+     "artist": "Chappell Roan"
+    },
+    {
+     "rank": 5,
+     "song": "I'm The Problem",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 6,
+     "song": "Liar",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 7,
+     "song": "Beautiful Things",
+     "artist": "Benson Boone"
+    },
+    {
+     "rank": 8,
+     "song": "I Am Not Okay",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 9,
+     "song": "All The Way",
+     "artist": "BigXthaPlug & Bailey Zimmerman"
+    },
+    {
+     "rank": 10,
+     "song": "Just In Case",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 11,
+     "song": "Dreams Don’t Die",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 12,
+     "song": "APT.",
+     "artist": "ROSÉ & Bruno Mars"
+    },
+    {
+     "rank": 13,
+     "song": "Die With A Smile",
+     "artist": "Lady Gaga & Bruno Mars"
+    },
+    {
+     "rank": 14,
+     "song": "Messy",
+     "artist": "Lola Young"
+    },
+    {
+     "rank": 15,
+     "song": "I'm A Little Crazy",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 16,
+     "song": "What An Awesome God",
+     "artist": "Phil Wickham"
+    },
+    {
+     "rank": 17,
+     "song": "Love Somebody",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 18,
+     "song": "YOUR WAY'S BETTER",
+     "artist": "Forrest Frank"
+    },
+    {
+     "rank": 19,
+     "song": "You Can Have It All",
+     "artist": "Maoli"
+    },
+    {
+     "rank": 20,
+     "song": "A Bar Song (Tipsy)",
+     "artist": "Shaboozey"
+    }
+   ]
+  }
+ ]
+}

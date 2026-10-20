@@ -336,6 +336,186 @@
      "artist": "Trey Songz"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110218052017/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2011-02-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bizness",
+     "artist": "tUnE-yArDs"
+    },
+    {
+     "rank": 2,
+     "song": "Yonkers",
+     "artist": "Tyler, the Creator"
+    },
+    {
+     "rank": 3,
+     "song": "Last Night at the Jetty",
+     "artist": "Panda Bear"
+    },
+    {
+     "rank": 4,
+     "song": "The Piano Drop",
+     "artist": "Tim Hecker"
+    },
+    {
+     "rank": 5,
+     "song": "The Great Pan Is Dead",
+     "artist": "Cold Cave"
+    },
+    {
+     "rank": 6,
+     "song": "New Beat",
+     "artist": "Toro Y Moi"
+    },
+    {
+     "rank": 7,
+     "song": "The Wilhelm Scream",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 8,
+     "song": "Ordinary Things",
+     "artist": "xxxy"
+    },
+    {
+     "rank": 9,
+     "song": "Need You Now",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 10,
+     "song": "Dark Allies",
+     "artist": "Light Asylum"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110213184458/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2011-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Voices",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 2,
+     "song": "Somewhere With You",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 3,
+     "song": "Someone Else Calling You Bab...",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Who Are You When I'm Not Loo...",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 5,
+     "song": "Put You In A Song",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 6,
+     "song": "This Is Country Music",
+     "artist": "Brad Paisley"
+    },
+    {
+     "rank": 7,
+     "song": "Back To December",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 8,
+     "song": "Don't You Wanna Stay",
+     "artist": "Jason Aldean With Kelly Clarkson"
+    },
+    {
+     "rank": 9,
+     "song": "Let Me Down Easy",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 10,
+     "song": "Felt Good On My Lips",
+     "artist": "Tim McGraw"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110217065753/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2011-02-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Shake Me Down",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 2,
+     "song": "Waiting For The End",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 3,
+     "song": "Sing",
+     "artist": "My Chemical Romance"
+    },
+    {
+     "rank": 4,
+     "song": "Tighten Up",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 5,
+     "song": "Help Is On The Way",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 6,
+     "song": "The Cave",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 7,
+     "song": "New Low",
+     "artist": "Middle Class Rut"
+    },
+    {
+     "rank": 8,
+     "song": "Animal",
+     "artist": "Neon Trees"
+    },
+    {
+     "rank": 9,
+     "song": "Sick Of You",
+     "artist": "Cake"
+    },
+    {
+     "rank": 10,
+     "song": "Dog Days Are Over",
+     "artist": "Florence + The Machine"
+    }
+   ]
   }
  ]
 }

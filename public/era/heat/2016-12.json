@@ -1,0 +1,681 @@
+{
+ "month": "2016-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161206174551/http://www.hotnewhiphop.com/top100/",
+   "captured": "2016-12-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Baptized In Fire",
+     "artist": "Kid Cudi Feat. Travis Scott"
+    },
+    {
+     "rank": 2,
+     "song": "Groundhog Day (J. Cole Response)",
+     "artist": "Wale"
+    },
+    {
+     "rank": 3,
+     "song": "Drove U Crazy",
+     "artist": "Gucci Mane Feat. Bryson Tiller"
+    },
+    {
+     "rank": 4,
+     "song": "Do You Mind",
+     "artist": "DJ Khaled Feat. Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Dang!",
+     "artist": "Mac Miller Feat. Anderson .Paak"
+    },
+    {
+     "rank": 6,
+     "song": "Shine",
+     "artist": "Quavo"
+    },
+    {
+     "rank": 7,
+     "song": "I Be On",
+     "artist": "YG Feat. 21 Savage"
+    },
+    {
+     "rank": 8,
+     "song": "Leave",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 9,
+     "song": "Intro",
+     "artist": "DJ Drama Feat. Lil Wayne"
+    },
+    {
+     "rank": 10,
+     "song": "Ain't Tryin'",
+     "artist": "Future"
+    },
+    {
+     "rank": 11,
+     "song": "Sidewalks",
+     "artist": "The Weeknd Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 12,
+     "song": "Stand Tall",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 13,
+     "song": "What You Like (Prod. By Hit-Boy)",
+     "artist": "24hrs Feat. Ty Dolla $ign"
+    },
+    {
+     "rank": 14,
+     "song": "Washingtons By Your Side",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 15,
+     "song": "Judgement Free",
+     "artist": "Lil Yachty"
+    },
+    {
+     "rank": 16,
+     "song": "Kyrie (Prod. By DP Beats)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 17,
+     "song": "Lick Read (Prod. By Ducko McFli)",
+     "artist": "Jace Feat. Jeremih"
+    },
+    {
+     "rank": 18,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Threatening Nature",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 20,
+     "song": "Last Of A Dope Era Dying",
+     "artist": "Lloyd Banks"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161213210429/http://hypem.com/popular",
+   "captured": "2016-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Vessels",
+     "artist": "Rationale"
+    },
+    {
+     "rank": 2,
+     "song": "it's because",
+     "artist": "THE GEEK x VRV"
+    },
+    {
+     "rank": 3,
+     "song": "Let It Snow",
+     "artist": "filous"
+    },
+    {
+     "rank": 4,
+     "song": "Whole Heart Young Bombs Remix",
+     "artist": "Gryffin Official"
+    },
+    {
+     "rank": 5,
+     "song": "Close",
+     "artist": "Transviolet"
+    },
+    {
+     "rank": 6,
+     "song": "Work",
+     "artist": "CHARLOTTE DAY WILSON"
+    },
+    {
+     "rank": 7,
+     "song": "Team",
+     "artist": "Krewella"
+    },
+    {
+     "rank": 8,
+     "song": "Sober Heart feat. Olivera",
+     "artist": "Lucian"
+    },
+    {
+     "rank": 9,
+     "song": "Better (feat. Nicole Millar & Imad Royal) Ben Maxwell & SLOVES Remix",
+     "artist": "Sweater Beats"
+    },
+    {
+     "rank": 10,
+     "song": "Winter in America Moullinex Edit",
+     "artist": "Gil Scott-Heron"
+    },
+    {
+     "rank": 11,
+     "song": "Only",
+     "artist": "Sunday"
+    },
+    {
+     "rank": 12,
+     "song": "In Love With You +2 remixes",
+     "artist": "The Paradise"
+    },
+    {
+     "rank": 13,
+     "song": "Nostos (feat. Bufflo)",
+     "artist": "Jean-Michel Blais"
+    },
+    {
+     "rank": 14,
+     "song": "Special Night",
+     "artist": "Lee Fields & The Expressions"
+    },
+    {
+     "rank": 15,
+     "song": "Winter Morning I",
+     "artist": "Woodkid & Nils Frahm"
+    },
+    {
+     "rank": 16,
+     "song": "Underneath",
+     "artist": "Humons"
+    },
+    {
+     "rank": 17,
+     "song": "Life Itself",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 18,
+     "song": "We Don't Talk Anymore (feat. Selena Gomez) Lash Remix",
+     "artist": "Charlie Puth"
+    },
+    {
+     "rank": 19,
+     "song": "Falling Down",
+     "artist": "Happyness."
+    },
+    {
+     "rank": 20,
+     "song": "Beretta Lake (feat. SAINtJHN) Prod by WAJU and F a l l e n",
+     "artist": "Teflon Sega"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161202110701/http://www.billboard.com:80/charts/rap-song?",
+   "captured": "2016-12-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Black Beatles",
+     "artist": "Rae Sremmurd Featuring Gucci Mane"
+    },
+    {
+     "rank": 2,
+     "song": "Juju On That Beat (TZ Anthem)",
+     "artist": "Zay Hilfigerrr & Zayion McCall"
+    },
+    {
+     "rank": 3,
+     "song": "Broccoli",
+     "artist": "D.R.A.M. Featuring Lil Yachty"
+    },
+    {
+     "rank": 4,
+     "song": "Fake Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Caroline",
+     "artist": "Amine"
+    },
+    {
+     "rank": 6,
+     "song": "OOOUUU",
+     "artist": "Young M.A"
+    },
+    {
+     "rank": 7,
+     "song": "Do You Mind",
+     "artist": "DJ Khaled Featuring Nicki Minaj, Chris Brown & August Alsina"
+    },
+    {
+     "rank": 8,
+     "song": "Bad Things",
+     "artist": "Machine Gun Kelly x Camila Cabello"
+    },
+    {
+     "rank": 9,
+     "song": "Chill Bill",
+     "artist": "Rob $tone Featuring J. Davi$ & Spooks"
+    },
+    {
+     "rank": 10,
+     "song": "X",
+     "artist": "21 Savage & Metro Boomin Featuring Future"
+    },
+    {
+     "rank": 11,
+     "song": "Used To This",
+     "artist": "Future Featuring Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Sucker For Pain",
+     "artist": "Lil Wayne, Wiz Khalifa & Imagine Dragons With Logic & Ty Dolla $ign Feat. X Ambassadors"
+    },
+    {
+     "rank": 13,
+     "song": "Tiimmy Turner",
+     "artist": "Desiigner"
+    },
+    {
+     "rank": 14,
+     "song": "Pick Up The Phone",
+     "artist": "Young Thug And Travis Scott Featuring Quavo"
+    },
+    {
+     "rank": 15,
+     "song": "Sneakin'",
+     "artist": "Drake Featuring 21 Savage"
+    },
+    {
+     "rank": 16,
+     "song": "Bounce Back",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 17,
+     "song": "You Was Right",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 18,
+     "song": "Bad And Boujee",
+     "artist": "Migos Featuring Lil Uzi Vert"
+    },
+    {
+     "rank": 19,
+     "song": "No Heart",
+     "artist": "21 Savage & Metro Boomin"
+    },
+    {
+     "rank": 20,
+     "song": "Too Much Sauce",
+     "artist": "DJ ESCO Featuring Future & Lil Uzi Vert"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20161213131707/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2016-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Turn Into",
+     "artist": "Jay Som"
+    },
+    {
+     "rank": 2,
+     "song": "Legend Has It",
+     "artist": "Run the Jewels"
+    },
+    {
+     "rank": 3,
+     "song": "Ama Yes Uzume",
+     "artist": "Georgia"
+    },
+    {
+     "rank": 4,
+     "song": "Natural Blue",
+     "artist": "Julie Byrne"
+    },
+    {
+     "rank": 5,
+     "song": "We the People...",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 6,
+     "song": "Dis Generation",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 7,
+     "song": "Formation (Election Anxiety/America Is Over Edit)",
+     "artist": "Lotic"
+    },
+    {
+     "rank": 8,
+     "song": "Kiss",
+     "artist": "Lil Peep"
+    },
+    {
+     "rank": 9,
+     "song": "The Mechanical Fair (Todd Terje Remix)",
+     "artist": "Ola Kvernberg"
+    },
+    {
+     "rank": 10,
+     "song": "Beautiful Strangers",
+     "artist": "Kevin Morby"
+    },
+    {
+     "rank": 11,
+     "song": "Fake Love",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161213011528/http://www.billboard.com/charts/country-songs",
+   "captured": "2016-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blue Ain't Your Color",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 2,
+     "song": "May We All",
+     "artist": "Florida Georgia Line Featuring Tim McGraw"
+    },
+    {
+     "rank": 3,
+     "song": "Wanna Be That Song",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 4,
+     "song": "Sleep Without You",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 5,
+     "song": "Song For Another Time",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 6,
+     "song": "Middle Of A Memory",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 7,
+     "song": "Dirty Laundry",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 8,
+     "song": "Better Man",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 9,
+     "song": "Setting The World On Fire",
+     "artist": "Kenny Chesney Featuring P!nk"
+    },
+    {
+     "rank": 10,
+     "song": "Star Of The Show",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 11,
+     "song": "A Little More Summertime",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 12,
+     "song": "How I'll Always Be",
+     "artist": "Tim McGraw"
+    },
+    {
+     "rank": 13,
+     "song": "A Guy With A Girl",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 14,
+     "song": "Kill A Word",
+     "artist": "Eric Church Featuring Rhiannon Giddens"
+    },
+    {
+     "rank": 15,
+     "song": "Move",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 16,
+     "song": "Dirt On My Boots",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 17,
+     "song": "80s Mercedes",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 18,
+     "song": "Parachute",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 19,
+     "song": "Seein' Red",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 20,
+     "song": "If The Boot Fits",
+     "artist": "Granger Smith"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20161217125121/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2016-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Waste A Moment",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 2,
+     "song": "Take It All Back",
+     "artist": "Judah & The Lion"
+    },
+    {
+     "rank": 3,
+     "song": "Heathens",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 4,
+     "song": "All We Ever Knew",
+     "artist": "The Head And The Heart"
+    },
+    {
+     "rank": 5,
+     "song": "She's Out Of Her Mind",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 6,
+     "song": "Welcome To Your Life",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 7,
+     "song": "Still Breathing",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 8,
+     "song": "Trouble",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 9,
+     "song": "Way Down We Go",
+     "artist": "Kaleo"
+    },
+    {
+     "rank": 10,
+     "song": "Blood In The Cut",
+     "artist": "k.flay"
+    },
+    {
+     "rank": 11,
+     "song": "Sure And Certain",
+     "artist": "Jimmy Eat World"
+    },
+    {
+     "rank": 12,
+     "song": "Talk Too Much",
+     "artist": "COIN"
+    },
+    {
+     "rank": 13,
+     "song": "Ophelia",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 14,
+     "song": "High And Low",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 15,
+     "song": "Move",
+     "artist": "Saint Motel"
+    },
+    {
+     "rank": 16,
+     "song": "Go Robot",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 17,
+     "song": "Cleopatra",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 18,
+     "song": "Somebody Else",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 19,
+     "song": "Fire Escape",
+     "artist": "Andrew McMahon In The Wilderness"
+    },
+    {
+     "rank": 20,
+     "song": "Hymn For The Weekend",
+     "artist": "Coldplay"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20161208235922/http://2dopeboyz.com/",
+   "captured": "2016-12-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "D.R.U.G.S.",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 2,
+     "song": "Guns Hang High",
+     "artist": "GQ feat. Rapsody"
+    },
+    {
+     "rank": 3,
+     "song": "Red Book",
+     "artist": "Deniro Farrar feat. EP"
+    },
+    {
+     "rank": 4,
+     "song": "Gravy",
+     "artist": "Warm Brew"
+    },
+    {
+     "rank": 5,
+     "song": "27 Reasons",
+     "artist": "Avenue feat. Slumdog Hill"
+    },
+    {
+     "rank": 6,
+     "song": "Read Your Mind",
+     "artist": "KR"
+    },
+    {
+     "rank": 7,
+     "song": "Exit Thru The Gift Shop",
+     "artist": "Oh No & Tristate feat. Evidence"
+    },
+    {
+     "rank": 8,
+     "song": "We Are One",
+     "artist": "Nitty Scott, MC"
+    },
+    {
+     "rank": 9,
+     "song": "Defenseless",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 10,
+     "song": "Holding",
+     "artist": "Lloyd feat. Lil Wayne"
+    }
+   ]
+  }
+ ]
+}

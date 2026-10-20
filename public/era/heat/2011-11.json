@@ -341,6 +341,226 @@
      "artist": "J. Cole"
     }
    ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111116123429/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2011-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Crazy Girl",
+     "artist": "Eli Young Band"
+    },
+    {
+     "rank": 2,
+     "song": "God Gave Me You",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 3,
+     "song": "Sparks Fly",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 4,
+     "song": "Country Must Be Country Wide",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 5,
+     "song": "Baggage Claim",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 6,
+     "song": "We Owned The Night",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 7,
+     "song": "Tattoos On This Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 8,
+     "song": "Keep Me In Mind",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 9,
+     "song": "I Got You",
+     "artist": "Thompson Square"
+    },
+    {
+     "rank": 10,
+     "song": "Easy",
+     "artist": "Rascal Flatts Featuring Natasha Bedingfield"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111117082614/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2011-11-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Sound Of Winter",
+     "artist": "Bush"
+    },
+    {
+     "rank": 2,
+     "song": "Walk",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 3,
+     "song": "Cough Syrup",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 4,
+     "song": "Paradise",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 5,
+     "song": "Sail",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 6,
+     "song": "Lonely Boy",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 7,
+     "song": "The Adventures Of Rain Danc...",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 8,
+     "song": "Pumped Up Kicks",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 9,
+     "song": "Helena Beat",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 10,
+     "song": "Dark Horses",
+     "artist": "Switchfoot"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111112105112/http://www.2dopeboyz.com:80/",
+   "captured": "2011-11-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Intellectuals Freestyle",
+     "artist": "Toki Wright"
+    },
+    {
+     "rank": 2,
+     "song": "Live Now (FreEP)",
+     "artist": "Yancy Deron"
+    },
+    {
+     "rank": 3,
+     "song": "Nemotional",
+     "artist": "Nemo Achida"
+    },
+    {
+     "rank": 4,
+     "song": "Groundwork (FreEP)",
+     "artist": "Iron Lyon"
+    },
+    {
+     "rank": 5,
+     "song": "Decision Freestyle",
+     "artist": "Dawaun Parker"
+    },
+    {
+     "rank": 6,
+     "song": "Beacon",
+     "artist": "Doomtree"
+    },
+    {
+     "rank": 7,
+     "song": "Run & Hide",
+     "artist": "Openmic"
+    },
+    {
+     "rank": 8,
+     "song": "HardKnockTV Freestyle",
+     "artist": "XV"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20111117110623/http://pigeonsandplanes.com:80/",
+   "captured": "2011-11-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad Things (Remix)",
+     "artist": "Cults Feat. Freddie Gibbs"
+    },
+    {
+     "rank": 2,
+     "song": "Rock The Bells",
+     "artist": "Rapsody ft. Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Appreciation (3 Stripes and Troublemaker Remix)",
+     "artist": "King Fantastic"
+    },
+    {
+     "rank": 4,
+     "song": "Dumbin’ (Diplo Remix)",
+     "artist": "Star Slinger"
+    },
+    {
+     "rank": 5,
+     "song": "Sail Away",
+     "artist": "The Rapture"
+    },
+    {
+     "rank": 6,
+     "song": "Hoodie Season",
+     "artist": "The Fieldz"
+    },
+    {
+     "rank": 7,
+     "song": "Stomp",
+     "artist": "The Roots"
+    },
+    {
+     "rank": 8,
+     "song": "Don’t Fuck With My Money",
+     "artist": "Penguin Prison"
+    }
+   ]
   }
  ]
 }

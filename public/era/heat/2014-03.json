@@ -171,6 +171,121 @@
      "artist": "CunninLynguists"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140314113428/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2014-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Brother",
+     "artist": "Mac DeMarco"
+    },
+    {
+     "rank": 2,
+     "song": "Words I Don't Remember",
+     "artist": "How to Dress Well"
+    },
+    {
+     "rank": 3,
+     "song": "Drown With the Monster",
+     "artist": "White Lung"
+    },
+    {
+     "rank": 4,
+     "song": "Interference Fits",
+     "artist": "Perfect Pussy"
+    },
+    {
+     "rank": 5,
+     "song": "Like Lust",
+     "artist": "Movement"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140314173855/http://www.2dopeboyz.com/",
+   "captured": "2014-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hold On",
+     "artist": "50 Cent"
+    },
+    {
+     "rank": 2,
+     "song": "Senile (BTS Video)",
+     "artist": "Tyga, Nicki Minaj & Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Covered N Money",
+     "artist": "Future"
+    },
+    {
+     "rank": 4,
+     "song": "I Luh Ya PaPi f. French Montana",
+     "artist": "Jennifer Lopez"
+    },
+    {
+     "rank": 5,
+     "song": "Heavenly Father",
+     "artist": "Isaiah Rashad"
+    },
+    {
+     "rank": 6,
+     "song": "Talkin' Bout f. Chris Brown & Wiz Khalifa",
+     "artist": "Juicy J"
+    },
+    {
+     "rank": 7,
+     "song": "What Kind of Love",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 8,
+     "song": "F**k Rehab",
+     "artist": "Chief Keef"
+    },
+    {
+     "rank": 9,
+     "song": "Arm & Hammer",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 10,
+     "song": "Unf**k You f. Ty Dolla $ign",
+     "artist": "Lyrica Anderson"
+    },
+    {
+     "rank": 11,
+     "song": "Turn Down for What",
+     "artist": "DJ Snake & Lil Jon"
+    },
+    {
+     "rank": 12,
+     "song": "Choosey f. E-40 & Ty Dolla $ign",
+     "artist": "Disko"
+    },
+    {
+     "rank": 13,
+     "song": "In My Bag f. Wale",
+     "artist": "Fat Trel"
+    },
+    {
+     "rank": 14,
+     "song": "Barbituates f. Labba, Rim & Illa Ghee",
+     "artist": "Sean Price"
+    }
+   ]
   }
  ]
 }

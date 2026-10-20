@@ -1,0 +1,1221 @@
+{
+ "month": "2017-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170715171114/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2017-07-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love U Better",
+     "artist": "Ty Dolla $ign Feat. Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Wild Thots",
+     "artist": "Fabolous & A Boogie Wit Da Hoodie"
+    },
+    {
+     "rank": 3,
+     "song": "Alone Time",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 4,
+     "song": "Perfect Timing (Intro) (Prod. By Metro Boomin)",
+     "artist": "Nav"
+    },
+    {
+     "rank": 5,
+     "song": "A Lie",
+     "artist": "French Montana Feat. The Weeknd"
+    },
+    {
+     "rank": 6,
+     "song": "Jump",
+     "artist": "French Montana Feat. Travis Scott"
+    },
+    {
+     "rank": 7,
+     "song": "Call Me (Prod. By Metro Boomin)",
+     "artist": "Nav"
+    },
+    {
+     "rank": 8,
+     "song": "Liife (Remix)",
+     "artist": "Desiigner Feat. Big Sean"
+    },
+    {
+     "rank": 9,
+     "song": "Repercussions",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 10,
+     "song": "You Said",
+     "artist": "Young Thug Feat. Quavo"
+    },
+    {
+     "rank": 11,
+     "song": "Gunfiyah",
+     "artist": "Dr. Dre"
+    },
+    {
+     "rank": 12,
+     "song": "Issues",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 13,
+     "song": "Magnolia (Freestyle)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 14,
+     "song": "Boredom",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 15,
+     "song": "Fireworks (Prod. By Mike Will Made It)",
+     "artist": "Lil Wayne Feat. Jeezy"
+    },
+    {
+     "rank": 16,
+     "song": "Baby Girl (Prod. By Pi'erre Bourne)",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 17,
+     "song": "Say Less Freestyle",
+     "artist": "Roy Woods"
+    },
+    {
+     "rank": 18,
+     "song": "Kill Jay Z",
+     "artist": "Jay Z"
+    },
+    {
+     "rank": 19,
+     "song": "Summer Bummer",
+     "artist": "Lana Del Rey Feat. A$AP Rocky"
+    },
+    {
+     "rank": 20,
+     "song": "Long Socks",
+     "artist": "Madeintyo"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170716131313/http://hypem.com:80/popular",
+   "captured": "2017-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Navajo",
+     "artist": "Masego"
+    },
+    {
+     "rank": 2,
+     "song": "Fuck They",
+     "artist": "SOFI TUKKER"
+    },
+    {
+     "rank": 3,
+     "song": "9 (After Coachella) feat. MØ & SOPHIE KRANE Remix",
+     "artist": "Cashmere Cat"
+    },
+    {
+     "rank": 4,
+     "song": "Arty Boy with Emma Louise",
+     "artist": "Flight Facilities"
+    },
+    {
+     "rank": 5,
+     "song": "Wicked Streets Henrik Schwarz Remix",
+     "artist": "J. Bernardt"
+    },
+    {
+     "rank": 6,
+     "song": "Machinist",
+     "artist": "Japanese Breakfast"
+    },
+    {
+     "rank": 7,
+     "song": "Bicep",
+     "artist": "TR/ST"
+    },
+    {
+     "rank": 8,
+     "song": "Don't Take The Money Noah Diamond Remix",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 9,
+     "song": "Scared To Be Lonely Medasin Remix",
+     "artist": "Martin Garrix"
+    },
+    {
+     "rank": 10,
+     "song": "Nova Vida Motez Remix",
+     "artist": "Allen French"
+    },
+    {
+     "rank": 11,
+     "song": "Motions",
+     "artist": "ShoffyMusic"
+    },
+    {
+     "rank": 12,
+     "song": "Send Yo' Rita!",
+     "artist": "Masego"
+    },
+    {
+     "rank": 13,
+     "song": "Grant Green (feat. Charles Bradley)",
+     "artist": "mr jukes"
+    },
+    {
+     "rank": 14,
+     "song": "Feel it Still Medasin Remix",
+     "artist": "Portugal The Man"
+    },
+    {
+     "rank": 15,
+     "song": "Seeing Colors",
+     "artist": "Darci"
+    },
+    {
+     "rank": 16,
+     "song": "Young Hearts Flapo Remix",
+     "artist": "NoMBe"
+    },
+    {
+     "rank": 17,
+     "song": "Blessings Louis Futon Flip",
+     "artist": "Chance The Rapper"
+    },
+    {
+     "rank": 18,
+     "song": "Solo Louis Futon Flip",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 19,
+     "song": "Shadows (feat. Samsaruh)",
+     "artist": "FØRD"
+    },
+    {
+     "rank": 20,
+     "song": "Masego x Medasin ~ Shut Up & Groove",
+     "artist": "Film Noir"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170714073438/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2017-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm The One",
+     "artist": "DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 4,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 5,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 6,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 7,
+     "song": "Slippery",
+     "artist": "Migos Featuring Gucci Mane"
+    },
+    {
+     "rank": 8,
+     "song": "Magnolia",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 10,
+     "song": "Everyday We Lit",
+     "artist": "YFN Lucci Featuring PnB Rock"
+    },
+    {
+     "rank": 11,
+     "song": "Drowning",
+     "artist": "A Boogie Wit da Hoodie Featuring Kodak Black"
+    },
+    {
+     "rank": 12,
+     "song": "DNA.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 13,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 14,
+     "song": "First Day Out",
+     "artist": "Tee Grizzley"
+    },
+    {
+     "rank": 15,
+     "song": "Tunnel Vision",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 16,
+     "song": "It's A Vibe",
+     "artist": "2 Chainz Featuring Ty Dolla $ign, Trey Songz & Jhene Aiko"
+    },
+    {
+     "rank": 17,
+     "song": "1-800-273-8255",
+     "artist": "Logic Featuring Alessia Cara & Khalid"
+    },
+    {
+     "rank": 18,
+     "song": "4 AM",
+     "artist": "2 Chainz Featuring Travis Scott"
+    },
+    {
+     "rank": 19,
+     "song": "Love.",
+     "artist": "Kendrick Lamar Featuring Zacari"
+    },
+    {
+     "rank": 20,
+     "song": "Loyalty.",
+     "artist": "Kendrick Lamar Featuring Rihanna"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170716223100/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2017-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm The One",
+     "artist": "DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 3,
+     "song": "Wild Thoughts",
+     "artist": "DJ Khaled Featuring Rihanna & Bryson Tiller"
+    },
+    {
+     "rank": 4,
+     "song": "Humble.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Congratulations",
+     "artist": "Post Malone Featuring Quavo"
+    },
+    {
+     "rank": 6,
+     "song": "Unforgettable",
+     "artist": "French Montana Featuring Swae Lee"
+    },
+    {
+     "rank": 7,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 8,
+     "song": "Redbone",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 9,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 10,
+     "song": "Location",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 11,
+     "song": "Feels",
+     "artist": "Calvin Harris Featuring Pharrell Williams, Katy Perry & Big Sean"
+    },
+    {
+     "rank": 12,
+     "song": "Slippery",
+     "artist": "Migos Featuring Gucci Mane"
+    },
+    {
+     "rank": 13,
+     "song": "Magnolia",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 14,
+     "song": "Slide",
+     "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+    },
+    {
+     "rank": 15,
+     "song": "Rolex",
+     "artist": "Ayo & Teo"
+    },
+    {
+     "rank": 16,
+     "song": "Everyday We Lit",
+     "artist": "YFN Lucci Featuring PnB Rock"
+    },
+    {
+     "rank": 17,
+     "song": "Drowning",
+     "artist": "A Boogie Wit da Hoodie Featuring Kodak Black"
+    },
+    {
+     "rank": 18,
+     "song": "DNA.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 19,
+     "song": "T-Shirt",
+     "artist": "Migos"
+    },
+    {
+     "rank": 20,
+     "song": "First Day Out",
+     "artist": "Tee Grizzley"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170714125023/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Build You Up",
+     "artist": "Kamaiyah"
+    },
+    {
+     "rank": 2,
+     "song": "Bank Account",
+     "artist": "21 Savage"
+    },
+    {
+     "rank": 3,
+     "song": "Smile [ft. Gloria Carter]",
+     "artist": "JAY-Z"
+    },
+    {
+     "rank": 4,
+     "song": "911/Mr. Lonely [ft. Frank Ocean]",
+     "artist": "Tyler, the Creator"
+    },
+    {
+     "rank": 5,
+     "song": "New York",
+     "artist": "St. Vincent"
+    },
+    {
+     "rank": 6,
+     "song": "Doomed",
+     "artist": "Moses Sumney"
+    },
+    {
+     "rank": 7,
+     "song": "4AM",
+     "artist": "Maliibu Miitch"
+    },
+    {
+     "rank": 8,
+     "song": "Trees on Fire [ft. Amber Mark & Marco McKinnis]",
+     "artist": "DJDS"
+    },
+    {
+     "rank": 9,
+     "song": "Exhumed",
+     "artist": "Zola Jesus"
+    },
+    {
+     "rank": 10,
+     "song": "Never Been Wrong",
+     "artist": "Waxahatchee"
+    },
+    {
+     "rank": 11,
+     "song": "I Promise",
+     "artist": "Radiohead"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170714093223/http://www.billboard.com/charts/country-songs",
+   "captured": "2017-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 2,
+     "song": "In Case You Didn't Know",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 3,
+     "song": "Craving You",
+     "artist": "Thomas Rhett Featuring Maren Morris"
+    },
+    {
+     "rank": 4,
+     "song": "My Girl",
+     "artist": "Dylan Scott"
+    },
+    {
+     "rank": 5,
+     "song": "The Fighter",
+     "artist": "Keith Urban Featuring Carrie Underwood"
+    },
+    {
+     "rank": 6,
+     "song": "Hurricane",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "God, Your Mama, And Me",
+     "artist": "Florida Georgia Line Featuring Backstreet Boys"
+    },
+    {
+     "rank": 8,
+     "song": "Every Time I Hear That Song",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 9,
+     "song": "Drinkin' Problem",
+     "artist": "Midland"
+    },
+    {
+     "rank": 10,
+     "song": "Small Town Boy",
+     "artist": "Dustin Lynch"
+    },
+    {
+     "rank": 11,
+     "song": "Do I Make You Wanna",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 12,
+     "song": "Flatliner",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 13,
+     "song": "You Look Good",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 14,
+     "song": "No Such Thing As A Broken Heart",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 15,
+     "song": "Yours If You Want It",
+     "artist": "Rascal Flatts"
+    },
+    {
+     "rank": 16,
+     "song": "What Ifs",
+     "artist": "Kane Brown Featuring Lauren Alaina"
+    },
+    {
+     "rank": 17,
+     "song": "Somebody Else Will",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 18,
+     "song": "Heartache On The Dance Floor",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 19,
+     "song": "It Ain't My Fault",
+     "artist": "Brothers Osborne"
+    },
+    {
+     "rank": 20,
+     "song": "My Old Man",
+     "artist": "Zac Brown Band"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170712091801/https://www.beatport.com/top-100",
+   "captured": "2017-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cola",
+     "artist": "CamelPhat & Elderbrook"
+    },
+    {
+     "rank": 2,
+     "song": "La La Land (Prok|Fitch Sweet Sixteen Remix)",
+     "artist": "Green Velvet"
+    },
+    {
+     "rank": 3,
+     "song": "House & Pressure",
+     "artist": "Route 94"
+    },
+    {
+     "rank": 4,
+     "song": "Cold Heart",
+     "artist": "Dusky"
+    },
+    {
+     "rank": 5,
+     "song": "Kwelanga",
+     "artist": "Secondcity"
+    },
+    {
+     "rank": 6,
+     "song": "Play",
+     "artist": "Gene Farris, Riva Starr & Dennis Cruz"
+    },
+    {
+     "rank": 7,
+     "song": "Feel feat Jem Cooke",
+     "artist": "Cristoph"
+    },
+    {
+     "rank": 8,
+     "song": "Avalon",
+     "artist": "&ME"
+    },
+    {
+     "rank": 9,
+     "song": "Ya Kidding",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 10,
+     "song": "The Wickedest Sound",
+     "artist": "Riva Starr"
+    },
+    {
+     "rank": 11,
+     "song": "On The Corner",
+     "artist": "Solardo"
+    },
+    {
+     "rank": 12,
+     "song": "Mad",
+     "artist": "Dennis Cruz"
+    },
+    {
+     "rank": 13,
+     "song": "Tarantula (7 Year Itch Rework)",
+     "artist": "Pleasurekraft"
+    },
+    {
+     "rank": 14,
+     "song": "The Rapture",
+     "artist": "&ME"
+    },
+    {
+     "rank": 15,
+     "song": "Sound Boy",
+     "artist": "Leftwing & Kody"
+    },
+    {
+     "rank": 16,
+     "song": "Let's Go (Extended Mix)",
+     "artist": "Lucas & Steve, Mike Williams & Curbi"
+    },
+    {
+     "rank": 17,
+     "song": "I Am",
+     "artist": "Noir, Cari Golden & Victor Ruiz"
+    },
+    {
+     "rank": 18,
+     "song": "Deep Inside",
+     "artist": "Daniel Stefanik"
+    },
+    {
+     "rank": 19,
+     "song": "Keep On Rising (Extended Mix)",
+     "artist": "Ian Carey & Fedde Le Grand"
+    },
+    {
+     "rank": 20,
+     "song": "All Over Again (Extended Mix)",
+     "artist": "Bryan Kearney & Plumb"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170713192330/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2017-07-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stay",
+     "artist": "Zedd & Alessia Cara"
+    },
+    {
+     "rank": 2,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 3,
+     "song": "It Ain't Me",
+     "artist": "Kygo x Selena Gomez"
+    },
+    {
+     "rank": 4,
+     "song": "Feels",
+     "artist": "Calvin Harris Featuring Pharrell Williams, Katy Perry & Big Sean"
+    },
+    {
+     "rank": 5,
+     "song": "2U",
+     "artist": "David Guetta Featuring Justin Bieber"
+    },
+    {
+     "rank": 6,
+     "song": "Slide",
+     "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+    },
+    {
+     "rank": 7,
+     "song": "Closer",
+     "artist": "The Chainsmokers Featuring Halsey"
+    },
+    {
+     "rank": 8,
+     "song": "Rockabye",
+     "artist": "Clean Bandit Featuring Sean Paul & Anne-Marie"
+    },
+    {
+     "rank": 9,
+     "song": "Let Me Love You",
+     "artist": "DJ Snake Featuring Justin Bieber"
+    },
+    {
+     "rank": 10,
+     "song": "Paris",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 11,
+     "song": "Rollin",
+     "artist": "Calvin Harris Featuring Future & Khalid"
+    },
+    {
+     "rank": 12,
+     "song": "Swish Swish",
+     "artist": "Katy Perry Featuring Nicki Minaj"
+    },
+    {
+     "rank": 13,
+     "song": "No Promises",
+     "artist": "Cheat Codes Featuring Demi Lovato"
+    },
+    {
+     "rank": 14,
+     "song": "Symphony",
+     "artist": "Clean Bandit Featuring Zara Larsson"
+    },
+    {
+     "rank": 15,
+     "song": "Know No Better",
+     "artist": "Major Lazer Featuring Travis Scott, Camila Cabello & Quavo"
+    },
+    {
+     "rank": 16,
+     "song": "Mama",
+     "artist": "Jonas Blue Featuring William Singe"
+    },
+    {
+     "rank": 17,
+     "song": "There For You",
+     "artist": "Martin Garrix x Troye Sivan"
+    },
+    {
+     "rank": 18,
+     "song": "Prayers Up",
+     "artist": "Calvin Harris Featuring Travis Scott & A-Trak"
+    },
+    {
+     "rank": 19,
+     "song": "First Time",
+     "artist": "Kygo & Ellie Goulding"
+    },
+    {
+     "rank": 20,
+     "song": "Cash Out",
+     "artist": "Calvin Harris Featuring ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M."
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170712031446/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2017-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Feel It Still",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 2,
+     "song": "Believer",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Don't Take The Money",
+     "artist": "Bleachers"
+    },
+    {
+     "rank": 4,
+     "song": "High",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 5,
+     "song": "Wish I Knew You",
+     "artist": "The Revivalists"
+    },
+    {
+     "rank": 6,
+     "song": "Dig Down",
+     "artist": "Muse"
+    },
+    {
+     "rank": 7,
+     "song": "Feels Like Summer",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 8,
+     "song": "The Man",
+     "artist": "The Killers"
+    },
+    {
+     "rank": 9,
+     "song": "Reverend",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 10,
+     "song": "Run",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 11,
+     "song": "Human",
+     "artist": "Rag'n'Bone Man"
+    },
+    {
+     "rank": 12,
+     "song": "One Of Us",
+     "artist": "New Politics"
+    },
+    {
+     "rank": 13,
+     "song": "Hard Times",
+     "artist": "Paramore"
+    },
+    {
+     "rank": 14,
+     "song": "Love Is Mystical",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 15,
+     "song": "Suit And Jacket",
+     "artist": "Judah & The Lion"
+    },
+    {
+     "rank": 16,
+     "song": "Doing It For The Money",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 17,
+     "song": "The Violence",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 18,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 19,
+     "song": "The Way You Used To Do",
+     "artist": "Queens Of The Stone Age"
+    },
+    {
+     "rank": 20,
+     "song": "High Enough",
+     "artist": "k.flay"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170714081806/http://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2017-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Despacito - Remix",
+     "artist": "Luis Fonsi"
+    },
+    {
+     "rank": 2,
+     "song": "XO TOUR Llif3",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 3,
+     "song": "Wild Thoughts",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 4,
+     "song": "I'm the One",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 5,
+     "song": "HUMBLE.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Unforgettable",
+     "artist": "French Montana"
+    },
+    {
+     "rank": 7,
+     "song": "Congratulations",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 8,
+     "song": "Slide",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 9,
+     "song": "Redbone",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 10,
+     "song": "Location",
+     "artist": "Khalid"
+    },
+    {
+     "rank": 11,
+     "song": "Feels",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 12,
+     "song": "Signs",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Mask Off",
+     "artist": "Future"
+    },
+    {
+     "rank": 14,
+     "song": "DNA.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 15,
+     "song": "Body Like A Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 16,
+     "song": "Rollin",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 17,
+     "song": "Believer",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 18,
+     "song": "Magnolia",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 19,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 20,
+     "song": "2U",
+     "artist": "David Guetta"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20170710072540/http://kworb.net/charts/itunes/us.html",
+   "captured": "2017-07-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Despacito (feat. Justin Bieber) [Remix]",
+     "artist": "Luis Fonsi & Daddy Yankee"
+    },
+    {
+     "rank": 2,
+     "song": "Attention",
+     "artist": "Charlie Puth"
+    },
+    {
+     "rank": 3,
+     "song": "There's Nothing Holdin' Me Back",
+     "artist": "Shawn Mendes"
+    },
+    {
+     "rank": 4,
+     "song": "Body Like a Back Road",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 5,
+     "song": "Slow Hands",
+     "artist": "Niall Horan"
+    },
+    {
+     "rank": 6,
+     "song": "Believer",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "HUMBLE.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Praying",
+     "artist": "Kesha"
+    },
+    {
+     "rank": 9,
+     "song": "Wild Thoughts (feat. Rihanna & Bryson Tiller)",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 10,
+     "song": "I'm the One (feat. Justin Bieber, Quavo, Chance the Rapper & Lil Wayne)",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 11,
+     "song": "Redbone",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 12,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 13,
+     "song": "Now or Never",
+     "artist": "Halsey"
+    },
+    {
+     "rank": 14,
+     "song": "Issues",
+     "artist": "Julia Michaels"
+    },
+    {
+     "rank": 15,
+     "song": "Despacito (feat. Daddy Yankee)",
+     "artist": "Luis Fonsi"
+    },
+    {
+     "rank": 16,
+     "song": "That's What I Like",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 17,
+     "song": "Congratulations (feat. Quavo)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 18,
+     "song": "Strip That Down (feat. Quavo)",
+     "artist": "Liam Payne"
+    },
+    {
+     "rank": 19,
+     "song": "Bad Liar",
+     "artist": "Selena Gomez"
+    },
+    {
+     "rank": 20,
+     "song": "Shape of You",
+     "artist": "Ed Sheeran"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20170704225448/http://2dopeboyz.com/",
+   "captured": "2017-07-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "That’s What She Said",
+     "artist": "DJ Epps feat. Gunplay, Joell Ortiz, & PC"
+    },
+    {
+     "rank": 2,
+     "song": "Look Out Me Now",
+     "artist": "Sonny Digital"
+    },
+    {
+     "rank": 3,
+     "song": "All On Me",
+     "artist": "Mally Mall feat. O.T. Genasis & Maejor"
+    },
+    {
+     "rank": 4,
+     "song": "Internlude",
+     "artist": "Khary"
+    },
+    {
+     "rank": 5,
+     "song": "Rare",
+     "artist": "Raz Simone"
+    },
+    {
+     "rank": 6,
+     "song": "FEEL (Freestyle)",
+     "artist": "Termanology"
+    },
+    {
+     "rank": 7,
+     "song": "Amber Alert",
+     "artist": "Young Buck feat. Boosie Badazz"
+    },
+    {
+     "rank": 8,
+     "song": "Desire",
+     "artist": "Chuuwee"
+    }
+   ]
+  }
+ ]
+}

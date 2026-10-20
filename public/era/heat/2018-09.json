@@ -1,0 +1,731 @@
+{
+ "month": "2018-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180912045443/https://www.hotnewhiphop.com/top100/",
+   "captured": "2018-09-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rap Devil (Eminem Diss) (Prod. By Ronny J)",
+     "artist": "Machine Gun Kelly"
+    },
+    {
+     "rank": 2,
+     "song": "I Love It",
+     "artist": "Kanye West & Lil Pump Feat. Adele Givens"
+    },
+    {
+     "rank": 3,
+     "song": "Jefe",
+     "artist": "T.I. Feat. Meek Mill"
+    },
+    {
+     "rank": 4,
+     "song": "All The Time",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Everybody Dies",
+     "artist": "Logic"
+    },
+    {
+     "rank": 6,
+     "song": "Selfish",
+     "artist": "Bobby Brown Jr"
+    },
+    {
+     "rank": 7,
+     "song": "PUFF",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 8,
+     "song": "Wraith",
+     "artist": "T.I. Feat. Yo Gotti"
+    },
+    {
+     "rank": 9,
+     "song": "Bad Boy",
+     "artist": "G-Eazy"
+    },
+    {
+     "rank": 10,
+     "song": "Lucky You",
+     "artist": "Eminem Feat. Joyner Lucas"
+    },
+    {
+     "rank": 11,
+     "song": "Trip (Quemix)",
+     "artist": "Jacquees"
+    },
+    {
+     "rank": 12,
+     "song": "Murda",
+     "artist": "YoungBoy Never Broke Again Feat. Trippie Redd"
+    },
+    {
+     "rank": 13,
+     "song": "Diva (Remix)",
+     "artist": "Kevin Gates Feat. Don Toliver"
+    },
+    {
+     "rank": 14,
+     "song": "Permanent Scar",
+     "artist": "YoungBoy Never Broke Again Feat. Young Thug"
+    },
+    {
+     "rank": 15,
+     "song": "Dreams",
+     "artist": "Queen Key"
+    },
+    {
+     "rank": 16,
+     "song": "Man Down",
+     "artist": "YBN Nahmir Feat. Chris Brown"
+    },
+    {
+     "rank": 17,
+     "song": "Anomaly (Prod. By Wheezy)",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 18,
+     "song": "Welcome To Atlanta (Falcons Remix)",
+     "artist": "Ludacris & Jermaine Dupri"
+    },
+    {
+     "rank": 19,
+     "song": "Demon Seed",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 20,
+     "song": "FAWN",
+     "artist": "Tyler, The Creator"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180913143225/https://hypem.com/popular",
+   "captured": "2018-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Canyon Walls",
+     "artist": "Koresma"
+    },
+    {
+     "rank": 2,
+     "song": "One Night",
+     "artist": "Deidre & the Dark"
+    },
+    {
+     "rank": 3,
+     "song": "Lost In My Mind",
+     "artist": "RÜFÜS DU SOL"
+    },
+    {
+     "rank": 4,
+     "song": "1nce Again (Rhythm Scholar AtariFunk 8-Bit Remix) (Explicit)",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 5,
+     "song": "Money In Your Mouth",
+     "artist": "AKINE"
+    },
+    {
+     "rank": 6,
+     "song": "PLASTIC",
+     "artist": "sakehands"
+    },
+    {
+     "rank": 7,
+     "song": "Good Thing",
+     "artist": "Henry Nowhere"
+    },
+    {
+     "rank": 8,
+     "song": "One",
+     "artist": "Bronze Whale"
+    },
+    {
+     "rank": 9,
+     "song": "For you",
+     "artist": "ZANILLYA"
+    },
+    {
+     "rank": 10,
+     "song": "Cry Wolf",
+     "artist": "Skylar Spence"
+    },
+    {
+     "rank": 11,
+     "song": "Bela Lugosi's Dead Official Version",
+     "artist": "Bauhaus"
+    },
+    {
+     "rank": 12,
+     "song": "You Are My Destiny (EDIT)",
+     "artist": "The Juan Maclean"
+    },
+    {
+     "rank": 13,
+     "song": "Nervous Tics (feat. Holly Walker)",
+     "artist": "Maribou State"
+    },
+    {
+     "rank": 14,
+     "song": "PEACHES (feat. Ellen)",
+     "artist": "yù yī"
+    },
+    {
+     "rank": 15,
+     "song": "The Moment To Give",
+     "artist": "The Subs & Etienne De Crécy"
+    },
+    {
+     "rank": 16,
+     "song": "Getaway",
+     "artist": "ROOSEVELT"
+    },
+    {
+     "rank": 17,
+     "song": "Leaves",
+     "artist": "Fanclub"
+    },
+    {
+     "rank": 18,
+     "song": "Waves",
+     "artist": "Krrum"
+    },
+    {
+     "rank": 19,
+     "song": "Godbody pt. 2 (feat. RZA)",
+     "artist": "Joey Purp"
+    },
+    {
+     "rank": 20,
+     "song": "Phenomenal Problems",
+     "artist": "El Ten Eleven"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180915182733/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2018-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 2,
+     "song": "FEFE",
+     "artist": "6ix9ine Featuring Nicki Minaj & Murda Beatz"
+    },
+    {
+     "rank": 3,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "Lucky You",
+     "artist": "Eminem Featuring Joyner Lucas"
+    },
+    {
+     "rank": 5,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 6,
+     "song": "The Ringer",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 7,
+     "song": "Sicko Mode",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 8,
+     "song": "Taste",
+     "artist": "Tyga Featuring Offset"
+    },
+    {
+     "rank": 9,
+     "song": "Fall",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "Boo'd Up",
+     "artist": "Ella Mai"
+    },
+    {
+     "rank": 11,
+     "song": "No Brainer",
+     "artist": "DJ Khaled Featuring Justin Bieber, Chance The Rapper & Quavo"
+    },
+    {
+     "rank": 12,
+     "song": "Kamikaze",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 13,
+     "song": "Nonstop",
+     "artist": "Drake"
+    },
+    {
+     "rank": 14,
+     "song": "Yes Indeed",
+     "artist": "Lil Baby & Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Greatest",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 16,
+     "song": "Not Alike",
+     "artist": "Eminem Featuring Royce Da 5'9"
+    },
+    {
+     "rank": 17,
+     "song": "Big Bank",
+     "artist": "YG Featuring 2 Chainz, Big Sean & Nicki Minaj"
+    },
+    {
+     "rank": 18,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Trip",
+     "artist": "Ella Mai"
+    },
+    {
+     "rank": 20,
+     "song": "Normal",
+     "artist": "Eminem"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180904020111/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-09-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Moonlight",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 2,
+     "song": "Nappy Wonder",
+     "artist": "Blood Orange"
+    },
+    {
+     "rank": 3,
+     "song": "When I’m With Him",
+     "artist": "Empress Of"
+    },
+    {
+     "rank": 4,
+     "song": "Me & My Dog",
+     "artist": "boygenius"
+    },
+    {
+     "rank": 5,
+     "song": "Disarray",
+     "artist": "Low"
+    },
+    {
+     "rank": 6,
+     "song": "Mono",
+     "artist": "Altopalo"
+    },
+    {
+     "rank": 7,
+     "song": "Any Other Way",
+     "artist": "Tomberlin"
+    },
+    {
+     "rank": 8,
+     "song": "Coco Chanel [ft. Foxy Brown]",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "Stargazing",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 10,
+     "song": "Kong",
+     "artist": "Neneh Cherry"
+    },
+    {
+     "rank": 11,
+     "song": "Missing U",
+     "artist": "Robyn"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180913151605/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 2,
+     "song": "Simple",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 3,
+     "song": "Sunrise, Sunburn, Sunset",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Drowns The Whiskey",
+     "artist": "Jason Aldean Featuring Miranda Lambert"
+    },
+    {
+     "rank": 6,
+     "song": "Life Changes",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 7,
+     "song": "Hotel Key",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 8,
+     "song": "Mercy",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 9,
+     "song": "Get Along",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 10,
+     "song": "Hooked",
+     "artist": "Dylan Scott"
+    },
+    {
+     "rank": 11,
+     "song": "She Got The Best Of Me",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 12,
+     "song": "Blue Tacoma",
+     "artist": "Russell Dickerson"
+    },
+    {
+     "rank": 13,
+     "song": "Break Up In The End",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 14,
+     "song": "Lose It",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 15,
+     "song": "Drunk Me",
+     "artist": "Mitchell Tenpenny"
+    },
+    {
+     "rank": 16,
+     "song": "Drunk Girl",
+     "artist": "Chris Janson"
+    },
+    {
+     "rank": 17,
+     "song": "Desperate Man",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 18,
+     "song": "Hangin' On",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 19,
+     "song": "Speechless",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 20,
+     "song": "Born To Love You",
+     "artist": "LANCO"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180916185730/https://www.beatport.com/top-100",
+   "captured": "2018-09-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Take It (Extended Mix)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 2,
+     "song": "Losing It (Extended)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 3,
+     "song": "I'm Ready (Eats Everything 2018 Reebeef)",
+     "artist": "Size 9"
+    },
+    {
+     "rank": 4,
+     "song": "Your Mind",
+     "artist": "Adam Beyer & Bart Skils"
+    },
+    {
+     "rank": 5,
+     "song": "Be Somebody (Extended Mix)",
+     "artist": "Solardo"
+    },
+    {
+     "rank": 6,
+     "song": "Big Drop",
+     "artist": "Richard Grey & Lissat"
+    },
+    {
+     "rank": 7,
+     "song": "Feel My Needs (Purple Disco Machine Extended Mix)",
+     "artist": "Weiss (UK)"
+    },
+    {
+     "rank": 8,
+     "song": "Finder (Carl Cox Remix)",
+     "artist": "Ninetoes"
+    },
+    {
+     "rank": 9,
+     "song": "House Gangsters",
+     "artist": "Scotty Boy & Block & Crown"
+    },
+    {
+     "rank": 10,
+     "song": "Chains (Patrick Topping Remix)",
+     "artist": "Rogue D"
+    },
+    {
+     "rank": 11,
+     "song": "E SAMBA 2018",
+     "artist": "Junior Jack & Tube & Berger"
+    },
+    {
+     "rank": 12,
+     "song": "My Milkshake (Leftwing & Kody Remix)",
+     "artist": "Freejak & Kelis"
+    },
+    {
+     "rank": 13,
+     "song": "Feel My Needs (Gorgon City Extended Mix)",
+     "artist": "Weiss (UK)"
+    },
+    {
+     "rank": 14,
+     "song": "Heavy",
+     "artist": "Veerus"
+    },
+    {
+     "rank": 15,
+     "song": "Nothing Around Us feat. Lyke",
+     "artist": "Mathame & Lyke"
+    },
+    {
+     "rank": 16,
+     "song": "Epic (Garmiani Extended Remix)",
+     "artist": "Quintino & Sandro Silva"
+    },
+    {
+     "rank": 17,
+     "song": "I Feel the Music",
+     "artist": "B.Traits"
+    },
+    {
+     "rank": 18,
+     "song": "Fade In To You",
+     "artist": "Mathame"
+    },
+    {
+     "rank": 19,
+     "song": "Elevate",
+     "artist": "Radio Slave, SRVD & Patrick Mason"
+    },
+    {
+     "rank": 20,
+     "song": "Space Date",
+     "artist": "Adam Beyer, Green Velvet & Layton Giordani"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180921010209/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2018-09-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Burn The House Down",
+     "artist": "AJR"
+    },
+    {
+     "rank": 2,
+     "song": "Africa",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 3,
+     "song": "Nevermind",
+     "artist": "Dennis Lloyd"
+    },
+    {
+     "rank": 4,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 5,
+     "song": "Gold Rush",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 6,
+     "song": "Kamikaze",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 7,
+     "song": "Sit Next To Me",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 8,
+     "song": "She's Kerosene",
+     "artist": "The Interrupters"
+    },
+    {
+     "rank": 9,
+     "song": "High Hopes",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 10,
+     "song": "Something Human",
+     "artist": "Muse"
+    },
+    {
+     "rank": 11,
+     "song": "All My Friends",
+     "artist": "The Revivalists"
+    },
+    {
+     "rank": 12,
+     "song": "Happier",
+     "artist": "Marshmello & Bastille"
+    },
+    {
+     "rank": 13,
+     "song": "Miracle",
+     "artist": "CHVRCHES"
+    },
+    {
+     "rank": 14,
+     "song": "My Blood",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 15,
+     "song": "Body Talks",
+     "artist": "The Struts Featuring Kesha"
+    },
+    {
+     "rank": 16,
+     "song": "Jumpsuit",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 17,
+     "song": "Ride Or Die",
+     "artist": "The Knocks Featuring Foster The People"
+    },
+    {
+     "rank": 18,
+     "song": "Tidal Wave",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 19,
+     "song": "1950",
+     "artist": "King Princess"
+    },
+    {
+     "rank": 20,
+     "song": "You Should See Me In A Crown",
+     "artist": "Billie Eilish"
+    }
+   ]
+  }
+ ]
+}

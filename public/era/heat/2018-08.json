@@ -1,0 +1,1061 @@
+{
+ "month": "2018-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180816150103/https://www.hotnewhiphop.com/",
+   "captured": "2018-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Keep In Touch",
+     "artist": "Tory Lanez Feat. Bryson Tiller"
+    },
+    {
+     "rank": 2,
+     "song": "Free Greedo",
+     "artist": "Mozzy Feat. 03 Greedo & Internet Money"
+    },
+    {
+     "rank": 3,
+     "song": "That And This",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 4,
+     "song": "Drug Dealer",
+     "artist": "slowthai"
+    },
+    {
+     "rank": 5,
+     "song": "Real Friends (Remix)",
+     "artist": "Camila Cabello Feat. Swae Lee"
+    },
+    {
+     "rank": 6,
+     "song": "Drawing Symbols",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 7,
+     "song": "Vibes",
+     "artist": "SOB x RBE"
+    },
+    {
+     "rank": 8,
+     "song": "DAPPERDAN",
+     "artist": "Aminé Feat. G Herbo"
+    },
+    {
+     "rank": 9,
+     "song": "Sum it Up",
+     "artist": "DaBoii"
+    },
+    {
+     "rank": 10,
+     "song": "Vote",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 11,
+     "song": "The Night Is On My Mind",
+     "artist": "Kaytranada"
+    },
+    {
+     "rank": 12,
+     "song": "Kiss Of Life- Kaytranada Remix",
+     "artist": "Kaytranada Feat. Sade"
+    },
+    {
+     "rank": 13,
+     "song": "Signs",
+     "artist": "Ace Clark Feat. Talib Kweli & Joell Ortiz"
+    },
+    {
+     "rank": 14,
+     "song": "What You Want",
+     "artist": "Stefflon Don Feat. Future"
+    },
+    {
+     "rank": 15,
+     "song": "Back 2 You",
+     "artist": "Jean Deaux"
+    },
+    {
+     "rank": 16,
+     "song": "HNHH Freestyle Session #34",
+     "artist": "Honey Cocaine"
+    },
+    {
+     "rank": 17,
+     "song": "Do The Most (Prod. By Young Chop, DJ L & Chase Davis)",
+     "artist": "Lil Durk Feat. Valee"
+    },
+    {
+     "rank": 18,
+     "song": "Saigon Velour",
+     "artist": "Ghostface Killah Feat. Snoop Dogg , E-40 & L.A. The Darkman"
+    },
+    {
+     "rank": 19,
+     "song": "Layin Low (Prod. By Kenny Beats)",
+     "artist": "Warhol.SS"
+    },
+    {
+     "rank": 20,
+     "song": "Bitch Please",
+     "artist": "Westside McFly Feat. RJMrLa"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180817225437/https://hypem.com/popular",
+   "captured": "2018-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lost Arts",
+     "artist": "L'Orange"
+    },
+    {
+     "rank": 2,
+     "song": "Under A Bridge",
+     "artist": "YATES"
+    },
+    {
+     "rank": 3,
+     "song": "Weird Machine (feat. Nevve)",
+     "artist": "DROELOE"
+    },
+    {
+     "rank": 4,
+     "song": "Tearing Me Up RAC Mix",
+     "artist": "Bob Moses"
+    },
+    {
+     "rank": 5,
+     "song": "Future Me Hates Me",
+     "artist": "The Beths"
+    },
+    {
+     "rank": 6,
+     "song": "Ghostface Killah f/ Snoop Dogg, E-40 & LA The Darkman- Saigon Velour (Prod. by Big Ghost)",
+     "artist": "macmediapromo"
+    },
+    {
+     "rank": 7,
+     "song": "NUMB feat. GRAACE +1 remix",
+     "artist": "Hayden James"
+    },
+    {
+     "rank": 8,
+     "song": "Last Dance feat. Imogen Rose",
+     "artist": "Henri"
+    },
+    {
+     "rank": 9,
+     "song": "Everything (She)",
+     "artist": "LOYAL"
+    },
+    {
+     "rank": 10,
+     "song": "Nervous Tics (feat. Holly Walker)",
+     "artist": "Maribou State"
+    },
+    {
+     "rank": 11,
+     "song": "Forgive feat. Washed Out",
+     "artist": "ROOSEVELT"
+    },
+    {
+     "rank": 12,
+     "song": "No Going Back",
+     "artist": "Yuno"
+    },
+    {
+     "rank": 13,
+     "song": "Too Lost In Love",
+     "artist": "The Molochs"
+    },
+    {
+     "rank": 14,
+     "song": "Soft Stud",
+     "artist": "Black Belt Eagle Scout"
+    },
+    {
+     "rank": 15,
+     "song": "Actor (feat. Nakala)",
+     "artist": "Ayelle"
+    },
+    {
+     "rank": 16,
+     "song": "Lost (feat. Chelsea Jade)",
+     "artist": "Jai Wolf"
+    },
+    {
+     "rank": 17,
+     "song": "Tie Me Down (with Elley Duhé)",
+     "artist": "Gryffin"
+    },
+    {
+     "rank": 18,
+     "song": "Patagonia",
+     "artist": "Patawawa"
+    },
+    {
+     "rank": 19,
+     "song": "Miki Dora",
+     "artist": "Amen Dunes"
+    },
+    {
+     "rank": 20,
+     "song": "C",
+     "artist": "Oh Sees"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180828225640/https://www.billboard.com/charts/rap-song",
+   "captured": "2018-08-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 2,
+     "song": "FEFE",
+     "artist": "6ix9ine Featuring Nicki Minaj & Murda Beatz"
+    },
+    {
+     "rank": 3,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 4,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 5,
+     "song": "Sicko Mode",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 6,
+     "song": "Taste",
+     "artist": "Tyga Featuring Offset"
+    },
+    {
+     "rank": 7,
+     "song": "Yes Indeed",
+     "artist": "Lil Baby & Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Psycho",
+     "artist": "Post Malone Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 9,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Nonstop",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Big Bank",
+     "artist": "YG Featuring 2 Chainz, Big Sean & Nicki Minaj"
+    },
+    {
+     "rank": 12,
+     "song": "Sad!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 13,
+     "song": "Stargazing",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Barbie Dreams",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 15,
+     "song": "Apes**t",
+     "artist": "The Carters"
+    },
+    {
+     "rank": 16,
+     "song": "Moonlight",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 17,
+     "song": "Yosemite",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 18,
+     "song": "All Girls Are The Same",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 19,
+     "song": "Be Careful",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 20,
+     "song": "Lean Wit Me",
+     "artist": "Juice WRLD"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180809183210/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2018-08-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 2,
+     "song": "FEFE",
+     "artist": "6ix9ine Featuring Nicki Minaj & Murda Beatz"
+    },
+    {
+     "rank": 3,
+     "song": "No Brainer",
+     "artist": "DJ Khaled Featuring Justin Bieber, Chance The Rapper & Quavo"
+    },
+    {
+     "rank": 4,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 5,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 6,
+     "song": "Boo'd Up",
+     "artist": "Ella Mai"
+    },
+    {
+     "rank": 7,
+     "song": "Taste",
+     "artist": "Tyga Featuring Offset"
+    },
+    {
+     "rank": 8,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Psycho",
+     "artist": "Post Malone Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 10,
+     "song": "Yes Indeed",
+     "artist": "Lil Baby & Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Sad!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 12,
+     "song": "Big Bank",
+     "artist": "YG Featuring 2 Chainz, Big Sean & Nicki Minaj"
+    },
+    {
+     "rank": 13,
+     "song": "Nonstop",
+     "artist": "Drake"
+    },
+    {
+     "rank": 14,
+     "song": "Apes**t",
+     "artist": "The Carters"
+    },
+    {
+     "rank": 15,
+     "song": "Moonlight",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 16,
+     "song": "Be Careful",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 17,
+     "song": "I'm Upset",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 19,
+     "song": "Medicine",
+     "artist": "Queen Naija"
+    },
+    {
+     "rank": 20,
+     "song": "Changes",
+     "artist": "XXXTENTACION"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180816025457/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Any Other Way",
+     "artist": "Tomberlin"
+    },
+    {
+     "rank": 2,
+     "song": "Coco Chanel [ft. Foxy Brown]",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Stargazing",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 4,
+     "song": "Kong",
+     "artist": "Neneh Cherry"
+    },
+    {
+     "rank": 5,
+     "song": "Missing U",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 6,
+     "song": "Rank & File",
+     "artist": "Moses Sumney"
+    },
+    {
+     "rank": 7,
+     "song": "Hyper-Intelligent Genetically Enriched Cyborg",
+     "artist": "Helena Hauff"
+    },
+    {
+     "rank": 8,
+     "song": "Noid",
+     "artist": "Yves Tumor"
+    },
+    {
+     "rank": 9,
+     "song": "Potato Salad",
+     "artist": "Tyler, the Creator & A$AP Rocky"
+    },
+    {
+     "rank": 10,
+     "song": "Love It If We Made It",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 11,
+     "song": "Blow-Up Bed",
+     "artist": "Nef the Pharaoh & 03 Greedo"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180815071216/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mercy",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 2,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 3,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Get Along",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 5,
+     "song": "Simple",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 6,
+     "song": "Drowns The Whiskey",
+     "artist": "Jason Aldean Featuring Miranda Lambert"
+    },
+    {
+     "rank": 7,
+     "song": "Life Changes",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 8,
+     "song": "Sunrise, Sunburn, Sunset",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 9,
+     "song": "One Number Away",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 10,
+     "song": "Hotel Key",
+     "artist": "Old Dominion"
+    },
+    {
+     "rank": 11,
+     "song": "Take Back Home Girl",
+     "artist": "Chris Lane Featuring Tori Kelly"
+    },
+    {
+     "rank": 12,
+     "song": "Kiss Somebody",
+     "artist": "Morgan Evans"
+    },
+    {
+     "rank": 13,
+     "song": "Hooked",
+     "artist": "Dylan Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Lose It",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 15,
+     "song": "Cry Pretty",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 16,
+     "song": "Break Up In The End",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 17,
+     "song": "I Was Jack (You Were Diane)",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 18,
+     "song": "Coming Home",
+     "artist": "Keith Urban Featuring Julia Michaels"
+    },
+    {
+     "rank": 19,
+     "song": "Desperate Man",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 20,
+     "song": "Drunk Me",
+     "artist": "Mitchell Tenpenny"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180816023529/https://www.beatport.com/top-100",
+   "captured": "2018-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Losing It (Extended)",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "Be Somebody (Extended Mix)",
+     "artist": "Solardo"
+    },
+    {
+     "rank": 3,
+     "song": "Finder (Carl Cox Remix)",
+     "artist": "Ninetoes"
+    },
+    {
+     "rank": 4,
+     "song": "Your Mind",
+     "artist": "Adam Beyer & Bart Skils"
+    },
+    {
+     "rank": 5,
+     "song": "E SAMBA 2018",
+     "artist": "Junior Jack & Tube & Berger"
+    },
+    {
+     "rank": 6,
+     "song": "Space Date",
+     "artist": "Adam Beyer, Green Velvet & Layton Giordani"
+    },
+    {
+     "rank": 7,
+     "song": "Dopamine Machine (Club Mix)",
+     "artist": "Ali Love & CamelPhat"
+    },
+    {
+     "rank": 8,
+     "song": "Cafe Del Mar (Tale Of Us Renaissance Remix)",
+     "artist": "Energy 52"
+    },
+    {
+     "rank": 9,
+     "song": "Born Slippy (Reincarnation Mix)",
+     "artist": "Andrew Meller"
+    },
+    {
+     "rank": 10,
+     "song": "HAL",
+     "artist": "Tiga & Kolsch"
+    },
+    {
+     "rank": 11,
+     "song": "Take It (Extended Mix)",
+     "artist": "Dom Dolla"
+    },
+    {
+     "rank": 12,
+     "song": "Collision Wall",
+     "artist": "UMEK"
+    },
+    {
+     "rank": 13,
+     "song": "Buggin' feat. Jem Cooke",
+     "artist": "Hot Since 82"
+    },
+    {
+     "rank": 14,
+     "song": "Everytime We Touch (Hardwell & Maurice West Extended Remix)",
+     "artist": "Cascada"
+    },
+    {
+     "rank": 15,
+     "song": "Babarabatiri (David Penn Remix)",
+     "artist": "Todd Terry & Gypsymen"
+    },
+    {
+     "rank": 16,
+     "song": "Reaktor",
+     "artist": "Elax"
+    },
+    {
+     "rank": 17,
+     "song": "Show You (Club Mix)",
+     "artist": "Wankelmut & Anna Leyne"
+    },
+    {
+     "rank": 18,
+     "song": "Sometimes The Going Gets A Little Tough (Ferreck Dawn & Robosonic Extended Remix)",
+     "artist": "Finn"
+    },
+    {
+     "rank": 19,
+     "song": "Hidden T",
+     "artist": "Enrico Sangiuliano"
+    },
+    {
+     "rank": 20,
+     "song": "So Long feat. Jem Cooke (Audiojack Remix)",
+     "artist": "Jem Cooke & Made By Pete"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180815050422/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2018-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "One Kiss",
+     "artist": "Calvin Harris & Dua Lipa"
+    },
+    {
+     "rank": 2,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 3,
+     "song": "Solo",
+     "artist": "Clean Bandit Featuring Demi Lovato"
+    },
+    {
+     "rank": 4,
+     "song": "Jackie Chan",
+     "artist": "Tiesto & Dzeko Featuring Preme & Post Malone"
+    },
+    {
+     "rank": 5,
+     "song": "Remind Me To Forget",
+     "artist": "Kygo Featuring Miguel"
+    },
+    {
+     "rank": 6,
+     "song": "Side Effects",
+     "artist": "The Chainsmokers Featuring Emily Warren"
+    },
+    {
+     "rank": 7,
+     "song": "Silence",
+     "artist": "Marshmello Featuring Khalid"
+    },
+    {
+     "rank": 8,
+     "song": "Rise",
+     "artist": "Jonas Blue Featuring Jack & Jack"
+    },
+    {
+     "rank": 9,
+     "song": "Body",
+     "artist": "Loud Luxury Featuring Brando"
+    },
+    {
+     "rank": 10,
+     "song": "Ocean",
+     "artist": "Martin Garrix Featuring Khalid"
+    },
+    {
+     "rank": 11,
+     "song": "Happy Now",
+     "artist": "Zedd & Elley Duhe"
+    },
+    {
+     "rank": 12,
+     "song": "Born To Be Yours",
+     "artist": "Kygo & Imagine Dragons"
+    },
+    {
+     "rank": 13,
+     "song": "Finest Hour",
+     "artist": "Cash Cash Featuring Abir"
+    },
+    {
+     "rank": 14,
+     "song": "In My Mind",
+     "artist": "Dynoro & Gigi D'Agostino"
+    },
+    {
+     "rank": 15,
+     "song": "Don't Leave Me Alone",
+     "artist": "David Guetta Featuring Anne-Marie"
+    },
+    {
+     "rank": 16,
+     "song": "High On Life",
+     "artist": "Martin Garrix Featuring Bonn"
+    },
+    {
+     "rank": 17,
+     "song": "Missing U",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 18,
+     "song": "Darkside",
+     "artist": "Alan Walker Featuring Au/Ra & Tomine Harket"
+    },
+    {
+     "rank": 19,
+     "song": "Better Not",
+     "artist": "Louis The Child Featuring Wafia"
+    },
+    {
+     "rank": 20,
+     "song": "Tie Me Down",
+     "artist": "Gryffin With Elley Duhe"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180816172224/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2018-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jumpsuit",
+     "artist": "twenty one pilots"
+    },
+    {
+     "rank": 2,
+     "song": "Natural",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Quarter Past Midnight",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 4,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 5,
+     "song": "Burn The House Down",
+     "artist": "AJR"
+    },
+    {
+     "rank": 6,
+     "song": "Sit Next To Me",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 7,
+     "song": "Say Amen (Saturday Night)",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 8,
+     "song": "Kamikaze",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 9,
+     "song": "Nevermind",
+     "artist": "Dennis Lloyd"
+    },
+    {
+     "rank": 10,
+     "song": "Gold Rush",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 11,
+     "song": "Something Human",
+     "artist": "Muse"
+    },
+    {
+     "rank": 12,
+     "song": "I Feel Like I'm Drowning",
+     "artist": "Two Feet"
+    },
+    {
+     "rank": 13,
+     "song": "Whatever It Takes",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 14,
+     "song": "She's Kerosene",
+     "artist": "The Interrupters"
+    },
+    {
+     "rank": 15,
+     "song": "Lash Out",
+     "artist": "Alice Merton"
+    },
+    {
+     "rank": 16,
+     "song": "Miracle",
+     "artist": "CHVRCHES"
+    },
+    {
+     "rank": 17,
+     "song": "Ride Or Die",
+     "artist": "The Knocks Featuring Foster The People"
+    },
+    {
+     "rank": 18,
+     "song": "1950",
+     "artist": "King Princess"
+    },
+    {
+     "rank": 19,
+     "song": "Blood // Water",
+     "artist": "grandson"
+    },
+    {
+     "rank": 20,
+     "song": "Simplify",
+     "artist": "Young The Giant"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180824185856/https://kworb.net/charts/itunes/us.html",
+   "captured": "2018-08-24",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "IDOL",
+     "artist": "BTS"
+    },
+    {
+     "rank": 2,
+     "song": "Euphoria",
+     "artist": "BTS"
+    },
+    {
+     "rank": 3,
+     "song": "I'm Fine",
+     "artist": "BTS"
+    },
+    {
+     "rank": 4,
+     "song": "IDOL (feat. Nicki Minaj)",
+     "artist": "BTS"
+    },
+    {
+     "rank": 5,
+     "song": "Trivia 轉 : Seesaw",
+     "artist": "BTS"
+    },
+    {
+     "rank": 6,
+     "song": "Epiphany",
+     "artist": "BTS"
+    },
+    {
+     "rank": 7,
+     "song": "Trivia 起 : Just Dance",
+     "artist": "BTS"
+    },
+    {
+     "rank": 8,
+     "song": "Answer : Love Myself",
+     "artist": "BTS"
+    },
+    {
+     "rank": 9,
+     "song": "Trivia 承 : Love",
+     "artist": "BTS"
+    },
+    {
+     "rank": 10,
+     "song": "Serendipity (Full Length Edition)",
+     "artist": "BTS"
+    },
+    {
+     "rank": 11,
+     "song": "MIC Drop (Steve Aoki Remix) [Full Length Edition]",
+     "artist": "BTS"
+    },
+    {
+     "rank": 12,
+     "song": "DNA (Pedal 2 LA Mix)",
+     "artist": "BTS"
+    },
+    {
+     "rank": 13,
+     "song": "You Say",
+     "artist": "Lauren Daigle"
+    },
+    {
+     "rank": 14,
+     "song": "God is a woman",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 15,
+     "song": "Natural",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 16,
+     "song": "Pull Up",
+     "artist": "KUN"
+    },
+    {
+     "rank": 17,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 18,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 19,
+     "song": "Youngblood",
+     "artist": "5 Seconds of Summer"
+    },
+    {
+     "rank": 20,
+     "song": "Girls Like You (feat. Cardi B)",
+     "artist": "Maroon 5"
+    }
+   ]
+  }
+ ]
+}

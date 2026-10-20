@@ -1,0 +1,276 @@
+{
+ "month": "2008-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080306003534/http://www.hotnewhiphop.com:80/",
+   "captured": "2008-03-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Billionaire",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 2,
+     "song": "This Is The Life (featuring Trey Songz)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 3,
+     "song": "Reppin' My City (featuring Triple C & Brisco)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "All I Have In This World (featuring Mannie Fresh)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Here I Am (featuring Nelly & Avery Storm)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 6,
+     "song": "Luxury Tax (featuring Lil' Wayne, Young Jeezy & Trick Daddy)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "I'm Only Human (featuring Rodney)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 8,
+     "song": "This Me",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "We Shinin'",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "The Fugitive",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 11,
+     "song": "K.A.R. (Kill All Rats",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 12,
+     "song": "My Conscience",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 13,
+     "song": "City Of Tha Syrup ft. Bun B & Slim Thug",
+     "artist": "Mike Jones"
+    },
+    {
+     "rank": 14,
+     "song": "Get Bizzy (Feat. Ray L)",
+     "artist": "Lil Bizzy"
+    },
+    {
+     "rank": 15,
+     "song": "Emotional (Remix)",
+     "artist": "Casely Feat. Flo-Rida"
+    },
+    {
+     "rank": 16,
+     "song": "Lady In My Life",
+     "artist": "Ne-Yo"
+    },
+    {
+     "rank": 17,
+     "song": "Go Getta (ft. Ray-J)",
+     "artist": "AZ"
+    },
+    {
+     "rank": 18,
+     "song": "Grown & Sexy ft. Keri Hilson (Prod. By Timbaland)",
+     "artist": "Rod"
+    },
+    {
+     "rank": 19,
+     "song": "Heart Attack (ft. Timbaland)",
+     "artist": "NLT"
+    },
+    {
+     "rank": 20,
+     "song": "No Superstar",
+     "artist": "AZ"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080314034708/http://hypem.com:80/popular",
+   "captured": "2008-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Im Not Gonna Teach Your Boyfriend How To Dance With You (The Twelves Remix)",
+     "artist": "Black Kids"
+    },
+    {
+     "rank": 2,
+     "song": "Campus_",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 3,
+     "song": "There's Always Something Happening",
+     "artist": "Devendra Banhart"
+    },
+    {
+     "rank": 4,
+     "song": "(They Long to Be) Close To You",
+     "artist": "Josie & The Pussycats"
+    },
+    {
+     "rank": 5,
+     "song": "547 We Are Rockstars",
+     "artist": "Does It Offend You, Yeah?"
+    },
+    {
+     "rank": 6,
+     "song": "M79",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 7,
+     "song": "Tessellate",
+     "artist": "Tokyo Police Club"
+    },
+    {
+     "rank": 8,
+     "song": "A-Punk",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 9,
+     "song": "Golden Cage (Fred Falke Rexix)",
+     "artist": "The Whitest Boy Alive"
+    },
+    {
+     "rank": 10,
+     "song": "Ready For The Floor (Smoothed Out On An R'n'B Tip Version)",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 11,
+     "song": "Trashy Tuesdays, Lights & Music (Boys Noize Happy Birthday Remix)",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 12,
+     "song": "Great DJ (Calvin Harris Remix)",
+     "artist": "The Ting Tings"
+    },
+    {
+     "rank": 13,
+     "song": "Golden Cage (Fred Falke Remix)",
+     "artist": "The Whitest Boy Alive"
+    },
+    {
+     "rank": 14,
+     "song": "Wrestlers",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 15,
+     "song": "Cape Cod Kwassa Kwassa (Black Dominoes remix)",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 16,
+     "song": "Wax Ecstatic (To Sell Angelina)",
+     "artist": "Sponge"
+    },
+    {
+     "rank": 17,
+     "song": "All Too Human (Filthy Dukes Remix)",
+     "artist": "The Rakes"
+    },
+    {
+     "rank": 18,
+     "song": "Super Mario 64 The Alternate Route OC ReMix",
+     "artist": "ParagonX9"
+    },
+    {
+     "rank": 19,
+     "song": "Hoops",
+     "artist": "The Chemical Brothers"
+    },
+    {
+     "rank": 20,
+     "song": "The Beach Era (Djef Mix)",
+     "artist": "El Remolon"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080304030610/http://2dopeboyz.com:80/",
+   "captured": "2008-03-04",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rae Told Me",
+     "artist": "AC"
+    },
+    {
+     "rank": 2,
+     "song": "D-Block / Dipset f. Jadakiss, Styles P, Jim Jones & Hell Rell",
+     "artist": "Sheek Louch"
+    },
+    {
+     "rank": 3,
+     "song": "I’m a Beast (Ne-Yo Diss?)",
+     "artist": "R. Kelly"
+    },
+    {
+     "rank": 4,
+     "song": "Naledge vs Factz",
+     "artist": "Naledge & Mickey Factz"
+    },
+    {
+     "rank": 5,
+     "song": "Who’s Gonna Save My Soul",
+     "artist": "Gnarls Barkley"
+    },
+    {
+     "rank": 6,
+     "song": "The Life",
+     "artist": "Prodigy"
+    },
+    {
+     "rank": 7,
+     "song": "That White",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 8,
+     "song": "Workin’ It",
+     "artist": "Del The Funky Homosapien"
+    }
+   ]
+  }
+ ]
+}

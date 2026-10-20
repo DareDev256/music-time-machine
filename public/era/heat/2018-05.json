@@ -1,0 +1,951 @@
+{
+ "month": "2018-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180528055044/https://www.hotnewhiphop.com/top100/",
+   "captured": "2018-05-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Duppy Freestyle",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Walk On Minks (Prod. By Zaytoven)",
+     "artist": "Future"
+    },
+    {
+     "rank": 3,
+     "song": "I'm Upset",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "What You Know",
+     "artist": "YoungBoy Never Broke Again Feat. Lil Uzi Vert"
+    },
+    {
+     "rank": 5,
+     "song": "Big Bank (Prod. By DJ Mustard)",
+     "artist": "YG Feat. 2 Chainz"
+    },
+    {
+     "rank": 6,
+     "song": "What You Want",
+     "artist": "Belly Feat. The Weeknd"
+    },
+    {
+     "rank": 7,
+     "song": "What Would Meek Do?",
+     "artist": "Pusha T Feat. Kanye West"
+    },
+    {
+     "rank": 8,
+     "song": "Way Too Fly",
+     "artist": "A Boogie Wit Da Hoodie Feat. Davido"
+    },
+    {
+     "rank": 9,
+     "song": "Welcome To The Party",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 10,
+     "song": "435",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 11,
+     "song": "Pikachu (No Keys) (Prod. By Wheezy)",
+     "artist": "Drake & Lil Baby"
+    },
+    {
+     "rank": 12,
+     "song": "Toni Braxton",
+     "artist": "Crown"
+    },
+    {
+     "rank": 13,
+     "song": "Taste (Prod. By d.a. doman)",
+     "artist": "Tyga Feat. Offset"
+    },
+    {
+     "rank": 14,
+     "song": "Boo'd Up",
+     "artist": "Dave East & Vado"
+    },
+    {
+     "rank": 15,
+     "song": "Bring It Back",
+     "artist": "Rich The Kid"
+    },
+    {
+     "rank": 16,
+     "song": "NYCHA",
+     "artist": "Dave East Feat. Nas"
+    },
+    {
+     "rank": 17,
+     "song": "Yes Indeed (Prod. By Wheezy)",
+     "artist": "Lil Baby Feat. Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Care To Say About It",
+     "artist": "T.I. Feat. Rapsody"
+    },
+    {
+     "rank": 19,
+     "song": "Focused (Prod. By Southside)",
+     "artist": "G Herbo"
+    },
+    {
+     "rank": 20,
+     "song": "Bickenhead (Freestyle)",
+     "artist": "Wale"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180517180931/https://hypem.com/popular",
+   "captured": "2018-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Peace Of Mind",
+     "artist": "Laarsen"
+    },
+    {
+     "rank": 2,
+     "song": "Anything Goes",
+     "artist": "NVDES"
+    },
+    {
+     "rank": 3,
+     "song": "Blurred Bonobo Remix",
+     "artist": "Kiasmos"
+    },
+    {
+     "rank": 4,
+     "song": "LOWWS",
+     "artist": "Mushroom People"
+    },
+    {
+     "rank": 5,
+     "song": "Hey Kids (Feat. Late Verlane)",
+     "artist": "Molina"
+    },
+    {
+     "rank": 6,
+     "song": "Sunshine Baby",
+     "artist": "Ben-Browning"
+    },
+    {
+     "rank": 7,
+     "song": "NAVIGATE",
+     "artist": "NAVA"
+    },
+    {
+     "rank": 8,
+     "song": "White Jeans",
+     "artist": "SALES"
+    },
+    {
+     "rank": 9,
+     "song": "I'm Not Asking",
+     "artist": "Odina"
+    },
+    {
+     "rank": 10,
+     "song": "Dream Reader",
+     "artist": "FRANKIIE"
+    },
+    {
+     "rank": 11,
+     "song": "Feel Alright Yuksek Remix",
+     "artist": "Poolside"
+    },
+    {
+     "rank": 12,
+     "song": "My Drug",
+     "artist": "William Darc"
+    },
+    {
+     "rank": 13,
+     "song": "Hello From the Edge of the Earth",
+     "artist": "Mary Lattimore"
+    },
+    {
+     "rank": 14,
+     "song": "Message To My People",
+     "artist": "Idris Ackamoor and the Pyramids"
+    },
+    {
+     "rank": 15,
+     "song": "French Riviera",
+     "artist": "Cautious Clay"
+    },
+    {
+     "rank": 16,
+     "song": "Edison",
+     "artist": "Westerman"
+    },
+    {
+     "rank": 17,
+     "song": "Salaam",
+     "artist": "Kamaal Williams"
+    },
+    {
+     "rank": 18,
+     "song": "Bare",
+     "artist": "Rosie Carney"
+    },
+    {
+     "rank": 19,
+     "song": "Velvet +3 remixes",
+     "artist": "The Big Pink"
+    },
+    {
+     "rank": 20,
+     "song": "Wolf +1 remix",
+     "artist": "First Aid Kit"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180517113143/https://www.billboard.com/charts/rap-song",
+   "captured": "2018-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 2,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Psycho",
+     "artist": "Post Malone Featuring Ty Dolla $ign"
+    },
+    {
+     "rank": 5,
+     "song": "Look Alive",
+     "artist": "BlocBoy JB Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 7,
+     "song": "Walk It Talk It",
+     "artist": "Migos Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Watch",
+     "artist": "Travis Scott Featuring Lil Uzi Vert & Kanye West"
+    },
+    {
+     "rank": 9,
+     "song": "I Like It",
+     "artist": "Cardi B, Bad Bunny & J Balvin"
+    },
+    {
+     "rank": 10,
+     "song": "Chun-Li",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 11,
+     "song": "Better Now",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 12,
+     "song": "Be Careful",
+     "artist": "Cardi B"
+    },
+    {
+     "rank": 13,
+     "song": "Plug Walk",
+     "artist": "Rich The Kid"
+    },
+    {
+     "rank": 14,
+     "song": "Powerglide",
+     "artist": "Rae Sremmurd & Juicy J"
+    },
+    {
+     "rank": 15,
+     "song": "Sad!",
+     "artist": "XXXTENTACION"
+    },
+    {
+     "rank": 16,
+     "song": "Paranoid",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 17,
+     "song": "Ball For Me",
+     "artist": "Post Malone Featuring Nicki Minaj"
+    },
+    {
+     "rank": 18,
+     "song": "Overdose",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 19,
+     "song": "Japan",
+     "artist": "Famous Dex"
+    },
+    {
+     "rank": 20,
+     "song": "Stir Fry",
+     "artist": "Migos"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180517120206/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Shoota [ft. Lil Uzi Vert]",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 2,
+     "song": "Me&My (To Bury Your Parents)",
+     "artist": "André 3000"
+    },
+    {
+     "rank": 3,
+     "song": "Geyser",
+     "artist": "Mitski"
+    },
+    {
+     "rank": 4,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 5,
+     "song": "Gladly",
+     "artist": "Tirzah"
+    },
+    {
+     "rank": 6,
+     "song": "Womp Womp [ft. Jeremih]",
+     "artist": "Valee"
+    },
+    {
+     "rank": 7,
+     "song": "50 Euro to Break Boost",
+     "artist": "Skee Mask"
+    },
+    {
+     "rank": 8,
+     "song": "Heat Wave",
+     "artist": "Snail Mail"
+    },
+    {
+     "rank": 9,
+     "song": "Sleep",
+     "artist": "Hatchie"
+    },
+    {
+     "rank": 10,
+     "song": "Returning",
+     "artist": "Paul White"
+    },
+    {
+     "rank": 11,
+     "song": "Marijuanaut’s Theme",
+     "artist": "Sleep"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180512060317/https://www.billboard.com/charts/country-songs",
+   "captured": "2018-05-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Meant To Be",
+     "artist": "Bebe Rexha & Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 3,
+     "song": "You Make It Easy",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 4,
+     "song": "Famous",
+     "artist": "Mason Ramsey"
+    },
+    {
+     "rank": 5,
+     "song": "One Number Away",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 6,
+     "song": "Tequila",
+     "artist": "Dan + Shay"
+    },
+    {
+     "rank": 7,
+     "song": "Most People Are Good",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 8,
+     "song": "Singles You Up",
+     "artist": "Jordan Davis"
+    },
+    {
+     "rank": 9,
+     "song": "Marry Me",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 10,
+     "song": "Up Down",
+     "artist": "Morgan Wallen Featuring Florida Georgia Line"
+    },
+    {
+     "rank": 11,
+     "song": "Get Along",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 12,
+     "song": "For The First Time",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 13,
+     "song": "I Lived It",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 14,
+     "song": "Woman, Amen",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 15,
+     "song": "Everything's Gonna Be Alright",
+     "artist": "David Lee Murphy & Kenny Chesney"
+    },
+    {
+     "rank": 16,
+     "song": "Mercy",
+     "artist": "Brett Young"
+    },
+    {
+     "rank": 17,
+     "song": "I Was Jack (You Were Diane)",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 18,
+     "song": "Take Back Home Girl",
+     "artist": "Chris Lane Featuring Tori Kelly"
+    },
+    {
+     "rank": 19,
+     "song": "Coming Home",
+     "artist": "Keith Urban Featuring Julia Michaels"
+    },
+    {
+     "rank": 20,
+     "song": "Cry Pretty",
+     "artist": "Carrie Underwood"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180509122653/https://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2018-05-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Middle",
+     "artist": "Zedd, Maren Morris & Grey"
+    },
+    {
+     "rank": 2,
+     "song": "One Kiss",
+     "artist": "Calvin Harris & Dua Lipa"
+    },
+    {
+     "rank": 3,
+     "song": "Something Just Like This",
+     "artist": "The Chainsmokers & Coldplay"
+    },
+    {
+     "rank": 4,
+     "song": "Wolves",
+     "artist": "Selena Gomez X Marshmello"
+    },
+    {
+     "rank": 5,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 6,
+     "song": "Silence",
+     "artist": "Marshmello Featuring Khalid"
+    },
+    {
+     "rank": 7,
+     "song": "Let Me Go",
+     "artist": "Hailee Steinfeld & Alesso Featuring Florida Georgia Line & Watt"
+    },
+    {
+     "rank": 8,
+     "song": "Remind Me To Forget",
+     "artist": "Kygo Featuring Miguel"
+    },
+    {
+     "rank": 9,
+     "song": "Levels",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 10,
+     "song": "Somebody",
+     "artist": "The Chainsmokers & Drew Love"
+    },
+    {
+     "rank": 11,
+     "song": "Like I Do",
+     "artist": "David Guetta, Martin Garrix & Brooks"
+    },
+    {
+     "rank": 12,
+     "song": "Mad Love",
+     "artist": "Sean Paul + David Guetta Featuring Becky G"
+    },
+    {
+     "rank": 13,
+     "song": "Flames",
+     "artist": "David Guetta & Sia"
+    },
+    {
+     "rank": 14,
+     "song": "Everybody Hates Me",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 15,
+     "song": "Without You",
+     "artist": "Avicii Featuring Sandro Cavazza"
+    },
+    {
+     "rank": 16,
+     "song": "Body",
+     "artist": "Loud Luxury Featuring Brando"
+    },
+    {
+     "rank": 17,
+     "song": "That's It (I'm Crazy)",
+     "artist": "Sofi Tukker"
+    },
+    {
+     "rank": 18,
+     "song": "Alien",
+     "artist": "Sabrina Carpenter & Jonas Blue"
+    },
+    {
+     "rank": 19,
+     "song": "Magenta Riddim",
+     "artist": "DJ Snake"
+    },
+    {
+     "rank": 20,
+     "song": "Azukita",
+     "artist": "Steve Aoki, Daddy Yankee, Play-N-Skillz & Elvis Crespo"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180509055336/https://www.billboard.com/charts/alternative-songs",
+   "captured": "2018-05-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Broken",
+     "artist": "lovelytheband"
+    },
+    {
+     "rank": 2,
+     "song": "Whatever It Takes",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Thought Contagion",
+     "artist": "Muse"
+    },
+    {
+     "rank": 4,
+     "song": "Handyman",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 5,
+     "song": "Dangerous Night",
+     "artist": "Thirty Seconds To Mars"
+    },
+    {
+     "rank": 6,
+     "song": "Say Amen (Saturday Night)",
+     "artist": "Panic! At The Disco"
+    },
+    {
+     "rank": 7,
+     "song": "Sit Next To Me",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 8,
+     "song": "&Run",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 9,
+     "song": "Live In The Moment",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 10,
+     "song": "Saturday Sun",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 11,
+     "song": "I Feel Like I'm Drowning",
+     "artist": "Two Feet"
+    },
+    {
+     "rank": 12,
+     "song": "Celebrate",
+     "artist": "Dirty Heads Featuring The Unlikely Candidates"
+    },
+    {
+     "rank": 13,
+     "song": "You Worry Me",
+     "artist": "Nathaniel Rateliff & The Night Sweats"
+    },
+    {
+     "rank": 14,
+     "song": "One Foot",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 15,
+     "song": "House On Fire",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 16,
+     "song": "Favorite Color Is Blue",
+     "artist": "Robert DeLong + K.Flay"
+    },
+    {
+     "rank": 17,
+     "song": "Colors",
+     "artist": "Beck"
+    },
+    {
+     "rank": 18,
+     "song": "Going To Mars",
+     "artist": "Judah & The Lion"
+    },
+    {
+     "rank": 19,
+     "song": "I Hope You're Happy",
+     "artist": "Blue October"
+    },
+    {
+     "rank": 20,
+     "song": "Over And Over And Over",
+     "artist": "Jack White"
+    }
+   ]
+  },
+  {
+   "id": "spotify_viral",
+   "genre": "all",
+   "label": "Spotify · Viral 50 US (weekly, else daily)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180518212459/https://spotifycharts.com/viral/us/weekly/latest/",
+   "captured": "2018-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "New Light",
+     "artist": "John Mayer"
+    },
+    {
+     "rank": 2,
+     "song": "Girls (feat. Cardi B, Bebe Rexha & Charli XCX)",
+     "artist": "Rita Ora"
+    },
+    {
+     "rank": 3,
+     "song": "Toy",
+     "artist": "Netta"
+    },
+    {
+     "rank": 4,
+     "song": "Samurai Cop (Oh Joy Begin)",
+     "artist": "Dave Matthews Band"
+    },
+    {
+     "rank": 5,
+     "song": "Lucid Dreams",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 6,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 7,
+     "song": "Happy Man",
+     "artist": "Jungle"
+    },
+    {
+     "rank": 8,
+     "song": "Shoota (feat. Lil Uzi Vert)",
+     "artist": "Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Back To You - From 13 Reasons Why – Season 2 Soundtrack",
+     "artist": "Selena Gomez"
+    },
+    {
+     "rank": 10,
+     "song": "Fuego",
+     "artist": "Eleni Foureira"
+    },
+    {
+     "rank": 11,
+     "song": "Audio - with Sia, Diplo & Labrinth",
+     "artist": "Sia"
+    },
+    {
+     "rank": 12,
+     "song": "Ohio",
+     "artist": "Andrew McMahon in the Wilderness"
+    },
+    {
+     "rank": 13,
+     "song": "I'll Take Your Man",
+     "artist": "City Girls"
+    },
+    {
+     "rank": 14,
+     "song": "Womp Womp",
+     "artist": "Valee"
+    },
+    {
+     "rank": 15,
+     "song": "Yeah Right",
+     "artist": "Joji"
+    },
+    {
+     "rank": 16,
+     "song": "Te Boté - Remix",
+     "artist": "Nio Garcia"
+    },
+    {
+     "rank": 17,
+     "song": "All Girls Are The Same",
+     "artist": "Juice WRLD"
+    },
+    {
+     "rank": 18,
+     "song": "Wait (Featuring Offset & Vory)",
+     "artist": "Chantel Jeffries"
+    },
+    {
+     "rank": 19,
+     "song": "When We Were Young",
+     "artist": "Lost Kings"
+    },
+    {
+     "rank": 20,
+     "song": "Fun",
+     "artist": "Kaskade"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180514190257/http://kworb.net/charts/itunes/us.html",
+   "captured": "2018-05-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "This Is America",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 2,
+     "song": "Whatever It Takes",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 3,
+     "song": "Meant to Be",
+     "artist": "Bebe Rexha & Florida Georgia Line"
+    },
+    {
+     "rank": 4,
+     "song": "Back to You",
+     "artist": "Selena Gomez"
+    },
+    {
+     "rank": 5,
+     "song": "The Middle",
+     "artist": "Zedd, Maren Morris & Grey"
+    },
+    {
+     "rank": 6,
+     "song": "Nice For What",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Done For Me (feat. Kehlani)",
+     "artist": "Charlie Puth"
+    },
+    {
+     "rank": 8,
+     "song": "In My Blood",
+     "artist": "Shawn Mendes"
+    },
+    {
+     "rank": 9,
+     "song": "Psycho (feat. Ty Dolla $ign)",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 10,
+     "song": "No Tears Left to Cry",
+     "artist": "Ariana Grande"
+    },
+    {
+     "rank": 11,
+     "song": "Heaven",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 12,
+     "song": "New Light",
+     "artist": "John Mayer"
+    },
+    {
+     "rank": 13,
+     "song": "You Make It Easy",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 14,
+     "song": "Never Be the Same",
+     "artist": "Camila Cabello"
+    },
+    {
+     "rank": 15,
+     "song": "Cry Pretty",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 16,
+     "song": "Get Along",
+     "artist": "Kenny Chesney"
+    },
+    {
+     "rank": 17,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "No Excuses",
+     "artist": "Meghan Trainor"
+    },
+    {
+     "rank": 19,
+     "song": "Zombie",
+     "artist": "Bad Wolves"
+    },
+    {
+     "rank": 20,
+     "song": "Perfect",
+     "artist": "Ed Sheeran"
+    }
+   ]
+  }
+ ]
+}

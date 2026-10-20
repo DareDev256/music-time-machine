@@ -1,0 +1,281 @@
+{
+ "month": "2008-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080227110428/http://www.hotnewhiphop.com:80/",
+   "captured": "2008-02-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Drama Boyz",
+     "artist": "Lil Wanye"
+    },
+    {
+     "rank": 2,
+     "song": "I Got A Thang For You",
+     "artist": "Trina"
+    },
+    {
+     "rank": 3,
+     "song": "One Side",
+     "artist": "Mario & Ruben"
+    },
+    {
+     "rank": 4,
+     "song": "The Light '08 (It's Love)",
+     "artist": "Common"
+    },
+    {
+     "rank": 5,
+     "song": "Like Da Kid Be",
+     "artist": "A.K. feat. Gucci Mane & Dem Franchize Boyz"
+    },
+    {
+     "rank": 6,
+     "song": "Come Come (Feat. T-Pain)",
+     "artist": "Dem Franchize Boyz"
+    },
+    {
+     "rank": 7,
+     "song": "Connect Like Dots",
+     "artist": "T.I."
+    },
+    {
+     "rank": 8,
+     "song": "Independent Freestyle",
+     "artist": "Yung Joc"
+    },
+    {
+     "rank": 9,
+     "song": "Dope Man",
+     "artist": "Dolla feat. Jim Jones"
+    },
+    {
+     "rank": 10,
+     "song": "Roll",
+     "artist": "Flo-Rida Ft. Sean Kingston"
+    },
+    {
+     "rank": 11,
+     "song": "104",
+     "artist": "Dem Franchize Boyz"
+    },
+    {
+     "rank": 12,
+     "song": "Lonely Girl",
+     "artist": "Rain Ft Nate Dogg"
+    },
+    {
+     "rank": 13,
+     "song": "Candy Coated Diamonds",
+     "artist": "2 Pistols feat. Fergie"
+    },
+    {
+     "rank": 14,
+     "song": "Who's Gonna Love You",
+     "artist": "Nicole Scherzinger"
+    },
+    {
+     "rank": 15,
+     "song": "Ridin On Dubz/Dynamic",
+     "artist": "Camino Ft Crooked I"
+    },
+    {
+     "rank": 16,
+     "song": "Ya Boy - Stay The Night",
+     "artist": "Ya Boy"
+    },
+    {
+     "rank": 17,
+     "song": "Takin' It",
+     "artist": "Clete feat. Pleasure P"
+    },
+    {
+     "rank": 18,
+     "song": "Roc Boys Freestyle",
+     "artist": "Gorilla Zoe"
+    },
+    {
+     "rank": 19,
+     "song": "VIP",
+     "artist": "Traeyon feat. Yung Joc"
+    },
+    {
+     "rank": 20,
+     "song": "Move, Drop, Shake (Remix)",
+     "artist": "DJ Laz feat. Flo-Rida & Pitbull"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080215205329/http://hypem.com:80/popular?",
+   "captured": "2008-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Been Smokin' Too Long",
+     "artist": "Nick Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Connection (Elastica cover)",
+     "artist": "Talbot Tagora"
+    },
+    {
+     "rank": 3,
+     "song": "Pink Moon",
+     "artist": "Nick Drake"
+    },
+    {
+     "rank": 4,
+     "song": "lonely",
+     "artist": "The River Bends"
+    },
+    {
+     "rank": 5,
+     "song": "Paper Planes - Remix For The Children by Adrock",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 6,
+     "song": "Northern Sky",
+     "artist": "Nick Drake"
+    },
+    {
+     "rank": 7,
+     "song": "She's Half",
+     "artist": "American Analog Set"
+    },
+    {
+     "rank": 8,
+     "song": "Day Is Done",
+     "artist": "Nick Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Sea of Love",
+     "artist": "Cat Power"
+    },
+    {
+     "rank": 10,
+     "song": "Blues Run The Game",
+     "artist": "Nick Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Bafflin' Smoke Signal",
+     "artist": "Lee 'Scratch' Perry"
+    },
+    {
+     "rank": 12,
+     "song": "Henri",
+     "artist": "The Heavy Circles"
+    },
+    {
+     "rank": 13,
+     "song": "Videotape (Amplive Remix Feat Del The Funky Homosapien)",
+     "artist": "Radiohead"
+    },
+    {
+     "rank": 14,
+     "song": "So Lonely",
+     "artist": "Tim Buckley"
+    },
+    {
+     "rank": 15,
+     "song": "No Diggity (Blackstreet cover)",
+     "artist": "The Klaxons"
+    },
+    {
+     "rank": 16,
+     "song": "I Hate Myself For Loving You",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 17,
+     "song": "Love Is All Around",
+     "artist": "The Troggs"
+    },
+    {
+     "rank": 18,
+     "song": "03 Plastic Sugary",
+     "artist": "Senryu"
+    },
+    {
+     "rank": 19,
+     "song": "Make A Plan To Love Me",
+     "artist": "Bright Eyes"
+    },
+    {
+     "rank": 20,
+     "song": "Paper Planes (DFA Remix)",
+     "artist": "M.I.A."
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080214102545/http://2dopeboyz.com:80/",
+   "captured": "2008-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hey Mama (Grammy Mix) [Studio Version]",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Rainydayz Remixes",
+     "artist": "Amplive"
+    },
+    {
+     "rank": 3,
+     "song": "Dear Diary (rmx)",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 4,
+     "song": "The History of Hip-Hop (1994 & 1995)",
+     "artist": "The Rub"
+    },
+    {
+     "rank": 5,
+     "song": "Flashing Lights (Preview)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "One Call",
+     "artist": "Special Teamz"
+    },
+    {
+     "rank": 7,
+     "song": "Biggie Tribute Freestyle",
+     "artist": "Smif N Wessun"
+    },
+    {
+     "rank": 8,
+     "song": "Life of the Party f. Too $hort & Mistah F.A.B.",
+     "artist": "Snoop Dogg"
+    },
+    {
+     "rank": 9,
+     "song": "…because he broke the rules",
+     "artist": "Jay Electronica"
+    }
+   ]
+  }
+ ]
+}

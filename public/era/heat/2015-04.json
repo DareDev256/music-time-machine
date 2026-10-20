@@ -1,0 +1,896 @@
+{
+ "month": "2015-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150414003850/http://www.hotnewhiphop.com/top100/",
+   "captured": "2015-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "M'$ (Prod. By Honorable C.N.O.T.E. & Mike Dean)",
+     "artist": "ASAP Rocky"
+    },
+    {
+     "rank": 2,
+     "song": "U Mad",
+     "artist": "Vic Mensa Feat. Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "See You Again (Remix)",
+     "artist": "Chris Brown & Tyga"
+    },
+    {
+     "rank": 4,
+     "song": "In For It (Prod. By RL Grime)",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 5,
+     "song": "Bankrolls On Deck",
+     "artist": "T.I. Feat. Young Thug"
+    },
+    {
+     "rank": 6,
+     "song": "Dog Food (Prod. By Lex Luger)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "Tonight Belongs To U!",
+     "artist": "Jeremih Feat. Flo Rida"
+    },
+    {
+     "rank": 8,
+     "song": "Uber Driver",
+     "artist": "Wiz Khalifa & Curren$y"
+    },
+    {
+     "rank": 9,
+     "song": "Quiet Storm (Freestyle)",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 10,
+     "song": "Eyes Above",
+     "artist": "Flying Lotus Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 11,
+     "song": "FUCKING YOUNG / PERFECT",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 12,
+     "song": "Life 2 Die For",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 13,
+     "song": "The Flyest",
+     "artist": "OT Genasis"
+    },
+    {
+     "rank": 14,
+     "song": "No One Else",
+     "artist": "Gucci Mane Feat. Young Thug"
+    },
+    {
+     "rank": 15,
+     "song": "Aint Nuthin Ta Fuck Wit (Freestyle)",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 16,
+     "song": "Pot Jar",
+     "artist": "Curren$y Feat. Jadakiss"
+    },
+    {
+     "rank": 17,
+     "song": "Stankin'",
+     "artist": "Migos Feat. Trinidad James"
+    },
+    {
+     "rank": 18,
+     "song": "Bitch Better Have My Money",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 19,
+     "song": "Making Me Proud",
+     "artist": "Red Cafe Feat. Jeremih"
+    },
+    {
+     "rank": 20,
+     "song": "Judge It (Prod. By The Bmmb)",
+     "artist": "Wiz Khalifa & Ty Dolla $ign"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150415154341/http://hypem.com:80/popular/?",
+   "captured": "2015-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "CREAM ON CHROME",
+     "artist": "RATATAT"
+    },
+    {
+     "rank": 2,
+     "song": "6. Lovesick Fuck",
+     "artist": "Mura Masa"
+    },
+    {
+     "rank": 3,
+     "song": "Coming Over (Original Mix)",
+     "artist": "Kygo & Dillon Francis Feat. James Hersey"
+    },
+    {
+     "rank": 4,
+     "song": "Bitch Better Have My Money Hitimpulse Remix",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 5,
+     "song": "Skank (Original Mix)",
+     "artist": "Lucky Charmes"
+    },
+    {
+     "rank": 6,
+     "song": "Help Our Souls Urban Contact Remix",
+     "artist": "Nihils"
+    },
+    {
+     "rank": 7,
+     "song": "WE ARE THE HEARTS",
+     "artist": "EXGF"
+    },
+    {
+     "rank": 8,
+     "song": "Fast Car Hitimpulse Remix",
+     "artist": "Sam Smith"
+    },
+    {
+     "rank": 9,
+     "song": "Maybe Empia Remix",
+     "artist": "Carmada"
+    },
+    {
+     "rank": 10,
+     "song": "5. Low (feat. Jay Prince)",
+     "artist": "Mura Masa"
+    },
+    {
+     "rank": 11,
+     "song": "Darling (feat. Missio)",
+     "artist": "Said The Sky"
+    },
+    {
+     "rank": 12,
+     "song": "Drag",
+     "artist": "Day Wave"
+    },
+    {
+     "rank": 13,
+     "song": "Wait Until Tomorrow",
+     "artist": "Prince Fox"
+    },
+    {
+     "rank": 14,
+     "song": "Something Good (Original Mix)",
+     "artist": "MOUNT & Nicolas Haelg"
+    },
+    {
+     "rank": 15,
+     "song": "Forgiveness",
+     "artist": "Made In Heights"
+    },
+    {
+     "rank": 16,
+     "song": "Always Alright",
+     "artist": "Alabama Shakes"
+    },
+    {
+     "rank": 17,
+     "song": "Teeth",
+     "artist": "The Japanese House"
+    },
+    {
+     "rank": 18,
+     "song": "Forest Fires",
+     "artist": "Axel Flóvent"
+    },
+    {
+     "rank": 19,
+     "song": "All I Want Is You (feat. Keyhole)",
+     "artist": "Kraak & Smaak"
+    },
+    {
+     "rank": 20,
+     "song": "Miami Matoma Remix",
+     "artist": "Will Smith"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150415211359/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2015-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Trap Queen",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 2,
+     "song": "G.D.F.R.",
+     "artist": "Flo Rida Featuring Sage The Gemini & Lookas"
+    },
+    {
+     "rank": 3,
+     "song": "See You Again",
+     "artist": "Wiz Khalifa Featuring Charlie Puth"
+    },
+    {
+     "rank": 4,
+     "song": "Time Of Our Lives",
+     "artist": "Pitbull & Ne-Yo"
+    },
+    {
+     "rank": 5,
+     "song": "Truffle Butter",
+     "artist": "Nicki Minaj Featuring Drake & Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "Blessings",
+     "artist": "Big Sean Featuring Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Throw Sum Mo",
+     "artist": "Rae Sremmurd Featuring Nicki Minaj & Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "Only",
+     "artist": "Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Know Yourself",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Watch Me",
+     "artist": "Silento"
+    },
+    {
+     "rank": 11,
+     "song": "King Kunta",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 12,
+     "song": "Energy",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "All Day",
+     "artist": "Kanye West Featuring Theophilus London, Allan Kingdom & Paul McCartney"
+    },
+    {
+     "rank": 14,
+     "song": "Trouble",
+     "artist": "Iggy Azalea Featuring Jennifer Hudson"
+    },
+    {
+     "rank": 15,
+     "song": "Legend",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150414160700/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2015-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Earned It (Fifty Shades Of Grey)",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 2,
+     "song": "Trap Queen",
+     "artist": "Fetty Wap"
+    },
+    {
+     "rank": 3,
+     "song": "G.D.F.R.",
+     "artist": "Flo Rida Featuring Sage The Gemini & Lookas"
+    },
+    {
+     "rank": 4,
+     "song": "FourFiveSeconds",
+     "artist": "Rihanna & Kanye West & Paul McCartney"
+    },
+    {
+     "rank": 5,
+     "song": "See You Again",
+     "artist": "Wiz Khalifa Featuring Charlie Puth"
+    },
+    {
+     "rank": 6,
+     "song": "Somebody",
+     "artist": "Natalie La Rose Featuring Jeremih"
+    },
+    {
+     "rank": 7,
+     "song": "Truffle Butter",
+     "artist": "Nicki Minaj Featuring Drake & Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "B**** Better Have My Money",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 9,
+     "song": "Post To Be",
+     "artist": "Omarion Featuring Chris Brown & Jhene Aiko"
+    },
+    {
+     "rank": 10,
+     "song": "Ayo",
+     "artist": "Chris Brown & Tyga"
+    },
+    {
+     "rank": 11,
+     "song": "Blessings",
+     "artist": "Big Sean Featuring Drake"
+    },
+    {
+     "rank": 12,
+     "song": "I Don't Mind",
+     "artist": "Usher Featuring Juicy J"
+    },
+    {
+     "rank": 13,
+     "song": "Throw Sum Mo",
+     "artist": "Rae Sremmurd Featuring Nicki Minaj & Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "Only",
+     "artist": "Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown"
+    },
+    {
+     "rank": 15,
+     "song": "7/11",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 16,
+     "song": "Slow Motion",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 17,
+     "song": "She Knows",
+     "artist": "Ne-Yo Featuring Juicy J"
+    },
+    {
+     "rank": 18,
+     "song": "Know Yourself",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Watch Me",
+     "artist": "Silento"
+    },
+    {
+     "rank": 20,
+     "song": "King Kunta",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20150415052308/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2015-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ryderz",
+     "artist": "Hudson Mohawke"
+    },
+    {
+     "rank": 2,
+     "song": "Flex Cathedral",
+     "artist": "Max D"
+    },
+    {
+     "rank": 3,
+     "song": "All That",
+     "artist": "Carly Rae Jepsen"
+    },
+    {
+     "rank": 4,
+     "song": "'Cause I'm a Man",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 5,
+     "song": "Whip It (Remix)\" [ft. Migos and Rich the Kid]",
+     "artist": "iLoveMakonnen"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150415194446/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2015-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Take Your Time",
+     "artist": "Sam Hunt"
+    },
+    {
+     "rank": 2,
+     "song": "Homegrown",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 3,
+     "song": "Ain't Worth The Whiskey",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 4,
+     "song": "Lonely Eyes",
+     "artist": "Chris Young"
+    },
+    {
+     "rank": 5,
+     "song": "Girl Crush",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 6,
+     "song": "Drinking Class",
+     "artist": "Lee Brice"
+    },
+    {
+     "rank": 7,
+     "song": "Say You Do",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 8,
+     "song": "Homegrown Honey",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 9,
+     "song": "A Guy Walks Into A Bar",
+     "artist": "Tyler Farr"
+    },
+    {
+     "rank": 10,
+     "song": "Raise 'Em Up",
+     "artist": "Keith Urban Featuring Eric Church"
+    },
+    {
+     "rank": 11,
+     "song": "Don't It",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 12,
+     "song": "Smoke",
+     "artist": "A Thousand Horses"
+    },
+    {
+     "rank": 13,
+     "song": "Sippin' On Fire",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 14,
+     "song": "Little Red Wagon",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 15,
+     "song": "Little Toy Guns",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 16,
+     "song": "She Don't Love You",
+     "artist": "Eric Paslay"
+    },
+    {
+     "rank": 17,
+     "song": "Diamond Rings And Old Barstools",
+     "artist": "Tim McGraw With Catherine Dunn"
+    },
+    {
+     "rank": 18,
+     "song": "Wild Child",
+     "artist": "Kenny Chesney With Grace Potter"
+    },
+    {
+     "rank": 19,
+     "song": "Love You Like That",
+     "artist": "Canaan Smith"
+    },
+    {
+     "rank": 20,
+     "song": "Like A Wrecking Ball",
+     "artist": "Eric Church"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150417051427/http://www.billboard.com:80/charts/dance-electronic-songs",
+   "captured": "2015-04-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Want You To Know",
+     "artist": "Zedd Featuring Selena Gomez"
+    },
+    {
+     "rank": 2,
+     "song": "Outside",
+     "artist": "Calvin Harris Featuring Ellie Goulding"
+    },
+    {
+     "rank": 3,
+     "song": "Hey Mama",
+     "artist": "David Guetta Featuring Nicki Minaj & Afrojack"
+    },
+    {
+     "rank": 4,
+     "song": "Where Are U Now",
+     "artist": "Skrillex & Diplo Featuring Justin Bieber"
+    },
+    {
+     "rank": 5,
+     "song": "Get Low",
+     "artist": "Dillon Francis & DJ Snake"
+    },
+    {
+     "rank": 6,
+     "song": "You Know You Like It",
+     "artist": "DJ Snake & AlunaGeorge"
+    },
+    {
+     "rank": 7,
+     "song": "Prayer In C",
+     "artist": "Lillywood & Robin Schulz"
+    },
+    {
+     "rank": 8,
+     "song": "Waves",
+     "artist": "Mr. Probz"
+    },
+    {
+     "rank": 9,
+     "song": "Break Free",
+     "artist": "Ariana Grande Featuring Zedd"
+    },
+    {
+     "rank": 10,
+     "song": "Blame",
+     "artist": "Calvin Harris Featuring John Newman"
+    },
+    {
+     "rank": 11,
+     "song": "Lean On",
+     "artist": "Major Lazer X DJ Snake Featuring M0"
+    },
+    {
+     "rank": 12,
+     "song": "Stole The Show",
+     "artist": "Kygo Featuring Parson James"
+    },
+    {
+     "rank": 13,
+     "song": "Five More Hours",
+     "artist": "Deorro X Chris Brown"
+    },
+    {
+     "rank": 14,
+     "song": "The Nights",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 15,
+     "song": "Firestone",
+     "artist": "Kygo Featuring Conrad"
+    },
+    {
+     "rank": 16,
+     "song": "Runaway (U & I)",
+     "artist": "Galantis"
+    },
+    {
+     "rank": 17,
+     "song": "Cool",
+     "artist": "Alesso Featuring Roy English"
+    },
+    {
+     "rank": 18,
+     "song": "Don't Look Down",
+     "artist": "Martin Garrix Featuring Usher"
+    },
+    {
+     "rank": 19,
+     "song": "I'm An Albatraoz",
+     "artist": "AronChupa"
+    },
+    {
+     "rank": 20,
+     "song": "King",
+     "artist": "Years & Years"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20150417141248/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2015-04-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Believe",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 2,
+     "song": "Hollow Moon (Bad Wolf)",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 3,
+     "song": "Black Sun",
+     "artist": "Death Cab For Cutie"
+    },
+    {
+     "rank": 4,
+     "song": "Shut Up And Dance",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 5,
+     "song": "Long Way Down",
+     "artist": "Robert DeLong"
+    },
+    {
+     "rank": 6,
+     "song": "Dead Inside",
+     "artist": "Muse"
+    },
+    {
+     "rank": 7,
+     "song": "Congregation",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 8,
+     "song": "Lampshades On Fire",
+     "artist": "Modest Mouse"
+    },
+    {
+     "rank": 9,
+     "song": "What Kind Of Man",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 10,
+     "song": "Stolen Dance",
+     "artist": "Milky Chance"
+    },
+    {
+     "rank": 11,
+     "song": "Budapest",
+     "artist": "George Ezra"
+    },
+    {
+     "rank": 12,
+     "song": "Mess Is Mine",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 13,
+     "song": "Crystals",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 14,
+     "song": "Cigarette Daydreams",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 15,
+     "song": "Somebody New",
+     "artist": "Joywave"
+    },
+    {
+     "rank": 16,
+     "song": "Cecilia And The Satellite",
+     "artist": "Andrew McMahon In The Wilderness"
+    },
+    {
+     "rank": 17,
+     "song": "My Type",
+     "artist": "Saint Motel"
+    },
+    {
+     "rank": 18,
+     "song": "Weight Of Love",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 19,
+     "song": "Coming For You",
+     "artist": "The Offspring"
+    },
+    {
+     "rank": 20,
+     "song": "Shots",
+     "artist": "Imagine Dragons"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20150416025149/http://2dopeboyz.com/",
+   "captured": "2015-04-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Drop That Kitty",
+     "artist": "Ty Dolla $ign feat. Tinashe & Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "Birdman Hand Rub... Pause",
+     "artist": "Banger Alert: Wati Heru"
+    },
+    {
+     "rank": 3,
+     "song": "Runaway (Remix)",
+     "artist": "Pell"
+    },
+    {
+     "rank": 4,
+     "song": "LORD",
+     "artist": "A$AP Twelvyy"
+    },
+    {
+     "rank": 5,
+     "song": "Claire",
+     "artist": "Clear Soul Forces"
+    },
+    {
+     "rank": 6,
+     "song": "Flavors",
+     "artist": "SmooVth"
+    },
+    {
+     "rank": 7,
+     "song": "Great Eyedeas Never Die",
+     "artist": "Blueprint"
+    },
+    {
+     "rank": 8,
+     "song": "How We Play",
+     "artist": "N.A."
+    },
+    {
+     "rank": 9,
+     "song": "Beastface",
+     "artist": "Doomtree"
+    },
+    {
+     "rank": 10,
+     "song": "Believer",
+     "artist": "A.ware"
+    },
+    {
+     "rank": 11,
+     "song": "Drop That Kitty",
+     "artist": "Ty Dolla $ign feat. Charli XCX & Tinashe"
+    },
+    {
+     "rank": 12,
+     "song": "Legacy",
+     "artist": "Spit Gemz feat. Kool G. Rap"
+    },
+    {
+     "rank": 13,
+     "song": "Confessional",
+     "artist": "Michael Francis"
+    },
+    {
+     "rank": 14,
+     "song": "Something About Mary",
+     "artist": "Fashawn, K-Young, El Prez, & One-2"
+    },
+    {
+     "rank": 15,
+     "song": "Birdman Hand Rub... Pause",
+     "artist": "Wati Heru"
+    },
+    {
+     "rank": 16,
+     "song": "Stuck On You",
+     "artist": "BenZel feat. Tory Lanez"
+    },
+    {
+     "rank": 17,
+     "song": "Pilot Talk 3",
+     "artist": "Curren$y feat. LP"
+    },
+    {
+     "rank": 18,
+     "song": "1,2 1,2",
+     "artist": "Raekwon feat. Snoop Dogg"
+    },
+    {
+     "rank": 19,
+     "song": "U MAD",
+     "artist": "Vic Mensa feat. Kanye West"
+    },
+    {
+     "rank": 20,
+     "song": "Mo Money",
+     "artist": "Hardo feat. Wiz Khalifa"
+    }
+   ]
+  }
+ ]
+}

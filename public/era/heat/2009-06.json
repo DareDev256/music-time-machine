@@ -1,0 +1,226 @@
+{
+ "month": "2009-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090616123625/http://hypem.com:80/popular",
+   "captured": "2009-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Comfortable Up Here (Lil Wayne vs Royksopp)",
+     "artist": "The Hood Internet"
+    },
+    {
+     "rank": 2,
+     "song": "Stayin' Alive (Teddybears Remix)",
+     "artist": "Bee Gees"
+    },
+    {
+     "rank": 3,
+     "song": "Gifted (Treasure Fingers Remix V2) 16bit LIM MASTER",
+     "artist": "N.A.S.A."
+    },
+    {
+     "rank": 4,
+     "song": "Qui est cette fille",
+     "artist": "Yelle"
+    },
+    {
+     "rank": 5,
+     "song": "Dead End (Don Diablo knows you like it hard remix)",
+     "artist": "Master Shortie"
+    },
+    {
+     "rank": 6,
+     "song": "More Than Friends",
+     "artist": "FUKKK OFFF"
+    },
+    {
+     "rank": 7,
+     "song": "Little Words",
+     "artist": "Frankmusik"
+    },
+    {
+     "rank": 8,
+     "song": "21",
+     "artist": "Death Metal Disco Scene"
+    },
+    {
+     "rank": 9,
+     "song": "Carby (ft. Vampire Weekend)",
+     "artist": "Discovery"
+    },
+    {
+     "rank": 10,
+     "song": "Mr. Solo Dolo",
+     "artist": "KiD CuDi"
+    },
+    {
+     "rank": 11,
+     "song": "We Are Technologic LightsoverLA Re-Mash",
+     "artist": "DaftPunk vs. Does it Offend You Yeah"
+    },
+    {
+     "rank": 12,
+     "song": "Sexy Chain Ft Justice + U2",
+     "artist": "Master Shortie"
+    },
+    {
+     "rank": 13,
+     "song": "Confusion Girl (Don Diablo loves to slowdance remix)",
+     "artist": "Frankmusik"
+    },
+    {
+     "rank": 14,
+     "song": "Playground Love [Air Cover]",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 15,
+     "song": "Digital Love (Daft Punk Cover by Alphabeat, FrankMusic and Leon Jean-Marie)",
+     "artist": "Alphabeat"
+    },
+    {
+     "rank": 16,
+     "song": "Strange Enough feat. Ol Dirty Bastard, Karen O. and Fatlip (Designer Drugs Mix)",
+     "artist": "N.A.S.A."
+    },
+    {
+     "rank": 17,
+     "song": "The Girl From Ipanema (Disco Version)",
+     "artist": "Astrud Gilberto"
+    },
+    {
+     "rank": 18,
+     "song": "Carmen/I Love U (MSTRKRFT Edit)",
+     "artist": "Larry Tee Feat. Ghostface Killa"
+    },
+    {
+     "rank": 19,
+     "song": "This Land Is Your Land",
+     "artist": "Sharon Jones & the Dap-Kings"
+    },
+    {
+     "rank": 20,
+     "song": "Sun Hands",
+     "artist": "Local Natives"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090616055447/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2009-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dreamer",
+     "artist": "Tiny Vipers"
+    },
+    {
+     "rank": 2,
+     "song": "Combination Pizza Hut and Taco Bell (Wallpaper. Remix)",
+     "artist": "Das Racist"
+    },
+    {
+     "rank": 3,
+     "song": "Love the Nite Away (Tiedye Mix)",
+     "artist": "DJ Kaos"
+    },
+    {
+     "rank": 4,
+     "song": "Psychic City (Voodoo City)",
+     "artist": "YACHT"
+    },
+    {
+     "rank": 5,
+     "song": "It Ain't Gonna Save Me",
+     "artist": "Jay Reatard"
+    },
+    {
+     "rank": 6,
+     "song": "Divinations",
+     "artist": "Mastodon"
+    },
+    {
+     "rank": 7,
+     "song": "Dream City",
+     "artist": "Free Energy"
+    },
+    {
+     "rank": 8,
+     "song": "Bode",
+     "artist": "Julianna Barwick"
+    },
+    {
+     "rank": 9,
+     "song": "Northern Lights",
+     "artist": "Bowerbirds"
+    },
+    {
+     "rank": 10,
+     "song": "While You Wait For the Others",
+     "artist": "Grizzly Bear"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090627002003/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-06-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Warm Heart Of Africa",
+     "artist": "Theophilus London & Ezra Koeing"
+    },
+    {
+     "rank": 2,
+     "song": "Heartbeat\" snippet + Video!",
+     "artist": "Frank Ramz"
+    },
+    {
+     "rank": 3,
+     "song": "My Purlpe Past\" - video",
+     "artist": "Deerhoof"
+    },
+    {
+     "rank": 4,
+     "song": "I Am Not A Robot",
+     "artist": "Marina & the Diamonds"
+    },
+    {
+     "rank": 5,
+     "song": "Allure In The Garage\" and \"Say It Ain't December 14th",
+     "artist": "Jay-Zeezer"
+    },
+    {
+     "rank": 6,
+     "song": "Think Good Thoughts",
+     "artist": "Drake Ft. Phonte & Elzhi"
+    },
+    {
+     "rank": 7,
+     "song": "The Seed 3.0",
+     "artist": "Don Diablo vs. The Roots"
+    },
+    {
+     "rank": 8,
+     "song": "Tigerlily",
+     "artist": "La Roux"
+    }
+   ]
+  }
+ ]
+}

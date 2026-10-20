@@ -1,0 +1,1061 @@
+{
+ "month": "2023-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230818114554/https://hypem.com/popular",
+   "captured": "2023-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "baba louie",
+     "artist": "jaimie branch"
+    },
+    {
+     "rank": 2,
+     "song": "Kate",
+     "artist": "Chandra"
+    },
+    {
+     "rank": 3,
+     "song": "An Arrow In The Wall",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 4,
+     "song": "Glasgow",
+     "artist": "Jockstrap"
+    },
+    {
+     "rank": 5,
+     "song": "s l o w l y, l o n g",
+     "artist": "Virgins"
+    },
+    {
+     "rank": 6,
+     "song": "ON YOUR MIND",
+     "artist": "Midnight Pool Party"
+    },
+    {
+     "rank": 7,
+     "song": "carvers, farriers and knaves",
+     "artist": "BIG|BRAVE"
+    },
+    {
+     "rank": 8,
+     "song": "Jon",
+     "artist": "A Beacon School"
+    },
+    {
+     "rank": 9,
+     "song": "All I Need",
+     "artist": "Jessica Winter & Jonathan Snipes"
+    },
+    {
+     "rank": 10,
+     "song": "No Commando",
+     "artist": "ONIPA"
+    },
+    {
+     "rank": 11,
+     "song": "Swishers",
+     "artist": "Softmax"
+    },
+    {
+     "rank": 12,
+     "song": "𝓖𝓸𝓸𝓭𝓷𝓲𝓰𝓱𝓽",
+     "artist": "prudns"
+    },
+    {
+     "rank": 13,
+     "song": "Dragon",
+     "artist": "King Gizzard & The Lizard Wizard"
+    },
+    {
+     "rank": 14,
+     "song": "Words",
+     "artist": "Nature TV"
+    },
+    {
+     "rank": 15,
+     "song": "Pangaea Girls (Magic Feeling)",
+     "artist": "Candy Claws"
+    },
+    {
+     "rank": 16,
+     "song": "Best Of Me",
+     "artist": "1tbsp"
+    },
+    {
+     "rank": 17,
+     "song": "Tints (feat. Kevin Collett)",
+     "artist": "Lemonade Baby"
+    },
+    {
+     "rank": 18,
+     "song": "Luv Me",
+     "artist": "Munan"
+    },
+    {
+     "rank": 19,
+     "song": "Between Gigs",
+     "artist": "Nick Marks"
+    },
+    {
+     "rank": 20,
+     "song": "Each Day",
+     "artist": "jeanines"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230815143027/https://www.billboard.com/charts/rap-song/",
+   "captured": "2023-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fukumean",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 2,
+     "song": "Barbie World",
+     "artist": "Nicki Minaj & Ice Spice With Aqua"
+    },
+    {
+     "rank": 3,
+     "song": "All My Life",
+     "artist": "Lil Durk Featuring J. Cole"
+    },
+    {
+     "rank": 4,
+     "song": "Meltdown",
+     "artist": "Travis Scott Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 6,
+     "song": "I Know ?",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 7,
+     "song": "FE!N",
+     "artist": "Travis Scott Featuring Playboi Carti"
+    },
+    {
+     "rank": 8,
+     "song": "Favorite Song",
+     "artist": "Toosii"
+    },
+    {
+     "rank": 9,
+     "song": "K-POP",
+     "artist": "Travis Scott, Bad Bunny & The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Telekinesis",
+     "artist": "Travis Scott Featuring SZA & Future"
+    },
+    {
+     "rank": 11,
+     "song": "Search & Rescue",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Put It On Da Floor Again",
+     "artist": "Latto Featuring Cardi B"
+    },
+    {
+     "rank": 13,
+     "song": "My Eyes",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Topia Twins",
+     "artist": "Travis Scott Featuring Rob49 & 21 Savage"
+    },
+    {
+     "rank": 15,
+     "song": "Deli",
+     "artist": "Ice Spice"
+    },
+    {
+     "rank": 16,
+     "song": "Princess Diana",
+     "artist": "Ice Spice & Nicki Minaj"
+    },
+    {
+     "rank": 17,
+     "song": "Peaches & Eggplants",
+     "artist": "Young Nudy Featuring 21 Savage"
+    },
+    {
+     "rank": 18,
+     "song": "Area Codes",
+     "artist": "Kaliii"
+    },
+    {
+     "rank": 19,
+     "song": "Thank God",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 20,
+     "song": "Hyaena",
+     "artist": "Travis Scott"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230815172341/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2023-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fukumean",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 2,
+     "song": "Barbie World",
+     "artist": "Nicki Minaj & Ice Spice With Aqua"
+    },
+    {
+     "rank": 3,
+     "song": "Snooze",
+     "artist": "SZA"
+    },
+    {
+     "rank": 4,
+     "song": "All My Life",
+     "artist": "Lil Durk Featuring J. Cole"
+    },
+    {
+     "rank": 5,
+     "song": "Meltdown",
+     "artist": "Travis Scott Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 7,
+     "song": "I Know ?",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 8,
+     "song": "FE!N",
+     "artist": "Travis Scott Featuring Playboi Carti"
+    },
+    {
+     "rank": 9,
+     "song": "Favorite Song",
+     "artist": "Toosii"
+    },
+    {
+     "rank": 10,
+     "song": "K-POP",
+     "artist": "Travis Scott, Bad Bunny & The Weeknd"
+    },
+    {
+     "rank": 11,
+     "song": "Telekinesis",
+     "artist": "Travis Scott Featuring SZA & Future"
+    },
+    {
+     "rank": 12,
+     "song": "Search & Rescue",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Put It On Da Floor Again",
+     "artist": "Latto Featuring Cardi B"
+    },
+    {
+     "rank": 14,
+     "song": "My Eyes",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 15,
+     "song": "Topia Twins",
+     "artist": "Travis Scott Featuring Rob49 & 21 Savage"
+    },
+    {
+     "rank": 16,
+     "song": "What It Is (Block Boy)",
+     "artist": "Doechii Featuring Kodak Black"
+    },
+    {
+     "rank": 17,
+     "song": "Deli",
+     "artist": "Ice Spice"
+    },
+    {
+     "rank": 18,
+     "song": "Princess Diana",
+     "artist": "Ice Spice & Nicki Minaj"
+    },
+    {
+     "rank": 19,
+     "song": "Peaches & Eggplants",
+     "artist": "Young Nudy Featuring 21 Savage"
+    },
+    {
+     "rank": 20,
+     "song": "Area Codes",
+     "artist": "Kaliii"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20230818224218/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2023-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad Idea Right?",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 2,
+     "song": "Knockin",
+     "artist": "MJ Lenderman"
+    },
+    {
+     "rank": 3,
+     "song": "Psychedelic Switch",
+     "artist": "Carly Rae Jepsen"
+    },
+    {
+     "rank": 4,
+     "song": "Vampire Empire",
+     "artist": "Big Thief"
+    },
+    {
+     "rank": 5,
+     "song": "Rush",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 6,
+     "song": "Tiny Garden [ft. duendita]",
+     "artist": "Jamila Woods"
+    },
+    {
+     "rank": 7,
+     "song": "Vampire",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 8,
+     "song": "Spirit 2.0",
+     "artist": "Sampha"
+    },
+    {
+     "rank": 9,
+     "song": "Rosa Rugosa",
+     "artist": "Olof Dreijer"
+    },
+    {
+     "rank": 10,
+     "song": "If I Don’t See You in the Future, I’ll See You in the Pasture",
+     "artist": "Cole Pulice"
+    },
+    {
+     "rank": 11,
+     "song": "The Hillbillies",
+     "artist": "Baby Keem & Kendrick Lamar"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230815142701/https://www.billboard.com/charts/country-songs/",
+   "captured": "2023-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Last Night",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 2,
+     "song": "Fast Car",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 3,
+     "song": "Need A Favor",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 4,
+     "song": "Religiously",
+     "artist": "Bailey Zimmerman"
+    },
+    {
+     "rank": 5,
+     "song": "Try That In A Small Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 6,
+     "song": "Thinkin' Bout Me",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 7,
+     "song": "Love You Anyway",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 8,
+     "song": "Bury Me In Georgia",
+     "artist": "Kane Brown"
+    },
+    {
+     "rank": 9,
+     "song": "You, Me, & Whiskey",
+     "artist": "Justin Moore & Priscilla Block"
+    },
+    {
+     "rank": 10,
+     "song": "Watermelon Moonshine",
+     "artist": "Lainey Wilson"
+    },
+    {
+     "rank": 11,
+     "song": "In Your Love",
+     "artist": "Tyler Childers"
+    },
+    {
+     "rank": 12,
+     "song": "Your Heart Or Mine",
+     "artist": "Jon Pardi"
+    },
+    {
+     "rank": 13,
+     "song": "White Horse",
+     "artist": "Chris Stapleton"
+    },
+    {
+     "rank": 14,
+     "song": "Truck Bed",
+     "artist": "HARDY"
+    },
+    {
+     "rank": 15,
+     "song": "I Can See You (Taylor's Version) (From The Vault)",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 16,
+     "song": "Everything I Love",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 17,
+     "song": "Angels Don't Always Have Wings",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 18,
+     "song": "Heartbroken",
+     "artist": "Diplo, Jessie Murph & Polo G"
+    },
+    {
+     "rank": 19,
+     "song": "Cowgirls",
+     "artist": "Morgan Wallen Featuring ERNEST"
+    },
+    {
+     "rank": 20,
+     "song": "Save Me",
+     "artist": "Jelly Roll With Lainey Wilson"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230818101839/https://beatport.com/top-100",
+   "captured": "2023-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Atmosphere (Extended Mix)",
+     "artist": "Kita Alexander & FISHER (OZ)"
+    },
+    {
+     "rank": 2,
+     "song": "Milkshake",
+     "artist": "Alex Wann"
+    },
+    {
+     "rank": 3,
+     "song": "(It Goes Like) Nanana",
+     "artist": "Peggy Gou"
+    },
+    {
+     "rank": 4,
+     "song": "Number 1 (Extended Mix)",
+     "artist": "Major Lazer & James Hype"
+    },
+    {
+     "rank": 5,
+     "song": "Take It Off (Extended Mix)",
+     "artist": "FISHER (OZ) & Aatig"
+    },
+    {
+     "rank": 6,
+     "song": "Baddadan (Extended Mix)",
+     "artist": "Trigga, Chase & Status, Irah, Flowdan & Bou"
+    },
+    {
+     "rank": 7,
+     "song": "Fine Day Anthem (Extended Mix)",
+     "artist": "Boys Noize & Skrillex"
+    },
+    {
+     "rank": 8,
+     "song": "The Boy Is Mine feat. Rosalie (Club Mix)",
+     "artist": "Rosalie, James Mac & VALL"
+    },
+    {
+     "rank": 9,
+     "song": "Metro (Extended Mix)",
+     "artist": "Kevin de Vries & Mau P"
+    },
+    {
+     "rank": 10,
+     "song": "Syren (Extended Mix)",
+     "artist": "Rebuke & Anyma (ofc)"
+    },
+    {
+     "rank": 11,
+     "song": "Better Off Alone (Extended Mix)",
+     "artist": "Marlon Sadler & Sam Supplier"
+    },
+    {
+     "rank": 12,
+     "song": "Alegria (Extended Mix)",
+     "artist": "Dave Winnel"
+    },
+    {
+     "rank": 13,
+     "song": "Somebody That I Used To Know (Extended Mix)",
+     "artist": "Kevin McKay & James Cole"
+    },
+    {
+     "rank": 14,
+     "song": "Fine Night",
+     "artist": "Cloonee"
+    },
+    {
+     "rank": 15,
+     "song": "Vois sur ton chemin (Extended Techno Mix)",
+     "artist": "Bennett"
+    },
+    {
+     "rank": 16,
+     "song": "Save Me feat. Poppy Baskcomb (Extended Mix)",
+     "artist": "Cassian, Poppy Baskcomb & Anyma (ofc)"
+    },
+    {
+     "rank": 17,
+     "song": "Don't Stop The Music",
+     "artist": "AtcG"
+    },
+    {
+     "rank": 18,
+     "song": "In The City",
+     "artist": "Basstripper"
+    },
+    {
+     "rank": 19,
+     "song": "Eat Your Man (with Nelly Furtado) (Extended)",
+     "artist": "Nelly Furtado & Dom Dolla"
+    },
+    {
+     "rank": 20,
+     "song": "The Rapture Pt.III",
+     "artist": "&ME, Black Coffee & Keinemusik"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230814190107/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2023-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm Good (Blue)",
+     "artist": "David Guetta & Bebe Rexha"
+    },
+    {
+     "rank": 2,
+     "song": "Baby Don't Hurt Me",
+     "artist": "David Guetta, Anne-Marie & Coi Leray"
+    },
+    {
+     "rank": 3,
+     "song": "Rush",
+     "artist": "Troye Sivan"
+    },
+    {
+     "rank": 4,
+     "song": "Hold Me Closer",
+     "artist": "Elton John & Britney Spears"
+    },
+    {
+     "rank": 5,
+     "song": "Desire",
+     "artist": "Calvin Harris & Sam Smith"
+    },
+    {
+     "rank": 6,
+     "song": "El Merengue",
+     "artist": "Marshmello & Manuel Turizo"
+    },
+    {
+     "rank": 7,
+     "song": "Bzrp Music Sessions, Vol. 53",
+     "artist": "Bizarrap & Shakira"
+    },
+    {
+     "rank": 8,
+     "song": "Choose Your Fighter",
+     "artist": "Ava Max"
+    },
+    {
+     "rank": 9,
+     "song": "GMFU",
+     "artist": "Odetari & 6arelyhuman"
+    },
+    {
+     "rank": 10,
+     "song": "(It Goes Like) Nanana",
+     "artist": "Peggy Gou"
+    },
+    {
+     "rank": 11,
+     "song": "Baby Hello",
+     "artist": "Rauw Alejandro X Bizarrap"
+    },
+    {
+     "rank": 12,
+     "song": "Alone",
+     "artist": "Kim Petras Featuring Nicki Minaj"
+    },
+    {
+     "rank": 13,
+     "song": "Padam Padam",
+     "artist": "Kylie Minogue"
+    },
+    {
+     "rank": 14,
+     "song": "Look Don't Touch",
+     "artist": "Odetari & cade clair"
+    },
+    {
+     "rank": 15,
+     "song": "Good Loyal Thots",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 16,
+     "song": "Where You Are",
+     "artist": "John Summit & Hayla"
+    },
+    {
+     "rank": 17,
+     "song": "The Lost Soul Down",
+     "artist": "NBSPLV"
+    },
+    {
+     "rank": 18,
+     "song": "Narcissistic Personality Disorder",
+     "artist": "Odetari"
+    },
+    {
+     "rank": 19,
+     "song": "Miracle",
+     "artist": "Calvin Harris & Ellie Goulding"
+    },
+    {
+     "rank": 20,
+     "song": "Esta Vida",
+     "artist": "Marshmello & Farruko"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230815175141/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2023-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rescue Me",
+     "artist": "Dirty Heads"
+    },
+    {
+     "rank": 2,
+     "song": "Stuck",
+     "artist": "Thirty Seconds To Mars"
+    },
+    {
+     "rank": 3,
+     "song": "Lost",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 4,
+     "song": "Emergency Contact",
+     "artist": "Pierce The Veil"
+    },
+    {
+     "rank": 5,
+     "song": "Just Pretend",
+     "artist": "Bad Omens"
+    },
+    {
+     "rank": 6,
+     "song": "Call Me What You Like",
+     "artist": "Lovejoy"
+    },
+    {
+     "rank": 7,
+     "song": "Calm Down",
+     "artist": "All Time Low"
+    },
+    {
+     "rank": 8,
+     "song": "Dial Drunk",
+     "artist": "Noah Kahan With Post Malone"
+    },
+    {
+     "rank": 9,
+     "song": "Rescued",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 10,
+     "song": "Hello",
+     "artist": "Grouplove"
+    },
+    {
+     "rank": 11,
+     "song": "Out Of My Mind",
+     "artist": "little image"
+    },
+    {
+     "rank": 12,
+     "song": "Love From The Other Side",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 13,
+     "song": "Hold Me Like A Grudge",
+     "artist": "Fall Out Boy"
+    },
+    {
+     "rank": 14,
+     "song": "Not Strong Enough",
+     "artist": "boygenius"
+    },
+    {
+     "rank": 15,
+     "song": "In My Head",
+     "artist": "Mike Shinoda & Kailee Morgue"
+    },
+    {
+     "rank": 16,
+     "song": "Unlovable",
+     "artist": "Beach Weather Featuring Pale Waves"
+    },
+    {
+     "rank": 17,
+     "song": "Under You",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 18,
+     "song": "Cannonballers",
+     "artist": "Colony House"
+    },
+    {
+     "rank": 19,
+     "song": "Say Yes To Heaven",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 20,
+     "song": "We Didn't Start The Fire",
+     "artist": "Fall Out Boy"
+    }
+   ]
+  },
+  {
+   "id": "kworb_spotify_us",
+   "genre": "pop",
+   "label": "kworb · Spotify US Weekly (streams)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230816225045/https://kworb.net/spotify/country/us_weekly.html",
+   "captured": "2023-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "fukumean",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 2,
+     "song": "MELTDOWN",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 3,
+     "song": "Cruel Summer",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 4,
+     "song": "Last Night",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 5,
+     "song": "Barbie World (w/ Ice Spice , Aqua )",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 7,
+     "song": "vampire",
+     "artist": "Olivia Rodrigo"
+    },
+    {
+     "rank": 8,
+     "song": "Paint The Town Red",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 9,
+     "song": "FE!N",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 10,
+     "song": "Dance The Night (From Barbie The Album)",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 11,
+     "song": "I KNOW ?",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 12,
+     "song": "Fast Car",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 13,
+     "song": "TELEKINESIS",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 14,
+     "song": "Ella Baila Sola (w/ Peso Pluma )",
+     "artist": "Eslabon Armado"
+    },
+    {
+     "rank": 15,
+     "song": "Seven (w/ Latto )",
+     "artist": "Jung Kook"
+    },
+    {
+     "rank": 16,
+     "song": "Something in the Orange",
+     "artist": "Zach Bryan"
+    },
+    {
+     "rank": 17,
+     "song": "Kill Bill",
+     "artist": "SZA"
+    },
+    {
+     "rank": 18,
+     "song": "K-POP (w/ Bad Bunny , The Weeknd )",
+     "artist": "Travis Scott"
+    },
+    {
+     "rank": 19,
+     "song": "See You Again (w/ Kali Uchis )",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 20,
+     "song": "You Proof",
+     "artist": "Morgan Wallen"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20230815153348/https://kworb.net/charts/itunes/us.html",
+   "captured": "2023-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rich Men North of Richmond",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 2,
+     "song": "Aint Gotta Dollar",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 3,
+     "song": "Ive Got to Get Sober",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 4,
+     "song": "Try That In A Small Town",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 5,
+     "song": "Cruel Summer",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 6,
+     "song": "Fast Car",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 7,
+     "song": "Love Me Again",
+     "artist": "V"
+    },
+    {
+     "rank": 8,
+     "song": "I Want to go Home",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 9,
+     "song": "Rainy Days",
+     "artist": "V"
+    },
+    {
+     "rank": 10,
+     "song": "Need A Favor",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 11,
+     "song": "Virginia",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 12,
+     "song": "Last Night",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 13,
+     "song": "Rich Mans Gold",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 14,
+     "song": "Always Love You (Like a Good Ole Dog)",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 15,
+     "song": "SUPPOSED TO BE LOVED (feat. Lil Uzi Vert)",
+     "artist": "DJ Khaled, Lil Baby & Future"
+    },
+    {
+     "rank": 16,
+     "song": "Feeling Purdy Good",
+     "artist": "Oliver Anthony Music"
+    },
+    {
+     "rank": 17,
+     "song": "Your America",
+     "artist": "Tom MacDonald & Adam Calhoun"
+    },
+    {
+     "rank": 18,
+     "song": "Dance The Night",
+     "artist": "Dua Lipa"
+    },
+    {
+     "rank": 19,
+     "song": "Save Me (with Lainey Wilson)",
+     "artist": "Jelly Roll"
+    },
+    {
+     "rank": 20,
+     "song": "White Horse",
+     "artist": "Chris Stapleton"
+    }
+   ]
+  }
+ ]
+}

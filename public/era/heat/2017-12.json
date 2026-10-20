@@ -1,0 +1,401 @@
+{
+ "month": "2017-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171223000328/https://www.hotnewhiphop.com/top100/",
+   "captured": "2017-12-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stir Fry (Prod. By Pharrell)",
+     "artist": "Migos"
+    },
+    {
+     "rank": 2,
+     "song": "That's My N***a",
+     "artist": "Meek Mill Feat. Snoop Dogg"
+    },
+    {
+     "rank": 3,
+     "song": "American Dream",
+     "artist": "Jeezy Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Sensei (Remix)",
+     "artist": "Chris Brown Feat. T.I."
+    },
+    {
+     "rank": 5,
+     "song": "Go Crazy",
+     "artist": "Jay Jones Feat. Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "Birds (Prod. By Zaytoven)",
+     "artist": "Lil Uzi Vert"
+    },
+    {
+     "rank": 7,
+     "song": "You The Same (Gucci Gang EASTMIX)",
+     "artist": "Dave East"
+    },
+    {
+     "rank": 8,
+     "song": "Bank Account (Remix)",
+     "artist": "Joyner Lucas"
+    },
+    {
+     "rank": 9,
+     "song": "Blackin Out",
+     "artist": "Lil Wayne Feat. Euro"
+    },
+    {
+     "rank": 10,
+     "song": "Gucci Gang (Remix)",
+     "artist": "August Alsina"
+    },
+    {
+     "rank": 11,
+     "song": "Bank Account",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 12,
+     "song": "Bukkake",
+     "artist": "Ski Mask the Slump God Feat. Rich The Kid"
+    },
+    {
+     "rank": 13,
+     "song": "Nowhere Fast",
+     "artist": "Eminem Feat. Kehlani"
+    },
+    {
+     "rank": 14,
+     "song": "Changed (Prod. By Cassius Jay)",
+     "artist": "Rich Homie Quan"
+    },
+    {
+     "rank": 15,
+     "song": "Five Guys",
+     "artist": "Zaytoven Feat. Migos"
+    },
+    {
+     "rank": 16,
+     "song": "Pressure",
+     "artist": "Jeezy Feat. YG"
+    },
+    {
+     "rank": 17,
+     "song": "Let it Snow",
+     "artist": "Chance The Rapper & Jeremih"
+    },
+    {
+     "rank": 18,
+     "song": "Plain Jane (Remix)",
+     "artist": "A$AP Ferg Feat. Nicki Minaj"
+    },
+    {
+     "rank": 19,
+     "song": "Framed",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 20,
+     "song": "Remind Me (Prod. By Rick Rubin)",
+     "artist": "Eminem"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171213230229/https://hypem.com/popular",
+   "captured": "2017-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Don't Kill My Vibe +2 remixes",
+     "artist": "Sigrid"
+    },
+    {
+     "rank": 2,
+     "song": "Passionfruit Drake Rework",
+     "artist": "Yaeji"
+    },
+    {
+     "rank": 3,
+     "song": "Stereo (feat. Dopize)",
+     "artist": "SACRE"
+    },
+    {
+     "rank": 4,
+     "song": "Starting Fires feat. Daisy Guttridge",
+     "artist": "Disco Fries"
+    },
+    {
+     "rank": 5,
+     "song": "Running Away (feat. CUT_)",
+     "artist": "Taska Black x DROELOE"
+    },
+    {
+     "rank": 6,
+     "song": "Lo Que Siento",
+     "artist": "cuco"
+    },
+    {
+     "rank": 7,
+     "song": "Talk To Me",
+     "artist": "Axel Mansoor"
+    },
+    {
+     "rank": 8,
+     "song": "Easier",
+     "artist": "Mansionair"
+    },
+    {
+     "rank": 9,
+     "song": "Destiny N Stereo (feat. Elzhi, Phonte Coleman & Eric Roberson)",
+     "artist": "Chris Dave And The Drumhedz"
+    },
+    {
+     "rank": 10,
+     "song": "Bitches Broken Hearts Nubbz Remix",
+     "artist": "Billie Eilish"
+    },
+    {
+     "rank": 11,
+     "song": "Master Plan",
+     "artist": "Damu The Fudgemunk"
+    },
+    {
+     "rank": 12,
+     "song": "Lungs",
+     "artist": "Shy Luv"
+    },
+    {
+     "rank": 13,
+     "song": "Dots",
+     "artist": "Woodes"
+    },
+    {
+     "rank": 14,
+     "song": "In Your Eyes Michael Prado Remix",
+     "artist": "SCHWARZ"
+    },
+    {
+     "rank": 15,
+     "song": "Brazili",
+     "artist": "RAMZi"
+    },
+    {
+     "rank": 16,
+     "song": "all these worlds are yours",
+     "artist": "HOLY"
+    },
+    {
+     "rank": 17,
+     "song": "Forget Forgive",
+     "artist": "Someone"
+    },
+    {
+     "rank": 18,
+     "song": "I See Faces",
+     "artist": "AMBIERE"
+    },
+    {
+     "rank": 19,
+     "song": "Swing",
+     "artist": "Francis"
+    },
+    {
+     "rank": 20,
+     "song": "Rooftops feat. Natalie Duffy",
+     "artist": "French Horn Rebellion"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20171213230957/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2017-12-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Beach Life in Death",
+     "artist": "Car Seat Headrest"
+    },
+    {
+     "rank": 2,
+     "song": "Blissing Me",
+     "artist": "Björk"
+    },
+    {
+     "rank": 3,
+     "song": "Intrepid",
+     "artist": "Pinegrove"
+    },
+    {
+     "rank": 4,
+     "song": "Still Serving",
+     "artist": "21 Savage, Offset & Metro Boomin"
+    },
+    {
+     "rank": 5,
+     "song": "IDK About You",
+     "artist": "Fever Ray"
+    },
+    {
+     "rank": 6,
+     "song": "The One to Wait",
+     "artist": "CCFX"
+    },
+    {
+     "rank": 7,
+     "song": "Crossfire/So Into You",
+     "artist": "Nai Palm"
+    },
+    {
+     "rank": 8,
+     "song": "Only Once Away My Son",
+     "artist": "Brian Eno & Kevin Shields"
+    },
+    {
+     "rank": 9,
+     "song": "808 State of Mind [ft. Shaun J. Wright & Alinka]",
+     "artist": "Honey Dijon"
+    },
+    {
+     "rank": 10,
+     "song": "Turn Out the Lights",
+     "artist": "Julien Baker"
+    },
+    {
+     "rank": 11,
+     "song": "Country",
+     "artist": "Porches"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20171216061740/https://www.beatport.com/top-100",
+   "captured": "2017-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Strand",
+     "artist": "Stephan Bodzin"
+    },
+    {
+     "rank": 2,
+     "song": "Be Sharp Say Nowt",
+     "artist": "Patrick Topping"
+    },
+    {
+     "rank": 3,
+     "song": "Reverie",
+     "artist": "Audiojack"
+    },
+    {
+     "rank": 4,
+     "song": "Stella",
+     "artist": "Thomas Schumacher"
+    },
+    {
+     "rank": 5,
+     "song": "Stop It",
+     "artist": "FISHER (OZ)"
+    },
+    {
+     "rank": 6,
+     "song": "An Evidence Of Time (Claude VonStroke Remix)",
+     "artist": "Rodriguez Jr."
+    },
+    {
+     "rank": 7,
+     "song": "Stay With Me",
+     "artist": "Pryda"
+    },
+    {
+     "rank": 8,
+     "song": "Désolé",
+     "artist": "DAVI & Definition"
+    },
+    {
+     "rank": 9,
+     "song": "Love Stream",
+     "artist": "Mat.Joe"
+    },
+    {
+     "rank": 10,
+     "song": "EPOCH",
+     "artist": "Cristoph"
+    },
+    {
+     "rank": 11,
+     "song": "Black Beauty",
+     "artist": "Hidden Empire"
+    },
+    {
+     "rank": 12,
+     "song": "Tweezer",
+     "artist": "Aitor Ronda"
+    },
+    {
+     "rank": 13,
+     "song": "Stay With Me (Perc Remix)",
+     "artist": "Amelie Lens"
+    },
+    {
+     "rank": 14,
+     "song": "Keep Pushin' (Harder)",
+     "artist": "Green Velvet & Riva Starr"
+    },
+    {
+     "rank": 15,
+     "song": "Catamaran",
+     "artist": "Stephan Bodzin"
+    },
+    {
+     "rank": 16,
+     "song": "So Crazy",
+     "artist": "Leandro Da Silva"
+    },
+    {
+     "rank": 17,
+     "song": "Sumatra",
+     "artist": "Eli Brown"
+    },
+    {
+     "rank": 18,
+     "song": "Fly Away feat. Afronaut Zu (Dennis Ferrer Remix)",
+     "artist": "Damian Lazarus, Damian Lazarus & The Ancient Moons & Afronaut Zu"
+    },
+    {
+     "rank": 19,
+     "song": "Let Me Think About It (Celebration Club Mix)",
+     "artist": "Fedde Le Grand & Ida Corr"
+    },
+    {
+     "rank": 20,
+     "song": "Follow",
+     "artist": "Amelie Lens"
+    }
+   ]
+  }
+ ]
+}

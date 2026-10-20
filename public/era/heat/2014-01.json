@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140115063843/http://www.billboard.com/charts/rap-song",
+   "captured": "2014-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Timber",
+     "artist": "Pitbull Featuring Ke$ha"
+    },
+    {
+     "rank": 2,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 3,
+     "song": "White Walls",
+     "artist": "Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis"
+    },
+    {
+     "rank": 4,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 5,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 6,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 8,
+     "song": "Gas Pedal",
+     "artist": "Sage The Gemini Featuring IamSu!"
+    },
+    {
+     "rank": 9,
+     "song": "All Me",
+     "artist": "Drake Featuring 2 Chainz & Big Sean"
+    },
+    {
+     "rank": 10,
+     "song": "Rap God",
+     "artist": "Eminem"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,361 @@
      "rank": 10,
      "song": "Gas Pedal",
      "artist": "Sage The Gemini Featuring IamSu!"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140118155902/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2014-01-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Driver",
+     "artist": "Perfect Pussy"
+    },
+    {
+     "rank": 2,
+     "song": "Says",
+     "artist": "Nils Frahm"
+    },
+    {
+     "rank": 3,
+     "song": "Good Sex",
+     "artist": "Kevin Drew"
+    },
+    {
+     "rank": 4,
+     "song": "Talking Backwards",
+     "artist": "Real Estate"
+    },
+    {
+     "rank": 5,
+     "song": "Ben's My Friend",
+     "artist": "Sun Kil Moon"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140108214814/http://www.billboard.com/charts/country-songs",
+   "captured": "2014-01-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Stay",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "That's My Kind Of Night",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 3,
+     "song": "Drink A Beer",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 4,
+     "song": "Whatever She's Got",
+     "artist": "David Nail"
+    },
+    {
+     "rank": 5,
+     "song": "Wasting All These Tears",
+     "artist": "Cassadee Pope"
+    },
+    {
+     "rank": 6,
+     "song": "Carolina",
+     "artist": "Parmalee"
+    },
+    {
+     "rank": 7,
+     "song": "Chillin' It",
+     "artist": "Cole Swindell"
+    },
+    {
+     "rank": 8,
+     "song": "Drunk Last Night",
+     "artist": "Eli Young Band"
+    },
+    {
+     "rank": 9,
+     "song": "When She Says Baby",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 10,
+     "song": "Sweet Annie",
+     "artist": "Zac Brown Band"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140115062208/http://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2014-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 2,
+     "song": "Stay The Night",
+     "artist": "Zedd Featuring Hayley Williams"
+    },
+    {
+     "rank": 3,
+     "song": "Applause",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 4,
+     "song": "Turn Down For What",
+     "artist": "DJ Snake & Lil Jon"
+    },
+    {
+     "rank": 5,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 6,
+     "song": "Animals",
+     "artist": "Martin Garrix"
+    },
+    {
+     "rank": 7,
+     "song": "Hey Brother",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 8,
+     "song": "Summertime Sadness",
+     "artist": "Lana Del Rey & Cedric Gervais"
+    },
+    {
+     "rank": 9,
+     "song": "Clarity",
+     "artist": "Zedd Featuring Foxes"
+    },
+    {
+     "rank": 10,
+     "song": "Work B**ch!",
+     "artist": "Britney Spears"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140115062219/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2014-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Come A Little Closer",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 2,
+     "song": "Pompeii",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 3,
+     "song": "Do I Wanna Know?",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 4,
+     "song": "Team",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 5,
+     "song": "Afraid",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 6,
+     "song": "Demons",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "Sirens",
+     "artist": "Pearl Jam"
+    },
+    {
+     "rank": 8,
+     "song": "It's About Time",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 9,
+     "song": "Unbelievers",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 10,
+     "song": "Out Of My League",
+     "artist": "Fitz And The Tantrums"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140122120007/http://www.2dopeboyz.com/",
+   "captured": "2014-01-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "How It Was",
+     "artist": "Future"
+    },
+    {
+     "rank": 2,
+     "song": "Sound Boy Burial",
+     "artist": "Astro"
+    },
+    {
+     "rank": 3,
+     "song": "New York (Bronx Version) f. Cory Gunz, Mysonne & Oun-P",
+     "artist": "Remo the Hitkmaker"
+    },
+    {
+     "rank": 4,
+     "song": "Bad Energy",
+     "artist": "Azad Right"
+    },
+    {
+     "rank": 5,
+     "song": "Lisa f. Asher Roth",
+     "artist": "Ro James"
+    },
+    {
+     "rank": 6,
+     "song": "Vertigo f. Enoch Benoit",
+     "artist": "Chris Faust"
+    },
+    {
+     "rank": 7,
+     "song": "63rd & Hayes f. Bun B",
+     "artist": "Naledge"
+    },
+    {
+     "rank": 8,
+     "song": "Pound Cake Freestyle",
+     "artist": "Tito Lopez"
+    },
+    {
+     "rank": 9,
+     "song": "Failed Messiah (Austin Millz Remix)",
+     "artist": "King Avriel"
+    },
+    {
+     "rank": 10,
+     "song": "Clocks (Remix) f. Ace Hood",
+     "artist": "Kat Dahlia"
+    },
+    {
+     "rank": 11,
+     "song": "Cuffin' Season Freestyle",
+     "artist": "Young Chris"
+    },
+    {
+     "rank": 12,
+     "song": "Best Mistake",
+     "artist": "Saigon"
+    },
+    {
+     "rank": 13,
+     "song": "The Tonite Show With Trae",
+     "artist": "Trae Tha Truth & The World's Freshest feat. EP"
+    },
+    {
+     "rank": 14,
+     "song": "Still Alive",
+     "artist": "Leather Corduroys (Kami de Chukwu & Joey Purp)"
+    },
+    {
+     "rank": 15,
+     "song": "Don't Know",
+     "artist": "Kevin Gates"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140117194050/http://pigeonsandplanes.com:80/",
+   "captured": "2014-01-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bare",
+     "artist": "Loe"
+    },
+    {
+     "rank": 2,
+     "song": "Man Of The Year",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 3,
+     "song": "Veranda (RAC Mix)",
+     "artist": "Cillie Barnes"
+    },
+    {
+     "rank": 4,
+     "song": "Killing",
+     "artist": "We Are Shining ft. Eliza Doolittle"
+    },
+    {
+     "rank": 5,
+     "song": "Allergic To Love",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 6,
+     "song": "Disconsolate",
+     "artist": "Ameer Vann"
+    },
+    {
+     "rank": 7,
+     "song": "Be Mean",
+     "artist": "Tweens"
+    },
+    {
+     "rank": 8,
+     "song": "Don’t Wanna Dance",
+     "artist": "MØ"
+    },
+    {
+     "rank": 9,
+     "song": "Bloom",
+     "artist": "Raury"
     }
    ]
   }

@@ -171,6 +171,276 @@
      "artist": "Juun feat. Sam Smith"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140515084328/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2014-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Your Love Is Killing Me",
+     "artist": "Sharon Van Etten"
+    },
+    {
+     "rank": 2,
+     "song": "Chandelier",
+     "artist": "Sia"
+    },
+    {
+     "rank": 3,
+     "song": "Break a Mirrored Leg",
+     "artist": "Quirke"
+    },
+    {
+     "rank": 4,
+     "song": "Do It Again",
+     "artist": "Röyksopp / Robyn"
+    },
+    {
+     "rank": 5,
+     "song": "Problem\" [ft. Iggy Azalea]",
+     "artist": "Ariana Grande"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140530174400/http://www.billboard.com/charts/country-songs",
+   "captured": "2014-05-30",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Play It Again",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 2,
+     "song": "This Is How We Roll",
+     "artist": "Florida Georgia Line Featuring Luke Bryan"
+    },
+    {
+     "rank": 3,
+     "song": "Beachin'",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 4,
+     "song": "Bottoms Up",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 5,
+     "song": "Somethin' Bad",
+     "artist": "Miranda Lambert Duet With Carrie Underwood"
+    },
+    {
+     "rank": 6,
+     "song": "Automatic",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 7,
+     "song": "Get Me Some Of That",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 8,
+     "song": "Beat Of The Music",
+     "artist": "Brett Eldredge"
+    },
+    {
+     "rank": 9,
+     "song": "Lettin' The Night Roll",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 10,
+     "song": "Rewind",
+     "artist": "Rascal Flatts"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140531032745/http://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2014-05-31",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Turn Down For What",
+     "artist": "DJ Snake & Lil Jon"
+    },
+    {
+     "rank": 2,
+     "song": "Summer",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 3,
+     "song": "Latch",
+     "artist": "Disclosure Featuring Sam Smith"
+    },
+    {
+     "rank": 4,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 5,
+     "song": "Red Lights",
+     "artist": "Tiesto"
+    },
+    {
+     "rank": 6,
+     "song": "Animals",
+     "artist": "Martin Garrix"
+    },
+    {
+     "rank": 7,
+     "song": "Hey Brother",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 8,
+     "song": "Dare (La La La)",
+     "artist": "Shakira"
+    },
+    {
+     "rank": 9,
+     "song": "Rather Be",
+     "artist": "Clean Bandit Featuring Jess Glynne"
+    },
+    {
+     "rank": 10,
+     "song": "#SELFIE",
+     "artist": "The Chainsmokers"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140502193852/http://www.2dopeboyz.com/",
+   "captured": "2014-05-02",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "WudaCudaShuda f. Lil Boosie",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 2,
+     "song": "Indica C",
+     "artist": "Kokayi"
+    },
+    {
+     "rank": 3,
+     "song": "Homicide",
+     "artist": "Doe B & T.I."
+    },
+    {
+     "rank": 4,
+     "song": "Time (Remix) f. Trinidad Jame$",
+     "artist": "Que"
+    },
+    {
+     "rank": 5,
+     "song": "Sometimes",
+     "artist": "Nikki Lynette"
+    },
+    {
+     "rank": 6,
+     "song": "Love Never Felt So Good",
+     "artist": "Michael Jackson & Justin Timberlake"
+    },
+    {
+     "rank": 7,
+     "song": "Fuk Wit My Squad",
+     "artist": "Cory Gunz"
+    },
+    {
+     "rank": 8,
+     "song": "Cough Up A Lung",
+     "artist": "Papoose"
+    },
+    {
+     "rank": 9,
+     "song": "Blur",
+     "artist": "Easy Yves Saint"
+    },
+    {
+     "rank": 10,
+     "song": "Sinners",
+     "artist": "Montage feat. EP"
+    },
+    {
+     "rank": 11,
+     "song": "My N*gga Just Made Bail f. J. Cole",
+     "artist": "Bas"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140516033242/http://pigeonsandplanes.com/",
+   "captured": "2014-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hesitation",
+     "artist": "Beat Connection"
+    },
+    {
+     "rank": 2,
+     "song": "D’usse",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Fame",
+     "artist": "The Acid"
+    },
+    {
+     "rank": 4,
+     "song": "Don’t Tell ‘Em",
+     "artist": "Jeremih ft. YG"
+    },
+    {
+     "rank": 5,
+     "song": "Klapp Klapp (Nosaj Thing Remix)",
+     "artist": "Little Dragon ft. Future"
+    },
+    {
+     "rank": 6,
+     "song": "Deckchairs on the Moon",
+     "artist": "Bipolar Sunshine"
+    },
+    {
+     "rank": 7,
+     "song": "40 Watt",
+     "artist": "ELEL"
+    },
+    {
+     "rank": 8,
+     "song": "History of Modern Dance",
+     "artist": "Video Premiere: Open Mike Eagle"
+    }
+   ]
   }
  ]
 }

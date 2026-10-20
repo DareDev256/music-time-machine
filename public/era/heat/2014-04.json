@@ -173,6 +173,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140405085001/http://www.billboard.com/charts/rap-song",
+   "captured": "2014-04-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Timber",
+     "artist": "Pitbull Featuring Ke$ha"
+    },
+    {
+     "rank": 2,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 4,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 5,
+     "song": "Stoner",
+     "artist": "Young Thug"
+    },
+    {
+     "rank": 6,
+     "song": "Who Do You Love?",
+     "artist": "YG Featuring Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Trophies",
+     "artist": "Young Money Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Man Of The Year",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 9,
+     "song": "Rap God",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -229,6 +289,311 @@
      "rank": 10,
      "song": "My Hitta",
      "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140418131906/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2014-04-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Uncle Ace (a/jus/ted Remix)",
+     "artist": "Blood Orange"
+    },
+    {
+     "rank": 2,
+     "song": "Oxygen",
+     "artist": "Swans"
+    },
+    {
+     "rank": 3,
+     "song": "Habit",
+     "artist": "Ought"
+    },
+    {
+     "rank": 4,
+     "song": "Flesh War",
+     "artist": "Total Control"
+    },
+    {
+     "rank": 5,
+     "song": "Wait for a Minute",
+     "artist": "tUnE-yArDs"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140405132907/http://www.billboard.com/charts/country-songs",
+   "captured": "2014-04-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "This Is How We Roll",
+     "artist": "Florida Georgia Line Featuring Luke Bryan"
+    },
+    {
+     "rank": 2,
+     "song": "Bottoms Up",
+     "artist": "Brantley Gilbert"
+    },
+    {
+     "rank": 3,
+     "song": "Doin' What She Likes",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 4,
+     "song": "Drink To That All Night",
+     "artist": "Jerrod Niemann"
+    },
+    {
+     "rank": 5,
+     "song": "Play It Again",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 6,
+     "song": "Cop Car",
+     "artist": "Keith Urban"
+    },
+    {
+     "rank": 7,
+     "song": "Give Me Back My Hometown",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 8,
+     "song": "Get Me Some Of That",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 9,
+     "song": "Goodnight Kiss",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 10,
+     "song": "I Hold On",
+     "artist": "Dierks Bentley"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140411234410/http://www.billboard.com/charts/dance-electronic-songs",
+   "captured": "2014-04-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Turn Down For What",
+     "artist": "DJ Snake & Lil Jon"
+    },
+    {
+     "rank": 2,
+     "song": "Hey Brother",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 3,
+     "song": "#SELFIE",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 4,
+     "song": "Animals",
+     "artist": "Martin Garrix"
+    },
+    {
+     "rank": 5,
+     "song": "Wake Me Up!",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 6,
+     "song": "Red Lights",
+     "artist": "Tiesto"
+    },
+    {
+     "rank": 7,
+     "song": "Summer",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 8,
+     "song": "Get Lucky",
+     "artist": "Daft Punk Featuring Pharrell Williams"
+    },
+    {
+     "rank": 9,
+     "song": "Take Me Home",
+     "artist": "Cash Cash Featuring Bebe Rexha"
+    },
+    {
+     "rank": 10,
+     "song": "Stay The Night",
+     "artist": "Zedd Featuring Hayley Williams"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140406214522/http://www.billboard.com/charts/alternative-songs",
+   "captured": "2014-04-06",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Come With Me Now",
+     "artist": "KONGOS"
+    },
+    {
+     "rank": 2,
+     "song": "Do I Wanna Know?",
+     "artist": "Arctic Monkeys"
+    },
+    {
+     "rank": 3,
+     "song": "The Walker",
+     "artist": "Fitz And The Tantrums"
+    },
+    {
+     "rank": 4,
+     "song": "Fall In Love",
+     "artist": "Phantogram"
+    },
+    {
+     "rank": 5,
+     "song": "Bad Blood",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 6,
+     "song": "Fever",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 7,
+     "song": "It's About Time",
+     "artist": "Young The Giant"
+    },
+    {
+     "rank": 8,
+     "song": "Coming Of Age",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 9,
+     "song": "Come A Little Closer",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 10,
+     "song": "Team",
+     "artist": "Lorde"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20140418222306/http://www.2dopeboyz.com/",
+   "captured": "2014-04-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Casey Freestyle",
+     "artist": "Balance"
+    },
+    {
+     "rank": 2,
+     "song": "Stoners f. Smoke DZA",
+     "artist": "Nina Sky"
+    },
+    {
+     "rank": 3,
+     "song": "Daily Bread",
+     "artist": "Vic Spencer"
+    },
+    {
+     "rank": 4,
+     "song": "Real Witcha f. Z-Ro",
+     "artist": "Daz Dillinger"
+    },
+    {
+     "rank": 5,
+     "song": "Zoo Muzik f. Chinx & Prodigy",
+     "artist": "Vado"
+    },
+    {
+     "rank": 6,
+     "song": "Off The Floor (Remix) f. Wale",
+     "artist": "K. Camp"
+    },
+    {
+     "rank": 7,
+     "song": "Servin' Lean (Remix) f. A$AP Rocky",
+     "artist": "PeeWee Longway"
+    },
+    {
+     "rank": 8,
+     "song": "Indy f. Miguel",
+     "artist": "Santana"
+    },
+    {
+     "rank": 9,
+     "song": "Love Myself",
+     "artist": "JMSN"
+    },
+    {
+     "rank": 10,
+     "song": "Riddims 2.0 f. Sir Michael Rocks & Anya Kvitka",
+     "artist": "Jesse Medina"
+    },
+    {
+     "rank": 11,
+     "song": "Breathe Easy Freestyle f. Troy Ave & Problem",
+     "artist": "Trae Tha Truth"
+    },
+    {
+     "rank": 12,
+     "song": "José Got Dem Tacos",
+     "artist": "Kap G"
+    },
+    {
+     "rank": 13,
+     "song": "Next Time (Won't Give My Heart Away)",
+     "artist": "Keyshia Cole"
+    },
+    {
+     "rank": 14,
+     "song": "Backseat",
+     "artist": "August Alsina"
+    },
+    {
+     "rank": 15,
+     "song": "Eat (Remix) f. Tyga, YG & Lloyd",
+     "artist": "Mally Mall"
+    },
+    {
+     "rank": 16,
+     "song": "The Pookey Tape (FreEP)",
+     "artist": "Stik Figa"
     }
    ]
   }

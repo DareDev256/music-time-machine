@@ -1,0 +1,241 @@
+{
+ "month": "2009-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090113075108/http://hypem.com:80/popular",
+   "captured": "2009-01-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Yes",
+     "artist": "Lil' Wayne featuring Pharrell"
+    },
+    {
+     "rank": 2,
+     "song": "Skip To The End (Digitalism Remix)",
+     "artist": "The Futureheads"
+    },
+    {
+     "rank": 3,
+     "song": "Good Life (Silk Remix)",
+     "artist": "Kanye West featuring T-Pain"
+    },
+    {
+     "rank": 4,
+     "song": "Satisfaction (DiscoTech Remix)",
+     "artist": "The Rolling Stones"
+    },
+    {
+     "rank": 5,
+     "song": "Time To Pretend (Diplo Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 6,
+     "song": "Disco Sirens (Blacklight Flashlight Remix)",
+     "artist": "Midfield General"
+    },
+    {
+     "rank": 7,
+     "song": "ulysses fullduplex remix",
+     "artist": "Franz ferdinand"
+    },
+    {
+     "rank": 8,
+     "song": "Viva La Vida (DiscoTech Remix)",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 9,
+     "song": "Bruce Willice Dead Raven (Skitsnygg Killed This mash)",
+     "artist": "Mr. Oizo VS Proxy"
+    },
+    {
+     "rank": 10,
+     "song": "SPM Records, Mercy Mercy Me (Rapson Edit)",
+     "artist": "Marvin Gaye"
+    },
+    {
+     "rank": 11,
+     "song": "Rave Is King (Le Castle Vania Remix)",
+     "artist": "FUKKK OFFF"
+    },
+    {
+     "rank": 12,
+     "song": "We Are Your Friends (Bearbot MashUp)",
+     "artist": "Justice vs. Ratatat"
+    },
+    {
+     "rank": 13,
+     "song": "E.S.T.",
+     "artist": "White Lies"
+    },
+    {
+     "rank": 14,
+     "song": "Lion (Bag Raiders Remix)",
+     "artist": "ZZZ"
+    },
+    {
+     "rank": 15,
+     "song": "Phantom Pt II (Boys Noize Unreleased Turbine)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 16,
+     "song": "Kids (Soulwax Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 17,
+     "song": "Single Ladies (Silk Remix)",
+     "artist": "beyonce"
+    },
+    {
+     "rank": 18,
+     "song": "Love Get Out of My Way (Designer Drugs Remix)",
+     "artist": "Milke"
+    },
+    {
+     "rank": 19,
+     "song": "Blood Bank",
+     "artist": "Bon Iver"
+    },
+    {
+     "rank": 20,
+     "song": "A Place To Hide",
+     "artist": "White Lies"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090114221246/http://2dopeboyz.com:80/",
+   "captured": "2009-01-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Good*Fella Radio Freestyle",
+     "artist": "Mickey Factz & Smoke Dza"
+    },
+    {
+     "rank": 2,
+     "song": "Wetter (Get It Wet pt.2)",
+     "artist": "Twista"
+    },
+    {
+     "rank": 3,
+     "song": "They Were Lyin’ x Do It All Again",
+     "artist": "Ayah"
+    },
+    {
+     "rank": 4,
+     "song": "So Easy x Jumping Out the Window (rmx)",
+     "artist": "Memphis Bleek"
+    },
+    {
+     "rank": 5,
+     "song": "Louisanimal (50 Cent Diss) [NoDJ]",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "Just Juke f. GLC",
+     "artist": "Mikkey Halsted"
+    },
+    {
+     "rank": 7,
+     "song": "Wait & See f. Sadat X",
+     "artist": "Pugs Atomz"
+    },
+    {
+     "rank": 8,
+     "song": "Whar f. Kool G Rap, Ghostface Killah & Tash Mahogan",
+     "artist": "RZA"
+    },
+    {
+     "rank": 9,
+     "song": "The Dope Supremacy",
+     "artist": "CurT@!n$"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090116115931/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-01-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "War On Our Hands",
+     "artist": "Wyclef Jean ft. Timbaland"
+    },
+    {
+     "rank": 2,
+     "song": "La Llorona",
+     "artist": "Beirut"
+    },
+    {
+     "rank": 3,
+     "song": "Louisianimal",
+     "artist": "Lil Wayne ft. Hurricane Chris"
+    },
+    {
+     "rank": 4,
+     "song": "Wetter",
+     "artist": "Twista"
+    },
+    {
+     "rank": 5,
+     "song": "Most Likely To Succeed",
+     "artist": "Charles Hamilton"
+    },
+    {
+     "rank": 6,
+     "song": "Quiet Dog",
+     "artist": "Mos Def"
+    },
+    {
+     "rank": 7,
+     "song": "Ballskin",
+     "artist": "MF DOOM"
+    },
+    {
+     "rank": 8,
+     "song": "Just Lean\" and \"Just Wanna Hit",
+     "artist": "Tyga + Weezy"
+    },
+    {
+     "rank": 9,
+     "song": "Coolness",
+     "artist": "Rhymefest"
+    },
+    {
+     "rank": 10,
+     "song": "I'll Be In The Sky",
+     "artist": "B.o.B."
+    },
+    {
+     "rank": 11,
+     "song": "Warriors Dance",
+     "artist": "The Prodigy"
+    },
+    {
+     "rank": 12,
+     "song": "Sky High\", The Game ft. Wyclef, Damien Marley - \"Enemy",
+     "artist": "Kanye West + Kid Cudi"
+    }
+   ]
+  }
+ ]
+}

@@ -341,6 +341,291 @@
      "artist": "Miguel"
     }
    ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110816063436/http://www.pitchfork.com/reviews/best/tracks/",
+   "captured": "2011-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Some Children\" [ft. Michael McDonald]",
+     "artist": "Holy Ghost!"
+    },
+    {
+     "rank": 2,
+     "song": "Lone Runner",
+     "artist": "Dirty Beaches"
+    },
+    {
+     "rank": 3,
+     "song": "Video Games",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 4,
+     "song": "Winter Beats",
+     "artist": "I Break Horses"
+    },
+    {
+     "rank": 5,
+     "song": "Surgeon",
+     "artist": "St. Vincent"
+    },
+    {
+     "rank": 6,
+     "song": "Otis",
+     "artist": "Jay-Z"
+    },
+    {
+     "rank": 7,
+     "song": "Vomit",
+     "artist": "Girls"
+    },
+    {
+     "rank": 8,
+     "song": "Midnight City",
+     "artist": "M83"
+    },
+    {
+     "rank": 9,
+     "song": "A.D.H.D.",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "It's Real",
+     "artist": "Real Estate"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110814054753/http://www.billboard.com:80/charts/country-songs",
+   "captured": "2011-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Just A Kiss",
+     "artist": "Lady Antebellum"
+    },
+    {
+     "rank": 2,
+     "song": "Knee Deep",
+     "artist": "Zac Brown Band Featuring Jimmy Buffett"
+    },
+    {
+     "rank": 3,
+     "song": "Am I The Only One",
+     "artist": "Dierks Bentley"
+    },
+    {
+     "rank": 4,
+     "song": "Country Girl (Shake It For M...",
+     "artist": "Luke Bryan"
+    },
+    {
+     "rank": 5,
+     "song": "Remind Me",
+     "artist": "Brad Paisley Duet With Carrie Underwood"
+    },
+    {
+     "rank": 6,
+     "song": "Dirt Road Anthem",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 7,
+     "song": "You And Tequila",
+     "artist": "Kenny Chesney Featuring Grace Potter"
+    },
+    {
+     "rank": 8,
+     "song": "Barefoot Blue Jean Night",
+     "artist": "Jake Owen"
+    },
+    {
+     "rank": 9,
+     "song": "Honey Bee",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 10,
+     "song": "Tomorrow",
+     "artist": "Chris Young"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110814041921/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2011-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Adventures Of Rain Danc...",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 2,
+     "song": "Walk",
+     "artist": "Foo Fighters"
+    },
+    {
+     "rank": 3,
+     "song": "Pumped Up Kicks",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 4,
+     "song": "Up All Night",
+     "artist": "Blink-182"
+    },
+    {
+     "rank": 5,
+     "song": "Every Teardrop Is A Waterfal...",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 6,
+     "song": "Sail",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 7,
+     "song": "Panic",
+     "artist": "Sublime With Rome"
+    },
+    {
+     "rank": 8,
+     "song": "Changing",
+     "artist": "The Airborne Toxic Event"
+    },
+    {
+     "rank": 9,
+     "song": "Sunset In July",
+     "artist": "311"
+    },
+    {
+     "rank": 10,
+     "song": "You Are A Tourist",
+     "artist": "Death Cab For Cutie"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110815014012/http://www.2dopeboyz.com:80/",
+   "captured": "2011-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Any Given Sunday (Ustream Edition)",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 2,
+     "song": "Pop That",
+     "artist": "Hell Rell"
+    },
+    {
+     "rank": 3,
+     "song": "Skeleton Key",
+     "artist": "Shaz Illyork"
+    },
+    {
+     "rank": 4,
+     "song": "Date With Doubt (Extended)",
+     "artist": "Ryshon Jones"
+    },
+    {
+     "rank": 5,
+     "song": "Stop Traffic f. Rich Boy [Tags]",
+     "artist": "Juvenile"
+    },
+    {
+     "rank": 6,
+     "song": "Testimony",
+     "artist": "Lateef the Truthspeaker"
+    },
+    {
+     "rank": 7,
+     "song": "Section.80 (Chopped Not Slopped)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Chain Smoking",
+     "artist": "Sketch"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110816042929/http://pigeonsandplanes.com:80/?",
+   "captured": "2011-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Amen",
+     "artist": "Pusha T ft. Kanye West & Young Jeezy"
+    },
+    {
+     "rank": 2,
+     "song": "Wildfire (Drumma Boy Remix)",
+     "artist": "SBTRKT ft. Shabazz Palaces & Little Dragon"
+    },
+    {
+     "rank": 3,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 4,
+     "song": "Dark Saber Jedi",
+     "artist": "Gorilla Warfare Tactics"
+    },
+    {
+     "rank": 5,
+     "song": "Born In The Trap",
+     "artist": "Game"
+    },
+    {
+     "rank": 6,
+     "song": "Last Night",
+     "artist": "Niki & the Dove"
+    },
+    {
+     "rank": 7,
+     "song": "How Come You Never Go There",
+     "artist": "Feist"
+    },
+    {
+     "rank": 8,
+     "song": "No One Believes Me",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 9,
+     "song": "She Will",
+     "artist": "Lil’ Wayne feat. Drake"
+    }
+   ]
   }
  ]
 }

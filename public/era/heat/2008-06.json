@@ -1,0 +1,281 @@
+{
+ "month": "2008-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080612174913/http://www.hotnewhiphop.com.:80/",
+   "captured": "2008-06-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Aint Sayin Nuthin (Feat. Lil Wayne & The Game) (Prod. By Cool N Dre)",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 2,
+     "song": "Bye Bye (Remix)",
+     "artist": "Mariah Carey Ft. Akon & Lil' Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "My Way (Feat. Yung Joc & Shawty Lo)",
+     "artist": "Kieran"
+    },
+    {
+     "rank": 4,
+     "song": "Thug Section",
+     "artist": "Plies"
+    },
+    {
+     "rank": 5,
+     "song": "Die Together",
+     "artist": "Plies"
+    },
+    {
+     "rank": 6,
+     "song": "The Name Prod by Focus...",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 7,
+     "song": "Can't Figure It Out Prod by Dj Khalil",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 8,
+     "song": "Everyday Prod by Diverse",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 9,
+     "song": "Why U Wanna Piss Me Off Prod by Nottz",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 10,
+     "song": "One 2 Many (Feat. Flo Rida)",
+     "artist": "London"
+    },
+    {
+     "rank": 11,
+     "song": "Desire (Prod. By Ryan Leslie)",
+     "artist": "LEX"
+    },
+    {
+     "rank": 12,
+     "song": "Let Me Dream (Prod. By Jazze Phae)",
+     "artist": "Andre Merritt"
+    },
+    {
+     "rank": 13,
+     "song": "Ghetto Song Prod by Nottz",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 14,
+     "song": "All On My Dick Prod by Tha Bizness",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 15,
+     "song": "The Greatest Trick Prod by Danaun Porter & GOD",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 16,
+     "song": "Prostitute 2 (Bonus Track)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "Whip It (Bonus Track)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 18,
+     "song": "Action (Bonus Track)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 19,
+     "song": "Right (Prod by Scott Storch)",
+     "artist": "Bishop Lamont"
+    },
+    {
+     "rank": 20,
+     "song": "Say Yeah (Remix)",
+     "artist": "Wiz Khalifa Ft. Bishop Lamont & Glasses Malone"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20080616080417/http://hypem.com:80/popular",
+   "captured": "2008-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cemeteries of London",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 2,
+     "song": "DVNO (LA Riots Remix)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 3,
+     "song": "Electric Feel (Justice Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 4,
+     "song": "Viva La Vida (Telemitry Remix)",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 5,
+     "song": "So Haunted",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 6,
+     "song": "Yeah You",
+     "artist": "N.E.R.D."
+    },
+    {
+     "rank": 7,
+     "song": "Epic Last Song (LIFELIKE remix)",
+     "artist": "Does It Offend You, Yeah?"
+    },
+    {
+     "rank": 8,
+     "song": "Lonely Soul (Early Instrumental Version)",
+     "artist": "DJ Shadow"
+    },
+    {
+     "rank": 9,
+     "song": "Girls On The Beach (Black Lights Remix)",
+     "artist": "Beach Boys"
+    },
+    {
+     "rank": 10,
+     "song": "ElectricFeel (Justice Remix)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 11,
+     "song": "4th Chamber",
+     "artist": "Genius/GZA"
+    },
+    {
+     "rank": 12,
+     "song": "Never Stops",
+     "artist": "Deerhunter"
+    },
+    {
+     "rank": 13,
+     "song": "One More Time to Pretend (Immuzikation Remix)",
+     "artist": "MGMT vs Daft Punk"
+    },
+    {
+     "rank": 14,
+     "song": "Hearts on Fire (Calvin Harris Remix)",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 15,
+     "song": "Cherry (In Digital Form Remix)",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 16,
+     "song": "A Milli (Hot 97 Remix feat. Jay Z & Chris Brown)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "White Winter Hymnal",
+     "artist": "Fleet Foxes"
+    },
+    {
+     "rank": 18,
+     "song": "I",
+     "artist": "Girl Talk"
+    },
+    {
+     "rank": 19,
+     "song": "I Wasn't Being Heartless when I Said Your Favourite Song Lacked Heart",
+     "artist": "Hot Club de Paris"
+    },
+    {
+     "rank": 20,
+     "song": "Kelly (Cut Copy mix)",
+     "artist": "Van She"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20080616012857/http://2dopeboyz.com:80/",
+   "captured": "2008-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Never Die",
+     "artist": "Young Chris"
+    },
+    {
+     "rank": 2,
+     "song": "My Medicine f. Willie Nelson",
+     "artist": "Snoop Dogg"
+    },
+    {
+     "rank": 3,
+     "song": "Freestyle",
+     "artist": "C.R.A.C. (Blu & Ta’raach)"
+    },
+    {
+     "rank": 4,
+     "song": "Universal Condition f. Murs x Boob Tube",
+     "artist": "Mazzi (of S.O.U.L. Purpose)"
+    },
+    {
+     "rank": 5,
+     "song": "Straight Off the Block f. David Banner",
+     "artist": "RZA"
+    },
+    {
+     "rank": 6,
+     "song": "Out Here Grindin’ (Behind the Scenes pt.1&2)",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 7,
+     "song": "Summertime in Brooklyn",
+     "artist": "Joell Ortiz"
+    },
+    {
+     "rank": 8,
+     "song": "On My Way",
+     "artist": "AC"
+    },
+    {
+     "rank": 9,
+     "song": "Best Best",
+     "artist": "Missy Elliott"
+    }
+   ]
+  }
+ ]
+}

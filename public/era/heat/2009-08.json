@@ -1,0 +1,521 @@
+{
+ "month": "2009-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090831121007/http://www.hotnewhiphop.com:80/",
+   "captured": "2009-08-31",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Been Through It All (Feat Ya Boy)",
+     "artist": "Yung Berg"
+    },
+    {
+     "rank": 2,
+     "song": "Happy Hour (Remix)",
+     "artist": "Tha Vill"
+    },
+    {
+     "rank": 3,
+     "song": "Kiss Me Goodbye",
+     "artist": "Laze & Royal"
+    },
+    {
+     "rank": 4,
+     "song": "Let Me Kiss Ya",
+     "artist": "Rock City"
+    },
+    {
+     "rank": 5,
+     "song": "Nothing To Think About (Feat. Al Pac)",
+     "artist": "French Montana"
+    },
+    {
+     "rank": 6,
+     "song": "Your Bitch On Me (Feat. Al Pac)",
+     "artist": "French Montana"
+    },
+    {
+     "rank": 7,
+     "song": "Bad Girl (Feat. Lil' Wayne)",
+     "artist": "Britney Spears"
+    },
+    {
+     "rank": 8,
+     "song": "Spit That Shit (Week 5)",
+     "artist": "Horse Shoe Gang"
+    },
+    {
+     "rank": 9,
+     "song": "Hard",
+     "artist": "Rico Love"
+    },
+    {
+     "rank": 10,
+     "song": "So Sorry",
+     "artist": "Ernie Gaines"
+    },
+    {
+     "rank": 11,
+     "song": "Forever (Feat. Kanye West, Lil Wayne & Eminem) (Final Mastered)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Cricketz (Feat. Tyga)",
+     "artist": "New Boyz"
+    },
+    {
+     "rank": 13,
+     "song": "I'm Gettin' Money",
+     "artist": "Roccett"
+    },
+    {
+     "rank": 14,
+     "song": "I'm Official",
+     "artist": "Jay Rock"
+    },
+    {
+     "rank": 15,
+     "song": "Put Ya Hands In The Air (Prod. By J Coop)",
+     "artist": "Travis Porter"
+    },
+    {
+     "rank": 16,
+     "song": "Focused (Feat. Obie Trice)",
+     "artist": "MC Breed & Proof"
+    },
+    {
+     "rank": 17,
+     "song": "Can You Fee Me",
+     "artist": "Cassie"
+    },
+    {
+     "rank": 18,
+     "song": "Dancing In This Dark Room",
+     "artist": "D. Brown"
+    },
+    {
+     "rank": 19,
+     "song": "Carry The Weight",
+     "artist": "Chris J"
+    },
+    {
+     "rank": 20,
+     "song": "Sour",
+     "artist": "Soulja Boy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090818213046/http://hypem.com:80/popular",
+   "captured": "2009-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Little Bit",
+     "artist": "Drake & Lykke Li"
+    },
+    {
+     "rank": 2,
+     "song": "I'm Not Your Toy (Jack Beats Remix)",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 3,
+     "song": "Train Song",
+     "artist": "Feist + Ben Gibbard"
+    },
+    {
+     "rank": 4,
+     "song": "Home",
+     "artist": "Edward Sharpe & The Magnetic Zeros"
+    },
+    {
+     "rank": 5,
+     "song": "Gimme Shelter",
+     "artist": "The Rolling Stones"
+    },
+    {
+     "rank": 6,
+     "song": "Hey You",
+     "artist": "Pony Pony Run Run"
+    },
+    {
+     "rank": 7,
+     "song": "Not Made For Love",
+     "artist": "Metronomy"
+    },
+    {
+     "rank": 8,
+     "song": "Zumbi (Nujax remix)",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 9,
+     "song": "Sexy Bitch (Chuckie and Lil Jon Remix)",
+     "artist": "David Guetta"
+    },
+    {
+     "rank": 10,
+     "song": "If I Had A Heart (Fuck Buttons remix)",
+     "artist": "Fever Ray"
+    },
+    {
+     "rank": 11,
+     "song": "Never Too Much (ODahls K-love remix)",
+     "artist": "Luther Vandross"
+    },
+    {
+     "rank": 12,
+     "song": "Illgresi (Them Jeans Dance Remix)",
+     "artist": "Sigur Ros"
+    },
+    {
+     "rank": 13,
+     "song": "I'm Not Your Toy (Data Remix)",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 14,
+     "song": "Party And Bullshit (Ratatat Remix)",
+     "artist": "Notorious B.I.G."
+    },
+    {
+     "rank": 15,
+     "song": "Do The Right Thing",
+     "artist": "Metronomy"
+    },
+    {
+     "rank": 16,
+     "song": "Islands",
+     "artist": "Xx"
+    },
+    {
+     "rank": 17,
+     "song": "Hip-Hop (Dave Wrangler Remix)",
+     "artist": "Dead Prez vs Clap Your Hands Say Yeah!"
+    },
+    {
+     "rank": 18,
+     "song": "Wouldn't It Be Nice (The Girls Can Hear Us Remix)",
+     "artist": "The Beach Boys"
+    },
+    {
+     "rank": 19,
+     "song": "Waves",
+     "artist": "Erol Alkan & Boys Noize"
+    },
+    {
+     "rank": 20,
+     "song": "Where Did All The Love Go?",
+     "artist": "Kasabian"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090803085523/http://www.billboard.com:80/charts/r-b-hip-hop-songs?",
+   "captured": "2009-08-03",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Best I Ever Had",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Pretty Wings",
+     "artist": "Maxwell"
+    },
+    {
+     "rank": 3,
+     "song": "Break Up",
+     "artist": "Mario Featuring Gucci Mane & Sean Garrett"
+    },
+    {
+     "rank": 4,
+     "song": "Every Girl",
+     "artist": "Young Money"
+    },
+    {
+     "rank": 5,
+     "song": "Ego",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 6,
+     "song": "Last Chance",
+     "artist": "Ginuwine"
+    },
+    {
+     "rank": 7,
+     "song": "I Need A Girl",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Wetter (Calling You Daddy)",
+     "artist": "Twista"
+    },
+    {
+     "rank": 9,
+     "song": "Trust",
+     "artist": "Keyshia Cole Duet With Monica"
+    },
+    {
+     "rank": 10,
+     "song": "Knock You Down",
+     "artist": "Keri Hilson Featuring Kanye West & Ne-Yo"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090814041044/http://pitchfork.com:80/reviews/best/tracks",
+   "captured": "2009-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Despicable Dogs",
+     "artist": "Small Black"
+    },
+    {
+     "rank": 2,
+     "song": "Bay of Pigs",
+     "artist": "Destroyer"
+    },
+    {
+     "rank": 3,
+     "song": "House of Flying Daggers\" [ft. Ghostface Killah, Inspectah Deck, and Method Man]",
+     "artist": "Raekwon"
+    },
+    {
+     "rank": 4,
+     "song": "K&G Beat",
+     "artist": "Floating Points"
+    },
+    {
+     "rank": 5,
+     "song": "Dominos",
+     "artist": "The Big Pink"
+    },
+    {
+     "rank": 6,
+     "song": "Quitters Raga",
+     "artist": "Gold Panda"
+    },
+    {
+     "rank": 7,
+     "song": "Here to Fall",
+     "artist": "Yo La Tengo"
+    },
+    {
+     "rank": 8,
+     "song": "Sunshine",
+     "artist": "John Talabot"
+    },
+    {
+     "rank": 9,
+     "song": "Digidesign",
+     "artist": "Joker"
+    },
+    {
+     "rank": 10,
+     "song": "Seasun",
+     "artist": "Delorean"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090821114553/http://www.billboard.com:80/charts/country-songs?",
+   "captured": "2009-08-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "You Belong With Me",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 2,
+     "song": "Alright",
+     "artist": "Darius Rucker"
+    },
+    {
+     "rank": 3,
+     "song": "Big Green Tractor",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 4,
+     "song": "Summer Nights",
+     "artist": "Rascal Flatts"
+    },
+    {
+     "rank": 5,
+     "song": "People Are Crazy",
+     "artist": "Billy Currington"
+    },
+    {
+     "rank": 6,
+     "song": "Boots On",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 7,
+     "song": "Living For The Night",
+     "artist": "George Strait"
+    },
+    {
+     "rank": 8,
+     "song": "Small Town USA",
+     "artist": "Justin Moore"
+    },
+    {
+     "rank": 9,
+     "song": "American Ride",
+     "artist": "Toby Keith"
+    },
+    {
+     "rank": 10,
+     "song": "I'll Just Hold On",
+     "artist": "Blake Shelton"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090822144419/http://www.billboard.com:80/charts/alternative-songs?",
+   "captured": "2009-08-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "New Divide",
+     "artist": "Linkin Park"
+    },
+    {
+     "rank": 2,
+     "song": "Panic Switch",
+     "artist": "Silversun Pickups"
+    },
+    {
+     "rank": 3,
+     "song": "The Fixer",
+     "artist": "Pearl Jam"
+    },
+    {
+     "rank": 4,
+     "song": "21 Guns",
+     "artist": "Green Day"
+    },
+    {
+     "rank": 5,
+     "song": "Ain't No Rest For The Wicked",
+     "artist": "Cage The Elephant"
+    },
+    {
+     "rank": 6,
+     "song": "Notion",
+     "artist": "Kings Of Leon"
+    },
+    {
+     "rank": 7,
+     "song": "Savior",
+     "artist": "Rise Against"
+    },
+    {
+     "rank": 8,
+     "song": "Sound Of Madness",
+     "artist": "Shinedown"
+    },
+    {
+     "rank": 9,
+     "song": "Uprising",
+     "artist": "Muse"
+    },
+    {
+     "rank": 10,
+     "song": "Ignorance",
+     "artist": "Paramore"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090817204119/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "If You're Wondering If I Want You To) I Want You To.",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 2,
+     "song": "Animal",
+     "artist": "Miike Snow"
+    },
+    {
+     "rank": 3,
+     "song": "Basic Space\" and \"Crystallized",
+     "artist": "+ MP3s! The xx"
+    },
+    {
+     "rank": 4,
+     "song": "Pon de Gossip",
+     "artist": "Cookin' Soul"
+    },
+    {
+     "rank": 5,
+     "song": "Poison",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 6,
+     "song": "Into The Clouds",
+     "artist": "The Sound Of Arrows"
+    },
+    {
+     "rank": 7,
+     "song": "My Sweetie",
+     "artist": "Wale"
+    },
+    {
+     "rank": 8,
+     "song": "Protatgonists",
+     "artist": "Felt (Slug + Murs)"
+    },
+    {
+     "rank": 9,
+     "song": "Lola",
+     "artist": "Izza Kizza"
+    }
+   ]
+  }
+ ]
+}

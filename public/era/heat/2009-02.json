@@ -1,0 +1,351 @@
+{
+ "month": "2009-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090215004957/http://hotnewhiphop.com:80/",
+   "captured": "2009-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get Away",
+     "artist": "Kay L"
+    },
+    {
+     "rank": 2,
+     "song": "Turn My Swag On (Remix)",
+     "artist": "Soulja Boy feat Lil Wayne, Young Jeezy & Fabolous"
+    },
+    {
+     "rank": 3,
+     "song": "Microwave",
+     "artist": "Ya Boy, Yo Gotti, Young Cocky"
+    },
+    {
+     "rank": 4,
+     "song": "Girlfriend Ringtone (Prod. By Sean Garrett)",
+     "artist": "Mishon Ft. Lil Wayne & Sean Garrett"
+    },
+    {
+     "rank": 5,
+     "song": "Animals (Prod. By CHOPS)",
+     "artist": "Big Mike Ft. Rick Ross & CHOPS"
+    },
+    {
+     "rank": 6,
+     "song": "Already",
+     "artist": "French Montana"
+    },
+    {
+     "rank": 7,
+     "song": "Roll A Philli",
+     "artist": "French Montana"
+    },
+    {
+     "rank": 8,
+     "song": "Still Movin (Feat. S.A.S.)",
+     "artist": "K.D."
+    },
+    {
+     "rank": 9,
+     "song": "Goin Def",
+     "artist": "Ya Boy, Peedi Crakk, T.D."
+    },
+    {
+     "rank": 10,
+     "song": "Put U Down",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 11,
+     "song": "Party Girl",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 12,
+     "song": "Take Off",
+     "artist": "Young Dro Ft Yung LA"
+    },
+    {
+     "rank": 13,
+     "song": "Vixen (Feat. Sean Garrett)",
+     "artist": "Day26"
+    },
+    {
+     "rank": 14,
+     "song": "Heat Rocks",
+     "artist": "Raekwon"
+    },
+    {
+     "rank": 15,
+     "song": "Bad Man Dont Cry",
+     "artist": "Shaggy"
+    },
+    {
+     "rank": 16,
+     "song": "I Wanna Play (Feat Young Boss)",
+     "artist": "Pitbull"
+    },
+    {
+     "rank": 17,
+     "song": "Uptown (feat. Bun B & Lil' Wayne)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Successful (feat. Trey Songz & Lil' Wayne)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "Like Me",
+     "artist": "Kay L Feat Yung Berg & DJ Quik"
+    },
+    {
+     "rank": 20,
+     "song": "Club To A Bedroom",
+     "artist": "Ron Browz Ft. R.Kelly"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090215022535/http://hypem.com:80/popular",
+   "captured": "2009-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Erreur Jean (Arveene and Misk Remix)",
+     "artist": "Mr Oizo"
+    },
+    {
+     "rank": 2,
+     "song": "Day n Night (Rusko's Big Trombone Remix)",
+     "artist": "Kid Cudi Vs Crookers"
+    },
+    {
+     "rank": 3,
+     "song": "Happy Up Here",
+     "artist": "Royksopp"
+    },
+    {
+     "rank": 4,
+     "song": "L'amour et la violence (Boys Noize Remix)",
+     "artist": "Sebastien Tellier"
+    },
+    {
+     "rank": 5,
+     "song": "Girls (Don Diablo Remix)",
+     "artist": "Walter Meego"
+    },
+    {
+     "rank": 6,
+     "song": "Eminem-Crack.A.Bottle.Ft.Dr.Dre.&.50 Cent-[NoFS]",
+     "artist": "Eminem Feat Dr Dre & 50 Cent"
+    },
+    {
+     "rank": 7,
+     "song": "Got Love to Kill (MSTRKRFT Remix)",
+     "artist": "Juliette Lewis and The Licks"
+    },
+    {
+     "rank": 8,
+     "song": "Electric Feel (Lady Citizen Disco Dub Edit)",
+     "artist": "MGMT"
+    },
+    {
+     "rank": 9,
+     "song": "Happy Up Here (Datassette Remi",
+     "artist": "Royksopp"
+    },
+    {
+     "rank": 10,
+     "song": "Sheena Is A Punk Rocker",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 11,
+     "song": "Raised by Wolves",
+     "artist": "Voxtrot"
+    },
+    {
+     "rank": 12,
+     "song": "Trans Boulogne Express (Yuksek Remix)",
+     "artist": "Birdy Nam Nam"
+    },
+    {
+     "rank": 13,
+     "song": "Take My Breath Away",
+     "artist": "Gui Boratto"
+    },
+    {
+     "rank": 14,
+     "song": "Walking On A Dream (Ortzroka Remix)",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 15,
+     "song": "Human After All (guy-Man After All Justice Remix)",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 16,
+     "song": "Just Dance [DJ Mega Man Remix]",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 17,
+     "song": "Maps (Yeah Yeah Yeahs Cover)",
+     "artist": "Rogue Wave"
+    },
+    {
+     "rank": 18,
+     "song": "The Mule",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 19,
+     "song": "Smash a Kangaroo",
+     "artist": "Diplo"
+    },
+    {
+     "rank": 20,
+     "song": "Brackett, WI",
+     "artist": "Bon Iver"
+    }
+   ]
+  },
+  {
+   "id": "blog_2dopeboyz",
+   "genre": "hip-hop",
+   "label": "2DopeBoyz · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090214232358/http://2dopeboyz.com:80/",
+   "captured": "2009-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "BC 90210: A Talk With U-N-I",
+     "artist": "BCTV"
+    },
+    {
+     "rank": 2,
+     "song": "OnDaSpot Freestyle",
+     "artist": "DJ Tony Touch And Maino"
+    },
+    {
+     "rank": 3,
+     "song": "Buggin’ Out ‘09 Promo",
+     "artist": "Consequence & KiD CuDi"
+    },
+    {
+     "rank": 4,
+     "song": "I Used To Get It In Ohio (Prelude)",
+     "artist": "Cam’Ron"
+    },
+    {
+     "rank": 5,
+     "song": "Too Much Too Soon f. Colin Munroe",
+     "artist": "Che Grand"
+    },
+    {
+     "rank": 6,
+     "song": "Icon Edition: Curtis Mayfield",
+     "artist": "Soopa Starr’s Blaxploitation Friday"
+    },
+    {
+     "rank": 7,
+     "song": "Memory Lane 2009 f. Nature & Doo Wop",
+     "artist": "Scram Jones"
+    },
+    {
+     "rank": 8,
+     "song": "VladTV Freestyle",
+     "artist": "Hell Rell"
+    },
+    {
+     "rank": 9,
+     "song": "Club To A Bedroom f. R. Kelly",
+     "artist": "Ron Browz"
+    },
+    {
+     "rank": 10,
+     "song": "Big Fish Eat Little Fish (Cam’ron Diss)",
+     "artist": "Nova"
+    },
+    {
+     "rank": 11,
+     "song": "Predictions Update pt.1",
+     "artist": "Maino"
+    },
+    {
+     "rank": 12,
+     "song": "Always Love You",
+     "artist": "Theophilus London"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090215223328/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sleep Alone",
+     "artist": "Bat For Lashes"
+    },
+    {
+     "rank": 2,
+     "song": "Her Favorite Colo(u)r (Whole)",
+     "artist": "Blu"
+    },
+    {
+     "rank": 3,
+     "song": "Turn My Swag On",
+     "artist": "Soulja Boy ft. Lil Wayne, Young Jeezy, Fabulous"
+    },
+    {
+     "rank": 4,
+     "song": "Single Ladies Hate Beyonce",
+     "artist": "Beyonce x Tomb Crew"
+    },
+    {
+     "rank": 5,
+     "song": "Uptown",
+     "artist": "Drake ft. Bun B, Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "Good Luv",
+     "artist": "Novel"
+    },
+    {
+     "rank": 7,
+     "song": "November 18th",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Club To A Bedroom",
+     "artist": "Ron Browz ft. R. Kelly"
+    },
+    {
+     "rank": 9,
+     "song": "Future Primitive",
+     "artist": "Papercuts"
+    }
+   ]
+  }
+ ]
+}

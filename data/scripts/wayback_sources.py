@@ -13,6 +13,7 @@ def clean(x):
 def _unq(t):
     t = clean(t).strip()
     t = re.sub(r'^[\u201c\u201d"\u201e]+|[\u201c\u201d"]+$', "", t).strip()
+    t = t.replace("\u201d", "").replace("\u201c", "")
     return t
 
 
@@ -136,5 +137,154 @@ def parse_billboard_modern(h):
     return [], None
 
 
+def parse_beatport(h, kind):
+    """B1 2016-2023: li.ec-item (data-ec-position), title span + mix, artist links.
+    B2 2024+: Next.js __NEXT_DATA__ results[] with name / mix_name / artists[].
+    (2012-2015 pages are client-rendered underscore templates: no rows in the raw capture.)"""
+    rows = {}
+    for pos, blk in re.findall(r'<li class="bucket-item ec-item track"[^>]*data-ec-position="(\d+)"[^>]*>(.*?)(?=<li class="bucket-item ec-item track"|</ul>)', h, re.S):
+        t = re.search(r'<span class="buk-track-primary-title"[^>]*>(.*?)</span>', blk, re.S)
+        mx = re.search(r'<span class="buk-track-remixed">(.*?)</span>', blk, re.S)
+        ar = re.search(r'<p class="buk-track-artists">(.*?)</p>', blk, re.S)
+        if t and ar:
+            title = clean(t.group(1))
+            m = clean(mx.group(1)) if mx else ""
+            if m and m.lower() != "original mix":
+                title = "%s (%s)" % (title, m)
+            rows.setdefault(int(pos), (title, _join_artists(re.findall(r'<a [^>]*>(.*?)</a>', ar.group(1), re.S))))
+    if rows:
+        return [rows[k] for k in sorted(rows)], "B1"
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S)
+    if m:
+        try:
+            d = json.loads(m.group(1))
+            res = None
+            for q in d["props"]["pageProps"]["dehydratedState"]["queries"]:
+                r = q.get("state", {}).get("data", {})
+                if isinstance(r, dict) and isinstance(r.get("results"), list) and r["results"] and "artists" in r["results"][0]:
+                    res = r["results"]
+                    break
+            out = []
+            for x in res or []:
+                title = (x.get("name") or "").strip()
+                mn = (x.get("mix_name") or "").strip()
+                if mn and mn.lower() != "original mix":
+                    title = "%s (%s)" % (title, mn)
+                out.append((title, _join_artists([a.get("name", "") for a in x.get("artists", [])])))
+            if out:
+                return out, "B2"
+        except Exception:
+            pass
+    return [], None
+
+
+def parse_spotify_viral(h, kind):
+    rows = []
+    for pos, blk in re.findall(r'<td class="chart-table-position">\s*(\d+)\s*</td>(.*?)(?=<td class="chart-table-position"|</tbody>|$)', h, re.S):
+        t = re.search(r'<td class="chart-table-track">\s*<strong>(.*?)</strong>\s*<span>by (.*?)</span>', blk, re.S)
+        if t:
+            rows.append((int(pos), clean(t.group(1)), clean(t.group(2))))
+    rows.sort()
+    return [(t, a) for _, t, a in rows], "S1"
+
+
+def parse_kworb(h, kind):
+    """kworb.net tables: Pos | trend | 'Artist - Title' (spotify weekly has artist/track links, itunes plain text)."""
+    rows = {}
+    for rk, cell in re.findall(r'<tr[^>]*>\s*<td[^>]*>\s*(\d+)\s*</td>\s*<td[^>]*>.*?</td>\s*<td class="[^"]*mp[^"]*"[^>]*>\s*<div>(.*?)</div>', h, re.S):
+        txt = clean(cell)
+        if " - " in txt:
+            a, t = txt.split(" - ", 1)
+            rows.setdefault(int(rk), (t.strip(), a.strip()))
+    return [rows[k] for k in sorted(rows)], "K1"
+
+
+# ---- hip-hop blog front pages: song posts only ------------------------------------------------------------
+_NOT_SONG = re.compile(r"(?i)\b(mixtape|album|e\.?p\.?\b|interview|trailer|photos?|pictures|gallery|tracklist|artwork|stream:|live ?stream|"
+                       r"review|sexy|giveaway|contest|tour|dates|announce|signs?|arrested|dies|dead|lawsuit|says|talks|"
+                       r"cover|premiere:|presents|podcast|listening party|documentary|part \d|episode|vol\.|volume|"
+                       r"playlist|best of|top \d+|\d+ (best|things|songs)|so far|essential)\b")
+_DASH = re.compile(r"^(?P<a>[^\u2013\u2014\"\u201c\u201d]{2,60}?)\s+[\u2013\u2014-]\s+(?P<s>.{2,100})$")
+
+
+def _clean_song(s):
+    s = re.sub(r"\s*[\[(](?:prod\.?|produced|cdq|dirty|clean|explicit|audio|official|dj [^)\]]*|snippet)[^\])]*[\])]", "", s, flags=re.I)
+    s = re.sub(r"\s*[\[(]\s*(?:video|audio|cdq|dirty|clean|explicit|new|official)\s*[\])]", "", s, flags=re.I)
+    s = s.strip().strip("\u201c\u201d\"\u2018\u2019'").strip()
+    return s
+
+
+def song_from_headline(txt):
+    """'Artist - Song', 'Artist - "Song"', 'Listen to Artist\'s "Song"' -> (song, artist) or None. News headlines are rejected."""
+    txt = clean(txt)
+    if not txt or len(txt) > 140:
+        return None
+    m = re.match(r"^(?:Listen to|Stream|Hear|Watch)\s+(.+?)[\u2019']s\s+[\u201c\"\u2018']([^\u201c\u201d\"]{2,80})[\u201d\"\u2019']\s*(?:f/|ft\.?|feat\.?)?\s*(.*)$", txt)
+    if m and not _NOT_SONG.search(m.group(1)):
+        a = m.group(1).strip()
+        if m.group(3).strip():
+            a = "%s feat. %s" % (a, m.group(3).strip())
+        return _clean_song(m.group(2)), a
+    if re.match(r"(?i)^(video|watch|premiere|listen|stream|new|exclusive|sat|saturday)\b[: ]", txt):
+        txt = re.sub(r"(?i)^(video|new music|new|exclusive)\s*[:|]\s*", "", txt)
+        if re.match(r"(?i)^(watch|premiere|listen|stream|sat|saturday)\b", txt):
+            return None
+    m = _DASH.match(txt)
+    if not m or _NOT_SONG.search(txt):
+        return None
+    a, s = re.sub(r"(?i)^(video|audio|new)\s*[!:]\s*", "", m.group("a").strip()), m.group("s").strip()
+    q = re.match(r"^[\u201c\"\u2018']([^\u201c\u201d\"]{1,80})[\u201d\"\u2019']\s*(?:[(\[]?\s*(?:f\.|ft\.?|feat\.?|featuring|f/)\s*([^)\]]+?)\s*[)\]]?)?\s*(?:[\[(].*)?$", s)
+    if q:
+        s = q.group(1)
+        if q.group(2):
+            a = "%s feat. %s" % (a, q.group(2).strip())
+    s = _clean_song(s)
+    if not s or len(a.split()) > 8 or len(s.split()) > 12 or s.lower() in ("video", "audio", "mixtape"):
+        return None
+    if re.search(r"(?i)\b(is|are|was|were|has|have|will|gets|gives|drops|and the|to)\b.*\b(is|are|was|were|has|have|will)\b", s):
+        return None
+    return s, a
+
+
+def _headlines(h):
+    t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", h, flags=re.S | re.I)
+    out = []
+    for m in re.finditer(r"<h[1-4][^>]*>\s*<a\b[^>]*>(.*?)</a>", t, re.S):
+        out.append(m.group(1))
+    return out
+
+
+def parse_blog_posts(h, kind):
+    rows, seen = [], set()
+    for hd in _headlines(h):
+        x = song_from_headline(hd)
+        if x and x not in seen:
+            seen.add(x)
+            rows.append(x)
+    return rows, "H1"
+
+
 def EXTRA_SOURCES(_p_billboard):
-    return []
+    def V(kind, url, parse, frm="2008-01", to="2025-12", why=None):
+        return {"kind": kind, "url": url, "parse": parse, "frm": frm, "to": to, "why": why}
+    BEAT_WHY = "2008-2016 beatport top-100 captures are client-rendered underscore templates: no rows in the raw capture"
+    return [
+        ("beatport_top100", "dance", 4, {"ranked": "Beatport · Top 100 Tracks"},
+         [V("ranked", "beatport.com/top-100", parse_beatport, "2017-01", "2025-12", BEAT_WHY)]),
+        ("billboard_dance", "dance", 4, {"ranked": "Billboard · Dance/Electronic Songs"},
+         [V("ranked", "billboard.com/charts/dance-electronic-songs", _p_billboard)]),
+        ("billboard_alt", "rock", 5, {"ranked": "Billboard · Alternative Songs / Alternative Airplay"},
+         [V("ranked", "billboard.com/charts/alternative-songs", _p_billboard),
+          V("ranked", "billboard.com/charts/alternative-airplay", _p_billboard)]),
+        ("spotify_viral", "all", 6, {"ranked": "Spotify · Viral 50 US (weekly, else daily)"},
+         [V("ranked", "spotifycharts.com/viral/us/weekly/latest", parse_spotify_viral),
+          V("ranked", "spotifycharts.com/viral/us/daily/latest", parse_spotify_viral)]),
+        ("kworb_spotify_us", "pop", 6, {"ranked": "kworb · Spotify US Weekly (streams)"},
+         [V("ranked", "kworb.net/spotify/country/us_weekly.html", parse_kworb)]),
+        ("kworb_itunes_us", "pop", 6, {"ranked": "kworb · iTunes US Top Songs"},
+         [V("ranked", "kworb.net/charts/itunes/us.html", parse_kworb)]),
+        ("blog_2dopeboyz", "hip-hop", 7, {"front": "2DopeBoyz · Front page song posts (newest first, not a rank)"},
+         [V("front", "2dopeboyz.com/", parse_blog_posts, "2008-01", "2018-12", "2019+ 2dopeboyz is client-rendered: no post headlines in the raw capture")]),
+        ("blog_pigeonsandplanes", "hip-hop", 7, {"front": "Pigeons & Planes · Front page song posts (newest first, not a rank)"},
+         [V("front", "pigeonsandplanes.com/", parse_blog_posts, "2008-01", "2019-12", "pigeonsandplanes.com captures end 2019")]),
+    ]

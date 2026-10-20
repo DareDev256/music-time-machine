@@ -223,6 +223,66 @@
    ]
   },
   {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130109101421/http://www.billboard.com:80/charts/rap-song",
+   "captured": "2013-01-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Gangnam Style",
+     "artist": "PSY"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "I Cry",
+     "artist": "Flo Rida"
+    },
+    {
+     "rank": 4,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 6,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 7,
+     "song": "No Worries",
+     "artist": "Lil Wayne Featuring Detail"
+    },
+    {
+     "rank": 8,
+     "song": "I'm Different",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 9,
+     "song": "Don't Stop The Party",
+     "artist": "Pitbull Featuring TJR"
+    },
+    {
+     "rank": 10,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  },
+  {
    "id": "billboard_rnb",
    "genre": "hip-hop",
    "label": "Billboard · R&B/Hip-Hop Songs",
@@ -279,6 +339,211 @@
      "rank": 10,
      "song": "Bandz A Make Her Dance",
      "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130115014242/http://pitchfork.com/reviews/best/tracks/",
+   "captured": "2013-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Suit & Tie\" [ft. Jay-Z]",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 2,
+     "song": "Anxiety's Door",
+     "artist": "Merchandise"
+    },
+    {
+     "rank": 3,
+     "song": "No Destruction",
+     "artist": "Foxygen"
+    },
+    {
+     "rank": 4,
+     "song": "Electric",
+     "artist": "The Men"
+    },
+    {
+     "rank": 5,
+     "song": "Where Are We Now?",
+     "artist": "David Bowie"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130115225213/http://www.billboard.com/charts/country-songs",
+   "captured": "2013-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cruise",
+     "artist": "Florida Georgia Line"
+    },
+    {
+     "rank": 2,
+     "song": "We Are Never Ever Getting Ba...",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 3,
+     "song": "Wanted",
+     "artist": "Hunter Hayes"
+    },
+    {
+     "rank": 4,
+     "song": "Better Dig Two",
+     "artist": "The Band Perry"
+    },
+    {
+     "rank": 5,
+     "song": "Every Storm (Runs Out Of Rai...",
+     "artist": "Gary Allan"
+    },
+    {
+     "rank": 6,
+     "song": "Goodbye In Her Eyes",
+     "artist": "Zac Brown Band"
+    },
+    {
+     "rank": 7,
+     "song": "How Country Feels",
+     "artist": "Randy Houser"
+    },
+    {
+     "rank": 8,
+     "song": "The Only Way I Know",
+     "artist": "Jason Aldean With Luke Bryan & Eric Church"
+    },
+    {
+     "rank": 9,
+     "song": "Blown Away",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 10,
+     "song": "Beer Money",
+     "artist": "Kip Moore"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130109091211/http://www.billboard.com:80/charts/alternative-songs",
+   "captured": "2013-01-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Madness",
+     "artist": "Muse"
+    },
+    {
+     "rank": 2,
+     "song": "Little Black Submarines",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 3,
+     "song": "I Will Wait",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 4,
+     "song": "Ho Hey",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 5,
+     "song": "Trojans",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 6,
+     "song": "Radioactive",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 7,
+     "song": "Mountain Sound",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 8,
+     "song": "Take A Walk",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 9,
+     "song": "Carry On",
+     "artist": "fun."
+    },
+    {
+     "rank": 10,
+     "song": "The Pit",
+     "artist": "Silversun Pickups"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130115052951/http://pigeonsandplanes.com/",
+   "captured": "2013-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Later",
+     "artist": "Shlohmo"
+    },
+    {
+     "rank": 2,
+     "song": "Dancing’s Done",
+     "artist": "Thumpers"
+    },
+    {
+     "rank": 3,
+     "song": "Wild for the Night",
+     "artist": "A$AP Rocky ft. Skrillex & Birdy Nam Nam"
+    },
+    {
+     "rank": 4,
+     "song": "Trials of the Past",
+     "artist": "the Gruesome New Video for SBTRKT"
+    },
+    {
+     "rank": 5,
+     "song": "Unorthodox",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 6,
+     "song": "Girls",
+     "artist": "Santigold"
+    },
+    {
+     "rank": 7,
+     "song": "Jubilee Street",
+     "artist": "Nick Cave & The Bad Seeds"
+    },
+    {
+     "rank": 8,
+     "song": "Glass",
+     "artist": "MØ"
     }
    ]
   }

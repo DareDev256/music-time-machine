@@ -1,0 +1,951 @@
+{
+ "month": "2022-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220414210242/https://www.hotnewhiphop.com/top100/",
+   "captured": "2022-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Game 6",
+     "artist": "Dave East"
+    },
+    {
+     "rank": 2,
+     "song": "We Set The Trends (Remix)",
+     "artist": "Jim Jones Feat. Migos"
+    },
+    {
+     "rank": 3,
+     "song": "First Class",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 4,
+     "song": "City Of Gods (Part II)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 5,
+     "song": "Treat Me",
+     "artist": "Chlöe"
+    },
+    {
+     "rank": 6,
+     "song": "London",
+     "artist": "BIA Feat. J. Cole"
+    },
+    {
+     "rank": 7,
+     "song": "Lifetime",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 8,
+     "song": "In A Minute",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 9,
+     "song": "Neck & Wrist (Prod. By Pharrell)",
+     "artist": "Pusha T Feat. Jay-Z"
+    },
+    {
+     "rank": 10,
+     "song": "Right On",
+     "artist": "Lil Baby"
+    },
+    {
+     "rank": 11,
+     "song": "Soccer Dad",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 12,
+     "song": "Confidence",
+     "artist": "Fivio Foreign Feat. A$AP Rocky"
+    },
+    {
+     "rank": 13,
+     "song": "SubZero (Prod. By The Alchemist)",
+     "artist": "Action Bronson"
+    },
+    {
+     "rank": 14,
+     "song": "What's My Name",
+     "artist": "Fivio Foreign Feat. Queen Naija"
+    },
+    {
+     "rank": 15,
+     "song": "Another",
+     "artist": "Muni Long"
+    },
+    {
+     "rank": 16,
+     "song": "Thief In The Night",
+     "artist": "Coi Leray Feat. G Herbo"
+    },
+    {
+     "rank": 17,
+     "song": "Thump Shit",
+     "artist": "EST Gee & 42 Dugg"
+    },
+    {
+     "rank": 18,
+     "song": "Toxic",
+     "artist": "J.I the Prince of N.Y"
+    },
+    {
+     "rank": 19,
+     "song": "Shake The World",
+     "artist": "August Alsina"
+    },
+    {
+     "rank": 20,
+     "song": "Anxiety",
+     "artist": "Coi Leray"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220415121207/https://hypem.com/popular",
+   "captured": "2022-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Go Soulwax Remix",
+     "artist": "Peggy Gou"
+    },
+    {
+     "rank": 2,
+     "song": "Only You +2 remixes",
+     "artist": "Steve Monite"
+    },
+    {
+     "rank": 3,
+     "song": "Take Me Back",
+     "artist": "REMY QUINN"
+    },
+    {
+     "rank": 4,
+     "song": "Hourglass",
+     "artist": "S U R V I V E"
+    },
+    {
+     "rank": 5,
+     "song": "Too Little, Too Late",
+     "artist": "mindchatter"
+    },
+    {
+     "rank": 6,
+     "song": "Devil's Ivy",
+     "artist": "Blanco Tranco"
+    },
+    {
+     "rank": 7,
+     "song": "How Simple",
+     "artist": "Hop Along"
+    },
+    {
+     "rank": 8,
+     "song": "Laba Staifia Ammar 808 Remix",
+     "artist": "Acid Arab"
+    },
+    {
+     "rank": 9,
+     "song": "She's an Icicle",
+     "artist": "The Besnard Lakes"
+    },
+    {
+     "rank": 10,
+     "song": "Falling",
+     "artist": "Caius"
+    },
+    {
+     "rank": 11,
+     "song": "The Robins Sang",
+     "artist": "No Suits in Miami"
+    },
+    {
+     "rank": 12,
+     "song": "The Be Colony",
+     "artist": "Broadcast and The Focus Group"
+    },
+    {
+     "rank": 13,
+     "song": "cool guy",
+     "artist": "girlhouse"
+    },
+    {
+     "rank": 14,
+     "song": "Gunk",
+     "artist": "Overmono"
+    },
+    {
+     "rank": 15,
+     "song": "Are You OK?",
+     "artist": "Point No Point"
+    },
+    {
+     "rank": 16,
+     "song": "Almost Automatic",
+     "artist": "Good Looks"
+    },
+    {
+     "rank": 17,
+     "song": "Granny Scratch Scratch",
+     "artist": "Sound Dimension"
+    },
+    {
+     "rank": 18,
+     "song": "BOX OF CHOCOLATES feat. Edinstvenite Priyateli",
+     "artist": "TromBobby"
+    },
+    {
+     "rank": 19,
+     "song": "The World Backwards",
+     "artist": "Broadcast"
+    },
+    {
+     "rank": 20,
+     "song": "The Equestrian Vortex",
+     "artist": "Broadcast"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220416193837/https://www.billboard.com/charts/rap-song/",
+   "captured": "2022-04-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Big Energy",
+     "artist": "Latto"
+    },
+    {
+     "rank": 2,
+     "song": "Super Gremlin",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 3,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 4,
+     "song": "Pushin P",
+     "artist": "Gunna & Future Featuring Young Thug"
+    },
+    {
+     "rank": 5,
+     "song": "Sweetest Pie",
+     "artist": "Megan Thee Stallion & Dua Lipa"
+    },
+    {
+     "rank": 6,
+     "song": "In My Head",
+     "artist": "Lil Tjay"
+    },
+    {
+     "rank": 7,
+     "song": "What Happened To Virgil",
+     "artist": "Lil Durk Featuring Gunna"
+    },
+    {
+     "rank": 8,
+     "song": "To The Moon!",
+     "artist": "JNR CHOI & Sam Tompkins"
+    },
+    {
+     "rank": 9,
+     "song": "Ahhh Ha",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 10,
+     "song": "Nail Tech",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 11,
+     "song": "Broadway Girls",
+     "artist": "Lil Durk Featuring Morgan Wallen"
+    },
+    {
+     "rank": 12,
+     "song": "Me Or Sum",
+     "artist": "Nardo Wick, Lil Baby & Future"
+    },
+    {
+     "rank": 13,
+     "song": "Freaky Deaky",
+     "artist": "Tyga X Doja Cat"
+    },
+    {
+     "rank": 14,
+     "song": "Thinking With My Dick",
+     "artist": "Kevin Gates Featuring Juicy J"
+    },
+    {
+     "rank": 15,
+     "song": "Do We Have A Problem?",
+     "artist": "Nicki Minaj X Lil Baby"
+    },
+    {
+     "rank": 16,
+     "song": "Stick",
+     "artist": "JID & J. Cole Featuring Kenny Mason & Sheck Wes"
+    },
+    {
+     "rank": 17,
+     "song": "Handsomer",
+     "artist": "Russ Featuring Ktlyn"
+    },
+    {
+     "rank": 18,
+     "song": "Rumors",
+     "artist": "Gucci Mane Featuring Lil Durk"
+    },
+    {
+     "rank": 19,
+     "song": "Banking On Me",
+     "artist": "Gunna"
+    },
+    {
+     "rank": 20,
+     "song": "P Power",
+     "artist": "Gunna Featuring Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220415142342/https://www.billboard.com/charts/r-b-hip-hop-songs/",
+   "captured": "2022-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Big Energy",
+     "artist": "Latto"
+    },
+    {
+     "rank": 2,
+     "song": "Super Gremlin",
+     "artist": "Kodak Black"
+    },
+    {
+     "rank": 3,
+     "song": "Woman",
+     "artist": "Doja Cat"
+    },
+    {
+     "rank": 4,
+     "song": "Industry Baby",
+     "artist": "Lil Nas X & Jack Harlow"
+    },
+    {
+     "rank": 5,
+     "song": "Hrs And Hrs",
+     "artist": "Muni Long"
+    },
+    {
+     "rank": 6,
+     "song": "I Hate U",
+     "artist": "SZA"
+    },
+    {
+     "rank": 7,
+     "song": "Pushin P",
+     "artist": "Gunna & Future Featuring Young Thug"
+    },
+    {
+     "rank": 8,
+     "song": "In My Head",
+     "artist": "Lil Tjay"
+    },
+    {
+     "rank": 9,
+     "song": "What Happened To Virgil",
+     "artist": "Lil Durk Featuring Gunna"
+    },
+    {
+     "rank": 10,
+     "song": "To The Moon!",
+     "artist": "JNR CHOI & Sam Tompkins"
+    },
+    {
+     "rank": 11,
+     "song": "Peru",
+     "artist": "Fireboy DML & Ed Sheeran"
+    },
+    {
+     "rank": 12,
+     "song": "Ahhh Ha",
+     "artist": "Lil Durk"
+    },
+    {
+     "rank": 13,
+     "song": "No Love",
+     "artist": "Summer Walker & SZA"
+    },
+    {
+     "rank": 14,
+     "song": "Nail Tech",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 15,
+     "song": "Broadway Girls",
+     "artist": "Lil Durk Featuring Morgan Wallen"
+    },
+    {
+     "rank": 16,
+     "song": "Me Or Sum",
+     "artist": "Nardo Wick, Lil Baby & Future"
+    },
+    {
+     "rank": 17,
+     "song": "Freaky Deaky",
+     "artist": "Tyga X Doja Cat"
+    },
+    {
+     "rank": 18,
+     "song": "Thinking With My Dick",
+     "artist": "Kevin Gates Featuring Juicy J"
+    },
+    {
+     "rank": 19,
+     "song": "Do We Have A Problem?",
+     "artist": "Nicki Minaj X Lil Baby"
+    },
+    {
+     "rank": 20,
+     "song": "Stick",
+     "artist": "JID & J. Cole Featuring Kenny Mason & Sheck Wes"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20220415172257/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2022-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Home Maker",
+     "artist": "Sudan Archives"
+    },
+    {
+     "rank": 2,
+     "song": "June",
+     "artist": "Destroyer"
+    },
+    {
+     "rank": 3,
+     "song": "Vocoder",
+     "artist": "Floating Points"
+    },
+    {
+     "rank": 4,
+     "song": "It Hit Me",
+     "artist": "Charlotte Adigéry & Bolis Pupul"
+    },
+    {
+     "rank": 5,
+     "song": "Back to the Radio",
+     "artist": "Porridge Radio"
+    },
+    {
+     "rank": 6,
+     "song": "Billions",
+     "artist": "Caroline Polachek"
+    },
+    {
+     "rank": 7,
+     "song": "Bites on My Neck",
+     "artist": "yeule"
+    },
+    {
+     "rank": 8,
+     "song": "home",
+     "artist": "Two Shell"
+    },
+    {
+     "rank": 9,
+     "song": "Midnight Sun",
+     "artist": "Nilüfer Yanya"
+    },
+    {
+     "rank": 10,
+     "song": "Jump!! (Or Get Jumped!!!)((By the Future))",
+     "artist": "Soul Glo"
+    },
+    {
+     "rank": 11,
+     "song": "2010",
+     "artist": "Earl Sweatshirt"
+    }
+   ]
+  },
+  {
+   "id": "billboard_country",
+   "genre": "country",
+   "label": "Billboard · Country Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220415065532/https://www.billboard.com/charts/country-songs/",
+   "captured": "2022-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "'Til You Can't",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 2,
+     "song": "Doin' This",
+     "artist": "Luke Combs"
+    },
+    {
+     "rank": 3,
+     "song": "Never Say Never",
+     "artist": "Cole Swindell / Lainey Wilson"
+    },
+    {
+     "rank": 4,
+     "song": "AA",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 5,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 6,
+     "song": "Drunk (And I Don't Wanna Go Home)",
+     "artist": "Elle King & Miranda Lambert"
+    },
+    {
+     "rank": 7,
+     "song": "Buy Dirt",
+     "artist": "Jordan Davis Featuring Luke Bryan"
+    },
+    {
+     "rank": 8,
+     "song": "Wasted On You",
+     "artist": "Morgan Wallen"
+    },
+    {
+     "rank": 9,
+     "song": "Slow Down Summer",
+     "artist": "Thomas Rhett"
+    },
+    {
+     "rank": 10,
+     "song": "Beers On Me",
+     "artist": "Dierks Bentley, Breland & HARDY"
+    },
+    {
+     "rank": 11,
+     "song": "Circles Around This Town",
+     "artist": "Maren Morris"
+    },
+    {
+     "rank": 12,
+     "song": "Heart On Fire",
+     "artist": "Eric Church"
+    },
+    {
+     "rank": 13,
+     "song": "Never Wanted To Be That Girl",
+     "artist": "Carly Pearce & Ashley McBryde"
+    },
+    {
+     "rank": 14,
+     "song": "Flower Shops",
+     "artist": "ERNEST Featuring Morgan Wallen"
+    },
+    {
+     "rank": 15,
+     "song": "If I Was A Cowboy",
+     "artist": "Miranda Lambert"
+    },
+    {
+     "rank": 16,
+     "song": "Trouble With A Heartbreak",
+     "artist": "Jason Aldean"
+    },
+    {
+     "rank": 17,
+     "song": "Give Heaven Some Hell",
+     "artist": "HARDY"
+    },
+    {
+     "rank": 18,
+     "song": "Come Back As A Country Boy",
+     "artist": "Blake Shelton"
+    },
+    {
+     "rank": 19,
+     "song": "Damn Strait",
+     "artist": "Scotty McCreery"
+    },
+    {
+     "rank": 20,
+     "song": "She Likes It",
+     "artist": "Russell Dickerson & Jake Scott"
+    }
+   ]
+  },
+  {
+   "id": "billboard_dance",
+   "genre": "dance",
+   "label": "Billboard · Dance/Electronic Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220416190145/https://www.billboard.com/charts/dance-electronic-songs/",
+   "captured": "2022-04-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 2,
+     "song": "The Motto",
+     "artist": "Tiesto & Ava Max"
+    },
+    {
+     "rank": 3,
+     "song": "Pepas",
+     "artist": "Farruko"
+    },
+    {
+     "rank": 4,
+     "song": "When I'm Gone",
+     "artist": "Alesso / Katy Perry"
+    },
+    {
+     "rank": 5,
+     "song": "Do It To It",
+     "artist": "Acraze Featuring Cherish"
+    },
+    {
+     "rank": 6,
+     "song": "Dancing Feet",
+     "artist": "Kygo Featuring DNCE"
+    },
+    {
+     "rank": 7,
+     "song": "Where Are You Now",
+     "artist": "Lost Frequencies & Calum Scott"
+    },
+    {
+     "rank": 8,
+     "song": "El Incomprendido",
+     "artist": "Farruko, Victor Cardenas & DJ Adoni"
+    },
+    {
+     "rank": 9,
+     "song": "Don't Forget My Love",
+     "artist": "Diplo & Miguel"
+    },
+    {
+     "rank": 10,
+     "song": "Frozen",
+     "artist": "Madonna vs. Sickick"
+    },
+    {
+     "rank": 11,
+     "song": "You Were Loved",
+     "artist": "Gryffin & OneRepublic"
+    },
+    {
+     "rank": 12,
+     "song": "Moth To A Flame",
+     "artist": "Swedish House Mafia & The Weeknd"
+    },
+    {
+     "rank": 13,
+     "song": "SG",
+     "artist": "DJ Snake, Ozuna, Lisa & Megan Thee Stallion"
+    },
+    {
+     "rank": 14,
+     "song": "What Would You Do?",
+     "artist": "Joel Corry, David Guetta & Bryson Tiller"
+    },
+    {
+     "rank": 15,
+     "song": "Love Brand New",
+     "artist": "Bob Moses"
+    },
+    {
+     "rank": 16,
+     "song": "Broken In All The Right Places",
+     "artist": "Lost Kings Featuring MOD SUN"
+    },
+    {
+     "rank": 17,
+     "song": "Escape",
+     "artist": "Kx5 Featuring Hayla"
+    },
+    {
+     "rank": 18,
+     "song": "Beg For You",
+     "artist": "Charli XCX Featuring Rina Sawayama"
+    },
+    {
+     "rank": 19,
+     "song": "Tell It To My Heart",
+     "artist": "Meduza Featuring Hozier"
+    },
+    {
+     "rank": 20,
+     "song": "The Last Goodbye",
+     "artist": "ODESZA Featuring Bettye LaVette"
+    }
+   ]
+  },
+  {
+   "id": "billboard_alt",
+   "genre": "rock",
+   "label": "Billboard · Alternative Songs / Alternative Airplay",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220421082442/https://www.billboard.com/charts/alternative-airplay/",
+   "captured": "2022-04-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Black Summer",
+     "artist": "Red Hot Chili Peppers"
+    },
+    {
+     "rank": 2,
+     "song": "Enemy",
+     "artist": "Imagine Dragons X JID"
+    },
+    {
+     "rank": 3,
+     "song": "Wild Child",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 4,
+     "song": "What, Me Worry?",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 5,
+     "song": "Love Brand New",
+     "artist": "Bob Moses"
+    },
+    {
+     "rank": 6,
+     "song": "Won't Stand Down",
+     "artist": "Muse"
+    },
+    {
+     "rank": 7,
+     "song": "A Little Bit Of Love",
+     "artist": "Weezer"
+    },
+    {
+     "rank": 8,
+     "song": "Toxic",
+     "artist": "BoyWithUke"
+    },
+    {
+     "rank": 9,
+     "song": "Mystery",
+     "artist": "Turnstile"
+    },
+    {
+     "rank": 10,
+     "song": "Where We Are",
+     "artist": "The Lumineers"
+    },
+    {
+     "rank": 11,
+     "song": "Beggin'",
+     "artist": "Maneskin"
+    },
+    {
+     "rank": 12,
+     "song": "Head Right",
+     "artist": "Wilderado"
+    },
+    {
+     "rank": 13,
+     "song": "Bad Dream",
+     "artist": "Cannons"
+    },
+    {
+     "rank": 14,
+     "song": "My Love",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 15,
+     "song": "DiE4u",
+     "artist": "Bring Me The Horizon"
+    },
+    {
+     "rank": 16,
+     "song": "Keep It Up",
+     "artist": "Rex Orange County"
+    },
+    {
+     "rank": 17,
+     "song": "Loved You A Little",
+     "artist": "The Maine / Taking Back Sunday / Charlotte Sands"
+    },
+    {
+     "rank": 18,
+     "song": "I'll Call You Mine",
+     "artist": "girl in red"
+    },
+    {
+     "rank": 19,
+     "song": "Re-Entry",
+     "artist": "A Day To Remember Featuring Mark Hoppus"
+    },
+    {
+     "rank": 20,
+     "song": "Seventeen Going Under",
+     "artist": "Sam Fender"
+    }
+   ]
+  },
+  {
+   "id": "kworb_itunes_us",
+   "genre": "pop",
+   "label": "kworb · iTunes US Top Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20220415004251/https://kworb.net/charts/itunes/us.html",
+   "captured": "2022-04-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "'Til You Can't",
+     "artist": "Cody Johnson"
+    },
+    {
+     "rank": 2,
+     "song": "Flowers",
+     "artist": "Lauren Spencer-Smith"
+    },
+    {
+     "rank": 3,
+     "song": "As It Was",
+     "artist": "Harry Styles"
+    },
+    {
+     "rank": 4,
+     "song": "AA",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 5,
+     "song": "First Class",
+     "artist": "Jack Harlow"
+    },
+    {
+     "rank": 6,
+     "song": "Bam Bam (feat. Ed Sheeran)",
+     "artist": "Camila Cabello"
+    },
+    {
+     "rank": 7,
+     "song": "What a Wonderful World",
+     "artist": "Louis Armstrong"
+    },
+    {
+     "rank": 8,
+     "song": "Cold Heart (PNAU Remix)",
+     "artist": "Elton John & Dua Lipa"
+    },
+    {
+     "rank": 9,
+     "song": "Big Energy (Remix) [feat. DJ Khaled]",
+     "artist": "Latto & Mariah Carey"
+    },
+    {
+     "rank": 10,
+     "song": "Hell Yeah",
+     "artist": "Little Big Town"
+    },
+    {
+     "rank": 11,
+     "song": "Fancy Like",
+     "artist": "Walker Hayes"
+    },
+    {
+     "rank": 12,
+     "song": "Big Energy",
+     "artist": "Latto"
+    },
+    {
+     "rank": 13,
+     "song": "Dear Alcohol",
+     "artist": "Dax"
+    },
+    {
+     "rank": 14,
+     "song": "Heat Waves",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 15,
+     "song": "AfterLife",
+     "artist": "Five Finger Death Punch"
+    },
+    {
+     "rank": 16,
+     "song": "In Jesus Name (God Of Possible)",
+     "artist": "Katy Nichole"
+    },
+    {
+     "rank": 17,
+     "song": "Shivers",
+     "artist": "Ed Sheeran"
+    },
+    {
+     "rank": 18,
+     "song": "Ghost Story",
+     "artist": "Carrie Underwood"
+    },
+    {
+     "rank": 19,
+     "song": "Masterpiece",
+     "artist": "Motionless In White"
+    },
+    {
+     "rank": 20,
+     "song": "Ghost",
+     "artist": "Justin Bieber"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,621 @@
+{
+ "month": "2018-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180216113103/https://www.hotnewhiphop.com/",
+   "captured": "2018-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Suu Whoop",
+     "artist": "YG"
+    },
+    {
+     "rank": 2,
+     "song": "Young Nigga",
+     "artist": "Nipsey Hussle Feat. Puff Daddy"
+    },
+    {
+     "rank": 3,
+     "song": "Faithful",
+     "artist": "Tyga Feat. Tory Lanez"
+    },
+    {
+     "rank": 4,
+     "song": "B.I.D.",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 5,
+     "song": "Moon River",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 6,
+     "song": "Everything (Remix)",
+     "artist": "G Herbo Feat. Lil Uzi Vert & Chance The Rapper"
+    },
+    {
+     "rank": 7,
+     "song": "Look Back",
+     "artist": "Diplo Feat. DRAM"
+    },
+    {
+     "rank": 8,
+     "song": "Miami (Remix)",
+     "artist": "Valee Feat. Pusha T"
+    },
+    {
+     "rank": 9,
+     "song": "No Defeat",
+     "artist": "Preme"
+    },
+    {
+     "rank": 10,
+     "song": "Ash Wednesday '18",
+     "artist": "Asher Roth"
+    },
+    {
+     "rank": 11,
+     "song": "Back That Azz Up",
+     "artist": "Juvenile Feat. Mannie Fresh & Lil Wayne"
+    },
+    {
+     "rank": 12,
+     "song": "Black Kennedy",
+     "artist": "August Greene"
+    },
+    {
+     "rank": 13,
+     "song": "Pint of Blood (Prod. By chasethemoney)",
+     "artist": "Lil Wop"
+    },
+    {
+     "rank": 14,
+     "song": "Wanna Do",
+     "artist": "24hrs Feat. Salma Slims"
+    },
+    {
+     "rank": 15,
+     "song": "LaVar",
+     "artist": "Zo (Lonzo Ball)"
+    },
+    {
+     "rank": 16,
+     "song": "Bail Out",
+     "artist": "Young Scooter Feat. YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 17,
+     "song": "Don't Mean It",
+     "artist": "Trill Sammy"
+    },
+    {
+     "rank": 18,
+     "song": "Today",
+     "artist": "Niqle Nut Feat. G Perico"
+    },
+    {
+     "rank": 19,
+     "song": "Fastfwrd1",
+     "artist": "Mathaius Young"
+    },
+    {
+     "rank": 20,
+     "song": "Due To Me",
+     "artist": "Jean Deaux"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180215033426/https://hypem.com/popular",
+   "captured": "2018-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Kiss Me Now",
+     "artist": "UPSAHL"
+    },
+    {
+     "rank": 2,
+     "song": "Dream State",
+     "artist": "Son Lux"
+    },
+    {
+     "rank": 3,
+     "song": "Clockwise feat. Nick Row",
+     "artist": "Alexander Lewis"
+    },
+    {
+     "rank": 4,
+     "song": "Love You Better",
+     "artist": "Emma McGrath"
+    },
+    {
+     "rank": 5,
+     "song": "Would U",
+     "artist": "Laarsen"
+    },
+    {
+     "rank": 6,
+     "song": "Wild Horses",
+     "artist": "EKARUZ"
+    },
+    {
+     "rank": 7,
+     "song": "Carseat",
+     "artist": "pizzagirl"
+    },
+    {
+     "rank": 8,
+     "song": "The Chain",
+     "artist": "MATTIS"
+    },
+    {
+     "rank": 9,
+     "song": "This Body",
+     "artist": "BAUM"
+    },
+    {
+     "rank": 10,
+     "song": "An Acre Of Land",
+     "artist": "PJ Harvey & Harry Escott"
+    },
+    {
+     "rank": 11,
+     "song": "BLEED",
+     "artist": "Captain Kidd (Official)"
+    },
+    {
+     "rank": 12,
+     "song": "What Time Is It? (feat. Innanet James)(Prod. By KAYTRANADA)",
+     "artist": "Lou Phelps"
+    },
+    {
+     "rank": 13,
+     "song": "Woes vs. Whoas",
+     "artist": "WILLS"
+    },
+    {
+     "rank": 14,
+     "song": "Suit & Tie Nikö Blank Remix",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 15,
+     "song": "Right Here, Right Now CamelPhat Remix",
+     "artist": "Fatboy Slim"
+    },
+    {
+     "rank": 16,
+     "song": "Suck The Blood From My Wound",
+     "artist": "Ezra Furman"
+    },
+    {
+     "rank": 17,
+     "song": "What You Feel",
+     "artist": "YON ORT"
+    },
+    {
+     "rank": 18,
+     "song": "Make Love To Myself",
+     "artist": "Lauren Ruth Ward"
+    },
+    {
+     "rank": 19,
+     "song": "Snow (again)",
+     "artist": "The fin."
+    },
+    {
+     "rank": 20,
+     "song": "upsidown",
+     "artist": "warner case"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180223152415/https://www.billboard.com/charts/rap-song",
+   "captured": "2018-02-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 3,
+     "song": "Look Alive",
+     "artist": "BlocBoy JB Featuring Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Stir Fry",
+     "artist": "Migos"
+    },
+    {
+     "rank": 5,
+     "song": "Let You Down",
+     "artist": "NF"
+    },
+    {
+     "rank": 6,
+     "song": "Love.",
+     "artist": "Kendrick Lamar Featuring Zacari"
+    },
+    {
+     "rank": 7,
+     "song": "Him & I",
+     "artist": "G-Eazy & Halsey"
+    },
+    {
+     "rank": 8,
+     "song": "MotorSport",
+     "artist": "Migos, Nicki Minaj & Cardi B"
+    },
+    {
+     "rank": 9,
+     "song": "I Fall Apart",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 10,
+     "song": "No Limit",
+     "artist": "G-Eazy Featuring A$AP Rocky & Cardi B"
+    },
+    {
+     "rank": 11,
+     "song": "Bartier Cardi",
+     "artist": "Cardi B Featuring 21 Savage"
+    },
+    {
+     "rank": 12,
+     "song": "Gummo",
+     "artist": "6ix9ine"
+    },
+    {
+     "rank": 13,
+     "song": "Plain Jane",
+     "artist": "A$AP Ferg Featuring Nicki Minaj"
+    },
+    {
+     "rank": 14,
+     "song": "River",
+     "artist": "Eminem Featuring Ed Sheeran"
+    },
+    {
+     "rank": 15,
+     "song": "Outside Today",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 16,
+     "song": "King's Dead",
+     "artist": "Jay Rock, Kendrick Lamar, Future & James Blake"
+    },
+    {
+     "rank": 17,
+     "song": "Ric Flair Drip",
+     "artist": "Offset & Metro Boomin"
+    },
+    {
+     "rank": 18,
+     "song": "Gucci Gang",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 19,
+     "song": "I Get The Bag",
+     "artist": "Gucci Mane Featuring Migos"
+    },
+    {
+     "rank": 20,
+     "song": "Lemon",
+     "artist": "N*E*R*D & Rihanna"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180213235503/https://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2018-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "God's Plan",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Finesse",
+     "artist": "Bruno Mars & Cardi B"
+    },
+    {
+     "rank": 3,
+     "song": "Rockstar",
+     "artist": "Post Malone Featuring 21 Savage"
+    },
+    {
+     "rank": 4,
+     "song": "Pray For Me",
+     "artist": "The Weeknd & Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Stir Fry",
+     "artist": "Migos"
+    },
+    {
+     "rank": 6,
+     "song": "Let You Down",
+     "artist": "NF"
+    },
+    {
+     "rank": 7,
+     "song": "Love.",
+     "artist": "Kendrick Lamar Featuring Zacari"
+    },
+    {
+     "rank": 8,
+     "song": "MotorSport",
+     "artist": "Migos, Nicki Minaj & Cardi B"
+    },
+    {
+     "rank": 9,
+     "song": "Him & I",
+     "artist": "G-Eazy & Halsey"
+    },
+    {
+     "rank": 10,
+     "song": "No Limit",
+     "artist": "G-Eazy Featuring A$AP Rocky & Cardi B"
+    },
+    {
+     "rank": 11,
+     "song": "I Fall Apart",
+     "artist": "Post Malone"
+    },
+    {
+     "rank": 12,
+     "song": "Bartier Cardi",
+     "artist": "Cardi B Featuring 21 Savage"
+    },
+    {
+     "rank": 13,
+     "song": "Gummo",
+     "artist": "6ix9ine"
+    },
+    {
+     "rank": 14,
+     "song": "All The Stars",
+     "artist": "Kendrick Lamar & SZA"
+    },
+    {
+     "rank": 15,
+     "song": "Sky Walker",
+     "artist": "Miguel Featuring Travis Scott"
+    },
+    {
+     "rank": 16,
+     "song": "Plain Jane",
+     "artist": "A$AP Ferg Featuring Nicki Minaj"
+    },
+    {
+     "rank": 17,
+     "song": "Gucci Gang",
+     "artist": "Lil Pump"
+    },
+    {
+     "rank": 18,
+     "song": "Outside Today",
+     "artist": "YoungBoy Never Broke Again"
+    },
+    {
+     "rank": 19,
+     "song": "I Get The Bag",
+     "artist": "Gucci Mane Featuring Migos"
+    },
+    {
+     "rank": 20,
+     "song": "River",
+     "artist": "Eminem Featuring Ed Sheeran"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20180214201520/https://pitchfork.com/reviews/best/tracks/",
+   "captured": "2018-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Confirmation",
+     "artist": "Westerman"
+    },
+    {
+     "rank": 2,
+     "song": "Catch It",
+     "artist": "Iceage"
+    },
+    {
+     "rank": 3,
+     "song": "Middle America",
+     "artist": "Stephen Malkmus and the Jicks"
+    },
+    {
+     "rank": 4,
+     "song": "Being Alive",
+     "artist": "Frankie Cosmos"
+    },
+    {
+     "rank": 5,
+     "song": "Rosebud",
+     "artist": "U.S. Girls"
+    },
+    {
+     "rank": 6,
+     "song": "Thanks 4 Nothing",
+     "artist": "Nilüfer Yanya"
+    },
+    {
+     "rank": 7,
+     "song": "No Wave [ft. Denzel Curry]",
+     "artist": "IDK"
+    },
+    {
+     "rank": 8,
+     "song": "Heaven’s Only Wishful",
+     "artist": "MorMor"
+    },
+    {
+     "rank": 9,
+     "song": "Baby I’m Bleeding",
+     "artist": "JPEGMAFIA"
+    },
+    {
+     "rank": 10,
+     "song": "T N Biscuits",
+     "artist": "Slowthai"
+    },
+    {
+     "rank": 11,
+     "song": "How Simple",
+     "artist": "Hop Along"
+    }
+   ]
+  },
+  {
+   "id": "beatport_top100",
+   "genre": "dance",
+   "label": "Beatport · Top 100 Tracks",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20180217104732/https://www.beatport.com/top-100",
+   "captured": "2018-02-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What a Bam",
+     "artist": "George Privatti & Guille Placencia"
+    },
+    {
+     "rank": 2,
+     "song": "Hidden Beauties",
+     "artist": "ANNA"
+    },
+    {
+     "rank": 3,
+     "song": "Insomnia",
+     "artist": "Andrew Meller"
+    },
+    {
+     "rank": 4,
+     "song": "Love Away",
+     "artist": "Mihalis Safras"
+    },
+    {
+     "rank": 5,
+     "song": "Smoke Everyday",
+     "artist": "Gary Caos"
+    },
+    {
+     "rank": 6,
+     "song": "Make My Day",
+     "artist": "Hazzaro"
+    },
+    {
+     "rank": 7,
+     "song": "The Groovy Cat (Extended Mix)",
+     "artist": "PAWSA"
+    },
+    {
+     "rank": 8,
+     "song": "Bipolar Star (Victor Ruiz Remix)",
+     "artist": "Olivier Giacomotto"
+    },
+    {
+     "rank": 9,
+     "song": "Prometheus",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 10,
+     "song": "Moxy",
+     "artist": "Darius Syrossian"
+    },
+    {
+     "rank": 11,
+     "song": "Reverie",
+     "artist": "Audiojack"
+    },
+    {
+     "rank": 12,
+     "song": "Planeta",
+     "artist": "ARTBAT"
+    },
+    {
+     "rank": 13,
+     "song": "Another Life",
+     "artist": "Spektre"
+    },
+    {
+     "rank": 14,
+     "song": "Ocean Drive",
+     "artist": "Bart Skils"
+    },
+    {
+     "rank": 15,
+     "song": "Black Beauty",
+     "artist": "Hidden Empire"
+    },
+    {
+     "rank": 16,
+     "song": "So Serious",
+     "artist": "Illyus & Barrientos"
+    },
+    {
+     "rank": 17,
+     "song": "Sand In Your Shoes",
+     "artist": "Dino Lenny & ARTBAT"
+    },
+    {
+     "rank": 18,
+     "song": "Fatima",
+     "artist": "Moonwalk"
+    },
+    {
+     "rank": 19,
+     "song": "Grooves On The Vinyl (Extended Mix)",
+     "artist": "Gorgon City"
+    },
+    {
+     "rank": 20,
+     "song": "Be Sharp Say Nowt",
+     "artist": "Patrick Topping"
+    }
+   ]
+  }
+ ]
+}

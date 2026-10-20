@@ -1,0 +1,221 @@
+{
+ "month": "2009-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20090512044452/http://hypem.com:80/popular",
+   "captured": "2009-05-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hooligans (Extended Mix)",
+     "artist": "Don Diablo & Example"
+    },
+    {
+     "rank": 2,
+     "song": "Lisztomania (Alex Metric Remix",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 3,
+     "song": "Let's Buy Your Friends (Disco Demons Re-Edit)",
+     "artist": "Justice vs. Boys Noize"
+    },
+    {
+     "rank": 4,
+     "song": "I Remember",
+     "artist": "deadmau5 & Kaskade"
+    },
+    {
+     "rank": 5,
+     "song": "Hooligans (Don Diablo's Drive-by Disco Mix)",
+     "artist": "Don Diablo & Example"
+    },
+    {
+     "rank": 6,
+     "song": "Kanye West - Diamonds (Ratatat Remix)",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 7,
+     "song": "Para De Gracinha (Sticky K Remix)",
+     "artist": "Crookers ft. MC Leka"
+    },
+    {
+     "rank": 8,
+     "song": "Hooligans (Spor Remix)",
+     "artist": "Don Diablo & Example"
+    },
+    {
+     "rank": 9,
+     "song": "Bulletproof",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 10,
+     "song": "Don Diablo & Example - Hooligans (Doorly's Dubstep Remix)",
+     "artist": "Don Diablo & Example"
+    },
+    {
+     "rank": 11,
+     "song": "TELEPOPMUSIK - GHOST GIRL REMIX",
+     "artist": "BLATTA & INESHA"
+    },
+    {
+     "rank": 12,
+     "song": "TalonsFrankmusikRemix)",
+     "artist": "BlocParty"
+    },
+    {
+     "rank": 13,
+     "song": "Back Up In This (Nadastrom Remix) (Master)",
+     "artist": "Designer Drugs"
+    },
+    {
+     "rank": 14,
+     "song": "Do You Want To (Erol Alkan Remix)",
+     "artist": "Franz Ferdinand"
+    },
+    {
+     "rank": 15,
+     "song": "Shoes (Green Velvet Remix)",
+     "artist": "Tiga"
+    },
+    {
+     "rank": 16,
+     "song": "American Boy (laZEBRA Re-Re-Edit)",
+     "artist": "la ZEBRA"
+    },
+    {
+     "rank": 17,
+     "song": "Off Our Backs (Pegase remix)",
+     "artist": "MEN"
+    },
+    {
+     "rank": 18,
+     "song": "Kids",
+     "artist": "Chiddy Bang"
+    },
+    {
+     "rank": 19,
+     "song": "The Girl And The Robot feat. Robyn (Kris Menace First Remix)",
+     "artist": "Royksopp"
+    }
+   ]
+  },
+  {
+   "id": "pitchfork_bnt",
+   "genre": "all",
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090516153454/http://pitchfork.com:80/reviews/best/tracks/",
+   "captured": "2009-05-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Version (Test Mixxx)",
+     "artist": "Patten"
+    },
+    {
+     "rank": 2,
+     "song": "Two Weeks",
+     "artist": "Grizzly Bear"
+    },
+    {
+     "rank": 3,
+     "song": "Moth's Wings",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 4,
+     "song": "I Want You to Know",
+     "artist": "Dinosaur Jr."
+    },
+    {
+     "rank": 5,
+     "song": "Velvet (Gang Gang Dance Remix)",
+     "artist": "The Big Pink"
+    },
+    {
+     "rank": 6,
+     "song": "Young Adult Friction",
+     "artist": "The Pains of Being Pure at Heart"
+    },
+    {
+     "rank": 7,
+     "song": "Lisztomania",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 8,
+     "song": "Raindrops",
+     "artist": "Basement Jaxx"
+    },
+    {
+     "rank": 9,
+     "song": "Freeway",
+     "artist": "Kurt Vile"
+    },
+    {
+     "rank": 10,
+     "song": "Stillness Is the Move",
+     "artist": "Dirty Projectors"
+    }
+   ]
+  },
+  {
+   "id": "blog_pigeonsandplanes",
+   "genre": "hip-hop",
+   "label": "Pigeons & Planes · Front page song posts (newest first, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20090501205215/http://www.pigeonsandplanes.com:80/",
+   "captured": "2009-05-01",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Champions",
+     "artist": "The Cool Kids"
+    },
+    {
+     "rank": 2,
+     "song": "Enjoy Ya Self V2",
+     "artist": "Skalah the BeatChild ft. Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Morgan Blu",
+     "artist": "Tanya Morgan Ft. Blu"
+    },
+    {
+     "rank": 4,
+     "song": "Superhuman",
+     "artist": "Frank Ramz"
+    },
+    {
+     "rank": 5,
+     "song": "Back Again\" + \"Too Late",
+     "artist": "Reflection Eternal"
+    },
+    {
+     "rank": 6,
+     "song": "Back Round",
+     "artist": "Wolfmother"
+    },
+    {
+     "rank": 7,
+     "song": "Be By Myself",
+     "artist": "Music Video! Asher Roth ft. Cee Lo"
+    },
+    {
+     "rank": 8,
+     "song": "Big Mouf",
+     "artist": "De La Soul"
+    }
+   ]
+  }
+ ]
+}
