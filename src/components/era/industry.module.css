@@ -1,10 +1,14 @@
 .wrap { display: grid; gap: 14px; max-width: 920px; }
 .sentence { font-family: var(--font-display); font-stretch: 74%; font-weight: 800; text-transform: uppercase; line-height: 1;
             font-size: clamp(22px, 3.4vw, 36px); margin: 0; text-wrap: balance; }
-.bar { display: flex; gap: 2px; height: 22px; width: 100%; }
-.seg { min-width: 3px; }
-.seg:first-child { border-radius: 4px 0 0 4px; }
-.seg:last-child { border-radius: 0 4px 4px 0; }
+.bar { display: block; height: 22px; width: 100%; }
+/* A 2px ground-coloured stroke is the gap between segments. */
+.rect { stroke: var(--ground); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.lead { fill: var(--signal); background: var(--signal); }
+.ink1 { fill: rgba(244,244,244,.62); background: rgba(244,244,244,.62); }
+.ink2 { fill: rgba(244,244,244,.4); background: rgba(244,244,244,.4); }
+.ink3 { fill: rgba(244,244,244,.24); background: rgba(244,244,244,.24); }
+.ink4 { fill: rgba(244,244,244,.14); background: rgba(244,244,244,.14); }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12px; color: var(--dim); }
 .key { display: inline-flex; align-items: center; gap: 7px; }
 .swatch { width: 10px; height: 10px; display: inline-block; }

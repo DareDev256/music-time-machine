@@ -1,8 +1,6 @@
 // A seven-segment date readout: lit digits over a faint layer of unlit segments,
 // so it reads as hardware (the time-circuit reference), not as a red font.
 
-import type { CSSProperties } from "react";
-
 export function segDate(iso: string | null | undefined): string {
   if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return "--.--.----";
   return `${iso.slice(5, 7)}.${iso.slice(8, 10)}.${iso.slice(0, 4)}`;
@@ -21,19 +19,18 @@ export function monthName(month: string): string {
 }
 
 export default function Readout({
-  label, value, tone = "signal", size = "lg", align = "end", style,
+  label, value, tone = "signal", size = "lg", align = "end",
 }: {
-  label: string; value: string; tone?: "signal" | "ink"; size?: "lg" | "md" | "sm"; align?: "start" | "end" | "inherit"; style?: CSSProperties;
+  label: string; value: string; tone?: "signal" | "ink"; size?: "lg" | "md" | "sm"; align?: "start" | "end" | "inherit";
 }) {
-  const fontSize = size === "lg" ? "clamp(26px, 5vw, 52px)" : size === "md" ? "clamp(18px, 3vw, 30px)" : "16px";
+  // No style attributes: the production CSP blocks them in server-rendered HTML. Classes only.
   const ghost = value.replace(/[0-9]/g, "8").replace(/-/g, "8");
   return (
-    <div style={{ display: "grid", gap: 4, justifyItems: align, ...style }}>
+    <div className={`readout readout-${align}`}>
       <span className="label">{label}</span>
       <span
-        className={`seg ${tone === "signal" ? "seg-signal" : "seg-ink"}`}
+        className={`seg seg-${size} ${tone === "signal" ? "seg-signal" : "seg-ink"}`}
         data-ghost={ghost}
-        style={{ fontSize }}
         aria-label={`${label} ${value}`}
       >
         {value}

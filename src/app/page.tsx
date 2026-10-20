@@ -17,7 +17,7 @@ export default async function Home({ searchParams }: { searchParams: Search }) {
     : null;
   return (
     <main>
-      <h1 style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>
+      <h1 className="sr-only">
         Was Playing: name a song and fly back to the week it was playing
       </h1>
       <Console initial={initial} freeze={Number.isFinite(freezeRaw) && freezeRaw >= 0 && freezeRaw <= 1 ? freezeRaw : undefined} />

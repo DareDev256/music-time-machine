@@ -55,6 +55,15 @@ a { color: inherit; text-decoration-color: var(--signal); text-underline-offset:
 .seg-signal { color: var(--signal); text-shadow: 0 0 18px var(--signal-glow); }
 .seg-ink { color: var(--ink); text-shadow: 0 0 14px rgba(255, 255, 255, 0.22); }
 
+.readout { display: grid; gap: 4px; }
+.readout-start { justify-items: start; }
+.readout-end { justify-items: end; }
+.readout-inherit { justify-items: inherit; }
+.seg-lg { font-size: clamp(26px, 5vw, 52px); }
+.seg-md { font-size: clamp(18px, 3vw, 30px); }
+.seg-sm { font-size: 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
 .tabular { font-variant-numeric: tabular-nums; }
 .gutter { padding-left: var(--gutter); padding-right: var(--gutter-r); }
 

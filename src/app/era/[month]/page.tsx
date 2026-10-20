@@ -161,7 +161,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
           ) : (
             <div className={s.cover}>
               <div className={s.sleeve}>
-                <span className="display" style={{ fontSize: 34 }}>{song ?? n1?.song}</span>
+                <span className={`display ${s.sleeveTitle}`}>{song ?? n1?.song}</span>
                 <span className="label">{artist ?? n1?.artist}</span>
               </div>
             </div>
@@ -181,10 +181,10 @@ export default async function EraPage({ params, searchParams }: { params: Params
                 {n1.art
                   // eslint-disable-next-line @next/next/no-img-element
                   ? <img src={art(n1.art, 600)!} alt={`${n1.song} cover`} loading="lazy" />
-                  : <div className={s.cover}><div className={s.sleeve}><span className="display" style={{ fontSize: 28 }}>{n1.song}</span></div></div>}
+                  : <div className={s.cover}><div className={s.sleeve}><span className={`display ${s.sleeveTitleSm}`}>{n1.song}</span></div></div>}
                 <span className="label">#1 on the Hot 100</span>
                 <p className={s.n1Title}>{n1.song}</p>
-                <span className={s.artist} style={{ fontSize: 12 }}>{n1.artist}</span>
+                <span className={`${s.artist} ${s.artistSm}`}>{n1.artist}</span>
                 <span className={s.run}>Week {n1.runWeek} of {n1.runLength} at #1</span>
               </div>
             )}
@@ -223,11 +223,11 @@ export default async function EraPage({ params, searchParams }: { params: Params
           </div>
           <div className={s.lanes}>
             {lanes.map((l) => (
-              <div key={l.lane} className={s.lane} style={isMine(l.artist) ? { background: "var(--signal)", color: "#000" } : undefined}>
-                <span className="label" style={isMine(l.artist) ? { color: "#000" } : undefined}>{l.label}</span>
+              <div key={l.lane} className={`${s.lane} ${isMine(l.artist) ? s.laneMine : ""}`}>
+                <span className="label">{l.label}</span>
                 <p className={s.laneTitle}>{l.song}</p>
-                <span className={s.laneBy} style={isMine(l.artist) ? { color: "#000" } : undefined}>{l.artist}</span>
-                <span className={s.laneDate} style={isMine(l.artist) ? { color: "#000" } : undefined}>Chart of {plainDate(l.date)}</span>
+                <span className={s.laneBy}>{l.artist}</span>
+                <span className={s.laneDate}>Chart of {plainDate(l.date)}</span>
               </div>
             ))}
           </div>

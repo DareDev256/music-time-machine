@@ -4,6 +4,7 @@
 // on desktop, copy the link or save the card.
 
 import { useState } from "react";
+import c from "./share.module.css";
 
 export default function ShareBar({
   line, replayUrl, storyUrl, wideUrl, fileName,
@@ -42,28 +43,20 @@ export default function ShareBar({
     }
   }
 
-  const btn: React.CSSProperties = {
-    font: "600 12px var(--font-mono)", letterSpacing: "0.2em", textTransform: "uppercase",
-    padding: "14px 16px", border: "1px solid var(--faint)", background: "transparent", color: "var(--ink)", cursor: "pointer",
-    textDecoration: "none", display: "inline-flex", alignItems: "center",
-  };
-
   return (
-    <div style={{ display: "grid", gap: 18 }}>
-      <p className="display" style={{ fontSize: "clamp(28px, 6vw, 64px)", margin: 0, textWrap: "balance" }}>
-        <span style={{ color: "var(--signal)" }}>{line.season}</span>
+    <div className={c.wrap}>
+      <p className={`display ${c.line}`}>
+        <span className={c.season}>{line.season}</span>
         {line.me && <> · {line.me}</>}
-        {line.world && <> · <span style={{ color: "var(--dim)" }}>{line.world}</span></>}
+        {line.world && <> · <span className={c.world}>{line.world}</span></>}
       </p>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        <button type="button" onClick={share} style={{ ...btn, background: "var(--signal)", color: "#000", borderColor: "var(--signal)" }}>
-          Share this era
-        </button>
-        <button type="button" onClick={copy} style={btn}>Copy the link</button>
-        <a href={storyUrl} download={`${fileName}-story.png`} style={btn}>Story card</a>
-        <a href={wideUrl} download={`${fileName}.png`} style={btn}>Wide card</a>
+      <div className={c.buttons}>
+        <button type="button" onClick={share} className={`${c.btn} ${c.primary}`}>Share this era</button>
+        <button type="button" onClick={copy} className={c.btn}>Copy the link</button>
+        <a href={storyUrl} download={`${fileName}-story.png`} className={c.btn}>Story card</a>
+        <a href={wideUrl} download={`${fileName}.png`} className={c.btn}>Wide card</a>
       </div>
-      <p className="label" aria-live="polite" style={{ minHeight: 14, margin: 0, wordBreak: "break-all" }}>
+      <p className={`label ${c.note}`} aria-live="polite">
         {note ?? "The link replays the flight back to this week."}
       </p>
     </div>

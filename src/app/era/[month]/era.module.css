@@ -89,3 +89,9 @@
   .laneTitle { font-size: 18px; }
   .section { padding-block: 28px; gap: 18px; }
 }
+
+.sleeveTitle { font-size: 34px; }
+.sleeveTitleSm { font-size: 28px; }
+.artistSm { font-size: 12px; }
+.laneMine { background: var(--signal); color: #000; }
+.laneMine :global(.label), .laneMine .laneBy, .laneMine .laneDate { color: #000; }
