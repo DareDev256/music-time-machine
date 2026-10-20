@@ -21,7 +21,7 @@ interface Destination { date: string; granularity: Granularity; song?: DatedSong
 
 const CHIPS: Array<{ label: string; q?: string; born?: boolean }> = [
   { label: "Cuz My Gear · 2012", q: "Cuz My Gear Chief Keef" },
-  { label: "Rolling in the Deep · 2011", q: "Rolling in the Deep Adele" },
+  { label: "Rolling in the Deep · 2011", q: "Rolling in the Deep Adele 2011" },
   { label: "The day you were born", born: true },
   { label: "Summer 1999", q: "summer 1999" },
 ];
@@ -31,6 +31,8 @@ const LAND_HOLD_MS = 2400;
 function eraUrl(d: Destination): string {
   const p = new URLSearchParams({ date: d.date });
   if (d.song) {
+    // The page lands on the visitor's era (`date`); the song's own first date travels separately.
+    if (d.song.date && d.song.dateSource) p.set("sd", d.song.date);
     p.set("song", d.song.song);
     p.set("artist", d.song.artist);
     if (d.song.dateSource) p.set("ds", d.song.dateSource);
@@ -94,7 +96,13 @@ export default function Console({
     return () => { live = false; };
   }, [dest]);
 
-  const launchSong = useCallback((song: DatedSong) => {
+  // The year a person remembers is the era they lived: "rolling in the deep 2011" lands in 2011 even
+  // though the single came out in November 2010. The release date stays on the page as a fact.
+  const launchSong = useCallback((song: DatedSong, remembered?: { date: string; granularity: Granularity } | null) => {
+    if (remembered && remembered.date.slice(0, 4) > song.date.slice(0, 4)) {
+      fly({ date: flightTarget(remembered.date, remembered.granularity), granularity: remembered.granularity, song });
+      return;
+    }
     fly({ date: flightTarget(song.date, song.granularity), granularity: song.granularity, song });
   }, [fly]);
 
@@ -104,6 +112,8 @@ export default function Console({
     setPhase("resolving");
     setMessage(null);
     const out = await resolveQuery(t, browserDeps());
+    const said = extractDateDetail(t);
+    const remembered = said && said.rest.trim() ? { date: said.date, granularity: said.granularity } : null;
     if (out.kind === "song") {
       if (out.needsPick) {
         // "1999" is both Prince's song and a year: offer both, never guess.
@@ -116,7 +126,7 @@ export default function Console({
           return;
         }
       }
-      launchSong(out.best);
+      launchSong(out.best, remembered);
     } else if (out.kind === "date") {
       fly({ date: flightTarget(out.date, out.granularity), granularity: out.granularity, label: out.label });
     } else {
@@ -223,7 +233,7 @@ export default function Console({
               </button>
             ))}
           </div>
-          <p className={s.src}>A song, an artist and a year, or a date. Charts from the Hot 100 since 1958; songs that were never on Spotify or Apple too.</p>
+          <p className={s.src}>A song, an artist and a year, or a date. Charts from the Hot 100 since 1958; YouTube and mixtape songs too.</p>
         </div>
       </div>
 

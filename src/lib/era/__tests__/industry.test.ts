@@ -1,17 +1,24 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
 import { industryFor } from "../data";
-import { industrySentence } from "@/components/era/Industry";
+import { industrySentence, industryItems } from "@/components/era/Industry";
 
 // Real public/era/industry.json (RIAA wholesale). Expected numbers come from the pipeline's own report.
 describe("industry", () => {
-  it("1999: physical, before streaming and downloads", () => {
+  it("1999: an all-physical year names its formats, not 'Physical 100%'", () => {
     const y = industryFor(1999)!;
     expect(y.top).toBe("physical");
-    expect(industrySentence(y)).toMatch(/^Physical formats were 100% of label revenue\. Streaming and downloads did not exist yet\.$/);
+    expect(industrySentence(y)).toBe("CDs were 88% of label revenue and cassettes 7%. Streaming and downloads did not exist yet.");
+    expect(industryItems(y).map((i) => i.label)).toContain("CDs");
   });
-  it("2012: downloads lead, CDs and streaming follow", () => {
-    expect(industrySentence(industryFor(2012)!)).toBe("Downloads were 45% of label revenue, CDs 30% and streaming 17%.");
+  it("1985: cassettes led", () => {
+    expect(industrySentence(industryFor(1985)!)).toMatch(/^Cassettes were 5\d% of label revenue, vinyl 3\d% and CDs \d+%\./);
+  });
+  it("2012: the sentence names only what the bar shows", () => {
+    const y = industryFor(2012)!;
+    expect(industrySentence(y)).toBe("Downloads were 45% of label revenue, physical formats 33% and streaming 17%.");
+    const labels = industryItems(y).map((i) => i.label.toLowerCase());
+    for (const word of ["downloads", "physical formats", "streaming"]) expect(labels).toContain(word);
   });
   it("2024: streaming leads", () => {
     const line = industrySentence(industryFor(2024)!);

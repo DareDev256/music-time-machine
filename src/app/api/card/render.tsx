@@ -5,7 +5,7 @@
 
 import type { ReactNode } from "react";
 import type { CardModel, DefaultModel } from "./model";
-import { fit, textWidth, truncate, upper, wrap, type Fit } from "./text";
+import { fit, textWidth, truncate, upper, wordsFit, wrap, type Fit } from "./text";
 
 const INK = "#f4f4f4";
 const DIM = "rgba(244,244,244,0.52)";
@@ -21,7 +21,7 @@ const SEG = "DSEG7";
 const LH = 0.9; // display line height
 const TRACK = -0.01; // display tracking, em
 const LABEL_TRACK = 0.28;
-const SOURCES = "BILLBOARD HOT 100 · ITUNES COVERS · INTERNET ARCHIVE";
+const SOURCES = "#1: BILLBOARD HOT 100 · COVER: ITUNES";
 
 export type CardImages = { numberOne: string | null };
 
@@ -123,20 +123,6 @@ function Gap({ min, rule = true }: { min: number; rule?: boolean }) {
   );
 }
 
-/** Where the #1 would be when the week is newer than the chart data: say how far the data runs. */
-function NoChart({ through, width, label, title, note }: { through: string; width: number; label: number; title: number; note: number }) {
-  const t = `${through.slice(5, 7)}.${through.slice(8, 10)}.${through.slice(0, 4)}`;
-  return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <Label text="Billboard Hot 100" size={label} />
-      <Box h={Math.round(label * 1.1)} />
-      <DisplayLine text="NOT IN THE DATA YET" size={title} width={width} color={DIM} />
-      <Box h={Math.round(label * 0.8)} />
-      <Label text={`Charts through ${t}`} size={note} tracking={0.16} width={width} />
-    </div>
-  );
-}
-
 /** The typeset sleeve drawn when a cover cannot be fetched: never an empty box. */
 function Sleeve({ size, song, artist }: { size: number; song: string; artist: string }) {
   const pad = Math.round(size * 0.1);
@@ -192,164 +178,165 @@ function Spine({ length, thickness, pad, start, end }: { length: number; thickne
   );
 }
 
-function SpineTitle({ season, rest, size, restSize, room }: { season: string; rest: string; size: number; restSize: number; room: number }) {
-  const sw = Math.ceil(textWidth(season, "display", size, TRACK));
-  const gap = Math.round(size * 0.5);
-  const restW = room - sw - gap;
+function SpineSeason({ season, size }: { season: string; size: number }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", width: room }}>
-      <div style={{ display: "flex", fontFamily: DISPLAY, fontWeight: 800, fontSize: size, lineHeight: 1, letterSpacing: `${TRACK}em`, color: INK, flexShrink: 0 }}>{season}</div>
-      {rest && restW > 60 ? <Box w={gap} /> : <None />}
-      {rest && restW > 60 ? <Label text={rest} size={restSize} tracking={0.2} width={restW} /> : <None />}
+    <div style={{ display: "flex", fontFamily: DISPLAY, fontWeight: 800, fontSize: size, lineHeight: 1, letterSpacing: `${TRACK}em`, color: INK, flexShrink: 0 }}>
+      {season}
     </div>
   );
 }
 
-function spineRest(m: CardModel): string {
-  if (m.anchor) return [m.anchor.song, m.anchor.artist].filter(Boolean).join(" · ");
-  return m.numberOne ? `THE #1 · ${m.numberOne.song} · ${m.numberOne.artist}` : "";
+// ── The statement ─────────────────────────────────────────────────────
+
+/** The two lines the card exists to say: "I WAS ON CHIEF KEEF & RIFF RAFF." / "THE WORLD WAS ON GOTYE." */
+export function statements(m: CardModel): { me: string; world: string } {
+  const end = (s: string) => (!s ? "" : /[.!?]$/.test(s) ? upper(s) : `${upper(s)}.`);
+  // Keep "&" with the name after it, so a line never ends on a bare ampersand.
+  const bind = (s: string) => s.replace(/ & /g, " &\u00A0");
+  return { me: bind(end(m.line.me)), world: bind(end(m.line.world)) };
 }
 
-function heroOf(m: CardModel) {
-  const hero = m.anchor ? upper(m.anchor.song) : m.numberOne ? upper(m.numberOne.song) : "NOT CHARTED YET";
-  const by = m.anchor ? m.anchor.artist : m.numberOne ? m.numberOne.artist : `THE HOT 100 DATA RUNS THROUGH ${m.through}`;
-  return { hero, by: by ?? "" };
+export interface HeroFit { size: number; me: number; world: number; height: number }
+const HERO_GAP = 0.2; // space between the two statements, em
+
+/** One shared size for both statements: the largest whose wrapped lines fit `room` px. */
+export function heroFit(me: string, world: string, width: number, room: number, max: number, min: number): HeroFit {
+  const at = (size: number): HeroFit => {
+    const a = wrap(me, "display", size, width, TRACK).length;
+    const b = world ? wrap(world, "display", size, width, TRACK).length : 0;
+    return { size, me: a, world: b, height: (a + b) * size * LH + (world ? size * HERO_GAP : 0) };
+  };
+  for (let size = max; size >= min; size -= 2) {
+    if (!wordsFit(me, "display", size, width, TRACK) || (world && !wordsFit(world, "display", size, width, TRACK))) continue;
+    const f = at(size);
+    if (f.height <= room) return f;
+  }
+  // Still too tall at the floor: clamp the lines that do not fit (Satori draws the ellipsis).
+  const f = at(min);
+  const lines = Math.max(2, Math.floor((room - (world ? min * HERO_GAP : 0)) / (min * LH)));
+  const a = Math.min(f.me, Math.max(1, lines - Math.min(f.world, 1)));
+  const b = Math.min(f.world, Math.max(0, lines - a));
+  return { size: min, me: a, world: b, height: (a + b) * min * LH + (world ? min * HERO_GAP : 0) };
 }
 
-/** Both contrast lines share one size, the largest at which each fits on one line (two at the floor). */
-function contrastFit(me: string, world: string, width: number, max: number, min: number) {
-  let size = max;
-  const step = Math.max(1, Math.round((max - min) / 30));
-  const oneLine = (t: string, s: number) => !t || wrap(t, "display", s, width, TRACK).length === 1;
-  while (size > min && !(oneLine(me, size) && oneLine(world, size))) size -= step;
-  size = Math.max(min, size);
-  const lines = (t: string) => (t ? Math.min(2, wrap(t, "display", size, width, TRACK).length) : 0);
-  return { size, me: { size, lines: lines(me), clamp: lines(me) }, world: { size, lines: lines(world), clamp: lines(world) } };
+/** Each statement on one line, at the largest size where both fit; null when none down to `min` does. */
+function oneLineFit(me: string, world: string, width: number, max: number, min: number): HeroFit | null {
+  for (let size = max; size >= min; size -= 2) {
+    const ok = (t: string) => !t || wrap(t, "display", size, width, TRACK).length === 1;
+    if (ok(me) && ok(world)) return { size, me: 1, world: world ? 1 : 0, height: (world ? 2 : 1) * size * LH + (world ? size * HERO_GAP : 0) };
+  }
+  return null;
+}
+
+function Hero({ me, world, f, width }: { me: string; world: string; f: HeroFit; width: number }) {
+  const text = { display: "block" as const, width, fontFamily: DISPLAY, fontWeight: 800, fontSize: f.size, lineHeight: LH, letterSpacing: `${TRACK}em` };
+  return (
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ ...text, color: INK, lineClamp: Math.max(1, f.me) }}>{me}</div>
+      {world && f.world ? <Box h={Math.round(f.size * HERO_GAP)} /> : <None />}
+      {world && f.world ? <div style={{ ...text, color: DIM, lineClamp: f.world }}>{world}</div> : <None />}
+    </div>
+  );
+}
+
+/** The Hot 100 #1 as a small stamp: a framed cover and one line. */
+function Stamp({ m, cover, size, frame, line, text, width }: {
+  m: CardModel; cover: string | null; size: number; frame: number; line: number; text: number; width: number;
+}) {
+  const tr = 0.04;
+  // Satori drops spaces at the edge of a text box, so segments are separated by boxes, not spaces.
+  const space = Math.round(text * 0.6);
+  const seg = (t: string, color: string, weight = 400) => (
+    <div style={{ display: "flex", fontFamily: MONO, fontWeight: weight, fontSize: text, lineHeight: 1, letterSpacing: `${tr}em`, color, whiteSpace: "nowrap", flexShrink: 0 }}>{t}</div>
+  );
+  if (!m.numberOne) {
+    const t = `${m.through.slice(5, 7)}.${m.through.slice(8, 10)}.${m.through.slice(0, 4)}`;
+    return <div style={{ display: "flex" }}>{seg(truncate(`THE #1 THAT WEEK IS NOT IN THE CHART DATA YET · CHARTS THROUGH ${t}`, "mono", text, width, tr), DIM)}</div>;
+  }
+  const n = m.numberOne;
+  const outer = size + 2 * frame + 2 * line;
+  const gap = Math.round(text * 1.1);
+  const head = m.anchor ? "THE #1 WAS" : "HOT 100 #1";
+  const tail = `· ${n.run}`;
+  const fixedW = textWidth(head, "mono", text, tr) + textWidth(tail, "mono", text, tr) + 2 * space;
+  const title = m.anchor ? truncate(upper(n.song), "mono", text, Math.max(0, width - outer - gap - fixedW), tr) : "";
+  return (
+    <div style={{ display: "flex", alignItems: "center", width }}>
+      <Cover src={cover} size={size} frame={frame} line={line} song={n.song} artist={n.artist} />
+      <Box w={gap} />
+      {seg(head, DIM)}
+      <Box w={space} />
+      {title ? seg(title, INK, 600) : <None />}
+      {title ? <Box w={space} /> : <None />}
+      {seg(tail, RED)}
+    </div>
+  );
 }
 
 // ── Story 1080×1920 ───────────────────────────────────────────────────
 
+const STORY = { W: 1080, H: 1920, SP: 100, PY: 72, X0: 160, COL: 856 };
+
+/** Sizes for the story card, exported so tests can hold the hierarchy: the statement outranks the title. */
+export function storyMetrics(m: CardModel) {
+  const colW = STORY.COL, inner = STORY.H - 2 * STORY.PY;
+  const { me, world } = statements(m);
+  const title = m.anchor ? upper(m.anchor.song) : "";
+  const by = m.anchor?.artist ? upper(m.anchor.artist) : "";
+  const byLines = by ? Math.min(2, wrap(by, "mono", 24, colW, 0.12).length) : 0;
+  const titleExtra = title ? 44 + 12 + byLines * 24 * 1.25 : 0;
+  const ledH = 120 + (m.dateNote ? 18 + 20 : 0);
+  const stampH = m.numberOne ? 100 + 2 * 6 + 3 : 20;
+  const footH = 14 + 14 + 22;
+  const gaps = 2 * 56 + 1 + 2 * 48 + 1 + 40;
+  const base = inner - ledH - stampH - footH - gaps - titleExtra;
+  // The statement first, leaving room for at least a one-line title...
+  const hero = heroFit(me, world, colW, Math.min(base - (title ? 72 : 0), 980), 192, 64);
+  // ...then the title takes what is left, up to about 0.6 of the statement so it never competes.
+  let tFit: Fit | null = null;
+  if (title) {
+    const max = Math.max(56, Math.min(140, Math.round(hero.size * 0.62)));
+    const spec = { face: "display" as const, width: colW, maxLines: 3, max, min: 52, lineHeight: LH, tracking: TRACK };
+    const room = Math.max(52, base - hero.height);
+    const many = fit(title, { ...spec, maxHeight: room });
+    const one = fit(title, { ...spec, maxLines: 1, maxHeight: room });
+    // A title on one line reads faster; take it unless it costs more than 15% of the size.
+    tFit = one.lines === 1 && wrap(title, "display", one.size, colW, TRACK).length === 1 && one.size >= many.size * 0.85 ? one : many;
+  }
+  return { colW, inner, me, world, hero, title, tFit, by };
+}
+
 export function StoryCard({ m, images }: { m: CardModel; images: CardImages }) {
-  const W = 1080, H = 1920, SP = 100, PY = 72;
-  const x0 = SP + 60, colW = W - x0 - 64, inner = H - 2 * PY;
-  const label = 22, minGap = 26;
-  const { hero, by } = heroOf(m);
-  const artistSize = 26, artistLH = 1.25;
-  const artistLines = by ? Math.min(2, wrap(upper(by), "mono", artistSize, colW, 0.12).length) : 0;
-
-  const showContrast = Boolean(m.anchor && m.line.me);
-  const me = upper(m.line.me), world = upper(m.line.world);
-  const c = contrastFit(me, world, colW, 72, 40);
-  const contrastH = showContrast ? label + 18 + c.me.lines * c.size * 0.95 + (world ? 10 + c.world.lines * c.size * 0.95 : 0) : 0;
-
-  const COVER = 300, FRAME = 16, LINE = 2;
-  const coverOuter = COVER + 2 * FRAME + 2 * LINE;
-  const n1H = m.numberOne ? label + 24 + coverOuter : m.anchor ? label + 24 + 56 + 18 + 20 : 0;
-  const ROW = 10 + 34 + 8 + 20 + 10 + 1;
-  const heatH = label + 10 + (m.heat.length ? m.heat.length * ROW : 44);
-  const topH = 24, readH = label + 20 + 120, footH = 16 + 14 + 28;
-  const gaps = 2 + (m.numberOne || m.anchor ? 1 : 0) + (showContrast ? 1 : 0) + 1; // ruled gaps between sections
-  const fixed = topH + readH + (label + 22 + 26 + artistLines * artistSize * artistLH) + n1H + contrastH + heatH + footH;
-  const titleRoom = Math.min(440, inner - fixed - gaps * minGap - minGap);
-  const tFit = fit(hero, { face: "display", width: colW, maxHeight: titleRoom, maxLines: 6, max: 168, min: 56, lineHeight: LH, tracking: TRACK });
-
-  const n1W = colW - coverOuter - 36;
-  const n1Title = m.numberOne ? upper(m.numberOne.song) : "";
-  const n1Fit = fit(n1Title, { face: "display", width: n1W, maxHeight: 214, maxLines: 4, max: 84, min: 36, lineHeight: LH, tracking: TRACK });
-
-  const spineRoom = H - 2 * PY - wordmarkWidth(20) - 60;
-
+  const { W, H, SP, PY, X0 } = STORY;
+  const { colW, inner, me, world, hero, title, tFit, by } = storyMetrics(m);
   return (
     <div style={{ display: "flex", position: "relative", width: W, height: H, background: "#000", color: INK, fontFamily: MONO }}>
-      <Spine length={H} thickness={SP} pad={PY}
-        start={<SpineTitle season={m.season} rest={spineRest(m)} size={50} restSize={20} room={spineRoom} />}
-        end={<Wordmark size={20} color={DIM} />} />
+      <Spine length={H} thickness={SP} pad={PY} start={<SpineSeason season={m.season} size={50} />} end={<Wordmark size={20} color={DIM} />} />
 
-      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: x0, top: PY, width: colW, height: inner }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: topH }}>
-          <Wordmark size={24} />
-          <Label text={`ERA ${m.era}`} size={22} />
-        </div>
-        <Gap min={minGap} />
+      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: X0, top: PY, width: colW, height: inner }}>
+        <Readout text={m.readout} size={120} />
+        {m.dateNote ? <Box h={18} /> : <None />}
+        {m.dateNote ? <Label text={m.dateNote} size={20} tracking={0.2} width={colW} /> : <None />}
+        <Gap min={2 * 56 + 1} />
 
-        {/* destination readout */}
+        <Hero me={me} world={world} f={hero} width={colW} />
+        {tFit ? <Box h={44} /> : <None />}
+        {tFit ? <Display text={title} f={tFit} width={colW} /> : <None />}
+        {tFit ? <Box h={Math.round(12 + tFit.size * 0.1)} /> : <None />}
+        {tFit && by ? <MonoBlock text={by} size={24} width={colW} lines={2} /> : <None />}
+        <Gap min={2 * 48 + 1} />
+
+        <Stamp m={m} cover={images.numberOne} size={100} frame={6} line={1.5} text={20} width={colW} />
+        <Gap min={40} rule={false} />
+
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <LabelRow left="Destination" right={m.dateNote} size={label} width={colW} />
-          <Box h={20} />
-          <Readout text={m.readout} size={120} />
-        </div>
-        <Gap min={minGap} />
-
-        {/* what you were playing */}
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Label text={m.anchor ? "I was playing" : `The #1 was · ${m.season}`} size={label} />
-          <Box h={22} />
-          <Display text={hero} f={tFit} width={colW} />
-          <Box h={Math.round(18 + tFit.size * 0.1)} />
-          {by ? <MonoBlock text={by} size={artistSize} width={colW} lines={2} lh={artistLH} /> : <None />}
-        </div>
-
-        {m.numberOne ? <Gap min={minGap} /> : <None />}
-        {m.numberOne ? (
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <LabelRow left={m.anchor ? "The #1 was · Hot 100" : "Billboard Hot 100"} right={m.numberOne.run} size={label} width={colW} rightColor={RED} rightTracking={0.2} />
-            <Box h={24} />
-            <div style={{ display: "flex" }}>
-              <Cover src={images.numberOne} size={COVER} frame={FRAME} line={LINE} song={m.numberOne.song} artist={m.numberOne.artist} />
-              <Box w={36} />
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: n1W, paddingTop: FRAME - 4, paddingBottom: FRAME }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  {m.anchor ? <Display text={n1Title} f={n1Fit} width={n1W} /> : <None />}
-                  {m.anchor ? <Box h={Math.round(14 + n1Fit.size * 0.1)} /> : <None />}
-                  {m.anchor ? <MonoBlock text={m.numberOne.artist} size={22} width={n1W} lines={2} /> : <None />}
-                </div>
-                <Label text={`Chart dated ${m.numberOne.chartDate}`} size={20} tracking={0.16} width={n1W} />
-              </div>
-            </div>
-          </div>
-        ) : <None />}
-
-        {!m.numberOne && m.anchor ? <Gap min={minGap} /> : <None />}
-        {!m.numberOne && m.anchor ? <NoChart through={m.through} width={colW} label={label} title={56} note={20} /> : <None />}
-
-        {showContrast ? <Gap min={minGap} /> : <None />}
-        {showContrast ? (
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <Label text={m.season} size={label} color={RED} />
-            <Box h={18} />
-            <div style={{ display: "block", width: colW, fontFamily: DISPLAY, fontWeight: 800, fontSize: c.size, lineHeight: 0.95, letterSpacing: `${TRACK}em`, lineClamp: 2 }}>{me}</div>
-            {world ? <Box h={10} /> : <None />}
-            {world ? <div style={{ display: "block", width: colW, fontFamily: DISPLAY, fontWeight: 800, fontSize: c.size, lineHeight: 0.95, letterSpacing: `${TRACK}em`, color: DIM, lineClamp: 2 }}>{world}</div> : <None />}
-          </div>
-        ) : <None />}
-
-        <Gap min={minGap} />
-        {/* off the charts */}
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <LabelRow left="Off the charts" right={m.heatNote} size={label} rightSize={18} width={colW} />
-          <Box h={10} />
-          {m.heat.length ? m.heat.map((h, i) => (
-            <div key={i} style={{ display: "flex", flexDirection: "column", paddingTop: 10, paddingBottom: 10, borderTop: `1px solid ${i ? FAINT : "rgba(0,0,0,0)"}` }}>
-              <DisplayLine text={upper(h.song)} size={34} width={colW} />
-              <Box h={8} />
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Label text={h.artist} size={20} tracking={0.12} width={colW - labelWidth(h.source, 20, 0.08) - 32} />
-                <Label text={h.source} size={20} tracking={0.08} />
-              </div>
-            </div>
-          )) : (
-            <div style={{ display: "flex", paddingTop: 12, height: 44 }}>
-              <Label text="No archived capture for this month" size={22} tracking={0.16} />
-            </div>
-          )}
-        </div>
-
-        <Gap min={minGap} rule={false} />
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Label text={SOURCES} size={16} tracking={0.12} width={colW} />
+          <Label text={SOURCES} size={14} tracking={0.12} width={colW} />
           <Box h={14} />
-          <div style={{ display: "flex", fontFamily: MONO, fontWeight: 600, fontSize: 28, lineHeight: 1, letterSpacing: "0.06em", color: INK }}>
-            {truncate(m.url, "mono", 28, colW, 0.06)}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <Wordmark size={18} />
+            <div style={{ display: "flex", fontFamily: MONO, fontSize: 22, lineHeight: 1, letterSpacing: "0.04em", color: INK }}>
+              {truncate(m.url, "mono", 22, colW - wordmarkWidth(18) - 40, 0.04)}
+            </div>
           </div>
         </div>
       </div>
@@ -359,109 +346,53 @@ export function StoryCard({ m, images }: { m: CardModel; images: CardImages }) {
 
 // ── Wide 1200×630 ─────────────────────────────────────────────────────
 
+const WIDE = { W: 1200, H: 630, SP: 64, PY: 40, X0: 104, COL: 1056 };
+
+export function wideMetrics(m: CardModel) {
+  const colW = WIDE.COL;
+  const { me, world } = statements(m);
+  const hero = oneLineFit(me, world, colW, 104, 44) ?? heroFit(me, world, colW, 230, 64, 30);
+  const title = m.anchor ? upper(m.anchor.song) : "";
+  let tSize = 52;
+  while (title && tSize > 28 && wrap(title, "display", tSize, colW, TRACK).length > 1) tSize -= 2;
+  return { colW, me, world, hero, title, tSize };
+}
+
 export function WideCard({ m, images }: { m: CardModel; images: CardImages }) {
-  const W = 1200, H = 630, SP = 64, PY = 36;
-  const x0 = SP + 40, inner = H - 2 * PY;
-  const L = 596, G = 44, R = W - x0 - 40 - L - G;
-  const label = 13, minGap = 14;
-  const { hero, by } = heroOf(m);
-
-  const showContrast = Boolean(m.anchor && m.line.me);
-  const me = upper(m.line.me), world = upper(m.line.world);
-  const c = contrastFit(me, world, L, 36, 22);
-  const contrastH = showContrast ? 13 + 10 + 2 * 36 : 0;
-  const fixedL = 14 + (13 + 10 + 80) + (13 + 10 + 12 + 16) + contrastH + 16 + 4 * minGap + 14;
-  const tFit = fit(hero, { face: "display", width: L, maxHeight: Math.min(200, inner - fixedL), maxLines: 4, max: 112, min: 32, lineHeight: LH, tracking: TRACK });
-
-  const COVER = 176, FRAME = 10, LINE = 1.5;
-  const coverOuter = COVER + 2 * FRAME + 2 * LINE;
-  const n1W = R - coverOuter - 18;
-  const n1Title = m.numberOne ? upper(m.numberOne.song) : "";
-  const n1Fit = fit(n1Title, { face: "display", width: n1W, maxHeight: 112, maxLines: 4, max: 44, min: 18, lineHeight: LH, tracking: TRACK });
-  const spineRoom = H - 2 * PY - wordmarkWidth(11) - 30;
-
+  const { W, H, SP, PY, X0 } = WIDE;
+  const inner = H - 2 * PY;
+  const { colW, me, world, hero, title, tSize } = wideMetrics(m);
+  const urlSize = 15;
+  const urlW = Math.min(colW * 0.42, Math.ceil(textWidth(m.url, "mono", urlSize, 0.04) * 1.04) + 2);
   return (
     <div style={{ display: "flex", position: "relative", width: W, height: H, background: "#000", color: INK, fontFamily: MONO }}>
-      <Spine length={H} thickness={SP} pad={PY}
-        start={<SpineTitle season={m.season} rest={spineRest(m)} size={28} restSize={11} room={spineRoom} />}
-        end={<Wordmark size={11} color={DIM} />} />
+      <Spine length={H} thickness={SP} pad={PY} start={<SpineSeason season={m.season} size={28} />} end={<Wordmark size={11} color={DIM} />} />
 
-      {/* left: you */}
-      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: x0, top: PY, width: L, height: inner }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: 14 }}>
-          <Wordmark size={14} />
-          <Label text={`ERA ${m.era}`} size={13} />
+      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: X0, top: PY, width: colW, height: inner }}>
+        <div style={{ display: "flex", alignItems: "flex-end" }}>
+          <Readout text={m.readout} size={60} />
+          {m.dateNote ? <Box w={28} /> : <None />}
+          {m.dateNote ? <Label text={m.dateNote} size={13} tracking={0.2} width={colW - 480} /> : <None />}
         </div>
-        <Gap min={minGap + 6} rule={false} />
-        <LabelRow left="Destination" right={m.dateNote} size={label} width={L} />
-        <Box h={10} />
-        <Readout text={m.readout} size={80} />
-        <Gap min={minGap} />
-        <Label text={m.anchor ? "I was playing" : `The #1 was · ${m.season}`} size={label} />
-        <Box h={10} />
-        <Display text={hero} f={tFit} width={L} />
-        <Box h={Math.round(10 + tFit.size * 0.1)} />
-        {by ? <Label text={by} size={16} tracking={0.12} width={L} /> : <None />}
-        {showContrast ? <Gap min={minGap} /> : <Gap min={minGap} rule={false} />}
-        {showContrast ? (
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <Label text={m.season} size={13} color={RED} />
-            <Box h={10} />
-            <DisplayLine text={me} size={c.size} width={L} />
-            {world ? <Box h={6} /> : <None />}
-            {world ? <DisplayLine text={world} size={c.size} width={L} color={DIM} /> : <None />}
-          </div>
-        ) : <None />}
-        {showContrast ? <Gap min={minGap} rule={false} /> : <None />}
-        <div style={{ display: "flex", fontFamily: MONO, fontWeight: 600, fontSize: 16, lineHeight: 1, letterSpacing: "0.06em" }}>
-          {truncate(m.url, "mono", 16, L, 0.06)}
-        </div>
-      </div>
+        <Gap min={2 * 20 + 1} />
 
-      <div style={{ display: "flex", position: "absolute", left: x0 + L + G / 2, top: PY, width: 1, height: inner, background: FAINT }} />
+        <Hero me={me} world={world} f={hero} width={colW} />
+        {title ? <Box h={22} /> : <None />}
+        {title ? <DisplayLine text={title} size={tSize} width={colW} /> : <None />}
+        {title && m.anchor?.artist ? <Box h={10} /> : <None />}
+        {title && m.anchor?.artist ? <Label text={m.anchor.artist} size={15} tracking={0.12} width={colW} /> : <None />}
+        <Gap min={2 * 20 + 1} />
 
-      {/* right: the world */}
-      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: x0 + L + G, top: PY, width: R, height: inner }}>
-        {m.numberOne ? (
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <LabelRow left={m.anchor ? "The #1 was · Hot 100" : "Billboard Hot 100"} right={m.numberOne.run.replace("WEEK", "WK")} size={label} width={R} rightColor={RED} />
-            <Box h={14} />
-            <div style={{ display: "flex" }}>
-              <Cover src={images.numberOne} size={COVER} frame={FRAME} line={LINE} song={m.numberOne.song} artist={m.numberOne.artist} />
-              <Box w={18} />
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: n1W, paddingTop: FRAME - 2, paddingBottom: FRAME }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  {m.anchor ? <Display text={n1Title} f={n1Fit} width={n1W} /> : <None />}
-                  {m.anchor ? <Box h={Math.round(8 + n1Fit.size * 0.1)} /> : <None />}
-                  {m.anchor ? <MonoBlock text={m.numberOne.artist} size={12} width={n1W} lines={2} tracking={0.1} lh={1.3} /> : <None />}
-                </div>
-                <Label text={`Chart dated ${m.numberOne.chartDate}`} size={11} tracking={0.12} width={n1W} />
-              </div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <Stamp m={m} cover={images.numberOne} size={60} frame={5} line={1.5} text={13} width={colW - urlW - 32} />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", width: urlW }}>
+            <Label text={SOURCES} size={9} tracking={0.08} width={urlW} align="right" />
+            <Box h={8} />
+            <div style={{ display: "flex", fontFamily: MONO, fontSize: urlSize, lineHeight: 1, letterSpacing: "0.04em", color: INK }}>
+              {truncate(m.url, "mono", urlSize, urlW, 0.04)}
             </div>
           </div>
-        ) : <None />}
-        {!m.numberOne ? <NoChart through={m.through} width={R} label={label} title={36} note={11} /> : <None />}
-        <Gap min={2 * minGap + 8} />
-
-        <LabelRow left="Off the charts" right={m.heatNote ? m.heatNote.replace("INTERNET ARCHIVE CAPTURES · ", "WAYBACK · ") : null} size={label} rightSize={11} rightTracking={0.12} width={R} />
-        <Box h={4} />
-        {m.heat.length ? m.heat.map((h, i) => (
-          <div key={i} style={{ display: "flex", flexDirection: "column", paddingTop: 8, paddingBottom: 8, borderTop: `1px solid ${i ? FAINT : "rgba(0,0,0,0)"}` }}>
-            <DisplayLine text={upper(h.song)} size={24} width={R} />
-            <Box h={5} />
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Label text={h.artist} size={11} tracking={0.1} width={R - labelWidth(h.source, 11, 0.04) - 16} />
-              <Label text={h.source} size={11} tracking={0.04} />
-            </div>
-          </div>
-        )) : (
-          <div style={{ display: "flex", paddingTop: 10 }}>
-            <Label text="No archived capture for this month" size={12} tracking={0.12} />
-          </div>
-        )}
-
-        <Gap min={minGap} rule={false} />
-        <Label text={SOURCES} size={10} tracking={0.08} width={R} />
+        </div>
       </div>
     </div>
   );

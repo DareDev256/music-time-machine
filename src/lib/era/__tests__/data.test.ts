@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { weekNearest, lanesOn, heatFor, numberOneOn, indexRow, indexKey, chartsThrough, weeksInMonth } from "../data";
+import { weekNearest, lanesOn, heatFor, numberOneOn, indexRow, indexKey, chartsThrough, weeksInMonth, redditFor, heatMonthSpan } from "../data";
 
 // These run against the real shards in public/era/: they prove the pipelines' output, not a fixture.
 
@@ -83,5 +83,26 @@ describe("chartsThrough / weeksInMonth", () => {
   });
   it("lists a month's issue weeks", () => {
     expect(weeksInMonth("2012-04")).toEqual(["2012-04-07", "2012-04-14", "2012-04-21", "2012-04-28"]);
+  });
+});
+
+describe("redditFor / heatMonthSpan", () => {
+  it("is null for a month with no file and for junk", () => {
+    expect(redditFor("1975-01")).toBeNull();
+    expect(redditFor("nope")).toBeNull();
+  });
+  it("returns ranked [FRESH] rows with a thread link for a crawled month", () => {
+    const r = redditFor("2012-05");
+    if (!r) return; // the Reddit crawl may not have reached this month on a fresh checkout
+    for (const src of r) {
+      expect(src.rows.length).toBeGreaterThanOrEqual(5);
+      expect(src.rows[0].url).toMatch(/^https:\/\/www\.reddit\.com\/r\//);
+      for (let i = 1; i < src.rows.length; i++) expect(src.rows[i].score).toBeLessThanOrEqual(src.rows[i - 1].score);
+    }
+  });
+  it("reads the off-chart span from the files, not from a summary", () => {
+    const span = heatMonthSpan()!;
+    expect(span[0] <= "2010-01").toBe(true);
+    expect(span[1] >= "2014-12").toBe(true);
   });
 });

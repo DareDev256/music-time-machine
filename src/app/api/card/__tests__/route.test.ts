@@ -6,9 +6,9 @@ import { NextRequest } from "next/server";
 import { GET } from "../route";
 import { cleanText, parseCardParams, FIRST_CHART_WEEK, MAX_TEXT } from "../params";
 import { coverData, clearCoverMemo } from "../covers";
-import { buildCard, offChart } from "../model";
+import { buildCard } from "../model";
+import { storyMetrics, wideMetrics, statements } from "../render";
 import { fit, wrap } from "../text";
-import { heatFor } from "@/lib/era/data";
 
 const ctx = { params: Promise.resolve({}) };
 let ip = 1;
@@ -80,16 +80,36 @@ describe("text fitting", () => {
   });
 });
 
-describe("off-chart rows", () => {
-  it("leads with the anchor artist's own archived rows, labelled by source", () => {
-    const rows = offChart(heatFor("2012-04"), "Chief Keef & Riff Raff", { song: "Somebody That I Used to Know" }, 3);
-    expect(rows.length).toBeGreaterThan(0);
-    expect(rows.length).toBeLessThanOrEqual(3);
-    for (const r of rows) expect(r.source).toMatch(/^(HOTNEWHIPHOP|HYPE MACHINE|BILLBOARD)/);
+describe("card hierarchy", () => {
+  const gear = buildCard({ song: "Cuz My Gear", artist: "Chief Keef & Riff Raff", date: "2012-04-28", clamped: false });
+
+  it("says the contrast as two sentences", () => {
+    const { me, world } = statements(gear);
+    expect(me.replace(/\u00A0/g, " ")).toBe("I WAS ON CHIEF KEEF & RIFF RAFF.");
+    expect(world).toBe("THE WORLD WAS ON GOTYE.");
+    expect(statements(buildCard({ song: "Rolling in the Deep", artist: "Adele", date: "2011-05-21", clamped: false })).world).toBe("SO WAS EVERYONE.");
   });
-  it("is empty for a month the crawl never covered", () => {
-    expect(offChart(heatFor("1999-07"), "TLC", null, 3)).toEqual([]);
-    expect(buildCard({ song: null, artist: null, date: "1999-07-10", clamped: false }, 3).heat).toEqual([]);
+  it("on the story card the statement is the hero, well above the song title", () => {
+    const s = storyMetrics(gear);
+    expect(s.hero.size).toBeGreaterThanOrEqual(150);
+    expect(s.hero.size).toBeGreaterThan(s.tFit!.size * 1.4);
+    // Readable on a 360 px wide phone preview: a third of the size is still over 48 px.
+    expect(s.hero.size / 3).toBeGreaterThan(48);
+  });
+  it("never leaves a bare ampersand at the end of a hero line", () => {
+    const s = storyMetrics(gear);
+    for (const l of wrap(s.me, "display", s.hero.size, s.colW, -0.01)) expect(l.endsWith("&")).toBe(false);
+  });
+  it("on the wide card each statement holds one line, larger than the title", () => {
+    const w = wideMetrics(gear);
+    expect([w.hero.me, w.hero.world]).toEqual([1, 1]);
+    expect(w.hero.size).toBeGreaterThan(w.tSize);
+  });
+  it("never splits a word to make the statement bigger", () => {
+    const adele = storyMetrics(buildCard({ song: "Rolling in the Deep", artist: "Adele", date: "2011-05-21", clamped: false }));
+    for (const l of wrap(adele.world, "display", adele.hero.size, adele.colW, -0.01)) expect(["SO WAS", "EVERYONE.", "SO WAS EVERYONE."]).toContain(l);
+    // A short statement leaves room, and the title takes it without overtaking the statement.
+    expect(adele.tFit!.size).toBeLessThan(adele.hero.size * 0.7);
   });
 });
 
@@ -161,11 +181,14 @@ describe("GET /api/card", () => {
   }, 60_000);
 
   it.each([
+    ["card2-story-adele", "?song=Rolling%20in%20the%20Deep&artist=Adele&date=2011-05-21&format=story", 1080, 1920],
+    ["card2-story-dirtbag", "?song=Teenage%20Dirtbag&artist=Wheatus&date=2000-09-02&format=story", 1080, 1920],
     ["edge-maxlen-story", `?song=${encodeURIComponent("Wake Me Up Before You Go-Go Remastered Extended Twelve Inch Version Featuring Absolutely Everyone Who Was There In 1984")}&artist=${encodeURIComponent("The Extraordinarily Long Named Orchestra and Chorus of the Royal Philharmonic Society Featuring Special Guests Galore")}&date=1985-01-05&format=story`, 1080, 1920],
     ["edge-maxlen-wide", `?song=${encodeURIComponent("Wake Me Up Before You Go-Go Remastered Extended Twelve Inch Version Featuring Absolutely Everyone Who Was There In 1984")}&artist=${encodeURIComponent("The Extraordinarily Long Named Orchestra and Chorus of the Royal Philharmonic Society Featuring Special Guests Galore")}&date=1985-01-05&format=wide`, 1200, 630],
     ["edge-dateonly-story", "?date=1999-07-10&format=story", 1080, 1920],
     ["edge-dateonly-wide", "?date=1999-07-10&format=wide", 1200, 630],
     ["edge-1950-story", "?song=Mona%20Lisa&artist=Nat%20King%20Cole&date=1950-06-01&format=story", 1080, 1920],
+    ["edge-pastdata-story", "?song=New%20Song&artist=Someone&date=2026-10-15&format=story", 1080, 1920],
     ["edge-pastdata-wide", "?song=New%20Song&artist=Someone&date=2026-10-15&format=wide", 1200, 630],
     ["edge-default-story", "?format=story", 1080, 1920],
   ])("renders the %s edge case", async (name, qs, w, h) => {

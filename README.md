@@ -27,7 +27,7 @@
 
 ## What it does
 
-Type `cuz my gear chief keef`. Chief Keef and Riff Raff's "Cuz My Gear" was never on Apple Music; it went up on YouTube on 28 April 2012 and onto a DatPiff tape three weeks later. Was Playing finds it anyway, then flies you back along the Hot 100's timeline, one #1 cover per run, while the genre charts branch around it like timelines off a sacred one. It lands on that week and shows you:
+Type `cuz my gear chief keef`. Chief Keef and Riff Raff's "Cuz My Gear" went up on YouTube on 28 April 2012 and onto a DatPiff tape three weeks later; Apple's catalog search has no match for it. Was Playing finds it anyway, then flies you back along the Hot 100's timeline, one #1 cover per run, while the genre charts branch around it like timelines off a sacred one. It lands on that week and shows you:
 
 - **The world that week**: the Hot 100 top 10, and the #1 in R&B/Hip-Hop, Rap, Country, Rock/Alternative, Dance, Latin, the UK and Canada.
 - **Off the charts**: what the internet was playing, from pages the Internet Archive saved that month (HotNewHipHop, Hype Machine, Billboard's genre pages), each list linked to its capture.

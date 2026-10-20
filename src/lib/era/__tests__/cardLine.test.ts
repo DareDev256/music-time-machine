@@ -25,7 +25,7 @@ describe("cardLine", () => {
   });
   it("falls back to the #1 when there is no song", () => {
     const l = cardLine({ date: "1999-07-10", numberOne: { song: "Bills, Bills, Bills", artist: "Destiny's Child" } });
-    expect(l).toEqual({ season: "SUMMER 1999", me: "THE #1 WAS BILLS, BILLS, BILLS", world: "BY DESTINY'S CHILD" });
+    expect(l).toEqual({ season: "SUMMER 1999", me: "THE #1 WAS BILLS, BILLS, BILLS BY DESTINY'S CHILD", world: "" });
   });
   it("keeps names that contain commas or ampersands whole", () => {
     expect(cardLine({ song: "A", artist: "Tyler, The Creator", date: "2012-04-28", numberOne: gotye }).me).toBe("I WAS ON TYLER, THE CREATOR");

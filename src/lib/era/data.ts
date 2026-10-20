@@ -1,7 +1,7 @@
 // Server-side readers for the static era shards in public/era/ (built by data/scripts/).
 // History is immutable, so each file is read once per server instance and kept in memory.
 
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 
 const ERA = path.join(process.cwd(), "public", "era");
@@ -81,9 +81,27 @@ export function heatRange(): [string, string] | null {
   return idx?.range ?? null;
 }
 
-/** Last chart week the data knows about. */
+/** Last chart week the era pages can show in full: the weekly top 10 (the #1 list can run a week ahead). */
 export function chartsThrough(): string {
-  return load<FlightData>("flight.json")?.through ?? "1958-08-04";
+  const year = new Date().getUTCFullYear();
+  const top10 = load<{ through?: string }>(`hot100/${year}.json`)?.through ?? load<{ through?: string }>(`hot100/${year - 1}.json`)?.through;
+  const flight = load<FlightData>("flight.json")?.through;
+  if (top10 && flight) return top10 < flight ? top10 : flight;
+  return top10 ?? flight ?? "1958-08-04";
+}
+
+/** First and last month with a published off-chart file, read from the files themselves. */
+export function heatMonthSpan(): [string, string] | null {
+  if (cache.has("heat:span")) return cache.get("heat:span") as [string, string] | null;
+  let months: string[] = [];
+  try {
+    months = readdirSync(path.join(ERA, "heat")).filter((f) => /^\d{4}-\d{2}\.json$/.test(f)).map((f) => f.slice(0, 7)).sort();
+  } catch {
+    months = [];
+  }
+  const span: [string, string] | null = months.length ? [months[0], months[months.length - 1]] : null;
+  cache.set("heat:span", span);
+  return span;
 }
 
 /** The Hot 100 #1 in effect on `date`, with its cover and position in its run. */
@@ -160,4 +178,15 @@ export function industryFor(year: number): IndustryYear | null {
     year, totalUsdM: y.total_usd_m, shares: y.shares, top: y.top_format, formats: y.formats ?? {},
     globalStreaming: doc?.global[String(year)]?.streaming_share ?? null,
   };
+}
+
+export interface RedditRow { rank: number; song: string; artist: string; title: string; score: number; comments: number; url: string; posted: string }
+export interface RedditSource { id: string; label: string; rows: RedditRow[] }
+
+/** Reddit [FRESH] posts for a month, top by upvotes, per subreddit; null when none passed. */
+export function redditFor(month: string): RedditSource[] | null {
+  if (!/^\d{4}-\d{2}$/.test(month)) return null;
+  const doc = load<{ sources?: RedditSource[] }>(`reddit/${month}.json`);
+  const sources = (doc?.sources ?? []).filter((x) => x.rows?.length);
+  return sources.length ? sources : null;
 }

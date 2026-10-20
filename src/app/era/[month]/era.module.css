@@ -32,8 +32,7 @@
 .sleeve { width: 100%; height: 100%; background: var(--panel); display: grid; align-content: space-between; padding: 22px; }
 
 /* The #1 + top 10 */
-.world { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 900px) { .world { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 48px; } }
+.world { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); max-width: 980px; }
 .n1 { display: grid; gap: 12px; align-content: start; }
 .n1 img { width: 100%; max-width: 320px; aspect-ratio: 1; object-fit: cover; display: block; }
 .n1Title { font-family: var(--font-display); font-stretch: 68%; font-weight: 800; text-transform: uppercase; font-size: 30px; line-height: .92; margin: 0; }
@@ -53,8 +52,9 @@
 .scroll { overflow-x: auto; min-width: 0; }
 
 /* Lanes */
-.lanes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(50%, 230px), 1fr)); border-left: 1px solid var(--hair); border-top: 1px solid var(--hair); }
-.lane { border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 18px 16px 20px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.lanes { display: flex; flex-wrap: wrap; border-left: 1px solid var(--hair); border-top: 1px solid var(--hair); }
+/* Cells grow to fill each row, so a short last row never leaves empty bordered boxes. */
+.lane { flex: 1 1 220px; border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 18px 16px 20px; display: grid; gap: 8px; align-content: start; min-width: 0; }
 .laneTitle { font-family: var(--font-display); font-stretch: 72%; font-weight: 800; text-transform: uppercase; font-size: 22px; line-height: .95; margin: 0; overflow-wrap: anywhere; }
 .laneBy { font-size: 12px; color: var(--dim); }
 .laneDate { font-size: 10px; letter-spacing: .18em; color: var(--dim); text-transform: uppercase; }
@@ -95,3 +95,10 @@
 .artistSm { font-size: 12px; }
 .laneMine { background: var(--signal); color: #000; }
 .laneMine :global(.label), .laneMine .laneBy, .laneMine .laneDate { color: #000; }
+
+.rowCover { width: 44px; height: 44px; object-fit: cover; float: left; margin: 0 12px 0 0; border: 1px solid var(--signal); }
+.table .run { display: block; margin-top: 4px; }
+@media (max-width: 560px) { .lane { flex-basis: 160px; } }
+.thread { display: inline-block; margin-top: 3px; font-size: 11px; color: var(--dim); text-decoration: none; padding: 4px 0; }
+.thread:hover { color: var(--ink); }
+.hit .thread { color: #000; }

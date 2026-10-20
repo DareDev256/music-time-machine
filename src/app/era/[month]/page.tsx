@@ -9,7 +9,7 @@ import Remembered from "@/components/era/Remembered";
 import RememberForm from "@/components/era/RememberForm";
 import Industry from "@/components/era/Industry";
 import {
-  weekNearest, lanesOn, heatFor, heatRange, numberOneOn, chartsThrough, weeksInMonth,
+  weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, numberOneOn, chartsThrough, weeksInMonth,
   indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow,
 } from "@/lib/era/data";
 import { cardLine } from "@/lib/era/cardLine";
@@ -95,8 +95,13 @@ export default async function EraPage({ params, searchParams }: { params: Params
 
   // The anchor: the index is the authority when it knows the song; the URL only fills gaps.
   const row = song && artist ? indexRow(song, artist) : null;
-  const anchorDate = row?.d ?? (dateParam && /^\d{4}-\d{2}-\d{2}$/.test(dateParam) ? dateParam : null);
-  const dateSource = row?.ds ?? clean(sp.ds, 60);
+  // The resolver's pick (sd + ds from the console) wins over the index row: the resolver already chose
+  // the earliest credible date across sources, while the row holds only one source's first sighting.
+  const sdParam = clean(sp.sd, 10);
+  const sd = sdParam && /^\d{4}-\d{2}-\d{2}$/.test(sdParam) ? sdParam : null;
+  const dsParam = clean(sp.ds, 60);
+  const anchorDate = sd ?? row?.d ?? (dateParam && /^\d{4}-\d{2}-\d{2}$/.test(dateParam) ? dateParam : null);
+  const dateSource = sd && dsParam ? dsParam : row?.ds ?? dsParam;
   const ytParam = clean(sp.y, 11);
   const youtubeId = row?.y ?? (ytParam && /^[A-Za-z0-9_-]{11}$/.test(ytParam) ? ytParam : null);
   const note = row?.n ?? null;
@@ -108,13 +113,14 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const n1 = numberOneOn(date);
   const lanes = lanesOn(date);
   const heat = heatFor(month);
-  const range = heatRange();
+  const heatSpan = heatMonthSpan();
+  const reddit = redditFor(month);
   const through = chartsThrough();
   const line = cardLine({ song, artist, date, numberOne: n1 });
   const conceived = born ? numberOneOn(addDays(date, -266)) : null;
   const industry = industryFor(Number(month.slice(0, 4)));
 
-  const anchorQ = { song, artist, date: anchorDate ?? undefined };
+  const anchorQ = { song, artist, sd: sd ?? undefined, ds: sd ? dsParam : undefined };
   const cardQ = new URLSearchParams({ ...(song ? { song } : {}), ...(artist ? { artist } : {}), date });
   const replay = `${SITE}/?${new URLSearchParams({ to: date, ...(song ? { song } : {}), ...(artist ? { artist } : {}) })}`;
   const mine = artist ? normTitle(primaryArtist(artist)) : null;
@@ -137,9 +143,6 @@ export default async function EraPage({ params, searchParams }: { params: Params
               <li><span><span className={s.factStrong}>{dateSource}</span> · {plainDate(anchorDate)}</span></li>
             )}
             {note && <li><span>{note}</span></li>}
-            {n1 && (
-              <li><span>The #1 on the Hot 100 was <span className={s.factStrong}>{n1.song}</span> by {n1.artist}, week {n1.runWeek} of {n1.runLength}.</span></li>
-            )}
             {conceived && (
               <li><span>38 weeks earlier, the #1 was <span className={s.factStrong}>{conceived.song}</span> by {conceived.artist}.</span></li>
             )}
@@ -148,8 +151,8 @@ export default async function EraPage({ params, searchParams }: { params: Params
 
         <div className={s.heroSide}>
           <div className={s.readouts}>
-            <Readout label="Destination" value={segDate(anchorDate ?? date)} align="start" />
-            {week && <Readout label="Chart week" value={segDate(week.date)} tone="ink" size="md" />}
+            <Readout label="Destination" value={segDate(date)} align="start" />
+            {week && week.date !== date && <Readout label="Chart week" value={segDate(week.date)} tone="ink" size="md" align="start" />}
           </div>
           {youtubeId && song ? (
             <YouTubeFacade id={youtubeId} title={`${song} by ${artist}`} />
@@ -173,21 +176,9 @@ export default async function EraPage({ params, searchParams }: { params: Params
         <section className={s.section} aria-labelledby="world">
           <div className={s.sectionHead}>
             <h2 id="world" className={s.h2}>{song ? "The world was playing" : "The charts that week"}</h2>
-            <span className={s.source}>Billboard Hot 100 dated {plainDate(week.date)}. Top 10 via utdata/rwd-billboard-data (MIT), checked against a second scrape and Wikipedia.</span>
+            <span className={s.source}>Billboard Hot 100 dated {plainDate(week.date)}. Top 10 from utdata/rwd-billboard-data (MIT), verified against two other sources.</span>
           </div>
           <div className={s.world}>
-            {n1 && (
-              <div className={s.n1}>
-                {n1.art
-                  // eslint-disable-next-line @next/next/no-img-element
-                  ? <img src={art(n1.art, 600)!} alt={`${n1.song} cover`} loading="lazy" />
-                  : <div className={s.cover}><div className={s.sleeve}><span className={`display ${s.sleeveTitleSm}`}>{n1.song}</span></div></div>}
-                <span className="label">#1 on the Hot 100</span>
-                <p className={s.n1Title}>{n1.song}</p>
-                <span className={`${s.artist} ${s.artistSm}`}>{n1.artist}</span>
-                <span className={s.run}>Week {n1.runWeek} of {n1.runLength} at #1</span>
-              </div>
-            )}
             <div className={s.scroll}>
               <table className={s.table}>
                 <thead>
@@ -197,7 +188,14 @@ export default async function EraPage({ params, searchParams }: { params: Params
                   {week.top.map((r) => (
                     <tr key={r.rank} className={isMine(r.artist) ? s.hit : undefined}>
                       <td className={`${s.rank} ${r.rank === 1 ? s.rank1 : ""}`}>{String(r.rank).padStart(2, "0")}</td>
-                      <td><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></td>
+                      <td>
+                        {r.rank === 1 && song && n1?.art && (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img className={s.rowCover} src={art(n1.art, 160)!} alt="" loading="lazy" />
+                        )}
+                        <span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span>
+                        {r.rank === 1 && n1 && <span className={s.run}>Week {n1.runWeek} of {n1.runLength} at #1</span>}
+                      </td>
                       <td className={`${s.num} ${s.move}`}>{movement(r)}</td>
                       <td className={s.num}>{r.peak ?? "–"}</td>
                       <td className={s.num}>{r.weeks ?? "–"}</td>
@@ -219,7 +217,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
         <section className={s.section} aria-labelledby="lanes">
           <div className={s.sectionHead}>
             <h2 id="lanes" className={s.h2}>#1 in every lane</h2>
-            <span className={s.source}>Billboard genre charts, the UK Singles Chart and the Canadian Hot 100, from Wikipedia&rsquo;s number-one lists (CC BY-SA 4.0).</span>
+            <span className={s.source}>Charts of {plainDate(week?.date ?? date)}: Billboard genre charts, the UK Singles Chart and the Canadian Hot 100, from Wikipedia&rsquo;s number-one lists (CC BY-SA 4.0).</span>
           </div>
           <div className={s.lanes}>
             {lanes.map((l) => (
@@ -227,7 +225,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
                 <span className="label">{l.label}</span>
                 <p className={s.laneTitle}>{l.song}</p>
                 <span className={s.laneBy}>{l.artist}</span>
-                <span className={s.laneDate}>Chart of {plainDate(l.date)}</span>
+                {l.date !== (week?.date ?? date) && <span className={s.laneDate}>Chart of {plainDate(l.date)}</span>}
               </div>
             ))}
           </div>
@@ -239,14 +237,34 @@ export default async function EraPage({ params, searchParams }: { params: Params
           <h2 id="off" className={s.h2}>Off the charts · {monthName(month)}</h2>
           <span className={s.source}>What the internet was playing, from pages the Internet Archive saved that month. Each list links its capture.</span>
         </div>
-        {heat ? (
+        {heat || reddit ? (
           <div className={s.heat}>
-            {heat.sources.map((src) => (
+            {reddit?.map((src) => (
+              <div key={src.id} className={s.heatCol}>
+                <div className={s.heatHead}>
+                  <span className={s.heatLabel}>{src.id} · new releases</span>
+                  <span className={s.source}>Posts tagged [FRESH] that month, ranked by upvotes.</span>
+                </div>
+                <ol className={s.heatList}>
+                  {src.rows.slice(0, 8).map((r) => (
+                    <li key={r.url} className={isMine(r.artist) ? s.hit : undefined}>
+                      <span className={s.heatRank}>{String(r.rank).padStart(2, "0")}</span>
+                      <span>
+                        <span className={s.song}>{r.song}</span>
+                        <span className={s.by}>{r.artist}</span>
+                        <a className={s.thread} href={r.url} target="_blank" rel="noopener noreferrer nofollow">↑ {r.score.toLocaleString("en-US")} · {r.comments.toLocaleString("en-US")} comments</a>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+            {heat?.sources.map((src) => (
               <div key={src.id} className={s.heatCol}>
                 <div className={s.heatHead}>
                   <span className={s.heatLabel}>{src.label}</span>
                   <span className={s.source}>
-                    {src.list === "front" ? "Front page, newest first. " : ""}
+                    {src.list === "front" ? "Front page, newest first. " : `Top ${Math.min(src.rows.length, 20)} shown. `}
                     <a href={src.capture} target="_blank" rel="noopener noreferrer">Archived {plainDate(src.captured)} ↗</a>
                   </span>
                 </div>
@@ -276,8 +294,9 @@ export default async function EraPage({ params, searchParams }: { params: Params
           </div>
         ) : (
           <p className={s.empty}>
-            No archived capture for {monthName(month)} yet.
-            {range ? ` The off-chart layer covers ${monthName(range[0])} to ${monthName(range[1])} so far, and grows from there.` : ""}
+            {heatSpan && month < heatSpan[0]
+              ? `The archive of blogs and music sites starts in ${monthName(heatSpan[0])}. For ${monthName(month)}, the charts are the record.`
+              : `Nothing from the blogs was archived for ${monthName(month)}.`}
           </p>
         )}
       </section>
@@ -286,18 +305,14 @@ export default async function EraPage({ params, searchParams }: { params: Params
         <section className={s.section} aria-labelledby="paid">
           <div className={s.sectionHead}>
             <h2 id="paid" className={s.h2}>How people paid for music in {month.slice(0, 4)}</h2>
-            <span className={s.source}>US recorded-music revenue by format, RIAA U.S. Sales Database (wholesale value, cited with attribution). Global share from the IFPI Global Music Report.</span>
+            <span className={s.source}>US recorded-music revenue by format, RIAA U.S. Sales Database (wholesale).{industry.globalStreaming !== null ? " Global streaming share: IFPI Global Music Report." : ""}</span>
           </div>
           <Industry data={industry} />
         </section>
       )}
 
-      <section className={s.section} aria-labelledby="remembered">
-        <div className={s.sectionHead}>
-          <h2 id="remembered" className={s.h2}>Remembered by listeners</h2>
-          <span className={s.source}>Songs people say were hot this month. Each one is checked against release dates before it shows up here, and kept even when it came out years earlier.</span>
-        </div>
-        <Remembered month={month} />
+      <Remembered month={month} />
+      <section className={s.section} aria-label={`Remember something from ${monthName(month)}`}>
         <RememberForm month={month} monthLabel={monthName(month)} />
       </section>
 

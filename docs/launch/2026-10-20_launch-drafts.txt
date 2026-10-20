@@ -1,0 +1,42 @@
+WAS PLAYING LAUNCH DRAFTS (for James to post; nothing here has been posted)
+
+=== SHOW HN ===
+Title:
+Show HN: Was Playing, a music time machine that knows YouTube and mixtape songs
+
+Body:
+The songs I remember from 2012 were YouTube uploads and mixtape tracks. Chief Keef and Riff Raff's Cuz My Gear went up on YouTube on 28 April 2012, and Apple's catalog search has no match for it, so no chart or streaming app knows when it happened.
+
+Was Playing takes a song, a year or a birthday, flies back through every Billboard Hot 100 number one to that week, and shows what was playing: the top 10, the number one in eight genre and country charts, and what HotNewHipHop and Hype Machine were showing that month, from Internet Archive captures. It also shows how people paid for music that year (RIAA).
+
+All the history is precomputed from open data: utdata's Billboard dataset, cross checked rank by rank against a second scrape and against Wikipedia, Wikipedia's number one lists, Wayback captures, MusicBrainz and the RIAA revenue database. Song lookup runs in your browser against a 38k song index, then MusicBrainz and iTunes.
+
+Listeners can add songs they remember from a month. Each one is checked against release dates and held for review, and a song that blew up years after release is allowed.
+
+Code is MIT: https://github.com/DareDev256/music-time-machine
+Site: https://music-time-machine.vercel.app
+
+I would love to hear which blogs, genres or countries to archive next, and which songs it gets wrong.
+
+=== X (3 posts, attach the flight video to the first) ===
+1/
+I built a music time machine.
+
+Type a song you lived with. It flies back through every Hot 100 number one to the week it was playing and lands in its era.
+
+Works for YouTube and mixtape songs too. Cuz My Gear, YouTube, 28 April 2012.
+
+https://music-time-machine.vercel.app
+
+2/
+Every era page has the top 10, the number one in rap, R&B, country, rock, dance, Latin, the UK and Canada, and what HotNewHipHop and Hype Machine were posting that month, pulled from the Internet Archive.
+
+3/
+It's open source. If you remember something that was hot and it's not there, add it. Every submission gets checked against release dates before it goes up.
+
+https://github.com/DareDev256/music-time-machine
+
+=== PRODUCT HUNT ===
+Name: Was Playing
+Tagline: Name a song, fly back to the week it was playing
+Description: A music time machine. Type a song, a year or your birthday and fly back through every Billboard number one to that week. See the top 10, the number one in eight genre and country charts, what the blogs were posting that month, and how people paid for music that year. Finds YouTube and mixtape songs, not only what streaming has. Free, no login, open source.

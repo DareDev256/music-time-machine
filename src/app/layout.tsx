@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: "Was Playing · the music time machine",
   description:
-    "Name a song you lived with. Fly back through every #1, week by week, and land in its era: the charts and the internet that week, including songs that were never on Spotify or Apple.",
+    "Name a song you lived with. Fly back through every #1, week by week, and land in its era: the charts and the internet that week, YouTube and mixtape songs included.",
   openGraph: {
     title: "Was Playing",
     description: "Name a song. Fly back to the week it was playing.",

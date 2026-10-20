@@ -54,7 +54,7 @@ export const GET = withRouteHandler({ route: "og" }, async (request: NextRequest
     return new ImageResponse(<DefaultCard m={m} images={images} format={req.format} />, options(DEFAULT_CACHE));
   }
 
-  const m = buildCard(req, 3);
+  const m = buildCard(req);
   const numberOne = await coverData(m.numberOne?.cover);
   const card = req.format === "story" ? <StoryCard m={m} images={{ numberOne }} /> : <WideCard m={m} images={{ numberOne }} />;
   return new ImageResponse(card, options(PARAM_CACHE));

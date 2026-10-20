@@ -59,6 +59,11 @@ export function wrap(text: string, face: Face, size: number, width: number, trac
   return lines.length ? lines : [""];
 }
 
+/** True when every word fits the line on its own, so wrapping never has to split a word. */
+export function wordsFit(text: string, face: Face, size: number, width: number, tracking = 0): boolean {
+  return text.split(" ").every((w) => !w || textWidth(w, face, size, tracking) <= width * SLACK);
+}
+
 export interface FitSpec {
   face: Face;
   width: number;
@@ -77,6 +82,7 @@ export interface Fit { size: number; lines: number; clamp: number }
 export function fit(text: string, spec: FitSpec): Fit {
   const step = Math.max(1, Math.round((spec.max - spec.min) / 40));
   for (let size = spec.max; size >= spec.min; size -= step) {
+    if (size > spec.min && !wordsFit(text, spec.face, size, spec.width, spec.tracking)) continue;
     const lines = wrap(text, spec.face, size, spec.width, spec.tracking).length;
     if (lines <= spec.maxLines && lines * size * spec.lineHeight <= spec.maxHeight) return { size, lines, clamp: lines };
   }

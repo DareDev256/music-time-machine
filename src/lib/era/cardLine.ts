@@ -41,7 +41,7 @@ export function cardLine(input: {
     return { season, me: `I WAS ON ${credit(input.artist)}`, world };
   }
   if (input.numberOne) {
-    return { season, me: `THE #1 WAS ${input.numberOne.song.toUpperCase()}`, world: `BY ${worldArtist}` };
+    return { season, me: `THE #1 WAS ${input.numberOne.song.toUpperCase()} BY ${worldArtist}`, world: "" };
   }
   return { season, me: "", world: "" };
 }
