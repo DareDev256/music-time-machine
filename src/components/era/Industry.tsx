@@ -33,15 +33,18 @@ export default function Industry({ data }: { data: IndustryYear }) {
   // Widths are SVG attributes and colours are classes: no style attributes (the production CSP blocks them).
   const segs = ORDER.map((k) => ({ k, v: data.shares[k] })).filter((x) => x.v >= 0.005);
   const lead = segs.reduce((a, b) => (b.v > a.v ? b : a)).k;
-  let step = 0;
   const total = segs.reduce((a, x) => a + x.v, 0);
-  let at = 0;
-  const shaded = segs.map((x) => {
-    const tone = x.k === lead ? s.lead : [s.ink1, s.ink2, s.ink3, s.ink4][Math.min(step++, 3)];
-    const w = (x.v / total) * 100;
-    const seg = { ...x, tone, x0: at, w };
-    at += w;
-    return seg;
+  const inks = [s.ink1, s.ink2, s.ink3, s.ink4];
+  // Pure: each segment's start is the sum of the widths before it; ink steps count the non-lead segments before it.
+  const shaded = segs.map((x, i) => {
+    const before = segs.slice(0, i);
+    const inkIndex = before.filter((b) => b.k !== lead).length;
+    return {
+      ...x,
+      tone: x.k === lead ? s.lead : inks[Math.min(inkIndex, inks.length - 1)],
+      x0: (before.reduce((a, b) => a + b.v, 0) / total) * 100,
+      w: (x.v / total) * 100,
+    };
   });
 
   return (
