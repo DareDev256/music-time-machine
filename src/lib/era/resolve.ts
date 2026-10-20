@@ -8,8 +8,8 @@
 import type { DatedSong, Granularity, IndexFileRow, ResolveOutcome } from "./types";
 import { CHART_START, extractDateDetail, flightTarget, localToday, padToGranularity, parsePartialDate, type DateDetail } from "./dates";
 import {
-  artistKeysLoose, artistNames, cleanQuery, containsPhrase, isStopword, norm, primaryArtistKey, primaryArtistName,
-  primaryKeysLoose, stripTitle, titleForms, titleKey, tokens,
+  artistKeysLoose, artistNames, cleanQuery, compactSim, containsPhrase, FILLER, fuzzyPhrase, isStopword, norm, primaryArtistKey,
+  primaryArtistName, primaryKeysLoose, soundKey, editDistance, stripTitle, titleForms, titleKey, tokenSim, tokens,
 } from "./normalize";
 
 export interface ResolverDeps {
@@ -55,6 +55,9 @@ interface QueryInfo {
   detail: DateDetail | null;
   year: number | null;
   pureDate: boolean; // the whole text is a date expression ("1999", "summer of '69", "March 2012")
+  wholeList: string[];
+  restList: string[];
+  dateSet: Set<string>;
 }
 
 function queryInfo(text: string): QueryInfo {
@@ -72,6 +75,9 @@ function queryInfo(text: string): QueryInfo {
     detail,
     year: detail ? Number(detail.date.slice(0, 4)) : null,
     pureDate: Boolean(detail) && content.length === 0,
+    wholeList: whole ? whole.split(" ") : [],
+    restList: restTokens,
+    dateSet: new Set((whole ? whole.split(" ") : []).filter((t) => !restSet.has(t))),
   };
 }
 
@@ -96,8 +102,11 @@ function sanitize(x: unknown): DatedSong | null {
   for (const k of ["art", "previewUrl", "youtubeId", "mbid", "isrc"] as const) {
     if (typeof r[k] === "string" && r[k]) out[k] = r[k];
   }
+  if (validPeak(r.peak)) out.peak = r.peak;
   return out;
 }
+
+const validPeak = (p: unknown): p is number => typeof p === "number" && Number.isInteger(p) && p >= 1 && p <= 100;
 
 const sanitizeAll = (rows: unknown): DatedSong[] =>
   Array.isArray(rows) ? rows.map(sanitize).filter((r): r is DatedSong => r !== null) : [];
@@ -142,6 +151,7 @@ export function indexRowToDatedSong(row: unknown): DatedSong | null {
   for (const k of ["art", "previewUrl", "mbid", "isrc"] as const) {
     if (typeof r[k] === "string" && r[k]) out[k] = r[k] as string;
   }
+  if (validPeak(r.p)) out.peak = r.p;
   return out;
 }
 
@@ -195,7 +205,16 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
     return s >= floor && s <= today;
   });
   const hard = valid.filter((r) => !isSoft(r));
-  const credible = valid.filter((r) => !isSoft(r) || hard.length === 0 || hard.some((h) => gapDays(r, h) <= 366));
+  // An imprecise date (year or month only) is a weak claim: it counts within 12 months of another source's date,
+  // or when no other source has a full date. Measured: MusicBrainz files "Tennessee Whiskey" (2015) under "2012".
+  const otherSource = (a: DatedSong, b: DatedSong) => !a.where.some((w) => b.where.includes(w));
+  const credible = valid.filter((r) => {
+    if (isSoft(r) && hard.length && !hard.some((h) => gapDays(r, h) <= 366)) return false;
+    if (r.granularity === "day" || isSoft(r)) return true;
+    const others = valid.filter((o) => otherSource(r, o));
+    if (!others.some((o) => o.granularity === "day")) return true;
+    return others.some((o) => gapDays(r, o) <= 366);
+  });
   const pool = credible.length ? credible : valid.length ? valid : rows;
   const sorted = [...pool].sort((a, b) => period(a)[0] - period(b)[0] || PRECISION[a.granularity] - PRECISION[b.granularity] || SOURCE_RANK(a) - SOURCE_RANK(b));
   let best = sorted[0];
@@ -206,14 +225,17 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
     best = finer[0];
   }
 
-  // Identity: a chart / seed row, else the plainest title ("Shutdown" over "Shutdown (Preditah Remix)").
+  // Identity: the credit of a chart / seed row, else of the plainest title ("Shutdown" over "Shutdown (Preditah
+  // Remix)"). The rows share one normalised title, so the shortest spelling of it is the least decorated one: an
+  // index row kept from a blog post ("Hotline Bling (Cha Cha Remix) (CDQ)") does not name the song.
   const identity =
     rows.find((r) => r.where.includes("chart") || r.where.includes("seed")) ?? rows.find((r) => stripTitle(r.song) === r.song.trim()) ?? rows[0];
+  const plainest = rows.reduce((a, r) => (r.song.trim().length < a.song.trim().length ? r : a), identity);
   const where = WHERE_ORDER.filter((w) => rows.some((r) => r.where.includes(w)));
   const onDsp = rows.some((r) => r.onDsp === true) ? true : rows.some((r) => r.onDsp === false) ? false : null;
   const byDate = [...rows].sort((a, b) => period(a)[0] - period(b)[0]);
   const out: DatedSong = {
-    song: identity.song, artist: identity.artist, date: best.date, granularity: best.granularity,
+    song: plainest.song, artist: identity.artist, date: best.date, granularity: best.granularity,
     dateSource: defaultSource(best), where, onDsp,
   };
   const art = rows.find((r) => r.art && r.where.includes("itunes"))?.art ?? rows.find((r) => r.art)?.art;
@@ -226,6 +248,8 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
   if (mbid) out.mbid = mbid;
   const isrc = byDate.find((r) => r.isrc)?.isrc;
   if (isrc) out.isrc = isrc;
+  const peaks = rows.map((r) => r.peak).filter(validPeak);
+  if (peaks.length) out.peak = Math.min(...peaks);
   return out;
 }
 
@@ -279,23 +303,85 @@ class Groups {
     if (BAD_ARTIST.test(r.artist) || BAD_TITLE.test(r.song)) return;
     const g = this.find(r);
     if (g) return this.push(g, r, "itunes");
-    // No other source knows this song: it may stand alone only when the text names its artist.
-    const names = artistNames(r.artist);
-    if (titleForms(r.song).some((f) => names.some((n) => containsPhrase(withoutTitle(qi, f), n)))) this.push(undefined, r, "itunes");
+    // No other source knows this song: it may stand alone only when the text names its artist anywhere (typos and
+    // run-together spellings allowed), in words the title did not use.
+    const names = artistNames(r.artist).map((n) => n.split(" "));
+    const named = titleForms(r.song).some((f) => {
+      const used = fitTitle(f.split(" "), qi.wholeList).used;
+      return findArtist(leftover(qi.wholeList, used), names).len > 0;
+    });
+    if (named) this.push(undefined, r, "itunes");
   }
 }
 
+interface Fit {
+  cov: number; // weighted share of the title's words found in the text (typos count less)
+  phraseSim: number; // > 0 when the title appears as one contiguous run
+  used: Set<number>; // positions of the text the title consumed
+  exact: boolean; // every title word matched as typed
+}
+
 /**
- * The query with the title's words taken out. An artist counts only for words the title did not use, so a
+ * Where a title sits in the text: a contiguous run first ("rolling in the deap"; one short word may be an edit off
+ * when the rest is exact, "shake it of"), then as one run-together word ("hotlinebling"), else word by word
+ * ("chief keef my gear").
+ */
+function fitTitle(tt: string[], words: string[]): Fit {
+  const run = fuzzyPhrase(words, tt, 0.8, true);
+  if (run.start >= 0) {
+    const used = new Set(tt.map((_, j) => run.start + j));
+    return { cov: run.sim, phraseSim: run.sim, used, exact: run.sim === 1 };
+  }
+  const glued = words.findIndex((w) => compactSim(w, tt) >= 0.85);
+  if (glued >= 0) {
+    const sim = compactSim(words[glued], tt);
+    return { cov: sim, phraseSim: sim, used: new Set([glued]), exact: false };
+  }
+  const used = new Set<number>();
+  let sum = 0;
+  for (const t of tt) {
+    let bi = -1;
+    let bs = 0;
+    words.forEach((w, i) => {
+      if (used.has(i)) return;
+      const sim = tokenSim(w, t);
+      if (sim > bs) {
+        bs = sim;
+        bi = i;
+      }
+    });
+    if (bi >= 0) {
+      used.add(bi);
+      sum += bs;
+    }
+  }
+  return { cov: tt.length ? sum / tt.length : 0, phraseSim: 0, used, exact: sum === tt.length };
+}
+
+/**
+ * The text with the title's words taken out. An artist counts only for words the title did not use, so a
  * MusicBrainz "artist" named exactly like the song (measured: "Somebody That I Used to Know" by
  * "Somebody That I Used to Know", 2017) is not an artist match for a title-only query.
  */
-function withoutTitle(qi: QueryInfo, form: string): string {
-  const hay = ` ${qi.whole} `;
-  const i = hay.indexOf(` ${form} `);
-  if (i >= 0) return `${hay.slice(0, i)} ${hay.slice(i + form.length + 2)}`.trim().replace(/\s+/g, " ");
-  const used = new Set(form.split(" "));
-  return qi.whole.split(" ").filter((t) => !used.has(t)).join(" ");
+const leftover = (words: string[], used: Set<number>) => words.filter((_, i) => !used.has(i));
+
+/**
+ * The longest artist name present in `words` as a whole: contiguous words (typos allowed) or one run-together word
+ * ("chiefkeef", "popsmoke"). Returns its positions and the name's length in words (0 when none).
+ */
+function findArtist(words: string[], names: string[][]): { at: Set<number>; len: number } {
+  let best = { at: new Set<number>(), len: 0 };
+  for (const n of names) {
+    if (n.length <= best.len) continue;
+    const run = fuzzyPhrase(words, n);
+    if (run.sim > 0) {
+      best = { at: new Set(n.map((_, j) => run.start + j)), len: n.length };
+      continue;
+    }
+    const glued = words.findIndex((w) => compactSim(w, n) >= 0.85);
+    if (glued >= 0) best = { at: new Set([glued]), len: n.length };
+  }
+  return best;
 }
 
 interface Match {
@@ -303,54 +389,96 @@ interface Match {
   score: number;
   artistHit: boolean;
   exactWhole: boolean;
+  exact: boolean; // the title matched as typed, no typo tolerance needed
   inYear: boolean;
+  explained: number; // typed words (not filler, not the date) this reading accounts for
+  allExplained: boolean; // ...and it accounts for every one of them
+  noisy: boolean; // a specific title found inside a longer description, with no artist to confirm it
+}
+
+// A year in the text refers to the song's own date (its earliest credible one), not to any stray compilation row.
+const mergedYear = new WeakMap<Group, { n: number; year: number }>();
+function groupYear(g: Group): number {
+  const hit = mergedYear.get(g);
+  if (hit && hit.n === g.rows.length) return hit.year;
+  const year = Number(mergeSong(g.rows).date.slice(0, 4));
+  mergedYear.set(g, { n: g.rows.length, year });
+  return year;
 }
 
 function matchGroup(g: Group, qi: QueryInfo): Match | null {
   // A MusicBrainz-only recording credited to an "artist" with the song's own name is a mislabelled upload.
   // (Self-titled songs that charted or are on iTunes, "Bad Company" by Bad Company, are unaffected.)
   if (!g.origins.has("index") && !g.origins.has("itunes") && g.names.has(g.key)) return null;
-  const names = new Set(g.rows.flatMap((r) => artistNames(r.artist)));
-  const artistTokens = new Set([...names].flatMap((n) => n.split(" ")));
+  const names = Array.from(new Set(g.rows.flatMap((r) => artistNames(r.artist)))).map((n) => n.split(" "));
   const forms = Array.from(new Set(g.rows.flatMap((r) => titleForms(r.song))));
   const strip = (s: string) => s.split(" ").filter((t) => !isStopword(t)).join(" ");
-  // A text that is only a date yields to a title only when the FULL title is the whole text: "1999" is Prince,
-  // but "2012" is not "2012 (It Ain't The End)".
+  // A text that is only a date yields to a title only when the FULL title is the whole text, as typed: "1999" is
+  // Prince, but "2012" is not "2012 (It Ain't The End)".
   if (qi.pureDate) {
     const full = g.rows.map((r) => norm(String(r.song).replace(/[()[\]{}]/g, " ")));
     if (!full.some((f) => f === qi.whole || (strip(f) !== "" && strip(f) === strip(qi.whole)))) return null;
   }
-  let best: { score: number; exactWhole: boolean; artistHit: boolean } | null = null;
+  type Best = { score: number; exactWhole: boolean; artistHit: boolean; exact: boolean; explained: number; allExplained: boolean; noisy: boolean };
+  let best: Best | null = null;
   for (const f of forms) {
     const tt = f.split(" ");
-    const titleSet = new Set(tt);
-    const left = withoutTitle(qi, f);
-    const artistHit = [...names].some((n) => containsPhrase(left, n));
-    const phrase = containsPhrase(qi.whole, f) || containsPhrase(qi.rest, f);
-    const exactWhole = f === qi.whole || (strip(f) !== "" && strip(f) === strip(qi.whole));
-    const exactRest = qi.rest !== "" && (f === qi.rest || (strip(f) !== "" && strip(f) === strip(qi.rest)));
-    const cov = tt.filter((t) => qi.wholeTokens.has(t)).length / tt.length;
-    const extras = qi.content.filter((t) => !titleSet.has(t) && !artistTokens.has(t)).length;
-    const ok = (phrase && (extras === 0 || artistHit)) || (cov >= 0.6 && tt.length >= 2 && artistHit && extras === 0);
-    if (!ok) continue;
-    const score = 10 * cov + (phrase ? 4 : 0) + (exactWhole || exactRest ? 3 : 0) + (artistHit ? 6 : 0) - 3 * extras;
-    if (!best || score > best.score) best = { score, exactWhole, artistHit };
+    // A title specific enough to stand inside a description: two content words, eight letters.
+    const specific = tt.filter((t) => !isStopword(t)).length >= 2 && tt.join("").length >= 8;
+    // With the date words (titles that hold a year: "1999 prince") and without them ("cuz my gear 2012").
+    for (const words of [qi.wholeList, qi.restList]) {
+      if (!words.length) continue;
+      const fit = fitTitle(tt, words);
+      const leftIdx = words.map((_, i) => i).filter((i) => !fit.used.has(i));
+      const left = leftIdx.map((i) => words[i]);
+      // The artist must match as a whole name; only then are its words explained ("anne marie" does not half-match
+      // "Anne-Marie van Eeden" and excuse "marie").
+      const found = findArtist(left, names);
+      const artistAt = new Set([...found.at].map((i) => leftIdx[i]));
+      const artistHit = found.len > 0;
+      // People name an artist by a first or last word ("kendrick not like us", "cudi day n nite"): such a word is
+      // explained (it is not an extra), though it is not a full artist match. A middle word is not.
+      const byEdgeWord = (t: string) => names.some((n) => n.length > 1 && (tokenSim(t, n[0]) >= 0.8 || tokenSim(t, n[n.length - 1]) >= 0.8));
+      const isExplained = (t: string, i: number) => fit.used.has(i) || artistAt.has(i) || tt.includes(t) || byEdgeWord(t);
+      const partial = leftIdx.some((i) => !artistAt.has(i) && byEdgeWord(words[i]));
+      const countable = words.map((t, i) => ({ t, i })).filter(({ t }) => !FILLER.has(t) && !qi.dateSet.has(t));
+      const explained = countable.filter(({ t, i }) => isExplained(t, i)).length;
+      const extras = countable.filter(({ t, i }) => !isExplained(t, i) && !isStopword(t)).length;
+      const phrase = fit.phraseSim > 0;
+      // Extra words veto a title only when it is too short to stand on its own; a description around a specific
+      // title ("that song with the phone ringing, hotline bling") is context, not a contradiction.
+      const strongRun = phrase && fit.phraseSim >= 0.9 && specific;
+      const ok = (phrase && (extras === 0 || artistHit || strongRun)) || (fit.cov >= 0.6 && tt.length >= 2 && artistHit && extras === 0);
+      if (!ok) continue;
+      const noisy = !artistHit && extras > 0;
+      const exactWhole = f === qi.whole || (strip(f) !== "" && strip(f) === strip(qi.whole));
+      const exactRest = qi.rest !== "" && (f === qi.rest || (strip(f) !== "" && strip(f) === strip(qi.rest)));
+      const score =
+        10 * fit.cov + (phrase ? 4 * fit.phraseSim : 0) + (exactWhole || exactRest ? 3 : 0) + (artistHit ? 6 : partial ? 3 : 0) - 3 * extras +
+        (countable.length ? (2 * explained) / countable.length : 0);
+      if (!best || score > best.score) {
+        best = { score, exactWhole, artistHit, exact: fit.exact, explained, allExplained: explained === countable.length, noisy };
+      }
+    }
   }
   if (!best) return null;
-  const inYear = qi.year !== null && g.rows.some((r) => Math.abs(Number(r.date.slice(0, 4)) - qi.year!) <= 1);
-  // Popularity priors for ordering a shared title: charted / seeded, the index's own rank, an iTunes listing, more
-  // MusicBrainz releases. A cast cover sinks below the song it covers.
+  const inYear = qi.year !== null && Math.abs(groupYear(g) - qi.year) <= 1;
+  // Popularity priors for ordering a shared title: charted / seeded, its Hot 100 peak, the index's own rank, an
+  // iTunes listing, more MusicBrainz releases. A cast cover sinks below the song it covers.
+  const peak = groupPeak(g);
   const prior =
     (g.origins.has("index") ? 2 : 0) +
+    (Number.isFinite(peak) ? (1.5 * (101 - peak)) / 100 : 0) +
     (Number.isFinite(g.indexRank) ? 0.5 * (1 - Math.min(g.indexRank, 8) / 8) : 0) +
     (g.origins.has("itunes") ? 1 : 0) +
     Math.min(g.rows.length, 4) * 0.1 -
     (isCoverAct(g) ? 3 : 0);
-  return { group: g, score: best.score + (inYear ? 3 : 0) + prior, artistHit: best.artistHit, exactWhole: best.exactWhole, inYear };
+  return { group: g, ...best, score: best.score + (inYear ? 3 : 0) + prior, inYear };
 }
 
 const isCoverAct = (g: Group) => g.rows.every((r) => COVER_ACT.test(r.artist) || COVER_TITLE.test(r.song));
 const mbRows = (g: Group) => g.rows.filter((r) => r.where.includes("musicbrainz")).length;
+const groupPeak = (g: Group) => Math.min(Infinity, ...g.rows.map((r) => r.peak).filter(validPeak));
 
 const matchAll = (groups: Groups, qi: QueryInfo): Match[] =>
   groups.list
@@ -358,16 +486,31 @@ const matchAll = (groups: Groups, qi: QueryInfo): Match[] =>
     .filter((m): m is Match => m !== null)
     .sort((a, b) => b.score - a.score);
 
+/**
+ * Typo tolerance only where nothing matches as typed: an exact index match ("hold on") drops fuzzy look-alikes
+ * ("gold on"); any other exact match drops fuzzy non-index ones, but a charted song found through a typo
+ * ("billy jean" → Billie Jean) still stands against an obscure recording spelled that way. A fuzzy reading that
+ * accounts for more of what was typed than every exact one also stands ("shake it of": Shake It Off, not Shake It).
+ */
+function preferExact(ms: Match[]): Match[] {
+  const exact = ms.filter((m) => m.exact);
+  if (!exact.length) return ms;
+  const most = Math.max(...exact.map((m) => m.explained));
+  if (exact.some((m) => m.group.origins.has("index"))) return ms.filter((m) => m.exact || m.explained > most);
+  return ms.filter((m) => m.exact || m.group.origins.has("index") || m.explained > most);
+}
+
 type Decision = { kind: "accept"; match: Match } | { kind: "ambiguous"; matches: Match[] } | { kind: "none" };
 
-function decide(matches: Match[], qi: QueryInfo): Decision {
+function decide(all: Match[], qi: QueryInfo): Decision {
+  const matches = preferExact(all);
   if (!matches.length) return { kind: "none" };
   const hits = matches.filter((m) => m.artistHit);
   if (hits.length) {
-    if (hits.length === 1 || hits[0].score > hits[1].score) return { kind: "accept", match: hits[0] };
-    const inYear = hits.filter((m) => m.inYear);
-    if (inYear.length === 1) return { kind: "accept", match: inYear[0] };
-    return { kind: "ambiguous", matches: hits };
+    // A year in the text picks among the artist's songs: one within ±1 year beats a stronger title match outside it.
+    const pool = qi.year !== null && hits.some((m) => m.inYear) ? hits.filter((m) => m.inYear) : hits;
+    if (pool.length === 1 || pool[0].score > pool[1].score) return { kind: "accept", match: pool[0] };
+    return { kind: "ambiguous", matches: pool };
   }
   // Only one song carries this title in everything we can see: not a common title.
   if (matches.length === 1) return { kind: "accept", match: matches[0] };
@@ -378,6 +521,14 @@ function decide(matches: Match[], qi: QueryInfo): Decision {
   // A common title with no artist: a year that fits exactly one candidate settles it.
   const inYear = pool.filter((m) => m.inYear);
   if (qi.year !== null && inYear.length === 1) return { kind: "accept", match: inYear[0] };
+  // So does accounting for every word typed when no other reading does ("shake it of": Shake It Off, not Shake It).
+  const whole = pool.filter((m) => m.allExplained);
+  if (whole.length === 1) return { kind: "accept", match: whole[0] };
+  // So does the chart: one candidate made the top 10 and no other made the top 40 ("Billie Jean": Michael Jackson
+  // #1, David Cook #47). Two big hits with one title ("Hold On": #1 and #2) still need a pick.
+  const peaks = pool.map((m) => groupPeak(m.group));
+  const bi = peaks.indexOf(Math.min(...peaks));
+  if (peaks[bi] <= 10 && peaks.every((pk, i) => i === bi || pk > 40)) return { kind: "accept", match: pool[bi] };
   // So do two independent sources: the top candidate is on iTunes and in MusicBrainz, and no other candidate
   // is in either. A MusicBrainz-only match never qualifies (§12.10).
   const [top, ...others] = pool;
@@ -456,6 +607,42 @@ const dedupe = (rows: DatedSong[]) => {
 
 // ── resolveQuery ──────────────────────────────────────────────────────────────
 
+/**
+ * Split "title artist" / "artist title" using artist names the index returned: the longest name that matches
+ * (typos allowed) a run at the start or the end of the text, leaving a non-empty title. The artist comes back as
+ * the index spells it ("chif keef" → "chief keef").
+ */
+function knownArtistSplit(qi: QueryInfo, rows: DatedSong[]): { title: string; artist: string } | null {
+  // Both views are scored together: without the date ("cuz my gear 2012 chief keef") and with it, where a
+  // date-looking word next to a known artist is the title ("2002 anne marie": §12.10, a year is a year only if the
+  // rest still resolves). The artist may sit anywhere ("that drake song with the phone ring") and may be typed as
+  // one word ("popsmoke"). The longest artist name wins, then a name at either end, then the closer spelling, then
+  // the view without the date, so "anne marie" + "2002" beats "mario" (one fuzzy word) + "anne".
+  const names = Array.from(new Set(rows.flatMap((r) => artistNames(r.artist)))).map((n) => n.split(" "));
+  const views = qi.detail ? [mbTokens(qi.detail.rest), mbTokens(qi.text)] : [mbTokens(qi.text)];
+  type Cand = { title: string; artist: string; len: number; edge: boolean; sim: number };
+  let best: Cand | null = null;
+  const better = (a: Cand, b: Cand) => a.len !== b.len ? a.len > b.len : a.edge !== b.edge ? a.edge : a.sim > b.sim;
+  for (const words of views) {
+    for (const n of names) {
+      const hits: Array<{ start: number; span: number; sim: number }> = [];
+      const run = fuzzyPhrase(words, n);
+      if (run.sim > 0) hits.push({ start: run.start, span: n.length, sim: run.sim });
+      words.forEach((w, i) => {
+        const sim = compactSim(w, n);
+        if (sim >= 0.85) hits.push({ start: i, span: 1, sim });
+      });
+      for (const h of hits) {
+        const title = [...words.slice(0, h.start), ...words.slice(h.start + h.span)];
+        if (!title.length) continue;
+        const cand = { title: title.join(" "), artist: n.join(" "), len: n.length, edge: h.start === 0 || h.start + h.span === words.length, sim: h.sim };
+        if (!best || better(cand, best)) best = cand;
+      }
+    }
+  }
+  return best ? { title: best.title, artist: best.artist } : null;
+}
+
 async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutcome> {
   const text = cleanQuery(q);
   if (!text) return { kind: "none", reason: "Type a song, an artist and a year, or a date." };
@@ -483,11 +670,12 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
   // The hand-verified seed is the answer as it stands: zero external calls.
   if (fromIndex.kind === "accept" && fromIndex.match.group.rows.some((r) => r.where.includes("seed"))) {
     const others = matchAll(groups, qi).filter((m) => m.group !== fromIndex.match.group);
-    return songOutcome(fromIndex.match, others, yearOrSong);
+    return songOutcome(fromIndex.match, others, yearOrSong || fromIndex.match.noisy);
   }
 
   // 2. One MusicBrainz call and one iTunes call. Aimed at the index's song when it named one.
-  const target = fromIndex.kind === "accept" ? fromIndex.match.group : null;
+  const targetMatch = fromIndex.kind === "accept" ? fromIndex.match : null;
+  const target = targetMatch ? targetMatch.group : null;
   let mbText = text;
   // iTunes gets the title words as typed (stopwords too: "somebody that i used to know"), minus the date and filler.
   let itText = mbTokens(qi.detail ? qi.detail.rest : text).filter((t) => t !== "by").join(" ") || qi.whole || text;
@@ -496,6 +684,14 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
     const title = stripTitle(id.song);
     mbText = `${title} by ${primaryArtistName(id.artist)}`;
     itText = `${title} ${primaryArtistName(id.artist)}`;
+  } else {
+    // "title artist" with no separator: an artist the index knows at either end of the text (typos allowed) splits
+    // it, and MusicBrainz searches the rest as a title by that artist, spelled the way the charts spell it.
+    const split = knownArtistSplit(qi, indexRows);
+    if (split) {
+      mbText = `${split.title} by ${split.artist}`;
+      itText = `${split.title} ${split.artist}`;
+    }
   }
   const [mbRes, itRes] = await Promise.all([
     call(() => deps.musicbrainz(mbText), EXTERNAL_MS),
@@ -503,16 +699,25 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
   ]);
   mbRes.rows.forEach((r) => groups.add(r, "mb"));
   itRes.rows.forEach((r) => groups.addItunes(r, qi));
-  const matches = matchAll(groups, qi);
+  let matches = matchAll(groups, qi);
+
+  // Nothing matched as typed: ONE fuzzy MusicBrainz retry (so at most 2 MB calls per resolve; browserDeps spaces
+  // them ≥ 1.1 s apart for the 1 req/s rule). Not after a failed call: a busy MusicBrainz is not asked again.
+  if (!target && mbRes.ok && decide(matches, qi).kind === "none") {
+    const retry = await call(() => deps.musicbrainz(MB_FUZZY + mbText), EXTERNAL_MS);
+    retry.rows.forEach((r) => groups.add(r, "mb"));
+    matches = matchAll(groups, qi);
+  }
 
   if (target) {
-    const self = matches.find((m) => m.group === target) ?? { group: target, score: 0, artistHit: false, exactWhole: false, inYear: false };
-    return songOutcome(self, matches.filter((m) => m.group !== target), yearOrSong);
+    const self = matches.find((m) => m.group === target) ?? targetMatch!;
+    // A title found inside a description, with no artist to confirm it, is offered as a pick rather than launched.
+    return songOutcome(self, matches.filter((m) => m.group !== target), yearOrSong || self.noisy);
   }
 
   const decision = decide(matches, qi);
   if (decision.kind === "accept") {
-    return songOutcome(decision.match, matches.filter((m) => m.group !== decision.match.group), false);
+    return songOutcome(decision.match, matches.filter((m) => m.group !== decision.match.group), decision.match.noisy);
   }
   if (decision.kind === "ambiguous") {
     // §3.2: ambiguous input with a year falls back to that year; without one, show up to 3 and let them pick.
@@ -542,75 +747,177 @@ export async function resolveQuery(q: string, deps: ResolverDeps): Promise<Resol
 
 interface PreparedRow {
   song: DatedSong;
-  title: Set<string>;
-  artist: Set<string>;
+  titleList: string[]; // the stripped title's words, in order
+  all: Set<string>; // every title word (parentheticals too) and artist word
+  leads: string[][]; // the lead credit's names as word lists ("chief keef", "lil reese")
   forms: string[];
   year: number;
   bonus: number;
+  specific: boolean; // the title can stand inside a description: two content words, eight letters
 }
 export interface PreparedIndex {
   rows: PreparedRow[];
   postings: Map<string, number[]>;
+  vocab: Map<number, string[]>; // index words by length, for typo expansion
+  sounds: Map<string, string[]>; // index words by sound key
+  glued: Map<string, string>; // multi-word artist names and titles with the spaces removed → spaced ("chiefkeef" → "chief keef")
+  gluedByLen: Map<number, string[]>;
 }
 
 const SRC_BONUS = (src: string) => (src === "seed" ? 0.75 : src === "hot100" ? 0.5 : src.startsWith("lane:") ? 0.25 : 0);
-/** Optional `p` (best Hot 100 peak, 1–100) breaks ties between songs sharing a title; worth less than one artist word. */
-const PEAK_BONUS = (p: unknown) => (typeof p === "number" && p >= 1 && p <= 100 ? (0.9 * (101 - p)) / 100 : 0);
+/** `p` (best Hot 100 peak, 1–100) breaks ties between songs sharing a title; worth less than one artist word. */
+const PEAK_BONUS = (p: unknown) => (validPeak(p) ? (0.9 * (101 - p)) / 100 : 0);
+
+const bucket = <K, V>(m: Map<K, V[]>, k: K, v: V) => {
+  const list = m.get(k);
+  if (list) list.push(v);
+  else m.set(k, [v]);
+};
 
 export function prepareIndex(rows: unknown): PreparedIndex {
-  const out: PreparedIndex = { rows: [], postings: new Map() };
+  const out: PreparedIndex = { rows: [], postings: new Map(), vocab: new Map(), sounds: new Map(), glued: new Map(), gluedByLen: new Map() };
+  const glue = (words: string[]) => {
+    if (words.length < 2) return;
+    const k = words.join("");
+    if (k.length >= 6 && !/\d/.test(k) && !out.glued.has(k)) {
+      out.glued.set(k, words.join(" "));
+      bucket(out.gluedByLen, k.length, k);
+    }
+  };
   if (!Array.isArray(rows)) return out;
-  const parsed = rows.map((raw) => ({ raw: raw as IndexFileRow, song: indexRowToDatedSong(raw) }));
-  // An artist's chart footprint (rows in the index) ranks songs that share a title until a peak field exists:
-  // "Hold On" has 19 charted songs and the famous ones are by artists with many hits.
+  // Artists repeat across rows (one prolific artist, dozens of rows): normalise each credit once.
+  const credits = new Map<string, { key: string; words: string[]; leads: string[][] }>();
+  const credit = (a: string) => {
+    let c = credits.get(a);
+    if (!c) {
+      c = { key: primaryArtistKey(a), words: tokens(a), leads: [...primaryKeysLoose(a)].map((n) => n.split(" ")) };
+      credits.set(a, c);
+    }
+    return c;
+  };
+  const parsed = rows.map((raw) => {
+    const song = indexRowToDatedSong(raw);
+    return { raw: raw as IndexFileRow, song, credit: song ? credit(song.artist) : null };
+  });
+  // An artist's chart footprint (rows in the index) is a weak popularity signal for songs that share a title.
   const footprint = new Map<string, number>();
-  for (const { song } of parsed) if (song) footprint.set(primaryArtistKey(song.artist), (footprint.get(primaryArtistKey(song.artist)) ?? 0) + 1);
-  for (const { raw: r, song } of parsed) {
-    if (!song) continue;
+  for (const { credit: c } of parsed) if (c) footprint.set(c.key, (footprint.get(c.key) ?? 0) + 1);
+  for (const { raw: r, song, credit: c } of parsed) {
+    if (!song || !c) continue;
     const forms = titleForms(song.song);
-    const title = new Set(forms.flatMap((f) => f.split(" ")));
-    const artist = new Set(tokens(song.artist));
+    const titleList = (forms[0] ?? "").split(" ").filter(Boolean);
+    const all = new Set([...forms.flatMap((f) => f.split(" ")), ...c.words]);
+    const leads = c.leads;
     const id = out.rows.length;
-    const fame = Math.min(Math.log2((footprint.get(primaryArtistKey(song.artist)) ?? 0) + 1), 7) * 0.08;
-    out.rows.push({ song, title, artist, forms, year: Number(song.date.slice(0, 4)), bonus: SRC_BONUS(String(r.src ?? "")) + PEAK_BONUS(r.p) + fame });
-    for (const t of new Set([...title, ...artist])) {
-      const list = out.postings.get(t);
-      if (list) list.push(id);
-      else out.postings.set(t, [id]);
+    const fame = Math.min(Math.log2((footprint.get(c.key) ?? 0) + 1), 7) * 0.08;
+    const specific = titleList.filter((t) => !isStopword(t)).length >= 2 && titleList.join("").length >= 8;
+    out.rows.push({ song, titleList, all, leads, forms, year: Number(song.date.slice(0, 4)), bonus: SRC_BONUS(String(r.src ?? "")) + PEAK_BONUS(r.p) + fame, specific });
+    glue(titleList);
+    leads.forEach(glue);
+    for (const t of all) bucket(out.postings, t, id);
+  }
+  for (const t of out.postings.keys()) {
+    if (/\d/.test(t)) continue;
+    bucket(out.vocab, t.length, t);
+    if (t.length >= 3) bucket(out.sounds, soundKey(t), t);
+  }
+  return out;
+}
+
+/** Index words a typed word may mean, with their similarity (exact, sound key, one or two edits, prefix). */
+function expand(index: PreparedIndex, q: string): Map<string, number> {
+  const out = new Map<string, number>();
+  if (index.postings.has(q)) out.set(q, 1);
+  if (/\d/.test(q)) return out;
+  const put = (t: string) => {
+    const sim = tokenSim(q, t);
+    if (sim > (out.get(t) ?? 0)) out.set(t, sim);
+  };
+  if (q.length >= 3) (index.sounds.get(soundKey(q)) ?? []).forEach(put);
+  const max = q.length >= 8 ? 2 : q.length >= 4 ? 1 : 0;
+  for (let len = Math.max(4, q.length - max); max && len <= q.length + max; len++) {
+    for (const t of index.vocab.get(len) ?? []) if (editDistance(q, t, max) <= max) put(t);
+  }
+  if (q.length >= 3) {
+    for (let len = q.length + 1; len <= Math.floor(q.length / 0.6); len++) {
+      for (const t of index.vocab.get(len) ?? []) if (t.startsWith(q)) put(t);
     }
   }
   return out;
 }
 
 /**
- * Fuzzy own-index lookup. Every non-filler word must appear in the title or artist; date words are optional
- * (they boost rows within ±1 year) unless the text is only a date, when the title itself must carry them ("1999").
- * Title words weigh 3, artist words 1, an exact title 5.
+ * Own-index lookup, typo tolerant. A row is a candidate when most of its title is in the text (and the text is
+ * mostly explained by it), when every word of the text is explained by its title and artist, or when its lead
+ * artist sits at either end of the text (so the resolver learns that artist's spelling). Date words are optional
+ * (rows within ±1 year are boosted) unless the text is only a date, when the title itself must carry them ("1999").
+ * Score: title coverage 6, text coverage 2, artist coverage 1.5, an exact title 5, the year 4, then source / peak.
  */
 export function searchIndex(index: PreparedIndex, q: string, limit = 8): DatedSong[] {
-  const text = cleanQuery(q);
-  if (!text) return [];
+  const cleaned = cleanQuery(q);
+  if (!cleaned) return [];
+  const text = unglue(index, cleaned);
   const qi = queryInfo(text);
-  const required = qi.content;
-  const seedTokens = required.length ? required : qi.dateTokens;
-  if (!seedTokens.length) return [];
-  const lists = seedTokens.map((t) => index.postings.get(t) ?? []);
-  if (required.length && lists.some((l) => l.length === 0)) return [];
-  const shortest = lists.reduce((a, b) => (b.length < a.length ? b : a));
   const scored: Array<{ row: PreparedRow; score: number }> = [];
-  for (const id of shortest) {
-    const row = index.rows[id];
-    if (required.length) {
-      if (!required.every((t) => row.title.has(t) || row.artist.has(t))) continue;
-    } else if (!qi.dateTokens.every((t) => row.title.has(t))) continue;
-    let score = row.bonus;
-    for (const t of qi.wholeTokens) {
-      if (row.title.has(t)) score += 3;
-      else if (row.artist.has(t)) score += 1;
+  const yearBoost = (row: PreparedRow) => (qi.year !== null && Math.abs(row.year - qi.year) <= 1 ? 4 : 0);
+  const exactTitle = (row: PreparedRow) => row.forms.some((f) => f === qi.whole || (qi.rest !== "" && f === qi.rest));
+
+  if (!qi.content.length) {
+    // Only a date: titles that carry every date word, as typed.
+    if (!qi.dateTokens.length) return [];
+    const lists = qi.dateTokens.map((t) => index.postings.get(t) ?? []);
+    const shortest = lists.reduce((a, b) => (b.length < a.length ? b : a));
+    for (const id of shortest) {
+      const row = index.rows[id];
+      if (!qi.dateTokens.every((t) => row.forms.some((f) => f.split(" ").includes(t)))) continue;
+      scored.push({ row, score: 6 + (exactTitle(row) ? 5 : 0) + yearBoost(row) + row.bonus });
     }
-    if (row.forms.some((f) => f === qi.whole || (qi.rest !== "" && f === qi.rest))) score += 5;
-    if (qi.year !== null && Math.abs(row.year - qi.year) <= 1) score += 4;
-    scored.push({ row, score });
+  } else {
+    const exp = new Map(qi.content.map((t) => [t, expand(index, t)] as const));
+    const sim = (w: string, t: string) => (w === t ? 1 : exp.get(w)?.get(t) ?? 0);
+    const best = (w: string, ts: Iterable<string>) => {
+      let b = 0;
+      for (const t of ts) {
+        const v = sim(w, t);
+        if (v > b) b = v;
+      }
+      return b;
+    };
+    const candidates = new Set<number>();
+    for (const m of exp.values()) for (const t of m.keys()) for (const id of index.postings.get(t) ?? []) candidates.add(id);
+    for (const id of candidates) {
+      const row = index.rows[id];
+      const tsims = row.titleList.map((t) => bestOf(qi.wholeList, t, sim));
+      // One short title word may be one edit off what was typed ("shake it of") when the rest matched exactly.
+      const missing = tsims.flatMap((v, j) => (v === 0 ? [j] : []));
+      let shortWord = "";
+      if (missing.length === 1 && tsims.every((v, j) => v === 1 || j === missing[0])) {
+        const t = row.titleList[missing[0]];
+        const exactLetters = row.titleList.reduce((n, x, j) => (j === missing[0] ? n : n + x.length), 0);
+        const w = t.length <= 4 && exactLetters >= 4 ? qi.wholeList.find((x) => x.length >= 2 && x.length <= 3 && Math.min(x.length, t.length) <= 3 && editDistance(x, t, 1) <= 1) : undefined;
+        if (w) {
+          tsims[missing[0]] = 0.75;
+          shortWord = w;
+        }
+      }
+      const titleCov = row.titleList.length ? tsims.reduce((a, b) => a + b, 0) / row.titleList.length : 0;
+      const textCov = qi.content.reduce((acc, w) => acc + best(w, row.all), 0) / qi.content.length;
+      let artistCov = 0;
+      let artistNamed = false;
+      for (const lead of row.leads) {
+        const cov = lead.reduce((acc, a) => acc + bestOf(qi.content, a, sim), 0) / lead.length;
+        artistCov = Math.max(artistCov, cov);
+        // The lead artist named anywhere, with other words beside it: return the row so the resolver learns the name.
+        if (lead.length < qi.content.length && fuzzyPhrase(qi.content, lead).sim > 0) artistNamed = true;
+      }
+      // A specific title as one contiguous run stands even inside a long description.
+      const inDescription = row.specific && titleCov >= 0.85 && fuzzyPhrase(qi.wholeList, row.titleList, 0.8, true).sim > 0;
+      if (!((titleCov >= 0.6 && textCov >= 0.5) || textCov >= 0.999 || artistNamed || inDescription)) continue;
+      // The row that accounts for every typed word (filler and the date aside) ranks above ones that leave a word.
+      const accountsForAll = qi.wholeList.every((w) => FILLER.has(w) || qi.dateSet.has(w) || w === shortWord || best(w, row.all) >= 0.8);
+      const score = 6 * titleCov + 2 * textCov + 1.5 * artistCov + (exactTitle(row) ? 5 : 0) + (accountsForAll ? 4 : 0) + yearBoost(row) + row.bonus;
+      scored.push({ row, score });
+    }
   }
   return scored
     .sort((a, b) => b.score - a.score)
@@ -618,9 +925,52 @@ export function searchIndex(index: PreparedIndex, q: string, limit = 8): DatedSo
     .map(({ row }) => ({ ...row.song, where: [...row.song.where] }));
 }
 
+/**
+ * Rewrite a typed run-together word ("chiefkeef", "lilpeep", "hotlinebling") as the index's spaced name when the
+ * index does not know the word itself; one or two typos allowed by length, as in tokenSim.
+ */
+function unglue(index: PreparedIndex, text: string): string {
+  let changed = false;
+  const out = text.split(/(\s+)/).map((piece) => {
+    const w = norm(piece);
+    if (w.length < 6 || w.includes(" ") || /\d/.test(w) || index.postings.has(w)) return piece;
+    let spaced = index.glued.get(w);
+    if (!spaced) {
+      const max = w.length >= 8 ? 2 : 1;
+      let bestD = max + 1;
+      for (let len = w.length - max; len <= w.length + max; len++) {
+        for (const k of index.gluedByLen.get(len) ?? []) {
+          if (k[0] !== w[0]) continue;
+          const d = editDistance(w, k, max);
+          if (d < bestD) {
+            bestD = d;
+            spaced = index.glued.get(k);
+          }
+        }
+      }
+    }
+    if (!spaced) return piece;
+    changed = true;
+    return spaced;
+  });
+  return changed ? out.join("") : text;
+}
+
+/** Best similarity of index word `t` against any typed word (typed words outside the expansion match only exactly). */
+function bestOf(words: string[], t: string, sim: (w: string, t: string) => number): number {
+  let b = 0;
+  for (const w of words) {
+    const v = sim(w, t);
+    if (v > b) b = v;
+  }
+  return b;
+}
+
 // ── browser dependencies ──────────────────────────────────────────────────────
 
-const MB_FILLER = new Set(["ft", "feat", "featuring", "prod", "song", "track"]);
+const MB_FILLER = new Set(["ft", "feat", "featuring", "prod", "song", "track", "word", "official", "video", "lyrics", "lyric", "audio", "remix"]);
+/** Prefix on the text handed to `musicbrainz(q)` that asks for the fuzzy retry query (Lucene `~` on each word). */
+export const MB_FUZZY = "~ ";
 const TRAILING_SOFT = new Set(["in", "from", "around", "during", "back", "on"]);
 const mbTokens = (s: string) => tokens(s).filter((t) => !MB_FILLER.has(t));
 
@@ -650,15 +1000,27 @@ function splitReadings(raw: string): Array<[string, string]> {
  * without the date phrase. Only normalised words reach the query, so input cannot inject Lucene syntax.
  */
 export function buildMbQuery(text: string): string {
-  const raw = cleanQuery(text);
+  const fuzzy = typeof text === "string" && text.startsWith(MB_FUZZY);
+  const raw = cleanQuery(fuzzy ? text.slice(MB_FUZZY.length) : text);
   const clauses: string[] = [];
   const add = (c: string) => {
     if (!clauses.includes(c)) clauses.push(c);
   };
+  // Exact: a phrase. Fuzzy retry: every word with an edit allowance (1 for 4–7 letters, 2 for 8+; numbers exact).
+  const fz = (t: string) => (/\d/.test(t) ? t : t.length >= 8 ? `${t}~2` : t.length >= 4 ? `${t}~1` : t);
+  const field = (name: string, words: string[]) => (fuzzy ? `${name}:(${words.map(fz).join(" AND ")})` : `${name}:"${words.join(" ")}"`);
   const detail = extractDateDetail(raw);
   const texts = [raw];
   if (detail && detail.rest.trim()) texts.push(detail.rest);
-  for (const t of texts) for (const [title, artist] of splitReadings(t)) add(`(recording:"${title}" AND artist:"${artist}")^3`);
+  for (const t of texts) {
+    for (const [title, artist] of splitReadings(t)) {
+      const tw = title.split(" ");
+      const aw = artist.split(" ");
+      add(`(${field("recording", tw)} AND ${field("artist", aw)})^3`);
+      // A known artist with a title half-remembered ("hot n" for "Hot N*gga"): any of the title's words.
+      if (!fuzzy) add(`(${field("artist", aw)} AND recording:(${tw.join(" ")}))^2`);
+    }
+  }
   for (const t of texts) {
     const toks = mbTokens(t).slice(0, 10);
     // "cuz my gear in" (a bare "in" left before the year) also tries "cuz my gear".
@@ -666,13 +1028,13 @@ export function buildMbQuery(text: string): string {
     while (trimmed.length > 1 && TRAILING_SOFT.has(trimmed[trimmed.length - 1])) trimmed.pop();
     for (const v of trimmed.length !== toks.length ? [toks, trimmed] : [toks]) {
       if (!v.length) continue;
-      add(`recording:"${v.join(" ")}"^2`);
+      add(`${field("recording", v)}^2`);
       if (v.length > 8) continue;
       for (let k = 1; k < v.length; k++) {
-        const left = v.slice(0, k).join(" ");
-        const right = v.slice(k).join(" ");
-        add(`(artist:"${left}" AND recording:"${right}")`);
-        add(`(recording:"${left}" AND artist:"${right}")`);
+        const left = v.slice(0, k);
+        const right = v.slice(k);
+        add(`(${field("artist", left)} AND ${field("recording", right)})`);
+        add(`(${field("recording", left)} AND ${field("artist", right)})`);
       }
     }
   }
@@ -681,6 +1043,7 @@ export function buildMbQuery(text: string): string {
 }
 
 type MbCredit = { name?: unknown; joinphrase?: unknown; artist?: { name?: unknown } };
+const LIVE_TITLE = /[([][^)\]]*\b(?:live|session|sessions|performance)\b[^)\]]*[)\]]|\s[-\u2013\u2014]\s(?:live|session)\b/i;
 
 /**
  * A recording's first-release-date counts bootlegs and promos. When the search lists the releases, date the
@@ -739,6 +1102,9 @@ export function mapItunes(json: unknown): DatedSong[] {
   for (const x of results as Array<Record<string, unknown>>) {
     if (!x || x.kind !== "song" || typeof x.trackName !== "string" || typeof x.artistName !== "string") continue;
     if (typeof x.collectionName === "string" && BAD_ALBUM.test(x.collectionName)) continue;
+    // A live take or session is a performance, not the release, and its date misleads (measured: "Last Last
+    // (Apple Music Live)" is dated a year before the single). MusicBrainz excludes the same with NOT comment:live.
+    if (LIVE_TITLE.test(x.trackName)) continue;
     const day = typeof x.releaseDate === "string" ? x.releaseDate.slice(0, 10) : "";
     const parsed = parsePartialDate(day);
     if (!parsed) continue;
@@ -756,6 +1122,9 @@ export function mapItunes(json: unknown): DatedSong[] {
   }
   return out;
 }
+
+const MB_SPACING_MS = 1_100;
+let lastMbAt = 0;
 
 async function getJson(url: string, ms: number, external: boolean): Promise<unknown> {
   const ctl = typeof AbortController !== "undefined" ? new AbortController() : null;
@@ -783,6 +1152,11 @@ export function browserDeps(): ResolverDeps {
       return Array.isArray(rows) ? (rows as DatedSong[]) : [];
     },
     async musicbrainz(q: string) {
+      // MusicBrainz allows 1 request per second per client; a resolve can make two (exact, then fuzzy).
+      // Clamped to one spacing: a clock that steps backwards must never stall a resolve.
+      const wait = Math.min(MB_SPACING_MS, MB_SPACING_MS - (Date.now() - lastMbAt));
+      if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+      lastMbAt = Date.now();
       const url = `https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(buildMbQuery(q))}&fmt=json&limit=8`;
       return mapMusicBrainz(await getJson(url, EXTERNAL_MS, true));
     },

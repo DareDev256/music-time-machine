@@ -1,21 +1,27 @@
+// @vitest-environment node
 // The core cases against the REAL public/era/index.json (built by data/scripts/build_index.py), offline:
 // MusicBrainz and iTunes are spies that answer nothing, so every assertion here is the index's doing.
 import { describe, it, expect, vi, beforeAll } from "vitest";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { prepareIndex, resolveQuery, searchIndex, type PreparedIndex, type ResolverDeps } from "@/lib/era/resolve";
+import { norm, normUnicode } from "@/lib/era/normalize";
 
 const FILE = path.join(process.cwd(), "public", "era", "index.json");
 const present = existsSync(FILE);
 
 describe.skipIf(!present)("resolver against the real index", () => {
   let index: PreparedIndex;
-  let prepMs = 0;
+  let prepCpuMs = 0;
 
   beforeAll(() => {
-    const t = performance.now();
-    index = prepareIndex((JSON.parse(readFileSync(FILE, "utf8")) as { rows: unknown[] }).rows);
-    prepMs = performance.now() - t;
+    const rows = (JSON.parse(readFileSync(FILE, "utf8")) as { rows: unknown[] }).rows;
+    // CPU time of the build itself: /api/resolve pays it on every cold start. Wall time on a shared Mac measures
+    // the other sessions (it swung 2.7–5.9 s at load average 130–200 for the same code).
+    const c = process.cpuUsage();
+    index = prepareIndex(rows);
+    const d = process.cpuUsage(c);
+    prepCpuMs = (d.user + d.system) / 1000;
   });
 
   const deps = () => {
@@ -27,12 +33,19 @@ describe.skipIf(!present)("resolver against the real index", () => {
     return d satisfies ResolverDeps;
   };
 
-  it("loads and indexes once in well under 2 s, and answers a lookup in under 50 ms", () => {
+  it("builds the index in under 1 s of CPU, and answers a typo-tolerant lookup in under 50 ms of CPU", () => {
     expect(index.rows.length).toBeGreaterThan(5000);
-    expect(prepMs).toBeLessThan(2000);
-    const t = performance.now();
-    for (let i = 0; i < 20; i++) searchIndex(index, "hold on");
-    expect((performance.now() - t) / 20).toBeLessThan(50);
+    expect(prepCpuMs).toBeLessThan(1000);
+    const c = process.cpuUsage();
+    for (let i = 0; i < 20; i++) searchIndex(index, i % 2 ? "hold on" : "tenessee whiskey chris stapleton");
+    const d = process.cpuUsage(c);
+    expect((d.user + d.system) / 1000 / 20).toBeLessThan(50);
+  });
+
+  it("the ASCII fast path of norm is identical to the general path on every title and artist in the index", () => {
+    const raw = (JSON.parse(readFileSync(FILE, "utf8")) as { rows: Array<{ s: string; a: string }> }).rows;
+    const differ = raw.flatMap((r) => [r.s, r.a]).filter((x) => /^[\x00-\x7f]*$/.test(x) && norm(x) !== normUnicode(x));
+    expect(differ).toEqual([]);
   });
 
   it.each([

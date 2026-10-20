@@ -16,6 +16,8 @@ export interface DatedSong {
   youtubeId?: string;
   mbid?: string;
   isrc?: string;
+  /** Best Hot 100 peak (1–100) when the index knows it. Ranks songs that share a title ("Billie Jean": #1 vs #47). */
+  peak?: number;
 }
 
 export type ResolveOutcome =

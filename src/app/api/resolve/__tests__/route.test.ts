@@ -24,6 +24,18 @@ const FIXTURE = {
     row("Earth Song", "Earth, Wind & Fire", "1979-01-01"),
     row("Somebody That I Used To Know", "Gotye Featuring Kimbra", "2012-01-28"),
     row("No Lie (feat. Drake)", "2 Chainz", "2012-05-05"),
+    row("Rolling In The Deep", "Adele", "2010-12-25", "hot100", { p: 1 }),
+    row("Despacito", "Luis Fonsi & Daddy Yankee Featuring Justin Bieber", "2017-02-04", "hot100", { p: 1 }),
+    row("Tennessee Whiskey", "Chris Stapleton", "2015-11-21", "hot100", { p: 20 }),
+    row("Billie Jean", "Michael Jackson", "1983-01-22", "hot100", { p: 1 }),
+    row("Billie Jean", "David Cook", "2008-06-07", "hot100", { p: 47 }),
+    row("Hot Boy", "Bobby Shmurda", "2014-08-16", "hot100", { p: 6 }),
+    row("(I Can't Get No) Satisfaction", "The Rolling Stones", "1965-06-12", "hot100", { p: 1 }),
+    row("Hotline Bling", "Drake", "2015-08-15", "hot100", { p: 2 }),
+    ...["Ian Matthews", "Metro Station", "Kay Flock", "Bob Seger", "Brick", "Glenn Lewis", "Ylvis", "Reba", "Jon Bon Jovi"].map((a, i) =>
+      row("Shake It", a, `${1970 + i}-01-01`, "hot100", { p: i === 0 ? 1 : 50 })), // one of them a #1 too: the peak cannot decide
+    row("Shake It Off", "Taylor Swift", "2014-09-06", "hot100", { p: 1 }),
+    row("Star Shopping", "Lil Peep", "2017-01-15", "heat:hypem"),
     row("1999", "Prince", "1982-11-06"),
     row("Party Like It's 1999", "Someone", "1999-01-01", "heat:hotnewhiphop"),
     row("Party Anthem", "Club 1999", "2001-01-01", "heat:hypem"),
@@ -127,13 +139,56 @@ describe("GET /api/resolve — matching", () => {
     expect(top).toMatchObject({ song: "1999", dateSource: "entered the Hot 100" });
   });
 
-  it("every query token must appear in the title or artist", async () => {
+  it("the row that explains more of the text ranks first (words are not all required)", async () => {
     const r = await rows("hold on wilson");
-    expect(r.map((x) => x.artist)).toEqual(["Wilson Phillips"]);
+    expect(r[0].artist).toBe("Wilson Phillips");
   });
 
   it("artist words count too", async () => {
-    expect((await rows("chief keef gear")).map((x) => x.song)).toEqual(["Cuz My Gear"]);
+    expect((await rows("chief keef gear"))[0].song).toBe("Cuz My Gear");
+  });
+
+  it.each([
+    ["rolling in the deap", "Rolling In The Deep", "Adele"],
+    ["despasito luis fonsi", "Despacito", "Luis Fonsi & Daddy Yankee Featuring Justin Bieber"],
+    ["i dont like chif keef", "I Don't Like", "Chief Keef ft. Lil Reese"],
+    ["tenessee whiskey", "Tennessee Whiskey", "Chris Stapleton"],
+  ])('tolerates typos: "%s" → %s', async (q, song, artist) => {
+    expect((await rows(q))[0]).toMatchObject({ song, artist });
+  });
+
+  it("a typo that matches two songs ranks the bigger hit first (peak p)", async () => {
+    const r = await rows("billy jean");
+    expect(r.slice(0, 2).map((x) => x.artist)).toEqual(["Michael Jackson", "David Cook"]);
+  });
+
+  it("an artist at either end of the text returns that artist's songs, so the resolver learns the spelling", async () => {
+    expect((await rows("bobby shmurda hot n word song")).map((x) => x.artist)).toContain("Bobby Shmurda");
+  });
+
+  it("a short typed word one edit off still ranks the title that accounts for every word first", async () => {
+    // nine songs are called exactly "Shake It"; the one that also explains "of" must not be pushed out of the top 8
+    expect((await rows("shake it of"))[0]).toMatchObject({ song: "Shake It Off", artist: "Taylor Swift" });
+  });
+
+  it("a specific title stands inside a long description", async () => {
+    // most of these words are description: under half the text is the title, which must still be found
+    expect((await rows("that song with the phone ringing in the video where everyone is dancing hotline bling"))[0].song).toBe("Hotline Bling");
+  });
+
+  it("run-together words map onto spaced artist names, typos allowed", async () => {
+    expect((await rows("lilpeep star shopping"))[0]).toMatchObject({ song: "Star Shopping", artist: "Lil Peep" });
+    expect((await rows("lilpeep")).map((x) => x.artist)).toContain("Lil Peep"); // only the glued name: nothing else to match
+    expect((await rows("lilpep")).map((x) => x.artist)).toContain("Lil Peep"); // glued and misspelled
+    expect((await rows("chiefkef i dont like"))[0].song).toBe("I Don't Like");
+  });
+
+  it("a title's parenthetical words count as title words", async () => {
+    expect((await rows("i cant get no satisfaction"))[0].song).toBe("(I Can't Get No) Satisfaction");
+  });
+
+  it("numbers match only exactly: 1990 is not 1999", async () => {
+    expect((await rows("1990")).map((x) => x.song)).not.toContain("1999");
   });
 
   it("strips accents, featured credits in parentheses, and treats & as and", async () => {

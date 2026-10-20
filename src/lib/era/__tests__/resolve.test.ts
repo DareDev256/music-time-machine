@@ -8,9 +8,11 @@ import {
   mapItunes,
   mergeSong,
   indexRowToDatedSong,
+  MB_FUZZY,
   type ResolverDeps,
 } from "@/lib/era/resolve";
 import { flightTarget } from "@/lib/era/dates";
+import { cleanQuery, editDistance, fuzzyPhrase, norm, soundKey, tokenSim } from "@/lib/era/normalize";
 
 // ── fixtures: rows exactly as each dependency hands them over ────────────────
 const chart = (song: string, artist: string, date: string): DatedSong => ({
@@ -35,10 +37,11 @@ function fakeDeps(opts: { index?: Rows; mb?: Rows; itunes?: Rows } = {}) {
     if (typeof r === "function") r();
     return (r as DatedSong[] | undefined) ?? [];
   };
+  type Dep = (q: string) => Promise<DatedSong[]>;
   const deps = {
-    indexSearch: vi.fn(run(opts.index)),
-    musicbrainz: vi.fn(run(opts.mb)),
-    itunes: vi.fn(run(opts.itunes)),
+    indexSearch: vi.fn<Dep>(run(opts.index)),
+    musicbrainz: vi.fn<Dep>(run(opts.mb)),
+    itunes: vi.fn<Dep>(run(opts.itunes)),
   };
   return deps satisfies ResolverDeps;
 }
@@ -301,9 +304,19 @@ describe("partial dates", () => {
     expect(merged).toMatchObject({ date: "2012-04-04", granularity: "day", dateSource: "uploaded to YouTube" });
   });
 
-  it("an earlier year-only date still beats a later day", () => {
-    const merged = mergeSong([chart("X", "Y", "2013-03-02"), mb("X", "Y", "2011-06-15", "year")]);
+  it("an earlier year-only date beats a later day when it is within 12 months of it", () => {
+    const merged = mergeSong([chart("X", "Y", "2012-03-02"), mb("X", "Y", "2011-06-15", "year")]);
     expect(merged).toMatchObject({ date: "2011-06-15", granularity: "year" });
+  });
+
+  it("a year-only date more than 12 months before every full date from another source is not credible", () => {
+    // Measured: MusicBrainz files Chris Stapleton's "Tennessee Whiskey" (released 2015) under "2012".
+    const merged = mergeSong([mb("Tennessee Whiskey", "Chris Stapleton", "2012-06-15", "year"), it_("Tennessee Whiskey", "Chris Stapleton", "2015-04-23")]);
+    expect(merged).toMatchObject({ date: "2015-04-23", dateSource: "released (iTunes)" });
+  });
+
+  it("a year-only date with nothing finer to contradict it still counts", () => {
+    expect(mergeSong([mb("X", "Y", "1975-06-15", "year"), mb("X", "Y", "1977-06-15", "year")]).date).toBe("1975-06-15");
   });
 });
 
@@ -576,6 +589,12 @@ describe("earliest credible date", () => {
     expect(merged).toMatchObject({ date: "2012-09-01", granularity: "day" });
   });
 
+  it("the plainest spelling names the song: a blog-post index row does not", () => {
+    const blog: DatedSong = { ...chart("Hotline Bling (Cha Cha Remix) (CDQ)", "Drake", "2015-08-15"), dateSource: "seen on HotNewHipHop" };
+    const merged = mergeSong([blog, it_("Hotline Bling", "Drake", "2015-07-31")]);
+    expect(merged).toMatchObject({ song: "Hotline Bling", artist: "Drake", date: "2015-07-31" });
+  });
+
   it("keeps the identity of the chart / seed row and the union of where it lived", () => {
     const merged = mergeSong([chart("Rolling In The Deep", "Adele", "2010-12-18"), mb("Rolling in the Deep", "Adele", "2010-10-21")]);
     expect(merged).toMatchObject({ song: "Rolling In The Deep", where: ["chart", "musicbrainz"] });
@@ -656,15 +675,139 @@ describe("date outcomes", () => {
 });
 
 describe("call budget", () => {
-  it.each(["hold on", "shut up stormzy", "rolling in the deep 2011", "cuz my gear 2012", "chief keef - cuz my gear", "1999"])(
-    '"%s" makes at most one MusicBrainz call',
+  it.each(["hold on", "shut up stormzy", "rolling in the deep 2011", "cuz my gear 2012", "chief keef - cuz my gear", "1999", "zzq unknown words"])(
+    '"%s" makes at most two MusicBrainz calls (exact, then fuzzy) and one iTunes call',
     async (q) => {
       const deps = fakeDeps({ index: [chart("Rolling in the Deep", "Adele", "2010-12-18"), chart("1999", "Prince", "1982-11-06")] });
       await resolveQuery(q, deps);
-      expect(deps.musicbrainz.mock.calls.length).toBeLessThanOrEqual(1);
+      expect(deps.musicbrainz.mock.calls.length).toBeLessThanOrEqual(2);
       expect(deps.itunes.mock.calls.length).toBeLessThanOrEqual(1);
     },
   );
+
+  it("the fuzzy retry happens only when nothing matched, and is marked for the query builder", async () => {
+    const deps = fakeDeps({ mb: [] });
+    await resolveQuery("tenessee whiskey chris stapleton", deps);
+    expect(deps.musicbrainz).toHaveBeenCalledTimes(2);
+    expect(deps.musicbrainz.mock.calls[1][0].startsWith(MB_FUZZY)).toBe(true);
+  });
+
+  it("no fuzzy retry when the first call already matched", async () => {
+    const deps = fakeDeps({ mb: [mb("Cuz My Gear", "Chief Keef ft. Riff Raff", "2012-05-17")] });
+    await resolveQuery("chief keef cuz my gear", deps);
+    expect(deps.musicbrainz).toHaveBeenCalledTimes(1);
+  });
+
+  it("no fuzzy retry after a failed call: a busy MusicBrainz is not asked again", async () => {
+    const deps = fakeDeps({ mb: boom });
+    await resolveQuery("tenessee whiskey chris stapleton", deps);
+    expect(deps.musicbrainz).toHaveBeenCalledTimes(1);
+  });
+
+  it("the fuzzy retry finds a misspelled title", async () => {
+    const deps = fakeDeps();
+    deps.musicbrainz.mockImplementation(async (q: string) =>
+      q.startsWith(MB_FUZZY) ? [mb("Tennessee Whiskey", "Chris Stapleton", "2015-05-05")] : [],
+    );
+    expect(asSong(await resolveQuery("tenessee whiskey chris stapleton", deps)).best).toMatchObject({ song: "Tennessee Whiskey", date: "2015-05-05" });
+  });
+});
+
+// ── typo tolerance and "title artist" with no separator ───────────────────────
+describe("typo tolerance", () => {
+  it("tokenSim: exact, sound-alike, one or two edits, prefix, numbers exact", () => {
+    expect(tokenSim("gear", "gear")).toBe(1);
+    expect(tokenSim("billy", "billie")).toBe(0.9); // two edits apart, same sound key
+    expect(tokenSim("despasito", "despacito")).toBe(0.9);
+    expect(tokenSim("chif", "chief")).toBe(0.85); // 4 letters: one edit
+    expect(tokenSim("xxtentacion", "xxxtentacion")).toBeGreaterThan(0.8); // 8+ letters: two edits
+    expect(tokenSim("cat", "cut")).toBe(0); // under 4 letters: no edits
+    expect(tokenSim("shmurd", "shmurda")).toBeGreaterThanOrEqual(0.8); // prefix
+    expect(tokenSim("hot", "hotline")).toBe(0); // prefix too short for the word
+    expect(tokenSim("1990", "1999")).toBe(0);
+    expect(soundKey("tenessee")).toBe(soundKey("tennessee"));
+    expect(editDistance("teh", "the", 1)).toBe(1); // a swap is one edit
+  });
+
+  it("a misspelled title still finds the indexed song", async () => {
+    const deps = fakeDeps({ index: [chart("Rolling In The Deep", "Adele", "2010-12-25")] });
+    expect(asSong(await resolveQuery("rolling in the deap", deps)).best.artist).toBe("Adele");
+  });
+
+  it("a misspelled artist still counts as naming the artist (and the seed still needs no calls)", async () => {
+    const deps = fakeDeps({ index: [seed("I Don't Like", "Chief Keef & Lil Reese", "2012-03-12")] });
+    const out = asSong(await resolveQuery("i dont like chif keef", deps));
+    expect(out.best).toMatchObject({ song: "I Don't Like", date: "2012-03-12" });
+    expect(deps.musicbrainz).not.toHaveBeenCalled();
+  });
+
+  it("an exact match drops fuzzy look-alikes instead of turning them into a pick", async () => {
+    const deps = fakeDeps({ index: [chart("Hold On", "Wilson Phillips", "1990-04-14"), chart("Gold On", "Somebody", "1999-01-01")] });
+    const out = asSong(await resolveQuery("hold on", deps));
+    expect(out.best.artist).toBe("Wilson Phillips");
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("a charted song found through a typo beats an obscure recording spelled the way it was typed", async () => {
+    const deps = fakeDeps({
+      index: [{ ...chart("Billie Jean", "Michael Jackson", "1983-01-22"), peak: 1 }, { ...chart("Billie Jean", "David Cook", "2008-06-07"), peak: 47 }],
+      mb: [mb("Billy Jean", "John Verkroost", "1988-06-15", "year")],
+    });
+    const out = asSong(await resolveQuery("billy jean", deps));
+    expect(out.best).toMatchObject({ artist: "Michael Jackson", date: "1983-01-22" });
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("a top-10 hit against versions that never made the top 40 settles a shared title; two big hits do not", async () => {
+    const holdOn = fakeDeps({ index: [{ ...chart("Hold On", "Wilson Phillips", "1990-04-14"), peak: 1 }, { ...chart("Hold On", "En Vogue", "1990-05-12"), peak: 2 }] });
+    expect(asSong(await resolveQuery("hold on", holdOn)).needsPick).toBe(true);
+  });
+
+  it("an index artist at the end of the text splits it for MusicBrainz, spelled the index's way", async () => {
+    const deps = fakeDeps({ index: [chart("Hot Boy", "Bobby Shmurda", "2014-08-16")] });
+    deps.musicbrainz.mockResolvedValue([mb("Hot N*gga", "Bobby Shmurda", "2014-03-28")]);
+    const out = asSong(await resolveQuery("bobby shmurda hot n word song", deps));
+    expect(deps.musicbrainz.mock.calls[0][0]).toBe("hot n by bobby shmurda");
+    expect(out.best).toMatchObject({ song: "Hot N*gga", date: "2014-03-28" });
+  });
+
+  it("…and fixes the artist's spelling on the way", async () => {
+    const deps = fakeDeps({ index: [chart("Love Sosa", "Chief Keef", "2012-12-01")] });
+    await resolveQuery("chif keef some unreleased leak", deps);
+    expect(deps.musicbrainz.mock.calls[0][0]).toBe("some unreleased leak by chief keef");
+  });
+
+  it("an iTunes-only hit counts when the artist appears anywhere in the text, misspelled or not", async () => {
+    const deps = fakeDeps({ mb: boom, itunes: [it_("Despacito", "Luis Fonsi & Daddy Yankee", "2017-01-12")] });
+    expect(asSong(await resolveQuery("despasito luis fonsi", deps)).best).toMatchObject({ song: "Despacito", date: "2017-01-12" });
+    const typo = fakeDeps({ mb: boom, itunes: [it_("Tennessee Whiskey", "Chris Stapleton", "2015-04-23")] });
+    expect(asSong(await resolveQuery("tenessee whiskey chris stapletn", typo)).best.song).toBe("Tennessee Whiskey");
+  });
+
+  it("censored titles meet whatever the censoring, and a remix merges into the original", async () => {
+    expect(norm("Hot N*gga")).toBe("hot n");
+    expect(norm("Hot N****")).toBe(norm("Hot N*gga"));
+    expect(norm("*NSYNC")).toBe("nsync");
+    const deps = fakeDeps({ index: [chart("Hot Boy", "Bobby Shmurda", "2014-08-16")] });
+    deps.musicbrainz.mockResolvedValue([
+      mb("Hot N**** (remix)", "Bobby Shmurda feat. Eminem", "2024-10-31"),
+      mb("Hot N*gga", "Bobby Shmurda", "2014-03-28"),
+    ]);
+    expect(asSong(await resolveQuery("bobby shmurda hot n word song", deps)).best).toMatchObject({ song: "Hot N*gga", date: "2014-03-28" });
+  });
+
+  it('a year next to a known artist and nothing else is the title ("2002 anne marie")', async () => {
+    const deps = fakeDeps({ index: [chart("Ciao Adios", "Anne-Marie", "2017-03-04"), chart("Friends", "Marshmello & Anne-Marie", "2018-03-31")] });
+    deps.musicbrainz.mockResolvedValue([mb("2002", "Anne-Marie", "2018-04-20")]);
+    const out = asSong(await resolveQuery("2002 anne marie", deps));
+    expect(deps.musicbrainz.mock.calls[0][0]).toBe("2002 by anne marie");
+    expect(out.best).toMatchObject({ song: "2002", date: "2018-04-20" });
+  });
+
+  it('"hey jude" keeps its first word (no "hey" filler stripping)', () => {
+    expect(cleanQuery("hey jude")).toBe("hey jude");
+    expect(cleanQuery("uh huh b2k")).toBe("uh huh b2k");
+  });
 });
 
 // ── browser dependencies ─────────────────────────────────────────────────────
@@ -689,6 +832,16 @@ describe("buildMbQuery", () => {
 
   it("drops live recordings", () => {
     expect(buildMbQuery("1999 prince")).toMatch(/AND NOT comment:live$/);
+  });
+
+  it("fuzzy mode puts an edit allowance on each word, never on numbers", () => {
+    const q = buildMbQuery(`${MB_FUZZY}tenessee whiskey by chris stapleton`);
+    expect(q).toContain("(recording:(tenessee~2 AND whiskey~1) AND artist:(chris~1 AND stapleton~2))^3");
+    expect(buildMbQuery(`${MB_FUZZY}summer 2012 song`)).not.toMatch(/2012~/);
+  });
+
+  it("a known artist also gets a clause matching any of the title's words", () => {
+    expect(buildMbQuery("hot n by bobby shmurda")).toContain('(artist:"bobby shmurda" AND recording:(hot n))^2');
   });
 
   it("cannot be steered by Lucene syntax in the input", () => {
@@ -722,6 +875,19 @@ describe("mapItunes", () => {
       art: "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/aa/bb/cc/source/{w}x{h}bb.jpg",
       previewUrl: "https://audio-ssl.itunes.apple.com/p.m4a",
     });
+  });
+});
+
+describe("mapItunes live rows", () => {
+  it("drops live takes and sessions: their dates are not the release", () => {
+    const rows = mapItunes({
+      results: [
+        { kind: "song", trackName: "Last Last (Apple Music Live)", artistName: "Burna Boy", releaseDate: "2021-04-29T07:00:00Z" },
+        { kind: "song", trackName: "Rolling in the Deep - Live", artistName: "Adele", releaseDate: "2011-07-12T07:00:00Z" },
+        { kind: "song", trackName: "Last Last", artistName: "Burna Boy", releaseDate: "2022-05-13T07:00:00Z" },
+      ],
+    });
+    expect(rows.map((r) => r.song)).toEqual(["Last Last"]);
   });
 });
 
@@ -809,6 +975,26 @@ describe("browserDeps", () => {
     expect(url.searchParams.get("term")).toBe("adele rolling in the deep");
   });
 
+  it("keeps MusicBrainz calls at least 1.1 s apart (a resolve may make two)", async () => {
+    vi.useFakeTimers();
+    try {
+      const f = stubFetch({ recordings: [] });
+      const deps = browserDeps();
+      await vi.advanceTimersByTimeAsync(5_000); // clear any spacing left by earlier tests
+      const first = deps.musicbrainz("a");
+      await vi.advanceTimersByTimeAsync(0);
+      await first;
+      const second = deps.musicbrainz("b");
+      await vi.advanceTimersByTimeAsync(500);
+      expect(f).toHaveBeenCalledTimes(1);
+      await vi.advanceTimersByTimeAsync(700);
+      await second;
+      expect(f).toHaveBeenCalledTimes(2);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("a non-OK response rejects, so the resolver can fall back", async () => {
     stubFetch({}, false);
     await expect(browserDeps().musicbrainz("anything")).rejects.toThrow();
@@ -823,5 +1009,143 @@ describe("browserDeps", () => {
       }),
     );
     expect(await resolveQuery("some deep cut 2011", browserDeps())).toMatchObject({ kind: "date", date: "2011-06-15" });
+  });
+});
+
+describe("partial artist words", () => {
+  it("half an artist's name does not excuse a leftover word", async () => {
+    const deps = fakeDeps({ mb: [mb("Anne", "Anne-Marie van Eeden", "2003-06-15", "year")] });
+    expect(await resolveQuery("2002 anne marie", deps)).toMatchObject({ kind: "date", date: "2002-06-15" });
+  });
+});
+
+describe("naming an artist by one word", () => {
+  it("an artist's first word explains itself (\"kendrick not like us\")", async () => {
+    const deps = fakeDeps({ index: [chart("Not Like Us", "Kendrick Lamar", "2024-05-18")] });
+    expect(asSong(await resolveQuery("kendrick not like us", deps)).best.artist).toBe("Kendrick Lamar");
+  });
+
+  it("so does a last word, but a middle word does not", async () => {
+    const deps = fakeDeps({ index: [chart("Day 'N' Nite", "Kid Cudi", "2009-02-14")] });
+    expect(asSong(await resolveQuery("cudi day n nite", deps)).best.artist).toBe("Kid Cudi");
+    const mid = fakeDeps({ mb: [mb("Anne", "Anne-Marie van Eeden", "2003-06-15", "year")] });
+    expect((await resolveQuery("anne marie", mid)).kind).not.toBe("song");
+  });
+});
+
+describe("choosing the artist split", () => {
+  it("the longer, exact artist name wins over a one-word fuzzy look-alike", async () => {
+    const deps = fakeDeps({ index: [chart("Just A Friend 2002", "Mario", "2002-05-25"), chart("Friends", "Marshmello & Anne-Marie", "2018-03-31")] });
+    await resolveQuery("2002 anne marie", deps);
+    expect(deps.musicbrainz.mock.calls[0][0]).toBe("2002 by anne marie");
+    expect(deps.itunes.mock.calls[0][0]).toBe("2002 anne marie");
+  });
+});
+
+describe("titles that open with a parenthetical", () => {
+  it('"i cant get no satisfaction" matches "(I Can\'t Get No) Satisfaction" through its full form', async () => {
+    const deps = fakeDeps({ index: [chart("(I Can't Get No) Satisfaction", "The Rolling Stones", "1965-06-12")] });
+    expect(asSong(await resolveQuery("i cant get no satisfaction", deps)).best.artist).toBe("The Rolling Stones");
+  });
+});
+
+// ── round 3: how people actually type (description, years among an artist's songs, glued names, short typos) ──
+describe("a description around the title", () => {
+  const hotline = chart("Hotline Bling", "Drake", "2015-08-15");
+
+  it("six words of description do not sink a specific two-word title; with no artist it is offered, not launched", async () => {
+    const out = asSong(await resolveQuery("that song with the phone ringing in the video where everyone is dancing hotline bling", fakeDeps({ index: [hotline] })));
+    expect(out.best.song).toBe("Hotline Bling");
+    expect(out.needsPick).toBe(true);
+  });
+
+  it("naming the artist too settles it", async () => {
+    const out = asSong(await resolveQuery("drake that song with the phone ringing hotline bling", fakeDeps({ index: [hotline] })));
+    expect(out.best.song).toBe("Hotline Bling");
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("a short title does not stand inside a sentence", async () => {
+    const out = await resolveQuery("i said hello to my neighbour yesterday", fakeDeps({ index: [chart("Hello", "Adele", "2015-11-14")] }));
+    expect(out.kind).toBe("none");
+  });
+
+  it("an index artist in the middle of the text still focuses MusicBrainz on that artist", async () => {
+    const deps = fakeDeps({ index: [hotline] });
+    await resolveQuery("the one by drake about calling my cell phone", deps);
+    expect(deps.musicbrainz.mock.calls[0][0]).toMatch(/ by drake$/);
+  });
+});
+
+describe("a year among one artist's songs", () => {
+  it("the song within ±1 year beats a stronger title match outside it", async () => {
+    const deps = fakeDeps({ index: [chart("Umbrella", "Rihanna Featuring Jay-Z", "2007-05-26"), chart("Diamonds", "Rihanna", "2012-10-13")] });
+    expect(asSong(await resolveQuery("rihanna umbrella or the diamonds one 2012", deps)).best.song).toBe("Diamonds");
+    // Umbrella explains more of this text (its featured Jay-Z), so it is the stronger match; the year still wins.
+    expect(asSong(await resolveQuery("rihanna the umbrella one with jay z or diamonds 2012", deps)).best.song).toBe("Diamonds");
+  });
+
+  it("in-year means the song's own date, not a later sighting of it", async () => {
+    const lateSighting: DatedSong = { ...chart("Umbrella", "Rihanna", "2012-05-15"), granularity: "month", dateSource: "seen on HotNewHipHop" };
+    const deps = fakeDeps({ index: [chart("Umbrella", "Rihanna", "2007-05-26"), lateSighting, chart("Diamonds", "Rihanna", "2012-10-13")] });
+    expect(asSong(await resolveQuery("rihanna umbrella or the diamonds one 2012", deps)).best.song).toBe("Diamonds");
+  });
+});
+
+describe("run-together names", () => {
+  it('"chiefkeef" is Chief Keef (and the seed still needs no calls)', async () => {
+    const deps = fakeDeps({ index: [seed("I Don't Like", "Chief Keef & Lil Reese", "2012-03-12")] });
+    const out = asSong(await resolveQuery("chiefkeef i dont like", deps));
+    expect(out.best.song).toBe("I Don't Like");
+    expect(out.needsPick).toBeFalsy(); // the glued word is recognised as the artist, not left as description
+    expect(deps.musicbrainz).not.toHaveBeenCalled();
+  });
+
+  it("a glued artist splits the text for MusicBrainz, spaced the index's way", async () => {
+    const deps = fakeDeps({ index: [chart("Dior", "Pop Smoke", "2020-03-07")] });
+    await resolveQuery("popsmoke some unreleased leak", deps);
+    expect(deps.musicbrainz.mock.calls[0][0]).toBe("some unreleased leak by pop smoke");
+  });
+
+  it("a glued title matches too", async () => {
+    expect(asSong(await resolveQuery("hotlinebling", fakeDeps({ index: [chart("Hotline Bling", "Drake", "2015-08-15")] }))).best.song).toBe("Hotline Bling");
+  });
+});
+
+describe("short typos", () => {
+  const swift = { ...chart("Shake It Off", "Taylor Swift", "2014-09-06"), peak: 1 };
+  const metro = { ...chart("Shake It", "Metro Station", "2008-05-24"), peak: 10 };
+
+  it('"shake it of" → Shake It Off: one edit on a short word when the rest is exact, and it explains every word', async () => {
+    const out = asSong(await resolveQuery("shake it of", fakeDeps({ index: [swift, metro] })));
+    expect(out.best.song).toBe("Shake It Off");
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("filler words never count against the reading that explains the rest", async () => {
+    const out = asSong(await resolveQuery("shake it of official video", fakeDeps({ index: [swift, metro] })));
+    expect(out.best.song).toBe("Shake It Off");
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("no short edit when the rest of the title is not exact", async () => {
+    const out = await resolveQuery("shak it of", fakeDeps({ index: [swift, metro] }));
+    expect(out.kind === "song" && out.best.song).not.toBe("Shake It Off");
+  });
+
+  it("fuzzyPhrase allows the short edit only on request, only with an exact rest", () => {
+    expect(fuzzyPhrase(["shake", "it", "of"], ["shake", "it", "off"], 0.8, true).sim).toBeGreaterThan(0);
+    expect(fuzzyPhrase(["shake", "it", "of"], ["shake", "it", "off"]).sim).toBe(0);
+    expect(fuzzyPhrase(["shak", "it", "of"], ["shake", "it", "off"], 0.8, true).sim).toBe(0);
+    expect(fuzzyPhrase(["go", "of"], ["go", "off"], 0.8, true).sim).toBe(0); // the exact rest is under 4 letters
+    expect(fuzzyPhrase(["standd", "by", "your", "mn"], ["stand", "by", "your", "man"], 0.8, true).sim).toBe(0); // rest not exact
+  });
+});
+
+describe("MusicBrainz down", () => {
+  it("a 503 on the exact query still lets the index answer through a typo", async () => {
+    const deps = fakeDeps({ index: [chart("Rolling In The Deep", "Adele", "2010-12-25")], mb: boom, itunes: boom });
+    expect(asSong(await resolveQuery("rolling in the deap", deps)).best.artist).toBe("Adele");
+    expect(deps.musicbrainz.mock.calls.length).toBeLessThanOrEqual(1);
   });
 });
