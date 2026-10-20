@@ -29,7 +29,10 @@ SRC = ROOT / "data" / "hot100-number-ones.json"
 OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "data" / "hot100-covers.json"
 PACE_S = float(sys.argv[1]) if len(sys.argv) > 1 else 3.2
 # A cover from a compilation or a "Various Artists" sampler is a wrong cover, even when the track matches.
-COMPILATION = re.compile(r"\b(hits|greatest|best of|collection|essential|anthology|now that|now!|karaoke|tribute|various|sampler|oldies|top 40|#1s|number ones|classics|gold|legends|ultimate|definitive|platinum|summer|party|soundtrack|vol\.?|volume|\d{2}s\b)", re.I)
+COMPILATION = re.compile(r"\b(hits|greatest|best of|the best|very best|collection|essentials?|anthology|now that|now!|karaoke|tribute|various|sampler|oldies|top 40|#1s|no\. 1's|number ones|classics|gold|legends?|ultimate|definitive|platinum|summer|party|soundtrack|vol\.?|volume|jukebox|masters|complete|jackpot|\d{2}s\b)", re.I)
+# A different recording of the song is also a wrong cover: live albums, cast recordings, demos, remixes,
+# other-language versions. Allowed only when the chart title itself says so ("Coming Up (Live at Glasgow)").
+VERSION = re.compile(r"\b(live|demo|acoustic|instrumental|cast|broadway|spanish|espa[nñ]ol|version|remix(es)?|re-?recorded|sped up|slowed|a cappella|reunion|unplugged|orchestral)\b", re.I)
 UA = "MusicTimeMachine/1.41 (dev@jamesdare.com)"
 
 
@@ -37,8 +40,13 @@ def primary_artist(artist: str) -> str:
     return re.split(r"\s+(?:featuring|feat\.?|with|and|&|x)\s+", artist, flags=re.I)[0].strip()
 
 
+NUMERALS = {"1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten"}
+
+
 def norm(s: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", s.lower())
+    # "The 4 Seasons" and "The Four Seasons" are the same band: spell out standalone numerals first.
+    s = re.sub(r"\b(10|[1-9])\b", lambda m: NUMERALS[m.group(1)], s.lower())
+    return re.sub(r"[^a-z0-9]", "", s)
 
 
 def lookup(song: str, artist: str):
@@ -55,12 +63,17 @@ def lookup(song: str, artist: str):
     def compilation(x):
         return (x.get("collectionArtistName", "").lower() == "various artists"
                 or bool(COMPILATION.search(x.get("collectionName", ""))))
-    # Title AND artist must match: an earlier same-titled song by someone else is the classic wrong cover.
+    def other_version(x):
+        text = f'{x.get("trackName", "")} {x.get("collectionName", "")}'
+        return any(m.group(0).lower() not in song.lower() for m in VERSION.finditer(text))
+    def single(x):
+        return bool(re.search(r" - (single|ep)$", x.get("collectionName", ""), re.I))
     matches = [x for x in results if x.get("artworkUrl100") and score(x) >= 3]
     if not matches:
         return None
-    # Prefer the original release: non-compilation first, then the earliest release date.
-    matches.sort(key=lambda x: (compilation(x), x.get("releaseDate") or "9999"))
+    # The original recording on its original album: other versions last, then compilations, then singles,
+    # then the earliest release date.
+    matches.sort(key=lambda x: (other_version(x), compilation(x), single(x), x.get("releaseDate") or "9999"))
     best = matches[0]
     return {
         "art": re.sub(r"/\d+x\d+bb\.", "/{w}x{h}bb.", best["artworkUrl100"]),
@@ -69,6 +82,7 @@ def lookup(song: str, artist: str):
         "released": (best.get("releaseDate") or "")[:10] or None,
         "album": best.get("collectionName"),
         "compilation": compilation(best),
+        "otherVersion": other_version(best),
     }
 
 

@@ -9,7 +9,7 @@ import Remembered from "@/components/era/Remembered";
 import RememberForm from "@/components/era/RememberForm";
 import Industry from "@/components/era/Industry";
 import {
-  weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, numberOneOn, chartsThrough, weeksInMonth,
+  weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, numberOneOn, numberOnesThrough, chartsThrough, weeksInMonth,
   indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow,
 } from "@/lib/era/data";
 import { cardLine } from "@/lib/era/cardLine";
@@ -56,7 +56,8 @@ function shiftMonth(month: string, by: number): string {
 }
 
 function movement(r: ChartRow) {
-  if (r.last === null) return <span className={s.new}>NEW</span>;
+  if (r.new) return <span className={s.new}>NEW</span>;
+  if (r.last === null) return <span>–</span>;
   if (r.last > r.rank) return <span className={s.up}>▲ {r.last - r.rank}</span>;
   if (r.last < r.rank) return <span>▼ {r.rank - r.last}</span>;
   return <span>=</span>;
@@ -112,13 +113,32 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const week = weekNearest(date);
   const n1 = numberOneOn(date);
   const lanes = lanesOn(date);
-  const heat = heatFor(month);
+  const heatAll = heatFor(month);
+  // Archived Billboard pages are charts, not the internet: they go with their lane, not "off the charts".
+  const BILLBOARD_LANE: Record<string, string> = { billboard_rap: "rap", billboard_rnb: "rnb_hiphop", billboard_country: "country", billboard_dance: "dance", billboard_alt: "rock_alt" };
+  const archivedTop10 = new Map((heatAll?.sources ?? []).filter((x) => BILLBOARD_LANE[x.id]).map((x) => [BILLBOARD_LANE[x.id], x]));
+  const heatSources = (heatAll?.sources ?? []).filter((x) => !BILLBOARD_LANE[x.id]);
+  const heat = heatSources.length ? { ...heatAll!, sources: heatSources } : null;
   const heatSpan = heatMonthSpan();
   const reddit = redditFor(month);
   const through = chartsThrough();
   const line = cardLine({ song, artist, date, numberOne: n1 });
   const conceived = born ? numberOneOn(addDays(date, -266)) : null;
   const industry = industryFor(Number(month.slice(0, 4)));
+
+  // Where was the visitor's song that week? The first answer a returning visitor wants.
+  const songKey = song ? normTitle(song) : null;
+  const sameSong = (t: string) => !!songKey && songKey.length > 1 && (normTitle(t) === songKey || normTitle(t).startsWith(songKey) || songKey.startsWith(normTitle(t)));
+  const onChart = song ? week?.top.find((r) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  const laneHits = song ? lanes.filter((l) => sameSong(l.song) && isMine(l.artist)) : [];
+  const heatHit = song ? (heat?.sources ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  const redditHit = song ? (redditFor(month) ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  const verdict = !song ? null
+    : onChart ? `#${onChart.rank} on the Hot 100 that week${laneHits.length ? `, and #1 on ${laneHits.map((l) => l.label).join(" and ")}` : ""}.`
+    : laneHits.length ? `#1 on ${laneHits.map((l) => l.label).join(" and ")} that week; not in the Hot 100 top 10.`
+    : heatHit ? `Not in the Hot 100 top 10. On ${heatHit.x.label.replace(/\s*\(.*\)\s*$/, "")}${heatHit.x.list === "ranked" ? ` at #${heatHit.r.rank}` : ""} that month.`
+    : redditHit ? `Not in the Hot 100 top 10. On ${redditHit.x.id} with ${redditHit.r.score.toLocaleString("en-US")} upvotes that month.`
+    : n1 ? `Not in the Hot 100 top 10 that week. The #1 was ${n1.song} by ${n1.artist}.` : null;
 
   const anchorQ = { song, artist, sd: sd ?? undefined, ds: sd ? dsParam : undefined };
   const cardQ = new URLSearchParams({ ...(song ? { song } : {}), ...(artist ? { artist } : {}), date });
@@ -138,11 +158,15 @@ export default async function EraPage({ params, searchParams }: { params: Params
           <span className="label">{song ? "You were playing" : born ? "The week you were born" : "The week of"}</span>
           <h1 id="era-title" className={s.title}>{song ?? plainDate(date)}</h1>
           {song && artist && <span className={s.artist}>{artist}</span>}
+          {verdict && <p className={s.verdict}>{verdict}</p>}
           <ul className={s.facts}>
             {song && anchorDate && dateSource && (
               <li><span><span className={s.factStrong}>{dateSource}</span> · {plainDate(anchorDate)}</span></li>
             )}
             {note && <li><span>{note}</span></li>}
+            {!song && n1 && (
+              <li><span>The #1 on the Hot 100: <span className={s.factStrong}>{n1.song}</span> by {n1.artist}, week {n1.runWeek}{n1.ongoing ? ", still running" : ` of ${n1.runLength}`}.</span></li>
+            )}
             {conceived && (
               <li><span>38 weeks earlier, the #1 was <span className={s.factStrong}>{conceived.song}</span> by {conceived.artist}.</span></li>
             )}
@@ -176,7 +200,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
         <section className={s.section} aria-labelledby="world">
           <div className={s.sectionHead}>
             <h2 id="world" className={s.h2}>{song ? "The world was playing" : "The charts that week"}</h2>
-            <span className={s.source}>Billboard Hot 100 dated {plainDate(week.date)}. Top 10 from utdata/rwd-billboard-data (MIT), verified against two other sources.</span>
+            <span className={s.source}>Billboard Hot 100 dated {plainDate(week.date)}. Top 10 from utdata/rwd-billboard-data (MIT), cross-checked rank by rank against mhollingshead/billboard-hot-100 and on the #1 against Wikipedia. A dash means the two scrapes disagree.</span>
           </div>
           <div className={s.world}>
             <div className={s.scroll}>
@@ -194,7 +218,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
                           <img className={s.rowCover} src={art(n1.art, 160)!} alt="" loading="lazy" />
                         )}
                         <span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span>
-                        {r.rank === 1 && n1 && <span className={s.run}>Week {n1.runWeek} of {n1.runLength} at #1</span>}
+                        {r.rank === 1 && n1 && <span className={s.run}>Week {n1.runWeek}{n1.ongoing ? " at #1, still running" : ` of ${n1.runLength} at #1`}</span>}
                       </td>
                       <td className={`${s.num} ${s.move}`}>{movement(r)}</td>
                       <td className={s.num}>{r.peak ?? "–"}</td>
@@ -217,7 +241,11 @@ export default async function EraPage({ params, searchParams }: { params: Params
         <section className={s.section} aria-labelledby="lanes">
           <div className={s.sectionHead}>
             <h2 id="lanes" className={s.h2}>#1 in every lane</h2>
-            <span className={s.source}>Charts of {plainDate(week?.date ?? date)}: Billboard genre charts, the UK Singles Chart and the Canadian Hot 100, from Wikipedia&rsquo;s number-one lists (CC BY-SA 4.0).</span>
+            <span className={s.source}>Charts of {plainDate(week?.date ?? date)}: {[
+              lanes.some((l) => !["uk", "canada"].includes(l.lane)) && "Billboard genre charts",
+              lanes.some((l) => l.lane === "uk") && "the UK Singles Chart",
+              lanes.some((l) => l.lane === "canada") && "the Canadian Hot 100",
+            ].filter(Boolean).join(", ")}, from Wikipedia&rsquo;s number-one lists (CC BY-SA 4.0).</span>
           </div>
           <div className={s.lanes}>
             {lanes.map((l) => (
@@ -226,6 +254,15 @@ export default async function EraPage({ params, searchParams }: { params: Params
                 <p className={s.laneTitle}>{l.song}</p>
                 <span className={s.laneBy}>{l.artist}</span>
                 {l.date !== (week?.date ?? date) && <span className={s.laneDate}>Chart of {plainDate(l.date)}</span>}
+                {archivedTop10.get(l.lane) && (
+                  <details className={s.more}>
+                    <summary>Top {Math.min(10, archivedTop10.get(l.lane)!.rows.length)} that month</summary>
+                    <ol className={s.laneTop}>
+                      {archivedTop10.get(l.lane)!.rows.slice(0, 10).map((r) => <li key={r.rank}>{r.song} <span className={s.by}>{r.artist}</span></li>)}
+                    </ol>
+                    <a className={s.thread} href={archivedTop10.get(l.lane)!.capture} target="_blank" rel="noopener noreferrer">Billboard.com, archived {plainDate(archivedTop10.get(l.lane)!.captured)} ↗</a>
+                  </details>
+                )}
               </div>
             ))}
           </div>
@@ -233,10 +270,12 @@ export default async function EraPage({ params, searchParams }: { params: Params
       )}
 
       <section className={s.section} aria-labelledby="off">
-        <div className={s.sectionHead}>
-          <h2 id="off" className={s.h2}>Off the charts · {monthName(month)}</h2>
-          <span className={s.source}>What the internet was playing, from pages the Internet Archive saved that month. Each list links its capture.</span>
-        </div>
+        {(heat || reddit) && (
+          <div className={s.sectionHead}>
+            <h2 id="off" className={s.h2}>Off the charts · {monthName(month)}</h2>
+            <span className={s.source}>What blogs, Hype Machine and Reddit were playing, from pages saved that month. Each list links its source.</span>
+          </div>
+        )}
         {heat || reddit ? (
           <div className={s.heat}>
             {reddit?.map((src) => (
@@ -262,16 +301,16 @@ export default async function EraPage({ params, searchParams }: { params: Params
             {heat?.sources.map((src) => (
               <div key={src.id} className={s.heatCol}>
                 <div className={s.heatHead}>
-                  <span className={s.heatLabel}>{src.label}</span>
+                  <span className={s.heatLabel}>{src.label.replace(/\s*\(.*\)\s*$/, "")}</span>
                   <span className={s.source}>
-                    {src.list === "front" ? "Front page, newest first. " : `Top ${Math.min(src.rows.length, 20)} shown. `}
+                    {src.list === "front" ? "Front page, newest first. " : ""}
                     <a href={src.capture} target="_blank" rel="noopener noreferrer">Archived {plainDate(src.captured)} ↗</a>
                   </span>
                 </div>
                 <ol className={s.heatList}>
                   {src.rows.slice(0, 5).map((r) => (
                     <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
-                      <span className={s.heatRank}>{String(r.rank).padStart(2, "0")}</span>
+                      <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
                       <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
                     </li>
                   ))}
@@ -282,7 +321,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
                     <ol className={s.heatList} start={6}>
                       {src.rows.slice(5, 20).map((r) => (
                         <li key={`${src.id}-${r.rank}`} className={isMine(r.artist) ? s.hit : undefined}>
-                          <span className={s.heatRank}>{String(r.rank).padStart(2, "0")}</span>
+                          <span className={s.heatRank}>{src.list === "front" ? "·" : String(r.rank).padStart(2, "0")}</span>
                           <span><span className={s.song}>{r.song}</span><span className={s.by}>{r.artist}</span></span>
                         </li>
                       ))}
@@ -293,7 +332,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
             ))}
           </div>
         ) : (
-          <p className={s.empty}>
+          <p id="off" className={s.emptyNote}>
             {heatSpan && month < heatSpan[0]
               ? `The archive of blogs and music sites starts in ${monthName(heatSpan[0])}. For ${monthName(month)}, the charts are the record.`
               : `Nothing from the blogs was archived for ${monthName(month)}.`}
@@ -332,7 +371,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
       </nav>
 
       <footer className={s.foot}>
-        <span>Charts through {plainDate(through)}. Covers from Apple. Song dates from MusicBrainz (CC0), YouTube uploads and the Hot 100. Archived pages courtesy of the Internet Archive.</span>
+        <span>Hot 100 #1s through {plainDate(numberOnesThrough())}; top 10s and genre charts through {plainDate(through)}. Covers from Apple. Song dates from MusicBrainz (CC0), YouTube uploads and the Hot 100. Archived pages courtesy of the Internet Archive.</span>
         <span>Was Playing is open source: <a href="https://github.com/DareDev256/music-time-machine">github.com/DareDev256/music-time-machine</a></span>
       </footer>
     </div>

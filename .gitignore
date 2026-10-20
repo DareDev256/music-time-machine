@@ -45,3 +45,4 @@ data/cache/
 AGENTS.md
 __pycache__/
 data/hot100-covers.v2.json
+data/hot100-covers.v3.json

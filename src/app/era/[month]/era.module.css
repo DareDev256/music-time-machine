@@ -102,3 +102,18 @@
 .thread { display: inline-block; margin-top: 3px; font-size: 11px; color: var(--dim); text-decoration: none; padding: 4px 0; }
 .thread:hover { color: var(--ink); }
 .hit .thread { color: #000; }
+
+/* The answer to "where was my song that week", right under the title. */
+.verdict { margin: 4px 0 0; font-family: var(--font-display); font-stretch: 78%; font-weight: 800; text-transform: uppercase;
+           font-size: clamp(18px, 2.4vw, 26px); line-height: 1.05; color: var(--signal); max-width: 32ch; text-wrap: balance; }
+.emptyNote { font-size: 12px; color: var(--dim); margin: 0; max-width: 70ch; }
+.laneTop { margin: 6px 0 4px; padding-left: 18px; font-size: 12px; display: grid; gap: 3px; }
+.laneMine .laneTop, .laneMine .more summary { color: #000; }
+/* Highlighted row: everything in it is black on the signal colour (red on red read as contrast 1.00). */
+.hit .rank, .hit .rank1, .hit .run, .hit .by, .hit .move, .hit .new, .hit .heatRank { color: #000; text-shadow: none; }
+@media (max-width: 640px) {
+  .hero { padding-block: 22px 26px; gap: 18px; }
+  .cover { max-width: 210px; padding: 6px; }
+  .table td { padding: 8px 8px 8px 0; }
+  .heatList li { padding: 7px 0; }
+}

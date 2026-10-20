@@ -80,7 +80,8 @@ def main():
     top10 = {d: sorted(weeks[d], key=lambda r: int(r["current_week"]))[:10] for d in dates}
 
     # Cross-check 1: a second scrape of Billboard agrees on every rank of the top 10.
-    cross = {c["date"]: {x["this_week"]: x["song"] for x in c["data"]} for c in json.loads(fetch(CROSS))}
+    cross_rows = {c["date"]: {x["this_week"]: x for x in c["data"]} for c in json.loads(fetch(CROSS))}
+    cross = {d: {rank: x["song"] for rank, x in rows.items()} for d, rows in cross_rows.items()}
     pairs = disagree = 0
     for d, top in top10.items():
         if d not in cross:
@@ -120,14 +121,36 @@ def main():
 
     OUT.mkdir(parents=True, exist_ok=True)
     by_year = {}
+    # last / peak / weeks are published only when both scrapes agree. The primary has written
+    # last_week=0 for new entries and wrong week counts in recent weeks (Choosin' Texas: 24 vs 51,
+    # 2026-10-17); a value one source cannot confirm becomes null and renders as "–".
+    dropped = 0
+    def agreed(primary, other):
+        nonlocal dropped
+        if primary is None or other is None or primary != other:
+            if primary is not None or other is not None:
+                dropped += 1
+            return None
+        return primary
     for d, top in top10.items():
-        by_year.setdefault(int(d[:4]), []).append({
-            "date": d,
-            "top": [{
-                "rank": int(r["current_week"]), "song": r["title"], "artist": r["performer"],
-                "last": as_int(r["last_week"]), "peak": as_int(r["peak_pos"]), "weeks": as_int(r["wks_on_chart"]),
-            } for r in top],
-        })
+        rows = []
+        for r in top:
+            rank = int(r["current_week"])
+            other = cross_rows.get(d, {}).get(rank)
+            same = other is not None and same_song(r["title"], other["song"])
+            last = as_int(r["last_week"])
+            last = None if last == 0 else last           # 0 = new this week, never "up from 0"
+            o_last = as_int(other.get("last_week")) if same else None
+            o_last = None if o_last == 0 else o_last
+            new_entry = last is None and (o_last is None) and same
+            rows.append({
+                "rank": rank, "song": r["title"], "artist": r["performer"],
+                "last": agreed(last, o_last) if same else None,
+                "new": bool(new_entry and (as_int(r["wks_on_chart"]) or 0) <= 1),
+                "peak": agreed(as_int(r["peak_pos"]), as_int(other.get("peak_position")) if same else None),
+                "weeks": agreed(as_int(r["wks_on_chart"]), as_int(other.get("weeks_on_chart")) if same else None),
+            })
+        by_year.setdefault(int(d[:4]), []).append({"date": d, "top": rows})
     for y, ws in by_year.items():
         (OUT / f"{y}.json").write_text(json.dumps({
             "year": y,
@@ -137,7 +160,8 @@ def main():
             "through": dates[-1],
             "weeks": ws,
         }, ensure_ascii=False, separators=(",", ":")))
-    print(f"wrote {len(by_year)} year shards to {OUT.relative_to(ROOT)}, through {dates[-1]}")
+    print(f"wrote {len(by_year)} year shards to {OUT.relative_to(ROOT)}, through {dates[-1]}; "
+          f"{dropped} last/peak/weeks values withheld because the two sources disagree")
 
 
 if __name__ == "__main__":

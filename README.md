@@ -6,7 +6,7 @@
 
 [**Fly back →**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [Design](docs/superpowers/specs/2026-10-20-era-engine-design.md) &nbsp;·&nbsp; [Plan](docs/superpowers/plans/2026-10-20-era-engine.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
 
-<img src="docs/screenshots/2026-10-20_flight-landing-1440.png" alt="Landing on 28 April 2012: Gotye's Somebody That I Used To Know framed at the centre of a tree of glowing timelines, each branch labelled with that week's number one in its genre" width="860">
+<img src="docs/screenshots/2026-10-20_flight-landing-1440.png" alt="Landing on 28 April 2012: the genre branches peel off the red Hot 100 trunk, each labelled with that week's number one, above Gotye's cover framed in red" width="860">
 
 </div>
 
@@ -37,7 +37,7 @@ Type `cuz my gear chief keef`. Chief Keef and Riff Raff's "Cuz My Gear" went up 
 
 | The flight | The era | The card |
 |---|---|---|
-| <img src="docs/screenshots/2026-10-20_flight-mid-1440.png" alt="Mid-flight: the red Hot 100 trunk with covers on it, white genre threads braiding around it" width="280"> | <img src="docs/screenshots/2026-10-20_era-2012-04-1440.png" alt="The April 2012 era page: Cuz My Gear, the Hot 100 top 10, lanes and archived blog charts" width="280"> | <img src="docs/screenshots/2026-10-20_card-story.png" alt="Story card for Cuz My Gear, April 2012" width="160"> |
+| <img src="docs/screenshots/2026-10-20_flight-phone.gif" alt="The flight on a phone: the red Hot 100 trunk with covers passing, the genre branches peeling off at 28 April 2012, then the era page" width="220"> | <img src="docs/screenshots/2026-10-20_era-2012-04-1440.png" alt="The April 2012 era page: Cuz My Gear, the Hot 100 top 10, lanes and archived blog charts" width="280"> | <img src="docs/screenshots/2026-10-20_card-story.png" alt="Story card for Cuz My Gear, April 2012" width="160"> |
 
 ## How it knows
 

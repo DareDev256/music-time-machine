@@ -57,7 +57,7 @@ export default function ShareBar({
         <a href={wideUrl} download={`${fileName}.png`} className={c.btn}>Wide card</a>
       </div>
       <p className={`label ${c.note}`} aria-live="polite">
-        {note ?? "The link replays the flight back to this week."}
+        {note ?? "The copied link replays the flight to this week."}
       </p>
     </div>
   );

@@ -7,14 +7,14 @@ import path from "node:path";
 const ERA = path.join(process.cwd(), "public", "era");
 const DAY = 86_400_000;
 
-export interface ChartRow { rank: number; song: string; artist: string; last: number | null; peak: number | null; weeks: number | null }
+export interface ChartRow { rank: number; song: string; artist: string; last: number | null; new?: boolean; peak: number | null; weeks: number | null }
 export interface ChartWeek { date: string; top: ChartRow[] }
 export interface LaneHit { lane: string; label: string; date: string; song: string; artist: string; page?: string }
 export interface HeatRow { rank: number; song: string; artist: string }
 export interface HeatSource { id: string; label: string; list: "ranked" | "front"; capture: string; captured: string; rows: HeatRow[] }
 export interface HeatMonth { month: string; sources: HeatSource[] }
 export interface FlightData { through: string; songs: { s: string; a: string; art: string | null }[]; weeks: [string, number][] }
-export interface NumberOneWeek { date: string; song: string; artist: string; art: string | null; runWeek: number; runLength: number }
+export interface NumberOneWeek { date: string; song: string; artist: string; art: string | null; runWeek: number; runLength: number; ongoing: boolean }
 export interface IndexRow { s: string; a: string; d: string; g: "day" | "month" | "year"; src: string; ds: string; k: string; y?: string; n?: string }
 
 const cache = new Map<string, unknown>();
@@ -116,7 +116,8 @@ export function numberOneOn(date: string): NumberOneWeek | null {
   while (a > 0 && rows[a - 1].i === at.i) a--;
   while (b < rows.length - 1 && rows[b + 1].i === at.i) b++;
   const s = f.songs[at.i];
-  return { date: at.date, song: s.s, artist: s.a, art: s.art, runWeek: idx - a + 1, runLength: b - a + 1 };
+  // A run that reaches the newest week in the data has not ended: its length is not known yet.
+  return { date: at.date, song: s.s, artist: s.a, art: s.art, runWeek: idx - a + 1, runLength: b - a + 1, ongoing: b === rows.length - 1 };
 }
 
 /** Cover template for a song that was a #1, if we hold one. */
@@ -189,4 +190,9 @@ export function redditFor(month: string): RedditSource[] | null {
   const doc = load<{ sources?: RedditSource[] }>(`reddit/${month}.json`);
   const sources = (doc?.sources ?? []).filter((x) => x.rows?.length);
   return sources.length ? sources : null;
+}
+
+/** The #1 list's own last week (it can run a week past the top-10 data). */
+export function numberOnesThrough(): string {
+  return load<FlightData>("flight.json")?.through ?? "1958-08-04";
 }

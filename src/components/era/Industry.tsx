@@ -83,7 +83,7 @@ export default function Industry({ data }: { data: IndustryYear }) {
         {shaded.map((x) => (
           <span key={x.k} className={s.key}>
             <span className={`${s.swatch} ${x.tone}`} />
-            {x.label} <span className={s.val}>{pct(x.v)}</span>
+            {x.label}
           </span>
         ))}
       </div>

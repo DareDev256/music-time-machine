@@ -26,7 +26,8 @@ const CHIPS: Array<{ label: string; q?: string; born?: boolean }> = [
   { label: "Summer 1999", q: "summer 1999" },
 ];
 
-const LAND_HOLD_MS = 2400;
+// How long the landed tree holds before the era page opens; the Enter button fills over the same time.
+const LAND_HOLD_MS = 2200;
 
 function eraUrl(d: Destination): string {
   const p = new URLSearchParams({ date: d.date });
@@ -143,7 +144,12 @@ export default function Console({
   }, [dest, freeze, router]);
 
   useEffect(() => () => { if (landTimer.current) clearTimeout(landTimer.current); }, []);
-  useEffect(() => { if (dest) router.prefetch(eraUrl(dest)); }, [dest, router]);
+  useEffect(() => {
+    if (!dest) return;
+    router.prefetch(eraUrl(dest));
+    // The era page opens on the upload's poster: fetch it during the flight so it never shows an empty box.
+    if (dest.song?.youtubeId) new Image().src = `https://i.ytimg.com/vi/${dest.song.youtubeId}/hqdefault.jpg`;
+  }, [dest, router]);
 
   const flying = phase === "flying" || phase === "landed";
 
@@ -174,7 +180,8 @@ export default function Console({
           )}
           {phase === "landed" && dest && (
             <button type="button" className={s.enter} onClick={() => router.push(eraUrl(dest))}>
-              {dest.song ? `Enter ${dest.song.song}'s era` : `Enter ${plainDate(dest.date)}`} →
+              <span className={s.enterFill} aria-hidden />
+              <span className={s.enterText}>{dest.song ? `Enter ${dest.song.song}'s era` : `Enter ${plainDate(dest.date)}`} →</span>
             </button>
           )}
         </div>
