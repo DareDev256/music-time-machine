@@ -18,6 +18,8 @@ export interface DatedSong {
   isrc?: string;
   /** Best Hot 100 peak (1–100) when the index knows it. Ranks songs that share a title ("Billie Jean": #1 vs #47). */
   peak?: number;
+  /** Set when this is another recording than the original: "remix", "live", "acoustic", "sped up", "cast recording"… */
+  version?: string;
 }
 
 export type ResolveOutcome =

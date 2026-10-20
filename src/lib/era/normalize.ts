@@ -299,3 +299,52 @@ export function compactSim(word: string, name: string[]): number {
   if (name.length < 2 || word.length < 6) return 0;
   return tokenSim(word, name.join(""));
 }
+
+// ── other versions of a song ─────────────────────────────────────────────────
+// Mirrored in data/scripts/hot100_covers.py (VERSION / PLAIN): keep the two lists in step.
+
+/** Labels that name the plain recording itself, not another version of it. */
+const PLAIN_LABEL = /\b(?:radio edit|radio version|original mix|original version|album version|single version|main version|clean version|explicit version|dirty version|re-?master(?:ed)?(?: \d{4})?)\b/gi;
+/** A marker of a different recording: a remix, a live take, an acoustic / demo / instrumental / sped-up take, a cover… */
+const VERSION_MARK =
+  /\b(re-?mix(?:es|ed)?|mix|live|acoustic|demo|instrumental|cover|karaoke|sped[ -]?up|slowed|version|edit|cast recording|cast|broadway|unplugged|a cappella|re-?recorded|orchestral|spanish|espa[nñ]ol|reunion)\b/i;
+/** Album names that are clearly a different recording (a studio album called "Live Through This" is not). */
+const VERSION_ALBUM = /\blive\s*(?:at|from|in|on|:)|\bunplugged\b|\bremix(?:es|ed)\b|\bacoustic\b|\binstrumentals?\b|\bkaraoke\b|\bsped[ -]?up\b|\bslowed\b|\bcast recording\b|\boriginal (?:broadway )?cast\b/i;
+
+const CANONICAL: Record<string, string> = { mix: "remix", remixes: "remix", remixed: "remix", "re-mix": "remix", unplugged: "live", cast: "cast recording", broadway: "cast recording", "rerecorded": "re-recorded", espanol: "spanish", "español": "spanish" };
+
+function markerIn(text: string): string | undefined {
+  const m = VERSION_MARK.exec(text.replace(PLAIN_LABEL, " "));
+  if (!m) return undefined;
+  const w = m[1].toLowerCase().replace(/\s+/g, " ");
+  return CANONICAL[w] ?? (w.startsWith("sped") ? "sped up" : w.replace(/^re-mix/, "remix"));
+}
+
+/**
+ * The version marker a title or album carries, or undefined for the plain recording: "Hotline Bling (Cha Cha Remix)"
+ * → "remix", "Song - Live" → "live", "Song (Sped Up)" → "sped up", album "Live at Wembley" → "live",
+ * "Song (Original Mix)" / "(Radio Edit)" / "(Remastered 2011)" → undefined. Only a title's decorations count
+ * (bracketed parts, the part after " - "), so "Live and Let Die" is not a live version.
+ */
+export function versionOf(title: string, album = ""): string | undefined {
+  const t = String(title ?? "");
+  const decorations = [...Array.from(t.matchAll(/[([]([^)\]]*)[)\]]/g), (m) => m[1]), ...t.split(/\s+[-–—]\s+/).slice(1)];
+  const inTitle = markerIn(decorations.join(" ; ")) ?? (/\bsped[ -]?up\b|\bslowed\b/i.test(t) ? markerIn(t) : undefined);
+  if (inTitle) return inTitle;
+  const a = String(album ?? "");
+  if (!a) return undefined;
+  const albumDecor = [...Array.from(a.matchAll(/[([]([^)\]]*)[)\]]/g), (m) => m[1]), ...a.split(/\s+[-–—]\s+/).slice(1)].join(" ; ");
+  return markerIn(albumDecor) ?? (VERSION_ALBUM.test(a.replace(PLAIN_LABEL, " ")) ? markerIn(a) ?? "live" : undefined);
+}
+
+const MENTIONS: Record<string, string[]> = {
+  remix: ["remix", "mix", "remixed", "rmx"], live: ["live", "unplugged", "concert"], "sped up": ["sped", "spedup"],
+  slowed: ["slowed"], "cast recording": ["cast", "broadway", "musical"], "a cappella": ["cappella", "acapella"],
+  "re-recorded": ["rerecorded", "taylors"], spanish: ["spanish", "espanol"], instrumental: ["instrumental", "instrumentals"],
+};
+
+/** Did the typed words ask for this version ("levels remix", "unplugged")? Then it is not penalised. */
+export function versionMentioned(version: string, words: string[]): boolean {
+  const asked = MENTIONS[version] ?? [norm(version)];
+  return words.some((w) => asked.includes(w));
+}

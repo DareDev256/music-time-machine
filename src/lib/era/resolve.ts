@@ -10,6 +10,7 @@ import { CHART_START, extractDateDetail, flightTarget, localToday, padToGranular
 import {
   artistKeysLoose, artistNames, cleanQuery, compactSim, containsPhrase, FILLER, fuzzyPhrase, isStopword, norm, primaryArtistKey,
   primaryArtistName, primaryKeysLoose, soundKey, editDistance, stripTitle, titleForms, titleKey, tokenSim, tokens,
+  versionMentioned, versionOf,
 } from "./normalize";
 
 export interface ResolverDeps {
@@ -103,6 +104,9 @@ function sanitize(x: unknown): DatedSong | null {
     if (typeof r[k] === "string" && r[k]) out[k] = r[k];
   }
   if (validPeak(r.peak)) out.peak = r.peak;
+  // "" means "checked: the plain recording, or the version the text asked for"; it is never re-derived from the title.
+  const version = typeof r.version === "string" ? r.version : versionOf(out.song);
+  if (version !== undefined) out.version = version;
   return out;
 }
 
@@ -152,6 +156,8 @@ export function indexRowToDatedSong(row: unknown): DatedSong | null {
     if (typeof r[k] === "string" && r[k]) out[k] = r[k] as string;
   }
   if (validPeak(r.p)) out.peak = r.p;
+  const version = versionOf(out.song);
+  if (version) out.version = version;
   return out;
 }
 
@@ -178,6 +184,12 @@ const gapDays = (a: DatedSong, b: DatedSong) => {
 };
 const isSoft = (r: DatedSong) => r.where.includes("seed") || r.where.includes("youtube");
 const SOURCE_RANK = (r: DatedSong) => (r.where.includes("seed") ? 0 : r.where.includes("musicbrainz") ? 1 : r.where.includes("chart") ? 2 : 3);
+
+/** "released (iTunes)" + "remix" → "released (remix, iTunes)"; "entered the Hot 100" + "live" → "entered the Hot 100 (live)". */
+function versionLabel(source: string, version: string): string {
+  const m = /^(.*)\(([^()]*)\)\s*$/.exec(source);
+  return m ? `${m[1]}(${version}, ${m[2]})` : `${source} (${version})`;
+}
 
 function defaultSource(r: DatedSong): string {
   if (r.dateSource) return r.dateSource;
@@ -215,7 +227,10 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
     if (!others.some((o) => o.granularity === "day")) return true;
     return others.some((o) => gapDays(r, o) <= 366);
   });
-  const pool = credible.length ? credible : valid.length ? valid : rows;
+  // The plain recording dates the song; another version only when it is all there is.
+  const credibleBase = credible.length ? credible : valid.length ? valid : rows;
+  const plainOnes = credibleBase.filter((r) => !r.version);
+  const pool = plainOnes.length ? plainOnes : credibleBase;
   const sorted = [...pool].sort((a, b) => period(a)[0] - period(b)[0] || PRECISION[a.granularity] - PRECISION[b.granularity] || SOURCE_RANK(a) - SOURCE_RANK(b));
   let best = sorted[0];
   for (let i = 0; i < 2; i++) {
@@ -230,14 +245,16 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
   // index row kept from a blog post ("Hotline Bling (Cha Cha Remix) (CDQ)") does not name the song.
   const identity =
     rows.find((r) => r.where.includes("chart") || r.where.includes("seed")) ?? rows.find((r) => stripTitle(r.song) === r.song.trim()) ?? rows[0];
-  const plainest = rows.reduce((a, r) => (r.song.trim().length < a.song.trim().length ? r : a), identity);
+  const titled = rows.some((r) => !r.version) ? rows.filter((r) => !r.version) : rows;
+  const plainest = titled.reduce((a, r) => (r.song.trim().length < a.song.trim().length ? r : a), titled.includes(identity) ? identity : titled[0]);
   const where = WHERE_ORDER.filter((w) => rows.some((r) => r.where.includes(w)));
   const onDsp = rows.some((r) => r.onDsp === true) ? true : rows.some((r) => r.onDsp === false) ? false : null;
   const byDate = [...rows].sort((a, b) => period(a)[0] - period(b)[0]);
   const out: DatedSong = {
     song: plainest.song, artist: identity.artist, date: best.date, granularity: best.granularity,
-    dateSource: defaultSource(best), where, onDsp,
+    dateSource: best.version ? versionLabel(defaultSource(best), best.version) : defaultSource(best), where, onDsp,
   };
+  if (best.version) out.version = best.version;
   const art = rows.find((r) => r.art && r.where.includes("itunes"))?.art ?? rows.find((r) => r.art)?.art;
   if (art) out.art = art;
   const previewUrl = rows.find((r) => r.previewUrl)?.previewUrl;
@@ -477,6 +494,10 @@ function matchGroup(g: Group, qi: QueryInfo): Match | null {
 }
 
 const isCoverAct = (g: Group) => g.rows.every((r) => COVER_ACT.test(r.artist) || COVER_TITLE.test(r.song));
+/** Every row of the group is another version (a remix, a live take…) that the text did not ask for. */
+const versionOnly = (g: Group) => g.rows.every((r) => Boolean(r.version));
+/** Prefer the plain recording: drop version-only candidates when a plain one is in the same set. */
+const preferPlain = (ms: Match[]) => (ms.some((m) => !versionOnly(m.group)) ? ms.filter((m) => !versionOnly(m.group)) : ms);
 const mbRows = (g: Group) => g.rows.filter((r) => r.where.includes("musicbrainz")).length;
 const groupPeak = (g: Group) => Math.min(Infinity, ...g.rows.map((r) => r.peak).filter(validPeak));
 
@@ -505,7 +526,8 @@ type Decision = { kind: "accept"; match: Match } | { kind: "ambiguous"; matches:
 function decide(all: Match[], qi: QueryInfo): Decision {
   const matches = preferExact(all);
   if (!matches.length) return { kind: "none" };
-  const hits = matches.filter((m) => m.artistHit);
+  // A plain recording beats another version of it; an artist-confirmed version still beats an unconfirmed plain one.
+  const hits = preferPlain(matches.filter((m) => m.artistHit));
   if (hits.length) {
     // A year in the text picks among the artist's songs: one within ±1 year beats a stronger title match outside it.
     const pool = qi.year !== null && hits.some((m) => m.inYear) ? hits.filter((m) => m.inYear) : hits;
@@ -513,11 +535,12 @@ function decide(all: Match[], qi: QueryInfo): Decision {
     return { kind: "ambiguous", matches: pool };
   }
   // Only one song carries this title in everything we can see: not a common title.
-  if (matches.length === 1) return { kind: "accept", match: matches[0] };
+  const plain = preferPlain(matches);
+  if (plain.length === 1) return { kind: "accept", match: plain[0] };
   // Every other candidate is a cast cover of it ("Rolling in the Deep": Adele vs Glee Cast).
-  const originals = matches.filter((m) => !isCoverAct(m.group));
+  const originals = plain.filter((m) => !isCoverAct(m.group));
   if (originals.length === 1) return { kind: "accept", match: originals[0] };
-  const pool = originals.length ? originals : matches;
+  const pool = originals.length ? originals : plain;
   // A common title with no artist: a year that fits exactly one candidate settles it.
   const inYear = pool.filter((m) => m.inYear);
   if (qi.year !== null && inYear.length === 1) return { kind: "accept", match: inYear[0] };
@@ -654,7 +677,13 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
     call(() => deps.indexSearch(text), INDEX_MS),
     restText && norm(restText) !== qi.whole ? call(() => deps.indexSearch(restText), INDEX_MS) : Promise.resolve(FAILED),
   ]);
-  const indexRows = dedupe([...whole.rows, ...rest.rows]);
+  // A version the text names ("levels remix", "unplugged") is what was asked for: not another version.
+  const asked = (rows: DatedSong[]) =>
+    rows.map((r) => {
+      if (!r.version || !versionMentioned(r.version, qi.wholeList)) return r;
+      return { ...r, version: "" };
+    });
+  const indexRows = asked(dedupe([...whole.rows, ...rest.rows]));
   const groups = new Groups();
   indexRows.forEach((r, i) => groups.add(r, "index", i));
   const fromIndex = decide(matchAll(groups, qi), qi);
@@ -697,15 +726,15 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
     call(() => deps.musicbrainz(mbText), EXTERNAL_MS),
     call(() => deps.itunes(itText), EXTERNAL_MS),
   ]);
-  mbRes.rows.forEach((r) => groups.add(r, "mb"));
-  itRes.rows.forEach((r) => groups.addItunes(r, qi));
+  asked(mbRes.rows).forEach((r) => groups.add(r, "mb"));
+  asked(itRes.rows).forEach((r) => groups.addItunes(r, qi));
   let matches = matchAll(groups, qi);
 
   // Nothing matched as typed: ONE fuzzy MusicBrainz retry (so at most 2 MB calls per resolve; browserDeps spaces
   // them ≥ 1.1 s apart for the 1 req/s rule). Not after a failed call: a busy MusicBrainz is not asked again.
   if (!target && mbRes.ok && decide(matches, qi).kind === "none") {
     const retry = await call(() => deps.musicbrainz(MB_FUZZY + mbText), EXTERNAL_MS);
-    retry.rows.forEach((r) => groups.add(r, "mb"));
+    asked(retry.rows).forEach((r) => groups.add(r, "mb"));
     matches = matchAll(groups, qi);
   }
 
@@ -1043,7 +1072,6 @@ export function buildMbQuery(text: string): string {
 }
 
 type MbCredit = { name?: unknown; joinphrase?: unknown; artist?: { name?: unknown } };
-const LIVE_TITLE = /[([][^)\]]*\b(?:live|session|sessions|performance)\b[^)\]]*[)\]]|\s[-\u2013\u2014]\s(?:live|session)\b/i;
 
 /**
  * A recording's first-release-date counts bootlegs and promos. When the search lists the releases, date the
@@ -1087,6 +1115,9 @@ export function mapMusicBrainz(json: unknown): DatedSong[] {
       dateSource: "first release (MusicBrainz)", where: ["musicbrainz"], onDsp: null,
     };
     if (typeof rec.id === "string") row.mbid = rec.id;
+    const disamb = typeof rec.disambiguation === "string" && rec.disambiguation ? ` (${rec.disambiguation})` : "";
+    const version = versionOf(`${rec.title}${disamb}`);
+    if (version) row.version = version;
     const isrcs = rec.isrcs;
     if (Array.isArray(isrcs) && typeof isrcs[0] === "string") row.isrc = isrcs[0];
     out.push(row);
@@ -1102,9 +1133,7 @@ export function mapItunes(json: unknown): DatedSong[] {
   for (const x of results as Array<Record<string, unknown>>) {
     if (!x || x.kind !== "song" || typeof x.trackName !== "string" || typeof x.artistName !== "string") continue;
     if (typeof x.collectionName === "string" && BAD_ALBUM.test(x.collectionName)) continue;
-    // A live take or session is a performance, not the release, and its date misleads (measured: "Last Last
-    // (Apple Music Live)" is dated a year before the single). MusicBrainz excludes the same with NOT comment:live.
-    if (LIVE_TITLE.test(x.trackName)) continue;
+
     const day = typeof x.releaseDate === "string" ? x.releaseDate.slice(0, 10) : "";
     const parsed = parsePartialDate(day);
     if (!parsed) continue;
@@ -1118,6 +1147,10 @@ export function mapItunes(json: unknown): DatedSong[] {
     };
     if (typeof x.artworkUrl100 === "string") row.art = x.artworkUrl100.replace(/\/\d+x\d+bb\./, "/{w}x{h}bb.");
     if (typeof x.previewUrl === "string") row.previewUrl = x.previewUrl;
+    // A live take, remix or other version is marked, not dropped: the plain recording dates the song when it is
+    // there (measured: "Last Last (Apple Music Live)" is dated a year before the single).
+    const version = versionOf(x.trackName, typeof x.collectionName === "string" ? x.collectionName : "");
+    if (version) row.version = version;
     out.push(row);
   }
   return out;

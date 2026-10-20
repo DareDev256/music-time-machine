@@ -12,7 +12,7 @@ import {
   type ResolverDeps,
 } from "@/lib/era/resolve";
 import { flightTarget } from "@/lib/era/dates";
-import { cleanQuery, editDistance, fuzzyPhrase, norm, soundKey, tokenSim } from "@/lib/era/normalize";
+import { cleanQuery, editDistance, fuzzyPhrase, norm, soundKey, tokenSim, versionOf } from "@/lib/era/normalize";
 
 // ── fixtures: rows exactly as each dependency hands them over ────────────────
 const chart = (song: string, artist: string, date: string): DatedSong => ({
@@ -879,15 +879,20 @@ describe("mapItunes", () => {
 });
 
 describe("mapItunes live rows", () => {
-  it("drops live takes and sessions: their dates are not the release", () => {
+  it("marks live takes and other versions instead of dropping them; the plain recording dates the song", () => {
     const rows = mapItunes({
       results: [
-        { kind: "song", trackName: "Last Last (Apple Music Live)", artistName: "Burna Boy", releaseDate: "2021-04-29T07:00:00Z" },
-        { kind: "song", trackName: "Rolling in the Deep - Live", artistName: "Adele", releaseDate: "2011-07-12T07:00:00Z" },
-        { kind: "song", trackName: "Last Last", artistName: "Burna Boy", releaseDate: "2022-05-13T07:00:00Z" },
+        { kind: "song", trackName: "Last Last (Apple Music Live)", artistName: "Burna Boy", releaseDate: "2021-04-29T07:00:00Z", collectionName: "Apple Music Live: Burna Boy" },
+        { kind: "song", trackName: "Last Last", artistName: "Burna Boy", releaseDate: "2022-05-13T07:00:00Z", collectionName: "Love, Damini" },
+        { kind: "song", trackName: "Rolling in the Deep", artistName: "Adele", releaseDate: "2011-07-12T07:00:00Z", collectionName: "Live at the Royal Albert Hall" },
       ],
     });
-    expect(rows.map((r) => r.song)).toEqual(["Last Last"]);
+    expect(rows.map((r) => [r.song, r.version])).toEqual([
+      ["Last Last (Apple Music Live)", "live"],
+      ["Last Last", undefined],
+      ["Rolling in the Deep", "live"], // the album says it
+    ]);
+    expect(mergeSong(rows.slice(0, 2))).toMatchObject({ song: "Last Last", date: "2022-05-13", dateSource: "released (iTunes)" });
   });
 });
 
@@ -1147,5 +1152,75 @@ describe("MusicBrainz down", () => {
     const deps = fakeDeps({ index: [chart("Rolling In The Deep", "Adele", "2010-12-25")], mb: boom, itunes: boom });
     expect(asSong(await resolveQuery("rolling in the deap", deps)).best.artist).toBe("Adele");
     expect(deps.musicbrainz.mock.calls.length).toBeLessThanOrEqual(1);
+  });
+});
+
+// ── round 4: another version of the song (remix, live, acoustic, sped up…) ────
+describe("other versions", () => {
+  it.each([
+    ["Hotline Bling (Cha Cha Remix)", "", "remix"], ["Song (Extended Mix)", "", "remix"], ["Song - Live", "", "live"],
+    ["Song (Live)", "", "live"], ["Song (Acoustic)", "", "acoustic"], ["Song (Sped Up)", "", "sped up"], ["Song Sped Up", "", "sped up"],
+    ["Song (Slowed + Reverb)", "", "slowed"], ["Shake It Off (Taylor's Version)", "", "version"], ["Song (Edit)", "", "edit"],
+    ["Last Last (Apple Music Live)", "", "live"], ["Song", "Live at Wembley", "live"], ["Song", "Apple Music Live: Burna Boy", "live"],
+    ["Song", "Rolling in the Deep (Live) - Single", "live"], ["Song", "The Remixes", "remix"], ["Song", "Hamilton (Original Broadway Cast Recording)", "cast recording"],
+  ])('versionOf("%s", "%s") is %s', (title, album, want) => {
+    expect(versionOf(title, album)).toBe(want);
+  });
+
+  it.each([
+    ["Song (Original Mix)", ""], ["Song (Radio Edit)", ""], ["Song (Remastered 2011)", ""], ["Song - Remastered 2009", ""],
+    ["Song (feat. X)", ""], ["Live and Let Die", ""], ["Mix Tape", ""], ["Song", "Live Through This"], ["Song", "Hey Jude"],
+  ])('versionOf("%s", "%s") is the plain recording', (title, album) => {
+    expect(versionOf(title, album)).toBeUndefined();
+  });
+
+  it("the plain recording dates and names the song even when a version is older", () => {
+    const merged = mergeSong([mb("Levels (Skrillex Remix)", "Avicii", "2011-03-01"), it_("Levels", "Avicii", "2011-10-28")]);
+    expect(merged).toMatchObject({ song: "Levels", date: "2011-10-28", dateSource: "released (iTunes)" });
+    expect(merged.version).toBeUndefined();
+  });
+
+  it("the plain recording names the song even when a version's title is shorter", () => {
+    expect(mergeSong([it_("Song (feat. Bob)", "A", "2010-01-01"), mb("Song (Live)", "A", "2011-01-01")]).song).toBe("Song (feat. Bob)");
+  });
+
+  it("among songs whose artist the text names, the plain recording beats a version", async () => {
+    const deps = fakeDeps({ mb: [mb("Song (A Remix)", "Remixer B feat. Artist A", "2016-01-01"), mb("Song", "Artist A", "2015-01-01")] });
+    const out = asSong(await resolveQuery("song artist a", deps));
+    expect(out.best).toMatchObject({ song: "Song", artist: "Artist A" });
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("when a version is all there is, it is kept and labelled honestly", () => {
+    const merged = mergeSong([it_("Song (Club Mix)", "Artist", "2016-01-01")]);
+    expect(merged).toMatchObject({ song: "Song (Club Mix)", dateSource: "released (remix, iTunes)", version: "remix" });
+    expect(mergeSong([{ ...chart("Song (Live)", "A", "2001-01-06") }]).dateSource).toBe("entered the Hot 100 (live)");
+  });
+
+  it("a plain recording beats a version-only candidate by someone else", async () => {
+    const deps = fakeDeps({ mb: [mb("Levels (Skrillex Remix)", "Skrillex", "2012-01-01"), mb("Levels", "Avicii", "2011-10-28")] });
+    const out = asSong(await resolveQuery("levels", deps));
+    expect(out.best).toMatchObject({ song: "Levels", artist: "Avicii" });
+    expect(out.needsPick).toBeFalsy();
+  });
+
+  it("a version the text names is what was asked for", async () => {
+    const deps = fakeDeps({ mb: [mb("Levels (Skrillex Remix)", "Skrillex", "2012-01-01"), mb("Levels", "Avicii", "2011-10-28")] });
+    const out = asSong(await resolveQuery("levels skrillex remix", deps));
+    expect(out.best).toMatchObject({ artist: "Skrillex", dateSource: "first release (MusicBrainz)" });
+    expect(out.best.version).toBeUndefined();
+  });
+
+  it("an artist-confirmed version still beats an unconfirmed plain recording", async () => {
+    const deps = fakeDeps({ mb: [mb("Song (Club Mix)", "DJ Yen", "2015-01-01"), mb("Song", "Somebody Else", "2014-01-01")] });
+    const out = asSong(await resolveQuery("song dj yen", deps));
+    expect(out.best).toMatchObject({ artist: "DJ Yen", dateSource: "first release (remix, MusicBrainz)", version: "remix" });
+  });
+
+  it("MusicBrainz's disambiguation marks a version too", () => {
+    const rows = mapMusicBrainz({
+      recordings: [{ id: "x", title: "Hello", disambiguation: "live, 2016-03-01: Glasgow", "first-release-date": "2016-06-01", "artist-credit": [{ name: "Adele" }] }],
+    });
+    expect(rows[0].version).toBe("live");
   });
 });
