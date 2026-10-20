@@ -55,6 +55,14 @@ describe("middleware › method restriction", () => {
     expect(res.status).toBe(405);
   });
 
+  it("lets POST through only to the submission and review routes", () => {
+    expect(middleware(req("/api/submit", "POST")).status).not.toBe(405);
+    expect(middleware(req("/api/admin/review", "POST")).status).not.toBe(405);
+    expect(middleware(req("/api/health", "POST")).status).toBe(405);
+    expect(middleware(req("/api/submit/x", "POST")).status).toBe(405);
+    expect(middleware(req("/api/submit", "DELETE")).status).toBe(405);
+  });
+
   it("returns Allow header listing permitted methods", () => {
     const res = middleware(req("/api/song/123", "POST"));
     expect(res.headers.get("Allow")).toBe("GET, HEAD, OPTIONS");

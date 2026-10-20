@@ -1,0 +1,182 @@
+{
+ "built": "2026-10-20",
+ "range": [
+  "2010-01",
+  "2010-03"
+ ],
+ "total_429": 0,
+ "requests": 574,
+ "stopped": null,
+ "not_yet_run": {
+  "pitchfork_bnt": [
+   "2010-01",
+   "2010-02",
+   "2010-03"
+  ],
+  "billboard_country": [
+   "2010-01",
+   "2010-02",
+   "2010-03"
+  ]
+ },
+ "sources": {
+  "hotnewhiphop": {
+   "genre": "hip-hop",
+   "tier": 1,
+   "label": "HotNewHipHop · Top 100 (popularity rank)"
+  },
+  "hypem": {
+   "genre": "indie",
+   "tier": 1,
+   "label": "Hype Machine · Popular"
+  },
+  "billboard_rap": {
+   "genre": "hip-hop",
+   "tier": 1,
+   "label": "Billboard · Rap Songs"
+  },
+  "billboard_rnb": {
+   "genre": "hip-hop",
+   "tier": 1,
+   "label": "Billboard · R&B/Hip-Hop Songs"
+  },
+  "pitchfork_bnt": {
+   "genre": "all",
+   "tier": 2,
+   "label": "Pitchfork · Best New Tracks (newest first, not a rank)"
+  },
+  "billboard_country": {
+   "genre": "country",
+   "tier": 3,
+   "label": "Billboard · Country Songs"
+  }
+ },
+ "months": {
+  "2010-01": {
+   "hotnewhiphop": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "front",
+    "capture_ts": "20100105125530",
+    "rows": 1675,
+    "layout": null,
+    "note": "top100 unavailable or unparsed; used front"
+   },
+   "hypem": {
+    "status": "pass",
+    "genre": "indie",
+    "list": "ranked",
+    "capture_ts": "20100111172347",
+    "rows": 20,
+    "layout": null
+   },
+   "billboard_rap": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "ranked",
+    "capture_ts": "20100122131032",
+    "rows": 10,
+    "layout": "A"
+   },
+   "billboard_rnb": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "ranked",
+    "capture_ts": "20100107143805",
+    "rows": 10,
+    "layout": "A"
+   },
+   "pitchfork_bnt": {
+    "status": "not_run",
+    "genre": "all"
+   },
+   "billboard_country": {
+    "status": "not_run",
+    "genre": "country"
+   }
+  },
+  "2010-02": {
+   "hotnewhiphop": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "front",
+    "capture_ts": "20100205041014",
+    "rows": 2305,
+    "layout": null,
+    "note": "top100 unavailable or unparsed; used front"
+   },
+   "hypem": {
+    "status": "pass",
+    "genre": "indie",
+    "list": "ranked",
+    "capture_ts": "20100213220122",
+    "rows": 20,
+    "layout": null
+   },
+   "billboard_rap": {
+    "status": "none",
+    "genre": "hip-hop",
+    "reason": "no 200 capture in month for billboard.com/charts/rap-song"
+   },
+   "billboard_rnb": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "ranked",
+    "capture_ts": "20100216220624",
+    "rows": 10,
+    "layout": "A"
+   },
+   "pitchfork_bnt": {
+    "status": "not_run",
+    "genre": "all"
+   },
+   "billboard_country": {
+    "status": "not_run",
+    "genre": "country"
+   }
+  },
+  "2010-03": {
+   "hotnewhiphop": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "front",
+    "capture_ts": "20100326075318",
+    "rows": 1578,
+    "layout": null,
+    "note": "top100 unavailable or unparsed; used front"
+   },
+   "hypem": {
+    "status": "pass",
+    "genre": "indie",
+    "list": "ranked",
+    "capture_ts": "20100317041639",
+    "rows": 20,
+    "layout": null
+   },
+   "billboard_rap": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "ranked",
+    "capture_ts": "20100316120717",
+    "rows": 10,
+    "layout": "A"
+   },
+   "billboard_rnb": {
+    "status": "pass",
+    "genre": "hip-hop",
+    "list": "ranked",
+    "capture_ts": "20100313183238",
+    "rows": 10,
+    "layout": "A"
+   },
+   "pitchfork_bnt": {
+    "status": "not_run",
+    "genre": "all"
+   },
+   "billboard_country": {
+    "status": "not_run",
+    "genre": "country"
+   }
+  }
+ }
+}

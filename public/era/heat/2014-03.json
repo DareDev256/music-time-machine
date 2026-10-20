@@ -1,0 +1,176 @@
+{
+ "month": "2014-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140315202657/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Moment (CDQ)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Really Be (Smokin N Drinkin) [Tags]",
+     "artist": "YG Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 3,
+     "song": "Backwards",
+     "artist": "Kendrick Lamar Feat. Tame Impala"
+    },
+    {
+     "rank": 4,
+     "song": "Coast Is Clear",
+     "artist": "Skrillex Feat. Chance The Rapper"
+    },
+    {
+     "rank": 5,
+     "song": "Hero",
+     "artist": "Kid Cudi Feat. Skylar Grey"
+    },
+    {
+     "rank": 6,
+     "song": "Computerized",
+     "artist": "Daft Punk Feat. Jay Z"
+    },
+    {
+     "rank": 7,
+     "song": "Life Of A Savage",
+     "artist": "RondoNumbaNine Feat. Lupe Fiasco"
+    },
+    {
+     "rank": 8,
+     "song": "Wartime",
+     "artist": "Lil Boosie Feat. Webbie"
+    },
+    {
+     "rank": 9,
+     "song": "Hold On",
+     "artist": "50 Cent"
+    },
+    {
+     "rank": 10,
+     "song": "Tsunami (Remix)",
+     "artist": "Tyga"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140315181027/http://hypem.com/popular",
+   "captured": "2014-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Don't Wait (Remix)",
+     "artist": "Mapei, Chance The Rapper & The Social Ex…"
+    },
+    {
+     "rank": 2,
+     "song": "You're Not The One Cid Rim Remix",
+     "artist": "Sky Ferreira"
+    },
+    {
+     "rank": 3,
+     "song": "Paint Me Like A French Girl Max Manie & Scheinizzl Remix",
+     "artist": "Breakdlaw feat. the Glitchfox"
+    },
+    {
+     "rank": 4,
+     "song": "Anywhere For You Tiesto vs. Dzeko & Torres Remix",
+     "artist": "John Martin Official"
+    },
+    {
+     "rank": 5,
+     "song": "Help",
+     "artist": "Galantis"
+    },
+    {
+     "rank": 6,
+     "song": "Everything We Touch",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 7,
+     "song": "Summer",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 8,
+     "song": "Stranger In Moscow(( MJ cover))",
+     "artist": "Tame Impala"
+    },
+    {
+     "rank": 9,
+     "song": "Forgot About Dre The Golden Pony Remix",
+     "artist": "Dr. Dre"
+    },
+    {
+     "rank": 10,
+     "song": "All That She Wants (Self Help & Tanner Re-Twerk)",
+     "artist": "Ace Of Base"
+    },
+    {
+     "rank": 11,
+     "song": "Ready For Love (feat. Chloe Angelides)",
+     "artist": "Felix Cartal"
+    },
+    {
+     "rank": 12,
+     "song": "Walking Backwards",
+     "artist": "doe paoro"
+    },
+    {
+     "rank": 13,
+     "song": "Down",
+     "artist": "The Kooks"
+    },
+    {
+     "rank": 14,
+     "song": "Walking Home",
+     "artist": "Nick Leng"
+    },
+    {
+     "rank": 15,
+     "song": "Feel Good Oliver Heldens Remix",
+     "artist": "Robin Thicke"
+    },
+    {
+     "rank": 16,
+     "song": "Romanticise +1 remix",
+     "artist": "Chela"
+    },
+    {
+     "rank": 17,
+     "song": "Safe And Sound Steve James Bootleg",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 18,
+     "song": "Gooey +1 remix",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 19,
+     "song": "Younger Kygo Remix",
+     "artist": "Seinabo Sey"
+    },
+    {
+     "rank": 20,
+     "song": "In The City f. Zumbi Of Zion I",
+     "artist": "CunninLynguists"
+    }
+   ]
+  }
+ ]
+}

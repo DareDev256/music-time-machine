@@ -1,0 +1,236 @@
+{
+ "month": "2014-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140713042558/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-07-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Main Chick (Remix)",
+     "artist": "Kid Ink Feat. French Montana, Yo Gotti, Tyga, Lil Bibby & Chris Brown"
+    },
+    {
+     "rank": 2,
+     "song": "Diamonds (Prod. By No I.D.)",
+     "artist": "Common Feat. Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "I Got It",
+     "artist": "Rich Homie Quan Feat. Young Thug"
+    },
+    {
+     "rank": 4,
+     "song": "Seen It All (Prod. By Cardo)",
+     "artist": "Jeezy Feat. Jay Z"
+    },
+    {
+     "rank": 5,
+     "song": "We Dem Boyz Part 2",
+     "artist": "Wiz Khalifa Feat. Rick Ross, Schoolboy Q & Nas"
+    },
+    {
+     "rank": 6,
+     "song": "0 To 100 (Remix)",
+     "artist": "Juicy J"
+    },
+    {
+     "rank": 7,
+     "song": "The Followers",
+     "artist": "Wale"
+    },
+    {
+     "rank": 8,
+     "song": "Rockstar",
+     "artist": "Future Feat. Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "She Came To Give It To You (Prod. By Pharrell) (CDQ)",
+     "artist": "Usher Feat. Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Thanks Mom, Thanks Dad",
+     "artist": "Metta World Peace"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140716022127/http://hypem.com/popular",
+   "captured": "2014-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Expectations",
+     "artist": "Brika"
+    },
+    {
+     "rank": 2,
+     "song": "Mumbai",
+     "artist": "Brika"
+    },
+    {
+     "rank": 3,
+     "song": "Shout Avenue Remix",
+     "artist": "Tears for Fears"
+    },
+    {
+     "rank": 4,
+     "song": "Last Train Daktyl Remix",
+     "artist": "Dawn Golden"
+    },
+    {
+     "rank": 5,
+     "song": "Keep Your Mouth For Lying cln Remix",
+     "artist": "Crooked Colours"
+    },
+    {
+     "rank": 6,
+     "song": "Wild Motion (Set It Free)",
+     "artist": "Miami Horror"
+    },
+    {
+     "rank": 7,
+     "song": "Lemaitre- High Tide Oliver Nelson & Tobtok Remix",
+     "artist": "Lemaitre"
+    },
+    {
+     "rank": 8,
+     "song": "Let This Last Forever\" feat. Gary Go Sunstars Remix",
+     "artist": "Benny Benassi"
+    },
+    {
+     "rank": 9,
+     "song": "I Want U (GANZ Flip)",
+     "artist": "Alison Wonderland"
+    },
+    {
+     "rank": 10,
+     "song": "The Way She Moves",
+     "artist": "Tenru"
+    },
+    {
+     "rank": 11,
+     "song": "Memories That You Call (feat. Monsoonsiren)",
+     "artist": "ODESZA"
+    },
+    {
+     "rank": 12,
+     "song": "Dollhouse Jai Wolf Remix",
+     "artist": "Melanie Martinez"
+    },
+    {
+     "rank": 13,
+     "song": "Class Historian",
+     "artist": "BRONCHO"
+    },
+    {
+     "rank": 14,
+     "song": "Boom Clap Cahill Radio Edit",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 15,
+     "song": "Gold Silver Diamond",
+     "artist": "Generationals"
+    },
+    {
+     "rank": 16,
+     "song": "When A Fire Starts To Burn C2C Remix",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 17,
+     "song": "My Audacity",
+     "artist": "Claire"
+    },
+    {
+     "rank": 18,
+     "song": "Dreams of Gold (feat. Raz Simone & Ariana DeBoo)",
+     "artist": "Sam Lachow"
+    },
+    {
+     "rank": 19,
+     "song": "Boom Clap Hippie Sabotage Remix",
+     "artist": "Charli XCX"
+    },
+    {
+     "rank": 20,
+     "song": "The Purge / Rapfix Cypher 20syl Remix",
+     "artist": "Schoolboy Q"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140714125928/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "Wiggle",
+     "artist": "Jason Derulo Featuring Snoop Dogg"
+    },
+    {
+     "rank": 3,
+     "song": "All Of Me",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 4,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 5,
+     "song": "Na Na",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 6,
+     "song": "Loyal",
+     "artist": "Chris Brown Feat. Lil Wayne & Tyga"
+    },
+    {
+     "rank": 7,
+     "song": "Talk Dirty",
+     "artist": "Jason Derulo Featuring 2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "Pills N Potions",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "2 On",
+     "artist": "Tinashe Featuring ScHoolboy Q"
+    },
+    {
+     "rank": 10,
+     "song": "Believe Me",
+     "artist": "Lil Wayne Featuring Drake"
+    }
+   ]
+  }
+ ]
+}

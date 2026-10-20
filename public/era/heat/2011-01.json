@@ -1,0 +1,346 @@
+{
+ "month": "2011-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110121154803/http://www.hotnewhiphop.com/",
+   "captured": "2011-01-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "HNHH Cypher (Prod by Jahlil Beats)",
+     "artist": "DJ Ill Will feat. Kid Ink, Meek Mill, Los & Tory Lanez"
+    },
+    {
+     "rank": 2,
+     "song": "Favorite DJ (Green Lantern Remix)",
+     "artist": "Clinton Sparks feat. Jim Jones, Bun B, & Game"
+    },
+    {
+     "rank": 3,
+     "song": "Gangbang Rookie (Prod Jake One)",
+     "artist": "Snoop Dogg feat. Pilot"
+    },
+    {
+     "rank": 4,
+     "song": "Throw It Back (Prod by Kane Beatz)",
+     "artist": "Kevin McCall"
+    },
+    {
+     "rank": 5,
+     "song": "Winner",
+     "artist": "Mac Miller feat. Young Scolla"
+    },
+    {
+     "rank": 6,
+     "song": "Mr. Cosby [DJ]",
+     "artist": "Lil Scrappy"
+    },
+    {
+     "rank": 7,
+     "song": "Truth Hurts (Prod By Timbaland) (Snippet) (Tags)",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 8,
+     "song": "Round Da Way Tim (Prod By Timbaland)",
+     "artist": "Timbaland"
+    },
+    {
+     "rank": 9,
+     "song": "God Will Cut U Down",
+     "artist": "Nino Bless feat. Johnny Cash"
+    },
+    {
+     "rank": 10,
+     "song": "YRS n Bricksquad",
+     "artist": "Boogz Boogetz feat. Frenchie"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Believe You",
+     "artist": "Slim Da Mobster feat. Xzibit"
+    },
+    {
+     "rank": 12,
+     "song": "Grammy",
+     "artist": "Joe Moses feat. Dominique Soundz"
+    },
+    {
+     "rank": 13,
+     "song": "For Life",
+     "artist": "Young Knox"
+    },
+    {
+     "rank": 14,
+     "song": "The Lick (Remix)",
+     "artist": "Trae feat. CTE"
+    },
+    {
+     "rank": 15,
+     "song": "Tha Club",
+     "artist": "211 feat. YG"
+    },
+    {
+     "rank": 16,
+     "song": "Good Girls",
+     "artist": "Bobby V"
+    },
+    {
+     "rank": 17,
+     "song": "Fall For You Type (Remix)",
+     "artist": "Raheem DeVaughn feat. Dee Boy"
+    },
+    {
+     "rank": 18,
+     "song": "Do It For U",
+     "artist": "Jay Sean feat. Pitbull"
+    },
+    {
+     "rank": 19,
+     "song": "We Represent (Prod by Jahlil Beats)",
+     "artist": "Jim Jones feat. Omega"
+    },
+    {
+     "rank": 20,
+     "song": "Girls Try So Hard",
+     "artist": "Pretty Ricky"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110115091233/http://hypem.com:80/popular",
+   "captured": "2011-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lights (WIRED Dubstep Remix)",
+     "artist": "Ellie Goulding"
+    },
+    {
+     "rank": 2,
+     "song": "Fifty Ways To Make A Record",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 3,
+     "song": "do it again MM EXCHANGE MSTRD",
+     "artist": "Holy Ghost!"
+    },
+    {
+     "rank": 4,
+     "song": "G'd Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 5,
+     "song": "KILL EVERYBODY",
+     "artist": "Skrillex"
+    },
+    {
+     "rank": 6,
+     "song": "Right Hand Hi (Caspa Remix)",
+     "artist": "Kid Sister"
+    },
+    {
+     "rank": 7,
+     "song": "C'mon (Catch Em By Surprise)",
+     "artist": "Tiesto vs. Diplo & Busta Rhymes"
+    },
+    {
+     "rank": 8,
+     "song": "Chop And Change",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 9,
+     "song": "Take Me Over (Flight Facilities Remix)",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 10,
+     "song": "Save Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 11,
+     "song": "Digital Controller (Dubstep)",
+     "artist": "Flux Pavilion"
+    },
+    {
+     "rank": 12,
+     "song": "Hot Mess (Oliver Remix)",
+     "artist": "Chromeo"
+    },
+    {
+     "rank": 13,
+     "song": "Home Is Wherever I'm With You (Edward Sharpe Vs. Kid Cudi)",
+     "artist": "+VIBES"
+    },
+    {
+     "rank": 14,
+     "song": "Love it is, Then",
+     "artist": "Moullinex"
+    },
+    {
+     "rank": 15,
+     "song": "Girl Is On My Mind",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 16,
+     "song": "H.A.M. (Amtrac Remix)",
+     "artist": "KANYE WEST & JAY-Z"
+    },
+    {
+     "rank": 17,
+     "song": "Sail",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 18,
+     "song": "Lick the Lizard",
+     "artist": "Rusko & Reso"
+    },
+    {
+     "rank": 19,
+     "song": "White Nights (Twin Shadow remix)",
+     "artist": "Oh Land"
+    },
+    {
+     "rank": 20,
+     "song": "Without You",
+     "artist": "Rainbow Arabia"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110113234644/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-01-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 2,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 3,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 4,
+     "song": "Right Thru Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Make A Movie",
+     "artist": "Twista Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 9,
+     "song": "Like A G6",
+     "artist": "Far*East Movement Featuring Cataracs & Dev"
+    },
+    {
+     "rank": 10,
+     "song": "You Be Killin Em",
+     "artist": "Fabolous"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110114000010/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-01-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Be Friends",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 2,
+     "song": "What's My Name?",
+     "artist": "Rihanna Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 4,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame Featuring Roscoe Dash & Wale"
+    },
+    {
+     "rank": 5,
+     "song": "No BS",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 6,
+     "song": "Make A Movie",
+     "artist": "Twista Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Lay It Down",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 8,
+     "song": "Right Thru Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "Pretty Girl Rock",
+     "artist": "Keri Hilson"
+    }
+   ]
+  }
+ ]
+}

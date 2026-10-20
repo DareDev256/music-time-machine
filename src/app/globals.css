@@ -1,87 +1,64 @@
 @import "tailwindcss";
 
-/* Apple Music Design Tokens */
+/* Was Playing — one look, dark only.
+   True black ground, one loud accent (the red of a seven-segment LED), covers carry every other colour. */
 :root {
-  --background: #FFFFFF;
-  --background-secondary: #F5F5F7;
-  --foreground: #1D1D1F;
-  --foreground-secondary: #86868B;
-  --accent: #FC3C44;
-  --accent-hover: #E0353C;
-  --border: #D2D2D7;
-  --card: #FFFFFF;
-  --card-hover: #F5F5F7;
-}
-
-.dark {
-  --background: #000000;
-  --background-secondary: #1C1C1E;
-  --foreground: #F5F5F7;
-  --foreground-secondary: #86868B;
-  --accent: #FC3C44;
-  --accent-hover: #FF5A5F;
-  --border: #38383A;
-  --card: #1C1C1E;
-  --card-hover: #2C2C2E;
+  color-scheme: dark;
+  --ground: #000000;
+  --panel: #0b0a0a;
+  --ink: #f4f4f4;
+  --dim: rgba(244, 244, 244, 0.52);
+  --faint: rgba(244, 244, 244, 0.16);
+  --hair: rgba(244, 244, 244, 0.09);
+  --signal: #ff3b1f;
+  --signal-glow: rgba(255, 59, 31, 0.55);
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-background-secondary: var(--background-secondary);
-  --color-foreground: var(--foreground);
-  --color-foreground-secondary: var(--foreground-secondary);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-border: var(--border);
-  --color-card: var(--card);
-  --color-card-hover: var(--card-hover);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+  --color-ground: var(--ground);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+  --color-hair: var(--hair);
+  --color-signal: var(--signal);
+  --font-display: var(--font-archivo), "Arial Narrow", sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, Menlo, monospace;
+  --font-seg: var(--font-seg), var(--font-mono), monospace;
 }
 
+* { box-sizing: border-box; }
+html, body { background: var(--ground); color: var(--ink); }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+a { color: inherit; text-decoration-color: var(--signal); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+::selection { background: var(--signal); color: #000; }
 
-/* Prevent FOUC */
-html:not(.dark):not(.light) {
-  background: #000000;
-  color: #F5F5F7;
-}
+/* Labels: small caps-like mono, tracked out. */
+.label { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--dim); }
 
-/* Smooth theme transitions */
-html.dark,
-html.light {
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
+/* Display: Archivo condensed, heavy, uppercase. */
+.display { font-family: var(--font-display); font-stretch: 68%; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.01em; }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
+/* Seven-segment readout with its unlit segments showing, like real hardware. */
+.seg { font-family: var(--font-seg); line-height: 1; letter-spacing: 0.04em; position: relative; display: inline-block; font-variant-numeric: tabular-nums; }
+.seg::before { content: attr(data-ghost); position: absolute; inset: 0 0 auto auto; opacity: 0.09; pointer-events: none; }
+.seg-signal { color: var(--signal); text-shadow: 0 0 18px var(--signal-glow); }
+.seg-ink { color: var(--ink); text-shadow: 0 0 14px rgba(255, 255, 255, 0.22); }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+.tabular { font-variant-numeric: tabular-nums; }
+.gutter { padding-left: var(--gutter); padding-right: var(--gutter-r); }
 
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--foreground-secondary);
-}
-
-/* Hide scrollbar for horizontal scroll strips */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .seg-signal, .seg-ink { text-shadow: none; }
 }

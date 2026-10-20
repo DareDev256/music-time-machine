@@ -1,0 +1,16 @@
+/* Same language as the era page's off-chart lists: hairline rows, mono metadata, condensed title. */
+.section { border-top: 1px solid var(--hair); padding-block: 36px; display: grid; gap: 22px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.h2 { font-family: var(--font-display); font-stretch: 70%; font-weight: 800; font-size: clamp(22px, 3.2vw, 34px); text-transform: uppercase; line-height: 1; margin: 0; }
+.source { font-size: 11px; color: var(--dim); max-width: 70ch; }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--faint); max-width: 900px; }
+.list li { display: grid; grid-template-columns: 2.2em minmax(0, 1fr) auto; gap: 8px 12px; padding: 11px 0; border-bottom: 1px solid var(--hair); font-size: 13px; align-items: baseline; }
+.n { font-family: var(--font-seg); font-size: 14px; color: var(--dim); }
+.body { display: grid; gap: 2px; min-width: 0; }
+.song { font-weight: 600; text-transform: uppercase; letter-spacing: .02em; overflow-wrap: anywhere; }
+.by { color: var(--dim); }
+.verdict { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); margin-top: 2px; }
+.note { margin-top: 4px; max-width: 60ch; }
+.listen { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--faint); padding: 10px 10px; white-space: nowrap; min-height: 40px; display: inline-flex; align-items: center; }
+.listen:hover { border-color: var(--dim); }

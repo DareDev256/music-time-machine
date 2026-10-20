@@ -1,0 +1,346 @@
+{
+ "month": "2011-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111113221617/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2011-11-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hate Sleeping Alone [Long Snippet]",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Talk That Talk [Full]",
+     "artist": "Rihanna feat. Jay-Z"
+    },
+    {
+     "rank": 3,
+     "song": "Strip (Prod By Tha Bizness)",
+     "artist": "Chris Brown feat. Kevin McCall"
+    },
+    {
+     "rank": 4,
+     "song": "Throw It Up",
+     "artist": "Yelawolf feat. Eminem & Gangsta Boo"
+    },
+    {
+     "rank": 5,
+     "song": "I'm A Boss (Remix) (Prod by Jahlil Beats) [DIRTY]",
+     "artist": "Meek Mill feat. T.I., Rick Ross, Lil Wayne, Birdman, Swizz Beatz & DJ Khaled"
+    },
+    {
+     "rank": 6,
+     "song": "Batgang (Prod by Kountdown & S Dot Fire)",
+     "artist": "Kid Ink feat. Hardhead"
+    },
+    {
+     "rank": 7,
+     "song": "In The Night",
+     "artist": "The Madden Brothers feat. Wiz Khalifa & Detail"
+    },
+    {
+     "rank": 8,
+     "song": "You Da One",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 9,
+     "song": "Lord Knows",
+     "artist": "Drake feat. Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "MMG",
+     "artist": "Soulja Boy"
+    },
+    {
+     "rank": 11,
+     "song": "OHMYGOD (OMGMGK)",
+     "artist": "The Madden Brothers feat. Machine Gun Kelly"
+    },
+    {
+     "rank": 12,
+     "song": "Ocean Mobb",
+     "artist": "Soulja Boy feat. Waka Flocka"
+    },
+    {
+     "rank": 13,
+     "song": "I Get It In",
+     "artist": "Cassidy"
+    },
+    {
+     "rank": 14,
+     "song": "She Will [Remix] [No Tags]",
+     "artist": "T.I."
+    },
+    {
+     "rank": 15,
+     "song": "Girlfriend's Best Friend [Tags]",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 16,
+     "song": "The Motto [Remix] (Prod By T-Minus)",
+     "artist": "Drake feat. Tyga & Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "To Da Top",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 18,
+     "song": "Crew Love [Radio Rip]",
+     "artist": "Drake feat. The Weeknd"
+    },
+    {
+     "rank": 19,
+     "song": "Common Knowledge (Prod. by Blended Babies)",
+     "artist": "Asher Roth"
+    },
+    {
+     "rank": 20,
+     "song": "Low Key (Prod. By Rami Beatz)",
+     "artist": "Chip Tha Ripper"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111115150959/http://hypem.com:80/popular",
+   "captured": "2011-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mr. Little Jeans - The Suburbs (Cry Wolf Remix)",
+     "artist": "Cry Wolf"
+    },
+    {
+     "rank": 2,
+     "song": "Titanium (Alesso Remix)",
+     "artist": "David Guetta"
+    },
+    {
+     "rank": 3,
+     "song": "Damn Your Eyes",
+     "artist": "Alex Clare"
+    },
+    {
+     "rank": 4,
+     "song": "UFO (Keljet's Hawaiian Remix)",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 5,
+     "song": "Low Key (Prod. by Rami)",
+     "artist": "Chip Tha Ripper"
+    },
+    {
+     "rank": 6,
+     "song": "Scale It Back feat Little Dragon (Party Ben Remix)",
+     "artist": "DJ Shadow"
+    },
+    {
+     "rank": 7,
+     "song": "How Come You Never Go There (Clock Opera Remix)",
+     "artist": "Feist"
+    },
+    {
+     "rank": 8,
+     "song": "Don't Move to Minnesota",
+     "artist": "Elsa Rae"
+    },
+    {
+     "rank": 9,
+     "song": "Hate Sleeping Alone (Bonus Track)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "XV Ft. Pusha T - Awesome",
+     "artist": "XV"
+    },
+    {
+     "rank": 11,
+     "song": "Let It Go",
+     "artist": "araabMUZIK"
+    },
+    {
+     "rank": 12,
+     "song": "Drunk on Love",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 13,
+     "song": "Mother Protect (Goldroom Remix)",
+     "artist": "Niki & The Dove"
+    },
+    {
+     "rank": 14,
+     "song": "Codex (deadmau5 cover)",
+     "artist": "Radiohead"
+    },
+    {
+     "rank": 15,
+     "song": "Alive (Tits & Clits remix)",
+     "artist": "Dirty South"
+    },
+    {
+     "rank": 16,
+     "song": "Go (Peace Treaty Remix)",
+     "artist": "Diplo & Oliver Twist"
+    },
+    {
+     "rank": 17,
+     "song": "Untroubled",
+     "artist": "123Mrk"
+    },
+    {
+     "rank": 18,
+     "song": "Sinden Feat G-Side G Like Me (Mad Decent)",
+     "artist": "Sinden"
+    },
+    {
+     "rank": 19,
+     "song": "Reincarnate",
+     "artist": "Has-Lo"
+    },
+    {
+     "rank": 20,
+     "song": "People Help the People (Cherry Ghost Cover)",
+     "artist": "Birdy"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111112164617/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-11-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 4,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 5,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 6,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 7,
+     "song": "Body 2 Body",
+     "artist": "Ace Hood Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "Fly",
+     "artist": "Nicki Minaj Featuring Rihanna"
+    },
+    {
+     "rank": 10,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111114020451/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Party",
+     "artist": "Beyonce Featuring Andre 3000"
+    },
+    {
+     "rank": 4,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 6,
+     "song": "Wet The Bed",
+     "artist": "Chris Brown Featuring Ludacris"
+    },
+    {
+     "rank": 7,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 8,
+     "song": "Body 2 Body",
+     "artist": "Ace Hood Featuring Chris Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 10,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    }
+   ]
+  }
+ ]
+}

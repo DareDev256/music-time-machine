@@ -1,0 +1,346 @@
+{
+ "month": "2012-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120712105620/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2012-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "100 Bottles",
+     "artist": "CyHi The Prynce feat. Chris Brown & Big Sean"
+    },
+    {
+     "rank": 2,
+     "song": "Pink Matter",
+     "artist": "Frank Ocean feat. Andre 3000"
+    },
+    {
+     "rank": 3,
+     "song": "Different Cloth (Prod by Sledgren)",
+     "artist": "Wiz Khalifa feat. Busta Rhymes"
+    },
+    {
+     "rank": 4,
+     "song": "Now You Do",
+     "artist": "Sir Michael Rocks"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Lie (Freestyle)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "Ready To Fuck",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 7,
+     "song": "Bye Baby",
+     "artist": "Nas"
+    },
+    {
+     "rank": 8,
+     "song": "A Queens Story (Live In Paris)",
+     "artist": "Nas feat. DJ Green Lantern & Z"
+    },
+    {
+     "rank": 9,
+     "song": "Leaving The Dock",
+     "artist": "Curren$y & Harry Fraud"
+    },
+    {
+     "rank": 10,
+     "song": "New God Flow",
+     "artist": "Pusha T feat. Kanye West"
+    },
+    {
+     "rank": 11,
+     "song": "Hold Me Back",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 12,
+     "song": "Stupid Dumb Fly",
+     "artist": "Untitled feat. Ludacris"
+    },
+    {
+     "rank": 13,
+     "song": "I Don't Like",
+     "artist": "Chris Brown feat. Game (Remix) [Drake Diss]"
+    },
+    {
+     "rank": 14,
+     "song": "Hardly Home (Prod. by Alex Lustig)",
+     "artist": "Famous feat. Milli Millz & SRH"
+    },
+    {
+     "rank": 15,
+     "song": "My Moment",
+     "artist": "DJ Drama feat. 2 Chainz, Meek Mill, and Jeremih"
+    },
+    {
+     "rank": 16,
+     "song": "In & Out",
+     "artist": "Marcus Canty feat. Wale"
+    },
+    {
+     "rank": 17,
+     "song": "Let Me Love You (Until You Learn To Love Yourself)",
+     "artist": "Ne-Yo"
+    },
+    {
+     "rank": 18,
+     "song": "Can't Do It Like Me",
+     "artist": "Drumma Boy feat. 2 Chainz"
+    },
+    {
+     "rank": 19,
+     "song": "B.R.K.",
+     "artist": "SpaceGhostPurrp feat. EthelWulf & Chris Travis"
+    },
+    {
+     "rank": 20,
+     "song": "Ice feat Lil Wayne",
+     "artist": "Kelly Rowland"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120714051637/http://hypem.com:80/popular",
+   "captured": "2012-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Heartache",
+     "artist": "Noosa"
+    },
+    {
+     "rank": 2,
+     "song": "We Found Love",
+     "artist": "Timeflies"
+    },
+    {
+     "rank": 3,
+     "song": "End",
+     "artist": "Teengirl Fantasy"
+    },
+    {
+     "rank": 4,
+     "song": "Cannons",
+     "artist": "Youth Lagoon"
+    },
+    {
+     "rank": 5,
+     "song": "The World (Is Going Up In Flames)",
+     "artist": "Charles Bradley"
+    },
+    {
+     "rank": 6,
+     "song": "Born Again",
+     "artist": "D I A N A"
+    },
+    {
+     "rank": 7,
+     "song": "JUMANJI",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 8,
+     "song": "The Palace Garden, 4am",
+     "artist": "Beat Connection"
+    },
+    {
+     "rank": 9,
+     "song": "Only In My Dreams",
+     "artist": "Ariel Pink's Haunted Graffiti"
+    },
+    {
+     "rank": 10,
+     "song": "Dirty",
+     "artist": "Kendrick Lamar - Swimming Pools (Drank)…"
+    },
+    {
+     "rank": 11,
+     "song": "Who Is Ready To Jump Dzeko & Torres Remix",
+     "artist": "Chuckie"
+    },
+    {
+     "rank": 12,
+     "song": "fuck up the fun",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 13,
+     "song": "Werkin' Girls",
+     "artist": "Angel Haze"
+    },
+    {
+     "rank": 14,
+     "song": "Disparate Youth",
+     "artist": "Santigold"
+    },
+    {
+     "rank": 15,
+     "song": "End Of Pretend (Feat. Matthew Koma)",
+     "artist": "Black Cards"
+    },
+    {
+     "rank": 16,
+     "song": "Take A Walk Peking Duk Remix",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 17,
+     "song": "About You Dream Koala remix",
+     "artist": "XXYYXX"
+    },
+    {
+     "rank": 18,
+     "song": "Spiral",
+     "artist": "Wye Oak"
+    },
+    {
+     "rank": 19,
+     "song": "Doin' It, Right",
+     "artist": "Cheers Elephant"
+    },
+    {
+     "rank": 20,
+     "song": "Go Get It (Explicit)",
+     "artist": "T.I."
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120716030823/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2012-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 2,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 3,
+     "song": "Leave You Alone",
+     "artist": "Young Jeezy Featuring Ne-Yo"
+    },
+    {
+     "rank": 4,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 5,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Take It To The Head",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 7,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 8,
+     "song": "Work Hard, Play Hard",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 9,
+     "song": "Beez In The Trap",
+     "artist": "Nicki Minaj Featuring 2 Chainz"
+    },
+    {
+     "rank": 10,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120714051602/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 2,
+     "song": "Climax",
+     "artist": "Usher"
+    },
+    {
+     "rank": 3,
+     "song": "Lemme See",
+     "artist": "Usher Featuring Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 5,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Take It To The Head",
+     "artist": "DJ Khaled Featuring Chris Brown, Rick Ross, Nicki Minaj & Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Heart Attack",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 9,
+     "song": "Bag Of Money",
+     "artist": "Wale Featuring Rick Ross, Meek Mill & T-Pain"
+    },
+    {
+     "rank": 10,
+     "song": "Beez In The Trap",
+     "artist": "Nicki Minaj Featuring 2 Chainz"
+    }
+   ]
+  }
+ ]
+}

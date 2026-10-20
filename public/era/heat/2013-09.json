@@ -1,0 +1,286 @@
+{
+ "month": "2013-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130922031121/http://www.hotnewhiphop.com/top100/",
+   "captured": "2013-09-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pound Cake/Paris Morton Music 2 (Prod. By Boi-1da, Jordan Evans & Matthew Burnett)",
+     "artist": "Drake Feat. Jay Z"
+    },
+    {
+     "rank": 2,
+     "song": "Wu-Tang Forever (Prod. By 40)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Nosetalgia [CDQ]",
+     "artist": "Pusha T Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Too Much (Live On Fallon)",
+     "artist": "Drake Feat. Sampha"
+    },
+    {
+     "rank": 5,
+     "song": "My Man",
+     "artist": "Rick Ross Feat. Meek Mill & Rockie Fresh"
+    },
+    {
+     "rank": 6,
+     "song": "Untitled (GTA V)",
+     "artist": "ASAP Rocky"
+    },
+    {
+     "rank": 7,
+     "song": "Ooh Kill Em (Kendrick Lamar Diss)",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 8,
+     "song": "How It Was",
+     "artist": "Future"
+    },
+    {
+     "rank": 9,
+     "song": "TKO (Prod. by Timbaland)",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 10,
+     "song": "Bout That Life (Prod. By The Mekanics) [CDQ/Mastered]",
+     "artist": "Rick Ross Feat. Diddy, Meek Mill & French Montana"
+    },
+    {
+     "rank": 11,
+     "song": "Garbage (GTA V)",
+     "artist": "Tyler, The Creator"
+    },
+    {
+     "rank": 12,
+     "song": "Dark Horse",
+     "artist": "Katy Perry Feat. Juicy J"
+    },
+    {
+     "rank": 13,
+     "song": "Checc Me Out",
+     "artist": "Nipsey Hussle Feat. Dom Kennedy & Cobby Supreme"
+    },
+    {
+     "rank": 14,
+     "song": "Black Grammys",
+     "artist": "Wale Feat. J. Cole, Meek Mill & Rockie Fresh"
+    },
+    {
+     "rank": 15,
+     "song": "100k",
+     "artist": "Nelly Feat. 2 Chainz"
+    },
+    {
+     "rank": 16,
+     "song": "Bed Peace",
+     "artist": "Jhene Aiko Feat. Childish Gambino"
+    },
+    {
+     "rank": 17,
+     "song": "Two Kings",
+     "artist": "Logic (MD) Feat. King Chip"
+    },
+    {
+     "rank": 18,
+     "song": "You Song (Dirty/CDQ)",
+     "artist": "Lil Wayne Feat. Chance The Rapper"
+    },
+    {
+     "rank": 19,
+     "song": "I Do It",
+     "artist": "2 Chainz Feat. Drake & Lil Wayne"
+    },
+    {
+     "rank": 20,
+     "song": "All Me",
+     "artist": "Drake Feat. 2 Chainz & Big Sean"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130914075226/http://hypem.com:80/popular",
+   "captured": "2013-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Atm Jam feat. Pharrell Kaytranada Edition",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 2,
+     "song": "Black Out Days",
+     "artist": "PHANTOGRAM"
+    },
+    {
+     "rank": 3,
+     "song": "Last Chance (Original Mix)",
+     "artist": "Kaskade & Project 46"
+    },
+    {
+     "rank": 4,
+     "song": "Blush",
+     "artist": "Wolf Alice"
+    },
+    {
+     "rank": 5,
+     "song": "Take You Down Special Edit",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 6,
+     "song": "People Get Up WET PAINT Remix",
+     "artist": "James Brown"
+    },
+    {
+     "rank": 7,
+     "song": "23 feat. Miley Cyrus, Wiz Khalifa & Juicy J",
+     "artist": "Mike Will Made-It"
+    },
+    {
+     "rank": 8,
+     "song": "Too Close",
+     "artist": "St. Lucia"
+    },
+    {
+     "rank": 9,
+     "song": "Team",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 10,
+     "song": "Wu-Tang Forever",
+     "artist": "Drake"
+    },
+    {
+     "rank": 11,
+     "song": "Breezeblocks RZA Remix",
+     "artist": "alt-J"
+    },
+    {
+     "rank": 12,
+     "song": "'Machine Gun' (feat Pusha T)",
+     "artist": "Chase & Status"
+    },
+    {
+     "rank": 13,
+     "song": "When The Night Is Over",
+     "artist": "The Magician"
+    },
+    {
+     "rank": 14,
+     "song": "Dancing on My Own (Robyn Cover)",
+     "artist": "Kings of Leon"
+    },
+    {
+     "rank": 15,
+     "song": "Lessons",
+     "artist": "SOHN"
+    },
+    {
+     "rank": 16,
+     "song": "REFLEKTOR",
+     "artist": "Arcade Fire"
+    },
+    {
+     "rank": 17,
+     "song": "Free Your Mind",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 18,
+     "song": "Constant Conversations Noah Breakfast Remix",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 19,
+     "song": "R U With Me",
+     "artist": "ASTR"
+    },
+    {
+     "rank": 20,
+     "song": "All We Can",
+     "artist": "Yumi And The Weather"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130917063829/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 2,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 3,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 4,
+     "song": "Berzerk",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 5,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 6,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 7,
+     "song": "Give It 2 U",
+     "artist": "Robin Thicke Featuring Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Gas Pedal",
+     "artist": "Sage The Gemini Featuring IamSu"
+    },
+    {
+     "rank": 9,
+     "song": "Crooked Smile",
+     "artist": "J. Cole Featuring TLC"
+    },
+    {
+     "rank": 10,
+     "song": "Beware",
+     "artist": "Big Sean Featuring Lil Wayne & Jhene Aiko"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,286 @@
+{
+ "month": "2013-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130731214338/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2013-07-31",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fire (CDQ/Dirty)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 2,
+     "song": "Spaced Out",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 3,
+     "song": "I Wanna Be With You (CDQ/Dirty)",
+     "artist": "DJ Khaled Feat. Nicki Minaj, Future & Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "I Ain't Done Turning Up",
+     "artist": "Chief Keef"
+    },
+    {
+     "rank": 5,
+     "song": "I Wonder Why (CDQ/Dirty)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 6,
+     "song": "Centipede",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 7,
+     "song": "Hood Pope",
+     "artist": "A$AP Ferg"
+    },
+    {
+     "rank": 8,
+     "song": "Belong To The World",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 9,
+     "song": "Panties To The Side",
+     "artist": "French Montana Feat. Bow Wow, Tyga & Gudda Gudda"
+    },
+    {
+     "rank": 10,
+     "song": "Drop Bands On It",
+     "artist": "Mally Mall Feat. Wiz Khalifa, Tyga & Fresh"
+    },
+    {
+     "rank": 11,
+     "song": "Go To Jail",
+     "artist": "Chief Keef"
+    },
+    {
+     "rank": 12,
+     "song": "My Story",
+     "artist": "R. Kelly Feat. 2 Chainz"
+    },
+    {
+     "rank": 13,
+     "song": "Bigger Than Life",
+     "artist": "Birdman Feat. Chris Brown, Tyga, & Lil Wayne"
+    },
+    {
+     "rank": 14,
+     "song": "Panamera",
+     "artist": "Omelly Feat. Meek Mill"
+    },
+    {
+     "rank": 15,
+     "song": "Love In The Sky",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 16,
+     "song": "Shabba [CDQ]",
+     "artist": "A$AP Ferg Feat. ASAP Rocky"
+    },
+    {
+     "rank": 17,
+     "song": "Ass Fat",
+     "artist": "Trina Feat. Meek Mill"
+    },
+    {
+     "rank": 18,
+     "song": "Talk Dirty",
+     "artist": "Jason Derulo Feat. 2 Chainz"
+    },
+    {
+     "rank": 19,
+     "song": "Summertime In That Cutlass [Tags]",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 20,
+     "song": "Love More",
+     "artist": "Chris Brown Feat. Nicki Minaj"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130716092931/http://hypem.com:80/popular",
+   "captured": "2013-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "In/Out",
+     "artist": "Dan Croll"
+    },
+    {
+     "rank": 2,
+     "song": "Things I'd Do For U",
+     "artist": "astronomyy"
+    },
+    {
+     "rank": 3,
+     "song": "Summertime Sadness Cedric Gervais RMX",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 4,
+     "song": "Chiaroscuro",
+     "artist": "Sound Remedy"
+    },
+    {
+     "rank": 5,
+     "song": "You Too",
+     "artist": "Para One"
+    },
+    {
+     "rank": 6,
+     "song": "Given The Chance",
+     "artist": "The Kite String Tangle"
+    },
+    {
+     "rank": 7,
+     "song": "Well Absolutely",
+     "artist": "Body Language"
+    },
+    {
+     "rank": 8,
+     "song": "Feel Good (Skyphos)",
+     "artist": "Nina Simone"
+    },
+    {
+     "rank": 9,
+     "song": "I Miss You",
+     "artist": "Ta-ku"
+    },
+    {
+     "rank": 10,
+     "song": "BUST",
+     "artist": "Robby Hunter Band"
+    },
+    {
+     "rank": 11,
+     "song": "Boneless",
+     "artist": "Steve Aoki & Chris Lake & Tujamo"
+    },
+    {
+     "rank": 12,
+     "song": "Family Man Flight Facilities Edit",
+     "artist": "Fleetwood Mac"
+    },
+    {
+     "rank": 13,
+     "song": "Safe With You (Extended Mix)",
+     "artist": "Alex Metric & Jacques Lu Cont feat. Mali…"
+    },
+    {
+     "rank": 14,
+     "song": "Concrete Schoolyard.",
+     "artist": "Jurassic 5"
+    },
+    {
+     "rank": 15,
+     "song": "Woman of the Ghetto Flume's Jackin House Mix",
+     "artist": "Marlena Shaw"
+    },
+    {
+     "rank": 16,
+     "song": "Never Going Back",
+     "artist": "Cosmic Kids"
+    },
+    {
+     "rank": 17,
+     "song": "Cool Like Me",
+     "artist": "Fryars"
+    },
+    {
+     "rank": 18,
+     "song": "Drones",
+     "artist": "Night Drive"
+    },
+    {
+     "rank": 19,
+     "song": "C O O L",
+     "artist": "Le Youth"
+    },
+    {
+     "rank": 20,
+     "song": "Addiction feat. Cassie & Fabolous Phazz Remix",
+     "artist": "Ryan Leslie"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130714195159/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-07-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 2,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 3,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 4,
+     "song": "#Beautiful",
+     "artist": "Mariah Carey Featuring Miguel"
+    },
+    {
+     "rank": 5,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 6,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 7,
+     "song": "Body Party",
+     "artist": "Ciara"
+    },
+    {
+     "rank": 8,
+     "song": "U.O.E.N.O.",
+     "artist": "Rocko Featuring Future & Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas Or Rihanna"
+    },
+    {
+     "rank": 10,
+     "song": "Bitch, Don't Kill My Vibe",
+     "artist": "Kendrick Lamar"
+    }
+   ]
+  }
+ ]
+}

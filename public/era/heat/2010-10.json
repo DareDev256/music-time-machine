@@ -1,0 +1,346 @@
+{
+ "month": "2010-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20101014153504/http://www.hotnewhiphop.com:80/",
+   "captured": "2010-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Give It To Em (Prod By The Runners)",
+     "artist": "Akon feat. Rick Ross"
+    },
+    {
+     "rank": 2,
+     "song": "Down Here",
+     "artist": "Petey Pablo feat. Lil' Wayne & Rick Ross"
+    },
+    {
+     "rank": 3,
+     "song": "Grindin All Night",
+     "artist": "Roccett feat. Rick Ross & Bun B"
+    },
+    {
+     "rank": 4,
+     "song": "Ready Set Go (Prod by KE)",
+     "artist": "Roscoe Dash"
+    },
+    {
+     "rank": 5,
+     "song": "All These [Alternate Version]",
+     "artist": "Sterling Simms feat. Short Dawg"
+    },
+    {
+     "rank": 6,
+     "song": "What We Wished For",
+     "artist": "Russell W Howard"
+    },
+    {
+     "rank": 7,
+     "song": "Miss Boosie (Tags)",
+     "artist": "Lil Boosie feat. B.G."
+    },
+    {
+     "rank": 8,
+     "song": "G.O.O.D. Music Cypher",
+     "artist": "Kanye West feat. Pusha T, Cyhi Da Prynce, Big Sean, & Common"
+    },
+    {
+     "rank": 9,
+     "song": "Cipher #1",
+     "artist": "Wiz Khalifa feat. Bones Brigante, Yelawolf, & Raekwon"
+    },
+    {
+     "rank": 10,
+     "song": "Cypher #2",
+     "artist": "Tyga feat. Kuniva, Diamond, & Royce Da 5'9\""
+    },
+    {
+     "rank": 11,
+     "song": "Cypher #3",
+     "artist": "Ice Cube feat. Omg, Doughboy, Diggy, Jojo, & Rev Run"
+    },
+    {
+     "rank": 12,
+     "song": "Cypher #4",
+     "artist": "Mickey Factz feat. Zawcain, & Reek Da Villain"
+    },
+    {
+     "rank": 13,
+     "song": "Pretty Girl Rock (Remix)",
+     "artist": "Keri Hilson feat. Ace Hood"
+    },
+    {
+     "rank": 14,
+     "song": "Chop It Up (Tags)",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 15,
+     "song": "So Good",
+     "artist": "Cambatta feat. Nino Bless, Crooked I, Sha Stimuli & Big Moss"
+    },
+    {
+     "rank": 16,
+     "song": "24 Bars (Drunk)",
+     "artist": "Royce Da 5'9\""
+    },
+    {
+     "rank": 17,
+     "song": "T-Shirt & Panties",
+     "artist": "YG"
+    },
+    {
+     "rank": 18,
+     "song": "241",
+     "artist": "Chrishan feat. Kyle Christopher & JWatts"
+    },
+    {
+     "rank": 19,
+     "song": "Sweet Dreams (Prod by Famous)",
+     "artist": "Yung Luv feat. Nina Luv"
+    },
+    {
+     "rank": 20,
+     "song": "Word To These Bo Jackson's",
+     "artist": "Nesby Phips"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101018001138/http://hypem.com:80/popular",
+   "captured": "2010-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ray Ban Vision (Ft. CyHi Da Prynce)",
+     "artist": "A-Trak"
+    },
+    {
+     "rank": 2,
+     "song": "Switchin Lanes",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 3,
+     "song": "Trust",
+     "artist": "Generationals"
+    },
+    {
+     "rank": 4,
+     "song": "Everybody Knows (RAC Mix)",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 5,
+     "song": "What's My Name (Ft.Drake)",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "I Remember Shelter (The xx vs. Deadmau5 & Kaskade)",
+     "artist": "Austin Eterno"
+    },
+    {
+     "rank": 7,
+     "song": "Difficult (2006 Parties Remix By SebastiAn)",
+     "artist": "Uffie"
+    },
+    {
+     "rank": 8,
+     "song": "Cooler Couleur (Feat. Yelle)",
+     "artist": "Crookers"
+    },
+    {
+     "rank": 9,
+     "song": "Lionheart",
+     "artist": "Emancipator"
+    },
+    {
+     "rank": 10,
+     "song": "Amsterdamn (Original Mix)",
+     "artist": "Afrojack Vs. The Partysquad"
+    },
+    {
+     "rank": 11,
+     "song": "Drake Gone Daft (Drake Vs. Daft Punk )",
+     "artist": "+VIBES"
+    },
+    {
+     "rank": 12,
+     "song": "Use Somebody (Kings of Leon Cover + Beatboxing)",
+     "artist": "Matisyahu"
+    },
+    {
+     "rank": 13,
+     "song": "We R Who We R",
+     "artist": "Ke$ha"
+    },
+    {
+     "rank": 14,
+     "song": "Wherever We Are (Grum Dub Mix)",
+     "artist": "Human Life"
+    },
+    {
+     "rank": 15,
+     "song": "Lisztomania (Shook Remix)",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 16,
+     "song": "Better Off Alone (DJ Philistine & Kewl Breez Dubstep Remix)",
+     "artist": "Alice Deejay"
+    },
+    {
+     "rank": 17,
+     "song": "I Do My Thing (feat. Snoop Dogg)",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 18,
+     "song": "Trust",
+     "artist": "Generationals"
+    },
+    {
+     "rank": 19,
+     "song": "Nerve (Hey Today! Remix) (Preview)",
+     "artist": "Boys Noize"
+    },
+    {
+     "rank": 20,
+     "song": "One (Swedish House Mafia Cover)",
+     "artist": "Foals"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101018000256/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love The Way You Lie",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 3,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Miss Me",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "Like A G6",
+     "artist": "Far*East Movement Featuring Cataracs & Dev"
+    },
+    {
+     "rank": 6,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 7,
+     "song": "Just A Dream",
+     "artist": "Nelly"
+    },
+    {
+     "rank": 8,
+     "song": "B.M.F. (Blowin' Money Fast)",
+     "artist": "Rick Ross Featuring Styles P"
+    },
+    {
+     "rank": 9,
+     "song": "Got Your Back",
+     "artist": "T.I. Featuring Keri Hilson"
+    },
+    {
+     "rank": 10,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101018005703/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-10-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Deuces",
+     "artist": "Chris Brown Featuring Tyga & Kevin McCall"
+    },
+    {
+     "rank": 2,
+     "song": "Bottoms Up",
+     "artist": "Trey Songz Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Holding You Down (Goin In Ci...",
+     "artist": "Jazmine Sullivan"
+    },
+    {
+     "rank": 4,
+     "song": "Can't Be Friends",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 5,
+     "song": "Love All Over Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 6,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    },
+    {
+     "rank": 7,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 8,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame Featuring Roscoe Dash & Wale"
+    },
+    {
+     "rank": 9,
+     "song": "Hot Tottie",
+     "artist": "Usher Featuring Jay-Z"
+    },
+    {
+     "rank": 10,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "month": "2014-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141118012553/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-11-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Detroit Vs. Everybody (Prod. by Statik Selektah)",
+     "artist": "Eminem Feat. Royce Da 5'9\", Big Sean, Danny Brown, Dej Loaf, & Trick Trick"
+    },
+    {
+     "rank": 2,
+     "song": "Movin' Bass (Prod. by Timbaland)",
+     "artist": "Rick Ross Feat. Jay Z"
+    },
+    {
+     "rank": 3,
+     "song": "Sho Me Love (Prod. By London On The Track)",
+     "artist": "Rich Gang Feat. Juvenile & Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Off Day (Prod. By X Fyle)",
+     "artist": "Lil Wayne Feat. Flow"
+    },
+    {
+     "rank": 5,
+     "song": "Post To Be (Prod. By DJ Mustard)",
+     "artist": "Omarion Feat. Chris Brown & Jhene Aiko"
+    },
+    {
+     "rank": 6,
+     "song": "Never Satisfied (Full Version) (Prod. By Mike WiLL Made It)",
+     "artist": "Future Feat. Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Lies & Dreams",
+     "artist": "Ty Dolla $ign Feat. Iamsu!"
+    },
+    {
+     "rank": 8,
+     "song": "This Side",
+     "artist": "A$AP Ferg Feat. YG"
+    },
+    {
+     "rank": 9,
+     "song": "Stand For (Prod. by Diplo & DJ Dahi)",
+     "artist": "Ty Dolla $ign"
+    },
+    {
+     "rank": 10,
+     "song": "Bed Of Lies",
+     "artist": "Nicki Minaj Feat. Skylar Grey"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141115131049/http://hypem.com:80/popular",
+   "captured": "2014-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Waited 4 U ODESZA Remix",
+     "artist": "Slow Magic"
+    },
+    {
+     "rank": 2,
+     "song": "All My Love (feat. Ariana Grande)",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 3,
+     "song": "Shut Up and Dance With Me White Panda Remix",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 4,
+     "song": "Tribe Bixel Boys Remix",
+     "artist": "Theophilus London Feat. Jesse Boykins II…"
+    },
+    {
+     "rank": 5,
+     "song": "Meltdown (feat. Lorde, Pusha T, Q-Tip & HAIM)",
+     "artist": "Stromae"
+    },
+    {
+     "rank": 6,
+     "song": "Push feat. Andrew Wyatt The Chainsmokers Remix",
+     "artist": "A-Trak"
+    },
+    {
+     "rank": 7,
+     "song": "Love Don't Live Here No More",
+     "artist": "Ghostface Killah"
+    },
+    {
+     "rank": 8,
+     "song": "Animals Gryffin Remix",
+     "artist": "Maroon 5"
+    },
+    {
+     "rank": 9,
+     "song": "Shake It Off (Remix)",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 10,
+     "song": "Breathe Again",
+     "artist": "The KickDrums"
+    },
+    {
+     "rank": 11,
+     "song": "R E A L",
+     "artist": "Le Youth"
+    },
+    {
+     "rank": 12,
+     "song": "Memo",
+     "artist": "Years and Years"
+    },
+    {
+     "rank": 13,
+     "song": "Back, Baby",
+     "artist": "Jessica Pratt"
+    },
+    {
+     "rank": 14,
+     "song": "Thinking About It Fabich & Ferdinand Weber Remix",
+     "artist": "Just Kiddin"
+    },
+    {
+     "rank": 15,
+     "song": "Runaway (U & I) Lash Remix",
+     "artist": "Galantis"
+    },
+    {
+     "rank": 16,
+     "song": "Kingpin (feat. Big Sean)",
+     "artist": "RL Grime"
+    },
+    {
+     "rank": 17,
+     "song": "Body Gold Louis The Child Remix",
+     "artist": "Oh Wonder"
+    },
+    {
+     "rank": 18,
+     "song": "DESIRE HUCCI REMIX",
+     "artist": "MEG MYERS"
+    },
+    {
+     "rank": 19,
+     "song": "Vacant Space",
+     "artist": "George Maple"
+    },
+    {
+     "rank": 20,
+     "song": "Daffodils (feat. Kevin Parker)\" - BBC Radio 1 World Premiere",
+     "artist": "Mark Ronson"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141116160457/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hot Boy",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 2,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 3,
+     "song": "Don't Tell 'Em",
+     "artist": "Jeremih Featuring YG"
+    },
+    {
+     "rank": 4,
+     "song": "I Don't F**k With You",
+     "artist": "Big Sean Featuring E-40"
+    },
+    {
+     "rank": 5,
+     "song": "Lifestyle",
+     "artist": "Rich Gang Featuring Young Thug & Rich Homie Quan"
+    },
+    {
+     "rank": 6,
+     "song": "No Type",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 7,
+     "song": "Tuesday",
+     "artist": "I LOVE MAKONNEN Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "New Flame",
+     "artist": "Chris Brown Featuring Usher & Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Hold You Down",
+     "artist": "DJ Khaled Featuring Chris Brown, August Alsina, Future & Jeremih"
+    }
+   ]
+  }
+ ]
+}

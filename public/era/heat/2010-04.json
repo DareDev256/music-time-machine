@@ -1,0 +1,346 @@
+{
+ "month": "2010-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100425043532/http://www.hotnewhiphop.com:80/",
+   "captured": "2010-04-25",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Not Lost",
+     "artist": "B.o.B. feat. T.I."
+    },
+    {
+     "rank": 2,
+     "song": "Sex You Like This",
+     "artist": "Bow Wow"
+    },
+    {
+     "rank": 3,
+     "song": "Slangin' Game",
+     "artist": "The Game"
+    },
+    {
+     "rank": 4,
+     "song": "Verbal Intercourse",
+     "artist": "Jae Millz"
+    },
+    {
+     "rank": 5,
+     "song": "Whip it",
+     "artist": "Boo Rossini feat. Lil' Wayne & Yo Gotti"
+    },
+    {
+     "rank": 6,
+     "song": "Freak Hoez (Remix)",
+     "artist": "Yo Gotti feat. Calico Jonez"
+    },
+    {
+     "rank": 7,
+     "song": "Fuck Me in The Mosh Pit",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "Laid The Fuck Out",
+     "artist": "Papoose feat. Bun B & Twista"
+    },
+    {
+     "rank": 9,
+     "song": "Dopeman Music",
+     "artist": "Scarface feat. B. James & Monk Kaza"
+    },
+    {
+     "rank": 10,
+     "song": "Big Things",
+     "artist": "Ester Dean feat. Chris Brown"
+    },
+    {
+     "rank": 11,
+     "song": "Throw Dem Dollars at Her",
+     "artist": "Omega feat. Gorilla Zoe"
+    },
+    {
+     "rank": 12,
+     "song": "Power 99 Freestyle",
+     "artist": "Lloyd Banks"
+    },
+    {
+     "rank": 13,
+     "song": "Ice Cream (Remix)",
+     "artist": "8Ball & Devius feat. Raekwon"
+    },
+    {
+     "rank": 14,
+     "song": "Hot & Fun",
+     "artist": "N.E.R.D. feat. Nelly Furtado"
+    },
+    {
+     "rank": 15,
+     "song": "Born Free",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 16,
+     "song": "Not Yet",
+     "artist": "Jamie Foxx feat. Rico Love & Mase"
+    },
+    {
+     "rank": 17,
+     "song": "Did We",
+     "artist": "Jamie Foxx feat. Tank"
+    },
+    {
+     "rank": 18,
+     "song": "All This Love",
+     "artist": "Jamie Foxx feat. Ll Cool J"
+    },
+    {
+     "rank": 19,
+     "song": "I'm All Dat",
+     "artist": "Streetz feat. Jim Jones"
+    },
+    {
+     "rank": 20,
+     "song": "Rodeo",
+     "artist": "Ray L feat. Rock City & Kardinal Offishall"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100414193555/http://hypem.com:80/popular",
+   "captured": "2010-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Airplanes (Ft. Hayley Williams of Paramore)",
+     "artist": "B.o.B"
+    },
+    {
+     "rank": 2,
+     "song": "New People Empire Remix",
+     "artist": "Blue Scholars"
+    },
+    {
+     "rank": 3,
+     "song": "Upular (Rynecologist Helium Rework)",
+     "artist": "Pogo"
+    },
+    {
+     "rank": 4,
+     "song": "Can I Kick It?",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 5,
+     "song": "Splash ft. Coco (Rusko Remix)",
+     "artist": "Sub Focus"
+    },
+    {
+     "rank": 6,
+     "song": "Sunshine",
+     "artist": "Picture Book"
+    },
+    {
+     "rank": 7,
+     "song": "I Can Change",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 8,
+     "song": "Dance Yrself Clean",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 9,
+     "song": "Punkroses",
+     "artist": "Daft Punk vs Outkast"
+    },
+    {
+     "rank": 10,
+     "song": "Billie Holiday (LightsoverLA remix)",
+     "artist": "Miike Snow"
+    },
+    {
+     "rank": 11,
+     "song": "Symphonies feat. Kid Cudi (Dada Life Remix)",
+     "artist": "Dan Black"
+    },
+    {
+     "rank": 12,
+     "song": "Do You Wanna Have A Party",
+     "artist": "Rusko"
+    },
+    {
+     "rank": 13,
+     "song": "Flashing Room",
+     "artist": "2AM Club"
+    },
+    {
+     "rank": 14,
+     "song": "What Am I Supposed To Do",
+     "artist": "Treasure Fingers"
+    },
+    {
+     "rank": 15,
+     "song": "Night By Night (Skream Remix)",
+     "artist": "Chromeo"
+    },
+    {
+     "rank": 16,
+     "song": "As We Enter",
+     "artist": "Damian Marley & Nas"
+    },
+    {
+     "rank": 17,
+     "song": "None Of Dem",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 18,
+     "song": "I Dont Know What I Can Save You From (Ryksopp Remix)",
+     "artist": "Kings Of Convenience"
+    },
+    {
+     "rank": 19,
+     "song": "Dancehall Queen (produced by Diplo)",
+     "artist": "Robyn"
+    },
+    {
+     "rank": 20,
+     "song": "Tightrope",
+     "artist": "Yeasayer"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100412101843/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-04-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 3,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 4,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 6,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Steady Mobbin'",
+     "artist": "Young Money Featuring Gucci Mane"
+    },
+    {
+     "rank": 8,
+     "song": "Lemonade",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 9,
+     "song": "O Let's Do It",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 10,
+     "song": "Tie Me Down",
+     "artist": "New Boyz Featuring Ray J"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100417025507/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-04-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Everything To Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 2,
+     "song": "Hey Daddy (Daddy's Home)",
+     "artist": "Usher Featuring Plies"
+    },
+    {
+     "rank": 3,
+     "song": "Rude Boy",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 4,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Neighbors Know My Name",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 6,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Sex Therapy",
+     "artist": "Robin Thicke"
+    },
+    {
+     "rank": 9,
+     "song": "Lil Freak",
+     "artist": "Usher Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    }
+   ]
+  }
+ ]
+}

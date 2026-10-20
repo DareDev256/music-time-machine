@@ -1,0 +1,286 @@
+{
+ "month": "2014-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140214233541/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-02-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "War Ready (Prod. By Mike Will Made It)",
+     "artist": "Rick Ross Feat. Jeezy"
+    },
+    {
+     "rank": 2,
+     "song": "Diablo (Prod. By Larry Fisherman)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 3,
+     "song": "Show Me (Remix)",
+     "artist": "Kid Ink Feat. Juicy J, 2 Chainz, Trey Songz & Chris Brown"
+    },
+    {
+     "rank": 4,
+     "song": "We Dem Boyz (Full)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 5,
+     "song": "Move That Dope (Prod. By Mike WiLL Made It)",
+     "artist": "Future Feat. Pharrell, Pusha T & Casino"
+    },
+    {
+     "rank": 6,
+     "song": "Dispensary",
+     "artist": "Wiz Khalifa Feat. Chevy Woods & Berner"
+    },
+    {
+     "rank": 7,
+     "song": "Know No Better (Prod. By Cardo)",
+     "artist": "Meek Mill Feat. Yo Gotti"
+    },
+    {
+     "rank": 8,
+     "song": "Who Do You Love? (Freestyle)",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "T.H.O.T. (Prod. By League Of Starz)",
+     "artist": "Game Feat. Problem & Bad Lucc"
+    },
+    {
+     "rank": 10,
+     "song": "Know No Better (Prod. By Cardo) (CDQ)",
+     "artist": "Meek Mill Feat. Yo Gotti"
+    },
+    {
+     "rank": 11,
+     "song": "Ordinary",
+     "artist": "Trey Songz Feat. Jeezy"
+    },
+    {
+     "rank": 12,
+     "song": "Pantie Lover",
+     "artist": "A$AP Ferg"
+    },
+    {
+     "rank": 13,
+     "song": "Lookin Ass Nigga",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 14,
+     "song": "Intro",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 15,
+     "song": "War",
+     "artist": "Chief Keef"
+    },
+    {
+     "rank": 16,
+     "song": "Oyster Perpetual",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 17,
+     "song": "Pantie Raid Pt. 2 (Prod. By Bruce Leekix)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 18,
+     "song": "Thank You (Unreleased)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 19,
+     "song": "Sing For Me",
+     "artist": "Elijah Blake Feat. Rick Ross & Game"
+    },
+    {
+     "rank": 20,
+     "song": "Made In Black America (Prod. By No I.D.)",
+     "artist": "Common Feat. Ab-Soul"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140215060747/http://hypem.com/popular/",
+   "captured": "2014-02-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Can't Keep Up (feat. Will Heard)",
+     "artist": "TOURIST"
+    },
+    {
+     "rank": 2,
+     "song": "Say You'll Be There",
+     "artist": "MØ"
+    },
+    {
+     "rank": 3,
+     "song": "Repeating Motion (feat. Karl Kling)",
+     "artist": "RAC"
+    },
+    {
+     "rank": 4,
+     "song": "See Thru feat. Lisa Lobsinger Thugli Remix",
+     "artist": "Smalltown DJs"
+    },
+    {
+     "rank": 5,
+     "song": "Hyperparadise (GANZ Flip)",
+     "artist": "Hermitude x Flume"
+    },
+    {
+     "rank": 6,
+     "song": "Touch",
+     "artist": "Shura"
+    },
+    {
+     "rank": 7,
+     "song": "Devil May Cry Fabich & Ferdinand Weber Edit",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 8,
+     "song": "Diablo (prod. Larry Fisherman)",
+     "artist": "Larry Fisherman"
+    },
+    {
+     "rank": 9,
+     "song": "Artifice",
+     "artist": "SOHN"
+    },
+    {
+     "rank": 10,
+     "song": "Come Alive The Magician Remix",
+     "artist": "Chromeo feat. Toro Y Moi"
+    },
+    {
+     "rank": 11,
+     "song": "Klapp Klapp",
+     "artist": "Little Dragon"
+    },
+    {
+     "rank": 12,
+     "song": "Electric Feel Kygo Remix",
+     "artist": "Henry Green"
+    },
+    {
+     "rank": 13,
+     "song": "Kisser RII Remix",
+     "artist": "Step Rockets"
+    },
+    {
+     "rank": 14,
+     "song": "Wedding Bells +4 remixes",
+     "artist": "Cashmere Cat"
+    },
+    {
+     "rank": 15,
+     "song": "No More",
+     "artist": "Shlohmo & Jeremih"
+    },
+    {
+     "rank": 16,
+     "song": "Money",
+     "artist": "POWERS"
+    },
+    {
+     "rank": 17,
+     "song": "Hey Now Kilter's 'EDMDMA' Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 18,
+     "song": "Go Crazy (Jeezy Cover)",
+     "artist": "Paul Conrad Music"
+    },
+    {
+     "rank": 19,
+     "song": "Gooey",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 20,
+     "song": "Painter (valentine)",
+     "artist": "Låpsley"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140219202908/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-02-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 2,
+     "song": "Talk Dirty",
+     "artist": "Jason Derulo Featuring 2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "Drunk In Love",
+     "artist": "Beyonce Featuring Jay Z"
+    },
+    {
+     "rank": 4,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 5,
+     "song": "All Of Me",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 6,
+     "song": "The Man",
+     "artist": "Aloe Blacc"
+    },
+    {
+     "rank": 7,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 9,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 10,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    }
+   ]
+  }
+ ]
+}

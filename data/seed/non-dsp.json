@@ -1,0 +1,22 @@
+{
+  "about": "Hand-verified songs that lived on YouTube or mixtapes before (or without) a DSP release. Every date is the YouTube upload date measured with yt-dlp on 2026-10-20 unless dateSource says otherwise. The index loads these first so the core case resolves with zero external calls.",
+  "verified": "2026-10-20",
+  "rows": [
+    { "song": "Cuz My Gear", "artist": "Chief Keef & Riff Raff", "date": "2012-04-28", "dateSource": "uploaded to YouTube", "youtubeId": "nB9au3UBSqI", "where": ["youtube", "musicbrainz"], "note": "On DatPiff tape Young & Flexin, 2012-05-17 (MusicBrainz, ISRC FR5R00903251). Not on Apple Music.", "source": "yt-dlp: JodyHighRoller upload; MusicBrainz first-release-date" },
+    { "song": "I Don't Like", "artist": "Chief Keef & Lil Reese", "date": "2012-03-12", "dateSource": "uploaded to YouTube", "youtubeId": "2WcRXJ4piHg", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "L's Anthem", "artist": "Lil Durk", "date": "2012-03-28", "dateSource": "uploaded to YouTube", "youtubeId": "MntLMkF1z2c", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "Us", "artist": "Lil Reese", "date": "2012-04-04", "dateSource": "uploaded to YouTube", "youtubeId": "JdV0mmHrfBM", "where": ["youtube"], "note": "A Zae Production video", "source": "yt-dlp" },
+    { "song": "Everyday", "artist": "Chief Keef", "date": "2012-04-07", "dateSource": "uploaded to YouTube", "youtubeId": "tD3xowIXjAA", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "Love Sosa", "artist": "Chief Keef", "date": "2012-10-18", "dateSource": "uploaded to YouTube", "youtubeId": "YWyHZNBz6FE", "where": ["youtube", "itunes"], "note": "DGainz video; also on Finally Rich", "source": "yt-dlp; iTunes releaseDate 2012-10-18" },
+    { "song": "Aimed At You", "artist": "Chief Keef", "date": "2011-11-28", "dateSource": "uploaded to YouTube", "youtubeId": "NBinh6AaSao", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "I Dont Know Dem", "artist": "Chief Keef", "date": "2012-01-25", "dateSource": "uploaded to YouTube", "youtubeId": "qLo-Lw6idVU", "where": ["youtube"], "note": "A Zae Production video", "source": "yt-dlp" },
+    { "song": "John Madden", "artist": "Chief Keef", "date": "2011-10-30", "dateSource": "uploaded to YouTube", "youtubeId": "Jg9mJEE5PeQ", "where": ["youtube"], "note": "DJ Kenn AON video", "source": "yt-dlp" },
+    { "song": "Russian Roulette", "artist": "Chief Keef & Fat Trel", "date": "2012-07-05", "dateSource": "uploaded to YouTube", "youtubeId": "XGMVd4kRacQ", "where": ["youtube"], "note": "Fat Trel channel", "source": "yt-dlp" },
+    { "song": "They Know", "artist": "Chief Keef", "date": "2012-12-01", "dateSource": "uploaded to YouTube", "youtubeId": "4jUFDrfTYMc", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "Right Here", "artist": "Lil Durk", "date": "2012-08-09", "dateSource": "uploaded to YouTube", "youtubeId": "ChVj2XqXz2g", "where": ["youtube"], "note": "DGainz video", "source": "yt-dlp" },
+    { "song": "Traffic", "artist": "Lil Reese & Chief Keef", "date": "2012-07-27", "dateSource": "uploaded to YouTube", "youtubeId": "y34iXfB3L9s", "where": ["youtube"], "note": "Tre P video", "source": "yt-dlp" },
+    { "song": "Bad", "artist": "Lil Reese", "date": "2012-07-17", "dateSource": "uploaded to YouTube", "youtubeId": "NfktbCcZU5E", "where": ["youtube"], "note": "Open World Films video, prod. Young Chop", "source": "yt-dlp" },
+    { "song": "Shut Up", "artist": "Stormzy", "date": "2015-05-17", "dateSource": "uploaded to YouTube", "youtubeId": "RqQGUJK7Na4", "where": ["youtube", "musicbrainz"], "note": "Freestyle over Crazy Titch's Just Be Good to Green; MusicBrainz first release 2016-02-16", "source": "yt-dlp; MusicBrainz" },
+    { "song": "Sweet Shop", "artist": "Doctor P", "date": "2010-03-16", "dateSource": "first release (MusicBrainz)", "where": ["musicbrainz", "itunes"], "note": "Circus Records; the top YouTube result is a 2009-11-06 fan upload, so the YouTube date is not used", "source": "MusicBrainz first-release-date" }
+  ]
+}

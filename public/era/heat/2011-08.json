@@ -1,0 +1,346 @@
+{
+ "month": "2011-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110815103907/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "House Party (No DJ)",
+     "artist": "Meek Mill feat. Young Chris"
+    },
+    {
+     "rank": 2,
+     "song": "Body Count (No DJ)",
+     "artist": "Meek Mill feat. Rick Ross"
+    },
+    {
+     "rank": 3,
+     "song": "Tony Story (No DJ)",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 4,
+     "song": "Mary Jane (Prod By The Runners)",
+     "artist": "Bali feat. Kevin Cossom"
+    },
+    {
+     "rank": 5,
+     "song": "Stop Traffic (Tags)",
+     "artist": "Juvenile feat. Rich Boy"
+    },
+    {
+     "rank": 6,
+     "song": "Boy Why",
+     "artist": "Jazmine Sullivan"
+    },
+    {
+     "rank": 7,
+     "song": "I Wanna See",
+     "artist": "Slim Thug feat. Mike Mike"
+    },
+    {
+     "rank": 8,
+     "song": "Reverse The Roles",
+     "artist": "Jakk Frost"
+    },
+    {
+     "rank": 9,
+     "song": "International",
+     "artist": "Lee Carr"
+    },
+    {
+     "rank": 10,
+     "song": "The Regulator",
+     "artist": "Will.i.am"
+    },
+    {
+     "rank": 11,
+     "song": "Chain Music (Radio Rip)",
+     "artist": "Wale"
+    },
+    {
+     "rank": 12,
+     "song": "4AM (Prod by Rico Love)",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 13,
+     "song": "Up (Remix)",
+     "artist": "J Valentine feat. Pleasure P"
+    },
+    {
+     "rank": 14,
+     "song": "Cant Fuck Wit Us",
+     "artist": "RichKidd (WTB) feat. GunPlay"
+    },
+    {
+     "rank": 15,
+     "song": "Good Life (Prod by Sean Brown)",
+     "artist": "Soulja Boy feat. Tony the Diety"
+    },
+    {
+     "rank": 16,
+     "song": "Penthouse (Prod by Roosevelt)",
+     "artist": "TeeCee4800"
+    },
+    {
+     "rank": 17,
+     "song": "Set In Stone (Prod by BamBeeno)",
+     "artist": "Young Knox"
+    },
+    {
+     "rank": 18,
+     "song": "Best In The World",
+     "artist": "Rico Love"
+    },
+    {
+     "rank": 19,
+     "song": "Thrashed (Party People)",
+     "artist": "Laze & Royal"
+    },
+    {
+     "rank": 20,
+     "song": "If You Let Me",
+     "artist": "Johnta Austin"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110814152141/http://hypem.com:80/popular",
+   "captured": "2011-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "She Will (feat. Drake)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Velvet Elvis (RAC Remix)",
+     "artist": "Alex Winston"
+    },
+    {
+     "rank": 3,
+     "song": "Harvest Moon",
+     "artist": "Poolside"
+    },
+    {
+     "rank": 4,
+     "song": "Crush On You - Knife Party - CONTACT extended edit",
+     "artist": "Nero"
+    },
+    {
+     "rank": 5,
+     "song": "Video Games",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 6,
+     "song": "Sleeping Lessons (RAC Mix)",
+     "artist": "The Shins"
+    },
+    {
+     "rank": 7,
+     "song": "Be Alone",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 8,
+     "song": "How Come You Never Go There",
+     "artist": "Feist"
+    },
+    {
+     "rank": 9,
+     "song": "Dont Give Up On Us (Enough Is Enough) feat. Yolanda Selini",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 10,
+     "song": "Angst",
+     "artist": "Nero"
+    },
+    {
+     "rank": 11,
+     "song": "Ghetto Dreams - ft NAS - Vox Up (MASTERED DK)",
+     "artist": "Common"
+    },
+    {
+     "rank": 12,
+     "song": "Ether Drift",
+     "artist": "Com Truise"
+    },
+    {
+     "rank": 13,
+     "song": "Pump It Up",
+     "artist": "Zomboy"
+    },
+    {
+     "rank": 14,
+     "song": "Otis",
+     "artist": "Jay-Z & Kanye West"
+    },
+    {
+     "rank": 15,
+     "song": "Must Be the Feeling",
+     "artist": "Nero"
+    },
+    {
+     "rank": 16,
+     "song": "The Limit To Your Love",
+     "artist": "Feist"
+    },
+    {
+     "rank": 17,
+     "song": "Love the Way You Walk Away",
+     "artist": "Blitzen Trapper"
+    },
+    {
+     "rank": 18,
+     "song": "Goshen",
+     "artist": "Beirut"
+    },
+    {
+     "rank": 19,
+     "song": "Crush On You",
+     "artist": "Nero"
+    },
+    {
+     "rank": 20,
+     "song": "Departure",
+     "artist": "Nero"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110814052445/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Super Bass",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Party Rock Anthem",
+     "artist": "LMFAO Featuring Lauren Bennett & GoonRock"
+    },
+    {
+     "rank": 5,
+     "song": "Out Of My Head",
+     "artist": "Lupe Fiasco Featuring Trey Songz"
+    },
+    {
+     "rank": 6,
+     "song": "Give Me Everything",
+     "artist": "Pitbull Featuring Ne-Yo, Afrojack & Nayer"
+    },
+    {
+     "rank": 7,
+     "song": "Otis",
+     "artist": "Jay Z Kanye West Featuring Otis Redding"
+    },
+    {
+     "rank": 8,
+     "song": "Lighters",
+     "artist": "Bad Meets Evil Featuring Bruno Mars"
+    },
+    {
+     "rank": 9,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 10,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110814065048/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Motivation",
+     "artist": "Kelly Rowland Featuring Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Sure Thing",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 4,
+     "song": "How To Love",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "She Ain't You",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 6,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Super Bass",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "Unusual",
+     "artist": "Trey Songz Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Best Thing I Never Had",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 10,
+     "song": "Quickie",
+     "artist": "Miguel"
+    }
+   ]
+  }
+ ]
+}

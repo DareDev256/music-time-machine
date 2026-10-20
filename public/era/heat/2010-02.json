@@ -1,0 +1,286 @@
+{
+ "month": "2010-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100205041014/http://hotnewhiphop.com/",
+   "captured": "2010-02-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Takeover (Feat. Bigga Rankin)",
+     "artist": "Young Jeezy"
+    },
+    {
+     "rank": 2,
+     "song": "Miss Chocolate (Feat. R. Kelly And Mario) [Prod. By Drumma Boy]",
+     "artist": "Lil' Jon"
+    },
+    {
+     "rank": 3,
+     "song": "Shake (Prod. By Cool And Dre)",
+     "artist": "Game"
+    },
+    {
+     "rank": 4,
+     "song": "Hustler (Feat Bun B & Crooked I)",
+     "artist": "Cavie"
+    },
+    {
+     "rank": 5,
+     "song": "No Gimmicks (Prod by Jahlil Beats)",
+     "artist": "Young Jerz"
+    },
+    {
+     "rank": 6,
+     "song": "Overdose [Unreleased Verse]",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Jealous (Feat. Guci Mane) [Prod. By Marvelous J]",
+     "artist": "Ricky Jewelz"
+    },
+    {
+     "rank": 8,
+     "song": "The Ultimate (Feat. Curren$y, Mickey Factz, Smoke DZA, And Nakim) [Prod. By Precize]",
+     "artist": "Cory Gunz"
+    },
+    {
+     "rank": 9,
+     "song": "October 21st",
+     "artist": "Phreshy (formerly Ayo)"
+    },
+    {
+     "rank": 10,
+     "song": "Same Shit (Remix) (Feat. OJ Da Juiceman)",
+     "artist": "Slim Dunkin And Waka Flocka Flame"
+    },
+    {
+     "rank": 11,
+     "song": "Sugar (Feat Ya Boy)",
+     "artist": "Big Rich"
+    },
+    {
+     "rank": 12,
+     "song": "You Already Know",
+     "artist": "Skeme"
+    },
+    {
+     "rank": 13,
+     "song": "Wake Up",
+     "artist": "The Pricks"
+    },
+    {
+     "rank": 14,
+     "song": "U Can Get It",
+     "artist": "Supa Chino feat Mr. CG"
+    },
+    {
+     "rank": 15,
+     "song": "O Let's Do It (Remix) (Feat. Diddy, Rick Ross, And Gucci Mane)",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 16,
+     "song": "Hustle Game (Feat. Bun B, Webbie, Lil' Boosie, And Nicole Wray) [Prod. By The Alchemist]",
+     "artist": "DJ Kay Slay"
+    },
+    {
+     "rank": 17,
+     "song": "OK, Yeah (Feat. Juvenile And Lil' Jon)",
+     "artist": "Ray Rizzy"
+    },
+    {
+     "rank": 18,
+     "song": "Stalkin'",
+     "artist": "Kurupt"
+    },
+    {
+     "rank": 19,
+     "song": "Greatest Part Of Me [Prod. By Tricky Stewart]",
+     "artist": "Jennifer Lopez"
+    },
+    {
+     "rank": 20,
+     "song": "Pussy Fight (Feat Ray J & Ester Dean) (NO DJ)",
+     "artist": "Game"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100213220122/http://hypem.com:80/popular",
+   "captured": "2010-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What U Want",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 2,
+     "song": "Clementine",
+     "artist": "Sarah Jaffe"
+    },
+    {
+     "rank": 3,
+     "song": "Opal (Error :: Love - Opalowsky Remix)",
+     "artist": "SayCet"
+    },
+    {
+     "rank": 4,
+     "song": "Low Shoulder",
+     "artist": "Toro y Moi"
+    },
+    {
+     "rank": 5,
+     "song": "Stylo (Alex Metric Remix)",
+     "artist": "Gorillaz"
+    },
+    {
+     "rank": 6,
+     "song": "Major Tom (Coming Home) (Shiny Toy Guns Remix)",
+     "artist": "Shiny Toy Guns"
+    },
+    {
+     "rank": 7,
+     "song": "Welcome (The Bloody Beetroots Remix)",
+     "artist": "Etienne De Crcy"
+    },
+    {
+     "rank": 8,
+     "song": "Anthems For A Seventeen Year Old Girl",
+     "artist": "Broken Social Scene"
+    },
+    {
+     "rank": 9,
+     "song": "What You Know About Little Secrets (The White Panda Mash-Up)",
+     "artist": "T.I. vs Passion Pit"
+    },
+    {
+     "rank": 10,
+     "song": "Phantom Pt. II (Boys Noize Remx)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 11,
+     "song": "Pressure Time (MGMT vs. David Bowie & Queen)",
+     "artist": "Mighty Mike"
+    },
+    {
+     "rank": 12,
+     "song": "Symphonies (Remix)",
+     "artist": "Dan Black Feat. Kid CuDi"
+    },
+    {
+     "rank": 13,
+     "song": "A Milli vs My Life",
+     "artist": "DJ Stroke"
+    },
+    {
+     "rank": 14,
+     "song": "Heaven's on fire",
+     "artist": "The Radio Dept."
+    },
+    {
+     "rank": 15,
+     "song": "Tightrope (featuring Big Boi)",
+     "artist": "Janelle Mone"
+    },
+    {
+     "rank": 16,
+     "song": "This Too Shall Pass (Passion Pit Remix)",
+     "artist": "OK Go"
+    },
+    {
+     "rank": 17,
+     "song": "Lykke Li - Little Bit (Villains Remix)",
+     "artist": "Villains"
+    },
+    {
+     "rank": 18,
+     "song": "Thieves In The Night",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 19,
+     "song": "Perfect plan",
+     "artist": "Sarah Jaffe"
+    },
+    {
+     "rank": 20,
+     "song": "California English Pt. 2",
+     "artist": "Vampire Weekend"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100216220624/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "It Kills Me",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 2,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 3,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 4,
+     "song": "Say Aah",
+     "artist": "Trey Songz Featuring Fabolous"
+    },
+    {
+     "rank": 5,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Try Sleeping With A Broken H...",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 7,
+     "song": "I Am",
+     "artist": "Mary J. Blige"
+    },
+    {
+     "rank": 8,
+     "song": "Sex Therapy",
+     "artist": "Robin Thicke"
+    },
+    {
+     "rank": 9,
+     "song": "I Invented Sex",
+     "artist": "Trey Songz Featuring Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Soldier Of Love",
+     "artist": "Sade"
+    }
+   ]
+  }
+ ]
+}

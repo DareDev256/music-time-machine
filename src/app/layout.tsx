@@ -1,65 +1,43 @@
-import type { Metadata } from "next";
-import { headers } from "next/headers";
-import { Inter } from "next/font/google";
-import Script from "next/script";
-import ThemeProvider from "@/components/ThemeProvider";
-import PrefsProvider from "@/components/PrefsProvider";
-import Navigation from "@/components/Navigation";
-import KeyboardShortcutProvider from "@/components/KeyboardShortcutProvider";
+import type { Metadata, Viewport } from "next";
+import { Archivo, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+// Display: Archivo with its width axis (condensed 62–80% for titles).
+const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
+// Data and labels.
+const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-mono", display: "swap" });
+// Seven-segment readouts. DSEG by keshikan, SIL OFL 1.1.
+const seg = localFont({ src: "../fonts/DSEG7Classic-Bold.woff2", variable: "--font-seg", display: "block" });
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://music-time-machine.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Music Time Machine | Track Any Song Across the Music Ecosystem",
+  metadataBase: new URL(SITE),
+  title: "Was Playing · the music time machine",
   description:
-    "Search any song and see its complete performance timeline across Spotify, YouTube, Billboard, and Genius. Discover chart history, streaming stats, and cultural context.",
-  keywords: [
-    "music",
-    "charts",
-    "spotify",
-    "youtube",
-    "billboard",
-    "song analytics",
-    "music history",
-  ],
-  authors: [{ name: "Music Time Machine" }],
+    "Name a song you lived with. Fly back through every #1, week by week, and land in its era: the charts and the internet that week, including songs that were never on Spotify or Apple.",
   openGraph: {
-    title: "Music Time Machine",
-    description:
-      "Track any song across the music ecosystem - Spotify, YouTube, Billboard, and more.",
+    title: "Was Playing",
+    description: "Name a song. Fly back to the week it was playing.",
     type: "website",
+    images: [{ url: "/api/card?format=wide", width: 1200, height: 630 }],
   },
+  twitter: { card: "summary_large_image", images: ["/api/card?format=wide"] },
 };
 
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const nonce = (await headers()).get("x-nonce") ?? "";
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          nonce={nonce}
-        >{`(function(){var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.classList.add(t)}else if(window.matchMedia('(prefers-color-scheme: light)').matches){document.documentElement.classList.add('light')}else{document.documentElement.classList.add('dark')}})();`}</Script>
-      </head>
-      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
-        <ThemeProvider>
-          <PrefsProvider>
-            <Navigation />
-            <KeyboardShortcutProvider />
-            <main className="pt-14">{children}</main>
-          </PrefsProvider>
-        </ThemeProvider>
-      </body>
+    <html lang="en" className={`${archivo.variable} ${mono.variable} ${seg.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

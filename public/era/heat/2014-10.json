@@ -1,0 +1,236 @@
+{
+ "month": "2014-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141015042519/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2014-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bobby Bitch",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 2,
+     "song": "24 Hours (Remix)",
+     "artist": "Chris Brown Feat. Trey Songz"
+    },
+    {
+     "rank": 3,
+     "song": "Fuck Yo Feelings",
+     "artist": "The Game Feat. Lil Wayne & Chris Brown"
+    },
+    {
+     "rank": 4,
+     "song": "Studio (Remix)",
+     "artist": "Chris Brown Feat. Trey Songz"
+    },
+    {
+     "rank": 5,
+     "song": "Multiply",
+     "artist": "ASAP Rocky"
+    },
+    {
+     "rank": 6,
+     "song": "Hit Em Hard",
+     "artist": "The Game Feat. Bobby Shmurda, Freddie Gibbs & Skeme"
+    },
+    {
+     "rank": 7,
+     "song": "I Don't Sell Molly No More (Prod. By Sonny Digital)",
+     "artist": "iLoveMakonnen Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 8,
+     "song": "Errrbody (Remix)",
+     "artist": "Yo Gotti Feat. Lil Wayne & Ludacris"
+    },
+    {
+     "rank": 9,
+     "song": "All Day",
+     "artist": "Wiz Khalifa Feat. John Cena"
+    },
+    {
+     "rank": 10,
+     "song": "All About The Drug Money",
+     "artist": "G-Unit"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141015090704/http://hypem.com:80/popular",
+   "captured": "2014-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Borderline",
+     "artist": "Tove Styrke"
+    },
+    {
+     "rank": 2,
+     "song": "6 Words Nora En Pure Remix",
+     "artist": "Wretch 32"
+    },
+    {
+     "rank": 3,
+     "song": "Overnight Celebrity Milk N Cookies Remix",
+     "artist": "Twista"
+    },
+    {
+     "rank": 4,
+     "song": "Walk This Way SLOWOLF Remix",
+     "artist": "MØ"
+    },
+    {
+     "rank": 5,
+     "song": "Take Me Over feat. SAFIA",
+     "artist": "Peking Duk"
+    },
+    {
+     "rank": 6,
+     "song": "Hunger Of The Pine The Golden Pony Remix",
+     "artist": "ALT-J"
+    },
+    {
+     "rank": 7,
+     "song": "KANYE Kasum Remix",
+     "artist": "The Chainsmokers"
+    },
+    {
+     "rank": 8,
+     "song": "Hero",
+     "artist": "Frank Ocean + Mick Jones + Paul Simonon…"
+    },
+    {
+     "rank": 9,
+     "song": "Holding On",
+     "artist": "FYFE"
+    },
+    {
+     "rank": 10,
+     "song": "Dust",
+     "artist": "> Halos <"
+    },
+    {
+     "rank": 11,
+     "song": "Looking Too Closely",
+     "artist": "Fink"
+    },
+    {
+     "rank": 12,
+     "song": "The Light In The Addict feat. Action Bronson & Black Atlass (Sonos Exclusive)",
+     "artist": "Party Supplies"
+    },
+    {
+     "rank": 13,
+     "song": "Unreal",
+     "artist": "Solidisco & Fireflowerz"
+    },
+    {
+     "rank": 14,
+     "song": "Don't Wanna Dance Phazz Edition",
+     "artist": "MØ"
+    },
+    {
+     "rank": 15,
+     "song": "Milestones",
+     "artist": "Shook"
+    },
+    {
+     "rank": 16,
+     "song": "The Hype 2.0 feat. Eliza Doolittle cIn Remix",
+     "artist": "Wookie"
+    },
+    {
+     "rank": 17,
+     "song": "Out Of The Woods",
+     "artist": "Taylor Swift"
+    },
+    {
+     "rank": 18,
+     "song": "Snow In Newark (with Dawn Golden)",
+     "artist": "Ryan Hemsworth"
+    },
+    {
+     "rank": 19,
+     "song": "Saint Claude Dim Sum Remix",
+     "artist": "Christine And The Queens"
+    },
+    {
+     "rank": 20,
+     "song": "Around The Bends",
+     "artist": "Osca"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141016194002/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 2,
+     "song": "Don't Tell 'Em",
+     "artist": "Jeremih Featuring YG"
+    },
+    {
+     "rank": 3,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Hot Boy",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 5,
+     "song": "Lifestyle",
+     "artist": "Rich Gang Featuring Young Thug & Rich Homie Quan"
+    },
+    {
+     "rank": 6,
+     "song": "New Flame",
+     "artist": "Chris Brown Featuring Usher & Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 8,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 9,
+     "song": "2 On",
+     "artist": "Tinashe Featuring ScHoolboy Q"
+    },
+    {
+     "rank": 10,
+     "song": "0 To 100 / The Catch Up",
+     "artist": "Drake"
+    }
+   ]
+  }
+ ]
+}

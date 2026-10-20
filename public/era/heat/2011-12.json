@@ -1,0 +1,326 @@
+{
+ "month": "2011-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111214025624/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2011-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sleazy 2.0 Remix",
+     "artist": "Ke$ha feat. Wiz Khalifa, Andre 3000, T.I. & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "630",
+     "artist": "Snoop Dogg & Wiz Khalifa"
+    },
+    {
+     "rank": 3,
+     "song": "Bitch Im The Shit",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 4,
+     "song": "Supafreak",
+     "artist": "Young Jeezy feat. 2 Chainz"
+    },
+    {
+     "rank": 5,
+     "song": "Someone Like Me",
+     "artist": "Jon Connor"
+    },
+    {
+     "rank": 6,
+     "song": "Hit It",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Wait For You (Full)",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "Intro",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 9,
+     "song": "Intro Skit - Body On It",
+     "artist": "50 Cent"
+    },
+    {
+     "rank": 10,
+     "song": "Knock It Off (Prod. By Jahlil Beats)",
+     "artist": "Bow Wow"
+    },
+    {
+     "rank": 11,
+     "song": "Sleazy (Remix)",
+     "artist": "T.I."
+    },
+    {
+     "rank": 12,
+     "song": "You're Mine",
+     "artist": "Jeremih"
+    },
+    {
+     "rank": 13,
+     "song": "Chaka Shao Khan",
+     "artist": "XV"
+    },
+    {
+     "rank": 14,
+     "song": "Bitch Betta Have My Money feat YG & Kurupt",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 15,
+     "song": "Raw (How You Like It)",
+     "artist": "Common"
+    },
+    {
+     "rank": 16,
+     "song": "The Realist Livin Ft. Rick Ross",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 17,
+     "song": "OG",
+     "artist": "Snoop Dogg & Wiz Khalifa feat. Curren$y"
+    },
+    {
+     "rank": 18,
+     "song": "Up (Remix) (Prod by IamSu)",
+     "artist": "LoveRance feat. YG & 50 Cent"
+    },
+    {
+     "rank": 19,
+     "song": "Up (Remix) (Prod by IamSu)",
+     "artist": "LoveRance feat. YG & 50 Cent"
+    },
+    {
+     "rank": 20,
+     "song": "Make It Nasty",
+     "artist": "Tyga"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111217010823/http://hypem.com:80/popular",
+   "captured": "2011-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ass Back Home (Black Cards Remix)",
+     "artist": "Gym Class Heroes feat. Neon Hitch"
+    },
+    {
+     "rank": 2,
+     "song": "How Come You Never Go There (Beck Remix)",
+     "artist": "Feist"
+    },
+    {
+     "rank": 3,
+     "song": "Cherub - Love You Right (Cry Wolf Remix)",
+     "artist": "Cry Wolf"
+    },
+    {
+     "rank": 4,
+     "song": "I'll Take Care of You (Mighty Mouse Re-Work)",
+     "artist": "Gill Scott Heron"
+    },
+    {
+     "rank": 5,
+     "song": "I Remember (Deadmau5)",
+     "artist": "AraabMUZIK"
+    },
+    {
+     "rank": 6,
+     "song": "Cudi The Kid (ft. Kid Cudi & Travis Barker)",
+     "artist": "Steve Aoki feat. Kid Cudi & Travis Barke…"
+    },
+    {
+     "rank": 7,
+     "song": "End Of Love (Original Mix)",
+     "artist": "Jack Beats"
+    },
+    {
+     "rank": 8,
+     "song": "Too Much Birthday- People Under The Stairs",
+     "artist": "tiger stripes"
+    },
+    {
+     "rank": 9,
+     "song": "You've Got The Love (Mr. Wonk's Dubstep Mask Mix)",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 10,
+     "song": "Sexual Lifestyle (Reset! Turbofunk Remix)",
+     "artist": "Strange Talk"
+    },
+    {
+     "rank": 11,
+     "song": "Diplo & Datsik- Pick Your Poison feat. Kay Remix EP Minimix",
+     "artist": "Mad Decent"
+    },
+    {
+     "rank": 12,
+     "song": "Dreams",
+     "artist": "Reef of Fortune Family and Dylan Owen"
+    },
+    {
+     "rank": 13,
+     "song": "Wine and Chocolates (andhim edit)",
+     "artist": "andhim"
+    },
+    {
+     "rank": 14,
+     "song": "Calling Me Names (Single)",
+     "artist": "Good Old War"
+    },
+    {
+     "rank": 15,
+     "song": "Shangri-La",
+     "artist": "SkizTheRapper"
+    },
+    {
+     "rank": 16,
+     "song": "Where Have You Been (Back From The Future Remix)",
+     "artist": "BackFromTheFuture"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111209133608/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-12-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 4,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "Sexy And I Know It",
+     "artist": "LMFAO"
+    },
+    {
+     "rank": 9,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "Body 2 Body",
+     "artist": "Ace Hood Featuring Chris Brown"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111216105811/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 3,
+     "song": "Party",
+     "artist": "Beyonce Featuring Andre 3000"
+    },
+    {
+     "rank": 4,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 8,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "5 O'Clock",
+     "artist": "T-Pain Featuring Wiz Khalifa & Lily Allen"
+    },
+    {
+     "rank": 10,
+     "song": "You The Boss",
+     "artist": "Rick Ross Featuring Nicki Minaj"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "month": "2011-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110412101230/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-04-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "G Shyt (Prod by Drumma Boy)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 2,
+     "song": "It's On (Prod by Jahlil Beats)",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 3,
+     "song": "Check Em Out",
+     "artist": "Vado feat. Jadakiss"
+    },
+    {
+     "rank": 4,
+     "song": "Ooh Aaah (Prod By Jim Jonsin)",
+     "artist": "Maino feat. Rico Love"
+    },
+    {
+     "rank": 5,
+     "song": "Stoned",
+     "artist": "Gucci Mane & Waka Flocka"
+    },
+    {
+     "rank": 6,
+     "song": "Fly You (Prod by Drumma Boy)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "The Fizzo (Unreleased)",
+     "artist": "Proof"
+    },
+    {
+     "rank": 8,
+     "song": "Me Dats Who (Tags)",
+     "artist": "DJ Paul feat. Ya Boy"
+    },
+    {
+     "rank": 9,
+     "song": "Static",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 10,
+     "song": "Daddy Want You",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 11,
+     "song": "Lotto Ticket (Prod by Prince N Purps)",
+     "artist": "Waka Flocka feat. Young Dose, P Smurf, Slim Dunkin, Ice Burgandy, YG Hootie & Short Dawg"
+    },
+    {
+     "rank": 12,
+     "song": "Love Is Found",
+     "artist": "Sade"
+    },
+    {
+     "rank": 13,
+     "song": "Up My Alley",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 14,
+     "song": "Call The Squad For Him",
+     "artist": "Waka Flocka feat. Rocko"
+    },
+    {
+     "rank": 15,
+     "song": "If The Head Right",
+     "artist": "Cali Swag District"
+    },
+    {
+     "rank": 16,
+     "song": "What Up (CDQ)",
+     "artist": "Slim Thug feat. Dre Day J-Dawg"
+    },
+    {
+     "rank": 17,
+     "song": "Number 1 (Prod By Jim Jonsin)",
+     "artist": "Rico Love"
+    },
+    {
+     "rank": 18,
+     "song": "Been There",
+     "artist": "Webbie"
+    },
+    {
+     "rank": 19,
+     "song": "Life",
+     "artist": "Vybz Kartel"
+    },
+    {
+     "rank": 20,
+     "song": "Pearls",
+     "artist": "Nick Cannon feat. Sade"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110411083947/http://hypem.com:80/popular",
+   "captured": "2011-04-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ain't No Drugs High Enough The Jane Doze mashup)",
+     "artist": "Ratatat vs. Marvin Gaye"
+    },
+    {
+     "rank": 2,
+     "song": "Replica (Daft Punk Vs. Yelle Vs. Katy Perry Vs. Bloc Party Vs. Major Lazer)",
+     "artist": "Afrojack"
+    },
+    {
+     "rank": 3,
+     "song": "Little Talks",
+     "artist": "Of Monsters And Men"
+    },
+    {
+     "rank": 4,
+     "song": "Make Some Noise",
+     "artist": "Beastie Boys"
+    },
+    {
+     "rank": 5,
+     "song": "The Longest Bromance (Iacabone Edit)",
+     "artist": "Avicii vs. Morgan Page and Lissie"
+    },
+    {
+     "rank": 6,
+     "song": "We Don't Eat (Adventure Club Dubstep Remix)",
+     "artist": "James Vincent McMorrow"
+    },
+    {
+     "rank": 7,
+     "song": "Forever (Radio Edit)",
+     "artist": "Wolfgang Gartner feat. Will.I.Am"
+    },
+    {
+     "rank": 8,
+     "song": "Pumped Up Kicks",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 9,
+     "song": "Till the World Ends ( Bloody Beetroots Rmx )",
+     "artist": "BRITNEY SPEARS"
+    },
+    {
+     "rank": 10,
+     "song": "Tokyo",
+     "artist": "California Wives"
+    },
+    {
+     "rank": 11,
+     "song": "Mexican Mavis",
+     "artist": "Boy & Bear"
+    },
+    {
+     "rank": 12,
+     "song": "Pumped Up Kicks (The Knocks Remix)",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 13,
+     "song": "Eskimo Boy",
+     "artist": "Strange Talk"
+    },
+    {
+     "rank": 14,
+     "song": "Dig A Little Deeper",
+     "artist": "Peter, Bjorn and John"
+    },
+    {
+     "rank": 15,
+     "song": "Unfinished Business (White Lies Cover)",
+     "artist": "Mumford & Sons"
+    },
+    {
+     "rank": 16,
+     "song": "Ash/Black Veil",
+     "artist": "Apparat"
+    },
+    {
+     "rank": 17,
+     "song": "Equinox",
+     "artist": "Skrillex"
+    },
+    {
+     "rank": 18,
+     "song": "Wouldn't It Be Nice (The Girls Can Hear Us Remix)",
+     "artist": "The Beach Boys"
+    },
+    {
+     "rank": 19,
+     "song": "Home Is A Fire",
+     "artist": "DEATH CAB for CUTIE"
+    },
+    {
+     "rank": 20,
+     "song": "Hold Me",
+     "artist": "Teams vs. Star Slinger"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110414233925/http://www.billboard.com:80/charts/rap-songs?",
+   "captured": "2011-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 2,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 4,
+     "song": "Did It On'em",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 6,
+     "song": "Roll Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "The Show Goes On",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 8,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 9,
+     "song": "Racks",
+     "artist": "YC Featuring Future"
+    },
+    {
+     "rank": 10,
+     "song": "You Be Killin Em",
+     "artist": "Fabolous"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110414093717/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 2,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 4,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 5,
+     "song": "Did It On'em",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "Love Faces",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 7,
+     "song": "Down On Me",
+     "artist": "Jeremih Featuring 50 Cent"
+    },
+    {
+     "rank": 8,
+     "song": "Roll Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 9,
+     "song": "Far Away",
+     "artist": "Marsha Ambrosius"
+    },
+    {
+     "rank": 10,
+     "song": "Where You At",
+     "artist": "Jennifer Hudson"
+    }
+   ]
+  }
+ ]
+}

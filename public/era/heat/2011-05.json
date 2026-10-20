@@ -1,0 +1,346 @@
+{
+ "month": "2011-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110515031511/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Big Bank (Tags)",
+     "artist": "Rick Ross feat. Pill, Meek Mill, Torch, French Montana"
+    },
+    {
+     "rank": 2,
+     "song": "Tiger Woods (Remix) (NO DJ)",
+     "artist": "Rolls Royce Rizzy feat. Yung Berg, Lil' Scrappy, Sparkdawg, & Yung Cartoon"
+    },
+    {
+     "rank": 3,
+     "song": "Motivation (Remix) (Prod By Jim Jonsin)",
+     "artist": "Kelly Rowland feat. Jeremih & Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Super Cold (Tags)",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 5,
+     "song": "Kill My Nightmare",
+     "artist": "Yelawolf"
+    },
+    {
+     "rank": 6,
+     "song": "Zonin' (Prod By Kane Beatz)",
+     "artist": "New Boyz"
+    },
+    {
+     "rank": 7,
+     "song": "600 Benz (Unreleased)",
+     "artist": "Prodigy (Mobb Deep)"
+    },
+    {
+     "rank": 8,
+     "song": "Life Is Real Easy (Unreleased)",
+     "artist": "Prodigy (Mobb Deep)"
+    },
+    {
+     "rank": 9,
+     "song": "P Against The World (Unreleased)",
+     "artist": "Prodigy (Mobb Deep)"
+    },
+    {
+     "rank": 10,
+     "song": "Stuntin Hard (Remix)",
+     "artist": "G4 Boyz feat. Boogz Boogetz"
+    },
+    {
+     "rank": 11,
+     "song": "90",
+     "artist": "Timbaland feat. Sincere"
+    },
+    {
+     "rank": 12,
+     "song": "Ready Or Not",
+     "artist": "Michael Mind Project feat. Sean Kingston"
+    },
+    {
+     "rank": 13,
+     "song": "The Other Chick (Prod By Stargate)",
+     "artist": "JoJo"
+    },
+    {
+     "rank": 14,
+     "song": "I'm On One",
+     "artist": "DJ Khaled feat. Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 15,
+     "song": "So Special (Verse)",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 16,
+     "song": "She Bad (Prod by Justice League)",
+     "artist": "Lil Wayne feat. Mack Maine & Kidd Kidd"
+    },
+    {
+     "rank": 17,
+     "song": "Number 1",
+     "artist": "Ace Hood feat. Sean Mcgee"
+    },
+    {
+     "rank": 18,
+     "song": "M I Crooked Letter (Prod by Big K.R.I.T.)",
+     "artist": "Boo Rossini feat. Big K.R.I.T."
+    },
+    {
+     "rank": 19,
+     "song": "MJ Bitch (Prod by Jahlil Beats)",
+     "artist": "Los (Shooter)"
+    },
+    {
+     "rank": 20,
+     "song": "Racks Piano (Remix)",
+     "artist": "Bei Maejor"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110514143248/http://hypem.com:80/popular",
+   "captured": "2011-05-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lick The Rainbow",
+     "artist": "Mord Fustang"
+    },
+    {
+     "rank": 2,
+     "song": "I'm On One",
+     "artist": "DJ Khaled ft. Lil Wayne, Drake and Ric…"
+    },
+    {
+     "rank": 3,
+     "song": "Guilt (DallasK Remix)",
+     "artist": "Nero"
+    },
+    {
+     "rank": 4,
+     "song": "Waste",
+     "artist": "Foster the People"
+    },
+    {
+     "rank": 5,
+     "song": "Til I'm Gone",
+     "artist": "Tinie Tempah ft. Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "Still Getting It Ft. Skrillex",
+     "artist": "Foreign Beggars"
+    },
+    {
+     "rank": 7,
+     "song": "Mr Blue Sky",
+     "artist": "Mayer Hawthorne"
+    },
+    {
+     "rank": 8,
+     "song": "Take Off Your Shirt",
+     "artist": "Bibio"
+    },
+    {
+     "rank": 9,
+     "song": "Last Name London",
+     "artist": "Theophilus London"
+    },
+    {
+     "rank": 10,
+     "song": "Fragile Bird",
+     "artist": "City and Colour"
+    },
+    {
+     "rank": 11,
+     "song": "Pumped Up Kicks (The Knocks Remix)",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 12,
+     "song": "Shoelaces",
+     "artist": "The Submarines"
+    },
+    {
+     "rank": 13,
+     "song": "Underneath The Sycamore",
+     "artist": "Death Cab for Cutie"
+    },
+    {
+     "rank": 14,
+     "song": "Houdini",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 15,
+     "song": "See It To Believe It",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 16,
+     "song": "Days Ahead",
+     "artist": "Museum of Bellas Artes"
+    },
+    {
+     "rank": 17,
+     "song": "Warrant",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 18,
+     "song": "Mykonos (Barbaric Merits Foxtronic Dubstep Remix)",
+     "artist": "Fleet Foxes"
+    },
+    {
+     "rank": 19,
+     "song": "Wait In The Dark",
+     "artist": "Memory Tapes"
+    },
+    {
+     "rank": 20,
+     "song": "Run The Heart (Bassnectar Remix)",
+     "artist": "Sleigh Bells"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110517195343/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 2,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "Roll Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 4,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Racks",
+     "artist": "YC Featuring Future"
+    },
+    {
+     "rank": 6,
+     "song": "Did It On'em",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "The Show Goes On",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 9,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 10,
+     "song": "Hustle Hard",
+     "artist": "Ace Hood"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110517205029/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 2,
+     "song": "Sure Thing",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 3,
+     "song": "Motivation",
+     "artist": "Kelly Rowland Featuring Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Far Away",
+     "artist": "Marsha Ambrosius"
+    },
+    {
+     "rank": 5,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "Racks",
+     "artist": "YC Featuring Future"
+    },
+    {
+     "rank": 7,
+     "song": "Did It On'em",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "She Ain't You",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Roll Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    }
+   ]
+  }
+ ]
+}

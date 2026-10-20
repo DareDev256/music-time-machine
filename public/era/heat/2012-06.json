@@ -1,0 +1,346 @@
+{
+ "month": "2012-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120627071650/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2012-06-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bitch Bad",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 2,
+     "song": "King Company",
+     "artist": "Tyga feat. Honey Cocaine"
+    },
+    {
+     "rank": 3,
+     "song": "Get Down",
+     "artist": "Chris Brown feat. B.o.B. & T-Pain"
+    },
+    {
+     "rank": 4,
+     "song": "Mirage",
+     "artist": "Chris Brown feat. Nas"
+    },
+    {
+     "rank": 5,
+     "song": "Go Get It (Prod. T-Minus)",
+     "artist": "T.I."
+    },
+    {
+     "rank": 6,
+     "song": "I Dont Like (Freestyle)",
+     "artist": "Cassidy"
+    },
+    {
+     "rank": 7,
+     "song": "Down 4 (Prod by DZL)",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 8,
+     "song": "Telescope (Prod by Harry Fraud)",
+     "artist": "Wiz Khalifa feat. 50 Cent"
+    },
+    {
+     "rank": 9,
+     "song": "One Up (Radio Rip)",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 10,
+     "song": "Who Shot Me (Prod by The Audibles)",
+     "artist": "Honey Cocaine"
+    },
+    {
+     "rank": 11,
+     "song": "Pop That (CDQ/NO DJ)",
+     "artist": "French Montana feat. Rick Ross, Drake & Lil Wayne"
+    },
+    {
+     "rank": 12,
+     "song": "Accident Murderers (Remix)",
+     "artist": "Ryan Leslie"
+    },
+    {
+     "rank": 13,
+     "song": "Accident Murderers",
+     "artist": "Nas feat. Rick Ross"
+    },
+    {
+     "rank": 14,
+     "song": "In This Ho (CDQ)",
+     "artist": "Pusha T feat. Swizz Beatz"
+    },
+    {
+     "rank": 15,
+     "song": "Summertime",
+     "artist": "Kreayshawn feat. V-Nasty"
+    },
+    {
+     "rank": 16,
+     "song": "Million Dollar Misfits",
+     "artist": "Iggy Azalea feat. T.I. & B.o.B."
+    },
+    {
+     "rank": 17,
+     "song": "Hannibal 4.12",
+     "artist": "Chevy Woods"
+    },
+    {
+     "rank": 18,
+     "song": "Smoke Something Pt 2",
+     "artist": "Jae Millz"
+    },
+    {
+     "rank": 19,
+     "song": "Talkin Bout",
+     "artist": "Lil Scrappy"
+    },
+    {
+     "rank": 20,
+     "song": "Bands A Make Her Dance (Remix)",
+     "artist": "Juicy J feat. Lil Wayne & 2 Chainz"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120614155609/http://hypem.com:80/popular",
+   "captured": "2012-06-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lost Kitten",
+     "artist": "Metric"
+    },
+    {
+     "rank": 2,
+     "song": "Original Don Flosstradamus Remix",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 3,
+     "song": "Forget",
+     "artist": "Fly Points"
+    },
+    {
+     "rank": 4,
+     "song": "Important",
+     "artist": "Way Yes"
+    },
+    {
+     "rank": 5,
+     "song": "Who Is Ready To Jump Revolvr Bootleg",
+     "artist": "Chuckie vs Knife Party"
+    },
+    {
+     "rank": 6,
+     "song": "So American",
+     "artist": "Portugal. The Man"
+    },
+    {
+     "rank": 7,
+     "song": "Hollywood (featuring Penguin Prison)",
+     "artist": "RAC"
+    },
+    {
+     "rank": 8,
+     "song": "AQUABABE",
+     "artist": "Azealia Banks"
+    },
+    {
+     "rank": 9,
+     "song": "Notorious",
+     "artist": "K Theory"
+    },
+    {
+     "rank": 10,
+     "song": "Fright Night Dam Funk remix",
+     "artist": "Ariel Pink's Haunted Graffiti"
+    },
+    {
+     "rank": 11,
+     "song": "2nd Round (prod. Diplo)",
+     "artist": "Usher"
+    },
+    {
+     "rank": 12,
+     "song": "Werewolf",
+     "artist": "fionaapple"
+    },
+    {
+     "rank": 13,
+     "song": "Shadow",
+     "artist": "Wild Nothing"
+    },
+    {
+     "rank": 14,
+     "song": "Embrace The Real",
+     "artist": "Plant Plants"
+    },
+    {
+     "rank": 15,
+     "song": "jasmine (demo)",
+     "artist": "Jai Paul"
+    },
+    {
+     "rank": 16,
+     "song": "Right Here (feat. Drake)",
+     "artist": "Justin Bieber"
+    },
+    {
+     "rank": 17,
+     "song": "The House That Heaven Built",
+     "artist": "Japandroids"
+    },
+    {
+     "rank": 18,
+     "song": "128 Harps",
+     "artist": "Four Tet"
+    },
+    {
+     "rank": 19,
+     "song": "Lose my breath Reggae remix",
+     "artist": "Destiny's Child"
+    },
+    {
+     "rank": 20,
+     "song": "Evil's Sway",
+     "artist": "Japandroids"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120613230153/http://www.billboard.com:80/charts/rap-songs?",
+   "captured": "2012-06-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 2,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 3,
+     "song": "Leave You Alone",
+     "artist": "Young Jeezy Featuring Ne-Yo"
+    },
+    {
+     "rank": 4,
+     "song": "Take Care",
+     "artist": "Drake Featuring Rihanna"
+    },
+    {
+     "rank": 5,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 6,
+     "song": "UP!",
+     "artist": "LoveRance Featuring IamSu & Skipper or 50 Cent"
+    },
+    {
+     "rank": 7,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "Faded",
+     "artist": "Tyga Featuring Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 10,
+     "song": "Wild Ones",
+     "artist": "Flo Rida Featuring Sia"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120614161237/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-06-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Climax",
+     "artist": "Usher"
+    },
+    {
+     "rank": 2,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 3,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 4,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 5,
+     "song": "Heart Attack",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 6,
+     "song": "Birthday Cake",
+     "artist": "Rihanna Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Beez In The Trap",
+     "artist": "Nicki Minaj Featuring 2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "Lemme See",
+     "artist": "Usher Featuring Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "Crew Love",
+     "artist": "Drake Featuring The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Another Round",
+     "artist": "Fat Joe Featuring Chris Brown"
+    }
+   ]
+  }
+ ]
+}

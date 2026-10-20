@@ -1,0 +1,346 @@
+{
+ "month": "2010-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100721151258/http://www.hotnewhiphop.com/",
+   "captured": "2010-07-21",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "What I Do",
+     "artist": "Bow Wow"
+    },
+    {
+     "rank": 2,
+     "song": "Erase Me (Dirty Mastered)",
+     "artist": "KiD CuDi feat. Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "I'm Gone (Prod by DJ Premier)",
+     "artist": "Fat Joe"
+    },
+    {
+     "rank": 4,
+     "song": "Slide'N",
+     "artist": "G. Ca$$o feat. Ty$, Rich Boy & YG"
+    },
+    {
+     "rank": 5,
+     "song": "The Lottery",
+     "artist": "1982 (Termanology And Statik Selektah)"
+    },
+    {
+     "rank": 6,
+     "song": "Just The Way You Are",
+     "artist": "Bruno Mars"
+    },
+    {
+     "rank": 7,
+     "song": "Leave With You",
+     "artist": "Sir Aah feat. Nipsey Hussle"
+    },
+    {
+     "rank": 8,
+     "song": "Pull Up (Prod by Drumma Boy)",
+     "artist": "OJ Da Juiceman"
+    },
+    {
+     "rank": 9,
+     "song": "Got To Get It",
+     "artist": "Shorty Mack"
+    },
+    {
+     "rank": 10,
+     "song": "Kat Stacks",
+     "artist": "Charles Hamilton"
+    },
+    {
+     "rank": 11,
+     "song": "Put Me Out",
+     "artist": "Jowork"
+    },
+    {
+     "rank": 12,
+     "song": "I Betchu Work",
+     "artist": "YT23 feat. Lil' Jon"
+    },
+    {
+     "rank": 13,
+     "song": "I'll Be Good",
+     "artist": "JY feat. Joell Ortiz & Avery Storm"
+    },
+    {
+     "rank": 14,
+     "song": "Jizzle (Prod by Shawty Redd)",
+     "artist": "Young Jeezy feat. Lil Jon"
+    },
+    {
+     "rank": 15,
+     "song": "Hometown Hero (Remix)",
+     "artist": "Big K.R.I.T. feat. Yelawolf"
+    },
+    {
+     "rank": 16,
+     "song": "Drumma on the Beat (Prod by Drumma Boy)",
+     "artist": "Lil Twist"
+    },
+    {
+     "rank": 17,
+     "song": "I Want You",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 18,
+     "song": "Like a Big Shot (Prod. by Alpo)",
+     "artist": "Mucho Deniro feat. Reem Riches"
+    },
+    {
+     "rank": 19,
+     "song": "Blood Sweat And Tears",
+     "artist": "Jadakiss feat. Chinx Drugz & D'Shaun"
+    },
+    {
+     "rank": 20,
+     "song": "Girlfriend",
+     "artist": "DUBB feat. Ty$"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100717011948/http://hypem.com:80/popular",
+   "captured": "2010-07-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Bully Plank",
+     "artist": "doomtree"
+    },
+    {
+     "rank": 2,
+     "song": "Falling In Love With Brazil (Kaskade Mashup)",
+     "artist": "Haley vs. Deadmau5"
+    },
+    {
+     "rank": 3,
+     "song": "I Love The Way You Mix (Lie) [Eminem feat. Rihanna vs. Beyonce vs. BEP vs. The Lion King vs. Chidd…",
+     "artist": "Mashup-Germany"
+    },
+    {
+     "rank": 4,
+     "song": "Neckbrace",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 5,
+     "song": "All Summer",
+     "artist": "Kid Cudi, Best Coast and Rostam of Vam…"
+    },
+    {
+     "rank": 6,
+     "song": "Crave You (Version 2) [Featuring Giselle]",
+     "artist": "Flight Facilities"
+    },
+    {
+     "rank": 7,
+     "song": "Bulletproof (Acoustic Version)",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 8,
+     "song": "I'll Be There (Main Mix)",
+     "artist": "Afrojack & Gregor Salto feat. Jimbolee"
+    },
+    {
+     "rank": 9,
+     "song": "Magical World ft. Nelly Furtado",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 10,
+     "song": "40 Day Dream",
+     "artist": "Edward Sharpe & The Magnetic Zeros"
+    },
+    {
+     "rank": 11,
+     "song": "Desperate Measures",
+     "artist": "Millionyoung"
+    },
+    {
+     "rank": 12,
+     "song": "My Adidas (Pilotpriest Remix)",
+     "artist": "Run DMC"
+    },
+    {
+     "rank": 13,
+     "song": "Chilled Coughee (feat Devin The Dude)",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 14,
+     "song": "Vampire Weekend vs. Kid Cudi",
+     "artist": "DJ Slink"
+    },
+    {
+     "rank": 15,
+     "song": "Take A Minute",
+     "artist": "K'naan"
+    },
+    {
+     "rank": 16,
+     "song": "Space Hero Suits",
+     "artist": "Those Dancing Days"
+    },
+    {
+     "rank": 17,
+     "song": "Barbra Stresisand (LOVE THY BROTHER REMIX x BASSNECTAR)",
+     "artist": "Duck Sauce"
+    },
+    {
+     "rank": 18,
+     "song": "Santeria (JPOD Remix)",
+     "artist": "Sublime"
+    },
+    {
+     "rank": 19,
+     "song": "Where I'm Going",
+     "artist": "Cut Copy"
+    },
+    {
+     "rank": 20,
+     "song": "Hello From Eau Claire (Gold Chains Remix)",
+     "artist": "Xiu Xiu"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100712194324/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-07-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Airplanes",
+     "artist": "B.o.B Featuring Hayley Williams"
+    },
+    {
+     "rank": 3,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 5,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 6,
+     "song": "All I Do Is Win",
+     "artist": "DJ Khaled Featuring T-Pain, Ludacris, Snoop Dogg & Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "Sex Room",
+     "artist": "Ludacris Featuring Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Hello Good Morning",
+     "artist": "Diddy - Dirty Money Featuring T.I."
+    },
+    {
+     "rank": 9,
+     "song": "Teach Me How To Dougie",
+     "artist": "Cali Swag District"
+    },
+    {
+     "rank": 10,
+     "song": "Billionaire",
+     "artist": "Travie McCoy Featuring Bruno Mars"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100716064838/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-07-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 2,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    },
+    {
+     "rank": 3,
+     "song": "Find Your Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "OMG",
+     "artist": "Usher Featuring will.i.am"
+    },
+    {
+     "rank": 5,
+     "song": "Ride",
+     "artist": "Ciara Featuring Ludacris"
+    },
+    {
+     "rank": 6,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 7,
+     "song": "Sex Room",
+     "artist": "Ludacris Featuring Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "Teach Me How To Dougie",
+     "artist": "Cali Swag District"
+    },
+    {
+     "rank": 10,
+     "song": "Bittersweet",
+     "artist": "Fantasia"
+    }
+   ]
+  }
+ ]
+}

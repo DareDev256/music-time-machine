@@ -2,6 +2,30 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [2.0.0] - 2026-10-20 — Was Playing
+
+A rebuild. The song-stats dashboard (v1, tagged `v1.40.0`) is gone; the product is now a time machine: name a song, fly back to its week, land in its era.
+
+### Added
+- **The flight**: a three.js timeline tree. The Hot 100 #1 run sequence is the trunk (one real cover per run), the eight genre and country charts are branches that join the trunk in the years they began (Rap 1989, Canada 2007), a ring marks every January. On landing, each branch is labelled with that week's lane #1. Pooled meshes and proximity texture loading: 120 fps median at 390×844 on a flight to 1965 (headless Chromium, Mac GPU). Reduced motion lands at once; Skip lands at once.
+- **Console** (`/`): one input for a song, an artist and a year, a messy sentence, a year or a date. Resolves in the browser: own index, then MusicBrainz, then iTunes. Ambiguous titles show up to three candidates, and a title that is also a year ("1999") offers the year too. A failed resolve offers the year and still flies. `/?to=YYYY-MM-DD&song=&artist=` replays a flight; that is the link people share.
+- **Era page** (`/era/YYYY-MM`): the anchor song with its dated source (YouTube upload, MusicBrainz release, Hot 100 entry) and play-in-place for YouTube-only songs; the Hot 100 top 10 with movement, peak and weeks; the #1 in eight lanes; "Off the charts" from Internet Archive captures; US revenue by format that year; listener memories; a share bar.
+- **Share cards** (`/api/card`): 9:16 story and 1200×630 link preview, a J-card with a seven-segment date and the contrast line ("SPRING 2012 · I WAS ON CHIEF KEEF & RIFF RAFF · THE WORLD WAS ON GOTYE").
+- **Remembered by listeners**: anyone can add a song they remember from a month. Each submission is fact-checked at submit time against the index, MusicBrainz and iTunes (consistent / blew up later / before release / unverified), held for moderation at `/admin`, and shown once approved. Rate-limited per hashed IP, honeypot, Convex storage behind server-side routes only.
+- **Data pipelines** in `data/scripts/`, each refusing to publish a broken parse: weekly Hot 100 top 10 (two-source cross-check: 3 of 35,580 rank pairs disagree), genre lanes from Wikipedia (8 charts), Wayback "off the charts" (60 months, 2010–2014, 4 sources), covers for 1,197 of 1,201 #1s, RIAA revenue by format 1973–2025, a 37,955-song search index with a hand-verified YouTube/mixtape seed.
+- `/api/week`, `/api/resolve`, `/api/health` (now reports data age and coverage, 503 when stale).
+- `data/scripts/readme_stats.py`: the README's numbers are generated from the data, never typed.
+
+### Changed
+- One CSP in `src/lib/csp.ts` shared by the proxy and the fallback headers; adds MusicBrainz, iTunes, YouTube thumbnails and the youtube-nocookie player; `upgrade-insecure-requests` in production only. COEP removed (it would block the player).
+- The proxy allows POST to exactly `/api/submit`, `/api/admin/session` and `/api/admin/review`.
+- Fonts: Archivo (variable width), JetBrains Mono, DSEG7 Classic. True black, one accent.
+
+### Removed
+- The v1 dashboard: song/artist/compare pages, the 17-song mock catalog, Spotify/Genius/YouTube clients, recommendation engine, `framer-motion`, `recharts`. `/song/*`, `/artist/*` and `/compare` redirect to `/`.
+
+---
+
 ## [1.40.0] - 2026-09-20
 
 ### Added

@@ -1,0 +1,286 @@
+{
+ "month": "2014-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140122200936/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-01-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blow Out",
+     "artist": "Juicy J"
+    },
+    {
+     "rank": 2,
+     "song": "Break The Bank (Prod. By The Alchemist)",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 3,
+     "song": "Everyday",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 4,
+     "song": "FYFR (Fuck Your Favorite Rapper)",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 5,
+     "song": "Make It Home",
+     "artist": "August Alsina Feat. Jeezy"
+    },
+    {
+     "rank": 6,
+     "song": "Or Nah (Prod. By DJ Mustard)",
+     "artist": "Ty Dolla $ign Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "Pull Up",
+     "artist": "Chief Keef"
+    },
+    {
+     "rank": 8,
+     "song": "Don't Know",
+     "artist": "Kevin Gates"
+    },
+    {
+     "rank": 9,
+     "song": "Trophies (Prod. By Hit-Boy) [CDQ]",
+     "artist": "Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Never Goin Back (Prod By The Featherstones) [CDQ]",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 11,
+     "song": "Hundreds (I Had A Dream) (Prod. By Metro Boomin)",
+     "artist": "Young Thug Feat. Meek Mill"
+    },
+    {
+     "rank": 12,
+     "song": "Baking Soda (Prod by DJ Mustard)",
+     "artist": "Plies Feat. Tyga"
+    },
+    {
+     "rank": 13,
+     "song": "Fuck Em (Prod. By KE On The Track)",
+     "artist": "T-Pain Feat. Rich Homie Quan, Waka Flocka & Young Cash"
+    },
+    {
+     "rank": 14,
+     "song": "Free Again (Prod. By Street Runner)",
+     "artist": "DJ Kay Slay Feat. 50 Cent & Fat Joe"
+    },
+    {
+     "rank": 15,
+     "song": "Shot You Down (Remix)",
+     "artist": "Isaiah Rashad Feat. ScHoolboy Q & Jay Rock"
+    },
+    {
+     "rank": 16,
+     "song": "Hotel Suite",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 17,
+     "song": "Watch Me Do It [Tags]",
+     "artist": "Maino Feat. T.I. & French Montana"
+    },
+    {
+     "rank": 18,
+     "song": "Never Goin Back (Prod By The Featherstones) [Tags]",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 19,
+     "song": "Paranoid (Remix)",
+     "artist": "Ty Dolla $ign Feat. Trey Songz, French Montana & DJ Mustard"
+    },
+    {
+     "rank": 20,
+     "song": "Jamaica (Prod. By Beat Bully)",
+     "artist": "Ace Hood"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140115145241/http://hypem.com/popular",
+   "captured": "2014-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Crazy (Gnarls Barkley Cover)",
+     "artist": "Daniela Andrade"
+    },
+    {
+     "rank": 2,
+     "song": "Drowning Butterflies Marce Reazon Remix",
+     "artist": "Bipolar Sunshine"
+    },
+    {
+     "rank": 3,
+     "song": "Done Wrong Opiuo Remix",
+     "artist": "Pretty Lights"
+    },
+    {
+     "rank": 4,
+     "song": "Youth BUDO Remix",
+     "artist": "Daughter"
+    },
+    {
+     "rank": 5,
+     "song": "Man X Woman",
+     "artist": "Mar"
+    },
+    {
+     "rank": 6,
+     "song": "Coming of Age",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 7,
+     "song": "Indian Summer",
+     "artist": "Blood Cultures"
+    },
+    {
+     "rank": 8,
+     "song": "Poetic Justice LMC Remix",
+     "artist": "Kendrick Lamar x Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Make It To Me",
+     "artist": "Sam Smith"
+    },
+    {
+     "rank": 10,
+     "song": "Bug A Boo Borneland remix",
+     "artist": "Destiny's Child"
+    },
+    {
+     "rank": 11,
+     "song": "A tout a l'heure",
+     "artist": "Bibio"
+    },
+    {
+     "rank": 12,
+     "song": "Cavalier +1 remix",
+     "artist": "James Vincent McMorrow"
+    },
+    {
+     "rank": 13,
+     "song": "Team Mickey Valen Remix",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 14,
+     "song": "Black Out Days",
+     "artist": "PHANTOGRAM"
+    },
+    {
+     "rank": 15,
+     "song": "Stay",
+     "artist": "Indi."
+    },
+    {
+     "rank": 16,
+     "song": "Latch DJ Premier Remix",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 17,
+     "song": "Hearts Like Ours",
+     "artist": "The Naked And Famous"
+    },
+    {
+     "rank": 18,
+     "song": "Mercury Child",
+     "artist": "Blood Cultures"
+    },
+    {
+     "rank": 19,
+     "song": "2 On feat. ScHoolBoy Q",
+     "artist": "Tinashe"
+    },
+    {
+     "rank": 20,
+     "song": "Bloodsport",
+     "artist": "Raleigh Ritchie"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140115064937/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2014-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Drunk In Love",
+     "artist": "Beyonce Featuring Jay Z"
+    },
+    {
+     "rank": 3,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 4,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 5,
+     "song": "White Walls",
+     "artist": "Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis"
+    },
+    {
+     "rank": 6,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 7,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 8,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 10,
+     "song": "Gas Pedal",
+     "artist": "Sage The Gemini Featuring IamSu!"
+    }
+   ]
+  }
+ ]
+}

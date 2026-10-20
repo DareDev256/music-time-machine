@@ -1,0 +1,346 @@
+{
+ "month": "2010-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100326075318/http://www.hotnewhiphop.com/",
+   "captured": "2010-03-26",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Momma Told Me (Feat. Ester Dean)",
+     "artist": "Jeezy"
+    },
+    {
+     "rank": 2,
+     "song": "Can't Stop The Boss (Feat. Too Short, Snoop Dogg, And Jazze Pha)",
+     "artist": "E-40"
+    },
+    {
+     "rank": 3,
+     "song": "Whip It Up (Feat. Gucci Mane)",
+     "artist": "E-40"
+    },
+    {
+     "rank": 4,
+     "song": "Baby Remix",
+     "artist": "Lil Twist"
+    },
+    {
+     "rank": 5,
+     "song": "Homegurl (Remix) (Feat. Bun B, Rick Ross, And The-Dream)",
+     "artist": "Bone"
+    },
+    {
+     "rank": 6,
+     "song": "Hot Girl (Feat. Juvenile)",
+     "artist": "Bobby Valentino"
+    },
+    {
+     "rank": 7,
+     "song": "Hot Tamale (Feat Arab)",
+     "artist": "J-Bar feat Arab"
+    },
+    {
+     "rank": 8,
+     "song": "OverDone",
+     "artist": "Phreshy feat Khalil"
+    },
+    {
+     "rank": 9,
+     "song": "Aerials (Feat. Stalley, Currensy, Whosane, Terri Walker, And Mos Def)",
+     "artist": "Ski Beatz"
+    },
+    {
+     "rank": 10,
+     "song": "Customer (Remix) (Feat. Trey Songz)",
+     "artist": "Raheem Devaughn"
+    },
+    {
+     "rank": 11,
+     "song": "#1 Fan",
+     "artist": "Fly Street Gang"
+    },
+    {
+     "rank": 12,
+     "song": "So Over You",
+     "artist": "Elise 5000 feat Talent Couture"
+    },
+    {
+     "rank": 13,
+     "song": "Official (Feat. Bobby Valentino) [Prod. By Drumma Boy]",
+     "artist": "Billy Blue"
+    },
+    {
+     "rank": 14,
+     "song": "Put Out This Flame",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 15,
+     "song": "First",
+     "artist": "Keri Hilson"
+    },
+    {
+     "rank": 16,
+     "song": "Cut My Hair",
+     "artist": "Keri Hilson"
+    },
+    {
+     "rank": 17,
+     "song": "Automatic",
+     "artist": "Keri Hilson"
+    },
+    {
+     "rank": 18,
+     "song": "Yankee Fitted (Feat. Talib Kweli And Mims)",
+     "artist": "Bad Seed"
+    },
+    {
+     "rank": 19,
+     "song": "Oh Lets Do It (Remix)",
+     "artist": "Teairra Mari"
+    },
+    {
+     "rank": 20,
+     "song": "Daddy's Home (Remix)",
+     "artist": "Teairra Mari"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100317041639/http://hypem.com:80/popular",
+   "captured": "2010-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Office Musik (Dwight K. Shrute Vs. Weezy F. Baby)",
+     "artist": "Clockwork"
+    },
+    {
+     "rank": 2,
+     "song": "Tipsy In The Sun (Weezer // J-Kwon)",
+     "artist": "The White Panda"
+    },
+    {
+     "rank": 3,
+     "song": "Daylight (Troublemaker Remix feat. De La Soul)",
+     "artist": "Matt and Kim"
+    },
+    {
+     "rank": 4,
+     "song": "Silvia",
+     "artist": "Miike Snow"
+    },
+    {
+     "rank": 5,
+     "song": "Phantom + Phantom Pt. II (Troublemaker Edit)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 6,
+     "song": "Sea Change",
+     "artist": "Turin Brakes"
+    },
+    {
+     "rank": 7,
+     "song": "Home",
+     "artist": "Edward Sharpe & The Magnetic Zeros"
+    },
+    {
+     "rank": 8,
+     "song": "Downtight (Chambaland Mashup)",
+     "artist": "Stevie Wonder vs. Jay Sean Feat. Lil' …"
+    },
+    {
+     "rank": 9,
+     "song": "Stuntin' Like Mufasa",
+     "artist": "Lil Wayne vs. Lion King"
+    },
+    {
+     "rank": 10,
+     "song": "She's Devastating [Original]",
+     "artist": "DiscoTech"
+    },
+    {
+     "rank": 11,
+     "song": "Intergalactic Focker (Brand-x Mashup)",
+     "artist": "Beastie Boys"
+    },
+    {
+     "rank": 12,
+     "song": "Little Bit (TOKiMONSTA bootleg remix)",
+     "artist": "Lykke Li"
+    },
+    {
+     "rank": 13,
+     "song": "The Ghost Inside",
+     "artist": "Broken Bells"
+    },
+    {
+     "rank": 14,
+     "song": "The Rain",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 15,
+     "song": "Boombox (feat Julian Casablancas)",
+     "artist": "The Lonely Island"
+    },
+    {
+     "rank": 16,
+     "song": "Walking On A Dream",
+     "artist": "Empire of the Sun"
+    },
+    {
+     "rank": 17,
+     "song": "The High Road",
+     "artist": "Broken Bells"
+    },
+    {
+     "rank": 18,
+     "song": "Little Girl (featuring Julian Casablancas)",
+     "artist": "Danger Mouse and Sparklehorse"
+    },
+    {
+     "rank": 19,
+     "song": "I hate my friends",
+     "artist": "Television keeps us apart"
+    },
+    {
+     "rank": 20,
+     "song": "Tron Legacy (Daft Punk Remix)",
+     "artist": "Daft Punk"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100316120717/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-03-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 2,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 4,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 5,
+     "song": "On To The Next One",
+     "artist": "Jay-Z + Swizz Beatz"
+    },
+    {
+     "rank": 6,
+     "song": "Tie Me Down",
+     "artist": "New Boyz Featuring Ray J"
+    },
+    {
+     "rank": 7,
+     "song": "Steady Mobbin'",
+     "artist": "Young Money Featuring Gucci Mane"
+    },
+    {
+     "rank": 8,
+     "song": "Lemonade",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 9,
+     "song": "O Let's Do It",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 10,
+     "song": "All The Way Turnt Up",
+     "artist": "Roscoe Dash Featuring Soulja Boy Tell'em"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100313183238/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-03-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sex Therapy",
+     "artist": "Robin Thicke"
+    },
+    {
+     "rank": 2,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "It Kills Me",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 4,
+     "song": "I Am",
+     "artist": "Mary J. Blige"
+    },
+    {
+     "rank": 5,
+     "song": "Say Aah",
+     "artist": "Trey Songz Featuring Fabolous"
+    },
+    {
+     "rank": 6,
+     "song": "Try Sleeping With A Broken H...",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 7,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 8,
+     "song": "Hey Daddy (Daddy's Home)",
+     "artist": "Usher Featuring Plies"
+    },
+    {
+     "rank": 9,
+     "song": "Everything To Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 10,
+     "song": "Neighbors Know My Name",
+     "artist": "Trey Songz"
+    }
+   ]
+  }
+ ]
+}

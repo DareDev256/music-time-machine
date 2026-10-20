@@ -1,0 +1,236 @@
+{
+ "month": "2010-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100616083910/http://hypem.com:80/popular",
+   "captured": "2010-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Work",
+     "artist": "Gangstarr"
+    },
+    {
+     "rank": 2,
+     "song": "Bang Bang Bang ft Q-Tip",
+     "artist": "Mark Ronson"
+    },
+    {
+     "rank": 3,
+     "song": "XXXO Remix (Dirty)(Produced by Rieces Pieces)",
+     "artist": "M.I.A. Ft Jay Z"
+    },
+    {
+     "rank": 4,
+     "song": "Skewed Emapthy (Skratch Bastid Mix)",
+     "artist": "Crystal Castles & Outkast & Raekwon"
+    },
+    {
+     "rank": 5,
+     "song": "What Else Is There",
+     "artist": "Royksopp"
+    },
+    {
+     "rank": 6,
+     "song": "We Used To Wait",
+     "artist": "Arcade Fire"
+    },
+    {
+     "rank": 7,
+     "song": "Float On (Modest Mouse Cover)",
+     "artist": "Blackbird Blackbird"
+    },
+    {
+     "rank": 8,
+     "song": "Neckbrace",
+     "artist": "Ratatat"
+    },
+    {
+     "rank": 9,
+     "song": "The Fly Scientist ft. Page & Silver Medallion",
+     "artist": "Drake & Coldplay"
+    },
+    {
+     "rank": 10,
+     "song": "Ayo (Prod. By Diplo)",
+     "artist": "Hyper Crush"
+    },
+    {
+     "rank": 11,
+     "song": "Somersault (Zero 7 feat. MF Doom)",
+     "artist": "Danger Mouse Remix"
+    },
+    {
+     "rank": 12,
+     "song": "Higher",
+     "artist": "J.Cole"
+    },
+    {
+     "rank": 13,
+     "song": "Today (feat. Jose Gonzalez)",
+     "artist": "Zero 7"
+    },
+    {
+     "rank": 14,
+     "song": "Heard It Through The Grapewine - Lulu Rouge Re-Edit",
+     "artist": "Marvin Gaye"
+    },
+    {
+     "rank": 15,
+     "song": "The XX Gon' Give It To Ya (DMX vs The XX)",
+     "artist": "The Hood Internet"
+    },
+    {
+     "rank": 16,
+     "song": "Infinity (Bachelors Of Science remix)",
+     "artist": "The Xx"
+    },
+    {
+     "rank": 17,
+     "song": "Divisive",
+     "artist": "We Have Band"
+    },
+    {
+     "rank": 18,
+     "song": "Clarissa",
+     "artist": "Volta Cab"
+    },
+    {
+     "rank": 19,
+     "song": "Wasted Daylight",
+     "artist": "Stars"
+    },
+    {
+     "rank": 20,
+     "song": "The Wavin Flag Mashup [Khaan vs. Kings of Leon vs. Matisyahu vs. Whitney Houston vs. Counting Crow…",
+     "artist": "Mashup-Germany"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100615013125/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-06-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 3,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 5,
+     "song": "Airplanes",
+     "artist": "B.o.B Featuring Hayley Williams"
+    },
+    {
+     "rank": 6,
+     "song": "All I Do Is Win",
+     "artist": "DJ Khaled Featuring T-Pain, Ludacris, Snoop Dogg & Rick Ross"
+    },
+    {
+     "rank": 7,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "I'm Back",
+     "artist": "T.I."
+    },
+    {
+     "rank": 10,
+     "song": "Hello Good Morning",
+     "artist": "Diddy - Dirty Money Featuring T.I."
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100613203237/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-06-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 2,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    },
+    {
+     "rank": 3,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Find Your Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 5,
+     "song": "OMG",
+     "artist": "Usher Featuring will.i.am"
+    },
+    {
+     "rank": 6,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 7,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "Neighbors Know My Name",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "Everything To Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 10,
+     "song": "All I Do Is Win",
+     "artist": "DJ Khaled Featuring T-Pain, Ludacris, Snoop Dogg & Rick Ross"
+    }
+   ]
+  }
+ ]
+}

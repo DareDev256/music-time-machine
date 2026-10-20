@@ -1,0 +1,286 @@
+{
+ "month": "2013-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130809001227/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2013-08-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "All Me",
+     "artist": "Drake Feat. 2 Chainz & Big Sean"
+    },
+    {
+     "rank": 2,
+     "song": "Hold On We're Going Home (CDQ)",
+     "artist": "Drake Feat. Majid Jordan"
+    },
+    {
+     "rank": 3,
+     "song": "Where U Been (Prod. By Mike WiLL Made It)",
+     "artist": "2 Chainz Feat. Cap-1"
+    },
+    {
+     "rank": 4,
+     "song": "August 27th Flow (Prod. By Juicy J & Crazy Mike)",
+     "artist": "Juicy J"
+    },
+    {
+     "rank": 5,
+     "song": "Fire (CDQ/Dirty)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 6,
+     "song": "I Know Who You Are (Prod. By Soundz)",
+     "artist": "Kid Ink Feat. Casey Veggies"
+    },
+    {
+     "rank": 7,
+     "song": "I Wanna Be With You (CDQ/Dirty)",
+     "artist": "DJ Khaled Feat. Nicki Minaj, Future & Rick Ross"
+    },
+    {
+     "rank": 8,
+     "song": "I Wonder Why (CDQ/Dirty)",
+     "artist": "Rick Ross"
+    },
+    {
+     "rank": 9,
+     "song": "Honest",
+     "artist": "Future"
+    },
+    {
+     "rank": 10,
+     "song": "Hood Pope",
+     "artist": "A$AP Ferg"
+    },
+    {
+     "rank": 11,
+     "song": "Change Nothing",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 12,
+     "song": "Bossin' Up (Remix) (Prod by Lifted)",
+     "artist": "Kid Ink Feat. Young Jeezy & YG"
+    },
+    {
+     "rank": 13,
+     "song": "Love In The Sky",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 14,
+     "song": "Till My Wrist Hurt (Copy)",
+     "artist": "Vado Feat. French Montana, Pusha T & Chinx Drugz"
+    },
+    {
+     "rank": 15,
+     "song": "Christopher DRONEr",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 16,
+     "song": "Cup Up Top Down",
+     "artist": "Kirko Bangz Feat. Z-Ro, Paul Wall & Slim Thug"
+    },
+    {
+     "rank": 17,
+     "song": "Hold On We're Going Home (Radio Rip)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 18,
+     "song": "Spaced Out",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 19,
+     "song": "Right There",
+     "artist": "Ariana Grande Feat. Big Sean"
+    },
+    {
+     "rank": 20,
+     "song": "Higher",
+     "artist": "Just Blaze & Baauer Feat. Jay Z"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130813230154/http://hypem.com:80/popular",
+   "captured": "2013-08-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Strobe Alvino Remix",
+     "artist": "Deadmau5"
+    },
+    {
+     "rank": 2,
+     "song": "Tragedy Forever Kid Remix",
+     "artist": "Bee Gees"
+    },
+    {
+     "rank": 3,
+     "song": "Now Is Not The Time",
+     "artist": "CHVRCHES"
+    },
+    {
+     "rank": 4,
+     "song": "Indian Summer",
+     "artist": "HOW SAD"
+    },
+    {
+     "rank": 5,
+     "song": "Lost Track Of Time",
+     "artist": "MTNS"
+    },
+    {
+     "rank": 6,
+     "song": "Acapella Faustix & Imanos Remix",
+     "artist": "Karmin"
+    },
+    {
+     "rank": 7,
+     "song": "Blurred Lines feat. T.I., Pharrell Bee's Knees Remix",
+     "artist": "Robin Thicke"
+    },
+    {
+     "rank": 8,
+     "song": "Clinton Sparks feat. 2Chainz, Macklemore & DA-Gold Rush Cash Cash X Gazzo Remix",
+     "artist": "Gazzo Music"
+    },
+    {
+     "rank": 9,
+     "song": "Control (feat. Kendrick Lamar & Jay Electronica)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 10,
+     "song": "Control (Feat. Kendrick Lamar & Jay Electronica) (Prod. By No I.D.)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 11,
+     "song": "Alarm",
+     "artist": "Wise Blood"
+    },
+    {
+     "rank": 12,
+     "song": "Midas Touch",
+     "artist": "BURNS x Ellie Goulding"
+    },
+    {
+     "rank": 13,
+     "song": "Wasting My Young Years Sound Remedy Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 14,
+     "song": "Pretty Green",
+     "artist": "White Denim"
+    },
+    {
+     "rank": 15,
+     "song": "Dat Ass",
+     "artist": "Earl Sweatshirt"
+    },
+    {
+     "rank": 16,
+     "song": "Ghosts In The Machine Kill The Noise Remix",
+     "artist": "The M Machine"
+    },
+    {
+     "rank": 17,
+     "song": "American Girl Oliver Remix",
+     "artist": "Bonnie McKee"
+    },
+    {
+     "rank": 18,
+     "song": "Applause",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 19,
+     "song": "Counting Stars Thomas Jack Edit",
+     "artist": "One Republic"
+    },
+    {
+     "rank": 20,
+     "song": "Melt feat. Kilo Kish",
+     "artist": "Chet Faker"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130814163130/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 2,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 3,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    },
+    {
+     "rank": 4,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 5,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 6,
+     "song": "Body Party",
+     "artist": "Ciara"
+    },
+    {
+     "rank": 7,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 8,
+     "song": "Take Back The Night",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 9,
+     "song": "U.O.E.N.O.",
+     "artist": "Rocko Featuring Future & Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas Or Rihanna"
+    }
+   ]
+  }
+ ]
+}

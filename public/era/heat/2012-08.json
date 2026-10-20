@@ -1,0 +1,346 @@
+{
+ "month": "2012-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120817183111/http://www.hotnewhiphop.com/",
+   "captured": "2012-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Diced Pineapples (Freestyle)",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 2,
+     "song": "Bombs Away [Tags]",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "20 Minute Freestyle",
+     "artist": "Los (Shooter)"
+    },
+    {
+     "rank": 4,
+     "song": "Hands On The Wheel Freestyle",
+     "artist": "Emilio Rojas"
+    },
+    {
+     "rank": 5,
+     "song": "Freestyle To Heaven",
+     "artist": "Naledge"
+    },
+    {
+     "rank": 6,
+     "song": "Trouble",
+     "artist": "Planet VI feat. Jarren Benton"
+    },
+    {
+     "rank": 7,
+     "song": "They Ready [CDQ] (No Tags)",
+     "artist": "DJ Khaled feat. J. Cole, Big K.R.I.T. & Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Bitches & Bottles (Let's Get It Started)",
+     "artist": "DJ Khaled feat. Lil Wayne, Future & T.I."
+    },
+    {
+     "rank": 9,
+     "song": "In The Air",
+     "artist": "Wiz Khalifa feat. K-Young"
+    },
+    {
+     "rank": 10,
+     "song": "Party (Prod. by Kenny Beats)",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 11,
+     "song": "I Did It For My Dawgs",
+     "artist": "DJ Khaled feat. Rick Ross, Meek Mill, French Montana & Jadakiss"
+    },
+    {
+     "rank": 12,
+     "song": "Truth Or Truth",
+     "artist": "Slaughterhouse"
+    },
+    {
+     "rank": 13,
+     "song": "No Lie (Freestyle)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 14,
+     "song": "Leggo (Prod by Mike Will Made It)",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 15,
+     "song": "How We Survive",
+     "artist": "Sean Kingston feat. Busta Rhymes"
+    },
+    {
+     "rank": 16,
+     "song": "Stop Bitchin",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 17,
+     "song": "Make It Look Easy",
+     "artist": "Busta Rhymes feat. Gucci Mane"
+    },
+    {
+     "rank": 18,
+     "song": "Copy Copy",
+     "artist": "The Kid Daytona feat. Jon Connor"
+    },
+    {
+     "rank": 19,
+     "song": "So Far",
+     "artist": "Boogz Boogetz feat. Taylor Hill"
+    },
+    {
+     "rank": 20,
+     "song": "The Release Date",
+     "artist": "Problem"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120814033159/http://hypem.com:80/popular/",
+   "captured": "2012-08-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Just What I Am ft. King Chip",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 2,
+     "song": "Don't You Worry Child (Original Mix) @Pete Tong BBC Radio1",
+     "artist": "Swedish House Mafia feat.John Martin"
+    },
+    {
+     "rank": 3,
+     "song": "Justice Feat. Jay-Z: On To The Next Dance (Terry Urban Transition)",
+     "artist": "Justice"
+    },
+    {
+     "rank": 4,
+     "song": "Children Eat More Cake Remix",
+     "artist": "Robert Miles"
+    },
+    {
+     "rank": 5,
+     "song": "Something About Us Xristo Remix",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 6,
+     "song": "Sorry",
+     "artist": "Gypsy and the Cat"
+    },
+    {
+     "rank": 7,
+     "song": "Settle Down Baauer Remix",
+     "artist": "No Doubt"
+    },
+    {
+     "rank": 8,
+     "song": "The Warpath",
+     "artist": "Conner Youngblood"
+    },
+    {
+     "rank": 9,
+     "song": "Thrown",
+     "artist": "Kiasmos"
+    },
+    {
+     "rank": 10,
+     "song": "Don't Let Me Down 2012",
+     "artist": "Gramatik Vs. The Beatles"
+    },
+    {
+     "rank": 11,
+     "song": "Eyes Wide Open Yeasayer Remix",
+     "artist": "Gotye"
+    },
+    {
+     "rank": 12,
+     "song": "\"Female Robbery\" New Version",
+     "artist": "theneighbourhood"
+    },
+    {
+     "rank": 13,
+     "song": "The Base",
+     "artist": "Paul Banks"
+    },
+    {
+     "rank": 14,
+     "song": "Household Goods Zeds Dead Remix",
+     "artist": "Totally Enormous Extinct Dinosaurs"
+    },
+    {
+     "rank": 15,
+     "song": "Where You Should Be (Skream Cover)",
+     "artist": "Bronze Whale ft. Kandace Ferrel"
+    },
+    {
+     "rank": 16,
+     "song": "Youngblood Hawke",
+     "artist": "We Come Running"
+    },
+    {
+     "rank": 17,
+     "song": "Funny Heartbeat",
+     "artist": "Kisses"
+    },
+    {
+     "rank": 18,
+     "song": "The World Is Watching",
+     "artist": "Two Door Cinema Club"
+    },
+    {
+     "rank": 19,
+     "song": "Mystery Colors",
+     "artist": "Astronauts, etc."
+    },
+    {
+     "rank": 20,
+     "song": "Cry (Just A Little) Tobtok Remix",
+     "artist": "Bingo Players"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120818072740/http://www.billboard.com:80/charts/rap-songs?",
+   "captured": "2012-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 2,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Bag Of Money",
+     "artist": "Wale Featuring Rick Ross, Meek Mill & T-Pain"
+    },
+    {
+     "rank": 4,
+     "song": "Work Hard, Play Hard",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 5,
+     "song": "Amen",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 7,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 8,
+     "song": "Take It To The Head",
+     "artist": "DJ Khaled"
+    },
+    {
+     "rank": 9,
+     "song": "Leave You Alone",
+     "artist": "Young Jeezy Featuring Ne-Yo"
+    },
+    {
+     "rank": 10,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120818211233/http://www.billboard.com:80/charts/r-b-hip-hop-songs?",
+   "captured": "2012-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Bag Of Money",
+     "artist": "Wale Featuring Rick Ross, Meek Mill & T-Pain"
+    },
+    {
+     "rank": 3,
+     "song": "Lemme See",
+     "artist": "Usher Featuring Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 5,
+     "song": "Amen",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Nobody's Perfect",
+     "artist": "J. Cole Featuring Missy Elliott"
+    },
+    {
+     "rank": 7,
+     "song": "Climax",
+     "artist": "Usher"
+    },
+    {
+     "rank": 8,
+     "song": "Heart Attack",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 10,
+     "song": "2 Reasons",
+     "artist": "Trey Songz Featuring T.I."
+    }
+   ]
+  }
+ ]
+}

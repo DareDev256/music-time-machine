@@ -1,0 +1,346 @@
+{
+ "month": "2010-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20101114103351/http://www.hotnewhiphop.com:80/",
+   "captured": "2010-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Farewell",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 2,
+     "song": "Chain Heavy (Feat. Talib Kweli & Consequence)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 3,
+     "song": "Keep Your Head Up (Tags)",
+     "artist": "Michael Jackson"
+    },
+    {
+     "rank": 4,
+     "song": "I Want It All",
+     "artist": "Meek Mill feat. Lou Williams (#23)"
+    },
+    {
+     "rank": 5,
+     "song": "Bitch I'm Cold",
+     "artist": "Pries"
+    },
+    {
+     "rank": 6,
+     "song": "Heavy",
+     "artist": "CJ Hilton feat. Tyga & Fat Joe"
+    },
+    {
+     "rank": 7,
+     "song": "Coming Home (Mastered)",
+     "artist": "Dirty Money feat. Diddy & Skylar Grey"
+    },
+    {
+     "rank": 8,
+     "song": "Beat It Up",
+     "artist": "Slim Thug"
+    },
+    {
+     "rank": 9,
+     "song": "Billionaire",
+     "artist": "Prince Malik feat. Jim Jones & Yung Joc"
+    },
+    {
+     "rank": 10,
+     "song": "Smellin Like Money",
+     "artist": "Geolani feat. French Montana"
+    },
+    {
+     "rank": 11,
+     "song": "Bathroom (Prod by Jahlil Beats)",
+     "artist": "Kid Ink feat. Gudda Gudda"
+    },
+    {
+     "rank": 12,
+     "song": "In The Morning (Prod By L&X Music)",
+     "artist": "J. Cole feat. Drake"
+    },
+    {
+     "rank": 13,
+     "song": "Be With You (Prod By 9th Wonder)",
+     "artist": "David Banner feat. Ludacris & Marsha Ambrosius"
+    },
+    {
+     "rank": 14,
+     "song": "Blam",
+     "artist": "N.O.R.E. feat. Imam T.H.U.G."
+    },
+    {
+     "rank": 15,
+     "song": "Party After 2 (CDQ)",
+     "artist": "Sheek Louch feat. Jeremih"
+    },
+    {
+     "rank": 16,
+     "song": "Im Still Here (Prod. By Jahlil Beats)",
+     "artist": "Ben J (New Boyz)"
+    },
+    {
+     "rank": 17,
+     "song": "Bearer Of Bad News (Full Version)",
+     "artist": "Consequence"
+    },
+    {
+     "rank": 18,
+     "song": "Black & Yellow (Freestyle)",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 19,
+     "song": "Reflections (Prod By Needlz)",
+     "artist": "Pill"
+    },
+    {
+     "rank": 20,
+     "song": "Death Of Yesterday (Prod By Urban Noize)",
+     "artist": "Jay Burna"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101115084033/http://hypem.com:80/popular",
+   "captured": "2010-11-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Get In The Cart, Pig.",
+     "artist": "Deadmau5"
+    },
+    {
+     "rank": 2,
+     "song": "Dangerous (The Big Beat's Next Level Mix)",
+     "artist": "Busta Rhymes"
+    },
+    {
+     "rank": 3,
+     "song": "Hell Of A Life",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 4,
+     "song": "In The Morning f. Drake",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 5,
+     "song": "Coat of Arms (Boreta Remix)",
+     "artist": "Nosaj Thing"
+    },
+    {
+     "rank": 6,
+     "song": "Symphonies (Kill Them With Colour Remix)",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 7,
+     "song": "Hollywood Divorce (Ft. Lil' Wayne, Snoop Dogg)",
+     "artist": "Outkast"
+    },
+    {
+     "rank": 8,
+     "song": "Photoshop Handsome",
+     "artist": "Everything Everything"
+    },
+    {
+     "rank": 9,
+     "song": "Gorgeous (feat. Kid Cudi & Raekwon)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 10,
+     "song": "2Gether (Sidney Samson Remix),",
+     "artist": "Roger Sanchez & Far East Movement ft. …"
+    },
+    {
+     "rank": 11,
+     "song": "The Sound Of Violence (Tha Trickaz Remix)",
+     "artist": "Cassius"
+    },
+    {
+     "rank": 12,
+     "song": "Black Bug",
+     "artist": "Black Keys vs. Big Boi"
+    },
+    {
+     "rank": 13,
+     "song": "Sweet Disposition (RAC Remix)",
+     "artist": "The Temper Trap"
+    },
+    {
+     "rank": 14,
+     "song": "Your Song",
+     "artist": "Ellie Goulding"
+    },
+    {
+     "rank": 15,
+     "song": "How To Disappear Completely",
+     "artist": "Radiohead"
+    },
+    {
+     "rank": 16,
+     "song": "Louis, Louis",
+     "artist": "Teitur"
+    },
+    {
+     "rank": 17,
+     "song": "Crystalised (Dark Sky Remix)",
+     "artist": "The XX"
+    },
+    {
+     "rank": 18,
+     "song": "Chain Heavy (feat. Talib Kweli & Consequence)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 19,
+     "song": "Slats Slats Slats",
+     "artist": "Skrillex"
+    },
+    {
+     "rank": 20,
+     "song": "KILL EVERYBODY (BARE NOIZE REMIX)",
+     "artist": "Skrillex"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101116195308/http://www.billboard.com/charts/rap-songs",
+   "captured": "2010-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 3,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 4,
+     "song": "Like A G6",
+     "artist": "Far*East Movement Featuring Cataracs & Dev"
+    },
+    {
+     "rank": 5,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 6,
+     "song": "Right Thru Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Just A Dream",
+     "artist": "Nelly"
+    },
+    {
+     "rank": 8,
+     "song": "Love The Way You Lie",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 9,
+     "song": "Runaway",
+     "artist": "Kanye West Featuring Pusha T"
+    },
+    {
+     "rank": 10,
+     "song": "No Love",
+     "artist": "Eminem Featuring Lil Wayne"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101116090706/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-11-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Be Friends",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 2,
+     "song": "Deuces",
+     "artist": "Chris Brown Featuring Tyga & Kevin McCall"
+    },
+    {
+     "rank": 3,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame Featuring Roscoe Dash & Wale"
+    },
+    {
+     "rank": 4,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 6,
+     "song": "Bottoms Up",
+     "artist": "Trey Songz Featuring Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "All I Want Is You",
+     "artist": "Miguel Featuring J. Cole"
+    },
+    {
+     "rank": 8,
+     "song": "Love All Over Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 9,
+     "song": "Whip My Hair",
+     "artist": "Willow"
+    },
+    {
+     "rank": 10,
+     "song": "Holding You Down (Goin In Ci...",
+     "artist": "Jazmine Sullivan"
+    }
+   ]
+  }
+ ]
+}

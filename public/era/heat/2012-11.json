@@ -1,0 +1,286 @@
+{
+ "month": "2012-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121113225544/http://www.hotnewhiphop.com:80/",
+   "captured": "2012-11-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Trap Back Jumpin [Mastered Version]",
+     "artist": "T.I."
+    },
+    {
+     "rank": 2,
+     "song": "Tim Westwood Freestyle",
+     "artist": "Hopsin feat. Dizzy Wright & Jarren Benton"
+    },
+    {
+     "rank": 3,
+     "song": "Thug Lyfe (Prod by Cardo)",
+     "artist": "Short Dawg"
+    },
+    {
+     "rank": 4,
+     "song": "The Motivation",
+     "artist": "Jae Millz"
+    },
+    {
+     "rank": 5,
+     "song": "Concrete",
+     "artist": "Logic (MD)"
+    },
+    {
+     "rank": 6,
+     "song": "Drop (CDQ)",
+     "artist": "Gunplay"
+    },
+    {
+     "rank": 7,
+     "song": "LoudER (Freestyle)",
+     "artist": "Machine Gun Kelly"
+    },
+    {
+     "rank": 8,
+     "song": "The High End Theory (Freestyle)",
+     "artist": "Sean Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Enter The Void",
+     "artist": "Joey Bada$$ feat. Ab Soul"
+    },
+    {
+     "rank": 10,
+     "song": "Hometown Heroes (Remix)",
+     "artist": "SRH feat. muGz, David Hodges & Stefanie Parnell"
+    },
+    {
+     "rank": 11,
+     "song": "Gotta Stay Paid",
+     "artist": "Mayalino feat. Bun B & Max Minelli"
+    },
+    {
+     "rank": 12,
+     "song": "Numbers",
+     "artist": "Freeway feat. Neef Buck"
+    },
+    {
+     "rank": 13,
+     "song": "RPM (Prod. by Cardiak)",
+     "artist": "Paypa feat. Crooked I"
+    },
+    {
+     "rank": 14,
+     "song": "Red Carpet",
+     "artist": "Ras Kass feat. Evidence & Raekwon"
+    },
+    {
+     "rank": 15,
+     "song": "Bottles Of Diddy",
+     "artist": "Tone Trump feat. Krutch"
+    },
+    {
+     "rank": 16,
+     "song": "Turn On the Lights (Remix)",
+     "artist": "Eve"
+    },
+    {
+     "rank": 17,
+     "song": "All I Know",
+     "artist": "2 Pistols feat. French Montana & Joell Ortiz"
+    },
+    {
+     "rank": 18,
+     "song": "Albany",
+     "artist": "Mellowhype"
+    },
+    {
+     "rank": 19,
+     "song": "Freaky Tales",
+     "artist": "Scipio"
+    },
+    {
+     "rank": 20,
+     "song": "Doin Too Much",
+     "artist": "Veli Sosa feat. Trouble & Alley Boy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121114005653/http://hypem.com:80/popular",
+   "captured": "2012-11-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Need Your Heart feat. Kai Minnesota Remix",
+     "artist": "Adventure Club"
+    },
+    {
+     "rank": 2,
+     "song": "Never Going Back",
+     "artist": "Cosmic Kids"
+    },
+    {
+     "rank": 3,
+     "song": "Lullabies Adventure Club Remix",
+     "artist": "Yuna"
+    },
+    {
+     "rank": 4,
+     "song": "Tender Love",
+     "artist": "Kill Paris"
+    },
+    {
+     "rank": 5,
+     "song": "Lifeline (Figure Remix)",
+     "artist": "Citizen Cope"
+    },
+    {
+     "rank": 6,
+     "song": "Ms. Jackson Jean Tonique Remix",
+     "artist": "OutKast"
+    },
+    {
+     "rank": 7,
+     "song": "Stay in love (Edit)",
+     "artist": "Nicolas Jaar"
+    },
+    {
+     "rank": 8,
+     "song": "You've Got the Love 3.A.M. Remix",
+     "artist": "Florence and the Machine"
+    },
+    {
+     "rank": 9,
+     "song": "Sex Ryan Hemsworth Remix",
+     "artist": "The 1975"
+    },
+    {
+     "rank": 10,
+     "song": "Kemosabe",
+     "artist": "Everything Everything"
+    },
+    {
+     "rank": 11,
+     "song": "Baby Come Back",
+     "artist": "Kill Paris"
+    },
+    {
+     "rank": 12,
+     "song": "Like Home Dillon Francis Remix",
+     "artist": "Nicky Romero feat. NERVO"
+    },
+    {
+     "rank": 13,
+     "song": "Sunshine Shlohmo Remix",
+     "artist": "Little Dragon"
+    },
+    {
+     "rank": 14,
+     "song": "BLVCK MVGIC (Kill The Noise Pt. 2)",
+     "artist": "Kill The Noise"
+    },
+    {
+     "rank": 15,
+     "song": "Not Coming Back",
+     "artist": "drossenbro"
+    },
+    {
+     "rank": 16,
+     "song": "We Own The Night Young Piff & Sandor Trap Remix",
+     "artist": "Tiesto & Wolfgang Gartner feat. Luciana"
+    },
+    {
+     "rank": 17,
+     "song": "Good Amber Night",
+     "artist": "The White Panda"
+    },
+    {
+     "rank": 18,
+     "song": "On Top Feat. T.Shirt",
+     "artist": "Flume"
+    },
+    {
+     "rank": 19,
+     "song": "Chained Panic City Remix",
+     "artist": "The xx"
+    },
+    {
+     "rank": 20,
+     "song": "Hit & Run",
+     "artist": "Lana Del Rey"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121113104549/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-11-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 4,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Pop That",
+     "artist": "French Montana Featuring Rick Ross, Drake, Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    },
+    {
+     "rank": 9,
+     "song": "Thinkin Bout You",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 10,
+     "song": "Birthday Song",
+     "artist": "2 Chainz Featuring Kanye West"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "month": "2014-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140518004618/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-05-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "2 On Thotful",
+     "artist": "OB OBrien Feat. Drake"
+    },
+    {
+     "rank": 2,
+     "song": "D'usse (Prod. By Lee Major)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Believe Me (Prod. By Vinylz & Boi-1da)",
+     "artist": "Lil Wayne Feat. Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Insomniak",
+     "artist": "Mac Miller Feat. Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Down On Me",
+     "artist": "DJ Mustard Feat. 2 Chainz & Ty Dolla $ign"
+    },
+    {
+     "rank": 6,
+     "song": "Foreign",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 7,
+     "song": "ChiRaq To L.A. (Lil Durk/40 Glocc Diss)",
+     "artist": "Tyga Feat. Game"
+    },
+    {
+     "rank": 8,
+     "song": "Up Down (Remix)",
+     "artist": "T-Pain Feat. Kid Ink, Lil Boosie & B.o.B"
+    },
+    {
+     "rank": 9,
+     "song": "Don't Tell Em (Prod. By Mick Schultz & DJ Mustard)",
+     "artist": "Jeremih Feat. YG"
+    },
+    {
+     "rank": 10,
+     "song": "Crib In My Closet (Prod By Metro Boomin & 808 Mafia)",
+     "artist": "2 Chainz Feat. ASAP Rocky & Rick Ross"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140512230252/http://hypem.com/popular",
+   "captured": "2014-05-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Midnight Kygo Remix",
+     "artist": "Coldplay"
+    },
+    {
+     "rank": 2,
+     "song": "XO Monsieur Adi Remix",
+     "artist": "Beyoncé"
+    },
+    {
+     "rank": 3,
+     "song": "Sweet Ophelia Gold Fields Remix",
+     "artist": "Zella Day"
+    },
+    {
+     "rank": 4,
+     "song": "Terracotta",
+     "artist": "Garden City Movement"
+    },
+    {
+     "rank": 5,
+     "song": "Strong Artec Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 6,
+     "song": "Peppermint",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 7,
+     "song": "Let Me Down Gently",
+     "artist": "La Roux"
+    },
+    {
+     "rank": 8,
+     "song": "Faded Dimond Saints Remix",
+     "artist": "Zhu"
+    },
+    {
+     "rank": 9,
+     "song": "Real Slow +13 remixes",
+     "artist": "Miami Horror"
+    },
+    {
+     "rank": 10,
+     "song": "Gecko (Overdrive) (Radio Edit)",
+     "artist": "Oliver Heldens X Becky Hill"
+    },
+    {
+     "rank": 11,
+     "song": "Hotel",
+     "artist": "The Antlers"
+    },
+    {
+     "rank": 12,
+     "song": "See How",
+     "artist": "Coasts"
+    },
+    {
+     "rank": 13,
+     "song": "Curtains Embody Remix",
+     "artist": "Last Lynx"
+    },
+    {
+     "rank": 14,
+     "song": "Yala Falcons remix",
+     "artist": "M.I.A."
+    },
+    {
+     "rank": 15,
+     "song": "Show Stoppa\" (prod. by DJ Devastate)",
+     "artist": "El Da Sensei"
+    },
+    {
+     "rank": 16,
+     "song": "Together",
+     "artist": "Tourist."
+    },
+    {
+     "rank": 17,
+     "song": "Patterns (feat. Lianne La Havas)",
+     "artist": "TOURIST"
+    },
+    {
+     "rank": 18,
+     "song": "Harlem",
+     "artist": "CATHEDRALS"
+    },
+    {
+     "rank": 19,
+     "song": "Blow Monsieur Adi Remix",
+     "artist": "Beyoncé"
+    },
+    {
+     "rank": 20,
+     "song": "When It's Alright",
+     "artist": "Juun feat. Sam Smith"
+    }
+   ]
+  }
+ ]
+}

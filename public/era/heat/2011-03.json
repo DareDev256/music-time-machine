@@ -1,0 +1,346 @@
+{
+ "month": "2011-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110315041618/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Welcome To My Hood (Remix) [DJ]",
+     "artist": "DJ Khaled et al."
+    },
+    {
+     "rank": 2,
+     "song": "All Of The Lights (Remix)",
+     "artist": "Kanye West feat. Lil Wayne, Drake & Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "Feel It (Prod by Kajmir Royale)",
+     "artist": "Kid Ink feat. Los & Milli Millz"
+    },
+    {
+     "rank": 4,
+     "song": "Slumdog Billionaire",
+     "artist": "Red Cafe feat. Kid Ink & Nucci"
+    },
+    {
+     "rank": 5,
+     "song": "Monsters In My Head",
+     "artist": "Game feat. Colin Monroe"
+    },
+    {
+     "rank": 6,
+     "song": "Rain (Prod. by The Neptunes) [DJ]",
+     "artist": "Pusha T feat. 50 Cent & Pharrell"
+    },
+    {
+     "rank": 7,
+     "song": "All About Dough",
+     "artist": "50 Cent"
+    },
+    {
+     "rank": 8,
+     "song": "Light Dreams",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 9,
+     "song": "People (Tags)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 10,
+     "song": "So Gone (Based Remix)",
+     "artist": "Rockie Fresh feat. Lil B The Based God"
+    },
+    {
+     "rank": 11,
+     "song": "Push Bricks",
+     "artist": "Meek Mill feat. GI The General & Gillie Da Kid"
+    },
+    {
+     "rank": 12,
+     "song": "Warming Up (Freestyle) (Prod by The Hitbangerz)",
+     "artist": "Young Jerz"
+    },
+    {
+     "rank": 13,
+     "song": "Im a G",
+     "artist": "Styles P feat. Rell"
+    },
+    {
+     "rank": 14,
+     "song": "Just A Man",
+     "artist": "Akon"
+    },
+    {
+     "rank": 15,
+     "song": "Don't Make Me Do It",
+     "artist": "Yung Berg"
+    },
+    {
+     "rank": 16,
+     "song": "My Bitch Badder Than Yours",
+     "artist": "Yung Berg feat. Lil Scrappy"
+    },
+    {
+     "rank": 17,
+     "song": "Next Contestant (Prod By T-Pain)",
+     "artist": "Usher"
+    },
+    {
+     "rank": 18,
+     "song": "My Love",
+     "artist": "JoJo Pellegrino feat. Chris Brown"
+    },
+    {
+     "rank": 19,
+     "song": "I Refuse (Full)",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 20,
+     "song": "When I See You (Full)",
+     "artist": "Trey Songz"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110320131246/http://hypem.com:80/popular",
+   "captured": "2011-03-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Crazy in the deep (Adele vs Gnarles Barkley)",
+     "artist": "Divide & Kreate"
+    },
+    {
+     "rank": 2,
+     "song": "Anna Sun",
+     "artist": "WALK THE MOON"
+    },
+    {
+     "rank": 3,
+     "song": "Penguin (Original Mix)",
+     "artist": "Avicii"
+    },
+    {
+     "rank": 4,
+     "song": "Turbulence - Original Mix",
+     "artist": "Laidback Luke, Lil Jon, Steve Aoki"
+    },
+    {
+     "rank": 5,
+     "song": "Embody",
+     "artist": "SebastiAn"
+    },
+    {
+     "rank": 6,
+     "song": "Awooga",
+     "artist": "Calvin Harris"
+    },
+    {
+     "rank": 7,
+     "song": "She's Enough",
+     "artist": "Atmosphere"
+    },
+    {
+     "rank": 8,
+     "song": "Humdrum Town",
+     "artist": "Theophilus London"
+    },
+    {
+     "rank": 9,
+     "song": "Rinzler (Kaskade)",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 10,
+     "song": "Maps (Cosmonaut Grechko version)",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 11,
+     "song": "I Remember Shelter (The xx vs. Deadmau5 & Kaskade)",
+     "artist": "Austin Eterno"
+    },
+    {
+     "rank": 12,
+     "song": "Go Hard (Dubstep Remix)",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 13,
+     "song": "Trembling Hands",
+     "artist": "Explosions In The Sky"
+    },
+    {
+     "rank": 14,
+     "song": "Pictures",
+     "artist": "Benjamin Francis Leftwich"
+    },
+    {
+     "rank": 15,
+     "song": "Ghostwriter",
+     "artist": "RJD2"
+    },
+    {
+     "rank": 16,
+     "song": "Lupe Fiasco (Sound Remedy Remix)",
+     "artist": "8 Words I Never Said"
+    },
+    {
+     "rank": 17,
+     "song": "Ego",
+     "artist": "Burial, Four Tet & Thom Yorke"
+    },
+    {
+     "rank": 18,
+     "song": "From Stardust to Sentience",
+     "artist": "High Places"
+    },
+    {
+     "rank": 19,
+     "song": "Lord Knows Best",
+     "artist": "Dirty Beaches"
+    },
+    {
+     "rank": 20,
+     "song": "End Of Line (Boys Noize Remix)",
+     "artist": "Daft Punk"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110314113609/http://www.billboard.com:80/charts/rap-songs?",
+   "captured": "2011-03-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 3,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 4,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 6,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 7,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 8,
+     "song": "You Be Killin Em",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 9,
+     "song": "Rocketeer",
+     "artist": "Far*East Movement Featuring Ryan Tedder"
+    },
+    {
+     "rank": 10,
+     "song": "Hey Baby (Drop It To The Flo...",
+     "artist": "Pitbull Featuring T-Pain"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110317174426/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 3,
+     "song": "Love Faces",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 4,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 5,
+     "song": "Fall For Your Type",
+     "artist": "Jamie Foxx Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 7,
+     "song": "Down On Me",
+     "artist": "Jeremih Featuring 50 Cent"
+    },
+    {
+     "rank": 8,
+     "song": "Did It On'em",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "No BS",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 10,
+     "song": "You Be Killin Em",
+     "artist": "Fabolous"
+    }
+   ]
+  }
+ ]
+}

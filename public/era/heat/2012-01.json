@@ -1,0 +1,346 @@
+{
+ "month": "2012-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120120144216/http://www.hotnewhiphop.com/top100/",
+   "captured": "2012-01-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Trap Back",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 2,
+     "song": "Rich Girl [No DJ]",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 3,
+     "song": "(His Pain) (Prod by Sounwave)",
+     "artist": "BJ The Chicago Kid feat. Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Cthulhu Dreams",
+     "artist": "Deadmau5"
+    },
+    {
+     "rank": 5,
+     "song": "Row 11",
+     "artist": "Pries"
+    },
+    {
+     "rank": 6,
+     "song": "We Buy Gold",
+     "artist": "8Ball feat. Big K.R.I.T. & MJG"
+    },
+    {
+     "rank": 7,
+     "song": "Faded",
+     "artist": "Tyga feat. Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "Waterslide (Prod. By Zaytoven)",
+     "artist": "Gucci Mane feat. Rocko & Yung Ralph"
+    },
+    {
+     "rank": 9,
+     "song": "The Ride",
+     "artist": "Drake feat. The Weeknd"
+    },
+    {
+     "rank": 10,
+     "song": "Angels & Stars",
+     "artist": "Eric Turner feat. Lupe Fiasco & Tinie Tempah"
+    },
+    {
+     "rank": 11,
+     "song": "Wake Up",
+     "artist": "Trae Tha Truth feat. French Montana"
+    },
+    {
+     "rank": 12,
+     "song": "You So Phony",
+     "artist": "Cassidy"
+    },
+    {
+     "rank": 13,
+     "song": "Don't Hurt (Prod by The Cataracs)",
+     "artist": "Dev feat. Timbaland"
+    },
+    {
+     "rank": 14,
+     "song": "Same Damn Time (Remix)",
+     "artist": "Young Jeezy"
+    },
+    {
+     "rank": 15,
+     "song": "Time Of Your Life (Prod by Ned Cameron) [No DJ]",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 16,
+     "song": "Thats The Way Luv Goes",
+     "artist": "Paul Wall"
+    },
+    {
+     "rank": 17,
+     "song": "The Motto (L.A. Leakers Freestyle) [Radio Rip]",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 18,
+     "song": "One On One",
+     "artist": "Jasmine Solano feat. Yelawolf"
+    },
+    {
+     "rank": 19,
+     "song": "Tell Me That You Love It",
+     "artist": "Ne-Yo"
+    },
+    {
+     "rank": 20,
+     "song": "California (Prod. by Cardo)",
+     "artist": "Wiz Khalifa"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120115073213/http://hypem.com:80/popular",
+   "captured": "2012-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "When You Know (Wiz Khalifa // Two Door Cinema Club)",
+     "artist": "The Two Friends"
+    },
+    {
+     "rank": 2,
+     "song": "I Would Do Anything For You (Strange Talk Remix)",
+     "artist": "Foster The People"
+    },
+    {
+     "rank": 3,
+     "song": "Heads Up (The Glitch Mob Remix)",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 4,
+     "song": "Desert Rain (Original Radio Edit)",
+     "artist": "Edward Maya feat Vika Jigulina"
+    },
+    {
+     "rank": 5,
+     "song": "Deny Strings (The Hood Internet Mashup)",
+     "artist": "Fabolous x Nate Dogg x Classixx"
+    },
+    {
+     "rank": 6,
+     "song": "In My City",
+     "artist": "Gramatik"
+    },
+    {
+     "rank": 7,
+     "song": "Voyager",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 8,
+     "song": "Nicky Romero (Ryan Enzed Bootleg RMX)",
+     "artist": "Toulouse"
+    },
+    {
+     "rank": 9,
+     "song": "The End (Extended)",
+     "artist": "Lemaitre"
+    },
+    {
+     "rank": 10,
+     "song": "Voodoo (Bassnectar & ill.Gates Remix)",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 11,
+     "song": "The Reflection of You",
+     "artist": "Bear In Heaven"
+    },
+    {
+     "rank": 12,
+     "song": "Cascade (Original Mix)",
+     "artist": "Tommy Trash"
+    },
+    {
+     "rank": 13,
+     "song": "Hu$$eL (An-Ten-Nae's Moomba Crunk ReTrix)",
+     "artist": "MIA & African Boy"
+    },
+    {
+     "rank": 14,
+     "song": "Midnight City",
+     "artist": "M83"
+    },
+    {
+     "rank": 15,
+     "song": "Hold On ( Them Jeans Remix )",
+     "artist": "Sbtrkt"
+    },
+    {
+     "rank": 16,
+     "song": "Color Storm",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 17,
+     "song": "New Leaf",
+     "artist": "BLACKBIRD BLACKBIRD"
+    },
+    {
+     "rank": 18,
+     "song": "Love For Free",
+     "artist": "W.E.E.D"
+    },
+    {
+     "rank": 19,
+     "song": "SURVIVE feat. Océane",
+     "artist": "Left Boy"
+    },
+    {
+     "rank": 20,
+     "song": "'D. Song'",
+     "artist": "Yppah"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120115084117/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2012-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 5,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 6,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 8,
+     "song": "Can't Get Enough",
+     "artist": "J. Cole Featuring Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 10,
+     "song": "Good Feeling",
+     "artist": "Flo Rida"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120115090057/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 2,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Party",
+     "artist": "Beyonce Featuring Andre 3000"
+    },
+    {
+     "rank": 6,
+     "song": "You The Boss",
+     "artist": "Rick Ross Featuring Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Can't Get Enough",
+     "artist": "J. Cole Featuring Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "I Do",
+     "artist": "Young Jeezy Featuring Jay-Z & Andre 3000"
+    },
+    {
+     "rank": 9,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    }
+   ]
+  }
+ ]
+}

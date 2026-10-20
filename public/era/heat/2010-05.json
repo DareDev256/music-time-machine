@@ -1,0 +1,331 @@
+{
+ "month": "2010-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100523212422/http://www.hotnewhiphop.com/",
+   "captured": "2010-05-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Rich Girl (Prod By Jim Jonsin)",
+     "artist": "Soulja Boy Tell 'Em feat. Justin Bieber"
+    },
+    {
+     "rank": 2,
+     "song": "Sex Intelligent",
+     "artist": "The-Dream"
+    },
+    {
+     "rank": 3,
+     "song": "My Black Everything",
+     "artist": "The-Dream"
+    },
+    {
+     "rank": 4,
+     "song": "Hustle",
+     "artist": "Nipsey Hussle feat. Sean Kingston"
+    },
+    {
+     "rank": 5,
+     "song": "Right There",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 6,
+     "song": "Nine Lives",
+     "artist": "Mavado"
+    },
+    {
+     "rank": 7,
+     "song": "B-Day",
+     "artist": "Mark Morrsion feat. Warren G"
+    },
+    {
+     "rank": 8,
+     "song": "Unforgettable (Radio Rip)",
+     "artist": "Drake feat. Young Jeezy"
+    },
+    {
+     "rank": 9,
+     "song": "Pulling On Her Hair",
+     "artist": "Marques Houston feat. Rick Ross"
+    },
+    {
+     "rank": 10,
+     "song": "Ransom (Freestyle)",
+     "artist": "King Lagit feat. Sean Kingston"
+    },
+    {
+     "rank": 11,
+     "song": "Dear God 2.0",
+     "artist": "The Roots"
+    },
+    {
+     "rank": 12,
+     "song": "Fuck The Other Side",
+     "artist": "Cam'ron & Vado"
+    },
+    {
+     "rank": 13,
+     "song": "Kill 'Em",
+     "artist": "Vado feat. Young Chris"
+    },
+    {
+     "rank": 14,
+     "song": "Papers Please",
+     "artist": "Talib Kweli"
+    },
+    {
+     "rank": 15,
+     "song": "Slow Down (Ha Ha) Freestyle",
+     "artist": "CNN & Raekwon"
+    },
+    {
+     "rank": 16,
+     "song": "Moving Target",
+     "artist": "Ashley Ring feat. Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "I'm G.O.O.D.",
+     "artist": "Shawn Chrystopher feat. GLC"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100517040305/http://www.hypem.com:80/popular",
+   "captured": "2010-05-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lovefool (Barletta Edit)",
+     "artist": "The Cardigans"
+    },
+    {
+     "rank": 2,
+     "song": "Seven Nation Army (Remix)",
+     "artist": "The White Stripes regga"
+    },
+    {
+     "rank": 3,
+     "song": "No One's Gonna Love You",
+     "artist": "Band Of Horses"
+    },
+    {
+     "rank": 4,
+     "song": "Love In This Club (MSTRKRFT Remix)",
+     "artist": "Usher"
+    },
+    {
+     "rank": 5,
+     "song": "The Reeling (Calvin Harris Remix)",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 6,
+     "song": "Aqueous Transmission",
+     "artist": "Incubus"
+    },
+    {
+     "rank": 7,
+     "song": "B.O.B. (Rage Against The Machine Remix)",
+     "artist": "Outkast"
+    },
+    {
+     "rank": 8,
+     "song": "You Know I'm No Good (Feat. & Amy Winehouse)",
+     "artist": "Ghostface"
+    },
+    {
+     "rank": 9,
+     "song": "On Melancholy Hill",
+     "artist": "Gorillaz"
+    },
+    {
+     "rank": 10,
+     "song": "One More Chance (Alex Metric Remix)",
+     "artist": "Bloc Party"
+    },
+    {
+     "rank": 11,
+     "song": "Fuck The Money",
+     "artist": "B.o.B + Asher Roth"
+    },
+    {
+     "rank": 12,
+     "song": "Set Me On Fire",
+     "artist": "Pendulum"
+    },
+    {
+     "rank": 13,
+     "song": "Heads Will Roll (A-Trak Remix)",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 14,
+     "song": "I Need A Dollar (The Exo Remix)",
+     "artist": "Aloe Blacc"
+    },
+    {
+     "rank": 15,
+     "song": "Memories (Featuring Kid Cudi) (F**k Me I'm Famous! Remix)",
+     "artist": "David Guetta"
+    },
+    {
+     "rank": 16,
+     "song": "Paper Romance (Urchins Remix)",
+     "artist": "Groove Armada"
+    },
+    {
+     "rank": 17,
+     "song": "Too Too Too Fast (Say Hi Remix)",
+     "artist": "Ra Ra Riot"
+    },
+    {
+     "rank": 18,
+     "song": "Power Shower",
+     "artist": "Caspa & Rusko"
+    },
+    {
+     "rank": 19,
+     "song": "Less Unless",
+     "artist": "CIVIL CIVIC"
+    },
+    {
+     "rank": 20,
+     "song": "As We Enter (Tinie Tempah Remix)",
+     "artist": "Nas and Damian Jr. Gong Marley"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100515111958/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 2,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Beamer, Benz, Or Bentley",
+     "artist": "Lloyd Banks Featuring Juelz Santana"
+    },
+    {
+     "rank": 6,
+     "song": "Roger That",
+     "artist": "Young Money"
+    },
+    {
+     "rank": 7,
+     "song": "All I Do Is Win",
+     "artist": "DJ Khaled Featuring T-Pain, Ludacris, Snoop Dogg & Rick Ross"
+    },
+    {
+     "rank": 8,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 9,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 10,
+     "song": "I'm Back",
+     "artist": "T.I."
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100515110109/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-05-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 2,
+     "song": "Everything To Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 3,
+     "song": "Over",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "My Chick Bad",
+     "artist": "Ludacris Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Rude Boy",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "Nothin' On You",
+     "artist": "B.o.B Featuring Bruno Mars"
+    },
+    {
+     "rank": 7,
+     "song": "Neighbors Know My Name",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Hey Daddy (Daddy's Home)",
+     "artist": "Usher Featuring Plies"
+    },
+    {
+     "rank": 9,
+     "song": "Lil Freak",
+     "artist": "Usher Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    }
+   ]
+  }
+ ]
+}

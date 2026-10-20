@@ -1,0 +1,286 @@
+{
+ "month": "2013-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131209085346/http://www.hotnewhiphop.com:80/top100/",
+   "captured": "2013-12-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "TKO (Black Friday Remix)",
+     "artist": "Justin Timberlake Feat. ASAP Rocky, J. Cole & Pusha T"
+    },
+    {
+     "rank": 2,
+     "song": "Wake Up In It",
+     "artist": "Mally Mall Feat. Tyga, Pusha T, French Montana & Sean Kingston"
+    },
+    {
+     "rank": 3,
+     "song": "I Come In Peace",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 4,
+     "song": "Jive Ass Turkey (Trinidad James Diss)",
+     "artist": "Papoose"
+    },
+    {
+     "rank": 5,
+     "song": "Two Presidents",
+     "artist": "YG Hootie Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "No Games (Remix)",
+     "artist": "Rick Ross Feat. Meek Mill, Wale & Future"
+    },
+    {
+     "rank": 7,
+     "song": "Show Ya Pussy",
+     "artist": "R. Kelly Feat. Juicy J & Migos"
+    },
+    {
+     "rank": 8,
+     "song": "My Last",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 9,
+     "song": "Dis Ain't What You Want (Remix)",
+     "artist": "Lil Durk Feat. Rick Ross, Meek Mill & French Montana"
+    },
+    {
+     "rank": 10,
+     "song": "Mention Me (Prod. By Mike Will Made It)",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 11,
+     "song": "You Ain't Got The Answers (Halo Remix)",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 12,
+     "song": "The Worst Guys",
+     "artist": "Childish Gambino Feat. Chance The Rapper"
+    },
+    {
+     "rank": 13,
+     "song": "Sweatpants",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 14,
+     "song": "Day 1 (Prod. By 808 Mafia)",
+     "artist": "Future Feat. Yo Gotti"
+    },
+    {
+     "rank": 15,
+     "song": "The Vapors (Remix)",
+     "artist": "Jhene Aiko Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 16,
+     "song": "Thanksgiving",
+     "artist": "Kendrick Lamar Feat. Rapper Big Pooh"
+    },
+    {
+     "rank": 17,
+     "song": "John Doe",
+     "artist": "B.o.B Feat. Priscilla"
+    },
+    {
+     "rank": 18,
+     "song": "Like Me",
+     "artist": "Logic Feat. Casey Veggies"
+    },
+    {
+     "rank": 19,
+     "song": "Two Lips (Prod. By J Dilla)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 20,
+     "song": "Regular Party (Prod. By K.E. On The Track)",
+     "artist": "Future"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131220043428/http://hypem.com/popular",
+   "captured": "2013-12-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Will Calls Diplo Remix",
+     "artist": "Grizzly Bear"
+    },
+    {
+     "rank": 2,
+     "song": "Awake",
+     "artist": "Tycho"
+    },
+    {
+     "rank": 3,
+     "song": "Deeper +2 remixes",
+     "artist": "Ella Eyre"
+    },
+    {
+     "rank": 4,
+     "song": "Julian The Chainsmokers Remix",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 5,
+     "song": "We Belong (feat. Katie Herzig)",
+     "artist": "RAC"
+    },
+    {
+     "rank": 6,
+     "song": "Nirvana (Until The Ribbon Breaks Re-Imagination)",
+     "artist": "SAM SMITH"
+    },
+    {
+     "rank": 7,
+     "song": "Life Round Here (Feat. Chance The Rapper)",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 8,
+     "song": "Black Skinhead Flying Lotus Remix",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 9,
+     "song": "Lacuna",
+     "artist": "Last Lynx"
+    },
+    {
+     "rank": 10,
+     "song": "Help Me Lose My Mind SOHN Remix",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 11,
+     "song": "I Wanna Be Your Lover Bearson Edit",
+     "artist": "Prince"
+    },
+    {
+     "rank": 12,
+     "song": "How I Feel",
+     "artist": "Lane 8"
+    },
+    {
+     "rank": 13,
+     "song": "Colour & Movement Party Time Remix",
+     "artist": "Ryan Hemsworth"
+    },
+    {
+     "rank": 14,
+     "song": "Riptide",
+     "artist": "Vance Joy"
+    },
+    {
+     "rank": 15,
+     "song": "Rick Ross Feat. Jay Z- The Devil Is A Lie (Dirty)",
+     "artist": "rickyrozaymmg"
+    },
+    {
+     "rank": 16,
+     "song": "Latch Stwo & Phazz Edition",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 17,
+     "song": "Losing Sleep Kat Krazy Extended Mix",
+     "artist": "John Newman"
+    },
+    {
+     "rank": 18,
+     "song": "Fuck The Pain Away The Golden Pony Remix",
+     "artist": "Peaches"
+    },
+    {
+     "rank": 19,
+     "song": "Everywhere You Go",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 20,
+     "song": "Hold On, We're Going Home (feat. Majid Jordan)",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131219115434/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2013-12-19",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 3,
+     "song": "White Walls",
+     "artist": "Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis"
+    },
+    {
+     "rank": 4,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 5,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 6,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 7,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 8,
+     "song": "Love More",
+     "artist": "Chris Brown Featuring Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "It Won't Stop",
+     "artist": "Sevyn Streeter Featuring Chris Brown"
+    },
+    {
+     "rank": 10,
+     "song": "All Me",
+     "artist": "Drake Featuring 2 Chainz & Big Sean"
+    }
+   ]
+  }
+ ]
+}

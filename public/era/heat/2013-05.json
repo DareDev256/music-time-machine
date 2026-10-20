@@ -1,0 +1,286 @@
+{
+ "month": "2013-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130508042610/http://www.hotnewhiphop.com/top100/",
+   "captured": "2013-05-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bugatti (Remix)",
+     "artist": "Ace Hood feat. Wiz Khalifa, T.I., Meek Mill, French Montana, 2 Chainz, Future, DJ Khaled & Birdman"
+    },
+    {
+     "rank": 2,
+     "song": "We Own It (Fast & Furious)",
+     "artist": "2 Chainz feat. Wiz Khalifa"
+    },
+    {
+     "rank": 3,
+     "song": "Don't Kill My Vibe (Freestyle)",
+     "artist": "Game"
+    },
+    {
+     "rank": 4,
+     "song": "100$ Bill (Full)",
+     "artist": "Jay-Z"
+    },
+    {
+     "rank": 5,
+     "song": "On The Low (Prod by Swiff D)",
+     "artist": "Logic (MD) feat. Kid Ink & Trinidad James"
+    },
+    {
+     "rank": 6,
+     "song": "Michigan $hit",
+     "artist": "Jon Connor feat. Royce Da 5'9"
+    },
+    {
+     "rank": 7,
+     "song": "Rising",
+     "artist": "Harry Fraud feat. Tech N9ne"
+    },
+    {
+     "rank": 8,
+     "song": "Chris Tucker",
+     "artist": "J. Cole feat. 2 Chainz"
+    },
+    {
+     "rank": 9,
+     "song": "Young Jedi (Prod by 6ix)",
+     "artist": "Logic (MD) feat. Dizzy Wright"
+    },
+    {
+     "rank": 10,
+     "song": "Work",
+     "artist": "August Alsina feat. Roscoe Dash"
+    },
+    {
+     "rank": 11,
+     "song": "She Like (Prod. by Sap)",
+     "artist": "Schoolboy Q"
+    },
+    {
+     "rank": 12,
+     "song": "Nobody's Perfect [CDQ]",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 13,
+     "song": "Here I Go",
+     "artist": "T.I. feat. Young Dro, Shad Da God, Mystikal & Spodee"
+    },
+    {
+     "rank": 14,
+     "song": "Gotta Keep Movin",
+     "artist": "Tha Joker"
+    },
+    {
+     "rank": 15,
+     "song": "Headband (Prod. By DJ Mustard)",
+     "artist": "B.o.B feat. 2 Chainz"
+    },
+    {
+     "rank": 16,
+     "song": "No New Friends (Prod. By Boi-1da , Vinylz & 40) [CDQ]",
+     "artist": "DJ Khaled feat. Drake, Rick Ross, & Lil Wayne"
+    },
+    {
+     "rank": 17,
+     "song": "Trouble",
+     "artist": "French Montana feat. Mikky Ekko"
+    },
+    {
+     "rank": 18,
+     "song": "Ol' Skool Pontiac",
+     "artist": "Jeremih feat. Big Sean & Paul Wall"
+    },
+    {
+     "rank": 19,
+     "song": "Cole Summer",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 20,
+     "song": "Girls Love Beyonce",
+     "artist": "Drake feat. James Fauntleroy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130524014639/http://hypem.com:80/popular/?",
+   "captured": "2013-05-24",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Crosses Dinner Date Remix",
+     "artist": "José González"
+    },
+    {
+     "rank": 2,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 3,
+     "song": "Doin' It Good (Kanye West vs Daft Punk)",
+     "artist": "The Hood Internet"
+    },
+    {
+     "rank": 4,
+     "song": "Radioactive dBerrie remix",
+     "artist": "Imagine Dragons"
+    },
+    {
+     "rank": 5,
+     "song": "Don't Swallow the Cap",
+     "artist": "The National"
+    },
+    {
+     "rank": 6,
+     "song": "Skinny Love (Bon Iver Cover)",
+     "artist": "Silent Rider"
+    },
+    {
+     "rank": 7,
+     "song": "Body So Tight (Explicit) Mastered",
+     "artist": "Reflex feat. Childish Gambino"
+    },
+    {
+     "rank": 8,
+     "song": "Get Free Vacationer Remix",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 9,
+     "song": "Congo",
+     "artist": "Bear Mountain"
+    },
+    {
+     "rank": 10,
+     "song": "Kiss Kiss (Pat Lok Allerg-Edit)",
+     "artist": "Cashmere Cat"
+    },
+    {
+     "rank": 11,
+     "song": "Rivers",
+     "artist": "Bipolar Sunshine"
+    },
+    {
+     "rank": 12,
+     "song": "Everything (feat. Karin Park)",
+     "artist": "Maya Jane Coles"
+    },
+    {
+     "rank": 13,
+     "song": "Fevers (feat. Minnesota and Mimi Page)",
+     "artist": "Seven Lions"
+    },
+    {
+     "rank": 14,
+     "song": "When A Fire Starts To Burn",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 15,
+     "song": "Wasting My Young Years Kids of the Apocalypse Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 16,
+     "song": "Better Days",
+     "artist": "Edward Sharpe and the Magnetic Zeros"
+    },
+    {
+     "rank": 17,
+     "song": "Mi Negrita Daniele Di Martino Edit",
+     "artist": "Devendra Banhart"
+    },
+    {
+     "rank": 18,
+     "song": "Live at Giel 3FM)",
+     "artist": "Atlas Genius - Get Lucky (Daft Punk Cove…"
+    },
+    {
+     "rank": 19,
+     "song": "U.O.E.N.O. Remix",
+     "artist": "Black Hippy"
+    },
+    {
+     "rank": 20,
+     "song": "You & I",
+     "artist": "Crystal Fighters"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130522232826/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-05-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "Started From The Bottom",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Suit & Tie",
+     "artist": "Justin Timberlake Featuring Jay Z"
+    },
+    {
+     "rank": 5,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 6,
+     "song": "Love Me",
+     "artist": "Lil Wayne Featuring Drake & Future"
+    },
+    {
+     "rank": 7,
+     "song": "#Beautiful",
+     "artist": "Mariah Carey Featuring Miguel"
+    },
+    {
+     "rank": 8,
+     "song": "Next To Me",
+     "artist": "Emeli Sande"
+    },
+    {
+     "rank": 9,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas"
+    },
+    {
+     "rank": 10,
+     "song": "Bugatti",
+     "artist": "Ace Hood Featuring Future & Rick Ross"
+    }
+   ]
+  }
+ ]
+}

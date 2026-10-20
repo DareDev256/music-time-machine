@@ -1,0 +1,341 @@
+{
+ "month": "2010-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100914062200/http://www.hotnewhiphop.com:80/",
+   "captured": "2010-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Runaway [CDQ]",
+     "artist": "Kanye West feat. Pusha T (Clipse)"
+    },
+    {
+     "rank": 2,
+     "song": "Celebration [No Tags]",
+     "artist": "Tank feat. Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Get Big (Remix)",
+     "artist": "Dorrough feat. DJ Drama, Diddy, Yo Gotti, Bun B, Diamond, Shawty Lo, Wiz Khalifa & Maino"
+    },
+    {
+     "rank": 4,
+     "song": "Love Me Better",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 5,
+     "song": "All I Know (Prod by KE)",
+     "artist": "Roscoe Dash feat. Jered Evans"
+    },
+    {
+     "rank": 6,
+     "song": "Late (Prod. By Drumma Boy) [NO DJ]",
+     "artist": "Gucci Mane feat. Yo Gotti & Sean Garrett"
+    },
+    {
+     "rank": 7,
+     "song": "It's You (Remix)",
+     "artist": "Gyptian feat. Maino"
+    },
+    {
+     "rank": 8,
+     "song": "Big Voice Bigger City",
+     "artist": "Lloyd Banks"
+    },
+    {
+     "rank": 9,
+     "song": "Pittsburgh Kidz Get The Biz",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 10,
+     "song": "Holding You Down (Remix)",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 11,
+     "song": "Kiss (Prod By Raw Smoov)",
+     "artist": "Jose Guapo feat. Mullage"
+    },
+    {
+     "rank": 12,
+     "song": "Bootleg (Prod by DJ Frank-E)",
+     "artist": "Bei Maejor"
+    },
+    {
+     "rank": 13,
+     "song": "Ain't A Thang to Me (Prod. By Araabmuzik)",
+     "artist": "Vado"
+    },
+    {
+     "rank": 14,
+     "song": "A One Two (Prod By DJ Ted Smooth)",
+     "artist": "Joell Ortiz"
+    },
+    {
+     "rank": 15,
+     "song": "Bang Bang",
+     "artist": "Tony Austin feat. Waka Flocka"
+    },
+    {
+     "rank": 16,
+     "song": "Feelin",
+     "artist": "JASE feat. Dawn Richards (Danity Kane)"
+    },
+    {
+     "rank": 17,
+     "song": "Yeen Ready (Prod by Grade A Muzik)",
+     "artist": "Pill"
+    },
+    {
+     "rank": 18,
+     "song": "Switch (Feat. Yung Joc)",
+     "artist": "Jagged Edge"
+    },
+    {
+     "rank": 19,
+     "song": "Wasted",
+     "artist": "Yoni"
+    },
+    {
+     "rank": 20,
+     "song": "Hollow Eyes",
+     "artist": "Bishop Lamont feat. Anjulie"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100914141103/http://hypem.com:80/popular",
+   "captured": "2010-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Good Friday f. Common, Pusha T, KiD CuDi, Big Sean & Charlie Wilson",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 2,
+     "song": "Silvia to Ibiza",
+     "artist": "Swedish House Mafia v. Miike Snow"
+    },
+    {
+     "rank": 3,
+     "song": "Super Mario Bros (RAC Mix)",
+     "artist": "RAC"
+    },
+    {
+     "rank": 4,
+     "song": "Crave You ft. Giselle [OFFICIAL]",
+     "artist": "Flight Facilities"
+    },
+    {
+     "rank": 5,
+     "song": "I Think I Like That (Coda Collins Smash Up)",
+     "artist": "Fake Blood vs Richard Vission"
+    },
+    {
+     "rank": 6,
+     "song": "Gypsy Moves",
+     "artist": "Yolanda Be Cool & Dcup"
+    },
+    {
+     "rank": 7,
+     "song": "french motown france, Seven Nation Army",
+     "artist": "Ben l'Oncle Soul"
+    },
+    {
+     "rank": 8,
+     "song": "Say Goodbye To Love (Remix) (Feat. Lupe Fiasco)",
+     "artist": "Kenna"
+    },
+    {
+     "rank": 9,
+     "song": "Sleepyhead (Error Operator Remix)",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 10,
+     "song": "The Dreamer",
+     "artist": "The Tallest Man On Earth"
+    },
+    {
+     "rank": 11,
+     "song": "I Can Make The Pain Disappear (Monsieur Adi Remix)",
+     "artist": "Fear of Tigers"
+    },
+    {
+     "rank": 12,
+     "song": "Runaway",
+     "artist": "Kanye West Feat. Pusha T"
+    },
+    {
+     "rank": 13,
+     "song": "Werewolf (Omega Remix)",
+     "artist": "CocoRosie"
+    },
+    {
+     "rank": 14,
+     "song": "I Want You (Radio Rip)",
+     "artist": "Cee Lo Green"
+    },
+    {
+     "rank": 15,
+     "song": "Runaway (Live MTV VMA's 2010)",
+     "artist": "KanYe West ft. Pusha T"
+    },
+    {
+     "rank": 16,
+     "song": "Maps [TGIK Remix]",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 17,
+     "song": "Honey",
+     "artist": "Moby"
+    },
+    {
+     "rank": 18,
+     "song": "Like A G6 feat. The Cataracts (Clit Talk Screw)",
+     "artist": "Far East Movement"
+    },
+    {
+     "rank": 19,
+     "song": "Runaway",
+     "artist": "Kanye West Feat. Pusha T"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100917080053/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-09-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love The Way You Lie",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Miss Me",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 4,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Got Your Back",
+     "artist": "T.I. Featuring Keri Hilson"
+    },
+    {
+     "rank": 6,
+     "song": "B.M.F. (Blowin' Money Fast)",
+     "artist": "Rick Ross Featuring Styles P"
+    },
+    {
+     "rank": 7,
+     "song": "Pretty Boy Swag",
+     "artist": "Soulja Boy Tell'em"
+    },
+    {
+     "rank": 8,
+     "song": "Teach Me How To Dougie",
+     "artist": "Cali Swag District"
+    },
+    {
+     "rank": 9,
+     "song": "Not Afraid",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "Airplanes",
+     "artist": "B.o.B Featuring Hayley Williams"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100913012814/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Deuces",
+     "artist": "Chris Brown Featuring Tyga & Kevin McCall"
+    },
+    {
+     "rank": 2,
+     "song": "Love All Over Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 3,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    },
+    {
+     "rank": 4,
+     "song": "Miss Me",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 6,
+     "song": "B.M.F. (Blowin' Money Fast)",
+     "artist": "Rick Ross Featuring Styles P"
+    },
+    {
+     "rank": 7,
+     "song": "Bittersweet",
+     "artist": "Fantasia"
+    },
+    {
+     "rank": 8,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 9,
+     "song": "Bottoms Up",
+     "artist": "Trey Songz Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    }
+   ]
+  }
+ ]
+}

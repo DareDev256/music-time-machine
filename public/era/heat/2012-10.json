@@ -1,0 +1,286 @@
+{
+ "month": "2012-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121017105800/http://www.hotnewhiphop.com/",
+   "captured": "2012-10-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Born A King (HNHH Original)",
+     "artist": "King Los"
+    },
+    {
+     "rank": 2,
+     "song": "MIA",
+     "artist": "Wiz Khalifa feat. Juicy J"
+    },
+    {
+     "rank": 3,
+     "song": "Bout Me",
+     "artist": "Wiz Khalifa feat. Problem and Iamsu!"
+    },
+    {
+     "rank": 4,
+     "song": "Nothin Like The Rest",
+     "artist": "Wiz Khalifa feat. French Montana"
+    },
+    {
+     "rank": 5,
+     "song": "Live Until You Die (Prod. by Jordan)",
+     "artist": "muGz feat. Young Bishop"
+    },
+    {
+     "rank": 6,
+     "song": "Drive & Smoke (Prod. FrankMusik)",
+     "artist": "SRH"
+    },
+    {
+     "rank": 7,
+     "song": "Rivers Of Blood",
+     "artist": "Wu-Tang Clan feat. Kool G Rap"
+    },
+    {
+     "rank": 8,
+     "song": "These Dayz (Dope Awprah)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 9,
+     "song": "Ask A Baby (Prod. by Cardo)",
+     "artist": "King Chip"
+    },
+    {
+     "rank": 10,
+     "song": "I Remember",
+     "artist": "Skeme feat. Kendrick Lamar & Bryan Roberts"
+    },
+    {
+     "rank": 11,
+     "song": "Slow Motion Heartbreak",
+     "artist": "Bryan J feat. King Louie"
+    },
+    {
+     "rank": 12,
+     "song": "Hold Up (Freestyle)",
+     "artist": "Dorrough Music"
+    },
+    {
+     "rank": 13,
+     "song": "Role Play",
+     "artist": "Bobby V feat. Red Cafe"
+    },
+    {
+     "rank": 14,
+     "song": "Check",
+     "artist": "Yo Gotti"
+    },
+    {
+     "rank": 15,
+     "song": "Neva End (Remix)",
+     "artist": "Future ATL feat. Kelly Rowland"
+    },
+    {
+     "rank": 16,
+     "song": "Mo Flow",
+     "artist": "Skeme feat. Iggy Azalea"
+    },
+    {
+     "rank": 17,
+     "song": "Chocolate Dream (Prod by Fatboi)",
+     "artist": "Brisco feat. Ricco Barrino"
+    },
+    {
+     "rank": 18,
+     "song": "Keep Your Head To The Sky",
+     "artist": "Max B"
+    },
+    {
+     "rank": 19,
+     "song": "Grittin'",
+     "artist": "Boldy James feat. Peechie Green & Fat Ray"
+    },
+    {
+     "rank": 20,
+     "song": "Come Thru",
+     "artist": "Daz Dillinger feat. Sky Keeton"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121017022132/http://hypem.com:80/popular/",
+   "captured": "2012-10-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "FEELSOLOW",
+     "artist": "NO CEREMONY///"
+    },
+    {
+     "rank": 2,
+     "song": "Lies Zeds Dead Remix",
+     "artist": "Marina and the Diamonds"
+    },
+    {
+     "rank": 3,
+     "song": "Runaways Sound Remedy Remix",
+     "artist": "Sound Remedy"
+    },
+    {
+     "rank": 4,
+     "song": "Kill Paris - Baby Come Back",
+     "artist": "Kill Paris"
+    },
+    {
+     "rank": 5,
+     "song": "Love Is Overrated (Clean)",
+     "artist": "Shwayze"
+    },
+    {
+     "rank": 6,
+     "song": "She was feat. Birds of Paradise",
+     "artist": "Seven Lions"
+    },
+    {
+     "rank": 7,
+     "song": "Jimmy Iovine Feat. Ab-Soul",
+     "artist": "Macklemore & Ryan Lewis"
+    },
+    {
+     "rank": 8,
+     "song": "Islands Crown City BNC",
+     "artist": "Atlas Genius"
+    },
+    {
+     "rank": 9,
+     "song": "Hologram",
+     "artist": "Bassnectar"
+    },
+    {
+     "rank": 10,
+     "song": "Postcards From Italy",
+     "artist": "Florence + the Machine"
+    },
+    {
+     "rank": 11,
+     "song": "Get Free feat. Amber What So Not Remix",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 12,
+     "song": "Radio Edit",
+     "artist": "Project 46 - Feel The Fire (Original Mix…"
+    },
+    {
+     "rank": 13,
+     "song": "Ghost",
+     "artist": "Yellow Ostrich"
+    },
+    {
+     "rank": 14,
+     "song": "Last Dance Vocal Club Mix",
+     "artist": "Avicii feat. Andreas Moe"
+    },
+    {
+     "rank": 15,
+     "song": "Your Love Fake Blood Remix",
+     "artist": "Totally Enormous Extinct Dinosaurs"
+    },
+    {
+     "rank": 16,
+     "song": "Ball feat Lil Wayne (Explicit)",
+     "artist": "T.I."
+    },
+    {
+     "rank": 17,
+     "song": "So Many Details",
+     "artist": "ToroyMoi"
+    },
+    {
+     "rank": 18,
+     "song": "Take My Pain Away",
+     "artist": "Moullinex"
+    },
+    {
+     "rank": 19,
+     "song": "Sweet Nothing Dirtyloud Remix",
+     "artist": "Calvin Harris Feat. Florence Welch"
+    },
+    {
+     "rank": 20,
+     "song": "Landfill",
+     "artist": "Daughter"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121014011828/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2012-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 4,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 5,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Pop That",
+     "artist": "French Montana Featuring Rick Ross, Drake, Lil Wayne"
+    },
+    {
+     "rank": 7,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "2 Reasons",
+     "artist": "Trey Songz Featuring T.I."
+    },
+    {
+     "rank": 9,
+     "song": "Thinkin Bout You",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 10,
+     "song": "Birthday Song",
+     "artist": "2 Chainz Featuring Kanye West"
+    }
+   ]
+  }
+ ]
+}

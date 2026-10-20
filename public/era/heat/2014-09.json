@@ -1,0 +1,236 @@
+{
+ "month": "2014-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140916022013/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-09-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Autumn Leaves",
+     "artist": "Chris Brown Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "Paradise (Prod. By Mike WiLL Made It)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "I Don't Fuck With You (Prod. By DJ Mustard & Kanye West)",
+     "artist": "Big Sean Feat. E-40"
+    },
+    {
+     "rank": 4,
+     "song": "Realest In The City (Prod. By Boi-1da & The Maven Boys)",
+     "artist": "P Reign Feat. Meek Mill & PARTYNEXTDOOR"
+    },
+    {
+     "rank": 5,
+     "song": "4th Quarter (Prod. By Key Wane)",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 6,
+     "song": "Hot Nigga (Remix)",
+     "artist": "Bobby Shmurda Feat. Fabolous, Jadakiss, Chris Brown, Busta Rhymes, Rowdy Rebel & Yo Gotti"
+    },
+    {
+     "rank": 7,
+     "song": "I'm Not The Only One",
+     "artist": "Sam Smith Feat. A$AP Rocky"
+    },
+    {
+     "rank": 8,
+     "song": "I Like It",
+     "artist": "Meek Mill Feat. Mac Miller"
+    },
+    {
+     "rank": 9,
+     "song": "Tuesday (Remix) [Tags]",
+     "artist": "Chris Brown Feat. Trey Songz"
+    },
+    {
+     "rank": 10,
+     "song": "Studio (Remix)",
+     "artist": "ScHoolboy Q Feat. Nas & BJ The Chicago Kid"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140916150047/http://hypem.com:80/popular",
+   "captured": "2014-09-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wild Motion RAC Mix",
+     "artist": "Miami Horror"
+    },
+    {
+     "rank": 2,
+     "song": "Options",
+     "artist": "Brika"
+    },
+    {
+     "rank": 3,
+     "song": "Sober (rough)",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 4,
+     "song": "Expectations",
+     "artist": "Brika"
+    },
+    {
+     "rank": 5,
+     "song": "My Favourite Faded Fantasy",
+     "artist": "Damien Rice."
+    },
+    {
+     "rank": 6,
+     "song": "Games For Girls Alex Metric Remix",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 7,
+     "song": "Help Elephante Remix",
+     "artist": "Galantis"
+    },
+    {
+     "rank": 8,
+     "song": "Uptight Eau Claire Remix",
+     "artist": "Stevie Wonder"
+    },
+    {
+     "rank": 9,
+     "song": "Sunlight feat. Years & Years Blonde Remix",
+     "artist": "The Magician"
+    },
+    {
+     "rank": 10,
+     "song": "Cat Rider Poolside Remix",
+     "artist": "Little Dragon"
+    },
+    {
+     "rank": 11,
+     "song": "Ghosts",
+     "artist": "Made In Heights"
+    },
+    {
+     "rank": 12,
+     "song": "ALL THE TIME (TOVE LO FLIP)",
+     "artist": "Keys N Krates"
+    },
+    {
+     "rank": 13,
+     "song": "Strobe Prince Fox 15k Private Stock Edit",
+     "artist": "Deadmau5"
+    },
+    {
+     "rank": 14,
+     "song": "This Plane nosleep remix",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 15,
+     "song": "Leave Me Alone (feat. Shay Lia)",
+     "artist": "KAYTRANADA"
+    },
+    {
+     "rank": 16,
+     "song": "Promiseland Stint Remix",
+     "artist": "Sebell"
+    },
+    {
+     "rank": 17,
+     "song": "In the House of Yes",
+     "artist": "Mr Twin Sister"
+    },
+    {
+     "rank": 18,
+     "song": "CURTAIN CALL P A T H REMIX",
+     "artist": "JACUZZI"
+    },
+    {
+     "rank": 19,
+     "song": "Not Going Home",
+     "artist": "Olivver"
+    },
+    {
+     "rank": 20,
+     "song": "Ultraviolence Datsik Remix",
+     "artist": "Lana Del Rey"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140916150214/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-09-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 3,
+     "song": "Don't Tell 'Em",
+     "artist": "Jeremih Featuring YG"
+    },
+    {
+     "rank": 4,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 5,
+     "song": "Hot Boy",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 6,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 7,
+     "song": "Lifestyle",
+     "artist": "Rich Gang Featuring Young Thug & Rich Homie Quan"
+    },
+    {
+     "rank": 8,
+     "song": "No Mediocre",
+     "artist": "T.I. Featuring Iggy Azalea"
+    },
+    {
+     "rank": 9,
+     "song": "2 On",
+     "artist": "Tinashe Featuring ScHoolboy Q"
+    },
+    {
+     "rank": 10,
+     "song": "0 To 100 / The Catch Up",
+     "artist": "Drake"
+    }
+   ]
+  }
+ ]
+}

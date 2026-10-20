@@ -1,0 +1,346 @@
+{
+ "month": "2012-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120914195055/http://www.hotnewhiphop.com/",
+   "captured": "2012-09-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Trap Back Jumpin",
+     "artist": "T.I."
+    },
+    {
+     "rank": 2,
+     "song": "Wicked Games (New Version)",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 3,
+     "song": "Blackout (Prod by Alex Lustig)",
+     "artist": "muGz"
+    },
+    {
+     "rank": 4,
+     "song": "Wasabi",
+     "artist": "MellowHype feat. Juicy J"
+    },
+    {
+     "rank": 5,
+     "song": "NGAF",
+     "artist": "Yung Berg feat. King Louie"
+    },
+    {
+     "rank": 6,
+     "song": "Come And Get It",
+     "artist": "Ice Cube"
+    },
+    {
+     "rank": 7,
+     "song": "L's Up Freestyle",
+     "artist": "Mikkey Halsted"
+    },
+    {
+     "rank": 8,
+     "song": "Birthday Song (Remix)",
+     "artist": "DeTaiL"
+    },
+    {
+     "rank": 9,
+     "song": "Never Clockin Out (Remix)",
+     "artist": "Dee-1 feat. Killer Mike"
+    },
+    {
+     "rank": 10,
+     "song": "Little Sister",
+     "artist": "Privaledge"
+    },
+    {
+     "rank": 11,
+     "song": "Adios",
+     "artist": "BigBang"
+    },
+    {
+     "rank": 12,
+     "song": "The One",
+     "artist": "Kanye West feat. Big Sean, 2 Chainz, Marsha Ambrosius & James Fauntleroy"
+    },
+    {
+     "rank": 13,
+     "song": "Our House (Extended Version)",
+     "artist": "Slaughterhouse feat. Eminem & Skylar Grey"
+    },
+    {
+     "rank": 14,
+     "song": "So NY (Tags)",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 15,
+     "song": "Turnt",
+     "artist": "Waka Flocka feat. Wale & Rocoe Dash"
+    },
+    {
+     "rank": 16,
+     "song": "50k",
+     "artist": "Waka Flocka feat. Gucci Mane"
+    },
+    {
+     "rank": 17,
+     "song": "The Boys (CDQ)",
+     "artist": "Nicki Minaj feat. Cassie"
+    },
+    {
+     "rank": 18,
+     "song": "Not Featuring 2 Chainz",
+     "artist": "Nino Bless"
+    },
+    {
+     "rank": 19,
+     "song": "Like It Or Love It",
+     "artist": "Kreayshawn feat. Kid Cudi"
+    },
+    {
+     "rank": 20,
+     "song": "Thinkin Bout It (Remix)",
+     "artist": "Twista"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120913015310/http://hypem.com:80/popular",
+   "captured": "2012-09-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Damn (feat. Michael Buble)",
+     "artist": "Styles of Beyond"
+    },
+    {
+     "rank": 2,
+     "song": "Internet Friends Revolvr Bootleg",
+     "artist": "Knife Party"
+    },
+    {
+     "rank": 3,
+     "song": "Night by Night Shreddie Mercury Remix",
+     "artist": "Chromeo"
+    },
+    {
+     "rank": 4,
+     "song": "Iron (Original Mix)",
+     "artist": "Nicky Romero & Calvin Harris"
+    },
+    {
+     "rank": 5,
+     "song": "Wolf",
+     "artist": "First Aid Kit"
+    },
+    {
+     "rank": 6,
+     "song": "A Lil More Ft. Bambu (Prod. Fatgums)",
+     "artist": "Otayo Dubb"
+    },
+    {
+     "rank": 7,
+     "song": "Thinkin Bout You Ryan Hemsworth Bootleg",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 8,
+     "song": "Bass Men Michael White Remix",
+     "artist": "Save The Rave featuring Michael White"
+    },
+    {
+     "rank": 9,
+     "song": "Not Talking",
+     "artist": "A.C. Newman"
+    },
+    {
+     "rank": 10,
+     "song": "One Minute DotEXE's Dopest Dope Remix",
+     "artist": "Krewella"
+    },
+    {
+     "rank": 11,
+     "song": "Idea of Happiness Robotaki Remix",
+     "artist": "Van She"
+    },
+    {
+     "rank": 12,
+     "song": "PURITY RING x T.SHIRT (MIXTAPE)",
+     "artist": "T.SHIRT"
+    },
+    {
+     "rank": 13,
+     "song": "Animal (Miike Snow cover)",
+     "artist": "Trails and Ways"
+    },
+    {
+     "rank": 14,
+     "song": "Grande Comore",
+     "artist": "Southern Shores"
+    },
+    {
+     "rank": 15,
+     "song": "UFO Beat Down (Bream 'Pitchup' Mashup)",
+     "artist": "Steve Aoki & Anger Dimas vs. Sidney Sams…"
+    },
+    {
+     "rank": 16,
+     "song": "Angels",
+     "artist": "The XX"
+    },
+    {
+     "rank": 17,
+     "song": "Flutes Sasha Remix",
+     "artist": "Hot Chip"
+    },
+    {
+     "rank": 18,
+     "song": "Chained Panic City Remix",
+     "artist": "The xx"
+    },
+    {
+     "rank": 19,
+     "song": "Control Freak Dillon Francis Remix",
+     "artist": "steveaoki"
+    },
+    {
+     "rank": 20,
+     "song": "The Feeling",
+     "artist": "The Knocks"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120920040055/http://www.billboard.com/charts/rap-songs",
+   "captured": "2012-09-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "Pop That",
+     "artist": "French Montana Featuring Rick Ross, Drake, Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Amen",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Bag Of Money",
+     "artist": "Wale Featuring Rick Ross, Meek Mill & T-Pain"
+    },
+    {
+     "rank": 6,
+     "song": "Turn On The Lights",
+     "artist": "Future"
+    },
+    {
+     "rank": 7,
+     "song": "Whistle",
+     "artist": "Flo Rida"
+    },
+    {
+     "rank": 8,
+     "song": "Work Hard, Play Hard",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 9,
+     "song": "Cashin' Out",
+     "artist": "Ca$h Out"
+    },
+    {
+     "rank": 10,
+     "song": "Take It To The Head",
+     "artist": "DJ Khaled"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120912142214/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2012-09-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Lie",
+     "artist": "2 Chainz Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 3,
+     "song": "Bag Of Money",
+     "artist": "Wale Featuring Rick Ross, Meek Mill & T-Pain"
+    },
+    {
+     "rank": 4,
+     "song": "Lemme See",
+     "artist": "Usher Featuring Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Mercy",
+     "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+    },
+    {
+     "rank": 6,
+     "song": "Heart Attack",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 7,
+     "song": "Turn On The Lights",
+     "artist": "Future"
+    },
+    {
+     "rank": 8,
+     "song": "Amen",
+     "artist": "Meek Mill Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Pop That",
+     "artist": "French Montana Featuring Rick Ross, Drake, Lil Wayne"
+    },
+    {
+     "rank": 10,
+     "song": "Enough Of No Love",
+     "artist": "Keyshia Cole Featuring Lil Wayne"
+    }
+   ]
+  }
+ ]
+}

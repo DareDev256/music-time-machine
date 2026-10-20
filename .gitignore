@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+data/cache/
+AGENTS.md
+__pycache__/
+data/hot100-covers.v2.json

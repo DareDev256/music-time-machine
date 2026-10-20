@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { buildCsp } from "@/lib/csp";
 
 /**
  * Next.js 16 proxy — runs on Vercel's edge network before any route handler.
@@ -25,6 +26,8 @@ const TRAVERSAL_PATTERN = /(?:\/\.\.\/|\/\.\/|%2e%2e|%2f\.\.)/i;
 
 /** Methods allowed on API routes. This is a read-only app. */
 const ALLOWED_API_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
+// The only write paths: listener submissions and the moderation queue. Both validate and rate-limit themselves.
+const POST_ROUTES = new Set(["/api/submit", "/api/admin/review", "/api/admin/session"]);
 
 export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;
@@ -35,7 +38,11 @@ export function proxy(request: NextRequest): NextResponse {
   }
 
   // ── Method restriction on API routes ──────────────────────────────
-  if (pathname.startsWith("/api/") && !ALLOWED_API_METHODS.has(request.method)) {
+  if (
+    pathname.startsWith("/api/") &&
+    !ALLOWED_API_METHODS.has(request.method) &&
+    !(request.method === "POST" && POST_ROUTES.has(pathname))
+  ) {
     return new NextResponse(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
       headers: {
@@ -64,20 +71,7 @@ export function proxy(request: NextRequest): NextResponse {
     ? "'self' 'unsafe-inline'"
     : `'self' 'nonce-${nonce}'`;
 
-  const cspHeader = [
-    "default-src 'self'",
-    `script-src ${scriptSrc}`,
-    `style-src ${styleSrc}`,
-    "img-src 'self' data: blob: https://i.scdn.co https://i.ytimg.com https://images.genius.com https://*.mzstatic.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "connect-src 'self' https://api.spotify.com https://accounts.spotify.com https://www.googleapis.com https://api.genius.com",
-    "media-src 'self' https://p.scdn.co",
-    "frame-src 'none'",
-    "object-src 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    "upgrade-insecure-requests",
-  ].join("; ");
+  const cspHeader = buildCsp(scriptSrc, styleSrc, !isDev);
 
   // ── Request ID + header propagation ───────────────────────────────
   // crypto.randomUUID() is available in Edge Runtime (Web Crypto API).

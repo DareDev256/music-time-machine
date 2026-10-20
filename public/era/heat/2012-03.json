@@ -1,0 +1,346 @@
+{
+ "month": "2012-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20120317050818/http://www.hotnewhiphop.com/",
+   "captured": "2012-03-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Albert Pujols [No DJ]",
+     "artist": "Wale feat. Rick Ross & Fabolous"
+    },
+    {
+     "rank": 2,
+     "song": "Running",
+     "artist": "Melanie Fiona feat. Nas"
+    },
+    {
+     "rank": 3,
+     "song": "Untitled",
+     "artist": "Killer Mike feat. Scar"
+    },
+    {
+     "rank": 4,
+     "song": "60 Rackz (Tags)",
+     "artist": "Jim Jones"
+    },
+    {
+     "rank": 5,
+     "song": "She Gettin It",
+     "artist": "Cali Swag District feat. E-40"
+    },
+    {
+     "rank": 6,
+     "song": "Break Ya Back (Radio Rip)",
+     "artist": "Timbaland feat. Dev"
+    },
+    {
+     "rank": 7,
+     "song": "Failbait",
+     "artist": "Cypress Hill feat. Deadmau5"
+    },
+    {
+     "rank": 8,
+     "song": "I Dont Give A (Snippet)",
+     "artist": "Madonna feat. Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "This Is The Life",
+     "artist": "J-Lie feat. Don J"
+    },
+    {
+     "rank": 10,
+     "song": "The Don (Prod by Salaam Remi, Da Internz & Heavy D) [No DJ][No DJ]",
+     "artist": "Nas"
+    },
+    {
+     "rank": 11,
+     "song": "Same Damn Time (Remix)",
+     "artist": "Rick Ross feat. Wale, Gunplay & Meek Mill"
+    },
+    {
+     "rank": 12,
+     "song": "Cashin Out (Freestyle)",
+     "artist": "Wale"
+    },
+    {
+     "rank": 13,
+     "song": "White",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 14,
+     "song": "Believe",
+     "artist": "David Banner feat. Big K.R.I.T."
+    },
+    {
+     "rank": 15,
+     "song": "Hop Madness",
+     "artist": "Hopsin"
+    },
+    {
+     "rank": 16,
+     "song": "Bag Lady",
+     "artist": "Travis Porter"
+    },
+    {
+     "rank": 17,
+     "song": "Hustle Money (Prod By T-Nyce)",
+     "artist": "Memphis Bleek"
+    },
+    {
+     "rank": 18,
+     "song": "Drop A Gem On Em [DJ]",
+     "artist": "French Montana feat. Maino"
+    },
+    {
+     "rank": 19,
+     "song": "Baseline",
+     "artist": "Danny Brown"
+    },
+    {
+     "rank": 20,
+     "song": "Where My Dogs At",
+     "artist": "Young Dro"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120313071915/http://hypem.com:80/popular",
+   "captured": "2012-03-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Greyhound (Original Mix)",
+     "artist": "Swedish House Mafia"
+    },
+    {
+     "rank": 2,
+     "song": "Tale of You & Me",
+     "artist": "Wild Child"
+    },
+    {
+     "rank": 3,
+     "song": "Chasing Summers",
+     "artist": "Tiësto"
+    },
+    {
+     "rank": 4,
+     "song": "Golden Baby",
+     "artist": "Cœur De Pirate"
+    },
+    {
+     "rank": 5,
+     "song": "Shelter (Beat Culture Remix)",
+     "artist": "The xx"
+    },
+    {
+     "rank": 6,
+     "song": "Gorillaz - Feel Good Inc (Wheel Wells 'Bats In The Belfry' Remix)",
+     "artist": "Wheel Wells"
+    },
+    {
+     "rank": 7,
+     "song": "Kids",
+     "artist": "Lady Danville"
+    },
+    {
+     "rank": 8,
+     "song": "Let's Go (Calvin Harris Remix)",
+     "artist": "Calvin Harris ft. Ne-Yo"
+    },
+    {
+     "rank": 9,
+     "song": "surely",
+     "artist": "sbtrkt"
+    },
+    {
+     "rank": 10,
+     "song": "Before The Dive",
+     "artist": "St. Lucia"
+    },
+    {
+     "rank": 11,
+     "song": "Gucci Gucci Gucci (Kito, Kreayshawn, Gucci Mane)",
+     "artist": "Fullhaus"
+    },
+    {
+     "rank": 12,
+     "song": "Chateau (Hey Champ Remix)",
+     "artist": "Housse De Racket"
+    },
+    {
+     "rank": 13,
+     "song": "Bring That Beat Back (Tiesto Edit)",
+     "artist": "Autoerotique"
+    },
+    {
+     "rank": 14,
+     "song": "Breathe (Feat. Liam Bailey)",
+     "artist": "Delilah"
+    },
+    {
+     "rank": 15,
+     "song": "Pillow Talk",
+     "artist": "Wild Child"
+    },
+    {
+     "rank": 16,
+     "song": "Rained The Whole Time",
+     "artist": "Shlohmo"
+    },
+    {
+     "rank": 17,
+     "song": "Beck and Charlotte Gainsbourg - Paradisco (Cruz Lee remix)",
+     "artist": "Beck and Charlotte Gainsbourg"
+    },
+    {
+     "rank": 18,
+     "song": "Eminem - Lose Yourself (Cry Wolf Remix)",
+     "artist": "Cry Wolf"
+    },
+    {
+     "rank": 19,
+     "song": "Time To Dance (SebastiAn remix)",
+     "artist": "The Shoes"
+    },
+    {
+     "rank": 20,
+     "song": "Neptune",
+     "artist": "Lemonade"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120315155425/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2012-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Rack City",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 3,
+     "song": "Take Care",
+     "artist": "Drake Featuring Rihanna"
+    },
+    {
+     "rank": 4,
+     "song": "Young, Wild & Free",
+     "artist": "Snoop Dogg & Wiz Khalifa Featuring Bruno Mars"
+    },
+    {
+     "rank": 5,
+     "song": "Can't Get Enough",
+     "artist": "J. Cole Featuring Trey Songz"
+    },
+    {
+     "rank": 6,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 8,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 10,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120315155420/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love On Top",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 2,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Strip",
+     "artist": "Chris Brown Featuring Kevin K-MAC McCall"
+    },
+    {
+     "rank": 4,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 5,
+     "song": "Rack City",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 6,
+     "song": "Sex Ain't Better Than Love",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 7,
+     "song": "Birthday Cake",
+     "artist": "Rihanna Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "4 AM",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 10,
+     "song": "Climax",
+     "artist": "Usher"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "month": "2010-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100813192100/http://www.hotnewhiphop.com:80/",
+   "captured": "2010-08-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Heat (Prod By No I.D. & The Legendary Traxter)",
+     "artist": "Twista feat. Raekwon"
+    },
+    {
+     "rank": 2,
+     "song": "Karate Kid",
+     "artist": "Hell Rell feat. JR Writer"
+    },
+    {
+     "rank": 3,
+     "song": "Beddy Crocka (Remix)",
+     "artist": "Inertia feat. Slim Thug, Diamond, Maino & Trai D"
+    },
+    {
+     "rank": 4,
+     "song": "I'm The Man (Remix)",
+     "artist": "Spitfiya feat. Mistah Fab, Shakes L, Dubb, Bishop Lamont & Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "New Money (Prod. J.U.S.T.I.C.E. League)",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 6,
+     "song": "Fame",
+     "artist": "Nipsey Hussle"
+    },
+    {
+     "rank": 7,
+     "song": "Making Love To The Money (NO DJ)",
+     "artist": "Gucci Mane"
+    },
+    {
+     "rank": 8,
+     "song": "Connected (NO DJ)",
+     "artist": "J. Cardim feat. Red Cafe"
+    },
+    {
+     "rank": 9,
+     "song": "Kitchen (Prod By Lex Luger)",
+     "artist": "Tity Boi"
+    },
+    {
+     "rank": 10,
+     "song": "Work It Out (Tags)",
+     "artist": "Soulja Boy Tell 'Em feat. Ray J"
+    },
+    {
+     "rank": 11,
+     "song": "Hit Em Up",
+     "artist": "211 feat. Tone Trump & Slick Pulla"
+    },
+    {
+     "rank": 12,
+     "song": "City Never Sleeps [Original Version]",
+     "artist": "Russell Howard"
+    },
+    {
+     "rank": 13,
+     "song": "Free To Be",
+     "artist": "Philip Michael feat. Akon"
+    },
+    {
+     "rank": 14,
+     "song": "Sex Mart (Prod By Collipark)",
+     "artist": "Sammie"
+    },
+    {
+     "rank": 15,
+     "song": "Automatic",
+     "artist": "Danny Fernandes feat. Belly"
+    },
+    {
+     "rank": 16,
+     "song": "Man Of The House (Prod By Rykeyz)",
+     "artist": "Fantasia"
+    },
+    {
+     "rank": 17,
+     "song": "Hey Ya (Tags)",
+     "artist": "Sean Paul"
+    },
+    {
+     "rank": 18,
+     "song": "Ooh Ahh (Prod. By B. Cox)",
+     "artist": "I-15"
+    },
+    {
+     "rank": 19,
+     "song": "Rose Red (Remix) [Prod by Jahlil Beats]",
+     "artist": "Meek Mill feat. T.I. , Vado & Rick Ross"
+    },
+    {
+     "rank": 20,
+     "song": "Blow Up",
+     "artist": "J. Cole"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100817075702/http://hypem.com:80/popular",
+   "captured": "2010-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "To All My Friends",
+     "artist": "Atmosphere"
+    },
+    {
+     "rank": 2,
+     "song": "Mr. Rager",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 3,
+     "song": "Will A G6 Roll (Yeah Yeah Yeah Vs. Far East Movement)",
+     "artist": "The MashMaticians"
+    },
+    {
+     "rank": 4,
+     "song": "Wet Hair (Japandroids)",
+     "artist": "Teen Daze"
+    },
+    {
+     "rank": 5,
+     "song": "Wylin Cause I'm Young ft. Kanye West",
+     "artist": "Kid Cudi"
+    },
+    {
+     "rank": 6,
+     "song": "Thoughts (Crystal Castles Remix)",
+     "artist": "AudioDax"
+    },
+    {
+     "rank": 7,
+     "song": "I 3 U So",
+     "artist": "Cassius"
+    },
+    {
+     "rank": 8,
+     "song": "Pursuit of Happiness (Kid CuDi Cover)",
+     "artist": "Barbara"
+    },
+    {
+     "rank": 9,
+     "song": "I Believe",
+     "artist": "Simian Mobile Disco"
+    },
+    {
+     "rank": 10,
+     "song": "I Need A Dollar (Killabits Remix)",
+     "artist": "Aloe Blacc"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Look Back in Anger",
+     "artist": "Oasis"
+    },
+    {
+     "rank": 12,
+     "song": "To The Light House (Millionyoung Remix)",
+     "artist": "Memoryhouse"
+    },
+    {
+     "rank": 13,
+     "song": "Don't Throw Me Away",
+     "artist": "The Mumlers"
+    },
+    {
+     "rank": 14,
+     "song": "sparks",
+     "artist": "Jesse Woods"
+    },
+    {
+     "rank": 15,
+     "song": "Everybody speaks no Americano (Chaos Club Edit",
+     "artist": "Mashup-Germany"
+    },
+    {
+     "rank": 16,
+     "song": "Wakey Wakeyyyy",
+     "artist": "wind FOREST"
+    },
+    {
+     "rank": 17,
+     "song": "Smells Like Morning After Dark (DJs From Mars FM Remix)",
+     "artist": "Nirvana vs. Timbaland feat. SoShy & Ne…"
+    },
+    {
+     "rank": 18,
+     "song": "Miami (Jono Ma and Franklin Furter Remix)",
+     "artist": "Foals"
+    },
+    {
+     "rank": 19,
+     "song": "Exstacy",
+     "artist": "Bone Thugz N Harmony"
+    },
+    {
+     "rank": 20,
+     "song": "The Procussions-Little People (Evan Jones Edit)",
+     "artist": "Evan Stanley Jones"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100817090720/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Love The Way You Lie",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 3,
+     "song": "Miss Me",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Airplanes",
+     "artist": "B.o.B Featuring Hayley Williams"
+    },
+    {
+     "rank": 5,
+     "song": "Pretty Boy Swag",
+     "artist": "Soulja Boy Tell'em"
+    },
+    {
+     "rank": 6,
+     "song": "B.M.F. (Blowin' Money Fast)",
+     "artist": "Rick Ross Featuring Styles P"
+    },
+    {
+     "rank": 7,
+     "song": "Teach Me How To Dougie",
+     "artist": "Cali Swag District"
+    },
+    {
+     "rank": 8,
+     "song": "Lose My Mind",
+     "artist": "Young Jeezy Featuring Plies"
+    },
+    {
+     "rank": 9,
+     "song": "Got Your Back",
+     "artist": "T.I. Featuring Keri Hilson"
+    },
+    {
+     "rank": 10,
+     "song": "Billionaire",
+     "artist": "Travie McCoy Featuring Bruno Mars"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100817084456/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-08-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "There Goes My Baby",
+     "artist": "Usher"
+    },
+    {
+     "rank": 2,
+     "song": "Un-Thinkable (I'm Ready)",
+     "artist": "Alicia Keys"
+    },
+    {
+     "rank": 3,
+     "song": "Ride",
+     "artist": "Ciara Featuring Ludacris"
+    },
+    {
+     "rank": 4,
+     "song": "Miss Me",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "Your Love",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "Find Your Love",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "B.M.F. (Blowin' Money Fast)",
+     "artist": "Rick Ross Featuring Styles P"
+    },
+    {
+     "rank": 8,
+     "song": "Love All Over Me",
+     "artist": "Monica"
+    },
+    {
+     "rank": 9,
+     "song": "Pretty Boy Swag",
+     "artist": "Soulja Boy Tell'em"
+    },
+    {
+     "rank": 10,
+     "song": "Bittersweet",
+     "artist": "Fantasia"
+    }
+   ]
+  }
+ ]
+}

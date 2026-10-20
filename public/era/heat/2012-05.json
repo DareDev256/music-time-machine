@@ -1,0 +1,346 @@
+{
+ "month": "2012-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120511054059/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2012-05-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Everythings A Go (Remix)",
+     "artist": "French Montana feat. Birdman, Wale, Fabolous & Jadakiss"
+    },
+    {
+     "rank": 2,
+     "song": "Mercy Freestyle",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "No Lie (Explicit)",
+     "artist": "2 Chainz feat. Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Way Too Cold Freestyle",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 5,
+     "song": "B.L.A.B. (Ballin Like a Bitch)",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 6,
+     "song": "Slight Work (Remix) (Dirty/CDQ)",
+     "artist": "Wale feat. French Montana, Diddy & Mase"
+    },
+    {
+     "rank": 7,
+     "song": "It's On",
+     "artist": "R. Kelly feat. Ace Hood & DJ Khaled (CDQ)"
+    },
+    {
+     "rank": 8,
+     "song": "Black Lip Bastard (Remix)",
+     "artist": "Ab-Soul feat. Kendrick Lamar, ScHoolboy Q & Jay Rock"
+    },
+    {
+     "rank": 9,
+     "song": "I Don’t Like (Remix)",
+     "artist": "Chief Keef feat. Kanye West, Pusha T, Jadakiss & Big Sean"
+    },
+    {
+     "rank": 10,
+     "song": "ILLuminate (Prod. Skhye Hutch)",
+     "artist": "Ab-Soul feat. Kendrick Lamar"
+    },
+    {
+     "rank": 11,
+     "song": "Mickey D's (Unreleased)",
+     "artist": "Rick Ross feat. Laudie"
+    },
+    {
+     "rank": 12,
+     "song": "Amen",
+     "artist": "Meek Mill feat. Drake & Jeremih"
+    },
+    {
+     "rank": 13,
+     "song": "Boyfriend (Freestyle)",
+     "artist": "Ying Yang Twins"
+    },
+    {
+     "rank": 14,
+     "song": "Up (Freestyle) [CDQ]",
+     "artist": "Ying Yang Twins"
+    },
+    {
+     "rank": 15,
+     "song": "No Lie",
+     "artist": "2 Chainz feat. Drake"
+    },
+    {
+     "rank": 16,
+     "song": "Work Hard, Play Hard",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 17,
+     "song": "Burn (Prod. by Jahlil Beats)",
+     "artist": "Meek Mill feat. Big Sean"
+    },
+    {
+     "rank": 18,
+     "song": "Mercy (CDQ) [NO DJ]",
+     "artist": "Kanye West feat. Big Sean, Pusha T & 2 Chainz"
+    },
+    {
+     "rank": 19,
+     "song": "Racked Up Shawty",
+     "artist": "Meek Mill feat. Fabolous & French Montana"
+    },
+    {
+     "rank": 20,
+     "song": "Fuck Your Blog",
+     "artist": "Childish Gambino feat. Flynt Flossy & Yung Humma"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120511082542/http://hypem.com:80/popular",
+   "captured": "2012-05-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fifteen (ft Chela)",
+     "artist": "Goldroom"
+    },
+    {
+     "rank": 2,
+     "song": "Learn To Fly",
+     "artist": "The Knocks"
+    },
+    {
+     "rank": 3,
+     "song": "Fuck Your Blog (ft. Flynt Flossy & Yung Humma)",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 4,
+     "song": "1234 Feat. Chuckie & Martin Solveig (Original Mix)",
+     "artist": "Laidback Luke"
+    },
+    {
+     "rank": 5,
+     "song": "You Get High",
+     "artist": "Pretty Lights"
+    },
+    {
+     "rank": 6,
+     "song": "MIRACLE",
+     "artist": "Ghost Beach"
+    },
+    {
+     "rank": 7,
+     "song": "Keep Your Secrets in Midnight City",
+     "artist": "Kill Paris"
+    },
+    {
+     "rank": 8,
+     "song": "NO PRAYERS (KEYS N KRATES RMX)",
+     "artist": "Zeds Dead & Omar LinX"
+    },
+    {
+     "rank": 9,
+     "song": "Boy",
+     "artist": "emma louise"
+    },
+    {
+     "rank": 10,
+     "song": "Call Me Maybe (Carly Rae Jepsen Cover)",
+     "artist": "Ben Howard"
+    },
+    {
+     "rank": 11,
+     "song": "Graveyard Girl",
+     "artist": "M83"
+    },
+    {
+     "rank": 12,
+     "song": "Nobodies",
+     "artist": "LIL KIDS"
+    },
+    {
+     "rank": 13,
+     "song": "The Twelves | 08.05.2012",
+     "artist": "The Twelves"
+    },
+    {
+     "rank": 14,
+     "song": "I've Got Your Music (Golden Filter Remix)",
+     "artist": "Saint Etienne"
+    },
+    {
+     "rank": 15,
+     "song": "Usher-Climax (Raf Riley Remix)",
+     "artist": "diplo"
+    },
+    {
+     "rank": 16,
+     "song": "We Can't Be Beat",
+     "artist": "The Walkmen"
+    },
+    {
+     "rank": 17,
+     "song": "Step In Shadows",
+     "artist": "SBTRKT"
+    },
+    {
+     "rank": 18,
+     "song": "Reasons ft. Andrew Allen (Kiely Rich Remix)",
+     "artist": "Project 46"
+    },
+    {
+     "rank": 19,
+     "song": "Totally Recalled (D.veloped Vocal Edit)",
+     "artist": "Flosstradamus"
+    },
+    {
+     "rank": 20,
+     "song": "Guts (The Sound Of Arrows Remix)",
+     "artist": "Alex Winston"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120512081801/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2012-05-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 3,
+     "song": "UP!",
+     "artist": "LoveRance Featuring IamSu & Skipper or 50 Cent"
+    },
+    {
+     "rank": 4,
+     "song": "Leave You Alone",
+     "artist": "Young Jeezy Featuring Ne-Yo"
+    },
+    {
+     "rank": 5,
+     "song": "Take Care",
+     "artist": "Drake Featuring Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "Another Round",
+     "artist": "Fat Joe Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Cashin Out",
+     "artist": "Ca$hOut"
+    },
+    {
+     "rank": 8,
+     "song": "Ayy Ladies",
+     "artist": "Travis Porter Featuring Tyga"
+    },
+    {
+     "rank": 9,
+     "song": "Wild Ones",
+     "artist": "Flo Rida Featuring Sia"
+    },
+    {
+     "rank": 10,
+     "song": "Faded",
+     "artist": "Tyga Featuring Lil Wayne"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120511043420/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-05-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Climax",
+     "artist": "Usher"
+    },
+    {
+     "rank": 2,
+     "song": "Birthday Cake",
+     "artist": "Rihanna Featuring Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "Leave You Alone",
+     "artist": "Young Jeezy Featuring Ne-Yo"
+    },
+    {
+     "rank": 4,
+     "song": "UP!",
+     "artist": "LoveRance Featuring IamSu & Skipper or 50 Cent"
+    },
+    {
+     "rank": 5,
+     "song": "Drank In My Cup",
+     "artist": "Kirko Bangz"
+    },
+    {
+     "rank": 6,
+     "song": "Another Round",
+     "artist": "Fat Joe Featuring Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Cashin Out",
+     "artist": "Ca$hOut"
+    },
+    {
+     "rank": 8,
+     "song": "Love On Top",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 9,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 10,
+     "song": "Ayy Ladies",
+     "artist": "Travis Porter Featuring Tyga"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "month": "2010-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20100105125530/http://www.hotnewhiphop.com/",
+   "captured": "2010-01-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Speedin (Prod By 253)",
+     "artist": "Omarion"
+    },
+    {
+     "rank": 2,
+     "song": "All You Know (Snippet)",
+     "artist": "Chamillionaire"
+    },
+    {
+     "rank": 3,
+     "song": "Another Day (Feat. Lenny Kravitz) [Snippet]",
+     "artist": "Michael Jackson"
+    },
+    {
+     "rank": 4,
+     "song": "I Go Crazy (Feat. Colby O'Donis) (Mastered)",
+     "artist": "Huey"
+    },
+    {
+     "rank": 5,
+     "song": "R.A.C.K.S. (Feat. Red Cafe)",
+     "artist": "RIZ"
+    },
+    {
+     "rank": 6,
+     "song": "Buy You A Round (Feat. Chino)",
+     "artist": "Sean Paul"
+    },
+    {
+     "rank": 7,
+     "song": "Best Friend",
+     "artist": "Flexx aka XX (of T.O.K)"
+    },
+    {
+     "rank": 8,
+     "song": "Da Bubble Butt (Feat Mr. ColliPark)",
+     "artist": "Ying Yang Twins"
+    },
+    {
+     "rank": 9,
+     "song": "Live My Life (Feat. Bobby Valentino)",
+     "artist": "O.Z."
+    },
+    {
+     "rank": 10,
+     "song": "Young Money",
+     "artist": "Lil Twist & Short Dawg"
+    },
+    {
+     "rank": 11,
+     "song": "Baby Come With Me (Snippet)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Run (Feat. Junior Reid & Tommy Nova)",
+     "artist": "Raekwon"
+    },
+    {
+     "rank": 13,
+     "song": "Steroidz (G-Unit Diss)",
+     "artist": "Young Buck"
+    },
+    {
+     "rank": 14,
+     "song": "Bout Dat Life (Feat. Brisco & Gunplay)",
+     "artist": "Webbz"
+    },
+    {
+     "rank": 15,
+     "song": "U Don't Like That",
+     "artist": "Outlawz"
+    },
+    {
+     "rank": 16,
+     "song": "After The Club Close",
+     "artist": "Pleasure P"
+    },
+    {
+     "rank": 17,
+     "song": "Bigger Checks (Feat. Red Cafe)",
+     "artist": "Beyond Belief"
+    },
+    {
+     "rank": 18,
+     "song": "09 Obituary (Feat. Chino)",
+     "artist": "Papoose"
+    },
+    {
+     "rank": 19,
+     "song": "3008",
+     "artist": "Ras Kass"
+    },
+    {
+     "rank": 20,
+     "song": "Closer (Prod By Ryan Leslie)",
+     "artist": "Mary J. Blige"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100111172347/http://hypem.com:80/popular?",
+   "captured": "2010-01-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Ooh Wee (Feat. Ghostface Killah & Nate Dogg)",
+     "artist": "Mark Ronson"
+    },
+    {
+     "rank": 2,
+     "song": "Healing Hands",
+     "artist": "Citizen Cope"
+    },
+    {
+     "rank": 3,
+     "song": "Money to Blow (Vodka & Milk Remix)",
+     "artist": "Drake & Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "TigerWoods",
+     "artist": "Maino"
+    },
+    {
+     "rank": 5,
+     "song": "Starts With One (CLASSIXX remix)",
+     "artist": "Shiny Toy Guns"
+    },
+    {
+     "rank": 6,
+     "song": "Shes Got You (Edit Version)",
+     "artist": "Cosmo Jarvis"
+    },
+    {
+     "rank": 7,
+     "song": "90's, 6 Underground (Filla Brazillia remix #1)",
+     "artist": "Sneaker Pimps"
+    },
+    {
+     "rank": 8,
+     "song": "Rebel Rebel (Soulwax Club Mix)",
+     "artist": "David Bowie"
+    },
+    {
+     "rank": 9,
+     "song": "The Eraser (XXXChange Remix)",
+     "artist": "Thom Yorke"
+    },
+    {
+     "rank": 10,
+     "song": "Make Her Say Ft. Kanye West And Common",
+     "artist": "KiD CuDi"
+    },
+    {
+     "rank": 11,
+     "song": "Giant",
+     "artist": "Vampire Weekend"
+    },
+    {
+     "rank": 12,
+     "song": "Penelope",
+     "artist": "Pinback"
+    },
+    {
+     "rank": 13,
+     "song": "Colouring of Pigeons",
+     "artist": "The Knife In Collaboration with Mt. Si…"
+    },
+    {
+     "rank": 14,
+     "song": "The Reeling",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 15,
+     "song": "Roslyn",
+     "artist": "Bon Iver & St. Vincent"
+    },
+    {
+     "rank": 16,
+     "song": "Golden Skans",
+     "artist": "Klaxons"
+    },
+    {
+     "rank": 17,
+     "song": "Faces In The Dark",
+     "artist": "Generationals"
+    },
+    {
+     "rank": 18,
+     "song": "Laura Palmers Prom",
+     "artist": "You Say Party! We Say Die!"
+    },
+    {
+     "rank": 19,
+     "song": "Little Secrets (Felix Da Housecat Remix)",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 20,
+     "song": "Hurricane Drunk (Acoustic Version)",
+     "artist": "Florence + The Machine"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100122131032/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-01-22",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 2,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 3,
+     "song": "Empire State Of Mind",
+     "artist": "Jay-Z + Alicia Keys"
+    },
+    {
+     "rank": 4,
+     "song": "Money To Blow",
+     "artist": "Birdman Featuring Lil Wayne & Drake"
+    },
+    {
+     "rank": 5,
+     "song": "I Wanna Rock",
+     "artist": "Snoop Dogg"
+    },
+    {
+     "rank": 6,
+     "song": "Gangsta Luv",
+     "artist": "Snoop Dogg Featuring The-Dream"
+    },
+    {
+     "rank": 7,
+     "song": "Tie Me Down",
+     "artist": "New Boyz Featuring Ray J"
+    },
+    {
+     "rank": 8,
+     "song": "Forever",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Baby By Me",
+     "artist": "50 Cent Featuring Ne-Yo"
+    },
+    {
+     "rank": 10,
+     "song": "Say Something",
+     "artist": "Timbaland Featuring Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20100107143805/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-01-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "It Kills Me",
+     "artist": "Melanie Fiona"
+    },
+    {
+     "rank": 2,
+     "song": "I Invented Sex",
+     "artist": "Trey Songz Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Say Aah",
+     "artist": "Trey Songz Featuring Fabolous"
+    },
+    {
+     "rank": 4,
+     "song": "Money To Blow",
+     "artist": "Birdman Featuring Lil Wayne & Drake"
+    },
+    {
+     "rank": 5,
+     "song": "BedRock",
+     "artist": "Young Money Featuring Lloyd"
+    },
+    {
+     "rank": 6,
+     "song": "Papers",
+     "artist": "Usher"
+    },
+    {
+     "rank": 7,
+     "song": "How Low",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 8,
+     "song": "Bad Habits",
+     "artist": "Maxwell"
+    },
+    {
+     "rank": 9,
+     "song": "Empire State Of Mind",
+     "artist": "Jay-Z + Alicia Keys"
+    },
+    {
+     "rank": 10,
+     "song": "Try Sleeping With A Broken H...",
+     "artist": "Alicia Keys"
+    }
+   ]
+  }
+ ]
+}

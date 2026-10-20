@@ -1,0 +1,346 @@
+{
+ "month": "2011-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110610110407/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-06-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Marvin's Room (Prod By 40)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "The Pain",
+     "artist": "Square Off feat. Cory Gunz"
+    },
+    {
+     "rank": 3,
+     "song": "Top Of The World",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "New York Rap",
+     "artist": "The Lox"
+    },
+    {
+     "rank": 5,
+     "song": "Shotgun",
+     "artist": "Tory Lanez"
+    },
+    {
+     "rank": 6,
+     "song": "Goosebumps (Remix)",
+     "artist": "Kingpen Slim feat. Wale & Emanny"
+    },
+    {
+     "rank": 7,
+     "song": "Love (Prod By Nottz Raw)",
+     "artist": "Strong Arm Steady"
+    },
+    {
+     "rank": 8,
+     "song": "Lets Get To Dis Doe",
+     "artist": "Da Twins feat. Roscoe Dash & YC"
+    },
+    {
+     "rank": 9,
+     "song": "Stereo Hearts",
+     "artist": "Gym Class Heroes"
+    },
+    {
+     "rank": 10,
+     "song": "Phocused",
+     "artist": "Smoke Bulga feat. Fred The Godson & Masspike Miles"
+    },
+    {
+     "rank": 11,
+     "song": "One Minute",
+     "artist": "Future ATL feat. Rocko"
+    },
+    {
+     "rank": 12,
+     "song": "Throwed Off (Remix)",
+     "artist": "Treal Lee & Prince Rick feat. Soulja Boy, Waka Flocka, Ace Hood, Slim Dunkin & Translee"
+    },
+    {
+     "rank": 13,
+     "song": "Don't Turn The Club Lights On",
+     "artist": "Grafh feat. Shalone"
+    },
+    {
+     "rank": 14,
+     "song": "On Fire",
+     "artist": "Essay Potna"
+    },
+    {
+     "rank": 15,
+     "song": "2Pac Bacc (Freestyle)",
+     "artist": "Short Dawg"
+    },
+    {
+     "rank": 16,
+     "song": "Me",
+     "artist": "Mick Stillz feat. Tay F 3rd"
+    },
+    {
+     "rank": 17,
+     "song": "How I'm Kickin it",
+     "artist": "Ice Burgandy feat. YG Hootie"
+    },
+    {
+     "rank": 18,
+     "song": "Voicemail (Prod. by Waleezy Sule)",
+     "artist": "iQ"
+    },
+    {
+     "rank": 19,
+     "song": "Love Letter",
+     "artist": "Shwayze feat. The Cataracs & Dev"
+    },
+    {
+     "rank": 20,
+     "song": "Black Roses",
+     "artist": "Grafh"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110617011453/http://hypem.com:80/popular",
+   "captured": "2011-06-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Dear Anne (Stan Pt. 2)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Don't Wait For Me ft Lupe Fiasco",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 3,
+     "song": "All Of The Lights (Ellie Goulding x Portland Cello Project x Kanye West)",
+     "artist": "The Hood Internet"
+    },
+    {
+     "rank": 4,
+     "song": "High",
+     "artist": "Big Sean ft Wiz Khalifa, Chidd"
+    },
+    {
+     "rank": 5,
+     "song": "The Birds (Part 1)",
+     "artist": "The Weeknd"
+    },
+    {
+     "rank": 6,
+     "song": "Mama's Boy",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 7,
+     "song": "You've Got the Love (The xx Remix)",
+     "artist": "Florence + The Machine"
+    },
+    {
+     "rank": 8,
+     "song": "Marvin Gaye & Chardonnay",
+     "artist": "Big Sean ft. Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 9,
+     "song": "Starry Eyed (Penguin Prison Remix ft. Theophilus London)",
+     "artist": "Ellie Goulding"
+    },
+    {
+     "rank": 10,
+     "song": "Don't Lick the Rainbow (Mike Posner + Mord Fustang + Daft Punk)",
+     "artist": "Basic Physics"
+    },
+    {
+     "rank": 11,
+     "song": "Young Blood (Futurecop! Remix)",
+     "artist": "The Naked & The Famous"
+    },
+    {
+     "rank": 12,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 13,
+     "song": "2 Hearts",
+     "artist": "Digitalism"
+    },
+    {
+     "rank": 14,
+     "song": "Nasty",
+     "artist": "Nas"
+    },
+    {
+     "rank": 15,
+     "song": "Bassmentality",
+     "artist": "Zeds Dead & The Killabits"
+    },
+    {
+     "rank": 16,
+     "song": "Solid Ground (Adrian Lux & Blende Remix)",
+     "artist": "PNAU"
+    },
+    {
+     "rank": 17,
+     "song": "Temptations",
+     "artist": "Gorilla Warfare Tactics"
+    },
+    {
+     "rank": 18,
+     "song": "How Deep Is Your Love",
+     "artist": "The Rapture"
+    },
+    {
+     "rank": 19,
+     "song": "Oh Boy",
+     "artist": "She & Him"
+    },
+    {
+     "rank": 20,
+     "song": "novacane",
+     "artist": "Frank Ocean"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110618161217/http://www.billboard.com:80/charts/rap-songs?",
+   "captured": "2011-06-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 2,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    },
+    {
+     "rank": 3,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Give Me Everything",
+     "artist": "Pitbull Featuring Ne-Yo, AfroJack & Nayer"
+    },
+    {
+     "rank": 5,
+     "song": "Roll Up",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 7,
+     "song": "The Show Goes On",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 8,
+     "song": "Super Bass",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 9,
+     "song": "Racks",
+     "artist": "YC Featuring Future"
+    },
+    {
+     "rank": 10,
+     "song": "How To Love",
+     "artist": "Lil Wayne"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110612132835/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-06-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Motivation",
+     "artist": "Kelly Rowland Featuring Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Sure Thing",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 3,
+     "song": "Far Away",
+     "artist": "Marsha Ambrosius"
+    },
+    {
+     "rank": 4,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    },
+    {
+     "rank": 5,
+     "song": "She Ain't You",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 6,
+     "song": "Look At Me Now",
+     "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+    },
+    {
+     "rank": 7,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 9,
+     "song": "Hustle Hard",
+     "artist": "Ace Hood"
+    },
+    {
+     "rank": 10,
+     "song": "Unusual",
+     "artist": "Trey Songz Featuring Drake"
+    }
+   ]
+  }
+ ]
+}

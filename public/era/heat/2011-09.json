@@ -1,0 +1,341 @@
+{
+ "month": "2011-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110915193752/http://www.hotnewhiphop.com:80/",
+   "captured": "2011-09-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Mr. Nice Watch (Dirty)",
+     "artist": "J. Cole feat. Jay-Z"
+    },
+    {
+     "rank": 2,
+     "song": "Get It Like Me (Prod By Boi-1da)",
+     "artist": "Kardinal Offishall feat. Rock City"
+    },
+    {
+     "rank": 3,
+     "song": "Electrolytes (Remix)",
+     "artist": "N.O.R.E. feat. Macy Gray & DMX"
+    },
+    {
+     "rank": 4,
+     "song": "Kissin Me",
+     "artist": "Brisco feat. Ray J"
+    },
+    {
+     "rank": 5,
+     "song": "Ima Dip",
+     "artist": "Jim Jones feat. Cam'ron"
+    },
+    {
+     "rank": 6,
+     "song": "Niggas In Gabon",
+     "artist": "Jim Jones"
+    },
+    {
+     "rank": 7,
+     "song": "N.O. Shit",
+     "artist": "Curren$y"
+    },
+    {
+     "rank": 8,
+     "song": "Na Na Na",
+     "artist": "Flo Rida feat. J. Randall"
+    },
+    {
+     "rank": 9,
+     "song": "Certified",
+     "artist": "Young Chris feat. Push Montana"
+    },
+    {
+     "rank": 10,
+     "song": "Fit The Description",
+     "artist": "Kyle Christopher feat. Krys Ivory"
+    },
+    {
+     "rank": 11,
+     "song": "All Night Long",
+     "artist": "Demi Lovato feat. Timbaland & Missy Elliott"
+    },
+    {
+     "rank": 12,
+     "song": "Stadium",
+     "artist": "Lungz feat. Fred The Godson"
+    },
+    {
+     "rank": 13,
+     "song": "Headlines (Remix)",
+     "artist": "Nick Cannon"
+    },
+    {
+     "rank": 14,
+     "song": "Bringing Me Down",
+     "artist": "Rico Love"
+    },
+    {
+     "rank": 15,
+     "song": "Have Your Way",
+     "artist": "Marsha Ambrosius"
+    },
+    {
+     "rank": 16,
+     "song": "Mr. Nice Watch [Clean]",
+     "artist": "J. Cole feat. Jay-Z"
+    },
+    {
+     "rank": 17,
+     "song": "Loso Got Them Hot Wings (Tags)",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 18,
+     "song": "Martians Vs Goblins Freestyle",
+     "artist": "Bow Wow"
+    },
+    {
+     "rank": 19,
+     "song": "Act II (Rough Demos)",
+     "artist": "Jay Electronica"
+    },
+    {
+     "rank": 20,
+     "song": "Scars and Bandages",
+     "artist": "Pill"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110923131721/http://hypem.com:80/popular",
+   "captured": "2011-09-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "No Beef (Panic City & Supersede Remix)",
+     "artist": "Steve Aoki & Afrojack feat Miss Palmer"
+    },
+    {
+     "rank": 2,
+     "song": "We Found Love (Radio Rip)",
+     "artist": "Rihanna f/ Calvin Harris"
+    },
+    {
+     "rank": 3,
+     "song": "High's N Lows",
+     "artist": "Kid Cudi Ft. Bob Dylan"
+    },
+    {
+     "rank": 4,
+     "song": "Pumped Up Kicks (Bridge & Law Remix)",
+     "artist": "Foster the People"
+    },
+    {
+     "rank": 5,
+     "song": "Circus Freaks",
+     "artist": "Wolfgang Gartner feat. Jim Jones & Cam'r…"
+    },
+    {
+     "rank": 6,
+     "song": "Antidote (BBC Rip)",
+     "artist": "Swedish House Mafia & Knife Party"
+    },
+    {
+     "rank": 7,
+     "song": "Make That Money",
+     "artist": "Macklemore & Ryan Lewis"
+    },
+    {
+     "rank": 8,
+     "song": "Major",
+     "artist": "The Asteroids Galaxy Tour"
+    },
+    {
+     "rank": 9,
+     "song": "Doo Wop (Deebs Bootleg)",
+     "artist": "Lauryn Hill"
+    },
+    {
+     "rank": 10,
+     "song": "Nobody's Perfect (feat. Missy Elliott)",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 11,
+     "song": "We Are Young ft. Janelle Monáe",
+     "artist": "fun."
+    },
+    {
+     "rank": 12,
+     "song": "Sexy And I Know It (Mord Fustang Remix)",
+     "artist": "LMFAO"
+    },
+    {
+     "rank": 13,
+     "song": "Twist",
+     "artist": "Oh Land"
+    },
+    {
+     "rank": 14,
+     "song": "You Can Be the Boss",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 15,
+     "song": "Meantime (RAC Mix)",
+     "artist": "Givers"
+    },
+    {
+     "rank": 16,
+     "song": "Never Stop Loving You Feat. Terrace Martin & Talib Kweli",
+     "artist": "9th Wonder"
+    },
+    {
+     "rank": 17,
+     "song": "Tonight Is The Night",
+     "artist": "Outasight"
+    },
+    {
+     "rank": 18,
+     "song": "A Real Hero (feat. Electric Youth)",
+     "artist": "College"
+    },
+    {
+     "rank": 19,
+     "song": "Willie Dynamite",
+     "artist": "Mac Miller"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110923135718/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-09-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Otis",
+     "artist": "Jay Z Kanye West Featuring Otis Redding"
+    },
+    {
+     "rank": 4,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 5,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 6,
+     "song": "Lighters",
+     "artist": "Bad Meets Evil Featuring Bruno Mars"
+    },
+    {
+     "rank": 7,
+     "song": "Super Bass",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "Give Me Everything",
+     "artist": "Pitbull Featuring Ne-Yo, Afrojack & Nayer"
+    },
+    {
+     "rank": 9,
+     "song": "Party Rock Anthem",
+     "artist": "LMFAO Featuring Lauren Bennett & GoonRock"
+    },
+    {
+     "rank": 10,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110923112127/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-09-23",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "How To Love",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "Otis",
+     "artist": "Jay Z Kanye West Featuring Otis Redding"
+    },
+    {
+     "rank": 4,
+     "song": "Best Thing I Never Had",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 5,
+     "song": "Quickie",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 6,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Motivation",
+     "artist": "Kelly Rowland Featuring Lil Wayne"
+    },
+    {
+     "rank": 8,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 9,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Marvins Room",
+     "artist": "Drake"
+    }
+   ]
+  }
+ ]
+}

@@ -1,109 +1,60 @@
 import type { NextConfig } from "next";
+import { FALLBACK_CSP } from "./src/lib/csp";
 
 /**
- * Static fallback CSP — enforced on every response via Next.js headers().
+ * Static fallback headers for every response. The nonce-based CSP in src/proxy.ts
+ * overrides the CSP for page routes; static assets, error pages and anything the proxy
+ * doesn't intercept still get this baseline.
  *
- * The dynamic nonce-based CSP in src/proxy.ts overrides this for page routes,
- * but static assets (/_next/static/*), error pages, and any request the proxy
- * doesn't intercept still need baseline protection.
- *
- * Without nonces, we use 'strict-dynamic' + 'unsafe-inline' as a fallback pair:
- * browsers that support strict-dynamic ignore unsafe-inline (CSP3 spec §8.1),
- * while older browsers fall back to unsafe-inline rather than blocking everything.
+ * No Cross-Origin-Embedder-Policy: nothing here needs SharedArrayBuffer, and COEP would
+ * block the youtube-nocookie player for YouTube-only anchors.
  */
-const fallbackCsp = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'strict-dynamic'",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://i.scdn.co https://i.ytimg.com https://images.genius.com https://*.mzstatic.com",
-  "font-src 'self' https://fonts.gstatic.com",
-  "connect-src 'self' https://api.spotify.com https://accounts.spotify.com https://www.googleapis.com https://api.genius.com",
-  "media-src 'self' https://p.scdn.co",
-  "frame-src 'none'",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "upgrade-insecure-requests",
-].join("; ");
-
 const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version ?? "0.0.0",
   },
+  // Route handlers and the era page read the shards and fonts with fs; Vercel only bundles files it can trace.
+  outputFileTracingIncludes: {
+    "/era/[month]": ["./public/era/**/*.json"],
+    "/api/**": ["./public/era/**/*.json", "./public/fonts/**"],
+  },
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "i.scdn.co",
-        pathname: "/image/**",
-      },
-      {
-        protocol: "https",
-        hostname: "i.ytimg.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.genius.com",
-        pathname: "/**",
-      },
-      {
-        // iTunes cover art (is1-ssl … is5-ssl.mzstatic.com)
-        protocol: "https",
-        hostname: "*.mzstatic.com",
-        pathname: "/image/**",
-      },
+      // iTunes cover art (is1-ssl … is5-ssl.mzstatic.com)
+      { protocol: "https", hostname: "*.mzstatic.com", pathname: "/image/**" },
+      { protocol: "https", hostname: "i.ytimg.com", pathname: "/**" },
     ],
+  },
+  async redirects() {
+    // The v1 mock dashboard (tagged v1.40.0) is gone; old links land on the console.
+    return [
+      { source: "/song/:path*", destination: "/", permanent: true },
+      { source: "/artist/:path*", destination: "/", permanent: true },
+      { source: "/compare", destination: "/", permanent: true },
+    ];
   },
   async headers() {
     return [
       {
+        source: "/era/:file*.json",
+        headers: [{ key: "Cache-Control", value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800" }],
+      },
+      {
         source: "/(.*)",
         headers: [
-          {
-            key: "Content-Security-Policy",
-            value: fallbackCsp,
-          },
-          {
-            key: "Strict-Transport-Security",
-            value: "max-age=63072000; includeSubDomains; preload",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "DENY",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin",
-          },
+          { key: "Content-Security-Policy", value: FALLBACK_CSP },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), serial=(), hid=(), idle-detection=(), screen-wake-lock=(), web-share=(self)",
           },
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "off",
-          },
-          {
-            key: "Cross-Origin-Opener-Policy",
-            value: "same-origin",
-          },
-          {
-            key: "X-Permitted-Cross-Domain-Policies",
-            value: "none",
-          },
-          {
-            key: "Cross-Origin-Resource-Policy",
-            value: "same-origin",
-          },
-          {
-            key: "Cross-Origin-Embedder-Policy",
-            value: "credentialless",
-          },
+          { key: "X-DNS-Prefetch-Control", value: "off" },
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+          { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
+          { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
         ],
       },
     ];

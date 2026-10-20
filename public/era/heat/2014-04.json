@@ -1,0 +1,236 @@
+{
+ "month": "2014-04",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140412224517/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-04-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Draft Day (Prod. By Boi-1da)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Days In The East",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "The Remix",
+     "artist": "Drake Feat. Rihanna"
+    },
+    {
+     "rank": 4,
+     "song": "I Won (Prod. By Metro Boomin)",
+     "artist": "Future Feat. Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Maan!",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "High As Hell",
+     "artist": "B.o.B Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "Smoke (Prod. By Dr. Dre)",
+     "artist": "50 Cent Feat. Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Chi-Raq (Prod. By Boi-1da & Vinylz)",
+     "artist": "Nicki Minaj Feat. Lil Herb"
+    },
+    {
+     "rank": 9,
+     "song": "Ziplocc",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "Cut Her Off (Remix)",
+     "artist": "Rick Ross Feat. 2 Chainz"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140414221133/http://hypem.com/popular",
+   "captured": "2014-04-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "History feat. Michael Jackson",
+     "artist": "Le P"
+    },
+    {
+     "rank": 2,
+     "song": "Rather Be Cash Cash & Valley Remix",
+     "artist": "Clean Bandit"
+    },
+    {
+     "rank": 3,
+     "song": "Torture Feat. Eric Krasno",
+     "artist": "Gramatik"
+    },
+    {
+     "rank": 4,
+     "song": "All I Want (Kodaline Cover)",
+     "artist": "Ellie Goulding"
+    },
+    {
+     "rank": 5,
+     "song": "The Journey",
+     "artist": "Tom Misch"
+    },
+    {
+     "rank": 6,
+     "song": "West Coast",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 7,
+     "song": "White Tiger Prod Hippie Sabotage",
+     "artist": "Hippie Sabotage"
+    },
+    {
+     "rank": 8,
+     "song": "Think Of You RAC Mix",
+     "artist": "MS MR"
+    },
+    {
+     "rank": 9,
+     "song": "Everything We Touch Yannis remix",
+     "artist": "Say Lou Lou"
+    },
+    {
+     "rank": 10,
+     "song": "Elevate Great Good Fine Ok Remix",
+     "artist": "St. Lucia"
+    },
+    {
+     "rank": 11,
+     "song": "Money On My Mind",
+     "artist": "MisterWives"
+    },
+    {
+     "rank": 12,
+     "song": "Uncertainty Cut Copy Remix",
+     "artist": "Jagwar Ma"
+    },
+    {
+     "rank": 13,
+     "song": "Paris",
+     "artist": "Little Dragon"
+    },
+    {
+     "rank": 14,
+     "song": "You & Me feat. Eliza Doolittle Flume Remix",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 15,
+     "song": "Slow Motion",
+     "artist": "phoxband"
+    },
+    {
+     "rank": 16,
+     "song": "They Say cln remix",
+     "artist": "Kilter"
+    },
+    {
+     "rank": 17,
+     "song": "The Writer",
+     "artist": "Chance The Rapper"
+    },
+    {
+     "rank": 18,
+     "song": "Runnin' Bit Funk Remix",
+     "artist": "The Pharcyde"
+    },
+    {
+     "rank": 19,
+     "song": "Hot Hands",
+     "artist": "Darius (Official)"
+    },
+    {
+     "rank": 20,
+     "song": "Where Did The Love Go A-Minor Remix",
+     "artist": "Bipolar Sunshine"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140408095613/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2014-04-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 2,
+     "song": "All Of Me",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 3,
+     "song": "Talk Dirty",
+     "artist": "Jason Derulo Featuring 2 Chainz"
+    },
+    {
+     "rank": 4,
+     "song": "The Man",
+     "artist": "Aloe Blacc"
+    },
+    {
+     "rank": 5,
+     "song": "Drunk In Love",
+     "artist": "Beyonce Featuring Jay Z"
+    },
+    {
+     "rank": 6,
+     "song": "Loyal",
+     "artist": "Chris Brown Featuring Lil Wayne & French Montana Or Too $hort Or Tyga"
+    },
+    {
+     "rank": 7,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 9,
+     "song": "Na Na",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 10,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    }
+   ]
+  }
+ ]
+}

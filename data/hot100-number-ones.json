@@ -1,7 +1,7 @@
 {
 "source": "en.wikipedia.org, List of Billboard Hot 100 number ones of <year>",
 "license": "CC BY-SA 4.0",
-"built": "2026-09-20",
+"built": "2026-10-20",
 "weeks": [
 {
 "date": "1958-08-04",
@@ -4230,7 +4230,7 @@
 },
 {
 "date": "1974-10-19",
-"song": "Nothing From Nothing",
+"song": "Nothing from Nothing",
 "artist": "Billy Preston"
 },
 {
@@ -4866,12 +4866,12 @@
 {
 "date": "1977-03-26",
 "song": "Rich Girl",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1977-04-02",
 "song": "Rich Girl",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1977-04-09",
@@ -5921,17 +5921,17 @@
 {
 "date": "1981-04-11",
 "song": "Kiss on My List",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1981-04-18",
 "song": "Kiss on My List",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1981-04-25",
 "song": "Kiss on My List",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1981-05-02",
@@ -5970,7 +5970,7 @@
 },
 {
 "date": "1981-06-20",
-"song": "Medley: Intro 'Venus'/Sugar, Sugar/No Reply/I'll Be Back/Drive My Car/Do You Want to Know a Secret/We Can Work It Out/I Should Have Known Better/Nowhere Man/You're Going to Lose That Girl/Stars on 45",
+"song": "Medley",
 "artist": "Stars on 45"
 },
 {
@@ -6071,12 +6071,12 @@
 {
 "date": "1981-11-07",
 "song": "Private Eyes",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1981-11-14",
 "song": "Private Eyes",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1981-11-21",
@@ -6131,7 +6131,7 @@
 {
 "date": "1982-01-30",
 "song": "I Can't Go for That (No Can Do)",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1982-02-06",
@@ -6361,12 +6361,12 @@
 {
 "date": "1982-12-18",
 "song": "Maneater",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1982-12-25",
 "song": "Maneater",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1983-01-01",
@@ -17782,6 +17782,31 @@
 "date": "2026-09-19",
 "song": "Choosin' Texas",
 "artist": "Ella Langley"
+},
+{
+"date": "2026-09-26",
+"song": "Choosin' Texas",
+"artist": "Ella Langley"
+},
+{
+"date": "2026-10-03",
+"song": "Choosin' Texas",
+"artist": "Ella Langley"
+},
+{
+"date": "2026-10-10",
+"song": "Patient Zero",
+"artist": "Taylor Swift"
+},
+{
+"date": "2026-10-17",
+"song": "Patient Zero",
+"artist": "Taylor Swift"
+},
+{
+"date": "2026-10-24",
+"song": "Patient Zero",
+"artist": "Taylor Swift"
 }
 ]
 }

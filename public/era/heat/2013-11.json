@@ -1,0 +1,286 @@
+{
+ "month": "2013-11",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131109023043/http://www.hotnewhiphop.com/top100/",
+   "captured": "2013-11-09",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Love Game",
+     "artist": "Eminem Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 2,
+     "song": "My Own Lane (Prod by Ned Cameron)",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 3,
+     "song": "Kush [CDQ/Dirty]",
+     "artist": "Gunplay Feat. Lil Wayne & Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "Jealous",
+     "artist": "Fredo Santana Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "More Mula (Key Wane Remix)",
+     "artist": "Big Sean Feat. French Montana"
+    },
+    {
+     "rank": 6,
+     "song": "Groundhog Day",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 7,
+     "song": "Real And True (Prod by Mike Will Made It) [CDQ]",
+     "artist": "Future Feat. Miley Cyrus & Mr. Hudson"
+    },
+    {
+     "rank": 8,
+     "song": "Melrose",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 9,
+     "song": "The Jig Is Up (Dump'n) (Prod. by J. Cole & Canei Finch)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "Don't Front",
+     "artist": "Eminem Feat. Buckshot"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Front (Snippet)",
+     "artist": "Eminem Feat. Buckshot"
+    },
+    {
+     "rank": 12,
+     "song": "Thank You",
+     "artist": "Busta Rhymes Feat. Q-Tip, Lil Wayne & Kanye West"
+    },
+    {
+     "rank": 13,
+     "song": "All I Want",
+     "artist": "B.o.B"
+    },
+    {
+     "rank": 14,
+     "song": "Legends In The Making (Ashtray Pt. 2) (Prod. By Harry Fraud)",
+     "artist": "Smoke DZA Feat. Curren$y & Wiz Khalifa"
+    },
+    {
+     "rank": 15,
+     "song": "Feeling Myself (Prod by DJ Mustard)",
+     "artist": "Will.i.am Feat. Miley Cyrus, French Montana & Wiz Khalifa"
+    },
+    {
+     "rank": 16,
+     "song": "Kush",
+     "artist": "Dr. Dre Feat. Snoop Dogg & Akon"
+    },
+    {
+     "rank": 17,
+     "song": "The Monster [CDQ]",
+     "artist": "Eminem Feat. Rihanna"
+    },
+    {
+     "rank": 18,
+     "song": "November 18th",
+     "artist": "Drake"
+    },
+    {
+     "rank": 19,
+     "song": "442 [CDQ]",
+     "artist": "Curren$y Feat. Lil Wayne & Birdman"
+    },
+    {
+     "rank": 20,
+     "song": "Cold Blood (CDQ)",
+     "artist": "Yo Gotti Feat. J. Cole"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131117175245/http://hypem.com/popular",
+   "captured": "2013-11-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Atlas Hands Thomas Jack Remix",
+     "artist": "Benjamin Francis Leftwich"
+    },
+    {
+     "rank": 2,
+     "song": "Wu-Tang's Maneater feat. Hall & Oates & Wu-Tang Clan",
+     "artist": "The Melker Project"
+    },
+    {
+     "rank": 3,
+     "song": "We'll Be Fine",
+     "artist": "Lincoln Jesser"
+    },
+    {
+     "rank": 4,
+     "song": "Hard Out Here",
+     "artist": "Lily Allen"
+    },
+    {
+     "rank": 5,
+     "song": "NEW SCENE REMIX FINAL CRNKN 2",
+     "artist": "Dim Mak Records"
+    },
+    {
+     "rank": 6,
+     "song": "Freeway",
+     "artist": "Flux Pavilion"
+    },
+    {
+     "rank": 7,
+     "song": "Dear Boy Dave Edwards Remix",
+     "artist": "Avicii x Daft Punk"
+    },
+    {
+     "rank": 8,
+     "song": "Everybody Wants To Rule The World",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 9,
+     "song": "Another Story",
+     "artist": "The Head and The Heart"
+    },
+    {
+     "rank": 10,
+     "song": "You Got Me (Original Mix)",
+     "artist": "TastyTreat"
+    },
+    {
+     "rank": 11,
+     "song": "Sexy Socialite Boys Noize Remix",
+     "artist": "Chromeo"
+    },
+    {
+     "rank": 12,
+     "song": "Together",
+     "artist": "Sam Smith x Nile Rodgers x Disclosure x…"
+    },
+    {
+     "rank": 13,
+     "song": "Superheroes Solidisco Remix",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 14,
+     "song": "Little Bit More",
+     "artist": "Bo Saris"
+    },
+    {
+     "rank": 15,
+     "song": "Destitute Time Slow Magic Remix",
+     "artist": "Delorean"
+    },
+    {
+     "rank": 16,
+     "song": "Best Be Believing Shadow Child remix",
+     "artist": "AlunaGeorge"
+    },
+    {
+     "rank": 17,
+     "song": "Something In My Heart (feat. Jamie Irrepressible)",
+     "artist": "Röyksopp"
+    },
+    {
+     "rank": 18,
+     "song": "Overdose Dave Luxe Remix",
+     "artist": "Ciara"
+    },
+    {
+     "rank": 19,
+     "song": "Destroyer",
+     "artist": "Panama"
+    },
+    {
+     "rank": 20,
+     "song": "Right Thing",
+     "artist": "Rosie Lowe"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131127103928/http://www1.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2013-11-27",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Monster",
+     "artist": "Eminem Featuring Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 3,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 4,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 5,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 6,
+     "song": "My Hitta",
+     "artist": "YG Featuring Jeezy & Rich Homie Quan"
+    },
+    {
+     "rank": 7,
+     "song": "Love More",
+     "artist": "Chris Brown Featuring Nicki Minaj"
+    },
+    {
+     "rank": 8,
+     "song": "White Walls",
+     "artist": "Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis"
+    },
+    {
+     "rank": 9,
+     "song": "Rap God",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 10,
+     "song": "TKO",
+     "artist": "Justin Timberlake"
+    }
+   ]
+  }
+ ]
+}

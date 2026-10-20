@@ -1,0 +1,286 @@
+{
+ "month": "2013-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130115173819/http://www.hotnewhiphop.com/",
+   "captured": "2013-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Naturally Born",
+     "artist": "Kool G Rap feat. Big Noyd & Large Professor"
+    },
+    {
+     "rank": 2,
+     "song": "It Ain't The Prettiest",
+     "artist": "Atmosphere feat. Brother Ali, Carnage The Executioner & Haphduzn"
+    },
+    {
+     "rank": 3,
+     "song": "Smoke & Mirrors",
+     "artist": "No Malice feat. Ab-Liva"
+    },
+    {
+     "rank": 4,
+     "song": "Make It Last (Prod. By Ta-Ku)",
+     "artist": "JMSN"
+    },
+    {
+     "rank": 5,
+     "song": "Mic Check",
+     "artist": "ScaffBeezy"
+    },
+    {
+     "rank": 6,
+     "song": "Suit & Tie (Prod. By Timbaland)",
+     "artist": "Justin Timberlake feat. Jay-Z"
+    },
+    {
+     "rank": 7,
+     "song": "Turn It Up (Prod By Automatik Beatz)",
+     "artist": "Juelz Santana feat. Lloyd Banks"
+    },
+    {
+     "rank": 8,
+     "song": "Life Long",
+     "artist": "Rockie Fresh feat. Rick Ross & Nipsey Hussle"
+    },
+    {
+     "rank": 9,
+     "song": "Unorthodox (Prod. by DJ Premier) (CDQ)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 10,
+     "song": "Black Out (Prod By Shy Money XL Ty Real)",
+     "artist": "Juelz Santana feat. Lil Wayne"
+    },
+    {
+     "rank": 11,
+     "song": "Fo Real (No Tags)",
+     "artist": "Future ATL feat. Drake"
+    },
+    {
+     "rank": 12,
+     "song": "Wild For The Night",
+     "artist": "ASAP Rocky feat. Skrillex"
+    },
+    {
+     "rank": 13,
+     "song": "Twerk Off",
+     "artist": "Lloyd feat. Juicy J"
+    },
+    {
+     "rank": 14,
+     "song": "Celebration (Freestyle)",
+     "artist": "Jermaine Dupri feat. Jagged Edge, Dondria, Da Brat, Bow Wow & Fresco Kane"
+    },
+    {
+     "rank": 15,
+     "song": "Lullaby",
+     "artist": "Jae Millz"
+    },
+    {
+     "rank": 16,
+     "song": "Suit & Tie (Remix)",
+     "artist": "Ryan Leslie"
+    },
+    {
+     "rank": 17,
+     "song": "Viva La Life",
+     "artist": "Curren$y feat. Corner Boy P"
+    },
+    {
+     "rank": 18,
+     "song": "Cocaine Flow",
+     "artist": "Dubb feat. Troy Ave"
+    },
+    {
+     "rank": 19,
+     "song": "What U Got (Prod by Track Addictz)",
+     "artist": "LOUIS V feat. Nipsey Hussle & Dizzle"
+    },
+    {
+     "rank": 20,
+     "song": "The Watchmen",
+     "artist": "Nino Bless feat. Cambatta, Styles P & Crooked I"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130116152817/http://hypem.com:80/popular",
+   "captured": "2013-01-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Summertime Sadness Cedric Gervais Remix",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 2,
+     "song": "Pompeii Monsieur Adi Remix",
+     "artist": "Bastille"
+    },
+    {
+     "rank": 3,
+     "song": "Sweater Weather",
+     "artist": "The Neighbourhood"
+    },
+    {
+     "rank": 4,
+     "song": "Suit & Tie (feat. JAY Z)",
+     "artist": "Justin Timberlake"
+    },
+    {
+     "rank": 5,
+     "song": "M O V E",
+     "artist": "M A U S I"
+    },
+    {
+     "rank": 6,
+     "song": "Glass",
+     "artist": "MØ"
+    },
+    {
+     "rank": 7,
+     "song": "Ring My Bell Kill Paris Remix",
+     "artist": "Anita Baker"
+    },
+    {
+     "rank": 8,
+     "song": "An Overture Might Help Me Stop Thinking About You",
+     "artist": "Ryan Hemsworth"
+    },
+    {
+     "rank": 9,
+     "song": "Your Drums, Your Love",
+     "artist": "AlunaGeorge"
+    },
+    {
+     "rank": 10,
+     "song": "Azure",
+     "artist": "Vanilla"
+    },
+    {
+     "rank": 11,
+     "song": "Swimming in West Egg (Kendrick Lamar // Pierce Fulton)",
+     "artist": "The White Panda"
+    },
+    {
+     "rank": 12,
+     "song": "Latch ft. Sam Smith",
+     "artist": "Disclosure"
+    },
+    {
+     "rank": 13,
+     "song": "My Number Totally Enormous Extinct Dinosaurs Remix",
+     "artist": "Foals"
+    },
+    {
+     "rank": 14,
+     "song": "Where I'm Going",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 15,
+     "song": "Pilgrim",
+     "artist": "MØ"
+    },
+    {
+     "rank": 16,
+     "song": "Millions\" feat. Rick Ross",
+     "artist": "Pusha T"
+    },
+    {
+     "rank": 17,
+     "song": "Slip",
+     "artist": "Baauer"
+    },
+    {
+     "rank": 18,
+     "song": "Miracle Mile",
+     "artist": "Cold War Kids"
+    },
+    {
+     "rank": 19,
+     "song": "Unorthodox (Produced by DJ Premier)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 20,
+     "song": "Breakers",
+     "artist": "Local Natives"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130115205549/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2013-01-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 7,
+     "song": "I'm Different",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 8,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 9,
+     "song": "No Worries",
+     "artist": "Lil Wayne Featuring Detail"
+    },
+    {
+     "rank": 10,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  }
+ ]
+}

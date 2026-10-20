@@ -1,0 +1,236 @@
+{
+ "month": "2014-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141216035721/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Throw Sum Mo (Prod. by Soundz)",
+     "artist": "Rae Sremmurd Feat. Nicki Minaj & Young Thug"
+    },
+    {
+     "rank": 2,
+     "song": "Schemin Up",
+     "artist": "OB OBrien Feat. Drake & P Reign"
+    },
+    {
+     "rank": 3,
+     "song": "1 Hunnit A Show (Prod. by Hit-Boy)",
+     "artist": "Nipsey Hussle Feat. Rick Ross"
+    },
+    {
+     "rank": 4,
+     "song": "Blah Blah Blah (Remix)",
+     "artist": "Rich Homie Quan Feat. Ty Dolla Sign, Fabolous & Dej Loaf"
+    },
+    {
+     "rank": 5,
+     "song": "Who Would've Thought",
+     "artist": "Chief Keef Feat. Future"
+    },
+    {
+     "rank": 6,
+     "song": "Ain't Trippin'",
+     "artist": "Rich Homie Quan Feat. Young Thug"
+    },
+    {
+     "rank": 7,
+     "song": "Chillen While We Sippin (Unreleased)",
+     "artist": "Kid Cudi Feat. King Chip"
+    },
+    {
+     "rank": 8,
+     "song": "Big Daddy (Radio Rip)",
+     "artist": "Nicki Minaj Feat. Meek Mill"
+    },
+    {
+     "rank": 9,
+     "song": "25",
+     "artist": "Punch Feat. Kendrick Lamar"
+    },
+    {
+     "rank": 10,
+     "song": "Ball Drop (Prod. By OZ & The MeKanics)",
+     "artist": "Fabolous Feat. French Montana"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141215052851/http://hypem.com:80/popular",
+   "captured": "2014-12-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "A Fine Way To Die feat. Orlando Napier",
+     "artist": "GRiZ"
+    },
+    {
+     "rank": 2,
+     "song": "OB OBRIEN ~ Schemin' Up Feat. Drake & P Reign",
+     "artist": "OB OBRIEN"
+    },
+    {
+     "rank": 3,
+     "song": "Left Hand Free Lido Remix",
+     "artist": "alt-J"
+    },
+    {
+     "rank": 4,
+     "song": "Tennis Court Flume Remix",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 5,
+     "song": "Running Plastic Plates Remix",
+     "artist": "Cassian"
+    },
+    {
+     "rank": 6,
+     "song": "Pink Medicine",
+     "artist": "BEARSON"
+    },
+    {
+     "rank": 7,
+     "song": "Parallel Jalebi Hudson Mohawke RMX",
+     "artist": "Four Tet"
+    },
+    {
+     "rank": 8,
+     "song": "1998 +6 remixes",
+     "artist": "Chet Faker"
+    },
+    {
+     "rank": 9,
+     "song": "Illuminate feat. Years & Years MJ Cole Remix",
+     "artist": "TOURIST"
+    },
+    {
+     "rank": 10,
+     "song": "Turn Me Up",
+     "artist": "Twin Shadow"
+    },
+    {
+     "rank": 11,
+     "song": "Gooey +4 remixes",
+     "artist": "Glass Animals"
+    },
+    {
+     "rank": 12,
+     "song": "Grizzly Bear Synapson Remix",
+     "artist": "Angus & Julia Stone"
+    },
+    {
+     "rank": 13,
+     "song": "Say My Name (feat. Zyra) Hayden James Remix",
+     "artist": "ODESZA"
+    },
+    {
+     "rank": 14,
+     "song": "BEGGIN FOR THREAD",
+     "artist": "BANKS"
+    },
+    {
+     "rank": 15,
+     "song": "This Body Rushes",
+     "artist": "DAUNT"
+    },
+    {
+     "rank": 16,
+     "song": "So Jealous Royal Refix",
+     "artist": "Tegan and Sara"
+    },
+    {
+     "rank": 17,
+     "song": "No. 99\" (Prod. by Statik Selektah)",
+     "artist": "Joey Bada$$"
+    },
+    {
+     "rank": 18,
+     "song": "Stevie Wonder\" feat. Chance The Rapper",
+     "artist": "Lucki Eck$"
+    },
+    {
+     "rank": 19,
+     "song": "Oh My Darling Don't Cry",
+     "artist": "Run The Jewels"
+    },
+    {
+     "rank": 20,
+     "song": "Uruguay EDX Remix",
+     "artist": "Nora En Pure & Sons Of Maria"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20141214135441/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-12-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "7/11",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 2,
+     "song": "I Don't F**k With You",
+     "artist": "Big Sean Featuring E-40"
+    },
+    {
+     "rank": 3,
+     "song": "Tuesday",
+     "artist": "I LOVE MAKONNEN Featuring Drake"
+    },
+    {
+     "rank": 4,
+     "song": "No Type",
+     "artist": "Rae Sremmurd"
+    },
+    {
+     "rank": 5,
+     "song": "Hot Boy",
+     "artist": "Bobby Shmurda"
+    },
+    {
+     "rank": 6,
+     "song": "Don't Tell 'Em",
+     "artist": "Jeremih Featuring YG"
+    },
+    {
+     "rank": 7,
+     "song": "CoCo",
+     "artist": "O.T. Genasis"
+    },
+    {
+     "rank": 8,
+     "song": "Beg For It",
+     "artist": "Iggy Azalea Featuring M0"
+    },
+    {
+     "rank": 9,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 10,
+     "song": "Only",
+     "artist": "Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "month": "2013-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130207225213/http://www.hotnewhiphop.com/top100/",
+   "captured": "2013-02-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Bad",
+     "artist": "Wale feat. Tiara Thomas"
+    },
+    {
+     "rank": 2,
+     "song": "Hold It in the Air [DJ]",
+     "artist": "Kid Ink"
+    },
+    {
+     "rank": 3,
+     "song": "Started From The Bottom (Prod. Mike Zombie)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Fuckin Problems (Freestyle) [Tags]",
+     "artist": "Rick Ross feat. Stalley"
+    },
+    {
+     "rank": 5,
+     "song": "Molly Girl (Remix)",
+     "artist": "Lil Durk feat. Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "Started From The Bottom (Remix)",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "Same Bitch (No Tags)",
+     "artist": "ASAP Rocky feat. Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Stay Hood (Prod. by Lex Luger)",
+     "artist": "Waka Flocka feat. Lil Wayne"
+    },
+    {
+     "rank": 9,
+     "song": "No New Niggas (Prod. By Let Em Burn)",
+     "artist": "Euroz"
+    },
+    {
+     "rank": 10,
+     "song": "Started From The Bottom (Freestyle)",
+     "artist": "Machine Gun Kelly"
+    },
+    {
+     "rank": 11,
+     "song": "Same Bitch [Tags]",
+     "artist": "ASAP Rocky feat. Trey Songz"
+    },
+    {
+     "rank": 12,
+     "song": "24K Of Gold (Updated Version)",
+     "artist": "Big Sean feat. J. Cole & Raekwon"
+    },
+    {
+     "rank": 13,
+     "song": "Fell (Prod. By Lex Luger)",
+     "artist": "Waka Flocka feat. Gucci Mane & Young Thug"
+    },
+    {
+     "rank": 14,
+     "song": "The Prince Is Coming",
+     "artist": "araabMUZIK"
+    },
+    {
+     "rank": 15,
+     "song": "The A Team (Remix)",
+     "artist": "Mike Posner"
+    },
+    {
+     "rank": 16,
+     "song": "Anything But Broke",
+     "artist": "Waka Flocka feat. French Montana & Frenchie"
+    },
+    {
+     "rank": 17,
+     "song": "No [DJ]",
+     "artist": "Cory Gunz"
+    },
+    {
+     "rank": 18,
+     "song": "Finna Blow",
+     "artist": "Young Cypher feat. O.D.R. & Haitian Fresh"
+    },
+    {
+     "rank": 19,
+     "song": "About That Life (Full)",
+     "artist": "DJ Kay Slay feat. Fabolous, T-Pain, Rick Ross, Nelly & French Montana"
+    },
+    {
+     "rank": 20,
+     "song": "Good Kush & Alcohol (Bitches Love Me)",
+     "artist": "Lil Wayne feat. Drake & Future"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130220094507/http://www.billboard.com:80/charts/r-b-hip-hop-songs?",
+   "captured": "2013-02-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 2,
+     "song": "Suit & Tie",
+     "artist": "Justin Timberlake Featuring Jay Z"
+    },
+    {
+     "rank": 3,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    },
+    {
+     "rank": 4,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "Love Me",
+     "artist": "Lil Wayne Featuring Drake & Future"
+    },
+    {
+     "rank": 7,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 8,
+     "song": "Pour It Up",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 9,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 10,
+     "song": "All Gold Everything",
+     "artist": "Trinidad James"
+    }
+   ]
+  }
+ ]
+}

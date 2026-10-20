@@ -1,0 +1,341 @@
+{
+ "month": "2011-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20110208061247/http://www.hotnewhiphop.com/",
+   "captured": "2011-02-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hip-Hop Flashback",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 2,
+     "song": "U Be Killin Em (Freestyle)",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 3,
+     "song": "Closer (Remix)",
+     "artist": "Fashawn"
+    },
+    {
+     "rank": 4,
+     "song": "Baby Food",
+     "artist": "X.O. feat. Tantrum"
+    },
+    {
+     "rank": 5,
+     "song": "Speakers Goin Hammer (Freestyle)",
+     "artist": "Legacy (New Boyz)"
+    },
+    {
+     "rank": 6,
+     "song": "Last (Prod by No I.D.)",
+     "artist": "Big Sean feat. Chris Brown"
+    },
+    {
+     "rank": 7,
+     "song": "Taylor Gang (Prod by Lex Luger)",
+     "artist": "Wiz Khalifa feat. Chevy Woods"
+    },
+    {
+     "rank": 8,
+     "song": "Champion (Official Remix)",
+     "artist": "Chipmunk feat. Chris Brown & J. Cole"
+    },
+    {
+     "rank": 9,
+     "song": "Drop (Prod by Johnny Juliano)",
+     "artist": "Trai'D feat. T-Pain & Twista"
+    },
+    {
+     "rank": 10,
+     "song": "Best Luv Song",
+     "artist": "T-Pain feat. Chris Brown"
+    },
+    {
+     "rank": 11,
+     "song": "In My Chevy",
+     "artist": "Joey Galaxy aka Young Ca$h"
+    },
+    {
+     "rank": 12,
+     "song": "Bill Gates (Remix) NO DJ",
+     "artist": "Busta Rhymes"
+    },
+    {
+     "rank": 13,
+     "song": "6 Foot 7 Foot (Triggamix)",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 14,
+     "song": "Respect (Tags)",
+     "artist": "Gucci Mane feat. Yung Joc, Bricksquad And Monopoly"
+    },
+    {
+     "rank": 15,
+     "song": "After The Superbowl",
+     "artist": "Chamillionaire"
+    },
+    {
+     "rank": 16,
+     "song": "Up Up & Away",
+     "artist": "Trai'D feat. Jody Breeze"
+    },
+    {
+     "rank": 17,
+     "song": "Separated",
+     "artist": "T-Pain"
+    },
+    {
+     "rank": 18,
+     "song": "Pusha Girl",
+     "artist": "YG feat. PC & Tanea"
+    },
+    {
+     "rank": 19,
+     "song": "Even Nastier",
+     "artist": "Jae Millz"
+    },
+    {
+     "rank": 20,
+     "song": "My House (Snippet) (Tags)",
+     "artist": "Young Jeezy"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110213195900/http://hypem.com:80/popular",
+   "captured": "2011-02-13",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Something About Us (Pyramid Remix)",
+     "artist": "Daft Punk"
+    },
+    {
+     "rank": 2,
+     "song": "Hit That Jive (Original Mix)",
+     "artist": "Gramatik"
+    },
+    {
+     "rank": 3,
+     "song": "1901 (Customised by DLID)",
+     "artist": "Phoenix"
+    },
+    {
+     "rank": 4,
+     "song": "White Noise/red Meat (Bassjackers Remix)",
+     "artist": "Dada Life"
+    },
+    {
+     "rank": 5,
+     "song": "Rebel",
+     "artist": "Chiddy Bang"
+    },
+    {
+     "rank": 6,
+     "song": "We Turn It Up",
+     "artist": "OhLand"
+    },
+    {
+     "rank": 7,
+     "song": "Born This Way",
+     "artist": "Lady Gaga"
+    },
+    {
+     "rank": 8,
+     "song": "Crystalised (The XX Cover) (JThunder Mix)",
+     "artist": "Gorillaz"
+    },
+    {
+     "rank": 9,
+     "song": "California Sunrise",
+     "artist": "Dirty Gold"
+    },
+    {
+     "rank": 10,
+     "song": "Sabali",
+     "artist": "Amadou & Mariam"
+    },
+    {
+     "rank": 11,
+     "song": "The Greatest Story Never Told",
+     "artist": "Saigon"
+    },
+    {
+     "rank": 12,
+     "song": "Baby (Breakbot Remix)",
+     "artist": "Pnau"
+    },
+    {
+     "rank": 13,
+     "song": "My Manic And I",
+     "artist": "Laura Marling"
+    },
+    {
+     "rank": 14,
+     "song": "Limit To Your Love",
+     "artist": "James Blake"
+    },
+    {
+     "rank": 15,
+     "song": "Dance Yrself Clean",
+     "artist": "LCD Soundsystem"
+    },
+    {
+     "rank": 16,
+     "song": "Shot Yourself In The Foot Again",
+     "artist": "Skream & Example"
+    },
+    {
+     "rank": 17,
+     "song": "02 Where's the Chocolate_ (ft Kool AD)",
+     "artist": "Darwin Deez"
+    },
+    {
+     "rank": 18,
+     "song": "Collect Call (Cosmonaut Grechko Version)",
+     "artist": "Metric"
+    },
+    {
+     "rank": 19,
+     "song": "Last Night At The Jetty",
+     "artist": "Panda Bear"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110216035407/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2011-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 3,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 4,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 5,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 6,
+     "song": "You Be Killin Em",
+     "artist": "Fabolous"
+    },
+    {
+     "rank": 7,
+     "song": "Make A Movie",
+     "artist": "Twista Featuring Chris Brown"
+    },
+    {
+     "rank": 8,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "All Of The Lights",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 10,
+     "song": "Hey Baby (Drop It To The Flo...",
+     "artist": "Pitbull Featuring T-Pain"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20110216034140/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fall For Your Type",
+     "artist": "Jamie Foxx Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Moment 4 Life",
+     "artist": "Nicki Minaj Featuring Drake"
+    },
+    {
+     "rank": 3,
+     "song": "6 Foot 7 Foot",
+     "artist": "Lil Wayne Featuring Cory Gunz"
+    },
+    {
+     "rank": 4,
+     "song": "Pretty Girl Rock",
+     "artist": "Keri Hilson"
+    },
+    {
+     "rank": 5,
+     "song": "No BS",
+     "artist": "Chris Brown"
+    },
+    {
+     "rank": 6,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 7,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 8,
+     "song": "Can't Be Friends",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "What's My Name?",
+     "artist": "Rihanna Featuring Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Love Faces",
+     "artist": "Trey Songz"
+    }
+   ]
+  }
+ ]
+}

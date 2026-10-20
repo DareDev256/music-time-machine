@@ -1,0 +1,286 @@
+{
+ "month": "2013-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130615063352/http://www.hotnewhiphop.com:80/",
+   "captured": "2013-06-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Send It Up",
+     "artist": "Kanye West Feat. King L"
+    },
+    {
+     "rank": 2,
+     "song": "Who I Am (Prod. By DJ Mano & Kanye West) [CDQ]",
+     "artist": "Pusha T Feat. Big Sean & 2 Chainz"
+    },
+    {
+     "rank": 3,
+     "song": "Fucking Faded",
+     "artist": "Chris Brown Feat. Akon & Pitbull"
+    },
+    {
+     "rank": 4,
+     "song": "Dirty Laundry (Remix) [Tags]",
+     "artist": "R. Kelly"
+    },
+    {
+     "rank": 5,
+     "song": "Girls Gone Wild",
+     "artist": "ShowOff Feat. E-40 & Lambo Lux"
+    },
+    {
+     "rank": 6,
+     "song": "Stack It Up [No Tags]",
+     "artist": "Alley Boy Feat. Meek Mill"
+    },
+    {
+     "rank": 7,
+     "song": "Say Somethin",
+     "artist": "ShowOff Feat. TeeFlii"
+    },
+    {
+     "rank": 8,
+     "song": "History (DJ Preservation Remix)",
+     "artist": "Yasiin Bey (Mos Def) Feat. Talib Kweli"
+    },
+    {
+     "rank": 9,
+     "song": "Bout Mine",
+     "artist": "Problem Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 10,
+     "song": "Freddie Soprano (Prod. By ID Labs)",
+     "artist": "Freddie Gibbs"
+    },
+    {
+     "rank": 11,
+     "song": "Understand Me",
+     "artist": "Problem Feat. Wale"
+    },
+    {
+     "rank": 12,
+     "song": "88 (Prod. By Just Blaze)",
+     "artist": "Wale"
+    },
+    {
+     "rank": 13,
+     "song": "What You Know About It",
+     "artist": "Big K.R.I.T."
+    },
+    {
+     "rank": 14,
+     "song": "Net Worth",
+     "artist": "Lorenzo Asher Feat. Royce Da 5'9''"
+    },
+    {
+     "rank": 15,
+     "song": "Camouflage Dons",
+     "artist": "Statik Selektah Feat. Flatbush Zombies & Smif-N-Wessun"
+    },
+    {
+     "rank": 16,
+     "song": "Blame It On The Money",
+     "artist": "D'Banj Feat. Big Sean & Snoop Lion"
+    },
+    {
+     "rank": 17,
+     "song": "Helluva Night (Prod. By DJ Mustard) [CDQ]",
+     "artist": "Ludacris"
+    },
+    {
+     "rank": 18,
+     "song": "Dennis Rodman (Prod By C4)",
+     "artist": "Migos Feat. Gucci Mane"
+    },
+    {
+     "rank": 19,
+     "song": "Blurred Lines (Freestyle)",
+     "artist": "Asher Roth"
+    },
+    {
+     "rank": 20,
+     "song": "Champagne Spillin",
+     "artist": "Ray Jr Feat. Problem"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130620085323/http://hypem.com:80/popular",
+   "captured": "2013-06-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Pumpin Blood Belarbi Remix",
+     "artist": "NONONO"
+    },
+    {
+     "rank": 2,
+     "song": "Tongues (feat. Kopps) RAC Mix",
+     "artist": "Joywave"
+    },
+    {
+     "rank": 3,
+     "song": "Stay At Home Dad",
+     "artist": "Macklemore X Ryan Lewis"
+    },
+    {
+     "rank": 4,
+     "song": "Homage",
+     "artist": "Feist x Timber Timbre"
+    },
+    {
+     "rank": 5,
+     "song": "Operate The Chainsmokers Remix",
+     "artist": "ASTR"
+    },
+    {
+     "rank": 6,
+     "song": "Dancing On My Own (Robyn Cover)",
+     "artist": "Carousel"
+    },
+    {
+     "rank": 7,
+     "song": "Weapon For Saturday",
+     "artist": "Lolo"
+    },
+    {
+     "rank": 8,
+     "song": "Oblivion (Grimes Cover)",
+     "artist": "Wilsen"
+    },
+    {
+     "rank": 9,
+     "song": "All The Days",
+     "artist": "HAERTS"
+    },
+    {
+     "rank": 10,
+     "song": "In Your Eyes (Peter Gabriel Cover)",
+     "artist": "BANKS"
+    },
+    {
+     "rank": 11,
+     "song": "Alarm",
+     "artist": "Wise Blood"
+    },
+    {
+     "rank": 12,
+     "song": "NO DIGGITY BONDAX EDIT",
+     "artist": "Blackstreet"
+    },
+    {
+     "rank": 13,
+     "song": "Wasting My Young Years Henrik Schwarz Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 14,
+     "song": "Made To Love",
+     "artist": "john legend"
+    },
+    {
+     "rank": 15,
+     "song": "I Love You Pharrell Remix",
+     "artist": "Woodkid"
+    },
+    {
+     "rank": 16,
+     "song": "Royals",
+     "artist": "Lorde"
+    },
+    {
+     "rank": 17,
+     "song": "The Feeling Peter Thomas Remix",
+     "artist": "The Knocks"
+    },
+    {
+     "rank": 18,
+     "song": "New York Oliver Nelson Remix",
+     "artist": "Urban Cone"
+    },
+    {
+     "rank": 19,
+     "song": "KIDS",
+     "artist": "MIKKY EKKO"
+    },
+    {
+     "rank": 20,
+     "song": "Random Access Memories Vanderway Edit",
+     "artist": "Daft Punk"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130620085620/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-06-20",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 2,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 3,
+     "song": "#Beautiful",
+     "artist": "Mariah Carey Featuring Miguel"
+    },
+    {
+     "rank": 4,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 5,
+     "song": "Bad",
+     "artist": "Wale Featuring Tiara Thomas Or Rihanna"
+    },
+    {
+     "rank": 6,
+     "song": "Power Trip",
+     "artist": "J. Cole Featuring Miguel"
+    },
+    {
+     "rank": 7,
+     "song": "We Own It (Fast & Furious)",
+     "artist": "2 Chainz & Wiz Khalifa"
+    },
+    {
+     "rank": 8,
+     "song": "Started From The Bottom",
+     "artist": "Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Next To Me",
+     "artist": "Emeli Sande"
+    },
+    {
+     "rank": 10,
+     "song": "Suit & Tie",
+     "artist": "Justin Timberlake Featuring Jay Z"
+    }
+   ]
+  }
+ ]
+}

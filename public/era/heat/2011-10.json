@@ -1,0 +1,346 @@
+{
+ "month": "2011-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111015132029/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2011-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Make Me Proud",
+     "artist": "Drake feat. Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Focused",
+     "artist": "Wale feat. KiD CuDi"
+    },
+    {
+     "rank": 3,
+     "song": "Sweat (Prod by Detail & Bei Maejor)",
+     "artist": "Bow Wow feat. Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Boom Bap Rap (feat. The Come Up) (prod. Mac Miller & Big Jerm)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 5,
+     "song": "Blue Slide Park",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 6,
+     "song": "Just A Kid (prod. E Dan)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 7,
+     "song": "All That (feat. Bun B) (prod. E Dan)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 8,
+     "song": "2011 BET Cypher (Dirty)",
+     "artist": "Eminem feat. Yelawolf & Slaughterhouse"
+    },
+    {
+     "rank": 9,
+     "song": "The Illest",
+     "artist": "Slaughterhouse"
+    },
+    {
+     "rank": 10,
+     "song": "Its a Tower Heist",
+     "artist": "Nas feat. Rick Ross"
+    },
+    {
+     "rank": 11,
+     "song": "All This (prod. E Dan)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 12,
+     "song": "People Under The Stairs",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 13,
+     "song": "Fireworkz (Prod By David Banner)",
+     "artist": "Tyrese"
+    },
+    {
+     "rank": 14,
+     "song": "Round Of Applause (CDQ)",
+     "artist": "Waka Flocka feat. Drake"
+    },
+    {
+     "rank": 15,
+     "song": "Pranks 4 Players (feat. Sir Michael Rocks) (prod. Cardo)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 16,
+     "song": "The Scoop On Heaven (prod. 9th Wonder)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 17,
+     "song": "Willie Dynamite (prod. Big Jerm)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 18,
+     "song": "Love Lost (prod. Black Diamond)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 19,
+     "song": "Cold Feet (prod. Clams Casino)",
+     "artist": "Mac Miller"
+    },
+    {
+     "rank": 20,
+     "song": "I Love Life, Thank You (prod. Brandun Deshay)",
+     "artist": "Mac Miller"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111016015631/http://hypem.com:80/popular",
+   "captured": "2011-10-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Put It In Your Manners (DJ 21azy Mashup)",
+     "artist": "Chiddy Bang"
+    },
+    {
+     "rank": 2,
+     "song": "On'n'on",
+     "artist": "Justice"
+    },
+    {
+     "rank": 3,
+     "song": "My Dangerously Melodic Anthem",
+     "artist": "D.VELOPED"
+    },
+    {
+     "rank": 4,
+     "song": "Shake Up The Place",
+     "artist": "10 Ft. Ganja Plant"
+    },
+    {
+     "rank": 5,
+     "song": "Held",
+     "artist": "Février"
+    },
+    {
+     "rank": 6,
+     "song": "Dearest",
+     "artist": "The Black Keys"
+    },
+    {
+     "rank": 7,
+     "song": "A Pound of Flesh",
+     "artist": "Radical Face"
+    },
+    {
+     "rank": 8,
+     "song": "Wale feat. Kid Cudi - Focused",
+     "artist": "Wale"
+    },
+    {
+     "rank": 9,
+     "song": "Video Games",
+     "artist": "Leavves"
+    },
+    {
+     "rank": 10,
+     "song": "Satellites",
+     "artist": "Catcall"
+    },
+    {
+     "rank": 11,
+     "song": "Good Feeling (Disco Fries Remix)",
+     "artist": "Flo Rida"
+    },
+    {
+     "rank": 12,
+     "song": "Make Me Proud (F. Nicki Minaj)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 13,
+     "song": "She Doesn't Mind (Prd by Benny Blanco)",
+     "artist": "Sean Paul"
+    },
+    {
+     "rank": 14,
+     "song": "Shutterbugg Yrslf",
+     "artist": "Dj Lobsterdust"
+    },
+    {
+     "rank": 15,
+     "song": "Ohio",
+     "artist": "Justice"
+    },
+    {
+     "rank": 16,
+     "song": "In My Dream",
+     "artist": "Foreign Orange"
+    },
+    {
+     "rank": 17,
+     "song": "Rigamortus",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 18,
+     "song": "Original Don",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 19,
+     "song": "Make Me Proud (feat. Nicki Minaj)",
+     "artist": "Drake"
+    },
+    {
+     "rank": 20,
+     "song": "Make Me Proud Feat. Nicki Minaj",
+     "artist": "Drake"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111011190426/http://www.billboard.com/charts/rap-songs",
+   "captured": "2011-10-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 2,
+     "song": "I'm On One",
+     "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+    },
+    {
+     "rank": 3,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 4,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 5,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "Otis",
+     "artist": "Jay Z Kanye West Featuring Otis Redding"
+    },
+    {
+     "rank": 7,
+     "song": "Party Rock Anthem",
+     "artist": "LMFAO Featuring Lauren Bennett & GoonRock"
+    },
+    {
+     "rank": 8,
+     "song": "Lighters",
+     "artist": "Bad Meets Evil Featuring Bruno Mars"
+    },
+    {
+     "rank": 9,
+     "song": "Super Bass",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "My Last",
+     "artist": "Big Sean Featuring Chris Brown"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20111015014511/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2011-10-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "She Will",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Headlines",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Marvin & Chardonnay",
+     "artist": "Big Sean Featuring Kanye West & Roscoe Dash"
+    },
+    {
+     "rank": 4,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "That Way",
+     "artist": "Wale Featuring Jeremih & Rick Ross"
+    },
+    {
+     "rank": 6,
+     "song": "Wet The Bed",
+     "artist": "Chris Brown Featuring Ludacris"
+    },
+    {
+     "rank": 7,
+     "song": "Otis",
+     "artist": "Jay Z Kanye West Featuring Otis Redding"
+    },
+    {
+     "rank": 8,
+     "song": "Quickie",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 9,
+     "song": "Party",
+     "artist": "Beyonce Featuring Andre 3000"
+    },
+    {
+     "rank": 10,
+     "song": "Marvins Room",
+     "artist": "Drake"
+    }
+   ]
+  }
+ ]
+}

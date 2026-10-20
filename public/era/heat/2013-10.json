@@ -1,0 +1,286 @@
+{
+ "month": "2013-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131014125716/http://www.hotnewhiphop.com/top100/",
+   "captured": "2013-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Feel Like Pac/I Feel Like Biggie",
+     "artist": "DJ Khaled Feat. Diddy, Meek Mill, Rick Ross, T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 2,
+     "song": "Original Silence",
+     "artist": "Lil Wayne Feat. Mack Maine"
+    },
+    {
+     "rank": 3,
+     "song": "Rider [CDQ]",
+     "artist": "Chief Keef Feat. Wiz Khalifa"
+    },
+    {
+     "rank": 4,
+     "song": "I Luv This Shit (Remix)",
+     "artist": "August Alsina Feat. Chris Brown & Trey Songz"
+    },
+    {
+     "rank": 5,
+     "song": "Hold On",
+     "artist": "Pusha T Feat. Rick Ross & Kanye West"
+    },
+    {
+     "rank": 6,
+     "song": "West Coast Wu-Tang",
+     "artist": "Kendrick Lamar Feat. Ab-Soul & Punch"
+    },
+    {
+     "rank": 7,
+     "song": "Pound Cake (Freestyle)",
+     "artist": "Meek Mill Feat. Spade-O"
+    },
+    {
+     "rank": 8,
+     "song": "I Luv This Shit (Mih Mix)",
+     "artist": "Jeremih Feat. Chris Brown & Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "Ain't Worried About Nothin' (Remix)",
+     "artist": "French Montana Feat. Diddy, Rick Ross, & Snoop Dogg"
+    },
+    {
+     "rank": 10,
+     "song": "Yaphet Kotto",
+     "artist": "Childish Gambino"
+    },
+    {
+     "rank": 11,
+     "song": "Don't Forget Us",
+     "artist": "Nipsey Hussle Feat. Dom Kennedy"
+    },
+    {
+     "rank": 12,
+     "song": "Ice Cream (Gucci Mane Diss)",
+     "artist": "Waka Flocka"
+    },
+    {
+     "rank": 13,
+     "song": "Dominic",
+     "artist": "Dom Kennedy"
+    },
+    {
+     "rank": 14,
+     "song": "Make Me",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 15,
+     "song": "Cookie",
+     "artist": "R. Kelly"
+    },
+    {
+     "rank": 16,
+     "song": "My Potna [CDQ]",
+     "artist": "T.I."
+    },
+    {
+     "rank": 17,
+     "song": "Came Thru/Easily",
+     "artist": "Chuck Inglish Feat. Mac Miller & Ab-Soul"
+    },
+    {
+     "rank": 18,
+     "song": "Hold On, We're Going Home (Remix)",
+     "artist": "Drake Feat. Rick Ross"
+    },
+    {
+     "rank": 19,
+     "song": "Look",
+     "artist": "Tyler The Creator Feat. Hodgy Beats, Domo Genesis & Earl Sweatshirt"
+    },
+    {
+     "rank": 20,
+     "song": "King Push",
+     "artist": "Pusha T"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131014150932/http://hypem.com/popular",
+   "captured": "2013-10-14",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Way We Touch",
+     "artist": "WE ARE TWIN"
+    },
+    {
+     "rank": 2,
+     "song": "Lonely Mountain",
+     "artist": "Feed Me"
+    },
+    {
+     "rank": 3,
+     "song": "Just Friends? feat. NYLO (Blackbear x Touch Sensitive)",
+     "artist": "iamblackbear"
+    },
+    {
+     "rank": 4,
+     "song": "No Gun",
+     "artist": "Naomi Pilgrim"
+    },
+    {
+     "rank": 5,
+     "song": "Phoenix Kill Them With Colour Remix",
+     "artist": "ASAP Rocky x Cinematic Orchestra x Swv"
+    },
+    {
+     "rank": 6,
+     "song": "Taking Over",
+     "artist": "Joe Goddard"
+    },
+    {
+     "rank": 7,
+     "song": "1 Train f. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.",
+     "artist": "A$AP Rocky"
+    },
+    {
+     "rank": 8,
+     "song": "Don't Wanna Be Your Girl",
+     "artist": "wetnyc"
+    },
+    {
+     "rank": 9,
+     "song": "Elevate",
+     "artist": "St. Lucia"
+    },
+    {
+     "rank": 10,
+     "song": "Emmanuel Stwo Remix",
+     "artist": "BASECAMP"
+    },
+    {
+     "rank": 11,
+     "song": "Free",
+     "artist": "Star Slinger"
+    },
+    {
+     "rank": 12,
+     "song": "It's Still About You (feat. Hey Champ)",
+     "artist": "Robotaki"
+    },
+    {
+     "rank": 13,
+     "song": "Hold On, We're Going Home MMG Remix",
+     "artist": "Drake feat. Rick Ross"
+    },
+    {
+     "rank": 14,
+     "song": "I See You Bit Funk Remix",
+     "artist": "Jutty Ranx"
+    },
+    {
+     "rank": 15,
+     "song": "CAMPFIRE",
+     "artist": "Satellite Stories"
+    },
+    {
+     "rank": 16,
+     "song": "We'll Be Fine",
+     "artist": "Lincoln Jesser"
+    },
+    {
+     "rank": 17,
+     "song": "So Much To Give L D R U Remix",
+     "artist": "YesYou"
+    },
+    {
+     "rank": 18,
+     "song": "Dreams",
+     "artist": "_wet"
+    },
+    {
+     "rank": 19,
+     "song": "Miracle Kiely Rich Remix",
+     "artist": "Sir Sly"
+    },
+    {
+     "rank": 20,
+     "song": "Digital Girl",
+     "artist": "Work Drugs"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20131005051947/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-10-05",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hold On, We're Going Home",
+     "artist": "Drake Featuring Majid Jordan"
+    },
+    {
+     "rank": 2,
+     "song": "Holy Grail",
+     "artist": "Jay Z Featuring Justin Timberlake"
+    },
+    {
+     "rank": 3,
+     "song": "Blurred Lines",
+     "artist": "Robin Thicke Featuring T.I. + Pharrell"
+    },
+    {
+     "rank": 4,
+     "song": "23",
+     "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+    },
+    {
+     "rank": 5,
+     "song": "Berzerk",
+     "artist": "Eminem"
+    },
+    {
+     "rank": 6,
+     "song": "All Me",
+     "artist": "Drake Featuring 2 Chainz & Big Sean"
+    },
+    {
+     "rank": 7,
+     "song": "Crooked Smile",
+     "artist": "J. Cole Featuring TLC"
+    },
+    {
+     "rank": 8,
+     "song": "Can't Hold Us",
+     "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+    },
+    {
+     "rank": 9,
+     "song": "Love More",
+     "artist": "Chris Brown Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Same Love",
+     "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+    }
+   ]
+  }
+ ]
+}

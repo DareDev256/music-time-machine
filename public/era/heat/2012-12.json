@@ -1,0 +1,286 @@
+{
+ "month": "2012-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20121212102958/http://www.hotnewhiphop.com/",
+   "captured": "2012-12-12",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Big Money",
+     "artist": "Precious Paris"
+    },
+    {
+     "rank": 2,
+     "song": "Dead People (Prod. Dr. Dre)",
+     "artist": "Game"
+    },
+    {
+     "rank": 3,
+     "song": "RIP",
+     "artist": "Young Jeezy feat. 2 Chainz"
+    },
+    {
+     "rank": 4,
+     "song": "Blood Of Christ",
+     "artist": "Game"
+    },
+    {
+     "rank": 5,
+     "song": "Judas Closet (Final Version)",
+     "artist": "Game feat. Nipsey Hussle"
+    },
+    {
+     "rank": 6,
+     "song": "Hate Bein Sober",
+     "artist": "Chief Keef feat. 50 Cent"
+    },
+    {
+     "rank": 7,
+     "song": "Loaded [CDQ]",
+     "artist": "Red Cafe feat. Fabolous & Trey Songz"
+    },
+    {
+     "rank": 8,
+     "song": "Only 1 (Prod. by Willie B)",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 9,
+     "song": "Who Shot Ya (Freestyle)",
+     "artist": "Raekwon"
+    },
+    {
+     "rank": 10,
+     "song": "Band Nation (Prod By Nez Rio)",
+     "artist": "King Louie"
+    },
+    {
+     "rank": 11,
+     "song": "Like A Billion Bucks (Prod By J.U.S.T.I.C.E League",
+     "artist": "King Louie"
+    },
+    {
+     "rank": 12,
+     "song": "The Revenue",
+     "artist": "Cardo feat. Freddie Gibbs"
+    },
+    {
+     "rank": 13,
+     "song": "Money Bag",
+     "artist": "Pill feat. Juicy J"
+    },
+    {
+     "rank": 14,
+     "song": "On Top Of My Game",
+     "artist": "Papoose feat. Mavado"
+    },
+    {
+     "rank": 15,
+     "song": "My Moment (Remix)",
+     "artist": "SRH"
+    },
+    {
+     "rank": 16,
+     "song": "Leavin' Feelings Hurt",
+     "artist": "GLC"
+    },
+    {
+     "rank": 17,
+     "song": "Muse (Prod by Oddz.N.Endz)",
+     "artist": "Slim (of 112)"
+    },
+    {
+     "rank": 18,
+     "song": "When I Woke Up",
+     "artist": "Consequence feat. Estelle"
+    },
+    {
+     "rank": 19,
+     "song": "I'm Gone (Prod by Rikanatti & Cin A Matik)",
+     "artist": "King T feat. Staycee Adamz"
+    },
+    {
+     "rank": 20,
+     "song": "Diamonds (Freestyle)",
+     "artist": "Ice Berg"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121228204532/http://hypem.com:80/popular/?",
+   "captured": "2012-12-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Walk On By Sound Remedy Remix",
+     "artist": "Noosa"
+    },
+    {
+     "rank": 2,
+     "song": "Video Games Sound Remedy Remix",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 3,
+     "song": "Killing Switch",
+     "artist": "Last Lynx"
+    },
+    {
+     "rank": 4,
+     "song": "Things Have Changed",
+     "artist": "Mattafix"
+    },
+    {
+     "rank": 5,
+     "song": "Lost",
+     "artist": "Frank Ocean"
+    },
+    {
+     "rank": 6,
+     "song": "Clarity Vicetone Remix",
+     "artist": "Zedd feat. Foxes"
+    },
+    {
+     "rank": 7,
+     "song": "Breathe (Pink Floyd cover)",
+     "artist": "Capital Cities ft. Tupac Shakur"
+    },
+    {
+     "rank": 8,
+     "song": "Angel on My Shoulder",
+     "artist": "Mattafix"
+    },
+    {
+     "rank": 9,
+     "song": "Take A Walk",
+     "artist": "Passion Pit"
+    },
+    {
+     "rank": 10,
+     "song": "Pull Me Down Ryan Hemsworth Remix",
+     "artist": "Mikky Ekko"
+    },
+    {
+     "rank": 11,
+     "song": "Birds Of Paradise AMTRAC REMIX",
+     "artist": "Chromatics"
+    },
+    {
+     "rank": 12,
+     "song": "Marijuana",
+     "artist": "Chrome Sparks"
+    },
+    {
+     "rank": 13,
+     "song": "Black Thong",
+     "artist": "Chris Lake & Michael Woods"
+    },
+    {
+     "rank": 14,
+     "song": "September",
+     "artist": "St. Lucia"
+    },
+    {
+     "rank": 15,
+     "song": "BIRTHDAY SEX YARIN LIDOR Remix",
+     "artist": "JEREMIH"
+    },
+    {
+     "rank": 16,
+     "song": "Another Sky The Magician Remix",
+     "artist": "Scenic"
+    },
+    {
+     "rank": 17,
+     "song": "Mercy RL Grime & Salva Remix",
+     "artist": "Kanye West"
+    },
+    {
+     "rank": 18,
+     "song": "Myth",
+     "artist": "Beach House"
+    },
+    {
+     "rank": 19,
+     "song": "Blessed f. Kendrick Lamar",
+     "artist": "ScHoolboy Q"
+    },
+    {
+     "rank": 20,
+     "song": "Oblivion",
+     "artist": "Grimes"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20121228022710/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2012-12-28",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 2,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 3,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Swimming Pools (Drank)",
+     "artist": "Kendrick Lamar"
+    },
+    {
+     "rank": 5,
+     "song": "Clique",
+     "artist": "Kanye West, Jay-Z, Big Sean"
+    },
+    {
+     "rank": 6,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    },
+    {
+     "rank": 7,
+     "song": "Adorn",
+     "artist": "Miguel"
+    },
+    {
+     "rank": 8,
+     "song": "I'm Different",
+     "artist": "2 Chainz"
+    },
+    {
+     "rank": 9,
+     "song": "No Worries",
+     "artist": "Lil Wayne Featuring Detail"
+    },
+    {
+     "rank": 10,
+     "song": "Bandz A Make Her Dance",
+     "artist": "Juicy J Featuring Lil Wayne & 2 Chainz"
+    }
+   ]
+  }
+ ]
+}

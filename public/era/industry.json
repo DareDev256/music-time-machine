@@ -1,0 +1,1074 @@
+{
+ "source": "RIAA U.S. Revenue Database (wholesale value, 1973-latest), cross-checked against RIAA year-end reports; global series from IFPI Global Music Report press releases.",
+ "url": "https://www.riaa.com/u-s-sales-database/",
+ "license_note": "RIAA: 'Permission to cite or copy these statistics is hereby granted, as long as proper attribution is given to the Recording Industry Association of America' (printed on its year-end reports); no explicit licence on the database page, questions to research@riaa.com. Cite as 'RIAA'. IFPI: (c) IFPI, all rights reserved; only headline percentages are quoted with attribution to IFPI's Global Music Report. Shares are of WHOLESALE value; RIAA's headline year-end totals are retail value.",
+ "basis": "wholesale",
+ "built": "2026-10-20",
+ "us": {
+  "1973": {
+   "total_usd_m": 1174,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6437,
+    "eight_track": 0.2278,
+    "cassette": 0.0354
+   }
+  },
+  "1974": {
+   "total_usd_m": 1281,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6422,
+    "eight_track": 0.2346,
+    "cassette": 0.0372
+   }
+  },
+  "1975": {
+   "total_usd_m": 1391,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6474,
+    "eight_track": 0.2292,
+    "cassette": 0.0388
+   }
+  },
+  "1976": {
+   "total_usd_m": 1592,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6336,
+    "eight_track": 0.233,
+    "cassette": 0.0501
+   }
+  },
+  "1977": {
+   "total_usd_m": 2041,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6522,
+    "eight_track": 0.2173,
+    "cassette": 0.0669
+   }
+  },
+  "1978": {
+   "total_usd_m": 2403,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6243,
+    "eight_track": 0.2158,
+    "cassette": 0.1024
+   }
+  },
+  "1979": {
+   "total_usd_m": 2127,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.5866,
+    "eight_track": 0.176,
+    "cassette": 0.1493
+   }
+  },
+  "1980": {
+   "total_usd_m": 2141,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6233,
+    "cassette": 0.1801,
+    "eight_track": 0.1347
+   }
+  },
+  "1981": {
+   "total_usd_m": 2309,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.6152,
+    "cassette": 0.2518,
+    "eight_track": 0.0742
+   }
+  },
+  "1982": {
+   "total_usd_m": 2095,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.5574,
+    "cassette": 0.3616,
+    "eight_track": 0.0094
+   }
+  },
+  "1983": {
+   "total_usd_m": 2168,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "vinyl",
+   "formats": {
+    "vinyl": 0.4726,
+    "cassette": 0.457,
+    "cd": 0.0045
+   }
+  },
+  "1984": {
+   "total_usd_m": 2461,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.5299,
+    "vinyl": 0.3818,
+    "cd": 0.024
+   }
+  },
+  "1985": {
+   "total_usd_m": 2467,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.5347,
+    "vinyl": 0.3148,
+    "cd": 0.0902
+   }
+  },
+  "1986": {
+   "total_usd_m": 2615,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.5228,
+    "vinyl": 0.228,
+    "cd": 0.2031
+   }
+  },
+  "1987": {
+   "total_usd_m": 3126,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.518,
+    "cd": 0.2911,
+    "vinyl": 0.1539
+   }
+  },
+  "1988": {
+   "total_usd_m": 3499,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.5291,
+    "cd": 0.341,
+    "vinyl": 0.0922
+   }
+  },
+  "1989": {
+   "total_usd_m": 3677,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cassette",
+   "formats": {
+    "cassette": 0.4977,
+    "cd": 0.4018,
+    "vinyl": 0.0363
+   }
+  },
+  "1990": {
+   "total_usd_m": 4218,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.4672,
+    "cassette": 0.4503,
+    "vinyl": 0.0124
+   }
+  },
+  "1991": {
+   "total_usd_m": 4392,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.5639,
+    "cassette": 0.376,
+    "vinyl": 0.0041
+   }
+  },
+  "1992": {
+   "total_usd_m": 5067,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.6003,
+    "cassette": 0.3364,
+    "vinyl": 0.0016
+   }
+  },
+  "1993": {
+   "total_usd_m": 5657,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.6573,
+    "cassette": 0.2819,
+    "vinyl": 0.0011
+   }
+  },
+  "1994": {
+   "total_usd_m": 6810,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.7098,
+    "cassette": 0.2391,
+    "vinyl": 0.0016
+   }
+  },
+  "1995": {
+   "total_usd_m": 6966,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.7688,
+    "cassette": 0.1809,
+    "vinyl": 0.0022
+   }
+  },
+  "1996": {
+   "total_usd_m": 7091,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.8,
+    "cassette": 0.147,
+    "vinyl": 0.0031
+   }
+  },
+  "1997": {
+   "total_usd_m": 6925,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.8176,
+    "cassette": 0.1203,
+    "vinyl": 0.0029
+   }
+  },
+  "1998": {
+   "total_usd_m": 7780,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.8379,
+    "cassette": 0.0998,
+    "vinyl": 0.0027
+   }
+  },
+  "1999": {
+   "total_usd_m": 8285,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.8833,
+    "cassette": 0.0701,
+    "vinyl": 0.0023
+   }
+  },
+  "2000": {
+   "total_usd_m": 8154,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.9254,
+    "cassette": 0.042,
+    "vinyl": 0.0021
+   }
+  },
+  "2001": {
+   "total_usd_m": 7835,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.9409,
+    "cassette": 0.0254,
+    "vinyl": 0.0021
+   }
+  },
+  "2002": {
+   "total_usd_m": 7201,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.9551,
+    "cassette": 0.0159,
+    "vinyl": 0.0017
+   }
+  },
+  "2003": {
+   "total_usd_m": 6770,
+   "shares": {
+    "streaming": 0.0,
+    "downloads": 0.0,
+    "physical": 1.0,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.9475,
+    "cassette": 0.0087,
+    "vinyl": 0.0019
+   }
+  },
+  "2004": {
+   "total_usd_m": 7089,
+   "shares": {
+    "streaming": 0.001,
+    "downloads": 0.0188,
+    "physical": 0.9802,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.922,
+    "download_single": 0.0143,
+    "download_album": 0.0045,
+    "cassette": 0.0018,
+    "vinyl": 0.0017,
+    "other_streaming": 0.001
+   }
+  },
+  "2005": {
+   "total_usd_m": 7076,
+   "shares": {
+    "streaming": 0.0134,
+    "downloads": 0.0818,
+    "physical": 0.9048,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.849,
+    "download_single": 0.0377,
+    "ringtones": 0.0301,
+    "download_album": 0.0135,
+    "paid_subscription": 0.0105,
+    "other_streaming": 0.0029,
+    "vinyl": 0.0012,
+    "cassette": 0.001
+   }
+  },
+  "2006": {
+   "total_usd_m": 6806,
+   "shares": {
+    "streaming": 0.02,
+    "downloads": 0.151,
+    "physical": 0.8291,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.7864,
+    "download_single": 0.0626,
+    "ringtones": 0.0575,
+    "download_album": 0.0286,
+    "paid_subscription": 0.0151,
+    "other_streaming": 0.0048,
+    "vinyl": 0.0014,
+    "cassette": 0.0003
+   }
+  },
+  "2007": {
+   "total_usd_m": 6224,
+   "shares": {
+    "streaming": 0.0246,
+    "downloads": 0.2414,
+    "physical": 0.734,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.6838,
+    "download_single": 0.0956,
+    "ringtones": 0.0858,
+    "download_album": 0.0564,
+    "paid_subscription": 0.0188,
+    "other_streaming": 0.0058,
+    "vinyl": 0.0022,
+    "cassette": 0.0003
+   }
+  },
+  "2008": {
+   "total_usd_m": 5241,
+   "shares": {
+    "streaming": 0.0402,
+    "downloads": 0.3304,
+    "physical": 0.6294,
+    "sync": 0.0,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.5961,
+    "download_single": 0.1445,
+    "ringtones": 0.0943,
+    "download_album": 0.0855,
+    "paid_subscription": 0.0211,
+    "other_streaming": 0.0191,
+    "vinyl": 0.0066,
+    "cassette": 0.0001
+   }
+  },
+  "2009": {
+   "total_usd_m": 4868,
+   "shares": {
+    "streaming": 0.0531,
+    "downloads": 0.3645,
+    "physical": 0.541,
+    "sync": 0.0413,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.5067,
+    "download_single": 0.1766,
+    "download_album": 0.1079,
+    "ringtones": 0.073,
+    "other_streaming": 0.0319,
+    "paid_subscription": 0.0212,
+    "vinyl": 0.0079
+   }
+  },
+  "2010": {
+   "total_usd_m": 4496,
+   "shares": {
+    "streaming": 0.0791,
+    "downloads": 0.4123,
+    "physical": 0.4667,
+    "sync": 0.042,
+    "other": 0.0
+   },
+   "top_format": "physical",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.4305,
+    "download_single": 0.2181,
+    "download_album": 0.1369,
+    "other_streaming": 0.0554,
+    "ringtones": 0.0504,
+    "paid_subscription": 0.0236,
+    "vinyl": 0.012
+   }
+  },
+  "2011": {
+   "total_usd_m": 4701,
+   "shares": {
+    "streaming": 0.1127,
+    "downloads": 0.4334,
+    "physical": 0.4121,
+    "sync": 0.0418,
+    "other": 0.0
+   },
+   "top_format": "downloads",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.3767,
+    "download_single": 0.2376,
+    "download_album": 0.1607,
+    "other_streaming": 0.0621,
+    "ringtones": 0.0297,
+    "paid_subscription": 0.0264,
+    "ad_supported_streaming": 0.0242,
+    "vinyl": 0.0154
+   }
+  },
+  "2012": {
+   "total_usd_m": 4762,
+   "shares": {
+    "streaming": 0.1749,
+    "downloads": 0.4511,
+    "physical": 0.334,
+    "sync": 0.04,
+    "other": 0.0
+   },
+   "top_format": "downloads",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.2981,
+    "download_single": 0.2533,
+    "download_album": 0.1785,
+    "other_streaming": 0.097,
+    "paid_subscription": 0.042,
+    "ad_supported_streaming": 0.0359,
+    "vinyl": 0.0205,
+    "ringtones": 0.0155
+   }
+  },
+  "2013": {
+   "total_usd_m": 4866,
+   "shares": {
+    "streaming": 0.2328,
+    "downloads": 0.4326,
+    "physical": 0.2957,
+    "sync": 0.039,
+    "other": 0.0
+   },
+   "top_format": "downloads",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.2572,
+    "download_single": 0.2403,
+    "download_album": 0.1796,
+    "other_streaming": 0.1213,
+    "paid_subscription": 0.0661,
+    "ad_supported_streaming": 0.0454,
+    "vinyl": 0.0264,
+    "ringtones": 0.0094
+   }
+  },
+  "2014": {
+   "total_usd_m": 4748,
+   "shares": {
+    "streaming": 0.3119,
+    "downloads": 0.39,
+    "physical": 0.2581,
+    "sync": 0.04,
+    "other": 0.0
+   },
+   "top_format": "downloads",
+   "top_single_format": "cd",
+   "formats": {
+    "cd": 0.2154,
+    "download_single": 0.2125,
+    "download_album": 0.1689,
+    "other_streaming": 0.1629,
+    "paid_subscription": 0.0892,
+    "ad_supported_streaming": 0.0598,
+    "vinyl": 0.0323,
+    "ringtones": 0.0062
+   }
+  },
+  "2015": {
+   "total_usd_m": 4759,
+   "shares": {
+    "streaming": 0.3805,
+    "downloads": 0.3462,
+    "physical": 0.2306,
+    "sync": 0.0426,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "download_single",
+   "formats": {
+    "download_single": 0.1828,
+    "cd": 0.1775,
+    "other_streaming": 0.1686,
+    "download_album": 0.157,
+    "paid_subscription": 0.1337,
+    "ad_supported_streaming": 0.0782,
+    "vinyl": 0.0441,
+    "ringtones": 0.0052
+   }
+  },
+  "2016": {
+   "total_usd_m": 5190,
+   "shares": {
+    "streaming": 0.5371,
+    "downloads": 0.2488,
+    "physical": 0.1727,
+    "sync": 0.0414,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.2317,
+    "other_streaming": 0.1839,
+    "download_single": 0.1248,
+    "cd": 0.1225,
+    "download_album": 0.1151,
+    "ad_supported_streaming": 0.0919,
+    "vinyl": 0.0433,
+    "paid_subscription_limited": 0.0296,
+    "ringtones": 0.0046
+   }
+  },
+  "2017": {
+   "total_usd_m": 5694,
+   "shares": {
+    "streaming": 0.6431,
+    "downloads": 0.1676,
+    "physical": 0.1486,
+    "sync": 0.0408,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.3245,
+    "other_streaming": 0.1538,
+    "ad_supported_streaming": 0.1079,
+    "cd": 0.1009,
+    "download_single": 0.0831,
+    "download_album": 0.0781,
+    "paid_subscription_limited": 0.0569,
+    "vinyl": 0.0432,
+    "ringtones": 0.0027
+   }
+  },
+  "2018": {
+   "total_usd_m": 6550,
+   "shares": {
+    "streaming": 0.7433,
+    "downloads": 0.1123,
+    "physical": 0.1009,
+    "sync": 0.0436,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.3875,
+    "other_streaming": 0.1773,
+    "ad_supported_streaming": 0.1149,
+    "paid_subscription_limited": 0.0636,
+    "cd": 0.0568,
+    "download_single": 0.0539,
+    "download_album": 0.053,
+    "vinyl": 0.041,
+    "ringtones": 0.0017
+   }
+  },
+  "2019": {
+   "total_usd_m": 7368,
+   "shares": {
+    "streaming": 0.79,
+    "downloads": 0.0777,
+    "physical": 0.0942,
+    "sync": 0.0382,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.4534,
+    "other_streaming": 0.1514,
+    "ad_supported_streaming": 0.1366,
+    "paid_subscription_limited": 0.0485,
+    "cd": 0.0477,
+    "vinyl": 0.0436,
+    "download_single": 0.0372,
+    "download_album": 0.0359,
+    "ringtones": 0.0013
+   }
+  },
+  "2020": {
+   "total_usd_m": 8053,
+   "shares": {
+    "streaming": 0.8172,
+    "downloads": 0.0601,
+    "physical": 0.0897,
+    "sync": 0.0329,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.4748,
+    "ad_supported_streaming": 0.1486,
+    "other_streaming": 0.1439,
+    "vinyl": 0.053,
+    "paid_subscription_limited": 0.05,
+    "cd": 0.0341,
+    "download_album": 0.0286,
+    "download_single": 0.0277,
+    "ringtones": 0.0011
+   }
+  },
+  "2021": {
+   "total_usd_m": 9837,
+   "shares": {
+    "streaming": 0.8178,
+    "downloads": 0.0457,
+    "physical": 0.1053,
+    "sync": 0.0312,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.47,
+    "ad_supported_streaming": 0.1762,
+    "other_streaming": 0.1216,
+    "vinyl": 0.0691,
+    "paid_subscription_limited": 0.05,
+    "cd": 0.0343,
+    "download_album": 0.0222,
+    "download_single": 0.0195,
+    "ringtones": 0.0007
+   }
+  },
+  "2022": {
+   "total_usd_m": 10299,
+   "shares": {
+    "streaming": 0.8232,
+    "downloads": 0.0342,
+    "physical": 0.1054,
+    "sync": 0.0371,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.4724,
+    "ad_supported_streaming": 0.1769,
+    "other_streaming": 0.1185,
+    "vinyl": 0.0777,
+    "paid_subscription_limited": 0.0554,
+    "cd": 0.0262,
+    "download_album": 0.0162,
+    "download_single": 0.0148,
+    "ringtones": 0.0005
+   }
+  },
+  "2023": {
+   "total_usd_m": 10984,
+   "shares": {
+    "streaming": 0.8196,
+    "downloads": 0.0284,
+    "physical": 0.1153,
+    "sync": 0.0366,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.4805,
+    "ad_supported_streaming": 0.1697,
+    "other_streaming": 0.1204,
+    "vinyl": 0.0825,
+    "paid_subscription_limited": 0.049,
+    "cd": 0.0314,
+    "download_album": 0.0133,
+    "download_single": 0.0121,
+    "ringtones": 0.0004
+   }
+  },
+  "2024": {
+   "total_usd_m": 11188,
+   "shares": {
+    "streaming": 0.821,
+    "downloads": 0.0246,
+    "physical": 0.1176,
+    "sync": 0.0369,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.4922,
+    "ad_supported_streaming": 0.1608,
+    "other_streaming": 0.1216,
+    "vinyl": 0.0853,
+    "paid_subscription_limited": 0.0464,
+    "cd": 0.0303,
+    "download_album": 0.0109,
+    "download_single": 0.0101,
+    "ringtones": 0.0004
+   }
+  },
+  "2025": {
+   "total_usd_m": 11535,
+   "shares": {
+    "streaming": 0.8213,
+    "downloads": 0.0236,
+    "physical": 0.1197,
+    "sync": 0.0353,
+    "other": 0.0
+   },
+   "top_format": "streaming",
+   "top_single_format": "paid_subscription",
+   "formats": {
+    "paid_subscription": 0.5098,
+    "ad_supported_streaming": 0.1551,
+    "other_streaming": 0.1135,
+    "vinyl": 0.0904,
+    "paid_subscription_limited": 0.0429,
+    "cd": 0.0271,
+    "download_album": 0.0096,
+    "download_single": 0.0096,
+    "ringtones": 0.0004
+   }
+  }
+ },
+ "global": {
+  "2017": {
+   "streaming_share": 0.384,
+   "total_usd_bn": 17.3,
+   "source_url": "https://www.ifpi.org/ifpi-global-music-report-2018/"
+  },
+  "2018": {
+   "streaming_share": 0.468,
+   "total_usd_bn": 19.1,
+   "source_url": "https://www.ifpi.org/ifpi-global-music-report-2019/"
+  },
+  "2019": {
+   "streaming_share": 0.561,
+   "total_usd_bn": 20.2,
+   "source_url": "https://www.ifpi.org/ifpi-issues-annual-global-music-report/"
+  },
+  "2020": {
+   "streaming_share": 0.621,
+   "total_usd_bn": 21.6,
+   "source_url": "https://www.ifpi.org/ifpi-issues-annual-global-music-report-2021/"
+  },
+  "2021": {
+   "streaming_share": 0.65,
+   "total_usd_bn": 25.9,
+   "source_url": "https://www.ifpi.org/ifpi-global-music-report-global-recorded-music-revenues-grew-18-5-in-2021/"
+  },
+  "2022": {
+   "streaming_share": 0.67,
+   "total_usd_bn": 26.2,
+   "source_url": "https://www.ifpi.org/ifpi-global-music-report-global-recorded-music-revenues-grew-9-in-2022/"
+  },
+  "2023": {
+   "streaming_share": 0.673,
+   "total_usd_bn": 28.6,
+   "source_url": "https://www.ifpi.org/?p=540"
+  },
+  "2024": {
+   "streaming_share": 0.69,
+   "total_usd_bn": 29.6,
+   "source_url": "https://www.ifpi.org/ifpi-amidst-highly-competitive-market-global-recorded-music-revenues-grew-4-8-in-2024/"
+  },
+  "2025": {
+   "streaming_share": 0.696,
+   "total_usd_bn": 31.7,
+   "source_url": "https://www.ifpi.org/global-music-report-2026-global-recorded-music-revenues-grow-6-4-as-record-companies-drive-innovation/"
+  }
+ },
+ "global_source_url": "https://www.ifpi.org/our-industry/industry-data/"
+}

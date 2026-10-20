@@ -1,0 +1,346 @@
+{
+ "month": "2012-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120211172218/http://www.hotnewhiphop.com:80/top100",
+   "captured": "2012-02-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "I Do [Dirty]",
+     "artist": "Young Jeezy feat. Jay-Z, Drake, & Andre 3000"
+    },
+    {
+     "rank": 2,
+     "song": "King & Queens (Snippet)",
+     "artist": "Tyga feat. Nas & Wale"
+    },
+    {
+     "rank": 3,
+     "song": "Two Can Win",
+     "artist": "Big Sean"
+    },
+    {
+     "rank": 4,
+     "song": "Erday (Prod by Cardiak) [No DJ] [Dirty]",
+     "artist": "Meek Mill feat. Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Lights Down Low (Prod By Bei Maejor)",
+     "artist": "Bei Maejor feat. Waka Flocka"
+    },
+    {
+     "rank": 6,
+     "song": "Purple Swag Freestyle",
+     "artist": "Wale"
+    },
+    {
+     "rank": 7,
+     "song": "Taylor Hoe",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 8,
+     "song": "Waste No Time",
+     "artist": "Pries feat. Kid Ink"
+    },
+    {
+     "rank": 9,
+     "song": "By Your Side",
+     "artist": "Chiddy Bang"
+    },
+    {
+     "rank": 10,
+     "song": "Mobbin",
+     "artist": "Freddie Gibbs feat. Young Jeezy"
+    },
+    {
+     "rank": 11,
+     "song": "Lean Wit It (Remix)",
+     "artist": "Young Buck"
+    },
+    {
+     "rank": 12,
+     "song": "Audermar (Prod by Jahlil Beats) [DJ]",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 13,
+     "song": "That's What They Call Me (CDQ)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 14,
+     "song": "Magazine Covers",
+     "artist": "Jae Millz feat. Bei Maejor"
+    },
+    {
+     "rank": 15,
+     "song": "Sex On The Balcony",
+     "artist": "Jae Millz feat. Masspike Miles"
+    },
+    {
+     "rank": 16,
+     "song": "Great Spitters",
+     "artist": "Prodigy (Mobb Deep) feat. Cory Gunz"
+    },
+    {
+     "rank": 17,
+     "song": "What You Need Freestyle",
+     "artist": "Nipsey Hussle feat. Vado"
+    },
+    {
+     "rank": 18,
+     "song": "So Bad",
+     "artist": "Cam'ron feat. Yummy"
+    },
+    {
+     "rank": 19,
+     "song": "Rack City (Remix) [Dirty]",
+     "artist": "Tyga feat. Wale, Fabolous, Young Jeezy, Meek Mill & T.I."
+    },
+    {
+     "rank": 20,
+     "song": "Airbound (Prod by Justice League)",
+     "artist": "211 feat. Omarion"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120207142820/http://hypem.com:80/popular",
+   "captured": "2012-02-07",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Just Another Day",
+     "artist": "Stori"
+    },
+    {
+     "rank": 2,
+     "song": "To Build a Home",
+     "artist": "Cinematic Orchestra feat. Patrick Watson"
+    },
+    {
+     "rank": 3,
+     "song": "Somebody That I Used To Know",
+     "artist": "Gotye"
+    },
+    {
+     "rank": 4,
+     "song": "Lyme (Original Mix)",
+     "artist": "Moguai"
+    },
+    {
+     "rank": 5,
+     "song": "N#ggas with a Rattle (Miami Ski Team Bootleg) (Dirty)",
+     "artist": "Jay-Z & Kanye vs Bingo Players"
+    },
+    {
+     "rank": 6,
+     "song": "Midnight City (M83 Cover) (Feat. Mandy Lee)",
+     "artist": "The Knocks"
+    },
+    {
+     "rank": 7,
+     "song": "This Is",
+     "artist": "Atlas"
+    },
+    {
+     "rank": 8,
+     "song": "Demons (Minnesota Remix)",
+     "artist": "Fenech Soler"
+    },
+    {
+     "rank": 9,
+     "song": "SUMMIT (FT. ELLIE GOULDING) (SHY KIDX REMIX)",
+     "artist": "SKRILLEX"
+    },
+    {
+     "rank": 10,
+     "song": "Little Talks",
+     "artist": "Of Monsters and Men"
+    },
+    {
+     "rank": 11,
+     "song": "Midnight City (M83 Cover)",
+     "artist": "The Knocks Ft. Mandy Lee"
+    },
+    {
+     "rank": 12,
+     "song": "Sail (WhiteNoise Remix)",
+     "artist": "AWOLNATION"
+    },
+    {
+     "rank": 13,
+     "song": "Pushin' Aside, Pushin' Along",
+     "artist": "De La Soul's Plug 1 & Plug 2 present Fir…"
+    },
+    {
+     "rank": 14,
+     "song": "Brooklyn Sunburn",
+     "artist": "Teen Daze"
+    },
+    {
+     "rank": 15,
+     "song": "We Must Go On",
+     "artist": "Pretty Lights"
+    },
+    {
+     "rank": 16,
+     "song": "Johnny Belinda (White Arrows Remix)",
+     "artist": "Active Child"
+    },
+    {
+     "rank": 17,
+     "song": "Marilyn Monroe",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 18,
+     "song": "Dreamy Eyes",
+     "artist": "Azure Blue"
+    },
+    {
+     "rank": 19,
+     "song": "All Those Moments (Marek Hemmann Remix)",
+     "artist": "mooryc"
+    },
+    {
+     "rank": 20,
+     "song": "Part Of Me",
+     "artist": "Katy Perry"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120210080541/http://www.billboard.com/charts/rap-songs",
+   "captured": "2012-02-10",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 2,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 3,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 4,
+     "song": "Ni**as in Paris",
+     "artist": "Jay Z Kanye West"
+    },
+    {
+     "rank": 5,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "Rack City",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 7,
+     "song": "Work Out",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 8,
+     "song": "Can't Get Enough",
+     "artist": "J. Cole Featuring Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "I Do",
+     "artist": "Young Jeezy Featuring Jay-Z & Andre 3000"
+    },
+    {
+     "rank": 10,
+     "song": "Good Feeling",
+     "artist": "Flo Rida"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20120216024904/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2012-02-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Make Me Proud",
+     "artist": "Drake Featuring Nicki Minaj"
+    },
+    {
+     "rank": 2,
+     "song": "Lotus Flower Bomb",
+     "artist": "Wale Featuring Miguel"
+    },
+    {
+     "rank": 3,
+     "song": "The Motto",
+     "artist": "Drake Featuring Lil Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "Love On Top",
+     "artist": "Beyonce"
+    },
+    {
+     "rank": 5,
+     "song": "I Do",
+     "artist": "Young Jeezy Featuring Jay-Z & Andre 3000"
+    },
+    {
+     "rank": 6,
+     "song": "Strip",
+     "artist": "Chris Brown Featuring Kevin K-MAC McCall"
+    },
+    {
+     "rank": 7,
+     "song": "Rack City",
+     "artist": "Tyga"
+    },
+    {
+     "rank": 8,
+     "song": "Party",
+     "artist": "Beyonce Featuring Andre 3000"
+    },
+    {
+     "rank": 9,
+     "song": "You The Boss",
+     "artist": "Rick Ross Featuring Nicki Minaj"
+    },
+    {
+     "rank": 10,
+     "song": "Dance (A$$)",
+     "artist": "Big Sean Featuring Nicki Minaj"
+    }
+   ]
+  }
+ ]
+}

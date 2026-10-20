@@ -1,0 +1,236 @@
+{
+ "month": "2014-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140615022343/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-06-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Hella Hoes",
+     "artist": "A$AP Mob Feat. A$AP Rocky, A$AP Ferg, A$AP Nast, A$AP Twelvyy"
+    },
+    {
+     "rank": 2,
+     "song": "0 To 100",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Hunnid Stax",
+     "artist": "Ab-Soul Feat. ScHoolboy Q"
+    },
+    {
+     "rank": 4,
+     "song": "0 To 100 (Freestyle)",
+     "artist": "Meek Mill"
+    },
+    {
+     "rank": 5,
+     "song": "Ordinary Nigga (Remix) [CDQ]",
+     "artist": "G-Unit"
+    },
+    {
+     "rank": 6,
+     "song": "I Want The Love (Official)",
+     "artist": "Puff Daddy Feat. Meek Mill"
+    },
+    {
+     "rank": 7,
+     "song": "Finals 2",
+     "artist": "Rick Ross Feat. Wale, Gunplay, Rockie Fresh, Fat Trel, Tracy T & French Montana"
+    },
+    {
+     "rank": 8,
+     "song": "Or Nah (Remix)",
+     "artist": "Ty Dolla $ign Feat. The Weeknd, Wiz Khalifa & DJ Mustard"
+    },
+    {
+     "rank": 9,
+     "song": "Cut Her Off (Remix)",
+     "artist": "K Camp Feat. Lil Boosie, YG, & Too Short"
+    },
+    {
+     "rank": 10,
+     "song": "I'll Be There",
+     "artist": "Tory Lanez Feat. Meek Mill & French Montana"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140616115730/http://hypem.com/popular",
+   "captured": "2014-06-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Faded ODESZA Remix",
+     "artist": "ZHU"
+    },
+    {
+     "rank": 2,
+     "song": "Do It Again Moullinex Remix",
+     "artist": "Röyksopp & Robyn"
+    },
+    {
+     "rank": 3,
+     "song": "Hear Your Heart Tontario Edit",
+     "artist": "James Bay"
+    },
+    {
+     "rank": 4,
+     "song": "Casey Jones The Golden Pony \"Golden Classics\" Remix",
+     "artist": "The Grateful Dead"
+    },
+    {
+     "rank": 5,
+     "song": "My Silver Lining",
+     "artist": "First Aid Kit"
+    },
+    {
+     "rank": 6,
+     "song": "Crave You Le Croquant & Antis Remix",
+     "artist": "Le Croquant"
+    },
+    {
+     "rank": 7,
+     "song": "Changing Me (feat. Sean Michael Murray)",
+     "artist": "BobbyGreen"
+    },
+    {
+     "rank": 8,
+     "song": "Wasting My Young Years The Aston Shuffle Remix",
+     "artist": "London Grammar"
+    },
+    {
+     "rank": 9,
+     "song": "Sunrise",
+     "artist": "Slaptop"
+    },
+    {
+     "rank": 10,
+     "song": "3LAU 'How You Love Me' Feat. Bright Lights Prince Fox Remix",
+     "artist": "Prince Fox"
+    },
+    {
+     "rank": 11,
+     "song": "All The Time",
+     "artist": "Bahamas Music"
+    },
+    {
+     "rank": 12,
+     "song": "The Big Unknown",
+     "artist": "Elder Island"
+    },
+    {
+     "rank": 13,
+     "song": "GEMS ≠ Scars",
+     "artist": "GEMS."
+    },
+    {
+     "rank": 14,
+     "song": "Cold",
+     "artist": "NickHakim"
+    },
+    {
+     "rank": 15,
+     "song": "Is This Happiness (Full)",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 16,
+     "song": "These Days feat. The O'My's",
+     "artist": "Ab-Soul"
+    },
+    {
+     "rank": 17,
+     "song": "Overcome feat. Potato Potato",
+     "artist": "Tora Music"
+    },
+    {
+     "rank": 18,
+     "song": "Rather Be The Magician Remix",
+     "artist": "Clean Bandit"
+    },
+    {
+     "rank": 19,
+     "song": "Fade Into You (feat. Nikolai Fraiture of The Strokes)",
+     "artist": "Au Revoir Simone"
+    },
+    {
+     "rank": 20,
+     "song": "Flipside",
+     "artist": "Lana Del Rey"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140611021307/http://www.billboard.com/charts/r-b-hip-hop-songs",
+   "captured": "2014-06-11",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "All Of Me",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 3,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 4,
+     "song": "Wiggle",
+     "artist": "Jason Derulo Featuring Snoop Dogg"
+    },
+    {
+     "rank": 5,
+     "song": "Talk Dirty",
+     "artist": "Jason Derulo Featuring 2 Chainz"
+    },
+    {
+     "rank": 6,
+     "song": "Loyal",
+     "artist": "Chris Brown Feat. Lil Wayne & Tyga"
+    },
+    {
+     "rank": 7,
+     "song": "Love Never Felt So Good",
+     "artist": "Michael Jackson & Justin Timberlake"
+    },
+    {
+     "rank": 8,
+     "song": "Na Na",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 9,
+     "song": "Believe Me",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 10,
+     "song": "Show Me",
+     "artist": "Kid Ink Featuring Chris Brown"
+    }
+   ]
+  }
+ ]
+}

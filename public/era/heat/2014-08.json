@@ -1,0 +1,236 @@
+{
+ "month": "2014-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Top 100 (popularity rank)",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140818224841/http://www.hotnewhiphop.com/top100/",
+   "captured": "2014-08-18",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Tuesday (Remix)",
+     "artist": "iLoveMakonnen Feat. Drake"
+    },
+    {
+     "rank": 2,
+     "song": "Be Free",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 3,
+     "song": "Face Down",
+     "artist": "DJ Mustard Feat. Lil Boosie, Lil Wayne, Big Sean & YG"
+    },
+    {
+     "rank": 4,
+     "song": "Beautiful",
+     "artist": "Jeezy Feat. Game & Rick Ross"
+    },
+    {
+     "rank": 5,
+     "song": "Grindin",
+     "artist": "Lil Wayne Feat. Drake"
+    },
+    {
+     "rank": 6,
+     "song": "True Colors",
+     "artist": "Wiz Khalifa Feat. Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Hold You Down",
+     "artist": "DJ Khaled Feat. Chris Brown, August Alsina, Future & Jeremih"
+    },
+    {
+     "rank": 8,
+     "song": "Supreme (Remix)",
+     "artist": "Rick Ross Feat. Big K.R.I.T., Mase & Fabolous"
+    },
+    {
+     "rank": 9,
+     "song": "Everything, Everything",
+     "artist": "Wiz Khalifa Feat. Iamsu!, Berner, JR Donato & Kool John"
+    },
+    {
+     "rank": 10,
+     "song": "Standout",
+     "artist": "Que Feat. Ty Dolla $ign"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140816121740/http://hypem.com:80/popular",
+   "captured": "2014-08-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Habits Of My Heart Slaptop Remix",
+     "artist": "Jaymes Young"
+    },
+    {
+     "rank": 2,
+     "song": "Every Other Freckle",
+     "artist": "alt-J"
+    },
+    {
+     "rank": 3,
+     "song": "Say You Love Me",
+     "artist": "Jessie Ware"
+    },
+    {
+     "rank": 4,
+     "song": "Tuesday",
+     "artist": "Makonnen feat. Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Black Beauty (Rex Riot & Ouros Remix) (feat. JSTJR)",
+     "artist": "Lana Del Rey"
+    },
+    {
+     "rank": 6,
+     "song": "Spectre Bibio Remix",
+     "artist": "Tycho"
+    },
+    {
+     "rank": 7,
+     "song": "Bob Marley",
+     "artist": "Is This Love (Chachi & Musicman Ty Remix…"
+    },
+    {
+     "rank": 8,
+     "song": "No Diggity vs. Thrift Shop Kygo Remix",
+     "artist": "Ed Sheeran & Passenger"
+    },
+    {
+     "rank": 9,
+     "song": "Aura",
+     "artist": "Stwo"
+    },
+    {
+     "rank": 10,
+     "song": "Compass",
+     "artist": "Zella Day"
+    },
+    {
+     "rank": 11,
+     "song": "bad_news",
+     "artist": "BASTILLE"
+    },
+    {
+     "rank": 12,
+     "song": "From The Night",
+     "artist": "Stars"
+    },
+    {
+     "rank": 13,
+     "song": "Unmissable feat. Zak Abel",
+     "artist": "Gorgon City"
+    },
+    {
+     "rank": 14,
+     "song": "Wait Jerry Folk Remix",
+     "artist": "Lemaitre"
+    },
+    {
+     "rank": 15,
+     "song": "365 Days - Jerry Folk Remix",
+     "artist": "ZZ Ward"
+    },
+    {
+     "rank": 16,
+     "song": "All of the People",
+     "artist": "Panama Wedding (Option 4 Remix)"
+    },
+    {
+     "rank": 17,
+     "song": "Only Getting Younger NGHTMRE X Imanos Remix",
+     "artist": "Elliphant Feat. Skrillex"
+    },
+    {
+     "rank": 18,
+     "song": "Leave Me Alone (feat. Shay Lia)",
+     "artist": "KAYTRANADA"
+    },
+    {
+     "rank": 19,
+     "song": "Killed Ya",
+     "artist": "Daniel Wilson"
+    },
+    {
+     "rank": 20,
+     "song": "Bridges L D R U Remix",
+     "artist": "BROODS"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20140815192652/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2014-08-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fancy",
+     "artist": "Iggy Azalea Featuring Charli XCX"
+    },
+    {
+     "rank": 2,
+     "song": "All Of Me",
+     "artist": "John Legend"
+    },
+    {
+     "rank": 3,
+     "song": "Black Widow",
+     "artist": "Iggy Azalea Featuring Rita Ora"
+    },
+    {
+     "rank": 4,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 5,
+     "song": "Happy",
+     "artist": "Pharrell Williams"
+    },
+    {
+     "rank": 6,
+     "song": "2 On",
+     "artist": "Tinashe Featuring ScHoolboy Q"
+    },
+    {
+     "rank": 7,
+     "song": "Don't Tell 'Em",
+     "artist": "Jeremih Featuring YG"
+    },
+    {
+     "rank": 8,
+     "song": "Wiggle",
+     "artist": "Jason Derulo Featuring Snoop Dogg"
+    },
+    {
+     "rank": 9,
+     "song": "Loyal",
+     "artist": "Chris Brown Feat. Lil Wayne & Tyga"
+    },
+    {
+     "rank": 10,
+     "song": "Studio",
+     "artist": "ScHoolboy Q Featuring BJ The Chicago Kid"
+    }
+   ]
+  }
+ ]
+}

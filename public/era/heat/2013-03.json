@@ -1,0 +1,286 @@
+{
+ "month": "2013-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20130315123326/http://www.hotnewhiphop.com:80/",
+   "captured": "2013-03-15",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Jonylah Forever",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 2,
+     "song": "Broken Dreams",
+     "artist": "Tsu Surf feat. Ab-Soul & Fred The Godson"
+    },
+    {
+     "rank": 3,
+     "song": "Rhyme Room",
+     "artist": "Yelawolf feat. Raekwon & Killer Mike"
+    },
+    {
+     "rank": 4,
+     "song": "Fully Loaded (Prod by Sak Pase)",
+     "artist": "Verse Simmonds"
+    },
+    {
+     "rank": 5,
+     "song": "Tennessee Love",
+     "artist": "Yelawolf"
+    },
+    {
+     "rank": 6,
+     "song": "Nite & Day",
+     "artist": "Marco Polo (Producer) feat. Big Daddy Kane"
+    },
+    {
+     "rank": 7,
+     "song": "Hella Bandz And Loud",
+     "artist": "King Louie"
+    },
+    {
+     "rank": 8,
+     "song": "Freaks (ReFix) (Prod By JButtah)",
+     "artist": "DJ Suss.One feat. French Montana, Nicki Minaj, Wyclef & Edley Shine"
+    },
+    {
+     "rank": 9,
+     "song": "B.I.T.C.H.",
+     "artist": "Tech N9ne feat. T-Pain"
+    },
+    {
+     "rank": 10,
+     "song": "Tron",
+     "artist": "The-Dream"
+    },
+    {
+     "rank": 11,
+     "song": "Paradise",
+     "artist": "Omarion"
+    },
+    {
+     "rank": 12,
+     "song": "Thank You (Freestyle)",
+     "artist": "AZ"
+    },
+    {
+     "rank": 13,
+     "song": "86 (Remix)",
+     "artist": "Raekwon feat. AZ & Altrina Renee"
+    },
+    {
+     "rank": 14,
+     "song": "A Good Look",
+     "artist": "Krayzie Bone"
+    },
+    {
+     "rank": 15,
+     "song": "Tunnel Vision",
+     "artist": "Bobby Capri feat. Sean Price"
+    },
+    {
+     "rank": 16,
+     "song": "Just Believe (Prod By Young Sam)",
+     "artist": "Young Sam"
+    },
+    {
+     "rank": 17,
+     "song": "110th Street",
+     "artist": "Square Off feat. Killa Kyleon"
+    },
+    {
+     "rank": 18,
+     "song": "Started From The Bottom (Freestyle)",
+     "artist": "Grafh"
+    },
+    {
+     "rank": 19,
+     "song": "Tapout",
+     "artist": "Birdman feat. Lil Wayne, Nicki Minaj, Mack Maine & Future"
+    },
+    {
+     "rank": 20,
+     "song": "Rich As Fuck (CDQ/Official Version)",
+     "artist": "Lil Wayne feat. 2 Chainz"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130301072917/http://hypem.com:80/popular/",
+   "captured": "2013-03-01",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Firefly",
+     "artist": "The White Panda"
+    },
+    {
+     "rank": 2,
+     "song": "1nce Again Bit Funk Remix",
+     "artist": "A Tribe Called Quest"
+    },
+    {
+     "rank": 3,
+     "song": "Attracting Flies",
+     "artist": "AlunaGeorge"
+    },
+    {
+     "rank": 4,
+     "song": "Watch Out For This (Bumaye) feat. Busy Signal, The Flexican & FS Green",
+     "artist": "Major Lazer"
+    },
+    {
+     "rank": 5,
+     "song": "Oceans",
+     "artist": "Crywolf & Ianborg"
+    },
+    {
+     "rank": 6,
+     "song": "Hate Street Dialogue Round Table Knights Searching For Sugar Man Edit",
+     "artist": "Rodriguez"
+    },
+    {
+     "rank": 7,
+     "song": "Safe And Sound Cash Cash Remix",
+     "artist": "Capital Cities"
+    },
+    {
+     "rank": 8,
+     "song": "Sacrilege",
+     "artist": "Yeah Yeah Yeahs"
+    },
+    {
+     "rank": 9,
+     "song": "Baby Breakbot Remix",
+     "artist": "Pnau"
+    },
+    {
+     "rank": 10,
+     "song": "Belispeak PatrickReza Remix",
+     "artist": "Purity Ring"
+    },
+    {
+     "rank": 11,
+     "song": "World on fire",
+     "artist": "The Royal Concept"
+    },
+    {
+     "rank": 12,
+     "song": "Crime (Radio Edit)*",
+     "artist": "Avicii & Project 46 feat. You & Daphne"
+    },
+    {
+     "rank": 13,
+     "song": "Dreamcatcher (feat. Jez Dior)",
+     "artist": "mdnt"
+    },
+    {
+     "rank": 14,
+     "song": "Sun Viceroy Remix",
+     "artist": "Two Door Cinema Club"
+    },
+    {
+     "rank": 15,
+     "song": "You Can Call Me Al Flight Facilities Edit",
+     "artist": "Paul Simon"
+    },
+    {
+     "rank": 16,
+     "song": "LOST IN TIME AMTRAC REMIX",
+     "artist": "AZARI & III"
+    },
+    {
+     "rank": 17,
+     "song": "Compliment Your Soul",
+     "artist": "Dan Croll"
+    },
+    {
+     "rank": 18,
+     "song": "Sideswiped",
+     "artist": "Astronauts, etc."
+    },
+    {
+     "rank": 19,
+     "song": "Down On Life",
+     "artist": "Elliphant"
+    },
+    {
+     "rank": 20,
+     "song": "Bright Whites",
+     "artist": "Kishi Bashi"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20130308144657/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2013-03-08",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Thrift Shop",
+     "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+    },
+    {
+     "rank": 2,
+     "song": "Started From The Bottom",
+     "artist": "Drake"
+    },
+    {
+     "rank": 3,
+     "song": "Suit & Tie",
+     "artist": "Justin Timberlake Featuring Jay Z"
+    },
+    {
+     "rank": 4,
+     "song": "Love Me",
+     "artist": "Lil Wayne Featuring Drake & Future"
+    },
+    {
+     "rank": 5,
+     "song": "F**kin Problems",
+     "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+    },
+    {
+     "rank": 6,
+     "song": "Girl On Fire",
+     "artist": "Alicia Keys Featuring Nicki Minaj"
+    },
+    {
+     "rank": 7,
+     "song": "Pour It Up",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 8,
+     "song": "Poetic Justice",
+     "artist": "Kendrick Lamar Featuring Drake"
+    },
+    {
+     "rank": 9,
+     "song": "Diamonds",
+     "artist": "Rihanna"
+    },
+    {
+     "rank": 10,
+     "song": "All Gold Everything",
+     "artist": "Trinidad James"
+    }
+   ]
+  }
+ ]
+}

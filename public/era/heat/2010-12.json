@@ -1,0 +1,346 @@
+{
+ "month": "2010-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "hotnewhiphop",
+   "genre": "hip-hop",
+   "label": "HotNewHipHop · Front page (newest first, editorial order, not a rank)",
+   "list": "front",
+   "capture": "https://web.archive.org/web/20101225091114/http://www.hotnewhiphop.com/",
+   "captured": "2010-12-25",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Play Your Part",
+     "artist": "Rick Ross feat. Wale, Meek Mill & Chester French"
+    },
+    {
+     "rank": 2,
+     "song": "She Crazy",
+     "artist": "Rick Ross feat. Aaliyah & Ne-Yo"
+    },
+    {
+     "rank": 3,
+     "song": "10 Bricks",
+     "artist": "Rick Ross feat. Birdman"
+    },
+    {
+     "rank": 4,
+     "song": "Oh Yeah (Tags)",
+     "artist": "Plies feat. Chris Brown"
+    },
+    {
+     "rank": 5,
+     "song": "Start It Up (Buddz Remix)",
+     "artist": "Collie Buddz"
+    },
+    {
+     "rank": 6,
+     "song": "Boy I Got A Plan",
+     "artist": "Plies"
+    },
+    {
+     "rank": 7,
+     "song": "Rolling Stone",
+     "artist": "Jay Rock feat. Kendrick Lamar, Ab-Soul & Schoolboy Q"
+    },
+    {
+     "rank": 8,
+     "song": "Ordinary Love Shit Part. 1",
+     "artist": "Joe Budden"
+    },
+    {
+     "rank": 9,
+     "song": "Here We Go Again",
+     "artist": "Governor feat. 50 Cent"
+    },
+    {
+     "rank": 10,
+     "song": "Word Is Flesh",
+     "artist": "Talib Kweli"
+    },
+    {
+     "rank": 11,
+     "song": "Alliance (Prod By Focus)",
+     "artist": "Kida feat. Chaundon, Sha Stimuli, Rapper Big Pooh, & Joe Scudda"
+    },
+    {
+     "rank": 12,
+     "song": "Roman's Revenge (Freestyle)",
+     "artist": "Los (Shooter)"
+    },
+    {
+     "rank": 13,
+     "song": "10 Feet (Prod. By Boola)",
+     "artist": "Peedi Crakk"
+    },
+    {
+     "rank": 14,
+     "song": "Twerk A Little (Prod By Polow Da Don)",
+     "artist": "Ciara"
+    },
+    {
+     "rank": 15,
+     "song": "Christmas in Harlem",
+     "artist": "Kanye West feat. Cam'ron, Jim Jones, Vado, Cyhi Da Prynce, Pusha-T, Musiq Soulchild, Teyana Taylor, Big Sean"
+    },
+    {
+     "rank": 16,
+     "song": "Retrosuperfuture",
+     "artist": "Rick Ross feat. Wiz Khalifa"
+    },
+    {
+     "rank": 17,
+     "song": "NY State Of Mind (Freestyle)",
+     "artist": "J. Cole"
+    },
+    {
+     "rank": 18,
+     "song": "Zoooovie",
+     "artist": "Reek Da Villian feat. Lloyd Banks"
+    },
+    {
+     "rank": 19,
+     "song": "Cocaine (Snippet)",
+     "artist": "Eminem feat. Alicia Keys"
+    },
+    {
+     "rank": 20,
+     "song": "May I (Official Version)",
+     "artist": "Trey Songz feat. Fabolous"
+    }
+   ]
+  },
+  {
+   "id": "hypem",
+   "genre": "indie",
+   "label": "Hype Machine · Popular",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101216071214/http://hypem.com:80/popular",
+   "captured": "2010-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Acid Raindrops",
+     "artist": "People Under the Stairs"
+    },
+    {
+     "rank": 2,
+     "song": "Mochi Beats",
+     "artist": "Money to Brightside (Lil Wayne + The K…"
+    },
+    {
+     "rank": 3,
+     "song": "Stuntin' with a Milli (Basic Physics Mashup)",
+     "artist": "Pretty Lights vs Lil' Wayne"
+    },
+    {
+     "rank": 4,
+     "song": "6'7 (ft. Cory Gunz)",
+     "artist": "Lil Wayne"
+    },
+    {
+     "rank": 5,
+     "song": "Hit The Top",
+     "artist": "People Under The Stairs"
+    },
+    {
+     "rank": 6,
+     "song": "Purp & Yellow (Remix)",
+     "artist": "Game Feat. Snoop Dogg & YG"
+    },
+    {
+     "rank": 7,
+     "song": "Cat Rats",
+     "artist": "Skrillex"
+    },
+    {
+     "rank": 8,
+     "song": "coming home feat skylar grey",
+     "artist": "Diddy Dirty Money"
+    },
+    {
+     "rank": 9,
+     "song": "Graceland (Paul Simon Cover)",
+     "artist": "The Tallest Man On Earth"
+    },
+    {
+     "rank": 10,
+     "song": "The Show Goes On",
+     "artist": "Lupe Fiasco"
+    },
+    {
+     "rank": 11,
+     "song": "Party and Bullshit in the USA Remix",
+     "artist": "Miley Cyrus and Notorious BIG"
+    },
+    {
+     "rank": 12,
+     "song": "Sun of a Gun",
+     "artist": "Oh Land"
+    },
+    {
+     "rank": 13,
+     "song": "Pursuit Of Happiness (Kid Cudi Cover)",
+     "artist": "Lissie"
+    },
+    {
+     "rank": 14,
+     "song": "Mastered (feat. Lupe Fiasco)",
+     "artist": "A-Trak"
+    },
+    {
+     "rank": 15,
+     "song": "Maybe",
+     "artist": "KiD CuDi"
+    },
+    {
+     "rank": 16,
+     "song": "Sister Winter",
+     "artist": "Sufjan Stevens"
+    },
+    {
+     "rank": 17,
+     "song": "Breakfast",
+     "artist": "Chiddy Bang ft. Kate Nash"
+    },
+    {
+     "rank": 18,
+     "song": "Walking On A Dream (RAC Mix)",
+     "artist": "Empire Of The Sun"
+    },
+    {
+     "rank": 19,
+     "song": "Youth Explosion",
+     "artist": "People Under The Stairs"
+    },
+    {
+     "rank": 20,
+     "song": "Still Sound",
+     "artist": "Toro Y Moi"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rap",
+   "genre": "hip-hop",
+   "label": "Billboard · Rap Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101217033832/http://www.billboard.com:80/charts/rap-songs",
+   "captured": "2010-12-17",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 2,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame"
+    },
+    {
+     "rank": 3,
+     "song": "Right Thru Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 4,
+     "song": "Right Above It",
+     "artist": "Lil Wayne Featuring Drake"
+    },
+    {
+     "rank": 5,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    },
+    {
+     "rank": 6,
+     "song": "Like A G6",
+     "artist": "Far*East Movement Featuring Cataracs & Dev"
+    },
+    {
+     "rank": 7,
+     "song": "Just A Dream",
+     "artist": "Nelly"
+    },
+    {
+     "rank": 8,
+     "song": "Make A Movie",
+     "artist": "Twista Featuring Chris Brown"
+    },
+    {
+     "rank": 9,
+     "song": "Fancy",
+     "artist": "Drake Featuring T.I. & Swizz Beatz"
+    },
+    {
+     "rank": 10,
+     "song": "Hey Baby (Drop It To The Flo...",
+     "artist": "Pitbull Featuring T-Pain"
+    }
+   ]
+  },
+  {
+   "id": "billboard_rnb",
+   "genre": "hip-hop",
+   "label": "Billboard · R&B/Hip-Hop Songs",
+   "list": "ranked",
+   "capture": "https://web.archive.org/web/20101216072324/http://www.billboard.com:80/charts/r-b-hip-hop-songs",
+   "captured": "2010-12-16",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Can't Be Friends",
+     "artist": "Trey Songz"
+    },
+    {
+     "rank": 2,
+     "song": "Aston Martin Music",
+     "artist": "Rick Ross Featuring Drake & Chrisette Michele"
+    },
+    {
+     "rank": 3,
+     "song": "No Hands",
+     "artist": "Waka Flocka Flame Featuring Roscoe Dash & Wale"
+    },
+    {
+     "rank": 4,
+     "song": "Deuces",
+     "artist": "Chris Brown Featuring Tyga & Kevin McCall"
+    },
+    {
+     "rank": 5,
+     "song": "Right Thru Me",
+     "artist": "Nicki Minaj"
+    },
+    {
+     "rank": 6,
+     "song": "What's My Name?",
+     "artist": "Rihanna Featuring Drake"
+    },
+    {
+     "rank": 7,
+     "song": "Lay It Down",
+     "artist": "Lloyd"
+    },
+    {
+     "rank": 8,
+     "song": "Whip My Hair",
+     "artist": "Willow"
+    },
+    {
+     "rank": 9,
+     "song": "Make A Movie",
+     "artist": "Twista Featuring Chris Brown"
+    },
+    {
+     "rank": 10,
+     "song": "Black And Yellow",
+     "artist": "Wiz Khalifa"
+    }
+   ]
+  }
+ ]
+}
