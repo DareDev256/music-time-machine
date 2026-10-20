@@ -51,7 +51,7 @@ describe("lanesOn", () => {
 
 describe("heatFor", () => {
   it("is null outside the crawl", () => {
-    expect(heatFor("2009-01")).toBeNull();
+    expect(heatFor("1999-01")).toBeNull(); // before the first archived blog month
     expect(heatFor("not-a-month")).toBeNull();
   });
   it("returns archived, linked lists inside it", () => {
