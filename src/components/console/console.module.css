@@ -56,3 +56,8 @@
   .top { flex-direction: column; }
   .readouts { justify-items: start; }
 }
+
+/* On a phone the landing frame is the cover plus labelled branches; the passing title would sit on top of them. */
+@media (max-width: 640px) {
+  .root[data-phase="landed"] .passing { display: none; }
+}

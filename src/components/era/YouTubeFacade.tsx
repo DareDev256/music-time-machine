@@ -31,7 +31,7 @@ export default function YouTubeFacade({ id, title }: { id: string; title: string
           <img
             src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
             alt=""
-            loading="lazy"
+            fetchPriority="high"
           />
           <span className={c.play}>
             <span aria-hidden className={c.tri} />
