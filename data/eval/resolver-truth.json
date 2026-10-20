@@ -1,0 +1,549 @@
+[
+ {
+  "q": "i dont like chif keef",
+  "song": "I Don't Like",
+  "artist": "Chief Keef",
+  "first_public": "2012-03-12",
+  "where": "youtube",
+  "accept_year_window": [
+   2012,
+   2012
+  ],
+  "source": "https://www.youtube.com/watch?v=2WcRXJ4piHg",
+  "genre": "hiphop"
+ },
+ {
+  "q": "look at me xxtentacion",
+  "song": "Look at Me!",
+  "artist": "XXXTentacion",
+  "first_public": "2015-12-30",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2015,
+   2017
+  ],
+  "source": "https://en.wikipedia.org/wiki/Look_at_Me!",
+  "tricky": "SoundCloud 2015, official DSP re-release later",
+  "genre": "hiphop"
+ },
+ {
+  "q": "gucci gang",
+  "song": "Gucci Gang",
+  "artist": "Lil Pump",
+  "first_public": "2017-08-27",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2017,
+   2017
+  ],
+  "source": "https://soundcloud.com/lilpump/lil-pump-gucci-gang-prod-bighead-gnealz",
+  "genre": "hiphop"
+ },
+ {
+  "q": "trap queen fetty wap",
+  "song": "Trap Queen",
+  "artist": "Fetty Wap",
+  "first_public": "2014-03",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2014,
+   2015
+  ],
+  "source": "https://en.wikipedia.org/wiki/Trap_Queen",
+  "tricky": "SoundCloud premiere Mar 2014, indie single 2014-04-22, major re-release 2014-12-15, peaked 2015",
+  "genre": "hiphop"
+ },
+ {
+  "q": "bobby shmurda hot n word song",
+  "song": "Hot N*gga",
+  "artist": "Bobby Shmurda",
+  "first_public": "2014-03-28",
+  "where": "youtube",
+  "accept_year_window": [
+   2014,
+   2014
+  ],
+  "source": "https://www.youtube.com/watch?v=pBXniiEgmMk",
+  "tricky": "explicit title censored differently across services",
+  "genre": "hiphop"
+ },
+ {
+  "q": "lucid dreams juice wrld",
+  "song": "Lucid Dreams",
+  "artist": "Juice WRLD",
+  "first_public": "2017-06-15",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2017,
+   2018
+  ],
+  "source": "https://en.wikipedia.org/wiki/Lucid_Dreams_(Juice_Wrld_song)",
+  "tricky": "SoundCloud 2017-06-15; official DSP 2018-05-04",
+  "genre": "hiphop"
+ },
+ {
+  "q": "that drake song hotline bling",
+  "song": "Hotline Bling",
+  "artist": "Drake",
+  "first_public": "2015-07-31",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2015,
+   2015
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hotline_Bling",
+  "tricky": "SoundCloud/OVO Radio drop July 2015; video Oct 19 2015",
+  "genre": "hiphop"
+ },
+ {
+  "q": "kendrick not like us",
+  "song": "Not Like Us",
+  "artist": "Kendrick Lamar",
+  "first_public": "2024-05-04",
+  "where": "dsp",
+  "accept_year_window": [
+   2024,
+   2024
+  ],
+  "source": "https://en.wikipedia.org/wiki/Not_Like_Us",
+  "genre": "hiphop"
+ },
+ {
+  "q": "rolling in the deap",
+  "song": "Rolling in the Deep",
+  "artist": "Adele",
+  "first_public": "2010-11-29",
+  "where": "dsp",
+  "accept_year_window": [
+   2010,
+   2011
+  ],
+  "source": "https://en.wikipedia.org/wiki/Rolling_in_the_Deep",
+  "genre": "pop"
+ },
+ {
+  "q": "shape of you 2017",
+  "song": "Shape of You",
+  "artist": "Ed Sheeran",
+  "first_public": "2017-01-06",
+  "where": "dsp",
+  "accept_year_window": [
+   2017,
+   2017
+  ],
+  "source": "https://en.wikipedia.org/wiki/Shape_of_You",
+  "genre": "pop"
+ },
+ {
+  "q": "call me maybe",
+  "song": "Call Me Maybe",
+  "artist": "Carly Rae Jepsen",
+  "first_public": "2011-09-20",
+  "where": "dsp",
+  "accept_year_window": [
+   2011,
+   2012
+  ],
+  "source": "https://en.wikipedia.org/wiki/Call_Me_Maybe",
+  "tricky": "released Canada 2011, global breakout 2012",
+  "genre": "pop"
+ },
+ {
+  "q": "rebecca black friday",
+  "song": "Friday",
+  "artist": "Rebecca Black",
+  "first_public": "2011-02-10",
+  "where": "youtube",
+  "accept_year_window": [
+   2011,
+   2011
+  ],
+  "source": "https://en.wikipedia.org/wiki/Friday_(Rebecca_Black_song)",
+  "tricky": "original YouTube upload Feb 10 2011 (removed June 2011); re-upload Sep 2011 and DSP 2011-03-14 are not first",
+  "genre": "pop"
+ },
+ {
+  "q": "hello adele",
+  "song": "Hello",
+  "artist": "Adele",
+  "first_public": "2015-10-23",
+  "where": "dsp",
+  "accept_year_window": [
+   2015,
+   2015
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+  "tricky": "very common title, artist decides (Lionel Richie 1984, Martin Solveig 2010, Evanescence 2003)",
+  "genre": "pop"
+ },
+ {
+  "q": "2002 anne marie",
+  "song": "2002",
+  "artist": "Anne-Marie",
+  "first_public": "2018-04-20",
+  "where": "dsp",
+  "accept_year_window": [
+   2018,
+   2018
+  ],
+  "source": "https://en.wikipedia.org/wiki/2002_(song)",
+  "tricky": "title is a year",
+  "genre": "pop"
+ },
+ {
+  "q": "crazy in love beyonce",
+  "song": "Crazy in Love",
+  "artist": "Beyonce",
+  "first_public": "2003-05-18",
+  "where": "dsp",
+  "accept_year_window": [
+   2003,
+   2003
+  ],
+  "source": "https://en.wikipedia.org/wiki/Crazy_in_Love",
+  "tricky": "physical/radio era single",
+  "genre": "rnb"
+ },
+ {
+  "q": "redbone childish gambino",
+  "song": "Redbone",
+  "artist": "Childish Gambino",
+  "first_public": "2016-11-17",
+  "where": "dsp",
+  "accept_year_window": [
+   2016,
+   2016
+  ],
+  "source": "https://en.wikipedia.org/wiki/Redbone_(song)",
+  "tricky": "single before album (2016-12-02); blew up 2017 via Get Out",
+  "genre": "rnb"
+ },
+ {
+  "q": "the weeknd what you need",
+  "song": "What You Need",
+  "artist": "The Weeknd",
+  "first_public": "2010-12",
+  "where": "youtube",
+  "accept_year_window": [
+   2010,
+   2011
+  ],
+  "source": "https://en.wikipedia.org/wiki/The_Weeknd",
+  "tricky": "anonymous YouTube upload Dec 2010 ('xoxxxoooxo'), then House of Balloons mixtape 2011-03-21",
+  "genre": "rnb"
+ },
+ {
+  "q": "no scrubs",
+  "song": "No Scrubs",
+  "artist": "TLC",
+  "first_public": "1999-02-02",
+  "where": "radio",
+  "accept_year_window": [
+   1999,
+   1999
+  ],
+  "source": "https://en.wikipedia.org/wiki/No_Scrubs",
+  "genre": "rnb"
+ },
+ {
+  "q": "tenessee whiskey chris stapleton",
+  "song": "Tennessee Whiskey",
+  "artist": "Chris Stapleton",
+  "first_public": "2015-04",
+  "where": "dsp",
+  "accept_year_window": [
+   2015,
+   2015
+  ],
+  "source": "https://www.youtube.com/watch?v=4zAThXFOy2c",
+  "tricky": "cover of 1981 David Allan Coe / 1983 George Jones; Stapleton official audio 2015-04-23, album Traveller 2015-05-05",
+  "genre": "country"
+ },
+ {
+  "q": "before he cheats carrie underwood",
+  "song": "Before He Cheats",
+  "artist": "Carrie Underwood",
+  "first_public": "2005-11-15",
+  "where": "physical",
+  "accept_year_window": [
+   2005,
+   2006
+  ],
+  "source": "https://en.wikipedia.org/wiki/Before_He_Cheats",
+  "tricky": "album track Some Hearts 2005-11-15, single Aug 2006",
+  "genre": "country"
+ },
+ {
+  "q": "friends in low places",
+  "song": "Friends in Low Places",
+  "artist": "Garth Brooks",
+  "first_public": "1990-08-06",
+  "where": "radio",
+  "accept_year_window": [
+   1990,
+   1990
+  ],
+  "source": "https://en.wikipedia.org/wiki/Friends_in_Low_Places",
+  "genre": "country"
+ },
+ {
+  "q": "old town road lil nas x",
+  "song": "Old Town Road",
+  "artist": "Lil Nas X",
+  "first_public": "2018-12-03",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2018,
+   2019
+  ],
+  "source": "https://en.wikipedia.org/wiki/Old_Town_Road",
+  "tricky": "SoundCloud Dec 2018, blew up via TikTok Mar 2019; Cyrus remix Apr 2019 is a different recording",
+  "genre": "country"
+ },
+ {
+  "q": "heat waves glass animals",
+  "song": "Heat Waves",
+  "artist": "Glass Animals",
+  "first_public": "2020-06-29",
+  "where": "dsp",
+  "accept_year_window": [
+   2020,
+   2021
+  ],
+  "source": "https://en.wikipedia.org/wiki/Heat_Waves_(song)",
+  "tricky": "released 2020, charted/blew up 2021-2022 (a year+ later)",
+  "genre": "rock"
+ },
+ {
+  "q": "smells like teen spirit",
+  "song": "Smells Like Teen Spirit",
+  "artist": "Nirvana",
+  "first_public": "1991-09-10",
+  "where": "physical",
+  "accept_year_window": [
+   1991,
+   1991
+  ],
+  "source": "https://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit",
+  "genre": "rock"
+ },
+ {
+  "q": "mr brightside the killers",
+  "song": "Mr. Brightside",
+  "artist": "The Killers",
+  "first_public": "2003-09-29",
+  "where": "physical",
+  "accept_year_window": [
+   2003,
+   2004
+  ],
+  "source": "https://en.wikipedia.org/wiki/Mr._Brightside",
+  "tricky": "UK single 2003, Hot Fuss 2004",
+  "genre": "rock"
+ },
+ {
+  "q": "seven nation army",
+  "song": "Seven Nation Army",
+  "artist": "The White Stripes",
+  "first_public": "2003-02-17",
+  "where": "physical",
+  "accept_year_window": [
+   2003,
+   2003
+  ],
+  "source": "https://en.wikipedia.org/wiki/Seven_Nation_Army",
+  "genre": "rock"
+ },
+ {
+  "q": "avicii levels",
+  "song": "Levels",
+  "artist": "Avicii",
+  "first_public": "2011-10-28",
+  "where": "dsp",
+  "accept_year_window": [
+   2011,
+   2011
+  ],
+  "source": "https://en.wikipedia.org/wiki/Levels_(Avicii_song)",
+  "genre": "dance"
+ },
+ {
+  "q": "alan walker faded",
+  "song": "Faded",
+  "artist": "Alan Walker",
+  "first_public": "2015-12-03",
+  "where": "dsp",
+  "accept_year_window": [
+   2015,
+   2015
+  ],
+  "source": "https://en.wikipedia.org/wiki/Faded_(Alan_Walker_song)",
+  "tricky": "video uploaded to YouTube the day after (2015-12-04)",
+  "genre": "dance"
+ },
+ {
+  "q": "skrillex scary monsters and nice sprites",
+  "song": "Scary Monsters and Nice Sprites",
+  "artist": "Skrillex",
+  "first_public": "2010-10-22",
+  "where": "dsp",
+  "accept_year_window": [
+   2010,
+   2011
+  ],
+  "source": "https://en.wikipedia.org/wiki/Scary_Monsters_and_Nice_Sprites_(song)",
+  "tricky": "early dubstep/brostep; EP 2010-10-22; official audio YouTube 2010-10-24",
+  "genre": "dance"
+ },
+ {
+  "q": "skream midnight request line",
+  "song": "Midnight Request Line",
+  "artist": "Skream",
+  "first_public": "2005-10-13",
+  "where": "physical",
+  "accept_year_window": [
+   2005,
+   2005
+  ],
+  "source": "https://musicbrainz.org/release-group/3a29c350-90a8-38d0-9b0d-799006d7145a",
+  "tricky": "early dubstep, Tempa 12 inch; YouTube uploads (2008+) and 2008 remixes are later",
+  "genre": "dance"
+ },
+ {
+  "q": "despasito luis fonsi",
+  "song": "Despacito",
+  "artist": "Luis Fonsi",
+  "first_public": "2017-01-13",
+  "where": "dsp",
+  "accept_year_window": [
+   2017,
+   2017
+  ],
+  "source": "https://en.wikipedia.org/wiki/Despacito",
+  "tricky": "Bieber remix Apr 2017 is a different release",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "soy peor bad bunny",
+  "song": "Soy Peor",
+  "artist": "Bad Bunny",
+  "first_public": "2016-12-08",
+  "where": "soundcloud",
+  "accept_year_window": [
+   2016,
+   2017
+  ],
+  "source": "https://en.wikipedia.org/wiki/Soy_Peor",
+  "tricky": "SoundCloud original 2016-12-08; remix feat. J Balvin etc 2017-06-22",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "calm down rema",
+  "song": "Calm Down",
+  "artist": "Rema",
+  "first_public": "2022-02-11",
+  "where": "dsp",
+  "accept_year_window": [
+   2022,
+   2022
+  ],
+  "source": "https://en.wikipedia.org/wiki/Calm_Down_(Rema_song)",
+  "tricky": "Selena Gomez remix Aug 2022 drove the global peak",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "last last burna boy",
+  "song": "Last Last",
+  "artist": "Burna Boy",
+  "first_public": "2022-05-13",
+  "where": "dsp",
+  "accept_year_window": [
+   2022,
+   2022
+  ],
+  "source": "https://en.wikipedia.org/wiki/Last_Last",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "stormzy shut up",
+  "song": "Shut Up",
+  "artist": "Stormzy",
+  "first_public": "2015-05-17",
+  "where": "youtube",
+  "accept_year_window": [
+   2015,
+   2015
+  ],
+  "source": "https://www.youtube.com/watch?v=RqQGUJK7Na4",
+  "tricky": "grime freestyle video on YouTube; DSP single 2015-09-11; blew up late 2015",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "doja central cee",
+  "song": "Doja",
+  "artist": "Central Cee",
+  "first_public": "2022-07-21",
+  "where": "youtube",
+  "accept_year_window": [
+   2022,
+   2022
+  ],
+  "source": "https://www.youtube.com/watch?v=_VuJA-VQRcY",
+  "tricky": "UK drill-influenced; Lyrical Lemonade video upload; audio on DSP followed",
+  "genre": "latin_afro_uk"
+ },
+ {
+  "q": "respect aretha franklin",
+  "song": "Respect",
+  "artist": "Aretha Franklin",
+  "first_public": "1967-04-10",
+  "where": "physical",
+  "accept_year_window": [
+   1967,
+   1967
+  ],
+  "source": "https://en.wikipedia.org/wiki/Respect_(Aretha_Franklin_recording)",
+  "tricky": "Otis Redding original is 1965 (different artist)",
+  "genre": "old"
+ },
+ {
+  "q": "billy jean",
+  "song": "Billie Jean",
+  "artist": "Michael Jackson",
+  "first_public": "1983-01-02",
+  "where": "physical",
+  "accept_year_window": [
+   1983,
+   1983
+  ],
+  "source": "https://en.wikipedia.org/wiki/Billie_Jean",
+  "genre": "old"
+ },
+ {
+  "q": "fast car tracy chapman",
+  "song": "Fast Car",
+  "artist": "Tracy Chapman",
+  "first_public": "1988-04-06",
+  "where": "physical",
+  "accept_year_window": [
+   1988,
+   1988
+  ],
+  "source": "https://en.wikipedia.org/wiki/Fast_Car",
+  "tricky": "cover by Luke Combs 2023 is a different release",
+  "genre": "old"
+ },
+ {
+  "q": "hey jude",
+  "song": "Hey Jude",
+  "artist": "The Beatles",
+  "first_public": "1968-08-26",
+  "where": "physical",
+  "accept_year_window": [
+   1968,
+   1968
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hey_Jude",
+  "genre": "old"
+ }
+]

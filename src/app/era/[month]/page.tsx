@@ -126,6 +126,10 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const conceived = born ? numberOneOn(addDays(date, -266)) : null;
   const industry = industryFor(Number(month.slice(0, 4)));
 
+  // Declared before the verdict below uses it (a later const here is a runtime ReferenceError, not a type error).
+  const mine = artist ? normTitle(primaryArtist(artist)) : null;
+  const isMine = (a: string) => !!mine && mine.length > 2 && normTitle(a).includes(mine);
+
   // Where was the visitor's song that week? The first answer a returning visitor wants.
   const songKey = song ? normTitle(song) : null;
   const sameSong = (t: string) => !!songKey && songKey.length > 1 && (normTitle(t) === songKey || normTitle(t).startsWith(songKey) || songKey.startsWith(normTitle(t)));
@@ -143,8 +147,6 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const anchorQ = { song, artist, sd: sd ?? undefined, ds: sd ? dsParam : undefined };
   const cardQ = new URLSearchParams({ ...(song ? { song } : {}), ...(artist ? { artist } : {}), date });
   const replay = `${SITE}/?${new URLSearchParams({ to: date, ...(song ? { song } : {}), ...(artist ? { artist } : {}) })}`;
-  const mine = artist ? normTitle(primaryArtist(artist)) : null;
-  const isMine = (a: string) => !!mine && mine.length > 2 && normTitle(a).includes(mine);
 
   return (
     <div className={s.page}>

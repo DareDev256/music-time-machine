@@ -1,0 +1,40 @@
+// Live journey as a visitor: type a song, Go, fly, land, arrive on the era page; report timings and
+// every console error, CSP violation and failed request. Exits 1 when the journey breaks.
+//   node scripts/qa/journey.mjs <baseUrl> "<query>" <width> <outPrefix>
+import { chromium } from 'playwright';
+const [base, query, w, out] = process.argv.slice(2);
+const width = +w || 390, height = width < 600 ? 844 : 900;
+const b = await chromium.launch({ args: ['--use-angle=metal', '--enable-gpu', '--ignore-gpu-blocklist'] });
+const p = await b.newPage({ viewport: { width, height }, deviceScaleFactor: width < 600 ? 3 : 1 });
+const problems = [];
+p.on('pageerror', (e) => problems.push(`pageerror: ${e}`));
+p.on('console', (m) => { if (m.type() === 'error' || /Content Security Policy|Refused/.test(m.text())) problems.push(`console: ${m.text().slice(0, 240)}`); });
+p.on('requestfailed', (r) => { const u = r.url(); if (!/favicon|_rsc=|\/era\/.*ERR_ABORTED/.test(u + r.failure()?.errorText)) problems.push(`requestfailed: ${u.slice(0, 140)} ${r.failure()?.errorText}`); });
+const t0 = Date.now();
+await p.goto(base, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await p.waitForSelector('canvas', { timeout: 20000 });
+await p.waitForTimeout(1500);
+await p.screenshot({ path: `${out}-${width}-1-console.png` });
+await p.fill('#q', query);
+await p.click('button[type=submit]');
+const tSubmit = Date.now();
+let broken = false;
+await p.waitForFunction(() => !document.querySelector('[aria-label^="Destination"]')?.textContent?.includes('--'), null, { timeout: 30000 }).catch(() => { broken = true; problems.push('destination never filled'); });
+const tResolved = Date.now();
+const dest = await p.$eval('[aria-label^="Destination"]', (e) => e.textContent).catch(() => null);
+await p.waitForTimeout(1600);
+await p.screenshot({ path: `${out}-${width}-2-flight.png` });
+await p.waitForFunction(() => document.querySelector('canvas')?.dataset.state === 'arrived', null, { timeout: 25000 }).catch(() => { broken = true; problems.push('never reached data-state=arrived'); });
+const tArrived = Date.now();
+await p.waitForTimeout(900);
+await p.screenshot({ path: `${out}-${width}-3-landed.png` });
+await p.waitForURL(/\/era\//, { timeout: 15000 }).catch(() => { broken = true; problems.push('did not navigate to /era/'); });
+const tEra = Date.now();
+await p.waitForLoadState('networkidle').catch(() => {});
+await p.waitForFunction(() => [...document.images].every((i) => i.complete), null, { timeout: 8000 }).catch(() => problems.push('an image never finished loading'));
+await p.screenshot({ path: `${out}-${width}-4-era.png` });
+const h1 = await p.$eval('h1', (e) => e.textContent).catch(() => null);
+console.log(JSON.stringify({ query, width, dest, h1, eraUrl: p.url(), ms: { resolve: tResolved - tSubmit, flight: tArrived - tResolved, landingHold: tEra - tArrived, total: tEra - t0 } }, null, 1));
+console.log(problems.length ? 'PROBLEMS:\n' + [...new Set(problems)].join('\n') : 'no console errors, CSP violations or failed requests');
+await b.close();
+process.exit(broken ? 1 : 0);
