@@ -33,6 +33,7 @@ describe.skipIf(!present)("resolver against the real index", () => {
       const d = process.cpuUsage(c);
       prepCpuMs = Math.min(prepCpuMs, (d.user + d.system) / 1000);
     }
+    console.info(`index build: ${rows.length} rows, ${Math.round(prepCpuMs)} ms CPU (best of 3)`);
   }, 60_000);
 
   const deps = () => {

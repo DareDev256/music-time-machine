@@ -27,3 +27,5 @@ const box = await p.evaluate(() => { const s = document.querySelector('#yt')?.cl
 if (box) await p.screenshot({ path: `${out}-${w}.png`, clip: { x: 0, y: box.y, width: Number(w), height: Math.min(box.h, 2400) }, fullPage: true });
 console.log(JSON.stringify({ ...facts, errors }, null, 1));
 await b.close();
+// Fails loud: no section, a page that scrolls sideways, or a console error.
+if (!facts.section || facts.pageOverflowX || errors.length) process.exitCode = 1;

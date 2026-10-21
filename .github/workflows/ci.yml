@@ -1,0 +1,36 @@
+# Every push: types, lint, the full suite and a production build, on GitHub's machine instead of the laptop.
+# No secrets: the YouTube rows (gitignored, 30-day policy) are absent here, so the suite runs on the committed index;
+# live-check.yml measures the deployed index with them.
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Types
+        run: npx tsc --noEmit
+      - name: Lint
+        run: npm run lint
+      - name: Tests
+        run: npm run test:ci
+      - name: Build
+        run: npm run build

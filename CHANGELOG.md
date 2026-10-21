@@ -15,6 +15,7 @@ All notable changes to the Music Time Machine project will be documented in this
 - A title the charts know beats YouTube-only uploads that share it when no artist is typed ("1999" is Prince).
 - `norm`'s ASCII fast path strips apostrophes before censored words, as the general path does ("Sh*t's").
 - The index build budget (1 s of CPU) is held on the best of three builds; on a shared Mac a single build swung 0.8 to 1.4 s.
+- Checks run on GitHub Actions instead of the laptop: `ci.yml` (types, lint, suite, build) on every push; `live-check.yml` after a deploy (the index budget with the live YouTube rows, and the section shot at 390 and 1440).
 - `.vercelignore` keeps the crawl cache and local experiments out of CLI deploys.
 
 ### Known gaps

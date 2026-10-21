@@ -1,0 +1,72 @@
+# After a deploy: the resolver's index budget on what is live (committed index + the crawl's YouTube rows), and the
+# "Where it broke" section as a visitor sees it at 390 and 1440, on GitHub's machine instead of the laptop.
+# index-yt.json is YouTube API data: fetched from the site for this run only, never committed or uploaded.
+name: Live check
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Site to check
+        default: https://music-time-machine.vercel.app
+      months:
+        description: Era pages to shoot (space-separated YYYY-MM)
+        default: 2012-03 2015-02 2019-06
+
+permissions:
+  contents: read
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      URL: ${{ inputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Fetch the live YouTube rows
+        run: |
+          [[ "$URL" =~ ^https://[a-z0-9.-]+$ ]] || { echo "url must be https://host"; exit 1; }
+          curl -fsS "$URL/era/index-yt.json" -o public/era/index-yt.json
+          node -e 'const n=require("./public/era/index-yt.json").rows.length; if(!n) throw new Error("no rows"); console.log(n, "YouTube rows")'
+      - name: Resolver against the live index
+        run: npx vitest run src/lib/era/__tests__/resolve.realindex.test.ts
+
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      URL: ${{ inputs.url }}
+      MONTHS: ${{ inputs.months }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Shoot each month at 390 and 1440
+        run: |
+          [[ "$URL" =~ ^https://[a-z0-9.-]+$ ]] || { echo "url must be https://host"; exit 1; }
+          mkdir -p shots
+          fail=0
+          for m in $MONTHS; do
+            [[ "$m" =~ ^[0-9]{4}-[0-9]{2}$ ]] || { echo "bad month $m"; exit 1; }
+            for w in 390 1440; do
+              node scripts/qa/yt-section.mjs "shots/$m" "$w" "$URL/era/$m" > "shots/$m-$w.json" || fail=1
+              cat "shots/$m-$w.json"
+            done
+          done
+          exit $fail
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: where-it-broke-shots
+          path: shots/
+          retention-days: 7
