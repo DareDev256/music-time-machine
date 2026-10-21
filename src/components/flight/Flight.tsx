@@ -13,7 +13,15 @@
 import { useEffect, useRef, type JSX } from "react";
 import { loadFlightDoc, passingAt, prepare, targetIndex, type PassingWeek } from "./data";
 import type { FlightBranch } from "./labels";
-import { createTunnel, type Tunnel } from "./tunnel";
+import type { Tunnel } from "./tunnel";
+
+// This module is small and loads first; it starts the week data and the three.js tunnel chunk at
+// once, in parallel, instead of fetching the data only after three.js has downloaded and run.
+const loadTunnel = () => import("./tunnel");
+if (typeof window !== "undefined") {
+  loadFlightDoc().catch(() => {});
+  loadTunnel().catch(() => {});
+}
 
 export interface FlightProps {
   /** ISO date (any day; lands on the chart week in force). null = idle drift at the newest weeks. */
@@ -29,6 +37,12 @@ export interface FlightProps {
    * listed are labelled with their name only; `mine` makes that branch glow red.
    */
   branches?: FlightBranch[];
+  /**
+   * True from the moment the visitor presses Go until the song resolves: the camera starts
+   * accelerating into the past at once and carries straight on into the flight when `target`
+   * arrives. If it goes false with no target, the camera eases back to the idle drift.
+   */
+  pending?: boolean;
 }
 
 export type { FlightBranch, PassingWeek };
@@ -44,11 +58,11 @@ const CANVAS_STYLE = {
   background: "#000",
 } as const;
 
-export default function Flight({ target, onPassing, onArrive, freeze, skipSignal, branches }: FlightProps): JSX.Element {
+export default function Flight({ target, onPassing, onArrive, freeze, skipSignal, branches, pending }: FlightProps): JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const tunnelRef = useRef<Tunnel | null>(null);
   const callbacks = useRef({ onPassing, onArrive });
-  const latest = useRef({ target, freeze, branches });
+  const latest = useRef({ target, freeze, branches, pending });
   const firstSkip = useRef(skipSignal);
 
   useEffect(() => {
@@ -61,8 +75,8 @@ export default function Flight({ target, onPassing, onArrive, freeze, skipSignal
     if (!canvas) return;
     let disposed = false;
     let tunnel: Tunnel | null = null;
-    loadFlightDoc()
-      .then((doc) => {
+    Promise.all([loadFlightDoc(), loadTunnel()])
+      .then(([doc, { createTunnel }]) => {
         if (disposed) return;
         const data = prepare(doc);
         try {
@@ -72,6 +86,7 @@ export default function Flight({ target, onPassing, onArrive, freeze, skipSignal
             target: latest.current.target,
             freeze: latest.current.freeze ?? null,
             branches: latest.current.branches,
+            pending: latest.current.pending,
             onPassing: (w) => callbacks.current.onPassing?.(w),
             onArrive: () => callbacks.current.onArrive?.(),
           });
@@ -108,6 +123,13 @@ export default function Flight({ target, onPassing, onArrive, freeze, skipSignal
       tunnelRef.current?.setFreeze(freeze ?? null);
     }
   }, [freeze]);
+
+  useEffect(() => {
+    if (latest.current.pending !== pending) {
+      latest.current.pending = pending;
+      tunnelRef.current?.setPending(!!pending);
+    }
+  }, [pending]);
 
   // compare by content: pages tend to pass a fresh array every render
   const branchKey = branches ? JSON.stringify(branches) : "";

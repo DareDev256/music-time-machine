@@ -21,10 +21,11 @@
 .passArtist { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
 .passRun { font-size: 11px; color: var(--signal); letter-spacing: .2em; text-transform: uppercase; }
 .enter { position: relative; overflow: hidden; font: 800 18px var(--font-display); font-stretch: 78%; letter-spacing: .12em; text-transform: uppercase;
-         background: #000; color: var(--ink); border: 1px solid var(--signal); padding: 16px 20px; cursor: pointer; }
-/* Fills over the landing hold (LAND_HOLD_MS in Console.tsx), so the jump to the era page is never a surprise. */
-.enterFill { position: absolute; inset: 0; background: var(--signal); transform-origin: left; animation: enterFill 2.2s linear forwards; }
-.enterText { position: relative; mix-blend-mode: difference; color: #fff; }
+         background: var(--signal); color: #000; border: 0; padding: 16px 20px 19px; cursor: pointer; }
+/* A black line fills along the bottom over the landing hold (LAND_HOLD_MS in Console.tsx), so the jump to the
+   era page is never a surprise. One accent only: no blend modes (difference turned the label cyan). */
+.enterFill { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #000; transform-origin: left; animation: enterFill 2.2s linear forwards; }
+.enterText { position: relative; }
 @keyframes enterFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .enterFill { animation: none; transform: scaleX(1); } }
 

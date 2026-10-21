@@ -6,7 +6,7 @@
 
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Readout, { segDate, plainDate } from "@/components/Readout";
 import type { FlightBranch, PassingWeek } from "@/components/flight/Flight";
 import { browserDeps, resolveQuery } from "@/lib/era/resolve";
@@ -29,6 +29,8 @@ const CHIPS: Array<{ label: string; q?: string; born?: boolean }> = [
 // How long the landed tree holds before the era page opens; the Enter button fills over the same time.
 const LAND_HOLD_MS = 2200;
 
+const subscribeNever = () => () => {};
+
 function eraUrl(d: Destination): string {
   const p = new URLSearchParams({ date: d.date });
   if (d.song) {
@@ -50,14 +52,18 @@ export default function Console({
   freeze?: number;
 }) {
   const router = useRouter();
-  const today = useMemo(() => localToday(), []);
+  // The visitor's date, never the server's: on a Toronto evening UTC is already tomorrow, and rendering the
+  // server's date made hydration fail (React #418). Read only in the browser; the server renders no date.
+  const today = useSyncExternalStore(subscribeNever, localToday, () => null);
+  // Only for clamping: before the browser date is known, nothing is "in the future".
+  const latest = today ?? "9999-12-31";
   // A shared link (/?to=…&song=…) replays the flight straight away: seed the state from it.
   const [dest, setDest] = useState<Destination | null>(() => {
     if (!initial?.to) return null;
     const song = initial.song && initial.artist
       ? { song: initial.song, artist: initial.artist, date: initial.to, granularity: "day" as Granularity, dateSource: "", where: [], onDsp: null }
       : undefined;
-    const date = initial.to < CHART_START ? CHART_START : initial.to > today ? today : initial.to;
+    const date = initial.to < CHART_START ? CHART_START : initial.to;
     return { date, granularity: "day", song, born: initial.born };
   });
   const [q, setQ] = useState("");
@@ -73,7 +79,7 @@ export default function Console({
   const landTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fly = useCallback((d: Destination) => {
-    const date = d.date < CHART_START ? CHART_START : d.date > today ? today : d.date;
+    const date = d.date < CHART_START ? CHART_START : d.date > latest ? latest : d.date;
     setDest({ ...d, date });
     setCandidates([]);
     setYearOption(null);
@@ -81,7 +87,7 @@ export default function Console({
     setMessage(null);
     setBranches(undefined);
     setPhase("flying");
-  }, [today]);
+  }, [latest]);
 
   // Label the tree's branches at the destination with that week's lane #1s.
   useEffect(() => {
@@ -155,7 +161,8 @@ export default function Console({
 
   return (
     <div className={s.root} data-phase={phase}>
-      <Flight target={dest?.date ?? null} onPassing={setPassing} onArrive={onArrive} freeze={freeze} skipSignal={skip} branches={branches} />
+      {/* pending: the camera starts falling back through time the moment Go is pressed, before the song resolves. */}
+      <Flight target={dest?.date ?? null} pending={phase === "resolving"} onPassing={setPassing} onArrive={onArrive} freeze={freeze} skipSignal={skip} branches={branches} />
 
       <div className={s.hud}>
         <header className={s.top}>
@@ -209,7 +216,7 @@ export default function Console({
           {askYear && (
             <form className={s.yearForm} onSubmit={(e) => { e.preventDefault(); const y = new FormData(e.currentTarget).get("year"); if (y) fly({ date: `${y}-06-15`, granularity: "year" }); }}>
               <label htmlFor="year" className="label">Pick the year instead</label>
-              <input id="year" name="year" type="number" min={1958} max={Number(today.slice(0, 4))} defaultValue={2012} className={s.yearInput} />
+              <input id="year" name="year" type="number" min={1958} max={Number(latest.slice(0, 4)) || undefined} defaultValue={2012} className={s.yearInput} />
               <button type="submit" className={s.go}>Fly</button>
             </form>
           )}
@@ -217,7 +224,7 @@ export default function Console({
           {bornOpen ? (
             <form className={s.form} onSubmit={(e) => { e.preventDefault(); const d = String(new FormData(e.currentTarget).get("born") ?? ""); if (/^\d{4}-\d{2}-\d{2}$/.test(d)) fly({ date: d, granularity: "day", born: true }); }}>
               <label htmlFor="born" className={s.srOnly}>Your birthday</label>
-              <input id="born" name="born" type="date" min={CHART_START} max={today} required className={s.input} />
+              <input id="born" name="born" type="date" min={CHART_START} max={today ?? undefined} required className={s.input} />
               <button type="submit" className={s.go}>Go</button>
             </form>
           ) : (

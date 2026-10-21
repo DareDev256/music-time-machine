@@ -1,26 +1,28 @@
 /**
- * The flight, composed as a timeline tree ("low-key Sacred Timeline"), seen
- * from the side.
+ * The flight, composed as a timeline tree ("low-key Sacred Timeline"),
+ * travelled from inside.
  *
- * - Time runs down world Y: the present at the top, the past below.
- * - TRUNK: the Hot 100 #1 line, a braid of thin red strands twisted round one
- *   spine, about a twist a year. Each #1 RUN's cover is pinned to the trunk at
- *   its height, facing the camera, so the covers stack into a column that
- *   recedes below (the Time Machine feel).
- * - LANES: each genre chart is a looser strand group running beside the trunk;
- *   flying back, a lane folds into the trunk at the week its chart began.
- * - The camera rides a three-quarter side view ~6 units off the trunk and
- *   descends as the weeks go back. Desktop: trunk in the right third; phone: centred.
- * - Landing: the other charts peel off the trunk at the landed week as limbs
- *   that rise and split, each ending in a labelled node, while the camera
- *   dollies back to ~30 units and tilts up so the whole tree is in frame, the
- *   landed cover lit in a red frame where the DOM HUD leaves room for it.
+ * - Time runs along -z. The camera rides inside the tree's volume, just off
+ *   the trunk's spine, travelling into the past; the trunk's red strands
+ *   (a loose helix, radius 2–6) sweep past near the lens.
+ * - Each #1 RUN's cover is pinned to the trunk at its week, facing the camera,
+ *   so covers come out of depth, pass close to the lens and go behind: the
+ *   Time Machine stack.
+ * - Each genre chart leaves the trunk in the week it began and splits 3–5 ways
+ *   at its own angles and lengths (tree.ts).
+ * - Arrival: the camera travels out along the destination week's branch, then
+ *   pulls back and tilts so the tree stands upright in frame (present up),
+ *   only the destination branch lit red, its cover in a thin red frame, the
+ *   other charts' branches labelled in the space the page's HUD leaves free.
+ *   It keeps drifting slowly while it holds.
+ * - `pending` (the visitor pressed Go, the song is still resolving) starts the
+ *   camera accelerating into the past; the flight picks up from there.
  *
  * Budget: POOL_SIZE cover meshes recycled as the camera passes (pool.ts),
  * proximity texture loading through an LRU (textures.ts), every strand of the
  * tree in ONE draw call (curves evaluated in the vertex shader over a sliding
- * window, nothing rebuilt per frame), pooled rings, no lights, no shadows, no
- * post-processing, nothing rendered while hidden or still.
+ * window), pooled rings, no lights, no shadows, no post-processing, nothing
+ * rendered while the tab is hidden.
  *
  * No React here. Flight.tsx owns the lifecycle.
  */
@@ -40,6 +42,7 @@ import {
   PlaneGeometry,
   Points,
   PointsMaterial,
+  Quaternion,
   RingGeometry,
   Scene,
   ShaderMaterial,
@@ -50,11 +53,23 @@ import {
   type CanvasTexture,
   type IUniform,
 } from "three";
-import { ease, easeVelocity, flightDuration, warp, yearsBetween } from "./easing";
+import { ease, flightDuration, warp, yearsBetween } from "./easing";
+import { flightPlan, prerollPlan } from "./plan";
 import { firstGateAtOrAfter, passingAt, runsBetween, targetIndex, type FlightData, type PassingWeek } from "./data";
 import { POOL_SIZE, SlotTable, slotOf } from "./pool";
-import { BRAID_R, buildThreads, GLSL_TREE, groupAt, LANES, presence, SP, spineX, spineZ, type Thread } from "./tree";
-import { canopyFrame, drawBranchLabel, shortLabel, type FlightBranch, type LabelSprite, type Point } from "./labels";
+import { buildThreads, GLSL_TREE, groupAt, hash, LANES, presence, SP, spineX, spineY, type Thread } from "./tree";
+import {
+  canopyFrame,
+  drawBranchLabel,
+  hudZones,
+  labelBox,
+  PHONE_MAX_LABELS,
+  pickBranches,
+  shortLabel,
+  type FlightBranch,
+  type Point,
+  type Rect,
+} from "./labels";
 import {
   awaitFonts,
   canvasFonts,
@@ -70,43 +85,45 @@ export { SP };
 
 const FOV = 62;
 const RING_POOL = 6;
-const IDLE_SPEED = 0.6; // units per second
-const IDLE_WEEKS = 156; // the most recent ~3 years
-const FADE_MS = 320;
-const IDLE_FADE_S = 1.6;
-/** Covers the camera passes slower than this (units/s) are on screen long enough to be worth fetching. */
-const LOAD_SPEED = 320;
-const START_PRELOAD = 40;
-const PRELOAD_TIMEOUT_MS = 700;
-const BEHIND_WEEKS = 4;
-const AHEAD_WEEKS = 44;
-/** Weeks either side of the destination fetched first at launch: the landing must be complete. */
+const IDLE_SPEED = 0.7; // units per second
+const IDLE_SPAN = 156 * SP; // the most recent ~3 years
+const FADE_MS = 360;
+const IDLE_FADE_S = 1.4;
+const PRE_SPEED = 110; // units per second the camera reaches while a search resolves
+const BLEND_S = 0.55; // pre-roll → flight hand-over
+/** A cold shared link waits (drifting) up to this long for the first covers before it launches. */
+const LAUNCH_WAIT_MS = 1600;
+/** ...and launches early once the covers due in this much of the flight are 85% in. */
+const LAUNCH_READY_MS = 2000;
+/** A search that resolves mid pre-roll keeps falling back up to this long for its first covers. */
+const PRE_GATE_MS = 700;
+const PRE_READY_MS = 1500;
+const BEHIND_WEEKS = 2;
+const AHEAD_WEEKS = 80;
 const LANDING_BEHIND = 8;
 const LANDING_AHEAD = 30;
-const THREAD_WIN = 62; // world units of tree drawn below the window top
-const THREAD_SEG = 0.31;
-const PARTICLE_WIN = 44;
-const NODE_INSET = 0.07;
+const THREAD_WIN = 104;
+const THREAD_SEG = 0.5;
+const PARTICLE_WIN = 90;
+const NODE_INSET = 0.05;
+const COVER = 0.92; // cover width (world units)
+const RING_R = 1.85;
 
-// ride camera: three-quarter side view, above the focal week, looking down the trunk
-const AZ = 0.62; // azimuth of the camera round the trunk (radians)
-const RIDE_HD = 5.6; // horizontal distance from the trunk: ~6 units off it
-const RIDE_H = 2.4; // height above the focal week
-const LOOK_DROP = 3.0; // a 44° look down the trunk: the column recedes below, still reads vertical
-const RIDE_SHIFT_X = 0.34; // desktop: lens shift puts the trunk in the right third, still vertical
-// landing camera: dolly back and tilt up
-const FINAL_D = 30;
-const FINAL_EL = 0.1;
-const FOG_RIDE: [number, number] = [8, 30];
-const FOG_FINAL: [number, number] = [22, 86];
+// ride camera: inside the trunk, off its spine, looking down the time axis
+const OFF_X = 1.45;
+const OFF_Y = 0.6;
+const LOOK_AHEAD = 16;
+const FOG_RIDE: [number, number] = [6, 82];
+const FOG_FINAL: [number, number] = [28, 150];
 
-type Mode = "idle" | "preload" | "flying" | "arrived";
+type Mode = "idle" | "preroll" | "return" | "preload" | "flying" | "arrived";
 
 export interface TunnelOptions {
   canvas: HTMLCanvasElement;
   data: FlightData;
   target: string | null;
   freeze: number | null;
+  pending?: boolean;
   branches?: FlightBranch[];
   onPassing?: (w: PassingWeek) => void;
   onArrive?: () => void;
@@ -116,28 +133,9 @@ export interface Tunnel {
   setTarget(date: string | null): void;
   setFreeze(p: number | null): void;
   setBranches(b: FlightBranch[] | undefined): void;
+  setPending(p: boolean): void;
   skip(): void;
   dispose(): void;
-}
-
-/** progress p such that ease(p) ≈ f, from a 512-step lookup table (ease is monotonic). */
-function makeInverseEase() {
-  const N = 512;
-  const lut = new Float64Array(N + 1);
-  for (let k = 0; k <= N; k++) lut[k] = ease(k / N);
-  return (f: number) => {
-    if (f <= 0) return 0;
-    if (f >= 1) return 1;
-    let lo = 0;
-    let hi = N;
-    while (hi - lo > 1) {
-      const mid = (lo + hi) >> 1;
-      if (lut[mid] < f) lo = mid;
-      else hi = mid;
-    }
-    const span = lut[hi] - lut[lo] || 1;
-    return (lo + (f - lut[lo]) / span) / N;
-  };
 }
 
 /** Deterministic PRNG so frozen frames are identical run to run. */
@@ -164,46 +162,44 @@ const STRAND_ATTRS = /* glsl */ `
 attribute vec4 aA;
 attribute vec4 aB;
 attribute vec4 aC;
-attribute float aK;
+attribute vec4 aD;
 uniform vec4 uCol[NC];
-uniform float uLaneScale;
-uniform float uBraid;
 `;
 
 const THREAD_VERT = /* glsl */ `
 ${STRAND_ATTRS}
-uniform float uY0;
+uniform float uZ0;
 uniform float uWin;
 uniform float uPxK;
-uniform float uHalfW;
 attribute float aS;
 attribute float aSide;
 varying float vSide;
 varying float vI;
 varying vec3 vCol;
 varying float vDepth;
-varying float vY;
+varying float vZ;
 ${GLSL_TREE}
 void main() {
-  float y = uY0 - aS * uWin;
-  vY = y;
-  float pres; float pres2;
-  vec3 P = strandPos(aA, aB, aC, aK, y, uLaneScale, uBraid, pres);
-  vec3 Q = strandPos(aA, aB, aC, aK, y - 0.25, uLaneScale, uBraid, pres2);
+  float z = uZ0 - aS * uWin;
+  vZ = z;
+  float vis; float vis2;
+  vec3 P = strandPos(aA, aB, aC, aD, z, vis);
+  vec3 Q = strandPos(aA, aB, aC, aD, z - 0.4, vis2);
   vec4 mvP = modelViewMatrix * vec4(P, 1.0);
   vec4 mvQ = modelViewMatrix * vec4(Q, 1.0);
   vec3 side = cross(normalize(mvQ.xyz - mvP.xyz), normalize(mvP.xyz));
   float sl = length(side);
   side = sl > 1e-5 ? side / sl : vec3(1.0, 0.0, 0.0);
   float depth = max(0.05, -mvP.z);
-  float halfW = max(uHalfW, aB.w * uPxK * depth);
+  float halfW = max(0.0025, aD.z * uPxK * depth);
   mvP.xyz += side * aSide * halfW;
   gl_Position = projectionMatrix * mvP;
   vSide = aSide;
   vDepth = depth;
-  int ci = int(aC.w + 0.5);
+  int ci = int(aD.w + 0.5);
   vCol = uCol[ci].rgb;
-  vI = aB.z * uCol[ci].w * (aK < 0.5 ? 1.0 : pres);
+  // strands right at the lens are only a soft sweep, never a bar across the frame
+  vI = aD.y * uCol[ci].w * vis * smoothstep(0.25, 1.4, depth);
 }
 `;
 
@@ -217,14 +213,14 @@ varying float vSide;
 varying float vI;
 varying vec3 vCol;
 varying float vDepth;
-varying float vY;
+varying float vZ;
 void main() {
   float d = abs(vSide);
   float core = 1.0 - smoothstep(0.22, 0.42, d);
-  float glow = exp(-d * d * 6.0) * 0.36;
+  float glow = exp(-d * d * 6.0) * 0.34;
   float fog = 1.0 - smoothstep(uFogNear, uFogFar, vDepth);
-  // on landing, the tree above the landed week dims: its canopy is the other charts' limbs
-  float cut = 1.0 - uCutK * 0.94 * smoothstep(uCut + 0.2, uCut + 2.2, vY);
+  // landed: the tree after the destination week dims, so the landed moment is the crown
+  float cut = 1.0 - uCutK * 0.82 * smoothstep(uCut + 0.5, uCut + 5.0, vZ);
   float i = (core + glow) * vI * fog * uFade * cut;
   if (i < 0.002) discard;
   gl_FragColor = vec4(vCol, i);
@@ -243,22 +239,22 @@ attribute float aEnd;
 varying float vI;
 varying vec3 vCol;
 varying float vDepth;
-varying float vY;
+varying float vZ;
 varying float vSide;
 ${GLSL_TREE}
 void main() {
-  float yy = uTop - mod(aSeed + uTop + uFlow, uPWin);
-  float y = yy + (aEnd - 0.5) * uLen;
-  vY = y;
+  float zz = uTop - mod(aSeed + uTop + uFlow, uPWin);
+  float z = zz - aEnd * uLen;
+  vZ = z;
   vSide = 0.0;
-  float pres;
-  vec3 P = strandPos(aA, aB, aC, aK, y, uLaneScale, uBraid, pres);
+  float vis;
+  vec3 P = strandPos(aA, aB, aC, aD, z, vis);
   vec4 mv = modelViewMatrix * vec4(P, 1.0);
   gl_Position = projectionMatrix * mv;
   vDepth = -mv.z;
-  int ci = int(aC.w + 0.5);
+  int ci = int(aD.w + 0.5);
   vCol = uCol[ci].rgb;
-  vI = (aK < 0.5 ? 1.0 : pres) * (aB.z * 1.6 + 0.25) * uCol[ci].w;
+  vI = vis * (aD.y * 1.5 + 0.2) * uCol[ci].w * (aEnd > 0.5 ? 0.25 : 1.0) * smoothstep(0.6, 3.0, vDepth);
 }
 `;
 
@@ -272,40 +268,52 @@ uniform float uCutK;
 varying float vI;
 varying vec3 vCol;
 varying float vDepth;
-varying float vY;
+varying float vZ;
 varying float vSide;
 void main() {
   float fog = 1.0 - smoothstep(uFogNear, uFogFar, vDepth);
-  float cut = 1.0 - uCutK * smoothstep(uCut + 0.2, uCut + 2.2, vY);
-  float i = vI * fog * uFade * cut * (0.3 + 0.7 * uWarp);
+  float cut = 1.0 - uCutK * smoothstep(uCut + 0.5, uCut + 5.0, vZ);
+  float i = vI * fog * uFade * cut * (0.25 + 0.75 * uWarp);
   if (i < 0.003) discard;
   gl_FragColor = vec4(vCol, i);
   #include <colorspace_fragment>
 }
 `;
 
-const CANOPY_VERT = /* glsl */ `
+// limbs drawn at landing: a polyline ribbon that faces whatever the camera is doing
+const LIMB_VERT = /* glsl */ `
 uniform vec4 uCol[NC];
+uniform float uPxK;
+uniform float uGrowA;
+uniform float uGrowB;
+attribute vec3 aNext;
 attribute float aSide;
 attribute float aT;
 attribute float aCi;
+attribute float aW;
+attribute float aAlpha;
+attribute float aStage;
 varying float vSide;
 varying float vI;
 varying vec3 vCol;
 varying float vDepth;
-varying float vY;
-uniform float uGrow;
+varying float vZ;
 void main() {
-  vec4 mv = modelViewMatrix * vec4(position, 1.0);
-  gl_Position = projectionMatrix * mv;
+  vec4 mvP = modelViewMatrix * vec4(position, 1.0);
+  vec4 mvQ = modelViewMatrix * vec4(aNext, 1.0);
+  vec3 side = cross(normalize(mvQ.xyz - mvP.xyz + vec3(1e-6)), normalize(mvP.xyz));
+  float sl = length(side);
+  side = sl > 1e-5 ? side / sl : vec3(1.0, 0.0, 0.0);
+  float depth = max(0.05, -mvP.z);
+  mvP.xyz += side * aSide * max(0.003, aW * uPxK * depth);
+  gl_Position = projectionMatrix * mvP;
   vSide = aSide;
-  vDepth = -mv.z;
-  vY = -1e9;
+  vDepth = depth;
+  vZ = -1e9;
   int ci = int(aCi + 0.5);
   vCol = uCol[ci].rgb;
-  // limbs grow out of the trunk: visible up to uGrow along their length, a bright growing tip
-  float g = 1.0 - smoothstep(uGrow - 0.05, uGrow, aT);
-  vI = g * (0.55 + 0.45 * aT) * uCol[ci].w * 1.4;
+  float grow = aStage < 0.5 ? uGrowA : uGrowB;
+  vI = (1.0 - smoothstep(grow - 0.06, grow, aT)) * aAlpha;
 }
 `;
 
@@ -320,12 +328,13 @@ void main() {
 }
 `;
 
-// The quad holds the cover inset by uInset on every side; the margin carries a thin edge and its glow.
+// The cover with a thin flat edge (no glow): the quad holds the cover inset by uInset.
 const NODE_FRAG = /* glsl */ `
 uniform sampler2D map;
+uniform sampler2D map2;
+uniform float uMix;
 uniform float uInset;
 uniform float uLine;
-uniform float uGlow;
 uniform vec3 uEdge;
 uniform float uEdgeA;
 uniform float uBright;
@@ -338,22 +347,20 @@ varying vec2 vUv;
 varying float vDepth;
 void main() {
   vec2 q = (vUv - uInset) / (1.0 - 2.0 * uInset);
+  bool inside = q.x >= 0.0 && q.x <= 1.0 && q.y >= 0.0 && q.y <= 1.0;
   vec2 out2 = max(vec2(0.0), max(-q, q - 1.0));
   float outside = length(out2);
-  bool inside = outside <= 0.0;
-  float toEdge = inside ? min(min(q.x, 1.0 - q.x), min(q.y, 1.0 - q.y)) : outside;
-  float line = 1.0 - smoothstep(uLine * 0.5, uLine, toEdge);
-  float maxOut = uInset / (1.0 - 2.0 * uInset);
-  float glow = inside ? 0.0 : exp(-outside * uGlow) * 0.55 * (1.0 - smoothstep(maxOut * 0.45, maxOut, outside));
   vec3 col;
   float a;
   if (inside) {
-    col = texture2D(map, q).rgb * uBright;
-    col = mix(col, uEdge, line * uEdgeA);
+    // the slot's sleeve (map) crossfades to its art (map2) as the art arrives
+    col = mix(texture2D(map, q).rgb, texture2D(map2, q).rgb, uMix) * uBright;
     a = 1.0;
   } else {
+    // a flat frame just outside the art
+    float frame = 1.0 - step(uLine, outside);
     col = uEdge;
-    a = clamp(line * uEdgeA + glow * uEdgeA, 0.0, 1.0);
+    a = frame * uEdgeA;
   }
   float fog = 1.0 - uFogK * smoothstep(uFogNear, uFogFar, vDepth);
   a *= uOpacity;
@@ -382,8 +389,8 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   scene.background = new Color(0x000000);
   const fog = new Fog(0x000000, FOG_RIDE[0], FOG_RIDE[1]);
   scene.fog = fog;
-  const camera = new PerspectiveCamera(FOV, 1, 0.1, 400);
-  const solver = new PerspectiveCamera(FOV, 1, 0.1, 400); // plans the landing frame
+  const camera = new PerspectiveCamera(FOV, 1, 0.08, 500);
+  const solver = new PerspectiveCamera(FOV, 1, 0.08, 500); // plans the landing frame
   const overlay = new Scene();
   const ortho = new OrthographicCamera(0, 1, 1, 0, -10, 10);
 
@@ -393,58 +400,62 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   let fonts: CanvasFonts = canvasFonts();
   let disposed = false;
   let stamp = 0;
+  let hud: Rect[] = [];
 
   const shared = {
     uFogNear: { value: FOG_RIDE[0] } as IUniform<number>,
     uFogFar: { value: FOG_RIDE[1] } as IUniform<number>,
-    uFade: { value: 0 } as IUniform<number>,
+    uFade: { value: 1 } as IUniform<number>,
     uCut: { value: 0 } as IUniform<number>,
     uCutK: { value: 0 } as IUniform<number>,
   };
 
-  // ---------- colours: slot 0 trunk, 1..8 lanes, 9 offshoots ----------
-  const trunkColor = new Color(SIGNAL);
-  const inkColor = new Color(INK);
-  const NC = LANES.length + 2;
+  // ---------- colours: slot 0 trunk, 1..8 lanes, 9 offshoots, 10 the destination branch ----------
+  const red = new Color(SIGNAL);
+  const ink = new Color(INK);
+  const NC = LANES.length + 3;
+  const DEST_SLOT = LANES.length + 2;
   const uCol = Array.from({ length: NC }, (_, i) => {
-    const c = i === 0 ? trunkColor : inkColor;
+    const c = i === 0 || i === DEST_SLOT ? red : ink;
     return new Vector4(c.r, c.g, c.b, 1);
   });
-  const colorUniforms = { uCol: { value: uCol }, uLaneScale: { value: narrow ? 0.55 : 1 }, uBraid: { value: narrow ? 0.7 : 1 } };
+  const colorUniforms = { uCol: { value: uCol } };
 
-  // ---------- the tree: trunk braid + lanes + offshoots, one draw call ----------
+  // ---------- the tree: one draw call ----------
   const threads: Thread[] = buildThreads(data);
   const NT = threads.length;
-  const laneFirst = new Map<string, Thread>();
-  threads.forEach((t) => t.lane && !laneFirst.has(t.lane) && laneFirst.set(t.lane, t));
-  const kindOf = (t: Thread) => (t.kind === "trunk" ? 0 : t.kind === "lane" ? 1 : 2);
+  const laneFork0 = new Map<string, Thread>();
+  threads.forEach((t) => t.lane && t.fork === 0 && !laneFork0.has(t.lane) && laneFork0.set(t.lane, t));
 
   function strandAttributes(geo: BufferGeometry, threadOf: (v: number) => Thread, n: number) {
     const aA = new Float32Array(n * 4);
     const aB = new Float32Array(n * 4);
     const aC = new Float32Array(n * 4);
-    const aK = new Float32Array(n);
+    const aD = new Float32Array(n * 4);
     for (let v = 0; v < n; v++) {
       const t = threadOf(v);
       const o = v * 4;
-      aA[o] = t.laneR;
-      aA[o + 1] = t.lanePhase;
-      aA[o + 2] = t.lanePitch;
-      aA[o + 3] = t.strandR;
-      aB[o] = t.strandPhase;
-      aB[o + 1] = t.strandPitch;
-      aB[o + 2] = t.alpha;
-      aB[o + 3] = t.minPx;
-      aC[o] = t.yOld;
-      aC[o + 1] = t.yNew;
-      aC[o + 2] = t.merge;
-      aC[o + 3] = t.color;
-      aK[v] = kindOf(t);
+      aA[o] = t.R;
+      aA[o + 1] = t.ang0;
+      aA[o + 2] = t.angPitch;
+      aA[o + 3] = t.rAmp;
+      aB[o] = t.rFreq;
+      aB[o + 1] = t.rPhase;
+      aB[o + 2] = t.sR;
+      aB[o + 3] = t.sPhase;
+      aC[o] = t.sPitch;
+      aC[o + 1] = t.zStart;
+      aC[o + 2] = t.spread;
+      aC[o + 3] = t.zEnd;
+      aD[o] = t.fadeLen;
+      aD[o + 1] = t.alpha;
+      aD[o + 2] = t.minPx;
+      aD[o + 3] = t.color;
     }
     geo.setAttribute("aA", new BufferAttribute(aA, 4));
     geo.setAttribute("aB", new BufferAttribute(aB, 4));
     geo.setAttribute("aC", new BufferAttribute(aC, 4));
-    geo.setAttribute("aK", new BufferAttribute(aK, 1));
+    geo.setAttribute("aD", new BufferAttribute(aD, 4));
   }
 
   const SEGS = Math.round(THREAD_WIN / THREAD_SEG);
@@ -475,16 +486,10 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     strandAttributes(threadGeo, (v) => threads[Math.floor(v / vPer)], n);
     threadGeo.setIndex(new BufferAttribute(index, 1));
   }
+  const pxK = { value: 0.001 } as IUniform<number>;
   const threadMat = new ShaderMaterial({
     defines: { NC },
-    uniforms: {
-      ...colorUniforms,
-      uY0: { value: 0 },
-      uWin: { value: THREAD_WIN },
-      uPxK: { value: 0.001 },
-      uHalfW: { value: 0.003 },
-      ...shared,
-    },
+    uniforms: { ...colorUniforms, uZ0: { value: 0 }, uWin: { value: THREAD_WIN }, uPxK: pxK, ...shared },
     vertexShader: THREAD_VERT,
     fragmentShader: GLOW_FRAG,
     transparent: true,
@@ -503,18 +508,14 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     const rand = mulberry32(256);
     const trunk = threads.filter((t) => t.kind === "trunk");
     const lanes = threads.filter((t) => t.kind === "lane");
-    const offs = threads.filter((t) => t.kind === "offshoot");
     const pick: Thread[] = [];
-    for (let i = 0; i < 170; i++) pick.push(trunk[Math.floor(rand() * trunk.length)]);
-    for (let i = 0; i < 260; i++) pick.push(lanes[Math.floor(rand() * lanes.length)]);
-    for (let i = 0; i < 30; i++) pick.push(offs[Math.floor(rand() * offs.length)]);
+    for (let i = 0; i < 260; i++) pick.push(trunk[Math.floor(rand() * trunk.length)]);
+    for (let i = 0; i < 220; i++) pick.push(lanes[Math.floor(rand() * lanes.length)]);
     const n = pick.length * 2;
     const aSeed = new Float32Array(n);
     const aEnd = new Float32Array(n);
     for (let p = 0; p < pick.length; p++) {
-      const seed = rand() * PARTICLE_WIN;
-      aSeed[p * 2] = aSeed[p * 2 + 1] = seed;
-      aEnd[p * 2] = 0;
+      aSeed[p * 2] = aSeed[p * 2 + 1] = rand() * PARTICLE_WIN;
       aEnd[p * 2 + 1] = 1;
     }
     particleGeo.setAttribute("position", new BufferAttribute(new Float32Array(n * 3), 3));
@@ -539,7 +540,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     depthWrite: false,
     blending: AdditiveBlending,
   });
-  const particles = new LineSegments(particleGeo, particleMat); // GL lines that stretch with the warp
+  const particles = new LineSegments(particleGeo, particleMat);
   particles.frustumCulled = false;
   particles.renderOrder = 2;
   scene.add(particles);
@@ -548,14 +549,15 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   const store = new CoverStore(data, () => fonts, () => requestRender());
   const quadGeo = new PlaneGeometry(1, 1);
   type NodeMat = ShaderMaterial & { uniforms: Record<string, IUniform> };
-  const blank = yearLabelTexture(); // never sampled: nodes stay hidden until their cover is ready
-  function nodeMaterial(edge: Color, edgeA: number, line: number, glow: number): NodeMat {
+  const blank = store.blank; // a plain sleeve: no slot is ever empty
+  function nodeMaterial(edge: Color, edgeA: number, line: number): NodeMat {
     return new ShaderMaterial({
       uniforms: {
         map: { value: blank },
+        map2: { value: blank },
+        uMix: { value: 0 },
         uInset: { value: NODE_INSET },
         uLine: { value: line },
-        uGlow: { value: glow },
         uEdge: { value: edge },
         uEdgeA: { value: edgeA },
         uBright: { value: 1 },
@@ -572,13 +574,14 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       blending: NormalBlending,
     }) as NodeMat;
   }
-  const nodeEdge = new Color(INK);
   const nodes: Mesh<PlaneGeometry, NodeMat>[] = [];
-  const nodeY = new Float32Array(POOL_SIZE);
+  const nodePos = Array.from({ length: POOL_SIZE }, () => new Vector3());
   const nodeSize = new Float32Array(POOL_SIZE);
   const nodeReadyAt = new Float64Array(POOL_SIZE).fill(-1);
+  /** when the slot's art arrived (-Infinity: it was already in when the slot was placed) */
+  const nodeArtAt = new Float64Array(POOL_SIZE).fill(-1);
   for (let k = 0; k < POOL_SIZE; k++) {
-    const m = new Mesh(quadGeo, nodeMaterial(nodeEdge, 0.32, 0.01, 30));
+    const m = new Mesh(quadGeo, nodeMaterial(ink, 0.22, 0.012));
     m.matrixAutoUpdate = false;
     m.visible = false;
     m.renderOrder = 4;
@@ -586,39 +589,40 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     scene.add(m);
   }
   const slots = new SlotTable(POOL_SIZE);
-  /** cover width at the camera's focal height: ~20% of the viewport width */
-  let rideCover = 1;
 
   function placeNode(slot: number, run: number) {
     const a = data.runStart[run];
     const b = data.runEnd[run];
     const len = b - a + 1;
-    nodeY[slot] = -((a + b) / 2) * SP;
-    nodeSize[slot] = rideCover * Math.min(1.2, 0.9 + 0.1 * Math.log2(len));
-    // a cover already in the cache shows at once; one that arrives later fades in
-    nodeReadyAt[slot] = store.has(data.song[a]) ? 0 : -1;
+    const z = -((a + b) / 2) * SP;
+    // pinned to the trunk at its week, a little off the spine so the stack is not a single file
+    const j = run * 2.39996 + hash(run * 1.37) * 0.5; // golden-angle spiral round the spine
+    const r = 0.75 + 0.45 * hash(run * 2.11);
+    nodePos[slot].set(spineX(z) + Math.cos(j) * r, spineY(z) + Math.sin(j) * r, z);
+    nodeSize[slot] = COVER * Math.min(1.25, 0.9 + 0.1 * Math.log2(len));
+    nodeReadyAt[slot] = -1;
+    nodeArtAt[slot] = store.has(data.song[a]) ? -Infinity : -1;
     nodes[slot].visible = false;
   }
 
-  // ---------- destination: that week's #1 at 600×600 in a red frame ----------
-  const destMat = nodeMaterial(trunkColor, 1, 0.02, 11);
+  // ---------- destination: that week's #1 at 600×600, a thin flat red frame ----------
+  const destMat = nodeMaterial(red, 1, 0.02);
   destMat.uniforms.uFogK.value = 0;
   const dest = new Mesh(quadGeo, destMat);
   dest.matrixAutoUpdate = false;
   dest.visible = false;
   dest.renderOrder = 5;
   scene.add(dest);
-  let destY = 0;
+  let destZ = 0;
   let targetRun = -1;
   let destReadyAt = -1;
 
   // ---------- year rings ----------
-  const RING_R = BRAID_R + 0.3;
-  const ringGeo = new RingGeometry(0.975, 1, 128, 1);
+  const ringGeo = new RingGeometry(0.985, 1, 128, 1);
   const ringMat = new MeshBasicMaterial({
-    color: trunkColor,
+    color: red,
     transparent: true,
-    opacity: 0.6,
+    opacity: 0.3,
     blending: AdditiveBlending,
     depthWrite: false,
     fog: true,
@@ -628,7 +632,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     ring: Mesh;
     ordinal: number;
     year: string;
-    y: number;
+    z: number;
   }
   const rings: Ring[] = [];
   for (let k = 0; k < RING_POOL; k++) {
@@ -637,7 +641,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     ring.visible = false;
     ring.renderOrder = 3;
     scene.add(ring);
-    rings.push({ ring, ordinal: -1, year: "", y: 0 });
+    rings.push({ ring, ordinal: -1, year: "", z: 0 });
   }
   function hideRing(r: Ring) {
     r.ring.visible = false;
@@ -645,12 +649,11 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   }
   function placeRing(r: Ring, ordinal: number) {
     const i = data.gates[ordinal];
-    const y = -i * SP + SP / 2;
+    const z = -i * SP + SP / 2;
     r.ordinal = ordinal;
-    r.y = y;
+    r.z = z;
     r.year = data.dates[i].slice(0, 4);
-    r.ring.position.set(spineX(y), y, spineZ(y));
-    r.ring.rotation.set(-Math.PI / 2, 0, 0);
+    r.ring.position.set(spineX(z), spineY(z), z);
     r.ring.scale.set(RING_R, RING_R, 1);
     r.ring.updateMatrix();
     r.ring.visible = true;
@@ -687,21 +690,14 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   const dotGeo = new BufferGeometry();
   dotGeo.setAttribute("position", new BufferAttribute(dotPos, 3));
   dotGeo.setAttribute("color", new BufferAttribute(dotCol, 3));
-  const dotMat = new PointsMaterial({
-    size: 5,
-    sizeAttenuation: false,
-    vertexColors: true,
-    transparent: true,
-    opacity: 0,
-    depthTest: false,
-  });
+  const dotMat = new PointsMaterial({ size: 4, sizeAttenuation: false, vertexColors: true, transparent: true, opacity: 0, depthTest: false });
   const dots = new Points(dotGeo, dotMat);
   dots.frustumCulled = false;
   dots.renderOrder = 2;
   overlay.add(dots);
 
   function drawYear(s: Sprite, year: string) {
-    const px = narrow ? 13 : 15;
+    const px = narrow ? 12 : 14;
     const key = `${year}|${px}|${fonts.display}`;
     if (s.key === key) return;
     s.key = key;
@@ -728,32 +724,40 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     s.h = h;
   }
 
-  /** Off-axis lens shift: moves the image without turning the camera, so verticals stay vertical. */
-  function applyShift(cam: PerspectiveCamera, sx: number, sy: number) {
-    cam.updateProjectionMatrix();
-    cam.projectionMatrix.elements[8] = -sx;
-    cam.projectionMatrix.elements[9] = -sy;
-    cam.projectionMatrixInverse.copy(cam.projectionMatrix).invert();
-  }
-  const finalShift = { x: 0, y: 0 };
-
-  // ---------- landing plan: final camera, canopy limbs and their nodes ----------
+  // ---------- landing plan ----------
   let branchInfo: FlightBranch[] | undefined = opts.branches;
-  const finalPos = new Vector3();
-  const finalLook = new Vector3();
+  const destPos = new Vector3();
+  const branchBase = new Vector3();
+  const posA = new Vector3();
+  const posF = new Vector3();
+  const lookF = new Vector3();
+  const qA = new Quaternion();
+  const qF = new Quaternion();
+  const shiftF = { x: 0, y: 0 };
+  /** the landed cover's width as a fraction of the viewport width, in the final frame */
+  let destScreenFrac = 0.1;
   interface Limb {
     lane: string;
     side: "left" | "right";
-    node: Vector3; // world
-    screen: Point; // where the frame puts it
+    node: Vector3;
     branch: FlightBranch;
   }
   let limbs: Limb[] = [];
-  let canopyMesh: Mesh<BufferGeometry, ShaderMaterial> | null = null;
-  const canopyMat = new ShaderMaterial({
+  let limbMesh: Mesh<BufferGeometry, ShaderMaterial> | null = null;
+  const limbMat = new ShaderMaterial({
     defines: { NC },
-    uniforms: { uCol: colorUniforms.uCol, uGrow: { value: 0 }, ...shared, uCutK: { value: 0 }, uCut: { value: 0 } },
-    vertexShader: CANOPY_VERT,
+    uniforms: {
+      uCol: colorUniforms.uCol,
+      uPxK: pxK,
+      uGrowA: { value: 0 },
+      uGrowB: { value: 0 },
+      uFogNear: { value: 1e4 },
+      uFogFar: { value: 2e4 },
+      uFade: shared.uFade,
+      uCut: { value: 0 },
+      uCutK: { value: 0 },
+    },
+    vertexShader: LIMB_VERT,
     fragmentShader: GLOW_FRAG,
     transparent: true,
     depthWrite: false,
@@ -761,189 +765,248 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     side: DoubleSide,
   });
   let planKey = "";
-  let finalDestSize = 1;
+  let labelGap = 10;
 
   function destinationBranches(): FlightBranch[] {
     const out: FlightBranch[] = [];
     for (const spec of LANES) {
-      const t = laneFirst.get(spec.lane)!;
-      if (presence(t, destY) < 0.5) continue;
+      const t = laneFork0.get(spec.lane)!;
+      if (presence(t, destZ) < 0.5) continue;
       const given = branchInfo?.find((b) => b.lane === spec.lane);
       const label = shortLabel(given?.label ?? "", spec.name, narrow);
       out.push(given ? { ...given, label } : { lane: spec.lane, label: spec.name });
     }
-    return out;
+    return narrow ? pickBranches(out, PHONE_MAX_LABELS) : out;
   }
 
-  /** Where the camera ends, and the canopy limbs it looks at. Rebuilt per target, size and branch set. */
+  function applyShift(cam: PerspectiveCamera, sx: number, sy: number) {
+    cam.updateProjectionMatrix();
+    cam.projectionMatrix.elements[8] = -sx;
+    cam.projectionMatrix.elements[9] = -sy;
+    cam.projectionMatrixInverse.copy(cam.projectionMatrix).invert();
+  }
+
+  /** The landing: where the destination branch goes, where the camera ends, and the labelled limbs. */
   function planLanding() {
     if (targetIdx < 0 || width <= 0) return;
     const list = destinationBranches();
-    const key = `${targetIdx}|${width}x${height}|${JSON.stringify(list)}`;
+    const key = `${targetIdx}|${width}x${height}|${JSON.stringify(list)}|${fonts.display}`;
     if (key === planKey) return;
     planKey = key;
-    const D = new Vector3(spineX(destY), destY, spineZ(destY));
-    finalPos.set(Math.sin(AZ) * Math.cos(FINAL_EL), Math.sin(FINAL_EL), Math.cos(AZ) * Math.cos(FINAL_EL)).multiplyScalar(FINAL_D).add(D);
+    const T = new Vector3(spineX(destZ), spineY(destZ), destZ);
+    const zhat = new Vector3(0, 0, 1);
+    // the final camera sits on the side the ride camera was on; the branch points to its right
+    const s = new Vector3(OFF_X, OFF_Y, 0).normalize();
+    // looking back along -s with the present up, screen-right is (-s) × z: the branch points there
+    const b = new Vector3().crossVectors(s.clone().negate(), zhat).normalize();
+    // the branch runs from the trunk out to the landed cover; on a phone it reaches in from the left,
+    // above the label columns, so it is not hidden behind the cover
+    const Lb = narrow ? 8.5 : 6.5;
+    const Hb = narrow ? 1.6 : 4.5;
+    destPos.copy(T).addScaledVector(b, Lb).addScaledVector(zhat, Hb);
+    branchBase.copy(T).addScaledVector(b, 0.6);
+    const D = narrow ? 44 : 31;
+    const el = narrow ? 0.5 : 0.42; // above the landed week, looking down the trunk into the past
+    posF.copy(destPos).addScaledVector(s, D * Math.cos(el)).addScaledVector(zhat, D * Math.sin(el));
+    lookF.copy(destPos);
     solver.aspect = width / height;
     solver.fov = FOV;
-    solver.updateProjectionMatrix();
-    const nl = Math.ceil(list.length / 2);
-    const frame = canopyFrame(nl, list.length - nl, { w: width, h: height, narrow });
-    // look straight at the landed cover; a lens shift puts it where the frame wants it
-    finalShift.x = (frame.dest.x / width) * 2 - 1;
-    finalShift.y = 1 - (frame.dest.y / height) * 2;
-    const tanV = Math.tan((FOV / 2) * (Math.PI / 180));
-    const tanH = tanV * solver.aspect;
-    finalLook.copy(D);
-    solver.position.copy(finalPos);
-    solver.up.set(0, 1, 0);
-    solver.lookAt(finalLook);
+    solver.position.copy(posF);
+    solver.up.copy(zhat);
+    solver.lookAt(lookF);
     solver.updateMatrixWorld();
-    applyShift(solver, finalShift.x, finalShift.y);
+    qF.copy(solver.quaternion);
+    const nl = narrow ? Math.floor(list.length / 2) : list.length - Math.round(list.length * 0.55);
+    const frame = canopyFrame(nl, list.length - nl, { w: width, h: height, narrow }, targetIdx);
+    shiftF.x = (frame.dest.x / width) * 2 - 1;
+    shiftF.y = 1 - (frame.dest.y / height) * 2;
+    applyShift(solver, shiftF.x, shiftF.y);
     const fwd = new Vector3(0, 0, -1).applyQuaternion(solver.quaternion);
-    const zD = D.clone().sub(finalPos).dot(fwd);
-    const visW = 2 * zD * tanH;
-    finalDestSize = (frame.destW / width) * visW;
+    const zD = destPos.clone().sub(posF).dot(fwd);
+    destScreenFrac = frame.destW / width;
+    // out along the branch: back from it and looking across it, so the trunk, the red branch
+    // growing out of it and the landed cover are in frame together (a phone's narrow view needs
+    // to stand further back)
+    const across = T.clone().lerp(destPos, 0.6);
+    posA.copy(across).addScaledVector(s, narrow ? 19 : 10).addScaledVector(zhat, narrow ? 2.6 : 1.6);
+    solver.position.copy(posA);
+    solver.up.copy(zhat);
+    solver.lookAt(across);
+    qA.copy(solver.quaternion);
+    // back to the final pose for the unprojections below
+    solver.position.copy(posF);
+    solver.lookAt(lookF);
+    solver.updateMatrixWorld();
+    applyShift(solver, shiftF.x, shiftF.y);
     const unproject = (p: Point) => {
-      const r = new Vector3((p.x / width) * 2 - 1, 1 - (p.y / height) * 2, 0.5).unproject(solver).sub(finalPos).normalize();
-      return finalPos.clone().addScaledVector(r, zD / r.dot(fwd));
+      const r = new Vector3((p.x / width) * 2 - 1, 1 - (p.y / height) * 2, 0.5).unproject(solver).sub(posF).normalize();
+      return posF.clone().addScaledVector(r, zD / r.dot(fwd));
     };
 
-    // limbs: each present lane leaves the trunk at the landed week, left lanes to the left column
-    const starts = list.map((b) => {
-      const g = groupAt(laneFirst.get(b.lane)!, destY, colorUniforms.uLaneScale.value);
-      const s = new Vector3(g.x, g.y, g.z);
-      return { b, s, sx: s.clone().project(solver).x };
+    // labelled limbs: each lane leaves from its branch at the landed week, leftmost lanes to the left column
+    const anchors = list.map((br) => {
+      const g = groupAt(laneFork0.get(br.lane)!, destZ);
+      const a = new Vector3(g.x, g.y, g.z);
+      return { br, a, sx: a.clone().project(solver).x, sy: a.clone().project(solver).y };
     });
-    starts.sort((p, q) => p.sx - q.sx);
-    limbs = starts.map((st, k) => {
-      const side: "left" | "right" = k < nl ? "left" : "right";
-      const screen = side === "left" ? frame.left[k] : frame.right[k - nl];
-      return { lane: st.b.lane, side, node: unproject(screen), screen, branch: st.b };
-    });
+    anchors.sort((p, q) => p.sx - q.sx);
+    const leftSet = anchors.slice(0, nl).sort((p, q) => q.sy - p.sy);
+    const rightSet = anchors.slice(nl).sort((p, q) => q.sy - p.sy);
+    limbs = [
+      ...leftSet.map((x, k) => ({ lane: x.br.lane, side: "left" as const, node: unproject(frame.left[k]), branch: x.br, a: x.a })),
+      ...rightSet.map((x, k) => ({ lane: x.br.lane, side: "right" as const, node: unproject(frame.right[k]), branch: x.br, a: x.a })),
+    ];
 
-    // canopy geometry: 4 strands per limb, a cubic that rises then reaches its node, splitting as it goes
-    const N = 56;
-    const STR = 4;
+    // limb geometry: the red destination branch (stage 0) and the labelled lane limbs (stage 1)
     const pos: number[] = [];
+    const nxt: number[] = [];
     const sideA: number[] = [];
     const tA: number[] = [];
     const ciA: number[] = [];
+    const wA: number[] = [];
+    const alA: number[] = [];
+    const stA: number[] = [];
     const idx: number[] = [];
-    const pxK = (2 * tanV) / height;
+    const N = 48;
     const p0 = new Vector3();
     const p1 = new Vector3();
     const p2 = new Vector3();
     const p3 = new Vector3();
     const c = new Vector3();
-    const c2 = new Vector3();
     const tan = new Vector3();
     const nrm = new Vector3();
-    const toCam = new Vector3();
-    const off = new Vector3();
+    const tmp = new Vector3();
     const bez = (t: number, out: Vector3) => {
       const u = 1 - t;
-      return out
-        .copy(p0)
-        .multiplyScalar(u * u * u)
-        .addScaledVector(p1, 3 * u * u * t)
-        .addScaledVector(p2, 3 * u * t * t)
-        .addScaledVector(p3, t * t * t);
+      return out.copy(p0).multiplyScalar(u * u * u).addScaledVector(p1, 3 * u * u * t).addScaledVector(p2, 3 * u * t * t).addScaledVector(p3, t * t * t);
     };
-    limbs.forEach((limb, li) => {
-      const st = starts[li];
-      p0.copy(st.s);
-      p3.copy(limb.node);
-      const L = p3.distanceTo(p0);
-      p1.copy(p0).add(new Vector3(0, 0.5 * L, 0));
-      p2.set(p3.x + (p0.x - p3.x) * 0.35, p3.y - 0.16 * L, p3.z + (p0.z - p3.z) * 0.35);
-      const ci = LANES.findIndex((l) => l.lane === limb.lane) + 1;
-      for (let j = 0; j < STR; j++) {
-        const base = pos.length / 3;
-        for (let i = 0; i <= N; i++) {
-          const t = i / N;
-          bez(t, c);
-          bez(Math.min(1, t + 0.01), c2);
-          tan.copy(c2).sub(c);
-          if (tan.lengthSq() < 1e-10) tan.set(0, 1, 0);
-          tan.normalize();
-          nrm.copy(tan).cross(fwd).normalize();
-          // the strands of a limb split apart as it rises, and twist a little in depth
-          const spread = ((j - (STR - 1) / 2) / ((STR - 1) / 2)) * (0.05 + 0.6 * Math.pow(t, 1.5));
-          off.copy(nrm).multiplyScalar(spread).addScaledVector(fwd, Math.sin(t * 6 + j * 1.7) * 0.25 * t);
-          c.add(off);
-          toCam.copy(finalPos).sub(c);
-          const depth = toCam.length();
-          const halfW = Math.max(0.004, 1.7 * pxK * depth);
-          const sideV = tan.clone().cross(toCam).normalize().multiplyScalar(halfW);
-          pos.push(c.x - sideV.x, c.y - sideV.y, c.z - sideV.z, c.x + sideV.x, c.y + sideV.y, c.z + sideV.z);
-          sideA.push(-1, 1);
-          tA.push(t, t);
-          ciA.push(ci, ci);
-          if (i < N) {
-            const a = base + i * 2;
-            idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
-          }
+    let chordLen = 1;
+    const strand = (seed: number, ci: number, alpha: number, wpx: number, stage: number, endT: number, spreadK: number) => {
+      const pts: Vector3[] = [];
+      for (let i = 0; i <= N; i++) {
+        const t = (i / N) * endT;
+        bez(t, c);
+        bez(Math.min(1, t + 0.01), tmp);
+        tan.copy(tmp).sub(c).normalize();
+        nrm.copy(tan).cross(fwd).normalize();
+        // strands of one limb split apart toward its end, in proportion to its length (no loops)
+        const spread = (hash(seed) - 0.5) * 2 * spreadK * chordLen * 0.07 * Math.pow(t, 1.3);
+        c.addScaledVector(nrm, spread);
+        pts.push(c.clone());
+      }
+      const base = pos.length / 3;
+      for (let i = 0; i <= N; i++) {
+        const p = pts[i];
+        const q = pts[Math.min(N, i + 1)];
+        const qq = i === N ? p.clone().add(p.clone().sub(pts[N - 1])) : q;
+        for (const sd of [-1, 1]) {
+          pos.push(p.x, p.y, p.z);
+          nxt.push(qq.x, qq.y, qq.z);
+          sideA.push(sd);
+          tA.push(i / N);
+          ciA.push(ci);
+          wA.push(wpx);
+          alA.push(alpha);
+          stA.push(stage);
+        }
+        if (i < N) {
+          const a = base + i * 2;
+          idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
         }
       }
+    };
+    // the destination branch: four red strands out of the trunk to the landed cover
+    p0.copy(branchBase);
+    p3.copy(destPos);
+    p1.copy(T).addScaledVector(b, Lb * 0.45).addScaledVector(zhat, Hb * 0.05);
+    p2.copy(destPos).addScaledVector(b, -Lb * 0.2).addScaledVector(zhat, -Hb * 0.45);
+    chordLen = destPos.distanceTo(branchBase);
+    for (let j = 0; j < 5; j++) strand(31 + j * 7.7, DEST_SLOT, 0.7 + 0.3 * hash(j + 3), 1.8 + 1.6 * hash(j + 9), 0, 1, 0.45);
+    // the other charts at that week: each limb rises out of its branch and reaches its label, splitting as it goes
+    limbs.forEach((limb, li) => {
+      const a = (limb as Limb & { a: Vector3 }).a;
+      const L = a.distanceTo(limb.node);
+      const h = (o: number) => hash(targetIdx * 0.37 + li * 9.1 + o);
+      p0.copy(a);
+      p3.copy(limb.node);
+      // a limb leaves its branch and bows out to its label: control points along the chord, bowed sideways
+      const chord = tmp.copy(limb.node).sub(a);
+      const bow = new Vector3().crossVectors(chord, fwd).normalize().multiplyScalar(L * (0.08 + 0.14 * h(1)) * (h(2) < 0.5 ? -1 : 1));
+      p1.copy(a).addScaledVector(chord, 0.3 + 0.08 * h(3)).add(bow);
+      p2.copy(a).addScaledVector(chord, 0.7 + 0.08 * h(4)).addScaledVector(bow, 0.6);
+      chordLen = L;
+      const ci = LANES.findIndex((l) => l.lane === limb.lane) + 1;
+      const n = 2 + Math.floor(h(5) * 2);
+      for (let j = 0; j < n; j++) strand(li * 13 + j * 3.3, ci, 0.35 + 0.35 * h(6 + j), 0.9 + 1.3 * h(9 + j), 1, j === 0 ? 1 : 0.55 + 0.4 * h(12 + j), 0.8 + 0.6 * h(15));
     });
-    if (canopyMesh) {
-      canopyMesh.geometry.dispose();
-      scene.remove(canopyMesh);
-      canopyMesh = null;
+    if (limbMesh) {
+      limbMesh.geometry.dispose();
+      scene.remove(limbMesh);
+      limbMesh = null;
     }
     if (pos.length) {
       const g = new BufferGeometry();
       g.setAttribute("position", new BufferAttribute(new Float32Array(pos), 3));
+      g.setAttribute("aNext", new BufferAttribute(new Float32Array(nxt), 3));
       g.setAttribute("aSide", new BufferAttribute(new Float32Array(sideA), 1));
       g.setAttribute("aT", new BufferAttribute(new Float32Array(tA), 1));
       g.setAttribute("aCi", new BufferAttribute(new Float32Array(ciA), 1));
+      g.setAttribute("aW", new BufferAttribute(new Float32Array(wA), 1));
+      g.setAttribute("aAlpha", new BufferAttribute(new Float32Array(alA), 1));
+      g.setAttribute("aStage", new BufferAttribute(new Float32Array(stA), 1));
       g.setIndex(idx);
-      canopyMesh = new Mesh(g, canopyMat);
-      canopyMesh.frustumCulled = false;
-      canopyMesh.renderOrder = 2;
-      canopyMesh.visible = false;
-      scene.add(canopyMesh);
+      limbMesh = new Mesh(g, limbMat);
+      limbMesh.frustumCulled = false;
+      limbMesh.renderOrder = 2;
+      limbMesh.visible = false;
+      scene.add(limbMesh);
     }
 
-    // labels for the limbs; a column with room between its nodes lets a long title take two lines
+    // labels for the limbs: one line, unless the title would be cut and there is room in its column
+    // for a second (balanced) line; columns are top → bottom, so the room above is already known
     const dpr = renderer.getPixelRatio();
-    const roomy = (col: Point[]) => col.length < 2 || col[1].y - col[0].y >= (narrow ? 50 : 60);
-    labelSprites.forEach((s, k) => {
-      const limb = limbs[k];
-      if (!limb) {
-        s.mesh.visible = false;
-        return;
-      }
-      const sp: LabelSprite = drawBranchLabel(
-        limb.branch,
-        {
+    labelRects = [];
+    for (const side of ["left", "right"] as const) {
+      const col = side === "left" ? frame.left : frame.right;
+      const ks = limbs.map((l, k) => (l.side === side ? k : -1)).filter((k) => k >= 0);
+      let prevBottom = -Infinity;
+      ks.forEach((k, j) => {
+        const limb = limbs[k];
+        const sp = labelSprites[k];
+        const node = col[j];
+        const optsFor = (lines: 1 | 2) => ({
           maxW: frame.labelMaxW,
           dpr,
           narrow,
-          align: limb.side === "left" ? "right" : "left",
+          align: (side === "left" ? "right" : "left") as "left" | "right",
           fonts,
-          songLines: roomy(limb.side === "left" ? frame.left : frame.right) ? 2 : 1,
-        },
-        s.tex ?? undefined,
-      );
-      s.tex = sp.tex;
-      s.w = sp.w;
-      s.h = sp.h;
-      s.mesh.material.map = sp.tex;
-      s.mesh.material.needsUpdate = true;
-      s.key = limb.side;
-    });
+          songLines: lines,
+        });
+        let drawn = drawBranchLabel(limb.branch, optsFor(1), sp.tex ?? undefined);
+        if (drawn.cut) {
+          const nextTop = j + 1 < col.length ? col[j + 1].y - (narrow ? 16 : 20) : height * (narrow ? 0.53 : 0.72);
+          const two = drawBranchLabel(limb.branch, optsFor(2), drawn.tex);
+          const fits = node.y - two.h / 2 >= prevBottom + 3 && node.y + two.h / 2 <= nextTop - 3;
+          drawn = fits ? two : drawBranchLabel(limb.branch, optsFor(1), two.tex);
+        }
+        prevBottom = node.y + drawn.h / 2;
+        sp.tex = drawn.tex;
+        sp.w = drawn.w;
+        sp.h = drawn.h;
+        sp.mesh.material.map = drawn.tex;
+        sp.mesh.material.needsUpdate = true;
+        labelRects.push(labelBox(node, side, drawn.w, drawn.h, frame.labelGap));
+      });
+    }
+    for (let k = limbs.length; k < labelSprites.length; k++) labelSprites[k].mesh.visible = false;
     labelGap = frame.labelGap;
-    applyBranchColors();
   }
-  let labelGap = 10;
+  let labelRects: Rect[] = [];
 
-  function applyBranchColors() {
+  function applyMine() {
     LANES.forEach((spec, i) => {
       const mine = !!branchInfo?.find((b) => b.lane === spec.lane)?.mine;
-      const c = mine ? trunkColor : inkColor;
-      uCol[i + 1].set(c.r, c.g, c.b, mine ? 2.2 : 1);
+      uCol[i + 1].set(ink.r, ink.g, ink.b, mine ? 1.8 : 1);
     });
   }
 
@@ -952,9 +1015,30 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     tmpV.copy(p).project(camera);
     return { x: ((tmpV.x + 1) / 2) * width, y: ((1 - tmpV.y) / 2) * height };
   }
+  /** Fraction of a screen rect covered by any of `rects`. */
+  function rectsOverlap(rects: Rect[], x0: number, y0: number, x1: number, y1: number): number {
+    const area = Math.max(1, (x1 - x0) * (y1 - y0));
+    let o = 0;
+    for (const z of rects) {
+      const w = Math.min(x1, z.x1) - Math.max(x0, z.x0);
+      const h = Math.min(y1, z.y1) - Math.max(y0, z.y0);
+      if (w > 0 && h > 0) o += w * h;
+    }
+    return Math.min(1, o / area);
+  }
+  /** Fraction of a screen rect that falls in the page's HUD zones. */
+  function hudOverlap(x0: number, y0: number, x1: number, y1: number): number {
+    const area = Math.max(1, (x1 - x0) * (y1 - y0));
+    let o = 0;
+    for (const z of hud) {
+      const w = Math.min(x1, z.x1) - Math.max(x0, z.x0);
+      const h = Math.min(y1, z.y1) - Math.max(y0, z.y0);
+      if (w > 0 && h > 0) o += w * h;
+    }
+    return Math.min(1, o / area);
+  }
 
   // ---------- flight state ----------
-  const inverseEase = makeInverseEase();
   let mode: Mode = "idle";
   let freeze: number | null = opts.freeze;
   let targetIdx = -1;
@@ -964,12 +1048,24 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   let t0 = 0;
   let fadeStart: number | null = null;
   let idleStart = now();
+  let idleBase = 0;
+  let idleEnd = idleStart + (IDLE_SPAN / IDLE_SPEED) * 1000;
+  let idleFadeIn = false;
   let preloadStart = 0;
+  let preloadToken = 0;
+  let prerollPlannedAt = -1;
+  let targetAt = 0;
   let camD = 0;
+  let vel = IDLE_SPEED;
+  let preVel = 0;
+  let blendFrom = 0;
   let speed = 0;
+  let lastT = now();
   let lastShown = -1;
   let launchToken = 0;
   let arrivedNotified = false;
+  let pending = !!opts.pending;
+  let arrivedAt = 0;
 
   function now() {
     return performance.now();
@@ -977,16 +1073,6 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
 
   function distanceForProgress(p: number) {
     return d0 + (d1 - d0) * ease(p);
-  }
-
-  /** Camera speed (units/s) when it passes path week `week` on the current flight. */
-  function passingSpeed(week: number): number {
-    const span = d1 - d0;
-    if (!span) return 0;
-    const f = (week * SP - d0) / span;
-    if (f >= 1) return 0;
-    if (f <= 0) return (Math.abs(span) * easeVelocity(0)) / dur;
-    return (easeVelocity(inverseEase(f)) * Math.abs(span)) / dur;
   }
 
   function planFlight(from: number): number {
@@ -1007,55 +1093,93 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     return out;
   }
 
-  /** The tree is on screen from the first frame; covers fade in as they arrive. */
-  function beginFade(at: number) {
-    if (fadeStart === null) fadeStart = reduced || freeze !== null ? at - FADE_MS : at;
+  /** Fog limit the plan treats as "in view" (units ahead of the camera). */
+  const VIEW_AHEAD = FOG_RIDE[1] * 0.9;
+  const flightShape = () => ({ d0, d1, dur, sp: SP, targetIdx, landingBehind: LANDING_BEHIND, landingAhead: LANDING_AHEAD, viewAhead: VIEW_AHEAD });
+
+  function startIdle(from: number, fadeIn: boolean) {
+    mode = "idle";
+    idleBase = from;
+    idleStart = now();
+    idleEnd = idleStart + Math.max(10, (IDLE_SPAN - from) / IDLE_SPEED) * 1000;
+    idleFadeIn = fadeIn;
+    vel = IDLE_SPEED;
+  }
+
+  function launch(token: number) {
+    if (disposed || token !== launchToken) return;
+    preVel = mode === "preroll" || mode === "return" || mode === "preload" ? vel : 0;
+    blendFrom = camD;
+    planFlight(camD);
+    mode = "flying";
+    t0 = now();
+    store.plan(flightPlan(data, flightShape(), t0)); // re-timed for the real launch
+    requestRender();
   }
 
   function setTarget(date: string | null) {
     const token = ++launchToken;
     arrivedNotified = false;
     lastShown = -1;
-    beginFade(now());
+    if (fadeStart === null) fadeStart = now() - FADE_MS; // the first frame is already the tree, never black
     if (!date) {
       targetIdx = -1;
       targetRun = -1;
       dest.visible = false;
-      if (canopyMesh) canopyMesh.visible = false;
-      mode = "idle";
-      idleStart = now() - (camD / IDLE_SPEED) * 1000; // drift on from wherever the camera is
-      d0 = d1 = 0;
+      if (limbMesh) limbMesh.visible = false;
+      if (pending && !reduced && freeze === null) mode = "preroll";
+      else if (mode !== "idle") mode = "return";
       requestRender();
       return;
     }
     targetIdx = targetIndex(data, date);
     targetRun = data.runOf[targetIdx];
-    destY = -targetIdx * SP;
+    destZ = -targetIdx * SP;
     destReadyAt = -1;
     planKey = "";
-    const fromWeek = planFlight(freeze !== null ? 0 : camD);
+    planFlight(freeze !== null ? 0 : camD);
     store.large600(data.song[targetIdx]);
+    store.plan(flightPlan(data, flightShape(), now() + 300));
     planLanding();
     if (reduced || freeze !== null) {
-      // reduced motion lands at once; a frozen frame needs no launch, only its own window
       mode = "flying";
       t0 = now() - (reduced ? dur * 1000 : 0);
+      preVel = 0;
       requestRender();
       return;
     }
-    // keep drifting while the first covers load (a shared link opened cold), then launch from there
+    if (mode === "preroll" && d1 - camD > VIEW_AHEAD * 2) {
+      // the search resolved mid pre-roll: keep falling back while the first covers of the path
+      // arrive (the frame loop launches once they are in, or after PRE_GATE_MS), then fly on
+      targetAt = now();
+      preloadToken = token;
+      requestRender();
+      return;
+    }
+    if (mode === "preroll" || mode === "return" || (mode === "idle" && stamp > 2 && store.size >= 8)) {
+      // already moving through a warm tree: carry straight on into the flight
+      launch(token);
+      return;
+    }
+    // a shared link opened cold: drift while the first ~2 s of the path's covers load (or the wait
+    // runs out), then launch from there. The frame loop checks and launches.
     mode = "preload";
     preloadStart = now();
-    const startD = camD;
-    const warm = stamp > 2 && store.size >= 8;
-    store.preload(songsForWeeks(fromWeek, START_PRELOAD), warm ? 0 : PRELOAD_TIMEOUT_MS).then(() => {
-      if (disposed || token !== launchToken) return;
-      planFlight(Math.max(startD, camD));
-      mode = "flying";
-      t0 = now();
-      requestRender();
-    });
+    preloadToken = token;
     requestRender();
+  }
+
+  function setPending(p: boolean) {
+    pending = p;
+    if (reduced || freeze !== null) return;
+    if (p && targetIdx < 0 && (mode === "idle" || mode === "return")) {
+      mode = "preroll";
+      prerollPlannedAt = -1;
+      requestRender();
+    } else if (!p && targetIdx < 0 && mode === "preroll") {
+      mode = "return";
+      requestRender();
+    }
   }
 
   function skip() {
@@ -1063,6 +1187,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       launchToken++;
       if (mode === "preload") planFlight(camD);
       mode = "flying";
+      preVel = 0;
       t0 = now() - dur * 1000;
       requestRender();
     }
@@ -1078,10 +1203,10 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     branchInfo = b;
     planKey = "";
     planLanding();
-    applyBranchColors();
+    applyMine();
     requestRender();
   }
-  applyBranchColors();
+  applyMine();
 
   // ---------- layout ----------
   function resize() {
@@ -1091,6 +1216,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     width = w;
     height = h;
     narrow = w < 640;
+    hud = hudZones(w, h, narrow);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, w < 640 ? 1.5 : 2));
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
@@ -1098,10 +1224,6 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     ortho.right = w;
     ortho.top = h;
     ortho.updateProjectionMatrix();
-    colorUniforms.uLaneScale.value = narrow ? 0.55 : 1;
-    colorUniforms.uBraid.value = narrow ? 0.7 : 1;
-    const focal = Math.hypot(RIDE_HD, RIDE_H);
-    rideCover = 0.2 * 2 * focal * Math.tan((FOV / 2) * (Math.PI / 180)) * camera.aspect;
     slots.invalidate();
     for (const s of yearSprites) s.key = "";
     planKey = "";
@@ -1110,21 +1232,27 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   }
 
   // ---------- camera ----------
-  const look = new Vector3();
-  const right = new Vector3(Math.cos(AZ), 0, -Math.sin(AZ));
-  const ride = { px: 0, py: 0, pz: 0, lx: 0, ly: 0, lz: 0, roll: 0 };
-  /** Ride pose: three-quarter side view above the focal week, looking down the trunk. */
+  const ridePos = new Vector3();
+  const rideLook = new Vector3();
+  const qRide = new Quaternion();
+  const qTmp = new Quaternion();
+  const posTmp = new Vector3();
+  const up = new Vector3();
   function ridePose(d: number, t: number) {
-    const y = -d;
-    ride.px = spineX(y) + Math.sin(AZ) * RIDE_HD;
-    ride.py = y + RIDE_H;
-    ride.pz = spineZ(y) + Math.cos(AZ) * RIDE_HD;
-    const ly = y - LOOK_DROP;
-    ride.lx = spineX(ly);
-    ride.ly = ly;
-    ride.lz = spineZ(ly);
-    ride.roll = Math.sin(d * 0.011 + t * 0.2) * 0.022;
+    const z = -d;
+    // a slow sway round the spine keeps the strands sweeping even at idle speed
+    const sway = Math.sin(d * 0.013 + t * 0.11) * 0.35;
+    ridePos.set(spineX(z) + OFF_X + sway * 0.5, spineY(z) + OFF_Y + sway * 0.3, z);
+    const lz = z - LOOK_AHEAD;
+    rideLook.set(spineX(lz) + 0.35, spineY(lz) + 0.2, lz);
+    const roll = Math.sin(d * 0.009 + t * 0.07) * 0.05;
+    up.set(Math.sin(roll), Math.cos(roll), 0);
+    solver.position.copy(ridePos);
+    solver.up.copy(up);
+    solver.lookAt(rideLook);
+    qRide.copy(solver.quaternion);
   }
+  const rideShift = () => (narrow ? { x: 0, y: 0.06 } : { x: 0.2, y: -0.02 });
 
   // ---------- frame ----------
   let raf = 0;
@@ -1147,51 +1275,83 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
   }
 
   const camQ = new Vector3();
+  const seenArt = new Int32Array(data.songs.length).fill(-1);
+  let lastCovers = "";
   function frame(ts: number) {
     raf = 0;
     if (disposed || hidden) return;
     stamp++;
     const t = ts || now();
+    const dt = Math.min(0.05, Math.max(0, (t - lastT) / 1000));
+    lastT = t;
     let p = 0;
-    let continuous = false;
+    let continuous = true;
     let fadeTarget = 1;
-    const idleCycle = (IDLE_WEEKS * SP) / IDLE_SPEED;
 
     if (freeze !== null && targetIdx >= 0) {
       p = freeze;
       camD = distanceForProgress(p);
       speed = warp(p, d1 - d0, dur);
+      continuous = false;
     } else if (freeze !== null) {
-      camD = freeze * IDLE_WEEKS * SP;
+      camD = freeze * IDLE_SPAN;
       speed = 0;
+      continuous = false;
     } else if (mode === "idle") {
       if (!reduced) {
-        const e = (((t - idleStart) / 1000) % idleCycle + idleCycle) % idleCycle;
-        camD = e * IDLE_SPEED;
-        fadeTarget = Math.min(1, (idleCycle - e) / IDLE_FADE_S, e / IDLE_FADE_S + (stamp < 3 ? 1 : 0));
-        continuous = true;
-      }
+        if (t > idleEnd) startIdle(0, true);
+        camD = idleBase + ((t - idleStart) / 1000) * IDLE_SPEED;
+        fadeTarget = Math.min(1, (idleEnd - t) / (IDLE_FADE_S * 1000), idleFadeIn ? (t - idleStart) / (IDLE_FADE_S * 1000) : 1);
+      } else continuous = false;
       speed *= 0.9;
+    } else if (mode === "preroll") {
+      if (targetIdx >= 0) {
+        // target known, still pre-rolling: launch when the next ~1.5 s of covers are mostly in
+        if (store.readyBefore(t + PRE_READY_MS) >= 0.85 || t - targetAt > PRE_GATE_MS || d1 - camD < VIEW_AHEAD * 1.2) {
+          const tok = preloadToken;
+          queueMicrotask(() => launch(tok));
+        }
+      } else if (prerollPlannedAt < 0 || t - prerollPlannedAt > 700) {
+        store.plan(prerollPlan(data, camD, PRE_SPEED, SP, VIEW_AHEAD, t));
+        prerollPlannedAt = t;
+      }
+      vel = lerp(vel, PRE_SPEED, 1 - Math.exp(-dt * 1.8));
+      camD += vel * dt;
+      speed = Math.min(1, vel / 420);
+    } else if (mode === "return") {
+      vel = lerp(vel, IDLE_SPEED, 1 - Math.exp(-dt * 2.5));
+      camD += vel * dt;
+      speed = Math.min(1, vel / 420);
+      if (vel < IDLE_SPEED * 1.6) startIdle(camD, false);
     } else if (mode === "preload") {
       camD = d0 + (reduced ? 0 : ((t - preloadStart) / 1000) * IDLE_SPEED);
+      vel = IDLE_SPEED;
       speed = 0;
-      continuous = true;
+      // launch once the covers due in the first ~2 s of flight are mostly in, or the wait runs out
+      if (store.readyBefore(t + 300 + LAUNCH_READY_MS) >= 0.85 || t - preloadStart > LAUNCH_WAIT_MS) {
+        const tok = preloadToken;
+        queueMicrotask(() => launch(tok));
+      }
     } else if (mode === "flying") {
-      p = Math.min(1, (t - t0) / (dur * 1000));
-      camD = distanceForProgress(p);
+      const el = (t - t0) / 1000;
+      p = Math.min(1, el / dur);
+      const flightD = distanceForProgress(p);
+      // hand over from the pre-roll without a jolt: blend from where it was heading
+      const k = preVel > 0 ? smooth(0, BLEND_S, el) : 1;
+      camD = lerp(blendFrom + preVel * el, flightD, k);
       speed = warp(p, d1 - d0, dur);
-      continuous = true;
-      if (p >= 1) mode = "arrived";
+      if (p >= 1) {
+        mode = "arrived";
+        arrivedAt = t;
+      }
     } else {
       p = 1;
       camD = d1;
       speed *= 0.9;
-      if (speed > 0.01) continuous = true;
     }
-    const landing = targetIdx >= 0 && mode !== "idle" && mode !== "preload" ? smooth(0.6, 1, p) : 0;
+    const landing = targetIdx >= 0 && (mode === "flying" || mode === "arrived" || freeze !== null) ? smooth(0.6, 1, p) : 0;
 
-    let fade = fadeStart === null ? 0 : Math.min(1, Math.max(0, (t - fadeStart) / FADE_MS));
-    if (fade < 1 && fadeStart !== null) continuous = true;
+    let fade = fadeStart === null ? 1 : Math.min(1, Math.max(0, (t - fadeStart) / FADE_MS));
     fade = Math.min(fade, fadeTarget);
     const fs = fade * fade * (3 - 2 * fade);
     shared.uFade.value = fs;
@@ -1201,38 +1361,59 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     shared.uFogFar.value = fFar;
     fog.near = fNear * fs;
     fog.far = Math.max(fog.near + 0.01, fFar * fs);
-    shared.uCut.value = destY;
+    shared.uCut.value = destZ;
     shared.uCutK.value = landing;
-    // pulled back, 48 strands land on a few pixels: dim the braid so it stays a braid, not a bar
-    uCol[0].w = 1 - (narrow ? 0.62 : 0.45) * landing;
+    // landed: only the destination branch stays red; the trunk goes quiet
+    const trunkRed = 1 - landing;
+    uCol[0].set(lerp(ink.r * 0.7, red.r, trunkRed), lerp(ink.g * 0.7, red.g, trunkRed), lerp(ink.b * 0.7, red.b, trunkRed), lerp(0.55, 1, trunkRed));
 
-    // camera: ride the trunk down, then dolly back and tilt up over the landing
-    ridePose(camD, mode === "idle" ? (t - idleStart) / 1000 : 0);
-    let { px, py, pz, lx, ly, lz } = ride;
+    // camera: ride inside the tree; at the landing, out along the branch, then back and upright
+    const tIdle = (t - idleStart) / 1000;
+    ridePose(camD, mode === "idle" ? tIdle : 0);
+    const rs = rideShift();
+    let sx = rs.x;
+    let sy = rs.y;
     if (landing > 0) {
-      const k = landing * landing * (3 - 2 * landing);
-      px = lerp(px, finalPos.x, k);
-      py = lerp(py, finalPos.y, k);
-      pz = lerp(pz, finalPos.z, k);
-      lx = lerp(lx, finalLook.x, k);
-      ly = lerp(ly, finalLook.y, k);
-      lz = lerp(lz, finalLook.z, k);
+      const k1 = smooth(0, 0.42, landing);
+      const k2 = smooth(0.42, 1, landing);
+      if (landing < 0.42) {
+        posTmp.copy(ridePos).lerp(posA, k1);
+        qTmp.copy(qRide).slerp(qA, k1);
+        sx = lerp(rs.x, 0, k1);
+        sy = lerp(rs.y, 0, k1);
+      } else {
+        posTmp.copy(posA).lerp(posF, k2);
+        qTmp.copy(qA).slerp(qF, k2);
+        sx = lerp(0, shiftF.x, k2);
+        sy = lerp(0, shiftF.y, k2);
+      }
+      // holding on the landed frame, the camera keeps drifting round the tree (never a still frame)
+      if (mode === "arrived" && freeze === null && !reduced) {
+        const h = (t - arrivedAt) / 1000;
+        const orbit = Math.sin(h * 0.16) * 0.06 * smooth(0, 2.5, h);
+        camQ.copy(posTmp).sub(destPos).applyAxisAngle(new Vector3(0, 0, 1), orbit);
+        posTmp.copy(destPos).add(camQ);
+        posTmp.z += Math.sin(h * 0.23) * 0.25 * smooth(0, 2.5, h);
+        solver.position.copy(posTmp);
+        solver.up.set(0, 0, 1);
+        solver.lookAt(destPos);
+        qTmp.copy(solver.quaternion);
+      }
+      camera.position.copy(posTmp);
+      camera.quaternion.copy(qTmp);
+    } else {
+      camera.position.copy(ridePos);
+      camera.quaternion.copy(qRide);
     }
-    const roll = ride.roll * (1 - landing);
-    camera.position.set(px, py, pz);
-    camera.up.set(Math.sin(roll), Math.cos(roll), 0);
-    look.set(lx, ly, lz);
-    camera.lookAt(look);
-    camera.fov = FOV + speed * 30;
-    const rideShift = narrow ? 0 : RIDE_SHIFT_X;
-    const kk = landing * landing * (3 - 2 * landing);
-    applyShift(camera, lerp(rideShift, finalShift.x, kk), lerp(0, finalShift.y, kk));
+    camera.fov = FOV + speed * 28;
+    applyShift(camera, sx, sy);
     camera.updateMatrixWorld();
+    if (mode === "arrived" && reduced) continuous = false;
 
-    // the window of weeks round the focal height (wider as the camera pulls back)
+    // the window of weeks round the camera
     const camWeek = Math.max(0, camD / SP);
-    const wFrom = Math.max(0, Math.floor(camWeek) - BEHIND_WEEKS - Math.round(landing * 4));
-    const wTo = Math.min(total - 1, Math.floor(camWeek) + AHEAD_WEEKS);
+    const wFrom = Math.max(0, Math.floor(camWeek) - BEHIND_WEEKS - Math.round(landing * 14));
+    const wTo = Math.min(total - 1, Math.floor(camWeek) + Math.round(lerp(AHEAD_WEEKS, 24, landing)));
     const [r0, r1raw] = runsBetween(data, wFrom, wTo);
     const r1 = Math.min(r1raw, r0 + POOL_SIZE - 1, runs - 1);
     const count = r1 - r0 + 1;
@@ -1240,97 +1421,171 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     slots.sync(r0, count, placeNode);
     syncRings(wFrom, wTo);
 
-    // textures: landing first, then what is just ahead, skipping runs passed at warp
-    const flightLive = targetIdx >= 0 && (mode === "flying" || mode === "preload") && freeze === null;
+    // textures: in a live flight or pre-roll the path plan drives loading (store.plan); otherwise
+    // (idle drift, the landing, a frozen frame) ask for the covers round the camera, nearest first
+    const planned = freeze === null && (mode === "flying" || mode === "preroll" || mode === "preload");
     let wantedMissing = 0;
     if (targetIdx >= 0) {
       const [la, lb] = runsBetween(data, targetIdx - LANDING_BEHIND, targetIdx + LANDING_AHEAD);
       for (let r = la; r <= lb; r++) if (!store.want(data.song[data.runStart[r]])) wantedMissing++;
     }
-    for (let r = r0; r <= r1; r++) {
-      const mid = (data.runStart[r] + data.runEnd[r]) / 2;
-      if (mid < camWeek - BEHIND_WEEKS) continue;
-      if (flightLive && passingSpeed(mid) > LOAD_SPEED) continue;
-      if (!store.want(data.song[data.runStart[r]])) wantedMissing++;
+    if (!planned) {
+      for (let r = r0; r <= r1; r++) {
+        const mid = (data.runStart[r] + data.runEnd[r]) / 2;
+        if (mid < camWeek - BEHIND_WEEKS) continue;
+        if (!store.want(data.song[data.runStart[r]])) wantedMissing++;
+      }
     }
-    store.pump();
+    store.pump(t);
 
-    // covers: shown only once their texture is in (never an empty square), facing the camera,
-    // pinned to the trunk; on desktop they sit just left of the braid so the braid stays visible
-    const sideK = narrow ? 0 : 1 - landing;
-    for (let k = 0; k < POOL_SIZE; k++) {
-      const run = slots.weekOf[k];
+    // covers: every slot shows something (its typeset sleeve until the art arrives, then a
+    // crossfade), facing the camera; one cover per artwork in view (a song that went back to #1
+    // shows once), never over the HUD, faded right at the lens
+    const pxPerUnit = height / (2 * Math.tan(((camera.fov / 2) * Math.PI) / 180));
+    const artId = store.artId;
+    for (let r = r0; r <= r1; r++) seenArt[artId[data.song[data.runStart[r]]]] = -1;
+    if (targetIdx >= 0) seenArt[artId[data.song[targetIdx]]] = -1;
+    let animating = false;
+    let shownArt = 0;
+    let shownSleeve = 0;
+    const viewLimit = fFar * 0.85;
+    const slow = speed < 0.06;
+    for (let r = r0; r <= r1; r++) {
+      const k = slotOf(r, POOL_SIZE);
       const m = nodes[k];
-      if (run < 0 || run < r0 || run > r1 || (run === targetRun && targetIdx >= 0)) {
+      if (slots.weekOf[k] !== r || (r === targetRun && targetIdx >= 0)) {
         m.visible = false;
         continue;
       }
-      const tex = store.get(data.song[data.runStart[run]]);
-      if (!tex) {
+      const song = data.song[data.runStart[r]];
+      const art = artId[song];
+      if (seenArt[art] >= 0 || (targetIdx >= 0 && art === artId[data.song[targetIdx]])) {
         m.visible = false;
         continue;
       }
       if (nodeReadyAt[k] < 0) nodeReadyAt[k] = t;
       const u = m.material.uniforms;
-      if (u.map.value !== tex) u.map.value = tex;
-      const y = nodeY[k];
+      const artTex = store.get(song);
+      if (artTex && nodeArtAt[k] === -1) nodeArtAt[k] = t;
+      // fades scale with speed: at warp a cover is on screen for ~70 ms, so it must arrive solid
+      const fadeMs = 20 + 220 * (1 - speed);
+      const mix = artTex ? Math.min(1, (t - nodeArtAt[k]) / fadeMs) : 0;
+      if (mix < 1) {
+        // the sleeve shows until the art arrives, and under the crossfade
+        const sl = store.sleeve(song);
+        if (u.map.value !== sl) u.map.value = sl;
+        if (artTex) animating = true;
+      } else if (u.map.value !== artTex) u.map.value = artTex;
+      const second = artTex ?? u.map.value;
+      if (u.map2.value !== second) u.map2.value = second;
+      u.uMix.value = mix;
       const s = nodeSize[k];
       const q = s / (1 - 2 * NODE_INSET);
-      const off = -(s / 2 + BRAID_R * colorUniforms.uBraid.value + 0.2) * sideK;
-      m.position.set(spineX(y) + right.x * off, y, spineZ(y) + right.z * off);
+      m.position.copy(nodePos[k]);
       m.quaternion.copy(camera.quaternion);
       m.scale.set(q, q, 1);
       m.updateMatrix();
-      const appear = Math.min(1, (t - nodeReadyAt[k]) / 220);
-      if (appear < 1) continuous = true;
-      // fade the covers above the landed week: the canopy grows there, and none may sit over the landed cover
-      const op = appear * (landing > 0 ? 1 - landing * smooth(destY - 0.05, destY + 0.6, y) : 1);
+      tmpV.copy(nodePos[k]).applyMatrix4(camera.matrixWorldInverse);
+      const depth = -tmpV.z;
+      if (depth < 0.2) {
+        m.visible = false;
+        continue;
+      }
+      // close to a slow camera, a cover upgrades to 300 px
+      if (slow && depth < 9 && artTex) store.want(song, 1);
+      const c = project(nodePos[k]);
+      const half = ((s / depth) * pxPerUnit) / 2;
+      const inHud = Math.max(
+        hudOverlap(c.x - half, c.y - half, c.x + half, c.y + half),
+        landing > 0 ? landing * rectsOverlap(labelRects, c.x - half - 4, c.y - half - 4, c.x + half + 4, c.y + half + 4) * 4 : 0,
+      );
+      const appear = Math.min(1, (t - nodeReadyAt[k]) / fadeMs);
+      if (appear < 1) animating = true;
+      const near = smooth(0.9, 2.4, depth);
+      const futureFade = landing > 0 ? 1 - landing * smooth(destZ - 0.05, destZ + 0.8, nodePos[k].z) : 1;
+      const op = appear * near * futureFade * (1 - smooth(0.04, 0.3, inHud));
       u.uOpacity.value = op;
       m.material.depthWrite = op > 0.98; // a fading cover must not punch a hole in what is behind it
       m.visible = op > 0.004;
+      if (m.visible) {
+        seenArt[art] = r;
+        // telemetry: a cover counts as on screen inside the frame, nearer than the fog limit, and solid
+        // (screen position from the real projection, lens shift included; at least half of it on screen)
+        if (op > 0.3 && depth < viewLimit && c.x > 0 && c.x < width && c.y > 0 && c.y < height) {
+          if (mix > 0.5) shownArt++;
+          else shownSleeve++;
+        }
+      }
+    }
+    for (let k = 0; k < POOL_SIZE; k++) {
+      const run = slots.weekOf[k];
+      if (run < r0 || run > r1) nodes[k].visible = false;
     }
     if (targetIdx >= 0) {
       const song = data.song[targetIdx];
-      const tex = store.large600(song) ?? store.get(song);
+      const artTex = store.large600(song) ?? store.get(song);
+      const tex = artTex ?? store.sleeve(song);
       if (tex) {
         if (destReadyAt < 0) destReadyAt = t;
         destMat.uniforms.map.value = tex;
-        const s = lerp(rideCover * 1.1, finalDestSize, landing);
+        destMat.uniforms.map2.value = tex;
+        destMat.uniforms.uMix.value = 1;
+        // on the trunk until the landing, then out at the end of its branch; from mid-landing it
+        // keeps its final on-screen size, so it never balloons across the page's HUD
+        const k = smooth(0.06, 0.36, landing);
+        posTmp.set(spineX(destZ), spineY(destZ), destZ).lerp(destPos, k);
+        const dDepth = Math.max(0.3, -tmpV.copy(posTmp).applyMatrix4(camera.matrixWorldInverse).z);
+        const screenSize = destScreenFrac * 2 * dDepth * Math.tan(((camera.fov / 2) * Math.PI) / 180) * camera.aspect;
+        const s = lerp(COVER * 1.1, screenSize, smooth(0.12, 0.4, landing));
         const q = s / (1 - 2 * NODE_INSET);
-        const off = -(s / 2 + BRAID_R * colorUniforms.uBraid.value + 0.2) * sideK;
-        dest.position.set(spineX(destY) + right.x * off, destY, spineZ(destY) + right.z * off);
+        dest.position.copy(posTmp);
         dest.quaternion.copy(camera.quaternion);
         dest.scale.set(q, q, 1);
         dest.updateMatrix();
-        const appear = Math.min(1, (t - destReadyAt) / 220);
-        if (appear < 1) continuous = true;
-        destMat.uniforms.uOpacity.value = appear;
-        destMat.uniforms.uBright.value = 0.75 + 0.25 * landing;
-        destMat.uniforms.uEdgeA.value = 0.5 + 0.5 * landing;
-        // far off it fades like any cover; landed, it is lit
+        tmpV.copy(posTmp).applyMatrix4(camera.matrixWorldInverse);
+        const depth = -tmpV.z;
+        const appear = Math.min(1, (t - destReadyAt) / 240);
+        if (appear < 1) animating = true;
+        destMat.uniforms.uOpacity.value = appear * (landing > 0 ? 1 : smooth(0.9, 2.4, depth));
+        destMat.uniforms.uEdgeA.value = landing;
         destMat.uniforms.uFogK.value = 1 - landing;
-        dest.visible = true;
+        dest.visible = depth > 0.2;
+        // the destination is a cover on screen too (it counts as art once its own art is in)
+        const dc = project(posTmp);
+        if (dest.visible && depth < viewLimit && dc.x > 0 && dc.x < width && dc.y > 0 && dc.y < height) {
+          if (artTex) shownArt++;
+          else shownSleeve++;
+        }
       } else dest.visible = false;
+    }
+    const coversKey = `${shownArt + shownSleeve}|${shownArt}`;
+    if (coversKey !== lastCovers) {
+      lastCovers = coversKey;
+      canvas.dataset.coversVisible = String(shownArt + shownSleeve);
+      canvas.dataset.coversArt = String(shownArt);
+      canvas.dataset.coversSleeve = String(shownSleeve);
     }
 
     // the tree and its particles follow the camera
-    const top = Math.max(-camD, -camD + 6) + landing * 4;
-    threadMat.uniforms.uY0.value = Math.ceil((top + 6) / THREAD_SEG) * THREAD_SEG;
-    threadMat.uniforms.uPxK.value = (2 * Math.tan(((camera.fov / 2) * Math.PI) / 180)) / Math.max(1, height);
-    particleMat.uniforms.uTop.value = -camD + 5;
-    particleMat.uniforms.uFlow.value = (mode === "idle" || mode === "preload") && freeze === null ? ((t / 1000) * 1.4) % PARTICLE_WIN : 0;
-    particleMat.uniforms.uLen.value = 0.08 + speed * 4.5;
+    const zTop = Math.max(camera.position.z, -camD) + 6 + landing * 26;
+    threadMat.uniforms.uZ0.value = Math.ceil(zTop / THREAD_SEG) * THREAD_SEG;
+    // pulled back, draw far more of the tree into the past (same vertices, longer segments)
+    threadMat.uniforms.uWin.value = lerp(THREAD_WIN, 420, smooth(0.45, 0.9, landing));
+    pxK.value = (2 * Math.tan(((camera.fov / 2) * Math.PI) / 180)) / Math.max(1, height);
+    particleMat.uniforms.uTop.value = -camD + 3;
+    particleMat.uniforms.uFlow.value = (mode === "idle" || mode === "preload") && freeze === null ? ((t / 1000) * 1.6) % PARTICLE_WIN : 0;
+    particleMat.uniforms.uLen.value = 0.08 + speed * 7;
     particleMat.uniforms.uWarp.value = speed;
-    if (canopyMesh) {
-      const grow = smooth(0.35, 0.97, landing);
-      canopyMat.uniforms.uGrow.value = grow * 1.05;
-      canopyMesh.visible = grow > 0.001;
+    if (limbMesh) {
+      limbMat.uniforms.uGrowA.value = smooth(0.1, 0.55, landing) * 1.07;
+      limbMat.uniforms.uGrowB.value = smooth(0.5, 0.95, landing) * 1.07;
+      limbMesh.visible = landing > 0.05;
     }
 
-    // passing readout
-    if (targetIdx >= 0) {
+    // passing readout (also while pre-rolling, so the dates already tick back)
+    if (targetIdx >= 0 || mode === "preroll") {
       const raw = Math.round(camD / SP);
-      const shown = d1 >= d0 ? Math.min(targetIdx, raw) : Math.max(targetIdx, raw);
+      const shown = targetIdx < 0 ? raw : d1 >= d0 ? Math.min(targetIdx, raw) : Math.max(targetIdx, raw);
       const i = mode === "arrived" ? targetIdx : Math.max(0, Math.min(total - 1, shown));
       if (i !== lastShown && mode !== "preload") {
         lastShown = i;
@@ -1338,9 +1593,10 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       }
     }
 
-    // overlay: year labels beside their rings (small, never in the top 20%), branch labels on landing
+    // overlay: year labels beside their rings (small, never in the HUD), branch labels on landing
     let overlayOn = false;
     const yearA = (1 - landing) * fs;
+    const camRight = tmpV.set(1, 0, 0).applyQuaternion(camera.quaternion).clone();
     rings.forEach((r, k) => {
       const s = yearSprites[k];
       if (r.ordinal < 0 || yearA < 0.01) {
@@ -1348,33 +1604,28 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
         return;
       }
       drawYear(s, r.year);
-      const reach = RING_R + 0.12;
-      camQ.set(spineX(r.y) + right.x * reach, r.y, spineZ(r.y) + right.z * reach);
-      tmpV.copy(camQ).project(camera);
-      const sx = ((tmpV.x + 1) / 2) * width;
-      const sy = ((1 - tmpV.y) / 2) * height;
-      const behind = tmpV.z >= 1;
-      let x = sx + 6;
-      if (x + s.w > width - 16) {
-        // no room to the right of the ring: sit to its left
-        tmpV.set(spineX(r.y) - right.x * reach, r.y, spineZ(r.y) - right.z * reach).project(camera);
-        x = ((tmpV.x + 1) / 2) * width - 6 - s.w;
+      camQ.set(spineX(r.z), spineY(r.z), r.z).addScaledVector(camRight, RING_R + 0.15);
+      tmpV.copy(camQ).applyMatrix4(camera.matrixWorldInverse);
+      const depth = -tmpV.z;
+      if (depth < 3) {
+        s.mesh.visible = false;
+        return;
       }
-      const ok = !behind && sy > height * 0.2 + s.h && sy < height - s.h && x > 16 && x + s.w < width - 16;
+      const at = project(camQ);
+      const x = at.x + 6;
+      const ok = x > 16 && x + s.w < width - 16 && at.y > s.h && at.y < height - s.h && hudOverlap(x, at.y - s.h / 2, x + s.w, at.y + s.h / 2) === 0;
       if (!ok) {
         s.mesh.visible = false;
         return;
       }
-      // fade with depth like the ring it belongs to
-      const depth = camQ.distanceTo(camera.position);
       const fogA = 1 - smooth(fNear, fFar, depth);
       s.mesh.scale.set(s.w, s.h, 1);
-      s.mesh.position.set(x + s.w / 2, height - sy, 0);
-      s.mesh.material.opacity = yearA * fogA;
-      s.mesh.visible = fogA > 0.02;
+      s.mesh.position.set(x + s.w / 2, height - at.y, 0);
+      s.mesh.material.opacity = yearA * fogA * smooth(3, 8, depth);
+      s.mesh.visible = s.mesh.material.opacity > 0.02;
       overlayOn ||= s.mesh.visible;
     });
-    const labelA = smooth(0.84, 1, landing) * fs;
+    const labelA = smooth(0.86, 1, landing) * fs;
     labelSprites.forEach((s, k) => {
       const limb = limbs[k];
       if (!limb || labelA < 0.01 || !s.tex) {
@@ -1388,8 +1639,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       s.mesh.material.opacity = labelA;
       s.mesh.visible = true;
       overlayOn = true;
-      const mine = !!limb.branch.mine;
-      const c = mine ? trunkColor : inkColor;
+      const c = limb.branch.mine ? red : ink;
       dotPos.set([at.x, height - at.y, 0], k * 3);
       dotCol.set([c.r, c.g, c.b], k * 3);
     });
@@ -1412,8 +1662,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       firstFrameMarked = true;
       canvas.dataset.firstFrame = String(Math.round(now()));
     }
-    // pending = covers still loading for this view, the destination cover, or the fade-in
-    const pendingNow = wantedMissing + (targetIdx >= 0 && !dest.visible ? 1 : 0) + (fade < 1 ? 1 : 0);
+    const pendingNow = wantedMissing + (targetIdx >= 0 && !dest.visible && destReadyAt < 0 ? 1 : 0) + (fade < 1 ? 1 : 0);
     if (pendingNow !== lastPending) {
       lastPending = pendingNow;
       canvas.dataset.pending = String(pendingNow);
@@ -1425,8 +1674,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       opts.onArrive?.();
     }
 
-    // sleeves are drawn a few per frame: keep going until the window is complete
-    if (continuous || store.throttled) requestRender();
+    if (continuous || animating || store.throttled || pendingNow > 0) requestRender();
   }
 
   // ---------- environment ----------
@@ -1443,9 +1691,13 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
       // resume where it paused rather than jumping; anything started while hidden starts now
       const resume = (x: number) => (x <= hiddenAt ? x + gap : now());
       if (mode === "flying") t0 = resume(t0);
-      if (mode === "idle") idleStart += gap;
+      if (mode === "idle") {
+        idleStart += gap;
+        idleEnd += gap;
+      }
       if (mode === "preload") preloadStart += gap;
-      if (fadeStart !== null) fadeStart = resume(fadeStart);
+      if (mode === "arrived") arrivedAt += gap;
+      lastT = now();
       requestRender();
     }
   };
@@ -1457,7 +1709,6 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     ro.observe(canvas);
   }
 
-  // fonts: draw with what is there now, redraw sleeves and labels once Archivo lands
   awaitFonts(2500).then(() => {
     if (disposed) return;
     fonts = canvasFonts();
@@ -1476,23 +1727,28 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     const was = hiddenNow.map((o) => o.visible);
     hiddenNow.forEach((o) => (o.visible = true));
     nodes[0].material.uniforms.map.value = warmTex;
+    nodes[0].material.uniforms.map2.value = warmTex;
     destMat.uniforms.map.value = warmTex;
     labelSprites[0].mesh.material.map = warmTex;
-    const warmCanopy = new Mesh(new PlaneGeometry(0.01, 0.01), canopyMat);
-    warmCanopy.geometry.setAttribute("aSide", new BufferAttribute(new Float32Array(4), 1));
-    warmCanopy.geometry.setAttribute("aT", new BufferAttribute(new Float32Array(4), 1));
-    warmCanopy.geometry.setAttribute("aCi", new BufferAttribute(new Float32Array(4), 1));
-    scene.add(warmCanopy);
+    const g = new BufferGeometry();
+    for (const [name, size] of [["position", 3], ["aNext", 3], ["aSide", 1], ["aT", 1], ["aCi", 1], ["aW", 1], ["aAlpha", 1], ["aStage", 1]] as const) {
+      g.setAttribute(name, new BufferAttribute(new Float32Array(3 * size), size));
+    }
+    const warmLimb = new Mesh(g, limbMat);
+    scene.add(warmLimb);
     renderer.compile(scene, camera);
     renderer.compile(overlay, ortho);
-    scene.remove(warmCanopy);
-    warmCanopy.geometry.dispose();
+    scene.remove(warmLimb);
+    g.dispose();
     hiddenNow.forEach((o, k) => (o.visible = was[k]));
     nodes[0].material.uniforms.map.value = blank;
+    nodes[0].material.uniforms.map2.value = blank;
     destMat.uniforms.map.value = blank;
     labelSprites[0].mesh.material.map = null;
     warmTex.dispose();
   }
+  // the idle tree's first covers start loading at once; strands are on screen from the first frame
+  store.preload(songsForWeeks(0, 12), 0);
   setTarget(opts.target);
 
   function dispose() {
@@ -1503,8 +1759,7 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     window.removeEventListener("resize", onResize);
     document.removeEventListener("visibilitychange", onVisibility);
     ro?.disconnect();
-    store.dispose();
-    blank.dispose();
+    store.dispose(); // also disposes the shared plain sleeve
     for (const m of nodes) m.material.dispose();
     destMat.dispose();
     quadGeo.dispose();
@@ -1512,8 +1767,8 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     threadMat.dispose();
     particleGeo.dispose();
     particleMat.dispose();
-    canopyMesh?.geometry.dispose();
-    canopyMat.dispose();
+    limbMesh?.geometry.dispose();
+    limbMat.dispose();
     ringGeo.dispose();
     ringMat.dispose();
     for (const s of [...yearSprites, ...labelSprites]) {
@@ -1527,5 +1782,5 @@ export function createTunnel(opts: TunnelOptions): Tunnel {
     renderer.dispose();
   }
 
-  return { setTarget, setFreeze, setBranches, skip, dispose };
+  return { setTarget, setFreeze, setBranches, setPending, skip, dispose };
 }

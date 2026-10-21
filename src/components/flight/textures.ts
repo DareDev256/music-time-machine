@@ -9,16 +9,25 @@
 import { CanvasTexture, LinearFilter, SRGBColorSpace, Texture } from "three";
 import { artUrl, type FlightData } from "./data";
 import { Lru } from "./pool";
+import type { PlannedCover } from "./plan";
 
 export const SIGNAL = "#ff3b1f";
 export const INK = "#f4f4f4";
-const SLEEVE_GROUND = "#0b0b0b";
+const SLEEVE_GROUND = "#0b0a0a";
 
-const CONCURRENCY = 6;
-const LRU_CAPACITY = 180;
-const SLEEVES_PER_FRAME = 3;
-export const WALL_ART_SIZE = 200;
+/** Parallel cover requests (Apple's CDN is HTTP/2: many requests share a connection). */
+const CONCURRENCY = 36;
+/** Flight covers are small; covers near a slow camera upgrade; the destination is large. */
+export const FLIGHT_ART_SIZE = 100;
+export const NEAR_ART_SIZE = 300;
 export const DEST_ART_SIZE = 600;
+const ART_CAPACITY = 1000; // 100 px: 40 KB each, uploaded only once drawn
+const NEAR_CAPACITY = 36;
+const SLEEVE_CAPACITY = 220;
+const SLEEVE_SIZE = 128;
+const SLEEVES_PER_FRAME = 4;
+/** A planned cover whose moment has passed by more than this is not fetched any more. */
+const LATE_MS = 120;
 
 // ---------- fonts ----------
 
@@ -114,17 +123,17 @@ function ellipsize(g: CanvasRenderingContext2D, text: string, max: number): stri
 }
 
 /**
- * A typeset sleeve for a #1 with no resolvable cover: intentional, never a grey box.
- * Title in condensed Archivo, artist in mono, a signal-red rule round the edge.
+ * A typeset sleeve: what a cover slot shows until its art arrives (and for good when a song has
+ * no art). Title in condensed Archivo, artist in mono, on near-black with a thin hairline.
  */
 export function drawSleeve(song: string, artist: string, size: number, fonts: CanvasFonts): CanvasTexture {
   const [c, g] = canvas2d(size, size);
   const u = size / 256;
   g.fillStyle = SLEEVE_GROUND;
   g.fillRect(0, 0, size, size);
-  g.strokeStyle = SIGNAL;
-  g.lineWidth = 3 * u;
-  g.strokeRect(9 * u, 9 * u, size - 18 * u, size - 18 * u);
+  g.strokeStyle = "rgba(244,244,244,.24)";
+  g.lineWidth = Math.max(1, 1.5 * u);
+  g.strokeRect(6 * u, 6 * u, size - 12 * u, size - 12 * u);
 
   const pad = 24 * u;
   const maxW = size - pad * 2;
@@ -150,14 +159,14 @@ export function drawSleeve(song: string, artist: string, size: number, fonts: Ca
   return asTexture(c);
 }
 
-/** What a card shows while its cover is in flight: an empty sleeve outline, faint ink. */
+/** A plain sleeve (ground + hairline): the frame before a song's typeset sleeve is drawn. */
 export function drawPlaceholder(): CanvasTexture {
   const [c, g] = canvas2d(128, 128);
   g.fillStyle = SLEEVE_GROUND;
   g.fillRect(0, 0, 128, 128);
-  g.strokeStyle = "rgba(244,244,244,.16)";
-  g.lineWidth = 2;
-  g.strokeRect(5, 5, 118, 118);
+  g.strokeStyle = "rgba(244,244,244,.24)";
+  g.lineWidth = 1;
+  g.strokeRect(3, 3, 122, 122);
   return asTexture(c);
 }
 
@@ -203,30 +212,64 @@ function loadImage(url: string, high: boolean): { img: HTMLImageElement; done: P
   return { img, done };
 }
 
+
+type Tier = 0 | 1; // 0 = flight (100 px), 1 = near (300 px)
+
+/**
+ * Cover textures, keyed by artwork (two #1s sharing a sleeve share one request).
+ *
+ * - `plan()` takes the covers a flight will pass in the order the camera reaches them; `pump()`
+ *   keeps CONCURRENCY requests going down that list, skipping any whose moment has passed.
+ * - `want()` asks for covers round the camera outside a plan (idle drift, the landing).
+ * - Until a cover's art arrives its slot shows `sleeve()`: the song's typeset sleeve (a few drawn
+ *   per frame) or, before that, a plain sleeve. Never an empty slot.
+ */
 export class CoverStore {
-  private lru: Lru<Texture>;
-  private inflight = new Map<number, HTMLImageElement>();
+  /** art id per song (songs with the same artwork share one) */
+  readonly artId: Int32Array;
+  private artUrl: string[] = [];
+  private art: Lru<Texture>;
+  private near: Lru<Texture>;
+  private sleeves: Lru<CanvasTexture>;
+  readonly blank: CanvasTexture;
+  private inflight = new Map<number, HTMLImageElement>(); // key = artId * 2 + tier
   private failed = new Set<number>();
   private queue: number[] = [];
   private queuedStamp: Int32Array;
+  private planned: PlannedCover[] = [];
+  private planPos = 0;
   private stamp = 0;
   private sleevesThisFrame = 0;
-  /** A sleeve was wanted this frame but deferred to the next. */
+  /** A typeset sleeve was wanted this frame but deferred to the next. */
   throttled = false;
   private disposed = false;
   private large = new Map<number, Texture>();
   private largeInflight = new Set<number>();
-  /** Textures created, ever (telemetry). */
-  created = 0;
+  private waiters: Array<{ ids: number[]; resolve: () => void }> = [];
+  /** telemetry */
   requested = 0;
+  loaded = 0;
 
   constructor(
     private data: FlightData,
     private fonts: () => CanvasFonts,
     private onReady: () => void,
   ) {
-    this.lru = new Lru<Texture>(LRU_CAPACITY, (_k, t) => t.dispose());
-    this.queuedStamp = new Int32Array(data.songs.length).fill(-1);
+    const ids = new Map<string, number>();
+    this.artId = new Int32Array(data.songs.length);
+    data.songs.forEach((sg, i) => {
+      const key = sg.art ?? `sleeve:${i}`;
+      if (!ids.has(key)) {
+        ids.set(key, ids.size);
+        this.artUrl.push(sg.art ?? "");
+      }
+      this.artId[i] = ids.get(key)!;
+    });
+    this.art = new Lru<Texture>(ART_CAPACITY, (_k, t) => t.dispose());
+    this.near = new Lru<Texture>(NEAR_CAPACITY, (_k, t) => t.dispose());
+    this.sleeves = new Lru<CanvasTexture>(SLEEVE_CAPACITY, (_k, t) => t.dispose());
+    this.queuedStamp = new Int32Array(ids.size * 2).fill(-1);
+    this.blank = drawPlaceholder();
   }
 
   beginFrame(stamp: number): void {
@@ -236,44 +279,91 @@ export class CoverStore {
     this.throttled = false;
   }
 
-  /** The ready texture for a song, or null while it loads. Marks it in use this frame. */
+  private hasArt(song: number): boolean {
+    return !!this.artUrl[this.artId[song]] && !this.failed.has(this.artId[song]);
+  }
+
+  /** The best loaded art for a song (near tier first), or null. Marks it in use this frame. */
   get(song: number): Texture | null {
-    return this.lru.get(song, this.stamp) ?? null;
+    const id = this.artId[song];
+    return this.near.get(id, this.stamp) ?? this.art.get(id, this.stamp) ?? null;
   }
 
   has(song: number): boolean {
-    return this.lru.has(song);
+    const id = this.artId[song];
+    return this.art.has(id) || this.near.has(id);
   }
 
-  /** Ask for a song's wall texture; call in priority order, nearest first. Returns true if ready. */
-  want(song: number): boolean {
-    if (this.lru.has(song)) {
-      this.lru.touch(song, this.stamp);
+  /** What the slot shows until the art is in: the song's typeset sleeve, or a plain one while that is drawn. */
+  sleeve(song: number): Texture {
+    const hit = this.sleeves.get(song, this.stamp);
+    if (hit) return hit;
+    if (this.sleevesThisFrame < SLEEVES_PER_FRAME) {
+      this.sleevesThisFrame++;
+      const s = this.data.songs[song];
+      // a song with no art keeps its sleeve, so it is drawn sharper
+      const t = drawSleeve(s.s, s.a, this.hasArt(song) ? SLEEVE_SIZE : 256, this.fonts());
+      this.sleeves.set(song, t, this.stamp);
+      return t;
+    }
+    this.throttled = true;
+    return this.blank;
+  }
+
+  /** Ask for a cover round the camera (nearest first). Returns true if its art is in. */
+  want(song: number, tier: Tier = 0): boolean {
+    const id = this.artId[song];
+    if (!this.hasArt(song)) return false;
+    const lru = tier ? this.near : this.art;
+    if (lru.has(id)) {
+      lru.touch(id, this.stamp);
       return true;
     }
-    if (this.queuedStamp[song] === this.stamp) return false;
-    this.queuedStamp[song] = this.stamp;
-    const s = this.data.songs[song];
-    if (!s.art || this.failed.has(song)) {
-      // typeset sleeve: drawn locally, a few per frame so a burst never drops one
-      if (this.sleevesThisFrame < SLEEVES_PER_FRAME) {
-        this.sleevesThisFrame++;
-        this.put(song, drawSleeve(s.s, s.a, 256, this.fonts()));
-        return true;
-      }
-      this.throttled = true;
-      return false;
-    }
-    if (!this.inflight.has(song)) this.queue.push(song);
+    const key = id * 2 + tier;
+    if (this.queuedStamp[key] === this.stamp) return false;
+    this.queuedStamp[key] = this.stamp;
+    if (!this.inflight.has(key)) this.queue.push(key);
     return false;
   }
 
-  /** Start requests from the front of this frame's queue, up to CONCURRENCY in flight. */
-  pump(): void {
+  /** The covers a flight will pass, in the order the camera reaches them. Replaces any earlier plan. */
+  plan(list: PlannedCover[]): void {
+    const seen = new Set<number>();
+    this.planned = [];
+    for (const p of list) {
+      const id = this.artId[p.song];
+      if (seen.has(id) || !this.hasArt(p.song)) continue;
+      seen.add(id);
+      this.planned.push(p);
+    }
+    this.planPos = 0;
+  }
+
+  /** Fraction of the plan's covers due before `until` that are loaded (1 when none are due). */
+  readyBefore(until: number): number {
+    let due = 0;
+    let ok = 0;
+    for (const p of this.planned) {
+      if (p.at > until) break;
+      due++;
+      if (this.art.has(this.artId[p.song])) ok++;
+    }
+    return due ? ok / due : 1;
+  }
+
+  /** Keep CONCURRENCY requests going: this frame's local wants first, then down the plan. */
+  pump(now: number): void {
     for (let k = 0; k < this.queue.length && this.inflight.size < CONCURRENCY; k++) {
-      const song = this.queue[k];
-      if (this.inflight.has(song) || this.lru.has(song)) continue;
-      this.fetch(song, k < 8);
+      const key = this.queue[k];
+      if (this.inflight.has(key)) continue;
+      this.fetch(key >> 1, (key & 1) as Tier, k < 8);
+    }
+    while (this.inflight.size < CONCURRENCY && this.planPos < this.planned.length) {
+      const p = this.planned[this.planPos++];
+      const id = this.artId[p.song];
+      if (p.until < now + LATE_MS) continue; // the camera will be past it before it can arrive
+      if (this.art.has(id) || this.inflight.has(id * 2)) continue;
+      this.fetch(id, 0, this.planPos < 24);
     }
   }
 
@@ -281,58 +371,54 @@ export class CoverStore {
     return this.inflight.size + this.queue.length;
   }
 
-  private put(song: number, t: Texture) {
-    this.created++;
-    this.lru.set(song, t, this.stamp);
-  }
-
-  private fetch(song: number, high: boolean) {
-    const art = this.data.songs[song].art;
-    if (!art) return;
+  private fetch(id: number, tier: Tier, high: boolean) {
+    const url = this.artUrl[id];
+    if (!url || this.failed.has(id)) return;
+    const key = id * 2 + tier;
     this.requested++;
-    const { img, done } = loadImage(artUrl(art, WALL_ART_SIZE), high);
-    this.inflight.set(song, img);
+    const { img, done } = loadImage(artUrl(url, tier ? NEAR_ART_SIZE : FLIGHT_ART_SIZE), high);
+    this.inflight.set(key, img);
     done.then(
       (im) => {
-        this.inflight.delete(song);
+        this.inflight.delete(key);
         if (this.disposed) return;
-        this.put(song, imageTexture(im));
+        (tier ? this.near : this.art).set(id, imageTexture(im), this.stamp);
+        this.loaded++;
+        this.settleWaiters();
         this.onReady();
       },
       () => {
-        this.inflight.delete(song);
+        this.inflight.delete(key);
         if (this.disposed) return;
-        this.failed.add(song);
+        if (!tier) this.failed.add(id);
+        this.settleWaiters();
         this.onReady();
       },
     );
   }
 
-  /** Load `songs` (deduped, in order) and resolve when all are ready or after `timeoutMs`. */
+  private settleWaiters() {
+    this.waiters = this.waiters.filter((w) => {
+      const done = w.ids.every((id) => this.art.has(id) || this.failed.has(id));
+      if (done) w.resolve();
+      return !done;
+    });
+  }
+
+  /** Load the flight-size art for `songs` now and resolve when all are in, or after `timeoutMs`. */
   preload(songs: number[], timeoutMs: number): Promise<void> {
-    const uniq = [...new Set(songs)];
-    const jobs: Promise<unknown>[] = [];
-    for (const song of uniq) {
-      if (this.lru.has(song)) continue;
-      const s = this.data.songs[song];
-      if (!s.art || this.failed.has(song)) {
-        this.put(song, drawSleeve(s.s, s.a, 256, this.fonts()));
-        continue;
-      }
-      if (this.inflight.has(song)) {
-        const img = this.inflight.get(song)!;
-        jobs.push(img.decode().catch(() => undefined));
-        continue;
-      }
-      this.fetch(song, true);
-      const img = this.inflight.get(song);
-      if (img) jobs.push(img.decode().catch(() => undefined));
-    }
-    if (!jobs.length) return Promise.resolve();
-    return Promise.race([
-      Promise.all(jobs).then(() => undefined),
-      new Promise<void>((r) => setTimeout(r, timeoutMs)),
-    ]);
+    const ids = [...new Set(songs.filter((s) => this.hasArt(s)).map((s) => this.artId[s]))];
+    for (const id of ids) if (!this.art.has(id) && !this.inflight.has(id * 2)) this.fetch(id, 0, true);
+    const missing = ids.filter((id) => !this.art.has(id));
+    if (!missing.length) return Promise.resolve();
+    return new Promise<void>((resolve) => {
+      const w = { ids: missing, resolve };
+      this.waiters.push(w);
+      setTimeout(() => {
+        this.waiters = this.waiters.filter((x) => x !== w);
+        resolve();
+      }, timeoutMs);
+    });
   }
 
   /** The destination card's 600×600 cover (or a large sleeve). Null until ready. */
@@ -367,31 +453,31 @@ export class CoverStore {
 
   /** Drop typeset sleeves so they redraw in the real font once it arrives. */
   refreshSleeves(): void {
-    for (let song = 0; song < this.data.songs.length; song++) {
-      const s = this.data.songs[song];
-      if ((!s.art || this.failed.has(song)) && this.lru.has(song)) {
-        this.put(song, drawSleeve(s.s, s.a, 256, this.fonts()));
-      }
-    }
+    this.sleeves.clear();
     for (const [song, t] of this.large) {
-      const s = this.data.songs[song];
-      if (!s.art || this.failed.has(song)) {
+      if (!this.data.songs[song].art) {
         t.dispose();
+        const s = this.data.songs[song];
         this.large.set(song, drawSleeve(s.s, s.a, 512, this.fonts()));
       }
     }
   }
 
   get size(): number {
-    return this.lru.size;
+    return this.art.size;
   }
 
   dispose(): void {
     this.disposed = true;
     for (const img of this.inflight.values()) img.src = "";
     this.inflight.clear();
-    this.lru.clear();
+    this.art.clear();
+    this.near.clear();
+    this.sleeves.clear();
+    this.blank.dispose();
     for (const t of this.large.values()) t.dispose();
     this.large.clear();
+    for (const w of this.waiters) w.resolve();
+    this.waiters = [];
   }
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { prepare, type FlightDoc } from "../data";
-import { BRAID_R, BRAID_STRANDS, buildThreads, groupAt, LANES, NO_OLD, presence, SP, spineX, spineZ, threadAt } from "../tree";
+import { buildThreads, groupAt, LANES, NO_END, NO_START, presence, SP, spineX, spineY, threadAt, TRUNK_STRANDS } from "../tree";
 
 // a synthetic chart: one week per 7 days from 1958-08-04 to 2026-09-19, newest last
 function syntheticDoc(): FlightDoc {
@@ -10,57 +10,63 @@ function syntheticDoc(): FlightDoc {
   }
   return { through: weeks[weeks.length - 1][0], songs: [0, 1, 2].map((i) => ({ s: `S${i}`, a: `A${i}`, art: null })), weeks };
 }
-const yOf = (date: string) => -Math.round((Date.parse("2026-09-19") - Date.parse(date)) / (7 * 86_400_000)) * SP;
+const zOf = (date: string) => -Math.round((Date.parse("2026-09-19") - Date.parse(date)) / (7 * 86_400_000)) * SP;
 
-describe("tree threads", () => {
+describe("tree", () => {
   const data = prepare(syntheticDoc());
   const threads = buildThreads(data);
-  const laneStrands = (id: string) => threads.filter((t) => t.lane === id);
+  const trunk = threads.filter((t) => t.kind === "trunk");
 
-  it("braids the trunk from 40-60 strands inside the trunk radius", () => {
-    const trunk = threads.filter((t) => t.kind === "trunk");
-    expect(trunk.length).toBe(BRAID_STRANDS);
-    expect(trunk.length).toBeGreaterThanOrEqual(40);
-    expect(trunk.length).toBeLessThanOrEqual(60);
-    for (const t of trunk) {
-      const p = threadAt(t, -200, 1);
-      expect(Math.hypot(p.x - spineX(-200), p.z - spineZ(-200))).toBeLessThanOrEqual(BRAID_R + 1e-9);
+  it("is a helix of many trunk strands, each 2–6 units from the spine", () => {
+    expect(trunk.length).toBe(TRUNK_STRANDS);
+    for (const t of trunk)
+      for (const z of [-10, -400, -1700, -3900]) {
+        const p = threadAt(t, z);
+        const r = Math.hypot(p.x - spineX(z), p.y - spineY(z));
+        expect(r).toBeGreaterThanOrEqual(2 - 1e-9);
+        expect(r).toBeLessThanOrEqual(6 + 1e-9);
+      }
+  });
+
+  it("no two strands alike: widths and brightness vary", () => {
+    expect(new Set(trunk.map((t) => t.alpha.toFixed(3))).size).toBeGreaterThan(TRUNK_STRANDS * 0.8);
+    expect(new Set(trunk.map((t) => t.minPx.toFixed(3))).size).toBeGreaterThan(TRUNK_STRANDS * 0.8);
+  });
+
+  it("each lane splits 3–5 ways at varied angles, and not every fork runs to the present", () => {
+    for (const l of LANES) {
+      const strands = threads.filter((t) => t.lane === l.lane);
+      const forks = [...new Set(strands.map((t) => t.fork))];
+      expect(forks.length).toBeGreaterThanOrEqual(3);
+      expect(forks.length).toBeLessThanOrEqual(5);
+      const angles = forks.map((f) => strands.find((t) => t.fork === f)!.ang0.toFixed(3));
+      expect(new Set(angles).size).toBe(forks.length);
+      expect(strands.find((t) => t.fork === 0)!.zEnd).toBe(NO_END);
+    }
+    const stopped = threads.filter((t) => t.kind === "lane" && t.zEnd < 0).length;
+    expect(stopped).toBeGreaterThan(0);
+  });
+
+  it("there is no rap branch before 1989; in 2012 it is out among the others", () => {
+    const rap = threads.filter((t) => t.lane === "rap" && t.fork === 0);
+    for (const t of rap) {
+      expect(presence(t, zOf("1985-06-01"))).toBe(0);
+      expect(presence(t, zOf("2012-04-28"))).toBe(1);
+      const g = groupAt(t, zOf("2012-04-28"));
+      expect(Math.hypot(g.x - spineX(g.z), g.y - spineY(g.z))).toBeGreaterThan(3);
     }
   });
 
-  it("gives every lane its own strand group", () => {
-    for (const l of LANES) expect(laneStrands(l.lane).length).toBeGreaterThan(1);
-  });
-
-  it("lanes that predate the Hot 100 run the whole trunk", () => {
-    expect(laneStrands("uk")[0].yOld).toBe(NO_OLD);
-    expect(laneStrands("rnb_hiphop")[0].yOld).toBe(NO_OLD);
-  });
-
-  it("there is no rap limb before 1989: it folds into the trunk", () => {
-    const rap = laneStrands("rap")[0];
-    const y1985 = yOf("1985-06-01");
-    expect(presence(rap, y1985)).toBe(0);
-    const g = groupAt(rap, y1985, 1);
-    expect(g.x).toBeCloseTo(spineX(y1985), 9);
-    expect(g.z).toBeCloseTo(spineZ(y1985), 9);
-    // and in 2012 it runs beside the trunk at its own radius
-    const y2012 = yOf("2012-04-28");
-    expect(presence(rap, y2012)).toBe(1);
-    const g2 = groupAt(rap, y2012, 1);
-    expect(Math.hypot(g2.x - spineX(y2012), g2.z - spineZ(y2012))).toBeCloseTo(LANES.find((l) => l.lane === "rap")!.radius, 6);
-  });
-
-  it("Canada joins in 2007, after rap", () => {
-    expect(laneStrands("canada")[0].yOld).toBeGreaterThan(laneStrands("rap")[0].yOld);
+  it("lanes that predate the Hot 100 are out from the first week", () => {
+    expect(threads.find((t) => t.lane === "uk")!.zStart).toBe(NO_START);
   });
 
   it("offshoots exist only 2010–2014", () => {
     const off = threads.filter((t) => t.kind === "offshoot");
     expect(off.length).toBeGreaterThan(0);
     for (const o of off) {
-      expect(presence(o, yOf("2005-06-01"))).toBe(0);
-      expect(presence(o, yOf("2020-06-01"))).toBe(0);
+      expect(presence(o, zOf("2005-06-01"))).toBe(0);
+      expect(presence(o, zOf("2020-06-01"))).toBe(0);
     }
   });
 });
