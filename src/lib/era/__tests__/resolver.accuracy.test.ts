@@ -2,6 +2,7 @@
 // Resolver accuracy against an INDEPENDENT ground-truth set (built by someone who never saw this code).
 // Live network: skipped unless RESOLVER_TRUTH points at the truth JSON.
 //   RESOLVER_TRUTH=/path/resolver-truth.json RESOLVER_OUT=/path/out.json npx vitest run src/lib/era/__tests__/resolver.accuracy.test.ts
+// RESOLVER_YT_KEY_FILE=/path/to/key adds the YouTube last lookup (100 quota units per search it makes; the count is printed).
 // Bar (spec §8): at least 85% of answers land inside the truth's accept_year_window, with the right song.
 
 import { describe, it, expect } from "vitest";
@@ -9,6 +10,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { resolveQuery, prepareIndex, searchIndex, buildMbQuery, mapMusicBrainz, mapItunes, type ResolverDeps } from "../resolve";
 import { cleanQuery } from "../normalize";
+import { mapYouTubeSearch } from "../youtube";
 
 const TRUTH = process.env.RESOLVER_TRUTH;
 const UA = "MusicTimeMachine/2.0 (dev@jamesdare.com; accuracy test)";
@@ -44,8 +46,18 @@ function nodeDeps(): ResolverDeps {
     async indexSearch(q) { return searchIndex(index, q); },
     async musicbrainz(q) { return mapMusicBrainz(await getJson(`https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(buildMbQuery(q))}&fmt=json&limit=8`)); },
     async itunes(q) { return mapItunes(await getJson(`https://itunes.apple.com/search?media=music&entity=song&limit=8&term=${encodeURIComponent(cleanQuery(q))}`)); },
+    ...(YT_KEY ? {
+      async youtube(q: string) {
+        ytSearches++;
+        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=8&q=${encodeURIComponent(cleanQuery(q))}&key=${encodeURIComponent(YT_KEY)}`;
+        const res = await fetch(url, { signal: AbortSignal.timeout(8000) }).catch(() => null);
+        return res?.ok ? mapYouTubeSearch(await res.json()) : [];
+      },
+    } : {}),
   };
 }
+const YT_KEY = process.env.RESOLVER_YT_KEY_FILE ? readFileSync(process.env.RESOLVER_YT_KEY_FILE, "utf8").trim() : "";
+let ytSearches = 0;
 
 describe.skipIf(!TRUTH)("resolver accuracy (live)", () => {
   it("lands at least 85% of independent truth rows in their accepted year window", async () => {
@@ -72,7 +84,7 @@ describe.skipIf(!TRUTH)("resolver accuracy (live)", () => {
     }
     const passed = rows.filter((r) => r.pass).length;
     const nonDsp = rows.filter((r) => r.where !== "dsp");
-    const summary = { passed, total: rows.length, rate: passed / rows.length, nonDspPassed: nonDsp.filter((r) => r.pass).length, nonDspTotal: nonDsp.length, refused };
+    const summary = { passed, total: rows.length, rate: passed / rows.length, nonDspPassed: nonDsp.filter((r) => r.pass).length, nonDspTotal: nonDsp.length, refused, ytSearches };
     if (process.env.RESOLVER_OUT) writeFileSync(process.env.RESOLVER_OUT, JSON.stringify({ summary, rows }, null, 1));
     console.log(JSON.stringify(summary));
     for (const r of rows.filter((x) => !x.pass)) console.log(`MISS  ${r.q}  →  ${r.got}   (want ${r.expect})${r.refusedDuring ? `   [refused during: ${r.refusedDuring}]` : ""}`);

@@ -2,7 +2,8 @@
 // Pure: every lookup is an injected dependency. Order (spec §5.3, rules §12.10):
 //   1. own index (charts + lanes + archived heat + the hand-verified seed), whole text first
 //   2. ONE MusicBrainz recording search + one iTunes search, in parallel, only when the index did not settle it
-//   3. the year in the text, when no song can be named with confidence
+//   3. ONE YouTube search, only when nothing else named a song and the text has words that are not a date
+//   4. the year in the text, when no song can be named with confidence
 // The earliest credible date wins. resolveQuery never throws and never waits on a dead dependency forever.
 
 import type { DatedSong, Granularity, IndexFileRow, ResolveOutcome } from "./types";
@@ -17,6 +18,8 @@ export interface ResolverDeps {
   indexSearch(q: string): Promise<DatedSong[]>;
   musicbrainz(q: string): Promise<DatedSong[]>;
   itunes(q: string): Promise<DatedSong[]>;
+  /** Last resort (spec §12 "A"): optional, so a caller without a YouTube route still resolves everything else. */
+  youtube?(q: string): Promise<DatedSong[]>;
 }
 
 const INDEX_MS = 5_000;
@@ -272,7 +275,7 @@ export function mergeSong(rowsIn: DatedSong[]): DatedSong {
 
 // ── grouping and matching ─────────────────────────────────────────────────────
 
-type Origin = "index" | "mb" | "itunes";
+type Origin = "index" | "mb" | "itunes" | "yt";
 interface Group {
   key: string;
   rows: DatedSong[];
@@ -311,7 +314,7 @@ class Groups {
     lead.forEach((n) => g.primaries.add(n));
   }
 
-  add(r: DatedSong, origin: "index" | "mb", rank = Infinity): void {
+  add(r: DatedSong, origin: "index" | "mb" | "yt", rank = Infinity): void {
     this.push(this.find(r), r, origin, rank);
   }
 
@@ -735,6 +738,16 @@ async function resolveInner(q: string, deps: ResolverDeps): Promise<ResolveOutco
   if (!target && mbRes.ok && decide(matches, qi).kind === "none") {
     const retry = await call(() => deps.musicbrainz(MB_FUZZY + mbText), EXTERNAL_MS);
     asked(retry.rows).forEach((r) => groups.add(r, "mb"));
+    matches = matchAll(groups, qi);
+  }
+
+  // Still nothing, and words that are not a date: ONE YouTube search, where songs that never reached a store or a
+  // chart were released ("casper dopeboy"). Last, because each search spends 100 of the site's 10,000 daily units.
+  // Its rows go through the same title and artist fit as every other source, so an unrelated video never answers.
+  const words = (qi.detail ? qi.restList : qi.wholeList).filter((t) => !FILLER.has(t) && !isStopword(t));
+  if (!target && deps.youtube && words.length && decide(matches, qi).kind === "none") {
+    const yt = await call(() => deps.youtube!(qi.detail ? qi.detail.rest : text), EXTERNAL_MS);
+    asked(yt.rows).forEach((r) => groups.add(r, "yt"));
     matches = matchAll(groups, qi);
   }
 
@@ -1218,6 +1231,11 @@ export function browserDeps(): ResolverDeps {
     async itunes(q: string) {
       const url = `https://itunes.apple.com/search?media=music&entity=song&limit=8&term=${encodeURIComponent(cleanQuery(q))}`;
       return mapItunes(await getJson(url, EXTERNAL_MS, true));
+    },
+    async youtube(q: string) {
+      const body = await getJson(`/api/youtube?q=${encodeURIComponent(cleanQuery(q))}`, EXTERNAL_MS, false);
+      const rows = (body as { rows?: unknown } | null)?.rows;
+      return Array.isArray(rows) ? (rows as DatedSong[]) : [];
     },
   };
 }

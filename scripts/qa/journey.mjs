@@ -23,6 +23,8 @@ await p.waitForFunction(() => !document.querySelector('[aria-label^="Destination
 const tResolved = Date.now();
 const dest = await p.$eval('[aria-label^="Destination"]', (e) => e.textContent).catch(() => null);
 await p.waitForTimeout(1600);
+const covers = await p.$eval('canvas', (c) => ({ visible: c.dataset.coversVisible, art: c.dataset.coversArt, sleeve: c.dataset.coversSleeve })).catch(() => null);
+console.log('mid-flight covers', JSON.stringify(covers));
 await p.screenshot({ path: `${out}-${width}-2-flight.png` });
 await p.waitForFunction(() => document.querySelector('canvas')?.dataset.state === 'arrived', null, { timeout: 25000 }).catch(() => { broken = true; problems.push('never reached data-state=arrived'); });
 const tArrived = Date.now();

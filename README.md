@@ -41,7 +41,7 @@ Type `cuz my gear chief keef`. Chief Keef and Riff Raff's "Cuz My Gear" went up 
 
 ## How it knows
 
-History does not change, so it is computed once and served as static files. Only resolving a song the index has never seen happens live, in your browser, so the rate limits of MusicBrainz and Apple apply per visitor.
+History does not change, so it is computed once and served as static files. Only resolving a song the index has never seen happens live, in your browser, so the rate limits of MusicBrainz and Apple apply per visitor. When none of them knows the song, the server asks YouTube once and dates it by the upload; that is where most songs that never reached a store were released. Each answer is cached for a day (YouTube's terms allow at most 30), so a busy song costs one search, not one per visitor.
 
 | Layer | Source | Built by |
 |---|---|---|

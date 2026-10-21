@@ -12,6 +12,7 @@ import {
   type ResolverDeps,
 } from "@/lib/era/resolve";
 import { flightTarget } from "@/lib/era/dates";
+import { mapYouTubeSearch } from "@/lib/era/youtube";
 import { cleanQuery, editDistance, fuzzyPhrase, norm, soundKey, tokenSim, versionOf } from "@/lib/era/normalize";
 
 // ── fixtures: rows exactly as each dependency hands them over ────────────────
@@ -32,7 +33,7 @@ const it_ = (song: string, artist: string, date: string): DatedSong => ({
 });
 
 type Rows = DatedSong[] | (() => never);
-function fakeDeps(opts: { index?: Rows; mb?: Rows; itunes?: Rows } = {}) {
+function fakeDeps(opts: { index?: Rows; mb?: Rows; itunes?: Rows; yt?: Rows } = {}) {
   const run = (r: Rows | undefined) => async () => {
     if (typeof r === "function") r();
     return (r as DatedSong[] | undefined) ?? [];
@@ -42,6 +43,7 @@ function fakeDeps(opts: { index?: Rows; mb?: Rows; itunes?: Rows } = {}) {
     indexSearch: vi.fn<Dep>(run(opts.index)),
     musicbrainz: vi.fn<Dep>(run(opts.mb)),
     itunes: vi.fn<Dep>(run(opts.itunes)),
+    youtube: vi.fn<Dep>(run(opts.yt)),
   };
   return deps satisfies ResolverDeps;
 }
@@ -1222,5 +1224,68 @@ describe("other versions", () => {
       recordings: [{ id: "x", title: "Hello", disambiguation: "live, 2016-03-01: Glasgow", "first-release-date": "2016-06-01", "artist-credit": [{ name: "Adele" }] }],
     });
     expect(rows[0].version).toBe("live");
+  });
+});
+
+// ── spec §12 "A": YouTube is the last lookup, and it must fit the text like every other source ─────────────────
+describe("YouTube fallback", () => {
+  const yt = (title: string, channel: string, date: string, id = "E7ZStZMn-ac") =>
+    mapYouTubeSearch({ items: [{ id: { videoId: id }, snippet: { title, channelTitle: channel, publishedAt: `${date}T05:00:00Z`, liveBroadcastContent: "none" } }] });
+
+  it('"casper dopeboy": nothing anywhere else, so the official upload names and dates it', async () => {
+    const deps = fakeDeps({ yt: yt("Casper TNG Ft Fresh - Dope Boy (Official Video) [Ghost Town Vol 2]", "6ixBuzz Premieres", "2015-02-10") });
+    const out = asSong(await resolveQuery("casper dopeboy", deps));
+    expect(out.best).toMatchObject({ song: "Dope Boy [Ghost Town Vol 2]", artist: "Casper TNG feat. Fresh", date: "2015-02-10", dateSource: "uploaded to YouTube", youtubeId: "E7ZStZMn-ac" });
+    expect(out.best.where).toEqual(["youtube"]);
+    expect(deps.youtube).toHaveBeenCalledTimes(1);
+    expect(deps.youtube).toHaveBeenCalledWith("casper dopeboy");
+  });
+
+  it("searches without the date, and the earliest upload of the song dates it", async () => {
+    const rows = [
+      ...yt('Murda Beatz "Novacane" Feat. Pressa (WSHH Exclusive - Official Music Video)', "WORLDSTARHIPHOP", "2017-01-17", "aaaaaaaaaa1"),
+      ...yt("Murda Beatz ft Pressa - Novacane", "New Hip-Hop Rap R&B", "2016-12-11", "aaaaaaaaaa2"),
+    ];
+    const deps = fakeDeps({ yt: rows });
+    const out = asSong(await resolveQuery("novacane pressa 2017", deps));
+    expect(deps.youtube).toHaveBeenCalledWith("novacane pressa");
+    expect(out.best).toMatchObject({ song: "Novacane", date: "2016-12-11", youtubeId: "aaaaaaaaaa1" });
+  });
+
+  it("is not asked when the index, MusicBrainz or iTunes already named the song", async () => {
+    const a = fakeDeps({ index: [chart("Hotline Bling", "Drake", "2015-08-15")] });
+    asSong(await resolveQuery("hotline bling drake", a));
+    const b = fakeDeps({ mb: [mb("Dope Boy", "Casper TNG", "2015-02-10")] });
+    asSong(await resolveQuery("dope boy casper tng", b));
+    expect(a.youtube).not.toHaveBeenCalled();
+    expect(b.youtube).not.toHaveBeenCalled();
+  });
+
+  it("is not asked for a date", async () => {
+    const deps = fakeDeps();
+    expect((await resolveQuery("summer 2012", deps)).kind).toBe("date");
+    expect(deps.youtube).not.toHaveBeenCalled();
+  });
+
+  it("an unrelated video never answers: the text still falls back to its year", async () => {
+    const deps = fakeDeps({ yt: yt("Chief Keef - Love Sosa (Official Video)", "ChiefKeefVEVO", "2012-10-18") });
+    expect(await resolveQuery("blorf zingle 2014", deps)).toMatchObject({ kind: "date", date: "2014-06-15" });
+    expect(deps.youtube).toHaveBeenCalledTimes(1);
+  });
+
+  it("a dead YouTube route costs nothing but the lookup", async () => {
+    const deps = fakeDeps({ yt: boom });
+    expect(await resolveQuery("casper dopeboy 2015", deps)).toMatchObject({ kind: "date" });
+  });
+
+  it("browserDeps asks the site's own route, never googleapis from the browser", async () => {
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ rows: [] }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    try {
+      await browserDeps().youtube!("casper dopeboy");
+      expect(String((fetchMock.mock.calls[0] as unknown[])[0])).toBe("/api/youtube?q=casper%20dopeboy");
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 });

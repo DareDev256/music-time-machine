@@ -2,6 +2,12 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [2.1.0] - 2026-10-20 — YouTube, last
+
+### Added
+- **YouTube fallback** (`/api/youtube`, `src/lib/era/youtube.ts`): when the index, MusicBrainz and iTunes all miss, one YouTube search names and dates the song by its upload. Its rows pass through the same title-and-artist fit as every other source, so an unrelated video never answers. Re-uploads, reactions, beat and pitch edits, streams and "- Topic" store mirrors are dropped; the earliest credible upload dates the song, the official upload gives it its video. Measured on 12 YouTube-era songs: 4 → 6 resolved (Lil Reese "Us", Section Boyz "Lock Arff", Smoke Dawg "Overseas"); the blind held-out sets moved 77% → 80% and held at 83%.
+- Quota guard: a search costs 100 of 10,000 daily units, so answers are cached a day in the instance and at the CDN, each instance stops at 60 searches a day, a visitor at 10 an hour, and a `quotaExceeded` pauses searching for an hour. The key never leaves the server or reaches a log.
+
 ## [2.0.0] - 2026-10-20 — Was Playing
 
 A rebuild. The song-stats dashboard (v1, tagged `v1.40.0`) is gone; the product is now a time machine: name a song, fly back to its week, land in its era.
