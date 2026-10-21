@@ -113,6 +113,16 @@ describe("GET /api/resolve — the index file", () => {
     expect((await rows("cuz my gear"))[0]).toMatchObject({ song: "Cuz My Gear" });
   });
 
+  it("reports what the index build cost this instance, YouTube rows counted, on every answer", async () => {
+    const va = new Date().toISOString().slice(0, 10);
+    ytFileMock.mockResolvedValue(JSON.stringify({ rows: [row("Lock Arff", "Section Boyz", "2015-09-01", "yt:@LinkUpTV", { va })] }));
+    const GET = await load();
+    for (const q of ["gold", "hold on"]) {
+      const timing = (await GET(new Request(`http://localhost/api/resolve?q=${encodeURIComponent(q)}`) as never)).headers.get("server-timing");
+      expect(timing).toMatch(new RegExp(`^index-build;dur=\\d+;desc="cpu ms, ${FIXTURE.rows.length + 1} rows"$`));
+    }
+  });
+
   it("is read once and cached in module scope", async () => {
     const GET = await load();
     await GET(new Request("http://localhost/api/resolve?q=hold%20on") as never);

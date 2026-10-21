@@ -45,9 +45,12 @@ describe.skipIf(!present)("resolver against the real index", () => {
     return d satisfies ResolverDeps;
   };
 
-  it("builds the index in under 1 s of CPU, and answers a typo-tolerant lookup in under 50 ms of CPU", () => {
+  // A guard against a blowup, not the budget: the same 47,217-row build is 0.8 s of CPU on the M-series Mac and 1.53 s
+  // on GitHub's x86 runner (2026-10-21), so no one number holds on both. The budget visitors pay is read from the
+  // live server's own Server-Timing (live-check.yml).
+  it("builds the index in under 2.5 s of CPU, and answers a typo-tolerant lookup in under 50 ms of CPU", () => {
     expect(index.rows.length).toBeGreaterThan(5000);
-    expect(prepCpuMs).toBeLessThan(1000);
+    expect(prepCpuMs).toBeLessThan(2500);
     const c = process.cpuUsage();
     for (let i = 0; i < 20; i++) searchIndex(index, i % 2 ? "hold on" : "tenessee whiskey chris stapleton");
     const d = process.cpuUsage(c);

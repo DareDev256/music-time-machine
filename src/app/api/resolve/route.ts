@@ -18,6 +18,9 @@ const MAX_Q = 200;
 
 type Loaded = { state: "ok"; index: PreparedIndex } | { state: "missing" | "invalid" };
 let cached: Promise<PreparedIndex> | null = null;
+// What this instance's cold start paid for the index, sent on every answer as Server-Timing so the budget is read on
+// the server that pays it (live-check.yml), not on whichever laptop or runner ran the tests.
+let buildTiming = "";
 
 async function loadIndex(): Promise<Loaded> {
   if (!cached) {
@@ -37,7 +40,12 @@ async function loadIndex(): Promise<Loaded> {
     cached = Promise.all([readFile(INDEX_FILE, "utf8"), yt]).then(([text, ytRows]) => {
       const doc = JSON.parse(text) as { rows?: unknown };
       if (!Array.isArray(doc?.rows)) throw Object.assign(new Error("index.json has no rows"), { code: "EINVALID" });
-      return prepareIndex(Array.isArray(ytRows) ? [...doc.rows, ...ytRows] : doc.rows);
+      const rows = Array.isArray(ytRows) ? [...doc.rows, ...ytRows] : doc.rows;
+      const c = process.cpuUsage();
+      const index = prepareIndex(rows);
+      const d = process.cpuUsage(c);
+      buildTiming = `index-build;dur=${Math.round((d.user + d.system) / 1000)};desc="cpu ms, ${rows.length} rows"`;
+      return index;
     });
   }
   try {
@@ -69,6 +77,9 @@ export async function GET(request: Request) {
   }
   return NextResponse.json(
     { rows: searchIndex(loaded.index, q, 8) },
-    { status: 200, headers: { "Cache-Control": "public, s-maxage=86400", "X-Content-Type-Options": "nosniff" } },
+    {
+      status: 200,
+      headers: { "Cache-Control": "public, s-maxage=86400", "X-Content-Type-Options": "nosniff", "Server-Timing": buildTiming },
+    },
   );
 }

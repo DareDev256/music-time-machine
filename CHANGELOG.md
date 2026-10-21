@@ -14,7 +14,7 @@ All notable changes to the Music Time Machine project will be documented in this
 - YouTube API policy: API data is stored and shown at most 30 days after fetching. So the crawl's output (`public/era/youtube/`, `index-yt.json`) is generated, deployed and refreshed but never committed, since git history keeps everything. The crawl refreshes counts at 6 days and deletes what it cannot refresh in time; the era page and the resolver ignore anything older on their own (one day of timezone skew allowed); health turns red at 14 days. A daily job (`com.daredev.wasplaying-youtube-daily`) runs the backfill and deploys when the data changes.
 - A title the charts know beats YouTube-only uploads that share it when no artist is typed ("1999" is Prince).
 - `norm`'s ASCII fast path strips apostrophes before censored words, as the general path does ("Sh*t's").
-- The index build budget (1 s of CPU) is held on the best of three builds; on a shared Mac a single build swung 0.8 to 1.4 s.
+- The index build budget moved to the server that pays it. `/api/resolve` sends `Server-Timing: index-build` (CPU ms and rows of this instance's cold build) and `live-check.yml` reads it from the live site. The suite's 1 s figure was the Mac's: GitHub's x86 runner builds the same committed index in 1.53 s (2026-10-21), so the suite now holds a 2.5 s blowup guard, best of three builds.
 - Checks run on GitHub Actions instead of the laptop: `ci.yml` (types, lint, suite, build) on every push; `live-check.yml` after a deploy (the index budget with the live YouTube rows, and the section shot at 390 and 1440).
 - `.vercelignore` keeps the crawl cache and local experiments out of CLI deploys.
 
