@@ -9,8 +9,8 @@ import Remembered from "@/components/era/Remembered";
 import RememberForm from "@/components/era/RememberForm";
 import Industry from "@/components/era/Industry";
 import {
-  weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, numberOneOn, numberOnesThrough, chartsThrough, weeksInMonth,
-  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow, type HeatSource,
+  weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, youtubeFor, numberOneOn, numberOnesThrough, chartsThrough, weeksInMonth,
+  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow, type HeatSource, type YouTubeRow, type YouTubeSource,
 } from "@/lib/era/data";
 import { cardLine } from "@/lib/era/cardLine";
 import { coverArtFor } from "@/lib/coverArt";
@@ -63,6 +63,39 @@ function movement(r: ChartRow) {
   return <span>=</span>;
 }
 
+
+const views = (n: number) =>
+  n >= 1e9 ? `${(n / 1e9).toFixed(1)}B` : n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `${Math.round(n / 1e3)}K` : String(n);
+
+function YouTubeColumn({ src, isMine }: { src: YouTubeSource; isMine: (artist: string) => boolean }) {
+  const row = (r: YouTubeRow) => (
+    <li key={r.videoId} className={isMine(r.artist) ? s.hit : undefined}>
+      <span className={s.heatRank}>{String(r.rank).padStart(2, "0")}</span>
+      <span>
+        <span className={s.song}>{r.song}</span>
+        <span className={s.by}>{r.artist}</span>
+        <a className={s.thread} href={`https://www.youtube.com/watch?v=${r.videoId}`} target="_blank" rel="noopener noreferrer nofollow">
+          {views(r.views)} views · {plainDate(r.published)} ↗
+        </a>
+      </span>
+    </li>
+  );
+  return (
+    <div className={s.heatCol}>
+      <div className={s.heatHead}>
+        <span className={s.heatLabel}>{src.label}</span>
+        <a className={s.source} href={src.channel} target="_blank" rel="noopener noreferrer">{src.genre} · channel ↗</a>
+      </div>
+      <ol className={s.heatList}>{src.rows.slice(0, 5).map(row)}</ol>
+      {src.rows.length > 5 && (
+        <details className={s.more}>
+          <summary>{Math.min(src.rows.length, 15) - 5} more</summary>
+          <ol className={s.heatList} start={6}>{src.rows.slice(5, 15).map(row)}</ol>
+        </details>
+      )}
+    </div>
+  );
+}
 
 function HeatColumn({ src, isMine }: { src: HeatSource; isMine: (artist: string) => boolean }) {
   return (
@@ -164,6 +197,12 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const heatExtra = heatOrdered.slice(heatVisible.length);
   const heatSpan = heatMonthSpan();
   const reddit = redditFor(month);
+  // The channels that broke songs, biggest month first: the scene that was loudest that month leads.
+  const yt = youtubeFor(month);
+  const ytTotal = (x: YouTubeSource) => x.rows.slice(0, 5).reduce((n, r) => n + r.views, 0);
+  const ytOrdered = yt ? [...yt.sources].sort((a, b) => ytTotal(b) - ytTotal(a)) : [];
+  const ytVisible = ytOrdered.slice(0, 4);
+  const ytExtra = ytOrdered.slice(4);
   const through = chartsThrough();
   const line = cardLine({ song, artist, date, numberOne: n1 });
   const conceived = born ? numberOneOn(addDays(date, -266)) : null;
@@ -180,11 +219,13 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const laneHits = song ? lanes.filter((l) => sameSong(l.song) && isMine(l.artist)) : [];
   const heatHit = song ? (heat?.sources ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
   const redditHit = song ? (redditFor(month) ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  const ytHit = song ? ytOrdered.flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
   const verdict = !song ? null
     : onChart ? `#${onChart.rank} on the Hot 100 that week${laneHits.length ? `, and #1 on ${laneHits.map((l) => l.label).join(" and ")}` : ""}.`
     : laneHits.length ? `#1 on ${laneHits.map((l) => l.label).join(" and ")} that week; not in the Hot 100 top 10.`
     : heatHit ? `Not in the Hot 100 top 10. On ${heatHit.x.label.replace(/\s*\(.*\)\s*$/, "")}${heatHit.x.list === "ranked" ? ` at #${heatHit.r.rank}` : ""} that month.`
     : redditHit ? `Not in the Hot 100 top 10. On ${redditHit.x.id} with ${redditHit.r.score.toLocaleString("en-US")} upvotes that month.`
+    : ytHit ? `Not in the Hot 100 top 10. Uploaded by ${ytHit.x.label} that month: ${views(ytHit.r.views)} views since.`
     : n1 ? `Not in the Hot 100 top 10 that week. The #1 was ${n1.song} by ${n1.artist}.` : null;
 
   const anchorQ = { song, artist, sd: sd ?? undefined, ds: sd ? dsParam : undefined };
@@ -311,6 +352,29 @@ export default async function EraPage({ params, searchParams }: { params: Params
               </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {yt && (
+        <section className={s.section} aria-labelledby="yt">
+          <div className={s.sectionHead}>
+            <h2 id="yt" className={s.h2}>Where it broke · {monthName(month)}</h2>
+            <span className={s.source}>
+              Uploads from {monthName(month)} on the channels that broke songs, ranked by views counted {plainDate(yt.viewsAsOf)}.
+              Today&apos;s views, not that month&apos;s: a song that blew up later ranks high here.
+            </span>
+          </div>
+          <div className={s.heat}>
+            {ytVisible.map((src) => <YouTubeColumn key={src.id} src={src} isMine={isMine} />)}
+          </div>
+          {ytExtra.length > 0 && (
+            <details className={`${s.more} ${s.moreSources}`}>
+              <summary>More channels: {ytExtra.map((x) => x.label).join(", ")}</summary>
+              <div className={s.heat}>
+                {ytExtra.map((src) => <YouTubeColumn key={src.id} src={src} isMine={isMine} />)}
+              </div>
+            </details>
+          )}
         </section>
       )}
 

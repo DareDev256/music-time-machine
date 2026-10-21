@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { weekNearest, lanesOn, heatFor, numberOneOn, indexRow, indexKey, chartsThrough, weeksInMonth, redditFor, heatMonthSpan } from "../data";
+import { weekNearest, lanesOn, heatFor, numberOneOn, indexRow, indexKey, chartsThrough, weeksInMonth, redditFor, heatMonthSpan, freshYouTube, youtubeFor } from "../data";
 
 // These run against the real shards in public/era/: they prove the pipelines' output, not a fixture.
 
@@ -104,5 +104,26 @@ describe("redditFor / heatMonthSpan", () => {
     const span = heatMonthSpan()!;
     expect(span[0] <= "2010-01").toBe(true);
     expect(span[1] >= "2014-12").toBe(true);
+  });
+});
+
+describe("freshYouTube (YouTube API policy: shown at most 30 days after fetching)", () => {
+  const doc = (viewsAsOf: string, rows = 1) => ({
+    month: "2015-02", viewsAsOf,
+    sources: [{ id: "yt:@x", label: "X", genre: "hip-hop", channel: "https://www.youtube.com/@x", rows: Array.from({ length: rows }, (_, i) => ({ rank: i + 1, song: "S", artist: "A", title: "A - S", videoId: "E7ZStZMn-ac", published: "2015-02-10", views: 1 })) }],
+  });
+  it("shows counts up to 30 days old", () => {
+    expect(freshYouTube(doc("2026-10-20"), "2026-10-20")?.sources).toHaveLength(1);
+    expect(freshYouTube(doc("2026-09-20"), "2026-10-20")).not.toBeNull();
+  });
+  it("hides counts older than 30 days, from the future, empty, or malformed", () => {
+    expect(freshYouTube(doc("2026-09-19"), "2026-10-20")).toBeNull();
+    expect(freshYouTube(doc("2026-10-21"), "2026-10-20")).toBeNull();
+    expect(freshYouTube(doc("2026-10-20", 0), "2026-10-20")).toBeNull();
+    expect(freshYouTube({ month: "2015-02" }, "2026-10-20")).toBeNull();
+    expect(freshYouTube(null, "2026-10-20")).toBeNull();
+  });
+  it("is null for junk months", () => {
+    expect(youtubeFor("nope")).toBeNull();
   });
 });

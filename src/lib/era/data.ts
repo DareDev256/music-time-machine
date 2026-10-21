@@ -192,6 +192,32 @@ export function redditFor(month: string): RedditSource[] | null {
   return sources.length ? sources : null;
 }
 
+export interface YouTubeRow { rank: number; song: string; artist: string; title: string; videoId: string; published: string; views: number }
+export interface YouTubeSource { id: string; label: string; genre: string; channel: string; rows: YouTubeRow[] }
+export interface YouTubeMonth { month: string; viewsAsOf: string; sources: YouTubeSource[] }
+
+/**
+ * YouTube API Developer Policies: data from the API may be shown at most 30 days after it was fetched. The crawl
+ * (data/scripts/youtube_channels.py --refresh) re-fetches well inside that; a month whose counts are older is not
+ * shown at all, so a stopped refresh job hides the section instead of serving stale API data.
+ */
+export const YOUTUBE_MAX_AGE_DAYS = 30;
+
+/** The month's uploads per channel, ranked by today's views; null when there are none or they are past the policy age. */
+export function freshYouTube(doc: unknown, today: string): YouTubeMonth | null {
+  const d = doc as Partial<YouTubeMonth> | null;
+  if (!d || typeof d.viewsAsOf !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(d.viewsAsOf) || !Array.isArray(d.sources)) return null;
+  const age = (ms(today) - ms(d.viewsAsOf)) / DAY;
+  if (!(age >= 0 && age <= YOUTUBE_MAX_AGE_DAYS)) return null;
+  const sources = d.sources.filter((x) => Array.isArray(x?.rows) && x.rows.length > 0);
+  return sources.length ? { month: String(d.month ?? ""), viewsAsOf: d.viewsAsOf, sources } : null;
+}
+
+export function youtubeFor(month: string, today = new Date().toISOString().slice(0, 10)): YouTubeMonth | null {
+  if (!/^\d{4}-\d{2}$/.test(month)) return null;
+  return freshYouTube(load(`youtube/${month}.json`), today);
+}
+
 /** The #1 list's own last week (it can run a week past the top-10 data). */
 export function numberOnesThrough(): string {
   return load<FlightData>("flight.json")?.through ?? "1958-08-04";
