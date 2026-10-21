@@ -27,6 +27,8 @@ const EXTERNAL_MS = 8_000;
 const MAX_CANDIDATES = 3;
 const WHERE_ORDER: DatedSong["where"] = ["chart", "seed", "youtube", "musicbrainz", "itunes"];
 const GRANULARITIES: Granularity[] = ["day", "month", "year"];
+/** YouTube API Developer Policies: API data is served at most 30 days after fetching (mirrors data.ts). */
+const YOUTUBE_MAX_AGE_DAYS = 30;
 
 const LANE_LABELS: Record<string, string> = {
   rnb_hiphop: "Hot R&B/Hip-Hop Songs", rap: "Hot Rap Songs", country: "Hot Country Songs",
@@ -140,6 +142,12 @@ export function indexRowToDatedSong(row: unknown): DatedSong | null {
   } else if (kind === "heat") {
     where = ["chart"];
     dateSource = ds || `seen on ${HEAT_LABELS[id] ?? id} (archived capture)`;
+  } else if (kind === "yt") {
+    // YouTube API data may be served at most 30 days after it was fetched: a row whose counts are older is not used.
+    const va = typeof r.va === "string" ? r.va : "";
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(va) || dayNum(localToday()) - dayNum(va) > YOUTUBE_MAX_AGE_DAYS || dayNum(va) > dayNum(localToday())) return null;
+    where = ["youtube"];
+    dateSource = ds || "uploaded to YouTube";
   } else if (kind === "seed") {
     const w = new Set<string>(["seed", ...(Array.isArray(r.w) ? r.w.filter((x): x is string => typeof x === "string") : [])]);
     if (/youtube/i.test(ds) || typeof r.y === "string") w.add("youtube");

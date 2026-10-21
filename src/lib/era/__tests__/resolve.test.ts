@@ -1289,3 +1289,18 @@ describe("YouTube fallback", () => {
     }
   });
 });
+
+describe("index rows from the YouTube crawl", () => {
+  const ago = (days: number) => new Date(Date.now() - days * 86_400_000).toISOString().slice(0, 10);
+  const row = (va: string) => ({ s: "Lock Arff", a: "Section Boyz", d: "2015-09-01", g: "day", src: "yt:@linkuptv", ds: "uploaded to YouTube (Link Up TV)", k: "lockarff|sectionboyz", y: "nISWPU50HLc", va });
+  it("read as a YouTube upload with its channel", () => {
+    expect(indexRowToDatedSong(row(ago(3)))).toMatchObject({
+      song: "Lock Arff", date: "2015-09-01", where: ["youtube"], dateSource: "uploaded to YouTube (Link Up TV)", youtubeId: "nISWPU50HLc",
+    });
+  });
+  it("are dropped once their YouTube data is more than 30 days old, or undated (API policy)", () => {
+    expect(indexRowToDatedSong(row(ago(29)))).not.toBeNull();
+    expect(indexRowToDatedSong(row(ago(32)))).toBeNull();
+    expect(indexRowToDatedSong({ ...row(""), va: undefined })).toBeNull();
+  });
+});

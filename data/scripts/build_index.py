@@ -6,9 +6,11 @@ Sources, in the order they win a tie on date:
   hot100    utdata/rwd-billboard-data CSV       every song that ever charted, dated by its debut week
   lane:<id> public/era/lanes/<id>.json          genre-lane #1s (only lanes listed in lanes/index.json)
   heat:<id> public/era/heat/YYYY-MM.json        songs seen on archived HotNewHipHop / Hype Machine / Billboard pages
+  yt:<id>   public/era/youtube/YYYY-MM.json     uploads on the channels that broke songs (youtube_channels.py):
+                                                they only ADD songs nothing above has, never replace a row
 
 Row: { s, a, d: YYYY-MM-DD, g: day|month|year, src, ds: human date label, k: normalised "title|primary artist",
-       y?: youtubeId, n?: note }
+       y?: youtubeId, n?: note, va?: when YouTube counts were fetched (yt rows: dropped by the resolver after 30 days) }
 Refuses on fewer than 5,000 rows or when the seed file is missing (the core case depends on it).
 """
 import csv
@@ -22,7 +24,10 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "data" / "scripts"))
+from hot100_covers import PLAIN, VERSION  # one definition of "another version" for every pipeline
 ERA = ROOT / "public" / "era"
+YT_PER_CHANNEL_MONTH = 10  # a channel's 10 most viewed uploads of a month; the long tail is noise for search
 HOT100_CSV = "https://raw.githubusercontent.com/utdata/rwd-billboard-data/main/data-out/hot-100-current.csv"
 UA = "MusicTimeMachine/2.0 (dev@jamesdare.com)"
 
@@ -36,6 +41,12 @@ def norm(s: str) -> str:
 
 def primary(artist: str) -> str:
     return re.split(r"\s+(?:featuring|feat\.?|ft\.?|with|x|&|and|,)\s+", artist, flags=re.I)[0].strip()
+
+
+def other_version(song: str) -> bool:
+    """A remix / live take / sped-up edit, judged on the title's decorations only: "Live Off My Closet" is the song."""
+    decor = re.findall(r"[\(\[]([^\)\]]*)[\)\]]", song) + re.split(r"\s+[-\u2013\u2014]\s+", song)[1:]
+    return bool(VERSION.search(PLAIN.sub(" ", " ; ".join(decor))))
 
 
 def key(song: str, artist: str) -> str:
@@ -101,6 +112,27 @@ def main():
                 offer({"s": x["song"], "a": x["artist"], "d": s["captured"], "g": "month", "src": f"heat:{s['id']}",
                        "ds": f"seen on {s['label']}", "k": key(x["song"], x["artist"])})
 
+    # YouTube uploads add the songs the charts and blogs never had (most of Toronto, drill, grime). A scene channel's
+    # upload of a song already known is not that song's debut, so it never replaces a row; nor does a remix or a
+    # live take of something.
+    n_before = len(rows)
+    for f in sorted((ERA / "youtube").glob("[0-9][0-9][0-9][0-9]-[0-9][0-9].json")):
+        doc = json.loads(f.read_text())
+        va = doc.get("viewsAsOf")
+        if not va:
+            continue
+        for s in doc.get("sources", []):
+            handle = s["id"].split(":", 1)[-1]
+            for x in s.get("rows", [])[:YT_PER_CHANNEL_MONTH]:
+                if x.get("parsed") is False or not x.get("song") or not x.get("artist") or other_version(x["song"]):
+                    continue
+                k = key(x["song"], x["artist"])
+                if k in rows or not x.get("videoId") or not x.get("published"):
+                    continue
+                rows[k] = {"s": x["song"], "a": x["artist"], "d": x["published"], "g": "day", "src": f"yt:{handle}",
+                           "ds": f"uploaded to YouTube ({s['label']})", "k": k, "y": x["videoId"], "va": va}
+    n_yt = len(rows) - n_before
+
     # Best Hot 100 peak ranks songs that share a title ("Hold On" has dozens).
     for k, r in rows.items():
         if k in peaks:
@@ -109,7 +141,7 @@ def main():
     counts = {}
     for r in out:
         counts[r["src"].split(":")[0]] = counts.get(r["src"].split(":")[0], 0) + 1
-    print(f"{len(out)} rows: {counts} (seed {n_seed}, new from hot100 {n_hot}, lanes passing {len(passing)})")
+    print(f"{len(out)} rows: {counts} (seed {n_seed}, new from hot100 {n_hot}, new from YouTube {n_yt}, lanes passing {len(passing)})")
     if len(out) < 5000:
         sys.exit(f"REFUSING: only {len(out)} rows")
     for probe in ["cuzmygear|chiefkeef", "somebodythatiusedtoknow|gotye", "1999|prince"]:
