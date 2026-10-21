@@ -28,12 +28,15 @@ const JUNK =
 const DECOR =
   /\s*[([][^)\]]*\b(?:official|video|audio|visuali[sz]er|lyrics?|music video|prod|produced|dir|directed|shot|filmed|wshh|exclusive|premiere|hd|hq|4k|explicit|clean|dirty|mv|m\/v)\b[^)\]]*[)\]]/gi;
 const PIPE_TAIL = /\s+[|｜•].*$/; // "| Shot by @DGainz", "| Link Up TV"
+/** The same decorations unbracketed at the end: "Lock Arff Official Video" (measured live, 2026-10-20). */
+const BARE_TAIL = /\s+(?:official\s+)?(?:music\s+video|video|audio|lyric\s+video|lyrics|visuali[sz]er)\s*$|\s+official\s*$/i;
 const BY_TAIL = /\s+(?:shot|dir\.?|directed|filmed|edited|prod\.?|produced)\s+by\b.*$/i;
 const FEAT = /\s+(?:f\.|ft\.?|feat\.?|featuring)\s+/i;
 const CHANNEL_NOISE = /\s*(?:-\s*topic|vevo|official|tv|music|channel)\s*$/i;
 
 const clean = (s: string) =>
-  s.replace(DECOR, "").replace(PIPE_TAIL, "").replace(BY_TAIL, "").replace(/\p{Extended_Pictographic}/gu, "").replace(/\s+/g, " ").trim();
+  s.replace(DECOR, "").replace(PIPE_TAIL, "").replace(BY_TAIL, "").replace(/\p{Extended_Pictographic}/gu, "").replace(/\s+/g, " ").trim()
+    .replace(BARE_TAIL, "").trim();
 
 /** "Chief Keef f. Lil Reese" → "Chief Keef feat. Lil Reese": one spelling the artist parser reads as a feature. */
 const featured = (s: string) => s.replace(FEAT, " feat. ").trim();

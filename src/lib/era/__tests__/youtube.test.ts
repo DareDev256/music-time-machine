@@ -22,6 +22,11 @@ describe("parseVideoTitle", () => {
     expect(parseVideoTitle("Casper TNG - Dope Boy - Dope Boy The Album", "Casper TNG ARCHIVE")).toEqual({ song: "Dope Boy", artist: "Casper TNG" });
     expect(parseVideoTitle("Drake - Hotline Bling - Remix", "x")).toEqual({ song: "Hotline Bling (Remix)", artist: "Drake" });
   });
+  it("drops an unbracketed decoration at the end, never a title word", () => {
+    expect(parseVideoTitle("Section Boyz - Lock Arff Official Video", "x")).toEqual({ song: "Lock Arff", artist: "Section Boyz" });
+    expect(parseVideoTitle("Drake - Hotline Bling Music Video", "x")).toEqual({ song: "Hotline Bling", artist: "Drake" });
+    expect(parseVideoTitle("The Buggles - Video Killed the Radio Star", "x")).toEqual({ song: "Video Killed the Radio Star", artist: "The Buggles" });
+  });
   it("credits a bare title to the channel, minus VEVO", () => {
     expect(parseVideoTitle("Dope Boy", "CasperTNGVEVO")).toEqual({ song: "Dope Boy", artist: "CasperTNG" });
   });
