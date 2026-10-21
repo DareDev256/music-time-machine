@@ -1,0 +1,17 @@
+{
+  "note": "Covers a human-style review of covers_merge.py's swaps kept as they were (2026-10-20). Each reason is the defect in the candidate. covers_merge.py never swaps a key listed here.",
+  "keep": {
+    "Lose Yourself|Eminem": "candidate 'Plæygirl' is another artist's album; 8 Mile is the original release",
+    "Hero|Mariah Carey": "candidate 'Pavarotti - The Duets' is a later duet",
+    "Maniac|Michael Sembello": "candidate is a 'feat.' re-recording; the Flashdance soundtrack is the original",
+    "Sunflower|Post Malone and Swae Lee": "the Spider-Verse soundtrack is the original release and its art is the song's",
+    "Part of Me|Katy Perry": "candidate 'The Ones That Got The Plays' is not her album; it debuted on The Complete Confection",
+    "A Whole New World|Peabo Bryson and Regina Belle": "the Aladdin soundtrack is the original release",
+    "I Just Can't Stop Loving You|Michael Jackson with Siedah Garrett": "candidate 'This Is It' is a 2009 soundtrack compilation",
+    "Ghostbusters|Ray Parker Jr.": "candidate is a label compilation; the Ghostbusters soundtrack is the original",
+    "Arthur's Theme (Best That You Can Do)|Christopher Cross": "candidate 'The Café Carlyle Sessions' is a later live album",
+    "Please Don't Go|KC and the Sunshine Band": "current 'Do You Wanna Go Party' IS the original album ('party' tripped the compilation rule)",
+    "It's Still Rock and Roll to Me|Billy Joel": "candidate 'My Lives' is a box set",
+    "Doesn't Really Matter|Janet": "the Nutty Professor II soundtrack is the original release"
+  }
+}

@@ -9,6 +9,8 @@ original album. So the current cover is the default, and a candidate must earn t
 Looks up the current covers' album names by iTunes trackId (keyless lookup API, ~20/min), cached in
 data/cache/itunes-lookup.json so a re-run is free. Prints every swap. Refuses when fewer than 90% of
 current covers could be looked up (an unknown album must never count as "not a compilation").
+Never swaps a key in data/covers-keep.json: the reviewed cases where the rule is wrong, mostly a film soundtrack that
+IS the song's original release ("soundtrack" reads as a compilation) or a candidate from another artist's album.
 """
 import json
 import re
@@ -22,6 +24,7 @@ sys.path.insert(0, str(ROOT / "data" / "scripts"))
 from hot100_covers import COMPILATION, VERSION  # one definition of "compilation" and "other version"
 
 CACHE = ROOT / "data" / "cache" / "itunes-lookup.json"
+KEEP = ROOT / "data" / "covers-keep.json"
 UA = "MusicTimeMachine/2.0 (dev@jamesdare.com)"
 
 
@@ -56,6 +59,7 @@ def main():
     cur_doc = json.loads(cur_path.read_text())
     cur, cand = cur_doc["covers"], json.loads(cand_path.read_text())["covers"]
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+    keep = json.loads(KEEP.read_text())["keep"] if KEEP.exists() else {}
     CACHE.parent.mkdir(parents=True, exist_ok=True)
 
     looked = errors = swaps = 0
@@ -72,6 +76,8 @@ def main():
         looked += 1
         c = cand.get(k)
         song = k.split("|")[0]
+        if k in keep:
+            continue
         if (is_comp(info.get("album"), info.get("albumArtist")) and c
                 and not c.get("compilation") and not is_comp(c.get("album"), None)
                 and not is_version(c.get("album", ""), song)
