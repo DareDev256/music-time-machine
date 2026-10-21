@@ -36,6 +36,15 @@ jobs:
           node -e 'const n=require("./public/era/index-yt.json").rows.length; if(!n) throw new Error("no rows"); console.log(n, "YouTube rows")'
       - name: Resolver against the live index
         run: npx vitest run src/lib/era/__tests__/resolve.realindex.test.ts
+      # What a cold start on the live server pays for the index (its own Server-Timing). Measured 2026-10-21: 2,023 ms
+      # of CPU for 53,930 rows on Vercel. The limit catches a blowup; a unique query skips the CDN copy.
+      - name: Index build cost on the live server
+        run: |
+          t=$(curl -fsS -D - -o /dev/null "$URL/api/resolve?q=live+check+$GITHUB_RUN_ID" | tr -d '\r' | grep -i '^server-timing:' || true)
+          echo "$t"
+          ms=$(sed -nE 's/.*index-build;dur=([0-9]+).*/\1/p' <<<"$t")
+          [ -n "$ms" ] || { echo "no index-build timing on /api/resolve"; exit 1; }
+          [ "$ms" -le 3000 ] || { echo "index build ${ms} ms of CPU on the live server, limit 3000"; exit 1; }
 
   render:
     runs-on: ubuntu-latest

@@ -1,0 +1,55 @@
+# Reddit heat (data/scripts/reddit_heat.py) for a range of years, on GitHub's machine instead of the laptop.
+# One job per year, one at a time, so the archive sees at most one request a second (the script's own gate).
+# The output is an artifact kept 7 days for review, never a commit: what gets published is decided after reading it.
+name: Reddit backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: First year
+        default: "2017"
+      to:
+        description: Last year
+        default: "2025"
+
+permissions:
+  contents: read
+
+jobs:
+  years:
+    runs-on: ubuntu-latest
+    outputs:
+      list: ${{ steps.list.outputs.list }}
+    steps:
+      - id: list
+        env:
+          FROM: ${{ inputs.from }}
+          TO: ${{ inputs.to }}
+        run: |
+          [[ "$FROM" =~ ^20[0-9]{2}$ && "$TO" =~ ^20[0-9]{2}$ && "$FROM" -le "$TO" ]] || { echo "years must be 20YY, from <= to"; exit 1; }
+          echo "list=[$(seq -s, "$FROM" "$TO")]" >> "$GITHUB_OUTPUT"
+
+  backfill:
+    needs: years
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        year: ${{ fromJSON(needs.years.outputs.list) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Backfill ${{ matrix.year }}
+        run: python3 -I data/scripts/reddit_heat.py --from ${{ matrix.year }}-01 --to ${{ matrix.year }}-12
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reddit-${{ matrix.year }}
+          path: public/era/reddit/
+          retention-days: 7
+          if-no-files-found: warn
