@@ -118,7 +118,8 @@ describe("freshYouTube (YouTube API policy: shown at most 30 days after fetching
   });
   it("hides counts older than 30 days, from the future, empty, or malformed", () => {
     expect(freshYouTube(doc("2026-09-19"), "2026-10-20")).toBeNull();
-    expect(freshYouTube(doc("2026-10-21"), "2026-10-20")).toBeNull();
+    expect(freshYouTube(doc("2026-10-21"), "2026-10-20")).not.toBeNull(); // one day of timezone skew
+    expect(freshYouTube(doc("2026-10-22"), "2026-10-20")).toBeNull();
     expect(freshYouTube(doc("2026-10-20", 0), "2026-10-20")).toBeNull();
     expect(freshYouTube({ month: "2015-02" }, "2026-10-20")).toBeNull();
     expect(freshYouTube(null, "2026-10-20")).toBeNull();

@@ -28,7 +28,7 @@ export type ResolveOutcome =
   | { kind: "date"; date: string; granularity: Granularity; label: string }
   | { kind: "none"; reason: string; yearHint?: number };
 
-/** One row of public/era/index.json (built by data/scripts/build_index.py). Extra optional fields are read when present. */
+/** One row of public/era/index.json or index-yt.json (built by data/scripts/build_index.py). Extra optional fields are read when present. */
 export interface IndexFileRow {
   s: string;
   a: string;

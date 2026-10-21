@@ -1,0 +1,13 @@
+# What `vercel deploy` must not upload. The weekly refresh job deploys from the main checkout, where the
+# YouTube crawl cache (data/cache/, ~470 MB, API data under the 30-day rule) and local cover experiments live.
+data/cache/
+data/hot100-covers.v2.json
+data/hot100-covers.v3.json
+data/hot100-covers.merged.json
+__pycache__/
+.env*
+!.env.example
+/coverage
+/.next/
+/out/
+docs/screenshots/

@@ -19,9 +19,9 @@ export function norm(s: unknown): string {
   // Fast path for plain ASCII (nearly every index string): the same steps without Unicode decomposition or
   // property classes. Proven identical to normUnicode over the whole index in resolve.realindex.test.ts.
   if (ASCII_ONLY.test(s)) {
-    let t = s.toLowerCase();
+    // Apostrophes before the censor rule, as in normUnicode: "Sh*t's" → "sh*ts" → "s" (measured: the order differed).
+    let t = s.toLowerCase().replace(/['`]/g, "");
     if (t.includes("*")) t = t.replace(CENSORED_ASCII, "$1");
-    t = t.replace(/['`]/g, "");
     t = t.replace(/[&+]/g, " and ").replace(/\$/g, "s").replace(/([a-z])!([a-z])/g, "$1i$2");
     t = t.replace(/([a-z])\.(?=[a-z])/g, "$1");
     return t.replace(/[^a-z0-9]+/g, " ").trim();

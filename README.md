@@ -15,9 +15,9 @@
 <tr>
 <td align="center"><strong>3,561</strong><br><sub>Hot 100 weeks, 1958–2026</sub></td>
 <td align="center"><strong>1,197/1,201</strong><br><sub>#1 songs with their cover</sub></td>
-<td align="center"><strong>37,955</strong><br><sub>songs in the search index</sub></td>
+<td align="center"><strong>53,930</strong><br><sub>songs in the search index</sub></td>
 <td align="center"><strong>8</strong><br><sub>genre and country charts</sub></td>
-<td align="center"><strong>60</strong><br><sub>months of archived blog charts (2010–2014)</sub></td>
+<td align="center"><strong>216</strong><br><sub>months of archived blog charts (2008–2025)</sub></td>
 <td align="center"><strong>1973–2025</strong><br><sub>US revenue by format (RIAA)</sub></td>
 </tr>
 </table>
@@ -51,6 +51,7 @@ History does not change, so it is computed once and served as static files. Only
 | Genre and country #1s | Wikipedia's number-one lists for 8 charts (CC BY-SA 4.0) | `lanes.py` |
 | Off the charts | Internet Archive Wayback captures, one per month per source | `wayback_heat.py` |
 | US revenue by format | RIAA U.S. Sales Database (wholesale), IFPI for global streaming share | `industry.py` |
+| Where it broke | uploads on 31 channels that broke songs, by month, via the YouTube Data API; views counted weekly, never shown past 30 days | `youtube_channels.py` |
 | Search index | all of the above plus a hand-verified set of YouTube and mixtape songs (`data/seed/non-dsp.json`) | `build_index.py` |
 | Listener submissions | Convex, moderated at `/admin` | `convex/` |
 

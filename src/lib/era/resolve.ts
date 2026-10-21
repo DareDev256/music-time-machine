@@ -145,7 +145,8 @@ export function indexRowToDatedSong(row: unknown): DatedSong | null {
   } else if (kind === "yt") {
     // YouTube API data may be served at most 30 days after it was fetched: a row whose counts are older is not used.
     const va = typeof r.va === "string" ? r.va : "";
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(va) || dayNum(localToday()) - dayNum(va) > YOUTUBE_MAX_AGE_DAYS || dayNum(va) > dayNum(localToday())) return null;
+    // One day of skew either way: the crawl stamps its local date, the server reads UTC.
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(va) || dayNum(localToday()) - dayNum(va) > YOUTUBE_MAX_AGE_DAYS || dayNum(va) > dayNum(localToday()) + 1) return null;
     where = ["youtube"];
     dateSource = ds || "uploaded to YouTube";
   } else if (kind === "seed") {
@@ -510,6 +511,8 @@ const versionOnly = (g: Group) => g.rows.every((r) => Boolean(r.version));
 /** Prefer the plain recording: drop version-only candidates when a plain one is in the same set. */
 const preferPlain = (ms: Match[]) => (ms.some((m) => !versionOnly(m.group)) ? ms.filter((m) => !versionOnly(m.group)) : ms);
 const mbRows = (g: Group) => g.rows.filter((r) => r.where.includes("musicbrainz")).length;
+/** Known only from YouTube uploads (the channel crawl or the search fallback): no chart, seed, store or MusicBrainz. */
+const youtubeOnly = (g: Group) => g.rows.every((r) => r.where.length === 1 && r.where[0] === "youtube");
 const groupPeak = (g: Group) => Math.min(Infinity, ...g.rows.map((r) => r.peak).filter(validPeak));
 
 const matchAll = (groups: Groups, qi: QueryInfo): Match[] =>
@@ -548,6 +551,10 @@ function decide(all: Match[], qi: QueryInfo): Decision {
   // Only one song carries this title in everything we can see: not a common title.
   const plain = preferPlain(matches);
   if (plain.length === 1) return { kind: "accept", match: plain[0] };
+  // A title the charts know beats YouTube-only uploads that share it: "1999" is Prince, not a 2023 SMTOWN single
+  // (measured 2026-10-20, once the channel crawl joined the index). Two charted songs still need a pick.
+  const charted = plain.filter((m) => m.group.rows.some((r) => r.where.includes("chart")));
+  if (charted.length === 1 && plain.every((m) => m === charted[0] || youtubeOnly(m.group))) return { kind: "accept", match: charted[0] };
   // Every other candidate is a cast cover of it ("Rolling in the Deep": Adele vs Glee Cast).
   const originals = plain.filter((m) => !isCoverAct(m.group));
   if (originals.length === 1) return { kind: "accept", match: originals[0] };

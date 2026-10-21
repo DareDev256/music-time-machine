@@ -7,7 +7,9 @@ Sources, in the order they win a tie on date:
   lane:<id> public/era/lanes/<id>.json          genre-lane #1s (only lanes listed in lanes/index.json)
   heat:<id> public/era/heat/YYYY-MM.json        songs seen on archived HotNewHipHop / Hype Machine / Billboard pages
   yt:<id>   public/era/youtube/YYYY-MM.json     uploads on the channels that broke songs (youtube_channels.py):
-                                                they only ADD songs nothing above has, never replace a row
+                                                they only ADD songs nothing above has, never replace a row, and are
+                                                written to public/era/index-yt.json, which git never holds: YouTube
+                                                API data may be stored 30 days, and git history keeps it forever
 
 Row: { s, a, d: YYYY-MM-DD, g: day|month|year, src, ds: human date label, k: normalised "title|primary artist",
        y?: youtubeId, n?: note, va?: when YouTube counts were fetched (yt rows: dropped by the resolver after 30 days) }
@@ -27,7 +29,10 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "data" / "scripts"))
 from hot100_covers import PLAIN, VERSION  # one definition of "another version" for every pipeline
 ERA = ROOT / "public" / "era"
-YT_PER_CHANNEL_MONTH = 10  # a channel's 10 most viewed uploads of a month; the long tail is noise for search
+# A channel's 3 most viewed uploads of a month, 50k views or more: the songs people search for. Measured 2026-10-20:
+# the top 10 added 19.6k rows and took the index build to 1.38 s of CPU against its 1 s cold-start budget.
+YT_PER_CHANNEL_MONTH = 3
+YT_MIN_VIEWS = 50_000
 HOT100_CSV = "https://raw.githubusercontent.com/utdata/rwd-billboard-data/main/data-out/hot-100-current.csv"
 UA = "MusicTimeMachine/2.0 (dev@jamesdare.com)"
 
@@ -124,7 +129,8 @@ def main():
         for s in doc.get("sources", []):
             handle = s["id"].split(":", 1)[-1]
             for x in s.get("rows", [])[:YT_PER_CHANNEL_MONTH]:
-                if x.get("parsed") is False or not x.get("song") or not x.get("artist") or other_version(x["song"]):
+                if (x.get("parsed") is False or not x.get("song") or not x.get("artist") or other_version(x["song"])
+                        or x.get("views", 0) < YT_MIN_VIEWS):
                     continue
                 k = key(x["song"], x["artist"])
                 if k in rows or not x.get("videoId") or not x.get("published"):
@@ -147,9 +153,18 @@ def main():
     for probe in ["cuzmygear|chiefkeef", "somebodythatiusedtoknow|gotye", "1999|prince"]:
         print("  probe", probe, "→", next((f"{r['s']} / {r['a']} / {r['d']} / {r['src']}" for r in out if r["k"] == probe), "MISSING"))
 
-    (ERA / "index.json").write_text(json.dumps({"built": date.today().isoformat(), "rows": out},
+    main_rows = [r for r in out if not r["src"].startswith("yt:")]
+    yt_rows = [r for r in out if r["src"].startswith("yt:")]
+    (ERA / "index.json").write_text(json.dumps({"built": date.today().isoformat(), "rows": main_rows},
                                                ensure_ascii=False, separators=(",", ":")))
-    print(f"wrote public/era/index.json ({(ERA / 'index.json').stat().st_size // 1024} KB)")
+    print(f"wrote public/era/index.json ({(ERA / 'index.json').stat().st_size // 1024} KB, {len(main_rows)} rows)")
+    yt_file = ERA / "index-yt.json"
+    if yt_rows:
+        yt_file.write_text(json.dumps({"built": date.today().isoformat(), "rows": yt_rows}, ensure_ascii=False, separators=(",", ":")))
+        print(f"wrote public/era/index-yt.json ({yt_file.stat().st_size // 1024} KB, {len(yt_rows)} rows; gitignored)")
+    elif yt_file.exists():
+        yt_file.unlink()  # no fresh crawl: no YouTube rows, never stale ones
+        print("removed public/era/index-yt.json (no fresh YouTube data)")
 
 
 if __name__ == "__main__":

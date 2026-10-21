@@ -2,6 +2,25 @@
 
 All notable changes to the Music Time Machine project will be documented in this file.
 
+## [2.2.0] - 2026-10-20 — Where it broke
+
+### Added
+- **"Where it broke · {month}"** on every era page from 2006: each month's uploads on 31 channels that broke songs (6ixBuzz Premieres, DGainz, WorldStarHipHop, GRM Daily, Link Up TV, SBTV, Mixtape Madness, Proximity, Trap Nation, UKF, Monstercat, MrSuicideSheep, COLORS, SMTOWN, HYBE, JYP, Mavin, Rimas, Country Rebel, Epitaph, Fueled By Ramen and more), ranked by views. The visitor's channel leads, then its scene, then one channel per genre. Views are today's counts and the section says so. The verdict line answers "Uploaded by DGainz that month" for a song found there.
+- `data/scripts/youtube_channels.py`: the crawl (channels.list, then each uploads playlist, then video stats; never search.list), at most 4,000 quota units a day, resuming from its cache. Title parser for each channel's house format (SBTV's pipes, Fueled By Ramen's colons, WorldStar's quotes, Monstercat's genre tags); label and media channels count an upload only when it says it is music. Canary per channel: at least 20 parsed uploads, dates inside the channel's life, no month over 500 uploads.
+- **Searchable, free of quota**: each channel's 3 most viewed uploads a month (50k views or more) join the search index as new songs, 6.7k of them, in `public/era/index-yt.json` beside the committed index. They never replace a chart, lane or blog row.
+- `/api/health` reports the age of the YouTube counts. A broken `index-yt.json` costs only its rows, never the index.
+
+### Changed
+- YouTube API policy: API data is stored and shown at most 30 days after fetching. So the crawl's output (`public/era/youtube/`, `index-yt.json`) is generated, deployed and refreshed but never committed, since git history keeps everything. The crawl refreshes counts at 6 days and deletes what it cannot refresh in time; the era page and the resolver ignore anything older on their own (one day of timezone skew allowed); health turns red at 14 days. A daily job (`com.daredev.wasplaying-youtube-daily`) runs the backfill and deploys when the data changes.
+- A title the charts know beats YouTube-only uploads that share it when no artist is typed ("1999" is Prince).
+- `norm`'s ASCII fast path strips apostrophes before censored words, as the general path does ("Sh*t's").
+- The index build budget (1 s of CPU) is held on the best of three builds; on a shared Mac a single build swung 0.8 to 1.4 s.
+- `.vercelignore` keeps the crawl cache and local experiments out of CLI deploys.
+
+### Known gaps
+- WorldStarHipHop, GRM Daily, Link Up TV and Mixtape Madness are fetched back to 2017-2021 so far; the daily backfill reaches their earlier years over the next few days.
+- Lyrical Lemonade, A Zae Production and 6ixBuzz's main channel did not resolve by handle and are not in yet. 1theK, XXL and Boomplay failed their canaries and are not shown.
+
 ## [2.1.0] - 2026-10-20 — YouTube, last
 
 ### Added

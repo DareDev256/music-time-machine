@@ -1,8 +1,11 @@
 // @vitest-environment node
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-const readFileMock = vi.hoisted(() => vi.fn());
-vi.mock("node:fs/promises", () => ({ readFile: readFileMock, default: { readFile: readFileMock } }));
+const readFileMock = vi.hoisted(() => vi.fn()); // public/era/index.json
+const ytFileMock = vi.hoisted(() => vi.fn()); // public/era/index-yt.json (gitignored crawl rows; absent by default)
+const routeRead = vi.hoisted(() => (p: unknown, enc?: unknown) =>
+  (String(p).endsWith("index-yt.json") ? ytFileMock : readFileMock)(p, enc));
+vi.mock("node:fs/promises", () => ({ readFile: routeRead, default: { readFile: routeRead } }));
 
 type Row = { s: string; a: string; d: string; g: "day" | "month" | "year"; src: string; k: string; [extra: string]: unknown };
 const row = (s: string, a: string, d: string, src = "hot100", extra: Record<string, unknown> = {}): Row => ({
@@ -61,6 +64,8 @@ beforeEach(() => {
   vi.resetModules();
   readFileMock.mockReset();
   readFileMock.mockResolvedValue(JSON.stringify(FIXTURE));
+  ytFileMock.mockReset();
+  ytFileMock.mockRejectedValue(Object.assign(new Error("ENOENT"), { code: "ENOENT" }));
 });
 
 describe("GET /api/resolve — validation", () => {
@@ -94,6 +99,18 @@ describe("GET /api/resolve — the index file", () => {
   it("reads public/era/index.json from the project root", async () => {
     await get("cuz my gear");
     expect(String(readFileMock.mock.calls[0][0]).replace(/\\/g, "/")).toMatch(/\/public\/era\/index\.json$/);
+  });
+
+  it("adds the crawl's YouTube rows from index-yt.json when it is there", async () => {
+    const va = new Date().toISOString().slice(0, 10);
+    ytFileMock.mockResolvedValue(JSON.stringify({ rows: [row("Lock Arff", "Section Boyz", "2015-09-01", "yt:@LinkUpTV", { ds: "uploaded to YouTube (Link Up TV)", y: "nISWPU50HLc", va })] }));
+    const found = await rows("section boyz lock arff");
+    expect(found[0]).toMatchObject({ song: "Lock Arff", date: "2015-09-01", dateSource: "uploaded to YouTube (Link Up TV)" });
+  });
+
+  it("answers from index.json alone when index-yt.json is missing or broken", async () => {
+    ytFileMock.mockResolvedValue("{not json");
+    expect((await rows("cuz my gear"))[0]).toMatchObject({ song: "Cuz My Gear" });
   });
 
   it("is read once and cached in module scope", async () => {

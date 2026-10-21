@@ -86,11 +86,11 @@ function YouTubeColumn({ src, isMine }: { src: YouTubeSource; isMine: (artist: s
         <span className={s.heatLabel}>{src.label}</span>
         <a className={s.source} href={src.channel} target="_blank" rel="noopener noreferrer">{src.genre} · channel ↗</a>
       </div>
-      <ol className={s.heatList}>{src.rows.slice(0, 5).map(row)}</ol>
-      {src.rows.length > 5 && (
+      <ol className={s.heatList}>{src.rows.slice(0, 3).map(row)}</ol>
+      {src.rows.length > 3 && (
         <details className={s.more}>
-          <summary>{Math.min(src.rows.length, 15) - 5} more</summary>
-          <ol className={s.heatList} start={6}>{src.rows.slice(5, 15).map(row)}</ol>
+          <summary>{Math.min(src.rows.length, 12) - 3} more</summary>
+          <ol className={s.heatList} start={4}>{src.rows.slice(3, 12).map(row)}</ol>
         </details>
       )}
     </div>
@@ -197,12 +197,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const heatExtra = heatOrdered.slice(heatVisible.length);
   const heatSpan = heatMonthSpan();
   const reddit = redditFor(month);
-  // The channels that broke songs, biggest month first: the scene that was loudest that month leads.
   const yt = youtubeFor(month);
-  const ytTotal = (x: YouTubeSource) => x.rows.slice(0, 5).reduce((n, r) => n + r.views, 0);
-  const ytOrdered = yt ? [...yt.sources].sort((a, b) => ytTotal(b) - ytTotal(a)) : [];
-  const ytVisible = ytOrdered.slice(0, 4);
-  const ytExtra = ytOrdered.slice(4);
   const through = chartsThrough();
   const line = cardLine({ song, artist, date, numberOne: n1 });
   const conceived = born ? numberOneOn(addDays(date, -266)) : null;
@@ -219,7 +214,18 @@ export default async function EraPage({ params, searchParams }: { params: Params
   const laneHits = song ? lanes.filter((l) => sameSong(l.song) && isMine(l.artist)) : [];
   const heatHit = song ? (heat?.sources ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
   const redditHit = song ? (redditFor(month) ?? []).flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
-  const ytHit = song ? ytOrdered.flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  const ytHit = song && yt ? yt.sources.flatMap((x) => x.rows.map((r) => ({ x, r }))).find(({ r }) => sameSong(r.song) && isMine(r.artist)) : undefined;
+  // The channels that broke songs. The visitor's channel leads, then its scene; then one channel per genre, loudest
+  // first, so a Chicago drill month is not led by a K-pop label on raw views alone.
+  const ytTotal = (x: YouTubeSource) => x.rows.slice(0, 5).reduce((n, r) => n + r.views, 0);
+  const byViews = yt ? [...yt.sources].sort((a, b) => ytTotal(b) - ytTotal(a)) : [];
+  const firstOfGenre = byViews.filter((x, i) => byViews.findIndex((y) => y.genre === x.genre) === i);
+  const spread = [...firstOfGenre, ...byViews.filter((x) => !firstOfGenre.includes(x))];
+  const ytOrdered = ytHit
+    ? [ytHit.x, ...spread.filter((x) => x !== ytHit.x && x.genre === ytHit.x.genre), ...spread.filter((x) => x !== ytHit.x && x.genre !== ytHit.x.genre)]
+    : spread;
+  const ytVisible = ytOrdered.slice(0, 4);
+  const ytExtra = ytOrdered.slice(4);
   const verdict = !song ? null
     : onChart ? `#${onChart.rank} on the Hot 100 that week${laneHits.length ? `, and #1 on ${laneHits.map((l) => l.label).join(" and ")}` : ""}.`
     : laneHits.length ? `#1 on ${laneHits.map((l) => l.label).join(" and ")} that week; not in the Hot 100 top 10.`
@@ -369,7 +375,7 @@ export default async function EraPage({ params, searchParams }: { params: Params
           </div>
           {ytExtra.length > 0 && (
             <details className={`${s.more} ${s.moreSources}`}>
-              <summary>More channels: {ytExtra.map((x) => x.label).join(", ")}</summary>
+              <summary>{ytExtra.length} more {ytExtra.length === 1 ? "channel" : "channels"}</summary>
               <div className={s.heat}>
                 {ytExtra.map((src) => <YouTubeColumn key={src.id} src={src} isMine={isMine} />)}
               </div>

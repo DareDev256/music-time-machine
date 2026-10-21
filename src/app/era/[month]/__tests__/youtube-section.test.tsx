@@ -36,10 +36,14 @@ describe("Where it broke", () => {
   it("renders the month's channels, the loudest first, with views, dates and links", async () => {
     const out = await html("2015-02");
     expect(out).toContain("Where it broke");
-    expect(out.indexOf("6ixBuzz Premieres")).toBeLessThan(out.indexOf("GRM Daily"));
+    expect(out.indexOf("6ixBuzz Premieres")).toBeLessThan(out.indexOf("GRM Daily")); // louder genre first
     expect(out).toContain("5.4M views");
     expect(out).toContain("https://www.youtube.com/watch?v=E7ZStZMn-ac");
     expect(out).toContain("views counted 20 OCT 2026");
+  });
+  it("leads with the visitor's channel when their song is in it, however quiet", async () => {
+    const out = await html("2015-02", { song: "Shutdown", artist: "Skepta", date: "2015-02-10" });
+    expect(out.indexOf("GRM Daily")).toBeLessThan(out.indexOf("6ixBuzz Premieres"));
   });
   it("answers the verdict for a song uploaded that month", async () => {
     const out = await html("2015-02", { song: "Dope Boy", artist: "Casper TNG & Fresh", date: "2015-02-10" });

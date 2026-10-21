@@ -1304,3 +1304,22 @@ describe("index rows from the YouTube crawl", () => {
     expect(indexRowToDatedSong({ ...row(""), va: undefined })).toBeNull();
   });
 });
+
+describe("a charted title against YouTube uploads that share it", () => {
+  const upload = (song: string, artist: string, date: string): DatedSong => ({
+    song, artist, date, granularity: "day", dateSource: "uploaded to YouTube (SMTOWN)", where: ["youtube"], onDsp: null, youtubeId: "aaaaaaaaaa1",
+  });
+  it('"1999" with no artist is the charted song, not a channel upload of the same name', async () => {
+    const deps = fakeDeps({ index: [chart("1999", "Prince", "1982-11-06"), upload("1999", "MARK", "2023-07-14")] });
+    const out = asSong(await resolveQuery("1999", deps));
+    expect(out.best.artist).toBe("Prince");
+  });
+  it("the upload still wins when its artist is typed", async () => {
+    const deps = fakeDeps({ index: [chart("1999", "Prince", "1982-11-06"), upload("1999", "MARK", "2023-07-14")] });
+    expect(asSong(await resolveQuery("mark 1999", deps)).best.artist).toBe("MARK");
+  });
+  it("two charted songs with one title still need a pick", async () => {
+    const deps = fakeDeps({ index: [chart("Hold On", "Wilson Phillips", "1990-04-14"), chart("Hold On", "En Vogue", "1990-05-12"), upload("Hold On", "Someone", "2015-01-01")] });
+    expect(asSong(await resolveQuery("hold on", deps)).needsPick).toBe(true);
+  });
+});

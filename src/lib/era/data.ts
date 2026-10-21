@@ -128,10 +128,14 @@ export function coverFor(song: string, artist: string): string | null {
 }
 
 /** Look a song up in the index by its normalised key. */
-export function indexRow(song: string, artist: string): IndexRow | null {
-  const idx = load<{ rows: IndexRow[] }>("index.json");
+export function indexRow(song: string, artist: string, today = new Date().toISOString().slice(0, 10)): IndexRow | null {
   const k = indexKey(song, artist);
-  return idx?.rows.find((r) => r.k === k) ?? null;
+  const hit = load<{ rows: IndexRow[] }>("index.json")?.rows.find((r) => r.k === k);
+  if (hit) return hit;
+  // The crawl's songs (gitignored, see build_index.py), only while their YouTube data is inside the 30-day policy.
+  const yt = load<{ rows: (IndexRow & { va?: string })[] }>("index-yt.json")?.rows.find((r) => r.k === k);
+  const age = yt?.va ? (ms(today) - ms(yt.va)) / DAY : NaN;
+  return yt && age >= -1 && age <= YOUTUBE_MAX_AGE_DAYS ? yt : null;
 }
 
 // Same normalisation as data/scripts/build_index.py (keep them in step).
@@ -208,7 +212,7 @@ export function freshYouTube(doc: unknown, today: string): YouTubeMonth | null {
   const d = doc as Partial<YouTubeMonth> | null;
   if (!d || typeof d.viewsAsOf !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(d.viewsAsOf) || !Array.isArray(d.sources)) return null;
   const age = (ms(today) - ms(d.viewsAsOf)) / DAY;
-  if (!(age >= 0 && age <= YOUTUBE_MAX_AGE_DAYS)) return null;
+  if (!(age >= -1 && age <= YOUTUBE_MAX_AGE_DAYS)) return null; // -1: the crawl's local date vs the server's UTC
   const sources = d.sources.filter((x) => Array.isArray(x?.rows) && x.rows.length > 0);
   return sources.length ? { month: String(d.month ?? ""), viewsAsOf: d.viewsAsOf, sources } : null;
 }

@@ -1,0 +1,227 @@
+[
+ {
+  "handle": "@6ixBuzzPremieres",
+  "label": "6ixBuzz Premieres",
+  "genre": "hip-hop",
+  "scene": "Toronto: 6ixBuzz Premieres, Drake-era Toronto rap/R&B premieres"
+ },
+ {
+  "handle": "@WORLDSTARHIPHOP",
+  "label": "WORLDSTARHIPHOP",
+  "genre": "hip-hop",
+  "scene": "US hip-hop: WSHH exclusives and premieres"
+ },
+ {
+  "handle": "@DGainz",
+  "label": "DGainz",
+  "genre": "hip-hop",
+  "scene": "Chicago: Chief Keef-era drill videos"
+ },
+ {
+  "handle": "@GRMDaily",
+  "label": "GRM Daily",
+  "genre": "uk",
+  "scene": "UK grime and drill"
+ },
+ {
+  "handle": "@LinkUpTV",
+  "label": "Link Up TV",
+  "genre": "uk",
+  "scene": "UK rap, grime, drill"
+ },
+ {
+  "handle": "@SBTV",
+  "label": "SBTV",
+  "genre": "uk",
+  "scene": "UK grime/rap, Jamal Edwards"
+ },
+ {
+  "handle": "@Proximity",
+  "label": "Proximity",
+  "genre": "edm",
+  "scene": "Future bass / electronic discovery"
+ },
+ {
+  "handle": "@TrapNation",
+  "label": "Trap Nation",
+  "genre": "edm",
+  "scene": "Trap and bass EDM, 2013-2018"
+ },
+ {
+  "handle": "@MrSuicideSheep",
+  "label": "MrSuicideSheep",
+  "genre": "edm",
+  "scene": "Chill electronic and indie electronic"
+ },
+ {
+  "handle": "@UKFDubstep",
+  "label": "UKF Dubstep",
+  "genre": "edm",
+  "scene": "UK dubstep and bass"
+ },
+ {
+  "handle": "@Monstercat",
+  "label": "Monstercat",
+  "genre": "edm",
+  "scene": "Electronic label, Monstercat Uncaged era"
+ },
+ {
+  "handle": "@MajesticCasual",
+  "label": "Majestic Casual",
+  "genre": "indie",
+  "scene": "Chill indie and electronic curation"
+ },
+ {
+  "handle": "@1theK",
+  "label": "1theK",
+  "genre": "kpop",
+  "scene": "K-pop: MVs from many labels",
+  "strict": true
+ },
+ {
+  "handle": "@HYBELABELS",
+  "label": "HYBE LABELS",
+  "genre": "kpop",
+  "scene": "K-pop: BTS, Seventeen, NewJeans",
+  "strict": true
+ },
+ {
+  "handle": "@SMTOWN",
+  "label": "SMTOWN",
+  "genre": "kpop",
+  "scene": "K-pop: SM Entertainment (EXO, SNSD, aespa)",
+  "strict": true
+ },
+ {
+  "handle": "@JYPEntertainment",
+  "label": "JYP Entertainment",
+  "genre": "kpop",
+  "scene": "K-pop: JYP (TWICE, Stray Kids, ITZY)",
+  "strict": true
+ },
+ {
+  "handle": "@YGEntertainment",
+  "label": "YG Entertainment",
+  "genre": "kpop",
+  "scene": "K-pop: YG (BIGBANG, BLACKPINK)",
+  "strict": true
+ },
+ {
+  "handle": "@NoCopyrightSounds",
+  "label": "NoCopyrightSounds",
+  "genre": "edm",
+  "scene": "Free-to-use EDM, gaming scene"
+ },
+ {
+  "handle": "@COLORSxSTUDIOS",
+  "label": "COLORS",
+  "genre": "indie",
+  "scene": "Colors Studios: R&B, indie, global live sessions"
+ },
+ {
+  "handle": "@OVOSound",
+  "label": "OVO Sound",
+  "genre": "hip-hop",
+  "scene": "Toronto: OVO label"
+ },
+ {
+  "handle": "@TimWestwoodTV",
+  "label": "Tim Westwood TV",
+  "genre": "uk",
+  "scene": "UK rap: Westwood freestyles and premieres",
+  "strict": true,
+  "publish": false,
+  "why": "mostly interviews and freestyles, not songs (2026-10-20 crawl)"
+ },
+ {
+  "handle": "@HotNewHipHop",
+  "label": "HotNewHipHop",
+  "genre": "hip-hop",
+  "scene": "US hip-hop premieres and news",
+  "strict": true
+ },
+ {
+  "handle": "@MavinRecords",
+  "label": "Mavin Records",
+  "genre": "afrobeats",
+  "scene": "Nigeria: Mavin label (Rema, Ayra Starr)",
+  "strict": true
+ },
+ {
+  "handle": "@BoomplayMusic",
+  "label": "Boomplay Music",
+  "genre": "afrobeats",
+  "scene": "African music streaming/video",
+  "strict": true
+ },
+ {
+  "handle": "@CMT",
+  "label": "CMT",
+  "genre": "country",
+  "scene": "US country: CMT video premieres",
+  "strict": true
+ },
+ {
+  "handle": "@CountryRebel",
+  "label": "Country Rebel",
+  "genre": "country",
+  "scene": "Outlaw/independent country"
+ },
+ {
+  "handle": "@FueledByRamen",
+  "label": "Fueled By Ramen",
+  "genre": "rock",
+  "scene": "Pop-punk/alt rock: Paramore, 21 Pilots"
+ },
+ {
+  "handle": "@RepublicRecords",
+  "label": "Republic Records",
+  "genre": "pop",
+  "scene": "US pop: Republic (Ariana Grande, Post Malone)"
+ },
+ {
+  "handle": "@AtlanticRecords",
+  "label": "Atlantic Records",
+  "genre": "pop",
+  "scene": "US pop and hip-hop: Atlantic"
+ },
+ {
+  "handle": "@MixtapeMadnessOfficial",
+  "label": "Mixtape Madness",
+  "genre": "uk",
+  "scene": "UK rap and drill"
+ },
+ {
+  "handle": "@notjustokTV",
+  "label": "NotjustOk TV",
+  "genre": "afrobeats",
+  "scene": "Nigeria: Afrobeats video premieres",
+  "strict": true
+ },
+ {
+  "handle": "@epitaph",
+  "label": "Epitaph Records",
+  "genre": "rock",
+  "scene": "Punk and indie rock"
+ },
+ {
+  "handle": "@XXLMagazine",
+  "label": "XXL",
+  "genre": "hip-hop",
+  "scene": "US hip-hop: XXL Freshman era",
+  "strict": true
+ },
+ {
+  "handle": "@300ent",
+  "label": "300 Entertainment",
+  "genre": "hip-hop",
+  "scene": "Atlanta: Young Thug, Megan Thee Stallion, Fetty Wap",
+  "strict": true
+ },
+ {
+  "handle": "@Rimas",
+  "label": "Rimas Music",
+  "genre": "latin",
+  "scene": "Latin trap and reggaeton (Bad Bunny)"
+ }
+]

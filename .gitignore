@@ -47,3 +47,7 @@ __pycache__/
 data/hot100-covers.v2.json
 data/hot100-covers.v3.json
 data/hot100-covers.merged.json
+
+# YouTube API data: stored at most 30 days (API policy), so never in git history. Generated, deployed, refreshed weekly.
+public/era/youtube/
+public/era/index-yt.json

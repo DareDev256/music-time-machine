@@ -6,6 +6,7 @@ Refuses (exit 2) when a shard is missing, so a broken pipeline cannot publish ze
 """
 import json
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -21,12 +22,21 @@ def need(rel: str):
     return json.loads(p.read_text())
 
 
+def shipped(folder: str) -> list[str]:
+    """Month files git tracks: the README describes what a deploy serves, not what sits uncommitted on this disk."""
+    try:
+        out = subprocess.run(["git", "-C", str(ROOT), "ls-files", f"public/era/{folder}"], capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        sys.exit("REFUSING: git ls-files failed, so what ships cannot be counted")
+    return sorted(Path(x).stem for x in out.split() if re.fullmatch(r"\d{4}-\d{2}", Path(x).stem))
+
+
 def main():
     flight = need("flight.json")
     index = need("index.json")
     lanes = need("lanes/index.json")
-    heat_months = sorted(p.stem for p in (ERA / "heat").glob("[0-9]*-[0-9]*.json"))
-    reddit_months = sorted(p.stem for p in (ERA / "reddit").glob("[0-9]*-[0-9]*.json")) if (ERA / "reddit").exists() else []
+    heat_months = shipped("heat")
+    reddit_months = shipped("reddit")
     industry = need("industry.json")
 
     weeks = len(flight["weeks"])

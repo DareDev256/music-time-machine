@@ -41,7 +41,8 @@ async function getJson(url: string): Promise<unknown> {
 }
 
 function nodeDeps(): ResolverDeps {
-  const index = prepareIndex(JSON.parse(readFileSync(path.join(process.cwd(), "public/era/index.json"), "utf8")).rows);
+  const read = (f: string) => { try { return (JSON.parse(readFileSync(path.join(process.cwd(), f), "utf8")) as { rows: unknown[] }).rows; } catch { return []; } };
+  const index = prepareIndex([...read("public/era/index.json"), ...read("public/era/index-yt.json")]);
   return {
     async indexSearch(q) { return searchIndex(index, q); },
     async musicbrainz(q) { return mapMusicBrainz(await getJson(`https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(buildMbQuery(q))}&fmt=json&limit=8`)); },
