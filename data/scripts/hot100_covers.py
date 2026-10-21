@@ -26,8 +26,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "data" / "hot100-number-ones.json"
-OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "data" / "hot100-covers.json"
-PACE_S = float(sys.argv[1]) if len(sys.argv) > 1 else 3.2
+# Defaults; main() reads argv so importing this module (covers_merge.py does) has no side effects.
+OUT = ROOT / "data" / "hot100-covers.json"
+PACE_S = 3.2
 # A cover from a compilation or a "Various Artists" sampler is a wrong cover, even when the track matches.
 COMPILATION = re.compile(r"\b(hits|greatest|best of|the best|very best|collection|essentials?|anthology|now that|now!|karaoke|tribute|various|sampler|oldies|top 40|#1s|no\. 1's|number ones|classics|gold|legends?|ultimate|definitive|platinum|summer|party|soundtrack|vol\.?|volume|jukebox|masters|complete|jackpot|\d{2}s\b)", re.I)
 # A different recording of the song is also a wrong cover: live albums, cast recordings, demos, remixes and mixes,
@@ -94,6 +95,11 @@ def lookup(song: str, artist: str):
 
 
 def main():
+    global OUT, PACE_S
+    if len(sys.argv) > 1:
+        PACE_S = float(sys.argv[1])
+    if len(sys.argv) > 2:
+        OUT = Path(sys.argv[2])
     weeks = json.loads(SRC.read_text())["weeks"]
     keys = list(dict.fromkeys(f"{w['song']}|{w['artist']}" for w in weeks))
     covers = json.loads(OUT.read_text())["covers"] if OUT.exists() else {}

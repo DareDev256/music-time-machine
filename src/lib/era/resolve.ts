@@ -885,7 +885,25 @@ function expand(index: PreparedIndex, q: string): Map<string, number> {
 export function searchIndex(index: PreparedIndex, q: string, limit = 8): DatedSong[] {
   const cleaned = cleanQuery(q);
   if (!cleaned) return [];
-  const text = unglue(index, cleaned);
+  // A typed word can be a word the index knows AND a run-together name: "dopeboy" is in "Dopeboy Swag" and is
+  // also "Dope Boy". Score both readings and keep each row's better score, so the known word cannot block the split.
+  const readings = [unglue(index, cleaned)];
+  const split = unglue(index, cleaned, true);
+  if (split !== readings[0]) readings.push(split);
+  const bestByRow = new Map<PreparedRow, number>();
+  for (const text of readings) {
+    for (const { row, score } of scoreReading(index, text)) {
+      if (score > (bestByRow.get(row) ?? -Infinity)) bestByRow.set(row, score);
+    }
+  }
+  return [...bestByRow.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([row]) => ({ ...row.song, where: [...row.song.where] }));
+}
+
+/** Every candidate row for one reading of the query, with its score (unsorted). */
+function scoreReading(index: PreparedIndex, text: string): Array<{ row: PreparedRow; score: number }> {
   const qi = queryInfo(text);
   const scored: Array<{ row: PreparedRow; score: number }> = [];
   const yearBoost = (row: PreparedRow) => (qi.year !== null && Math.abs(row.year - qi.year) <= 1 ? 4 : 0);
@@ -893,7 +911,7 @@ export function searchIndex(index: PreparedIndex, q: string, limit = 8): DatedSo
 
   if (!qi.content.length) {
     // Only a date: titles that carry every date word, as typed.
-    if (!qi.dateTokens.length) return [];
+    if (!qi.dateTokens.length) return scored;
     const lists = qi.dateTokens.map((t) => index.postings.get(t) ?? []);
     const shortest = lists.reduce((a, b) => (b.length < a.length ? b : a));
     for (const id of shortest) {
@@ -948,21 +966,25 @@ export function searchIndex(index: PreparedIndex, q: string, limit = 8): DatedSo
       scored.push({ row, score });
     }
   }
-  return scored
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ row }) => ({ ...row.song, where: [...row.song.where] }));
+  return scored;
 }
 
 /**
  * Rewrite a typed run-together word ("chiefkeef", "lilpeep", "hotlinebling") as the index's spaced name when the
- * index does not know the word itself; one or two typos allowed by length, as in tokenSim.
+ * index does not know the word itself; one or two typos allowed by length, as in tokenSim. With `known`, words the
+ * index does know are also split, but only on an exact run-together match (no typos), for the second reading.
  */
-function unglue(index: PreparedIndex, text: string): string {
+function unglue(index: PreparedIndex, text: string, known = false): string {
   let changed = false;
   const out = text.split(/(\s+)/).map((piece) => {
     const w = norm(piece);
-    if (w.length < 6 || w.includes(" ") || /\d/.test(w) || index.postings.has(w)) return piece;
+    if (w.length < 6 || w.includes(" ") || /\d/.test(w)) return piece;
+    if (index.postings.has(w)) {
+      const exact = known ? index.glued.get(w) : undefined;
+      if (!exact) return piece;
+      changed = true;
+      return exact;
+    }
     let spaced = index.glued.get(w);
     if (!spaced) {
       const max = w.length >= 8 ? 2 : 1;

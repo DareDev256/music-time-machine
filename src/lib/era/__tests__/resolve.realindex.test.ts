@@ -112,3 +112,22 @@ describe.skipIf(!present)("resolver against the real index", () => {
     expect(await resolveQuery(q, deps())).toMatchObject({ kind: "date", date });
   });
 });
+
+// 2026-10-20, from James: "casper dopeboy" found nothing. "dopeboy" is a known index word ("Dopeboy Swag"),
+// which blocked the run-together split to "dope boy"; both readings are now scored.
+describe("a known word that is also a run-together name", () => {
+  it.skipIf(!present)("\"casper dopeboy\" → Dope Boy, Casper TNG & Fresh, uploaded to YouTube 10 Feb 2015", async () => {
+    const index = prepareIndex(JSON.parse(readFileSync(FILE, "utf8")).rows);
+    const calls = { mb: 0, it: 0 };
+    const out = await resolveQuery("casper dopeboy", {
+      indexSearch: async (q) => searchIndex(index, q),
+      musicbrainz: async () => { calls.mb++; return []; },
+      itunes: async () => { calls.it++; return []; },
+    });
+    expect(out.kind).toBe("song");
+    if (out.kind !== "song") return;
+    expect(out.best.song).toBe("Dope Boy");
+    expect(out.best.date).toBe("2015-02-10");
+    expect(out.best.youtubeId).toBe("E7ZStZMn-ac");
+  });
+});

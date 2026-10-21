@@ -196,6 +196,18 @@
       ],
       "note": "Circus Records; the top YouTube result is a 2009-11-06 fan upload, so the YouTube date is not used",
       "source": "MusicBrainz first-release-date"
+    },
+    {
+      "song": "Dope Boy",
+      "artist": "Casper TNG & Fresh",
+      "date": "2015-02-10",
+      "dateSource": "uploaded to YouTube",
+      "youtubeId": "E7ZStZMn-ac",
+      "where": [
+        "youtube"
+      ],
+      "note": "From the tape Ghost Town Vol 2. Certified Gold in Canada by Music Canada, 21 July 2022.",
+      "source": "yt-dlp: 6ixBuzz Premieres official video, 5.41M views (2026-10-20); Music Canada award MC-AWARD-001994"
     }
   ]
 }
