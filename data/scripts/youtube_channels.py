@@ -256,8 +256,9 @@ def parse_title(raw):
         # "SB.TV - Flexplicit ft. Royce - My Game": the channel's name is not the artist.
         if BRAND.match(a) and split_sep(s):
             a, s = split_sep(s)
-        # "I Don't Like f. Lil Reese": the feature is a credit, not part of the title.
-        f = re.search(r"\s+(?:f\.|f/|ft\.?|feat\.?|featuring)\s+(.+)$", s, re.I)
+        # "I Don't Like f. Lil Reese": the feature is a credit, not part of the title. Also the empty bracket of
+        # "Beece Daytona - Boulevard (feat.) Chief Keef" (DGainz, 2012); "(feat. X)" stays with the song.
+        f = re.search(r"\s+(?:\((?:f\.|ft\.?|feat\.?|featuring)\)|f\.|f/|ft\.?|feat\.?|featuring)\s+(.+)$", s, re.I)
         if f and f.start() > 0:
             a, s = "%s feat. %s" % (a, f.group(1).strip()), s[:f.start()].strip()
         return a, s, True

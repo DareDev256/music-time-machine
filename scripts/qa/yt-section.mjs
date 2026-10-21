@@ -24,6 +24,8 @@ const facts = await p.evaluate(() => {
   };
 });
 const box = await p.evaluate(() => { const s = document.querySelector('#yt')?.closest('section'); const r = s?.getBoundingClientRect(); return r ? { y: r.top + scrollY, h: r.height } : null; });
+// Back to the top first: scrolled to the section, the sticky masthead is drawn over its heading in the page shot.
+await p.evaluate(() => scrollTo(0, 0));
 if (box) await p.screenshot({ path: `${out}-${w}.png`, clip: { x: 0, y: box.y, width: Number(w), height: Math.min(box.h, 2400) }, fullPage: true });
 console.log(JSON.stringify({ ...facts, errors }, null, 1));
 await b.close();
