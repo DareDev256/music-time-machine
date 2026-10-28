@@ -1,7 +1,7 @@
 {
 "source": "en.wikipedia.org, List of Billboard Hot 100 number ones of <year>",
 "license": "CC BY-SA 4.0",
-"built": "2026-10-21",
+"built": "2026-10-28",
 "weeks": [
 {
 "date": "1958-08-04",
@@ -6371,12 +6371,12 @@
 {
 "date": "1983-01-01",
 "song": "Maneater",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1983-01-08",
 "song": "Maneater",
-"artist": "Daryl Hall and John Oates"
+"artist": "Daryl Hall & John Oates"
 },
 {
 "date": "1983-01-15",
@@ -17807,6 +17807,11 @@
 "date": "2026-10-24",
 "song": "Patient Zero",
 "artist": "Taylor Swift"
+},
+{
+"date": "2026-10-31",
+"song": "Choosin' Texas",
+"artist": "Ella Langley"
 }
 ]
 }
