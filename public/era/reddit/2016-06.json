@@ -1,0 +1,318 @@
+{
+ "month": "2016-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "In Rainbows",
+     "artist": "Radiohead",
+     "title": "[FRESH STREAM] Radiohead - In Rainbows",
+     "score": 738,
+     "comments": 212,
+     "url": "https://www.reddit.com/r/indieheads/comments/4neqkw/",
+     "posted": "2016-06-10"
+    },
+    {
+     "rank": 2,
+     "song": "Frankie Sinatra (Extended Mix)",
+     "artist": "The Avalanches",
+     "title": "[FRESH] The Avalanches - Frankie Sinatra (Extended Mix)",
+     "score": 487,
+     "comments": 156,
+     "url": "https://www.reddit.com/r/indieheads/comments/4m5cxy/",
+     "posted": "2016-06-02"
+    },
+    {
+     "rank": 3,
+     "song": "Subways",
+     "artist": "The Avalanches",
+     "title": "[FRESH] The Avalanches - Subways",
+     "score": 332,
+     "comments": 78,
+     "url": "https://www.reddit.com/r/indieheads/comments/4p7oxb/",
+     "posted": "2016-06-21"
+    },
+    {
+     "rank": 4,
+     "song": "Shut Up Kiss Me",
+     "artist": "Angel Olsen",
+     "title": "[FRESH] Angel Olsen - Shut Up Kiss Me",
+     "score": 317,
+     "comments": 55,
+     "url": "https://www.reddit.com/r/indieheads/comments/4qfg7i/",
+     "posted": "2016-06-29"
+    },
+    {
+     "rank": 5,
+     "song": "Threat of Joy",
+     "artist": "The Strokes",
+     "title": "[FRESH VIDEO] The Strokes - Threat of Joy",
+     "score": 283,
+     "comments": 46,
+     "url": "https://www.reddit.com/r/indieheads/comments/4q9yu8/",
+     "posted": "2016-06-28"
+    },
+    {
+     "rank": 6,
+     "song": "If I Was A Folkstar” (Feat. Toro Y Moi)",
+     "artist": "The Avalanches",
+     "title": "[FRESH] The Avalanches – “If I Was A Folkstar” (Feat. Toro Y Moi)",
+     "score": 233,
+     "comments": 38,
+     "url": "https://www.reddit.com/r/indieheads/comments/4nqsy6/",
+     "posted": "2016-06-12"
+    },
+    {
+     "rank": 7,
+     "song": "Frankie Sinatra",
+     "artist": "The Avalanches",
+     "title": "[FRESH VIDEO] The Avalanches - Frankie Sinatra",
+     "score": 212,
+     "comments": 52,
+     "url": "https://www.reddit.com/r/indieheads/comments/4m5l6j/",
+     "posted": "2016-06-02"
+    },
+    {
+     "rank": 8,
+     "song": "If I Was A Folkstar (aired on Triple J, stereo version)",
+     "artist": "The Avalanches",
+     "title": "[FRESH] The Avalanches - If I Was A Folkstar (aired on Triple J, stereo version)",
+     "score": 201,
+     "comments": 60,
+     "url": "https://www.reddit.com/r/indieheads/comments/4o10hf/",
+     "posted": "2016-06-14"
+    },
+    {
+     "rank": 9,
+     "song": "A Moon Shaped Pool",
+     "artist": "Radiohead",
+     "title": "[FRESH STREAM] Radiohead - A Moon Shaped Pool",
+     "score": 199,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/indieheads/comments/4oh41n/",
+     "posted": "2016-06-17"
+    },
+    {
+     "rank": 10,
+     "song": "Wow",
+     "artist": "Beck",
+     "title": "[FRESH] Beck - Wow",
+     "score": 198,
+     "comments": 134,
+     "url": "https://www.reddit.com/r/indieheads/comments/4m7vlu/",
+     "posted": "2016-06-02"
+    },
+    {
+     "rank": 11,
+     "song": "Freetown Sound",
+     "artist": "Blood Orange",
+     "title": "[FRESH STREAM] Blood Orange - Freetown Sound",
+     "score": 193,
+     "comments": 44,
+     "url": "https://www.reddit.com/r/indieheads/comments/4q7jlp/",
+     "posted": "2016-06-28"
+    },
+    {
+     "rank": 12,
+     "song": "SOS (ABBA cover)",
+     "artist": "Portishead",
+     "title": "[FRESH] Portishead - SOS (ABBA cover)",
+     "score": 161,
+     "comments": 26,
+     "url": "https://www.reddit.com/r/indieheads/comments/4paw5z/",
+     "posted": "2016-06-22"
+    },
+    {
+     "rank": 13,
+     "song": "Colours",
+     "artist": "The Avalanches",
+     "title": "[FRESH] The Avalanches - \"Colours\"",
+     "score": 153,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/indieheads/comments/4obh47/",
+     "posted": "2016-06-16"
+    },
+    {
+     "rank": 14,
+     "song": "The Glowing Man",
+     "artist": "Swans",
+     "title": "[FRESH STREAM] Swans - The Glowing Man",
+     "score": 151,
+     "comments": 65,
+     "url": "https://www.reddit.com/r/indieheads/comments/4ogawx/",
+     "posted": "2016-06-16"
+    },
+    {
+     "rank": 15,
+     "song": "Pet Sounds (50th Anniversary Edition)",
+     "artist": "The Beach Boys",
+     "title": "[FRESH STREAM] The Beach Boys - Pet Sounds (50th Anniversary Edition)",
+     "score": 148,
+     "comments": 58,
+     "url": "https://www.reddit.com/r/indieheads/comments/4ngtzq/",
+     "posted": "2016-06-10"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Sorry",
+     "artist": "Beyoncé",
+     "title": "[FRESH VIDEO] Beyoncé - Sorry",
+     "score": 97,
+     "comments": 43,
+     "url": "https://www.reddit.com/r/popheads/comments/4pb3aq/",
+     "posted": "2016-06-22"
+    },
+    {
+     "rank": 2,
+     "song": "I Really Like You Shampoo Commercial",
+     "artist": "Carly Rae Jepsen",
+     "title": "[FRESH VIDEO] Carly Rae Jepsen - I Really Like You Shampoo Commercial",
+     "score": 95,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/popheads/comments/4ovurg/",
+     "posted": "2016-06-19"
+    },
+    {
+     "rank": 3,
+     "song": "Supernatural",
+     "artist": "Danny L Harle ft. Carly Rae Jepsen",
+     "title": "[FRESH] Danny L Harle ft. Carly Rae Jepsen - Supernatural",
+     "score": 81,
+     "comments": 48,
+     "url": "https://www.reddit.com/r/popheads/comments/4mlurg/",
+     "posted": "2016-06-05"
+    },
+    {
+     "rank": 4,
+     "song": "Bury It ft. Hayley Williams of Paramore",
+     "artist": "CHVRCHES",
+     "title": "[FRESH] CHVRCHES - Bury It ft. Hayley Williams of Paramore",
+     "score": 75,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/popheads/comments/4ncbjw/",
+     "posted": "2016-06-09"
+    },
+    {
+     "rank": 5,
+     "song": "Better Than Me (feat. Carly Rae Jepsen)",
+     "artist": "Blood Orange",
+     "title": "[FRESH] Blood Orange - Better Than Me (feat. Carly Rae Jepsen)",
+     "score": 69,
+     "comments": 11,
+     "url": "https://www.reddit.com/r/popheads/comments/4q7ts1/",
+     "posted": "2016-06-28"
+    },
+    {
+     "rank": 6,
+     "song": "Kill Em With Kindness",
+     "artist": "Selena Gomez",
+     "title": "[FRESH VIDEO] Selena Gomez - Kill Em With Kindness",
+     "score": 58,
+     "comments": 37,
+     "url": "https://www.reddit.com/r/popheads/comments/4mtp2m/",
+     "posted": "2016-06-06"
+    },
+    {
+     "rank": 7,
+     "song": "Waving Goodbye",
+     "artist": "Sia",
+     "title": "[FRESH] Sia – Waving Goodbye (Prod. Diplo)",
+     "score": 55,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/popheads/comments/4pocvk/",
+     "posted": "2016-06-24"
+    },
+    {
+     "rank": 8,
+     "song": "This Is What You Came For (Official Video) ft. Rihanna",
+     "artist": "Calvin Harris",
+     "title": "[FRESH VIDEO] Calvin Harris - This Is What You Came For (Official Video) ft. Rihanna",
+     "score": 54,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/popheads/comments/4ohh52/",
+     "posted": "2016-06-17"
+    },
+    {
+     "rank": 9,
+     "song": "Final Song",
+     "artist": "MØ",
+     "title": "[FRESH VIDEO] MØ - Final Song",
+     "score": 50,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/4nb7ku/",
+     "posted": "2016-06-09"
+    },
+    {
+     "rank": 10,
+     "song": "WILD (Official Audio) ft. Alessia Cara",
+     "artist": "Troye Sivan",
+     "title": "[FRESH] Troye Sivan - WILD (Official Audio) ft. Alessia Cara",
+     "score": 44,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/popheads/comments/4pgasi/",
+     "posted": "2016-06-23"
+    },
+    {
+     "rank": 11,
+     "song": "Sledgehammer",
+     "artist": "Rihanna",
+     "title": "[FRESH VIDEO] Rihanna - Sledgehammer",
+     "score": 41,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/4qlu76/",
+     "posted": "2016-06-30"
+    },
+    {
+     "rank": 12,
+     "song": "Last Year Was Complicated",
+     "artist": "Nick Jonas",
+     "title": "[FRESH ALBUM] Nick Jonas - Last Year Was Complicated",
+     "score": 40,
+     "comments": 58,
+     "url": "https://www.reddit.com/r/popheads/comments/4nelvs/",
+     "posted": "2016-06-10"
+    },
+    {
+     "rank": 13,
+     "song": "Free Love",
+     "artist": "Vic Mensa feat. Le1f, Halsey, Lil B & Malik Yusef",
+     "title": "[FRESH] Vic Mensa feat. Le1f, Halsey, Lil B & Malik Yusef - Free Love",
+     "score": 40,
+     "comments": 27,
+     "url": "https://www.reddit.com/r/popheads/comments/4q0dda/",
+     "posted": "2016-06-26"
+    },
+    {
+     "rank": 14,
+     "song": "Body Say",
+     "artist": "Demi Lovato",
+     "title": "[FRESH] Demi Lovato – Body Say (Single)",
+     "score": 39,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/popheads/comments/4qmf0i/",
+     "posted": "2016-06-30"
+    },
+    {
+     "rank": 15,
+     "song": "Lil Wayne, Wiz Khalifa & Imagine Dragons w/ Logic & Ty Dolla $ign ft X Ambassadors",
+     "artist": "Sucker for Pain",
+     "title": "[FRESH VIDEO] Sucker for Pain - Lil Wayne, Wiz Khalifa & Imagine Dragons w/ Logic & Ty Dolla $ign ft X Ambassadors",
+     "score": 39,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/popheads/comments/4pt0gy/",
+     "posted": "2016-06-25"
+    }
+   ]
+  }
+ ]
+}

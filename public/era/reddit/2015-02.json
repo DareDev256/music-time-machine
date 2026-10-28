@@ -1,0 +1,318 @@
+{
+ "month": "2015-02",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Blacker The Berry",
+     "artist": "Kendrick Lamar",
+     "title": "[FRESH] Kendrick Lamar - The Blacker The Berry",
+     "score": 6497,
+     "comments": 1851,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2vcjak/",
+     "posted": "2015-02-09"
+    },
+    {
+     "rank": 2,
+     "song": "All Day",
+     "artist": "Kanye West",
+     "title": "[FRESH] Kanye West - All Day ( Live from BRIT Awards)",
+     "score": 4029,
+     "comments": 1623,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2x5m47/",
+     "posted": "2015-02-25"
+    },
+    {
+     "rank": 3,
+     "song": "All Your Fault",
+     "artist": "Big Sean ft. Kanye West",
+     "title": "[FRESH] Big Sean ft. Kanye West - All Your Fault",
+     "score": 2932,
+     "comments": 591,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2wcp17/",
+     "posted": "2015-02-18"
+    },
+    {
+     "rank": 4,
+     "song": "One Man Can Change The World (ft Kanye West & John Legend)",
+     "artist": "Big Sean",
+     "title": "[FRESH] Big Sean - One Man Can Change The World (ft Kanye West & John Legend)",
+     "score": 1908,
+     "comments": 481,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2w56hz/",
+     "posted": "2015-02-17"
+    },
+    {
+     "rank": 5,
+     "song": "Quest/Power",
+     "artist": "EARL",
+     "title": "[FRESH] EARL - Quest/Power",
+     "score": 1777,
+     "comments": 338,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2vxpfo/",
+     "posted": "2015-02-15"
+    },
+    {
+     "rank": 6,
+     "song": "Actin Crazy",
+     "artist": "Action Bronson",
+     "title": "[FRESH VIDEO] Action Bronson - Actin Crazy",
+     "score": 1624,
+     "comments": 212,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2xd99v/",
+     "posted": "2015-02-27"
+    },
+    {
+     "rank": 7,
+     "song": "FourFiveSeconds ft Kanye West, Paul McCartney",
+     "artist": "Rihanna",
+     "title": "[FRESH VIDEO] Rihanna - FourFiveSeconds ft Kanye West, Paul McCartney",
+     "score": 1530,
+     "comments": 564,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2umx28/",
+     "posted": "2015-02-03"
+    },
+    {
+     "rank": 8,
+     "song": "Blue Dream And Lean 2",
+     "artist": "Juicy J",
+     "title": "[FRESH MIXTAPE] Juicy J - Blue Dream And Lean 2",
+     "score": 1103,
+     "comments": 288,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2w3asc/",
+     "posted": "2015-02-16"
+    },
+    {
+     "rank": 9,
+     "song": "Half - Time (feat. A$AP Twelvyy)",
+     "artist": "Flatbush ZOMBiES",
+     "title": "[FRESH] Flatbush ZOMBiES - Half - Time (feat. A$AP Twelvyy)",
+     "score": 1089,
+     "comments": 143,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2xev9m/",
+     "posted": "2015-02-28"
+    },
+    {
+     "rank": 10,
+     "song": "Jungle",
+     "artist": "Drake",
+     "title": "[FRESH] Drake - Jungle",
+     "score": 1027,
+     "comments": 498,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2vnc7k/",
+     "posted": "2015-02-12"
+    },
+    {
+     "rank": 11,
+     "song": "Big League Chew",
+     "artist": "Action Bronson & The Alchemist",
+     "title": "[FRESH] Action Bronson & The Alchemist - Big League Chew",
+     "score": 988,
+     "comments": 161,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2uoy22/",
+     "posted": "2015-02-03"
+    },
+    {
+     "rank": 12,
+     "song": "Big Sean",
+     "artist": "ME, MYSELF & I FREESTYLE",
+     "title": "[FRESH] ME, MYSELF & I FREESTYLE - Big Sean",
+     "score": 877,
+     "comments": 357,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2wx3mp/",
+     "posted": "2015-02-23"
+    },
+    {
+     "rank": 13,
+     "song": "47 Bars",
+     "artist": "Ab-Soul",
+     "title": "[FRESH] Ab-Soul - 47 Bars (prod. The Alchemist)",
+     "score": 845,
+     "comments": 202,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2xgkzi/",
+     "posted": "2015-02-28"
+    },
+    {
+     "rank": 14,
+     "song": "Lord Pretty Flacko Jodye 2",
+     "artist": "A$AP Rocky",
+     "title": "[FRESH VIDEO] A$AP Rocky - Lord Pretty Flacko Jodye 2",
+     "score": 813,
+     "comments": 215,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2vi7l5/",
+     "posted": "2015-02-11"
+    },
+    {
+     "rank": 15,
+     "song": "Hot Dinner (Freestyle)",
+     "artist": "Cal Chuchesta",
+     "title": "[Fresh] Cal Chuchesta - Hot Dinner (Freestyle)",
+     "score": 799,
+     "comments": 143,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2uxvh5/",
+     "posted": "2015-02-06"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Where the Sky Hangs",
+     "artist": "Passion Pit",
+     "title": "[FRESH] Passion Pit - Where the Sky Hangs",
+     "score": 91,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/indieheads/comments/2w72d2/",
+     "posted": "2015-02-17"
+    },
+    {
+     "rank": 2,
+     "song": "The Ground Walks, With Time In A Box",
+     "artist": "Modest Mouse",
+     "title": "[FRESH] Modest Mouse - The Ground Walks, With Time In A Box",
+     "score": 68,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/indieheads/comments/2w409v/",
+     "posted": "2015-02-16"
+    },
+    {
+     "rank": 3,
+     "song": "Sour Soul",
+     "artist": "Album Stream: BADBADNOTGOOD & Ghostface Killah",
+     "title": "[FRESH] Album Stream: BADBADNOTGOOD & Ghostface Killah - Sour Soul",
+     "score": 63,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/indieheads/comments/2wlh64/",
+     "posted": "2015-02-20"
+    },
+    {
+     "rank": 4,
+     "song": "Hot Dinner",
+     "artist": "Cal Chuchesta",
+     "title": "[Fresh] Cal Chuchesta - Hot Dinner",
+     "score": 56,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/indieheads/comments/2uxvy1/",
+     "posted": "2015-02-06"
+    },
+    {
+     "rank": 5,
+     "song": "Go Out",
+     "artist": "Blur",
+     "title": "Blur - Go Out [FRESH]",
+     "score": 54,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/2wfkyo/",
+     "posted": "2015-02-19"
+    },
+    {
+     "rank": 6,
+     "song": "Living Zoo",
+     "artist": "Built To Spill",
+     "title": "[FRESH] Built To Spill - Living Zoo",
+     "score": 52,
+     "comments": 14,
+     "url": "https://www.reddit.com/r/indieheads/comments/2wzx0z/",
+     "posted": "2015-02-24"
+    },
+    {
+     "rank": 7,
+     "song": "Peasantry or 'Light! Inside of Light!' (excerpt)",
+     "artist": "GODSPEED YOU! BLACK EMPEROR",
+     "title": "[FRESH] GODSPEED YOU! BLACK EMPEROR - Peasantry or 'Light! Inside of Light!' (excerpt)",
+     "score": 45,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/2x0enc/",
+     "posted": "2015-02-24"
+    },
+    {
+     "rank": 8,
+     "song": "Lifted Up",
+     "artist": "Passion Pit",
+     "title": "[FRESH] Passion Pit - Lifted Up (1985)",
+     "score": 42,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/indieheads/comments/2w3uaq/",
+     "posted": "2015-02-16"
+    },
+    {
+     "rank": 9,
+     "song": "Don't Wanna Fight",
+     "artist": "Alabama Shakes",
+     "title": "[Fresh] Alabama Shakes - Don't Wanna Fight",
+     "score": 36,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/2vfn7d/",
+     "posted": "2015-02-10"
+    },
+    {
+     "rank": 10,
+     "song": "No Room In Frame",
+     "artist": "Death Cab For Cutie",
+     "title": "[Fresh] Death Cab For Cutie - 'No Room In Frame'",
+     "score": 34,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/2wvkor/",
+     "posted": "2015-02-23"
+    },
+    {
+     "rank": 11,
+     "song": "Choked Out",
+     "artist": "The Mountain Goats",
+     "title": "[FRESH] The Mountain Goats - Choked Out",
+     "score": 32,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/2x4qib/",
+     "posted": "2015-02-25"
+    },
+    {
+     "rank": 12,
+     "song": "How Big How Blue How Beautiful",
+     "artist": "Florence and the Machine",
+     "title": "[FRESH] Florence and the Machine - How Big How Blue How Beautiful",
+     "score": 32,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/2vfasx/",
+     "posted": "2015-02-10"
+    },
+    {
+     "rank": 13,
+     "song": "Fix You (Four Tet Remix) {Previously unreleased}",
+     "artist": "Coldplay",
+     "title": "Coldplay - Fix You (Four Tet Remix) [FRESH] {Previously unreleased}",
+     "score": 29,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/2xe5f9/",
+     "posted": "2015-02-27"
+    },
+    {
+     "rank": 14,
+     "song": "Heart Shaped Box (Nirvana cover)",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - Heart Shaped Box (Nirvana cover)",
+     "score": 28,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/2vwvr6/",
+     "posted": "2015-02-14"
+    },
+    {
+     "rank": 15,
+     "song": "Just Like You",
+     "artist": "Chromatics",
+     "title": "[FRESH] Chromatics - Just Like You",
+     "score": 25,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/2vp943/",
+     "posted": "2015-02-12"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "month": "2014-01",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Break The Bank. Produced by Alchemist.",
+     "artist": "Schoolboy Q",
+     "title": "[FRESH] Schoolboy Q - Break The Bank. Produced by Alchemist.",
+     "score": 1274,
+     "comments": 348,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vrgvi/",
+     "posted": "2014-01-21"
+    },
+    {
+     "rank": 2,
+     "song": "Man Of The Year OFFICIAL VIDEO",
+     "artist": "SchoolBoy Q",
+     "title": "[FRESH] SchoolBoy Q - Man Of The Year OFFICIAL VIDEO",
+     "score": 1242,
+     "comments": 357,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vghaz/",
+     "posted": "2014-01-17"
+    },
+    {
+     "rank": 3,
+     "song": "Robes - ft. Earl Sweatshirt & Domo Genesis",
+     "artist": "Freddie Gibbs & Madlib",
+     "title": "[FRESH] Freddie Gibbs & Madlib - Robes - ft. Earl Sweatshirt & Domo Genesis",
+     "score": 896,
+     "comments": 187,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1wh4gs/",
+     "posted": "2014-01-29"
+    },
+    {
+     "rank": 4,
+     "song": "Break the Bank",
+     "artist": "ScHoolboy Q",
+     "title": "[FRESH] ScHoolboy Q - Break the Bank",
+     "score": 724,
+     "comments": 274,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vqhkd/",
+     "posted": "2014-01-21"
+    },
+    {
+     "rank": 5,
+     "song": "The Worst Guys (Feat. Chance The Rapper)",
+     "artist": "Childish Gambino",
+     "title": "[FRESH VIDEO] Childish Gambino - The Worst Guys (Feat. Chance The Rapper)",
+     "score": 713,
+     "comments": 219,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1v9t1e/",
+     "posted": "2014-01-15"
+    },
+    {
+     "rank": 6,
+     "song": "1st Quarter Freestyle",
+     "artist": "Big Sean",
+     "title": "[FRESH] Big Sean - 1st Quarter Freestyle",
+     "score": 531,
+     "comments": 173,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1wisq1/",
+     "posted": "2014-01-30"
+    },
+    {
+     "rank": 7,
+     "song": "Please Don't Forget I'm Black, Please Don't Forget I'm Jewish (SNL)",
+     "artist": "Drake",
+     "title": "[FRESH] Drake - Please Don't Forget I'm Black, Please Don't Forget I'm Jewish (SNL)",
+     "score": 484,
+     "comments": 105,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vktvn/",
+     "posted": "2014-01-19"
+    },
+    {
+     "rank": 8,
+     "song": "Cochran (Yeezus' \"On Sight\" Reloaded)",
+     "artist": "James SwanQo",
+     "title": "[FRESH] James SwanQo - Cochran (Yeezus' \"On Sight\" Reloaded)",
+     "score": 449,
+     "comments": 191,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vo8cw/",
+     "posted": "2014-01-20"
+    },
+    {
+     "rank": 9,
+     "song": "Kevin Miller",
+     "artist": "Isaiah Rashad",
+     "title": "[FRESH] Isaiah Rashad - Kevin Miller",
+     "score": 421,
+     "comments": 107,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1v85rp/",
+     "posted": "2014-01-14"
+    },
+    {
+     "rank": 10,
+     "song": "Soliloquy Music Video",
+     "artist": "Isaiah Rashad",
+     "title": "[FRESH] Isaiah Rashad - Soliloquy Music Video",
+     "score": 374,
+     "comments": 87,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1wbgzr/",
+     "posted": "2014-01-27"
+    },
+    {
+     "rank": 11,
+     "song": "YG feat. Lil Wayne, Meek Mill, Rich Homie Quan and Nicki Minaj",
+     "artist": "My Nigga (Remix)",
+     "title": "[FRESH] My Nigga (Remix) - YG feat. Lil Wayne, Meek Mill, Rich Homie Quan and Nicki Minaj",
+     "score": 339,
+     "comments": 107,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vwxrz/",
+     "posted": "2014-01-23"
+    },
+    {
+     "rank": 12,
+     "song": "Lupe Fiasco",
+     "artist": "THOT 97",
+     "title": "[FRESH] THOT 97 - Lupe Fiasco",
+     "score": 336,
+     "comments": 131,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1wn8pn/",
+     "posted": "2014-01-31"
+    },
+    {
+     "rank": 13,
+     "song": "Gatorade",
+     "artist": "Yung Lean",
+     "title": "[FRESH] Yung Lean - Gatorade [VIDEO]",
+     "score": 307,
+     "comments": 141,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1u5sow/",
+     "posted": "2014-01-01"
+    },
+    {
+     "rank": 14,
+     "song": "Gangsta",
+     "artist": "ScHoolboy Q",
+     "title": "[FRESH] ScHoolboy Q - Gangsta (Snippet)",
+     "score": 283,
+     "comments": 112,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1wd3yu/",
+     "posted": "2014-01-28"
+    },
+    {
+     "rank": 15,
+     "song": "Suicide (Ft. Ab Liva)",
+     "artist": "Pusha T",
+     "title": "[FRESH VIDEO] Pusha T - Suicide (Ft. Ab Liva)",
+     "score": 282,
+     "comments": 72,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1vh8cd/",
+     "posted": "2014-01-17"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Passing Out Pieces",
+     "artist": "Mac Demarco",
+     "title": "[FRESH] Mac Demarco - Passing Out Pieces",
+     "score": 35,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/1vsuxo/",
+     "posted": "2014-01-21"
+    },
+    {
+     "rank": 2,
+     "song": "Digital Witness",
+     "artist": "St. Vincent",
+     "title": "[FRESH] St. Vincent - Digital Witness - [3:22]",
+     "score": 33,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/1ujkkx/",
+     "posted": "2014-01-06"
+    },
+    {
+     "rank": 3,
+     "song": "I'm Not Part of Me",
+     "artist": "Cloud Nothings",
+     "title": "[FRESH] Cloud Nothings - I'm Not Part of Me",
+     "score": 23,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/1wadwp/",
+     "posted": "2014-01-27"
+    },
+    {
+     "rank": 4,
+     "song": "Coming of Age",
+     "artist": "Foster the People",
+     "title": "[FRESH] Foster the People - Coming of Age",
+     "score": 21,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/1v53rx/",
+     "posted": "2014-01-13"
+    },
+    {
+     "rank": 5,
+     "song": "After the Disco",
+     "artist": "Broken Bells",
+     "title": "[FRESH] Broken Bells - After the Disco",
+     "score": 20,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/indieheads/comments/1un9s9/",
+     "posted": "2014-01-07"
+    },
+    {
+     "rank": 6,
+     "song": "Treat Her Better",
+     "artist": "Mac DeMarco",
+     "title": "[FRESH] Mac DeMarco - Treat Her Better",
+     "score": 18,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/1w1ifx/",
+     "posted": "2014-01-24"
+    },
+    {
+     "rank": 7,
+     "song": "Blue Moon",
+     "artist": "Beck",
+     "title": "[FRESH] Beck - Blue Moon (Full Song)",
+     "score": 18,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/indieheads/comments/1vodjt/",
+     "posted": "2014-01-20"
+    },
+    {
+     "rank": 8,
+     "song": "40455 (BBC Radio Rip)",
+     "artist": "James Blake",
+     "title": "[FRESH] James Blake - 40455 (BBC Radio Rip)",
+     "score": 17,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/1veu45/",
+     "posted": "2014-01-17"
+    },
+    {
+     "rank": 9,
+     "song": "Burial Society",
+     "artist": "Have a Nice Life",
+     "title": "[Fresh] Have a Nice Life - Burial Society",
+     "score": 13,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/1uqxhn/",
+     "posted": "2014-01-08"
+    },
+    {
+     "rank": 10,
+     "song": "The Changing Lights",
+     "artist": "Broken Bells",
+     "title": "[FRESH] Broken Bells - The Changing Lights",
+     "score": 13,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/1ve2fk/",
+     "posted": "2014-01-16"
+    },
+    {
+     "rank": 11,
+     "song": "Fire-scene",
+     "artist": "S. Carey (of Bon Iver)",
+     "title": "[FRESH] S. Carey (of Bon Iver) - Fire-scene",
+     "score": 12,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/1vph36/",
+     "posted": "2014-01-20"
+    },
+    {
+     "rank": 12,
+     "song": "Driver",
+     "artist": "Perfect Pussy",
+     "title": "[FRESH] Perfect Pussy - Driver",
+     "score": 12,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/1vahq8/",
+     "posted": "2014-01-15"
+    },
+    {
+     "rank": 13,
+     "song": "Ben's My Friend",
+     "artist": "Sun Kil Moon",
+     "title": "Sun Kil Moon - Ben's My Friend [FRESH STREAM]",
+     "score": 10,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/1v9fp4/",
+     "posted": "2014-01-15"
+    },
+    {
+     "rank": 14,
+     "song": "Mind Over Matter",
+     "artist": "Young the Giant",
+     "title": "[Fresh] Young the Giant - Mind Over Matter (Lyric Video)",
+     "score": 10,
+     "comments": 0,
+     "url": "https://www.reddit.com/r/indieheads/comments/1uxgb0/",
+     "posted": "2014-01-11"
+    },
+    {
+     "rank": 15,
+     "song": "Hot Tonight",
+     "artist": "Tokyo Police Club",
+     "title": "[FRESH] Tokyo Police Club - \"Hot Tonight\"",
+     "score": 9,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/1v6ugu/",
+     "posted": "2014-01-14"
+    }
+   ]
+  }
+ ]
+}

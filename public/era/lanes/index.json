@@ -1,37 +1,37 @@
 {
  "license": "CC BY-SA 4.0",
- "built": "2026-10-21",
+ "built": "2026-10-28",
  "lanes": [
   {
    "lane": "rnb_hiphop",
    "label": "Hot R&B/Hip-Hop Songs",
    "from": "1958-01-06",
-   "through": "2026-10-24",
-   "weeks": 3529,
+   "through": "2026-10-31",
+   "weeks": 3530,
    "file": "rnb_hiphop.json"
   },
   {
    "lane": "rap",
    "label": "Hot Rap Songs",
    "from": "1989-03-11",
-   "through": "2026-10-24",
-   "weeks": 1962,
+   "through": "2026-10-31",
+   "weeks": 1963,
    "file": "rap.json"
   },
   {
    "lane": "country",
    "label": "Hot Country Songs",
    "from": "1958-01-06",
-   "through": "2026-10-24",
-   "weeks": 3591,
+   "through": "2026-10-31",
+   "weeks": 3592,
    "file": "country.json"
   },
   {
    "lane": "rock_alt",
    "label": "Alternative Airplay (Modern Rock Tracks)",
    "from": "1988-09-10",
-   "through": "2026-10-17",
-   "weeks": 1989,
+   "through": "2026-10-24",
+   "weeks": 1990,
    "file": "rock_alt.json"
   },
   {
@@ -54,16 +54,16 @@
    "lane": "uk",
    "label": "UK Singles Chart",
    "from": "1952-11-14",
-   "through": "2026-10-22",
-   "weeks": 3855,
+   "through": "2026-10-29",
+   "weeks": 3856,
    "file": "uk.json"
   },
   {
    "lane": "canada",
    "label": "Canadian Hot 100",
    "from": "2007-03-31",
-   "through": "2026-10-24",
-   "weeks": 1023,
+   "through": "2026-10-31",
+   "weeks": 1024,
    "file": "canada.json"
   }
  ]

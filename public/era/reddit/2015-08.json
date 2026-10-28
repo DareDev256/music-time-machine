@@ -1,0 +1,162 @@
+{
+ "month": "2015-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Wildest Dreams",
+     "artist": "Taylor Swift",
+     "title": "[FRESH VIDEO] Taylor Swift - Wildest Dreams",
+     "score": 87,
+     "comments": 27,
+     "url": "https://www.reddit.com/r/popheads/comments/3j0uuw/",
+     "posted": "2015-08-31"
+    },
+    {
+     "rank": 2,
+     "song": "Leave A Trace",
+     "artist": "CHVRCHES",
+     "title": "[FRESH VIDEO] CHVRCHES - Leave A Trace",
+     "score": 57,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/popheads/comments/3ihog1/",
+     "posted": "2015-08-26"
+    },
+    {
+     "rank": 3,
+     "song": "Four Pink Walls EP",
+     "artist": "Alessia Cara",
+     "title": "[FRESH STREAM] Alessia Cara - Four Pink Walls EP",
+     "score": 41,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/popheads/comments/3ijej2/",
+     "posted": "2015-08-27"
+    },
+    {
+     "rank": 4,
+     "song": "Koi",
+     "artist": "Le1f",
+     "title": "[FRESH] Le1f - \"Koi\" (Prod. SOPHIE)",
+     "score": 39,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/popheads/comments/3iqvuz/",
+     "posted": "2015-08-28"
+    },
+    {
+     "rank": 5,
+     "song": "What Do You Mean?",
+     "artist": "Justin Bieber",
+     "title": "[FRESH VIDEO] Justin Bieber - What Do You Mean?",
+     "score": 38,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/3j1npy/",
+     "posted": "2015-08-31"
+    },
+    {
+     "rank": 6,
+     "song": "Run Away With Me (Vevo Go Show)",
+     "artist": "Carly Rae Jepsen",
+     "title": "[FRESH VIDEO] Carly Rae Jepsen - Run Away With Me (Vevo Go Show)",
+     "score": 35,
+     "comments": 11,
+     "url": "https://www.reddit.com/r/popheads/comments/3iwyaj/",
+     "posted": "2015-08-30"
+    },
+    {
+     "rank": 7,
+     "song": "When I Rule The World",
+     "artist": "LIZ",
+     "title": "[FRESH VIDEO] LIZ - When I Rule The World (Prod. SOPHIE)",
+     "score": 30,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/3in1su/",
+     "posted": "2015-08-27"
+    },
+    {
+     "rank": 8,
+     "song": "Pay No Mind (Live) ft. Passion Pit",
+     "artist": "Madeon",
+     "title": "[FRESH VIDEO] Madeon - Pay No Mind (Live) ft. Passion Pit",
+     "score": 30,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/3iq0k4/",
+     "posted": "2015-08-28"
+    },
+    {
+     "rank": 9,
+     "song": "BADLANDS",
+     "artist": "Halsey",
+     "title": "[FRESH] Halsey - BADLANDS",
+     "score": 28,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/popheads/comments/3iok94/",
+     "posted": "2015-08-28"
+    },
+    {
+     "rank": 10,
+     "song": "Good For You (Explicit) ft. A$AP ROCKY",
+     "artist": "Selena Gomez",
+     "title": "[FRESH VIDEO] Selena Gomez - Good For You (Explicit) ft. A$AP ROCKY",
+     "score": 20,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/popheads/comments/3iecqr/",
+     "posted": "2015-08-25"
+    },
+    {
+     "rank": 11,
+     "song": "I'm In Love With a Monster",
+     "artist": "Fifth Harmony",
+     "title": "[FRESH] Fifth Harmony - I'm In Love With a Monster",
+     "score": 19,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/3imn0e/",
+     "posted": "2015-08-27"
+    },
+    {
+     "rank": 12,
+     "song": "Love Myself",
+     "artist": "Hailee Steinfeld",
+     "title": "[FRESH VIDEO] Hailee Steinfeld - Love Myself",
+     "score": 18,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/3ij9tq/",
+     "posted": "2015-08-27"
+    },
+    {
+     "rank": 13,
+     "song": "Foreign Fields",
+     "artist": "Kacy Hill",
+     "title": "[FRESH] Kacy Hill - Foreign Fields",
+     "score": 18,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/popheads/comments/3isayn/",
+     "posted": "2015-08-28"
+    },
+    {
+     "rank": 14,
+     "song": "Beauty Behind The Madness",
+     "artist": "The Weeknd",
+     "title": "[FRESH] The Weeknd - Beauty Behind The Madness",
+     "score": 17,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/popheads/comments/3iokdf/",
+     "posted": "2015-08-28"
+    },
+    {
+     "rank": 15,
+     "song": "Maria I'm Drunk (feat. Justin Bieber & Young Thug )",
+     "artist": "Travi$ Scott",
+     "title": "[FRESH] Travi$ Scott - Maria I'm Drunk (feat. Justin Bieber & Young Thug )",
+     "score": 17,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/popheads/comments/3j07z6/",
+     "posted": "2015-08-30"
+    }
+   ]
+  }
+ ]
+}

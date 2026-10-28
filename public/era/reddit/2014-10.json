@@ -1,0 +1,318 @@
+{
+ "month": "2014-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "STN MTN",
+     "artist": "Childish Gambino",
+     "title": "[FRESH MIXTAPE] Childish Gambino - STN MTN",
+     "score": 3323,
+     "comments": 1484,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2i3jbf/",
+     "posted": "2014-10-02"
+    },
+    {
+     "rank": 2,
+     "song": "Multiply",
+     "artist": "A$AP Rocky",
+     "title": "[FRESH] A$AP Rocky - Multiply",
+     "score": 2987,
+     "comments": 723,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2i5qrq/",
+     "posted": "2014-10-03"
+    },
+    {
+     "rank": 3,
+     "song": "Close Your Eyes (And Count To Fuck)",
+     "artist": "Run The Jewels ft. Zach De La Rocha",
+     "title": "[FRESH] Run The Jewels ft. Zach De La Rocha - Close Your Eyes (And Count To Fuck)",
+     "score": 1976,
+     "comments": 415,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2j4jh6/",
+     "posted": "2014-10-13"
+    },
+    {
+     "rank": 4,
+     "song": "Can't Stop (feat. Kanye West)",
+     "artist": "Theophilus London",
+     "title": "[FRESH] Theophilus London - Can't Stop (feat. Kanye West)",
+     "score": 1805,
+     "comments": 240,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2kl6tq/",
+     "posted": "2014-10-28"
+    },
+    {
+     "rank": 5,
+     "song": "Clockwork Indigo",
+     "artist": "Flatbush Zombies & The Underachievers",
+     "title": "[FRESH MIXTAPE] Flatbush Zombies & The Underachievers - Clockwork Indigo",
+     "score": 1680,
+     "comments": 352,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2jjtt2/",
+     "posted": "2014-10-17"
+    },
+    {
+     "rank": 6,
+     "song": "The Season",
+     "artist": "Nas",
+     "title": "[FRESH] Nas - The Season (prod. J Dilla)",
+     "score": 1426,
+     "comments": 236,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2ktmoq/",
+     "posted": "2014-10-30"
+    },
+    {
+     "rank": 7,
+     "song": "Never Catch Me",
+     "artist": "Flying Lotus",
+     "title": "[FRESH] Flying Lotus - Never Catch Me (Official Video)",
+     "score": 1335,
+     "comments": 199,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2i1jxe/",
+     "posted": "2014-10-02"
+    },
+    {
+     "rank": 8,
+     "song": "Bobby Bitch",
+     "artist": "Bobby Shmurda",
+     "title": "[FRESH] Bobby Shmurda - Bobby Bitch",
+     "score": 1307,
+     "comments": 627,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2ix4ma/",
+     "posted": "2014-10-11"
+    },
+    {
+     "rank": 9,
+     "song": "How About Now",
+     "artist": "Drake",
+     "title": "[FRESH] Drake - How About Now",
+     "score": 1294,
+     "comments": 346,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2jptku/",
+     "posted": "2014-10-19"
+    },
+    {
+     "rank": 10,
+     "song": "Rats",
+     "artist": "Earl Sweatshirt",
+     "title": "[FRESH] Earl Sweatshirt - Rats (Full Version)",
+     "score": 1182,
+     "comments": 227,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2kh6p6/",
+     "posted": "2014-10-27"
+    },
+    {
+     "rank": 11,
+     "song": "No Better Blues",
+     "artist": "Chance The Rapper & The Social Experiment",
+     "title": "[FRESH] Chance The Rapper & The Social Experiment - No Better Blues",
+     "score": 1136,
+     "comments": 334,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2jg7ey/",
+     "posted": "2014-10-16"
+    },
+    {
+     "rank": 12,
+     "song": "Telegraph Ave.",
+     "artist": "Childish Gambino",
+     "title": "[FRESH MUSIC VIDEO] Childish Gambino - Telegraph Ave.",
+     "score": 1030,
+     "comments": 320,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2iwpm4/",
+     "posted": "2014-10-11"
+    },
+    {
+     "rank": 13,
+     "song": "Cadillactica (title track)",
+     "artist": "Big K.R.I.T.",
+     "title": "[FRESH] Big K.R.I.T. - Cadillactica (title track)",
+     "score": 972,
+     "comments": 167,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2j6orb/",
+     "posted": "2014-10-14"
+    },
+    {
+     "rank": 14,
+     "song": "Hit Em Hard (feat. Bobby Shmurda, Freddie Gibbs, Skeme)",
+     "artist": "The Game",
+     "title": "[FRESH] The Game - Hit Em Hard (feat. Bobby Shmurda, Freddie Gibbs, Skeme)",
+     "score": 890,
+     "comments": 291,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2inqob/",
+     "posted": "2014-10-08"
+    },
+    {
+     "rank": 15,
+     "song": "Knicks Remix ft. Action Bronson, Joey Bada$$, Ransom",
+     "artist": "Freddie Gibbs & Madlib",
+     "title": "[FRESH] Freddie Gibbs & Madlib - Knicks Remix ft. Action Bronson, Joey Bada$$, Ransom",
+     "score": 870,
+     "comments": 195,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2jstzw/",
+     "posted": "2014-10-20"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "War On Drugs: Suck My Cock",
+     "artist": "Sun Kil Moon",
+     "title": "[FRESH] Sun Kil Moon - War On Drugs: Suck My Cock",
+     "score": 149,
+     "comments": 64,
+     "url": "https://www.reddit.com/r/indieheads/comments/2iiwid/",
+     "posted": "2014-10-07"
+    },
+    {
+     "rank": 2,
+     "song": "Building It Still",
+     "artist": "James Blake",
+     "title": "[FRESH] James Blake - Building It Still",
+     "score": 67,
+     "comments": 11,
+     "url": "https://www.reddit.com/r/indieheads/comments/2jiy7a/",
+     "posted": "2014-10-17"
+    },
+    {
+     "rank": 3,
+     "song": "Get Away",
+     "artist": "CHVRCHES",
+     "title": "[FRESH] CHVRCHES - Get Away",
+     "score": 62,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/2jtup0/",
+     "posted": "2014-10-20"
+    },
+    {
+     "rank": 4,
+     "song": "Mr Noah",
+     "artist": "Panda Bear",
+     "title": "[Fresh Video] Panda Bear - Mr Noah",
+     "score": 56,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/2k2al7/",
+     "posted": "2014-10-23"
+    },
+    {
+     "rank": 5,
+     "song": "Never Catch Me",
+     "artist": "Flying Lotus feat Kendrick Lamar",
+     "title": "[FRESH VIDEO] Flying Lotus feat Kendrick Lamar -- Never Catch Me",
+     "score": 42,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/indieheads/comments/2i1naa/",
+     "posted": "2014-10-02"
+    },
+    {
+     "rank": 6,
+     "song": "Dancehall Domine",
+     "artist": "The New Pornographers",
+     "title": "[FRESH VIDEO] The New Pornographers - Dancehall Domine",
+     "score": 24,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/2i0oaf/",
+     "posted": "2014-10-01"
+    },
+    {
+     "rank": 7,
+     "song": "Adam Granofsky Blues\" Kozelekgate is not over yet, folks (or whatever we're calling this)",
+     "artist": "Sun Kil Moon",
+     "title": "[FRESH] Sun Kil Moon - \"Adam Granofsky Blues\" Kozelekgate is not over yet, folks (or whatever we're calling this)",
+     "score": 20,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/indieheads/comments/2kon5i/",
+     "posted": "2014-10-29"
+    },
+    {
+     "rank": 8,
+     "song": "Bury Our Friends",
+     "artist": "Sleater-Kinney",
+     "title": "[FRESH] Sleater-Kinney - Bury Our Friends",
+     "score": 20,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/2jr5q5/",
+     "posted": "2014-10-20"
+    },
+    {
+     "rank": 9,
+     "song": "Real Thing",
+     "artist": "tUnE-yArDs",
+     "title": "[FRESH VIDEO] tUnE-yArDs - Real Thing",
+     "score": 20,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/2igx2v/",
+     "posted": "2014-10-06"
+    },
+    {
+     "rank": 10,
+     "song": "May As Well",
+     "artist": "Angel Olsen",
+     "title": "[FRESH] Angel Olsen - May As Well",
+     "score": 18,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/2kp2ol/",
+     "posted": "2014-10-29"
+    },
+    {
+     "rank": 11,
+     "song": "Careful You",
+     "artist": "TV On The Radio",
+     "title": "[FRESH] TV On The Radio - Careful You",
+     "score": 18,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/2ik5u1/",
+     "posted": "2014-10-07"
+    },
+    {
+     "rank": 12,
+     "song": "Gunshowers",
+     "artist": "BADBADNOTGOOD ft Ghostface Killah and Elzhi",
+     "title": "[FRESH] BADBADNOTGOOD ft Ghostface Killah and Elzhi - Gunshowers",
+     "score": 17,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/2jjdci/",
+     "posted": "2014-10-17"
+    },
+    {
+     "rank": 13,
+     "song": "Doomsday",
+     "artist": "Speedy Ortiz",
+     "title": "[FRESH] Speedy Ortiz - Doomsday",
+     "score": 17,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/2i02bw/",
+     "posted": "2014-10-01"
+    },
+    {
+     "rank": 14,
+     "song": "La Isla Bonita",
+     "artist": "Deerhoof",
+     "title": "[FRESH] Deerhoof - La Isla Bonita (album stream)",
+     "score": 17,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/2kgtrt/",
+     "posted": "2014-10-27"
+    },
+    {
+     "rank": 15,
+     "song": "Ready Err Not",
+     "artist": "Flying Lotus",
+     "title": "[FRESH VIDEO] Flying Lotus - Ready Err Not",
+     "score": 16,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/2kuypq/",
+     "posted": "2014-10-31"
+    }
+   ]
+  }
+ ]
+}

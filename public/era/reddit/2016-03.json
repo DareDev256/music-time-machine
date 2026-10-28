@@ -1,0 +1,318 @@
+{
+ "month": "2016-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Lancrusin",
+     "artist": "AK Paul",
+     "title": "[FRESH] AK Paul - Lancrusin'",
+     "score": 124,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/4bt91q/",
+     "posted": "2016-03-24"
+    },
+    {
+     "rank": 2,
+     "song": "Get Out",
+     "artist": "Frightened Rabbit",
+     "title": "[FRESH] Frightened Rabbit - Get Out",
+     "score": 122,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/indieheads/comments/48mvd9/",
+     "posted": "2016-03-02"
+    },
+    {
+     "rank": 3,
+     "song": "Gamma Knife",
+     "artist": "King Gizzard & The Lizard Wizard",
+     "title": "[FRESH] King Gizzard & The Lizard Wizard - Gamma Knife",
+     "score": 117,
+     "comments": 57,
+     "url": "https://www.reddit.com/r/indieheads/comments/49k77p/",
+     "posted": "2016-03-08"
+    },
+    {
+     "rank": 4,
+     "song": "The Ship",
+     "artist": "Brian Eno",
+     "title": "[FRESH] Brian Eno - The Ship",
+     "score": 112,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/indieheads/comments/4ckyr9/",
+     "posted": "2016-03-30"
+    },
+    {
+     "rank": 5,
+     "song": "Techno Clique",
+     "artist": "Neon Indian",
+     "title": "Neon Indian - Techno Clique | [FRESH VIDEO]",
+     "score": 100,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/indieheads/comments/4bwt9c/",
+     "posted": "2016-03-25"
+    },
+    {
+     "rank": 6,
+     "song": "Drunk Drivers/Killer Whales",
+     "artist": "Car Seat Headrest",
+     "title": "[FRESH] Car Seat Headrest - Drunk Drivers/Killer Whales",
+     "score": 86,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/4bs0wo/",
+     "posted": "2016-03-24"
+    },
+    {
+     "rank": 7,
+     "song": "Full Performance",
+     "artist": "Julia Holter",
+     "title": "[FRESH] Julia Holter - Full Performance (Live on KEXP)",
+     "score": 80,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/48zz9h/",
+     "posted": "2016-03-04"
+    },
+    {
+     "rank": 8,
+     "song": "M83",
+     "artist": "Solitude",
+     "title": "[FRESH] Solitude - M83",
+     "score": 78,
+     "comments": 28,
+     "url": "https://www.reddit.com/r/indieheads/comments/4aswj1/",
+     "posted": "2016-03-17"
+    },
+    {
+     "rank": 9,
+     "song": "Mud",
+     "artist": "Alex G",
+     "title": "[Fresh Video] Alex G - \"Mud\"",
+     "score": 67,
+     "comments": 18,
+     "url": "https://www.reddit.com/r/indieheads/comments/49j0lc/",
+     "posted": "2016-03-08"
+    },
+    {
+     "rank": 10,
+     "song": "Waves",
+     "artist": "Miguel",
+     "title": "[FRESH VIDEO] Miguel - Waves (Tame Impala Remix)",
+     "score": 64,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/48i4lm/",
+     "posted": "2016-03-01"
+    },
+    {
+     "rank": 11,
+     "song": "Crying in Public",
+     "artist": "Chairlift",
+     "title": "[FRESH VIDEO] Chairlift - Crying in Public",
+     "score": 62,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/49udvz/",
+     "posted": "2016-03-10"
+    },
+    {
+     "rank": 12,
+     "song": "Outside",
+     "artist": "Parquet Courts",
+     "title": "[FRESH] Parquet Courts - Outside",
+     "score": 61,
+     "comments": 24,
+     "url": "https://www.reddit.com/r/indieheads/comments/4bpl2v/",
+     "posted": "2016-03-24"
+    },
+    {
+     "rank": 13,
+     "song": "Nostalgia for Infinity",
+     "artist": "Sound of Ceres",
+     "title": "[FRESH ALBUM] Sound of Ceres - Nostalgia for Infinity",
+     "score": 60,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/indieheads/comments/48xmrv/",
+     "posted": "2016-03-04"
+    },
+    {
+     "rank": 14,
+     "song": "Left Handed Kisses (feat. Fiona Apple)",
+     "artist": "Andrew Bird",
+     "title": "[FRESH VIDEO] Andrew Bird - Left Handed Kisses (feat. Fiona Apple)",
+     "score": 58,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/4adx2j/",
+     "posted": "2016-03-14"
+    },
+    {
+     "rank": 15,
+     "song": "Aviation",
+     "artist": "The Last Shadow Puppets",
+     "title": "[FRESH] The Last Shadow Puppets - Aviation",
+     "score": 56,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/indieheads/comments/4amwht/",
+     "posted": "2016-03-16"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "First Time",
+     "artist": "Carly Rae Jepsen",
+     "title": "[FRESH] Carly Rae Jepsen - First Time",
+     "score": 89,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/popheads/comments/4av1y1/",
+     "posted": "2016-03-17"
+    },
+    {
+     "rank": 2,
+     "song": "Dangerous Woman (A Capella)",
+     "artist": "Ariana Grande",
+     "title": "[FRESH VIDEO] Ariana Grande - Dangerous Woman (A Capella)",
+     "score": 45,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/popheads/comments/4bauoy/",
+     "posted": "2016-03-21"
+    },
+    {
+     "rank": 3,
+     "song": "Dangerous Woman",
+     "artist": "Ariana Grande",
+     "title": "[FRESH] Ariana Grande - Dangerous Woman",
+     "score": 41,
+     "comments": 32,
+     "url": "https://www.reddit.com/r/popheads/comments/49x8nf/",
+     "posted": "2016-03-11"
+    },
+    {
+     "rank": 4,
+     "song": "Close featuring Tove Lo",
+     "artist": "Nick Jonas",
+     "title": "[FRESH VIDEO] Nick Jonas - Close featuring Tove Lo",
+     "score": 39,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/4bwcy3/",
+     "posted": "2016-03-25"
+    },
+    {
+     "rank": 5,
+     "song": "Close (ft. Tove Lo)",
+     "artist": "Nick Jonas",
+     "title": "[FRESH] Nick Jonas - Close (ft. Tove Lo)",
+     "score": 36,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/4bv8gh/",
+     "posted": "2016-03-25"
+    },
+    {
+     "rank": 6,
+     "song": "No",
+     "artist": "Meghan Trainor",
+     "title": "[FRESH] Meghan Trainor - \"No\"",
+     "score": 35,
+     "comments": 51,
+     "url": "https://www.reddit.com/r/popheads/comments/48wxdz/",
+     "posted": "2016-03-04"
+    },
+    {
+     "rank": 7,
+     "song": "Dangerous Woman (Visual 1)",
+     "artist": "Ariana Grande",
+     "title": "[FRESH VIDEO] Ariana Grande - Dangerous Woman (Visual 1)",
+     "score": 32,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/4cofyx/",
+     "posted": "2016-03-31"
+    },
+    {
+     "rank": 8,
+     "song": "Kiss It Better",
+     "artist": "Rihanna",
+     "title": "[FRESH VIDEO] Rihanna - Kiss It Better",
+     "score": 32,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/popheads/comments/4cqp4a/",
+     "posted": "2016-03-31"
+    },
+    {
+     "rank": 9,
+     "song": "Team",
+     "artist": "Iggy Azalea",
+     "title": "[FRESH] Iggy Azalea - Team (Dance Video)",
+     "score": 31,
+     "comments": 28,
+     "url": "https://www.reddit.com/r/popheads/comments/4axs4c/",
+     "posted": "2016-03-18"
+    },
+    {
+     "rank": 10,
+     "song": "Fever",
+     "artist": "Carly Rae Jepsen",
+     "title": "[Fresh] Carly Rae Jepsen - Fever",
+     "score": 31,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/4aw5cb/",
+     "posted": "2016-03-18"
+    },
+    {
+     "rank": 11,
+     "song": "Cheap Thrills (Performance Edit)",
+     "artist": "Sia",
+     "title": "[FRESH VIDEO] Sia - Cheap Thrills (Performance Edit)",
+     "score": 30,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/4bcexv/",
+     "posted": "2016-03-21"
+    },
+    {
+     "rank": 12,
+     "song": "This Is For My Girls ft. Missy Elliott, Janelle Monáe, Kelly Clarkson, Kelly Rowland, Zendaya, Lea Michele",
+     "artist": "Michelle Obama",
+     "title": "[FRESH] Michelle Obama - This Is For My Girls ft. Missy Elliott, Janelle Monáe, Kelly Clarkson, Kelly Rowland, Zendaya, Lea Michele",
+     "score": 27,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/popheads/comments/4aksgc/",
+     "posted": "2016-03-15"
+    },
+    {
+     "rank": 13,
+     "song": "iii (listen to this shit you dorks, it's fiiire)",
+     "artist": "Miike Snow",
+     "title": "[FRESH STREAM] Miike Snow - iii (listen to this shit you dorks, it's fiiire)",
+     "score": 26,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/popheads/comments/492y72/",
+     "posted": "2016-03-05"
+    },
+    {
+     "rank": 14,
+     "song": "Desire ft. Tove Lo",
+     "artist": "Years & Years",
+     "title": "[FRESH] Years & Years - Desire ft. Tove Lo",
+     "score": 24,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/48urrf/",
+     "posted": "2016-03-04"
+    },
+    {
+     "rank": 15,
+     "song": "Slay-Z",
+     "artist": "Azealia Banks",
+     "title": "[FRESH MIXTAPE] Azealia Banks - Slay-Z",
+     "score": 23,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/popheads/comments/4btm7y/",
+     "posted": "2016-03-24"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "month": "2015-06",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Alright",
+     "artist": "Kendrick Lamar",
+     "title": "[FRESH VIDEO] Kendrick Lamar - Alright",
+     "score": 3567,
+     "comments": 599,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3boe0c/",
+     "posted": "2015-06-30"
+    },
+    {
+     "rank": 2,
+     "song": "Money Trees Deuce by TopDawgENT",
+     "artist": "Jay Rock",
+     "title": "[FRESH] Jay Rock - Money Trees Deuce by TopDawgENT",
+     "score": 1965,
+     "comments": 276,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/38absv/",
+     "posted": "2015-06-02"
+    },
+    {
+     "rank": 3,
+     "song": "U Mad (feat. Kanye West)",
+     "artist": "Vic Mensa",
+     "title": "[FRESH VIDEO] Vic Mensa - U Mad (feat. Kanye West)",
+     "score": 1833,
+     "comments": 615,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/397uum/",
+     "posted": "2015-06-09"
+    },
+    {
+     "rank": 4,
+     "song": "Money Trees Deuce",
+     "artist": "Jay Rock",
+     "title": "[FRESH VIDEO] Jay Rock - Money Trees Deuce",
+     "score": 1496,
+     "comments": 193,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3arzs9/",
+     "posted": "2015-06-23"
+    },
+    {
+     "rank": 5,
+     "song": "100 ft Drake",
+     "artist": "The Game",
+     "title": "[FRESH] The Game - 100 ft Drake",
+     "score": 1383,
+     "comments": 498,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3b2j2j/",
+     "posted": "2015-06-25"
+    },
+    {
+     "rank": 6,
+     "song": "Summertime '06",
+     "artist": "Vince Staples",
+     "title": "[FRESH] Vince Staples - Summertime '06",
+     "score": 1367,
+     "comments": 380,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3bl74n/",
+     "posted": "2015-06-30"
+    },
+    {
+     "rank": 7,
+     "song": "3500 (feat. Future & 2 Chainz)",
+     "artist": "Travi$ Scott",
+     "title": "[FRESH] Travi$ Scott - 3500 (feat. Future & 2 Chainz)",
+     "score": 1314,
+     "comments": 422,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/38zks0/",
+     "posted": "2015-06-08"
+    },
+    {
+     "rank": 8,
+     "song": "Drunk ft Young Thug",
+     "artist": "Travis Scott",
+     "title": "[FRESH] Travis Scott - Drunk ft Young Thug",
+     "score": 1006,
+     "comments": 267,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/39m12j/",
+     "posted": "2015-06-12"
+    },
+    {
+     "rank": 9,
+     "song": "R.I.C.O. (feat. Drake)",
+     "artist": "Meek Mill",
+     "title": "[FRESH] Meek Mill - R.I.C.O. (feat. Drake)",
+     "score": 980,
+     "comments": 334,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3bgxhw/",
+     "posted": "2015-06-29"
+    },
+    {
+     "rank": 10,
+     "song": "Glastonbury 2015 Headline Set",
+     "artist": "Kanye West",
+     "title": "[FRESH] Kanye West - Glastonbury 2015 Headline Set",
+     "score": 951,
+     "comments": 318,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3be1tn/",
+     "posted": "2015-06-28"
+    },
+    {
+     "rank": 11,
+     "song": "Glory (Tidal Exclusive)",
+     "artist": "Lil Wayne",
+     "title": "[FRESH] Lil Wayne - Glory (Tidal Exclusive)",
+     "score": 903,
+     "comments": 370,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/38dyrl/",
+     "posted": "2015-06-03"
+    },
+    {
+     "rank": 12,
+     "song": "I Can't Feel My Face",
+     "artist": "The Weeknd",
+     "title": "[FRESH] The Weeknd - I Can't Feel My Face",
+     "score": 883,
+     "comments": 235,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/392lhk/",
+     "posted": "2015-06-08"
+    },
+    {
+     "rank": 13,
+     "song": "Antidote",
+     "artist": "Travis Scott",
+     "title": "[FRESH] Travis Scott - Antidote",
+     "score": 882,
+     "comments": 398,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3aokms/",
+     "posted": "2015-06-22"
+    },
+    {
+     "rank": 14,
+     "song": "Get Paid ft. Desi Mo",
+     "artist": "Vince Staples",
+     "title": "[FRESH] Vince Staples - Get Paid ft. Desi Mo",
+     "score": 777,
+     "comments": 208,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/39vmrf/",
+     "posted": "2015-06-15"
+    },
+    {
+     "rank": 15,
+     "song": "All Your Fault",
+     "artist": "Big Sean",
+     "title": "[FRESH VIDEO] Big Sean - All Your Fault",
+     "score": 758,
+     "comments": 205,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3ayq5m/",
+     "posted": "2015-06-24"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Suburbs (Arcade Fire cover)",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - The Suburbs (Arcade Fire cover)",
+     "score": 383,
+     "comments": 90,
+     "url": "https://www.reddit.com/r/indieheads/comments/3bmb15/",
+     "posted": "2015-06-30"
+    },
+    {
+     "rank": 2,
+     "song": "ANOTHER ONE",
+     "artist": "MAC DEMARCO",
+     "title": "[FRESH] MAC DEMARCO - ANOTHER ONE",
+     "score": 193,
+     "comments": 37,
+     "url": "https://www.reddit.com/r/indieheads/comments/39qn76/",
+     "posted": "2015-06-13"
+    },
+    {
+     "rank": 3,
+     "song": "No No No",
+     "artist": "Beirut",
+     "title": "[FRESH] Beirut - \"No No No\"",
+     "score": 130,
+     "comments": 21,
+     "url": "https://www.reddit.com/r/indieheads/comments/383hlp/",
+     "posted": "2015-06-01"
+    },
+    {
+     "rank": 4,
+     "song": "Them Changes",
+     "artist": "Thundercat",
+     "title": "[FRESH] Thundercat - Them Changes",
+     "score": 123,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/3aav3z/",
+     "posted": "2015-06-18"
+    },
+    {
+     "rank": 5,
+     "song": "I Love You, Honeybear",
+     "artist": "Father John Misty",
+     "title": "[FRESH music video] Father John Misty - I Love You, Honeybear",
+     "score": 98,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/indieheads/comments/39wsd7/",
+     "posted": "2015-06-15"
+    },
+    {
+     "rank": 6,
+     "song": "Harsh Noise (From 'One Night Stand' project)",
+     "artist": "Sufjan Stevens",
+     "title": "[FRESH] Sufjan Stevens - Harsh Noise (From 'One Night Stand' project)",
+     "score": 83,
+     "comments": 44,
+     "url": "https://www.reddit.com/r/indieheads/comments/39ljyd/",
+     "posted": "2015-06-12"
+    },
+    {
+     "rank": 7,
+     "song": "Just to Put Me Down",
+     "artist": "Mac DeMarco",
+     "title": "[FRESH] Mac DeMarco - Just to Put Me Down",
+     "score": 76,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/indieheads/comments/394a0n/",
+     "posted": "2015-06-09"
+    },
+    {
+     "rank": 8,
+     "song": "Morning/Evening",
+     "artist": "Four Tet",
+     "title": "[FRESH] Four Tet - Morning/Evening",
+     "score": 66,
+     "comments": 14,
+     "url": "https://www.reddit.com/r/indieheads/comments/3amn4r/",
+     "posted": "2015-06-21"
+    },
+    {
+     "rank": 9,
+     "song": "Under Neon Lights",
+     "artist": "The Chemical Brothers & St. Vincent",
+     "title": "[FRESH] The Chemical Brothers & St. Vincent - \"Under Neon Lights\"",
+     "score": 64,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/3apc49/",
+     "posted": "2015-06-22"
+    },
+    {
+     "rank": 10,
+     "song": "WITHOUT ME",
+     "artist": "MAC DEMARCO",
+     "title": "[FRESH] MAC DEMARCO - WITHOUT ME",
+     "score": 58,
+     "comments": 24,
+     "url": "https://www.reddit.com/r/indieheads/comments/3anqpl/",
+     "posted": "2015-06-22"
+    },
+    {
+     "rank": 11,
+     "song": "What Went Down",
+     "artist": "New Foals Single",
+     "title": "[FRESH] New Foals Single - 'What Went Down'",
+     "score": 58,
+     "comments": 21,
+     "url": "https://www.reddit.com/r/indieheads/comments/3a2ig3/",
+     "posted": "2015-06-16"
+    },
+    {
+     "rank": 12,
+     "song": "Full Performance",
+     "artist": "Unknown Mortal Orchestra",
+     "title": "[Fresh] Unknown Mortal Orchestra - Full Performance (Live on KEXP)",
+     "score": 58,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/38tt6l/",
+     "posted": "2015-06-06"
+    },
+    {
+     "rank": 13,
+     "song": "Can't Keep Checking My Phone",
+     "artist": "Unknown Mortal Orchestra",
+     "title": "[FRESH] Unknown Mortal Orchestra - \"Can't Keep Checking My Phone\" [Live on KEXP]",
+     "score": 55,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/38dh5x/",
+     "posted": "2015-06-03"
+    },
+    {
+     "rank": 14,
+     "song": "ABRASIVE",
+     "artist": "RATATAT",
+     "title": "[FRESH] RATATAT - ABRASIVE",
+     "score": 44,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/3a1nyq/",
+     "posted": "2015-06-16"
+    },
+    {
+     "rank": 15,
+     "song": "Occupied",
+     "artist": "The Radio Dept.",
+     "title": "[FRESH]The Radio Dept. - Occupied",
+     "score": 42,
+     "comments": 13,
+     "url": "https://www.reddit.com/r/indieheads/comments/3a12sj/",
+     "posted": "2015-06-16"
+    }
+   ]
+  }
+ ]
+}

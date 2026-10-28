@@ -1,0 +1,318 @@
+{
+ "month": "2014-08",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Candler Road",
+     "artist": "Childish Gambino",
+     "title": "[FRESH] Childish Gambino - Candler Road",
+     "score": 2596,
+     "comments": 507,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2eezx5/",
+     "posted": "2014-08-24"
+    },
+    {
+     "rank": 2,
+     "song": "Blockbuster Night Part 1",
+     "artist": "Run the Jewels",
+     "title": "[Fresh] Run the Jewels - Blockbuster Night Part 1 (Full Version)",
+     "score": 1657,
+     "comments": 242,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2e68y3/",
+     "posted": "2014-08-21"
+    },
+    {
+     "rank": 3,
+     "song": "Guts Over Fear (feat. Sia)",
+     "artist": "Eminem",
+     "title": "[FRESH] Eminem - Guts Over Fear (feat. Sia)",
+     "score": 1129,
+     "comments": 531,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2ehxq0/",
+     "posted": "2014-08-25"
+    },
+    {
+     "rank": 4,
+     "song": "Driving Ms. Daisy\" ft. Childish Gambino",
+     "artist": "Logic",
+     "title": "[FRESH] Logic - \"Driving Ms. Daisy\" ft. Childish Gambino (Prod. by Logic)",
+     "score": 1033,
+     "comments": 145,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2equdi/",
+     "posted": "2014-08-27"
+    },
+    {
+     "rank": 5,
+     "song": "FUCK SGP",
+     "artist": "LIL SHARK",
+     "title": "[FRESH] LIL SHARK - FUCK SGP",
+     "score": 938,
+     "comments": 411,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2f0ush/",
+     "posted": "2014-08-30"
+    },
+    {
+     "rank": 6,
+     "song": "Harold's",
+     "artist": "Freddie Gibbs & Madlib",
+     "title": "[FRESH] Freddie Gibbs & Madlib - Harold's (video)",
+     "score": 900,
+     "comments": 325,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2cojwv/",
+     "posted": "2014-08-05"
+    },
+    {
+     "rank": 7,
+     "song": "Anaconda",
+     "artist": "Nicki Minaj",
+     "title": "[FRESH VIDEO] Nicki Minaj - Anaconda",
+     "score": 889,
+     "comments": 826,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2e1v1a/",
+     "posted": "2014-08-20"
+    },
+    {
+     "rank": 8,
+     "song": "Ron O'Neal",
+     "artist": "Wu-Tang Clan",
+     "title": "[FRESH] Wu-Tang Clan - Ron O'Neal",
+     "score": 810,
+     "comments": 197,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2cwmzc/",
+     "posted": "2014-08-07"
+    },
+    {
+     "rank": 9,
+     "song": "Big Dusty",
+     "artist": "Joey Bada$$",
+     "title": "[FRESH] Joey Bada$$ - Big Dusty",
+     "score": 796,
+     "comments": 160,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2clalo/",
+     "posted": "2014-08-04"
+    },
+    {
+     "rank": 10,
+     "song": "Easy Rider (CDQ)",
+     "artist": "Action Bronson",
+     "title": "[FRESH] Action Bronson - Easy Rider (CDQ)",
+     "score": 752,
+     "comments": 148,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2cp66v/",
+     "posted": "2014-08-05"
+    },
+    {
+     "rank": 11,
+     "song": "Cosplay",
+     "artist": "Captain Murphy",
+     "title": "[FRESH] Captain Murphy - Cosplay",
+     "score": 729,
+     "comments": 67,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2dnb2n/",
+     "posted": "2014-08-15"
+    },
+    {
+     "rank": 12,
+     "song": "King Of The Fall",
+     "artist": "The Weeknd",
+     "title": "[FRESH VIDEO] The Weeknd - King Of The Fall (OFFICIAL)",
+     "score": 670,
+     "comments": 281,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2ev7jg/",
+     "posted": "2014-08-28"
+    },
+    {
+     "rank": 13,
+     "song": "Grindin feat. Drake",
+     "artist": "Lil Wayne",
+     "title": "[FRESH] Lil Wayne - Grindin feat. Drake",
+     "score": 622,
+     "comments": 605,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2czz3p/",
+     "posted": "2014-08-08"
+    },
+    {
+     "rank": 14,
+     "song": "Days Before Rodeo",
+     "artist": "Travi$ Scott",
+     "title": "[FRESH] Travi$ Scott - Days Before Rodeo",
+     "score": 618,
+     "comments": 305,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2dxpsi/",
+     "posted": "2014-08-19"
+    },
+    {
+     "rank": 15,
+     "song": "Wimme Nah",
+     "artist": "Vic Mensa",
+     "title": "[Fresh] Vic Mensa - Wimme Nah (Prod. By Kaytranada)",
+     "score": 551,
+     "comments": 170,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2czmvu/",
+     "posted": "2014-08-08"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "My Song 5\" Video (w/ appearances from Grimes, Ezra Koenig, A$AP Ferg & Rocky, Ke$ha, Big Sean, etc etc)",
+     "artist": "Haim",
+     "title": "[FRESH] Haim - \"My Song 5\" Video (w/ appearances from Grimes, Ezra Koenig, A$AP Ferg & Rocky, Ke$ha, Big Sean, etc etc)",
+     "score": 66,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/indieheads/comments/2dzjum/",
+     "posted": "2014-08-19"
+    },
+    {
+     "rank": 2,
+     "song": "true that",
+     "artist": "Michael Cera",
+     "title": "[FRESH] Michael Cera - true that",
+     "score": 49,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/indieheads/comments/2dev49/",
+     "posted": "2014-08-13"
+    },
+    {
+     "rank": 3,
+     "song": "MANIPULATOR",
+     "artist": "TY SEGALL",
+     "title": "[FRESH] TY SEGALL - MANIPULATOR (ALBUM STREAM)",
+     "score": 33,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/indieheads/comments/2dw0bl/",
+     "posted": "2014-08-18"
+    },
+    {
+     "rank": 4,
+     "song": "You Already Know",
+     "artist": "Arcade Fire",
+     "title": "[FRESH VIDEO] Arcade Fire - You Already Know",
+     "score": 33,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/2dj5zt/",
+     "posted": "2014-08-14"
+    },
+    {
+     "rank": 5,
+     "song": "From The Kettle To The Coil (Adult Swim Summer Singles)",
+     "artist": "Deafheaven",
+     "title": "[FRESH] Deafheaven - From The Kettle To The Coil (Adult Swim Summer Singles)",
+     "score": 26,
+     "comments": 6,
+     "url": "https://www.reddit.com/r/indieheads/comments/2ead2d/",
+     "posted": "2014-08-22"
+    },
+    {
+     "rank": 6,
+     "song": "Let Me Give The World to You (unreleased track)",
+     "artist": "Smashing Pumpkins",
+     "title": "[FRESH] Smashing Pumpkins - Let Me Give The World to You (unreleased track)",
+     "score": 24,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/2d8il4/",
+     "posted": "2014-08-11"
+    },
+    {
+     "rank": 7,
+     "song": "Left Hand Free",
+     "artist": "alt-J",
+     "title": "[FRESH] alt-J - Left Hand Free (Official Video)",
+     "score": 22,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/indieheads/comments/2cw8iz/",
+     "posted": "2014-08-07"
+    },
+    {
+     "rank": 8,
+     "song": "HARD",
+     "artist": "SOPHIE",
+     "title": "[FRESH] SOPHIE - HARD",
+     "score": 22,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/2cq2qw/",
+     "posted": "2014-08-05"
+    },
+    {
+     "rank": 9,
+     "song": "New Album to be released Fall 2014",
+     "artist": "She & Him",
+     "title": "[FRESH] - She & Him - New Album to be released Fall 2014",
+     "score": 21,
+     "comments": 6,
+     "url": "https://www.reddit.com/r/indieheads/comments/2cxohu/",
+     "posted": "2014-08-08"
+    },
+    {
+     "rank": 10,
+     "song": "Hate Machine (feat. Danny Brown)",
+     "artist": "The Neighbourhood",
+     "title": "[FRESH] The Neighbourhood - Hate Machine (feat. Danny Brown)",
+     "score": 21,
+     "comments": 6,
+     "url": "https://www.reddit.com/r/indieheads/comments/2eu8q4/",
+     "posted": "2014-08-28"
+    },
+    {
+     "rank": 11,
+     "song": "Go",
+     "artist": "Grimes",
+     "title": "[FRESH VIDEO] Grimes - Go",
+     "score": 19,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/2eqp1z/",
+     "posted": "2014-08-27"
+    },
+    {
+     "rank": 12,
+     "song": "Fall Harder",
+     "artist": "Saint Pepsi",
+     "title": "[FRESH] Saint Pepsi - Fall Harder",
+     "score": 19,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/2dcmkc/",
+     "posted": "2014-08-12"
+    },
+    {
+     "rank": 13,
+     "song": "Susie Thumb",
+     "artist": "Ty Segall",
+     "title": "[FRESH] Ty Segall - Susie Thumb",
+     "score": 19,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/2d9avs/",
+     "posted": "2014-08-11"
+    },
+    {
+     "rank": 14,
+     "song": "Hey QT",
+     "artist": "[BANGER] QT",
+     "title": "[FRESH][BANGER] QT - Hey QT",
+     "score": 17,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/2ems35/",
+     "posted": "2014-08-26"
+    },
+    {
+     "rank": 15,
+     "song": "Under Pressure",
+     "artist": "The War on Drugs",
+     "title": "[FRESH VIDEO] The War on Drugs - Under Pressure",
+     "score": 16,
+     "comments": 6,
+     "url": "https://www.reddit.com/r/indieheads/comments/2e320g/",
+     "posted": "2014-08-20"
+    }
+   ]
+  }
+ ]
+}

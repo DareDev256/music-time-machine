@@ -1,0 +1,474 @@
+{
+ "month": "2015-09",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Vice City feat. Black Hippy Music Video",
+     "artist": "Jay Rock",
+     "title": "[FRESH] Jay Rock - Vice City feat. Black Hippy Music Video",
+     "score": 2912,
+     "comments": 674,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3kgx5w/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 2,
+     "song": "I Feel Enslaved",
+     "artist": "Kanye West",
+     "title": "[FRESH] Kanye West - I Feel Enslaved",
+     "score": 2911,
+     "comments": 907,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3l6x1j/",
+     "posted": "2015-09-16"
+    },
+    {
+     "rank": 3,
+     "song": "Nelly",
+     "artist": "Isaiah Rashad",
+     "title": "[FRESH] Isaiah Rashad - Nelly",
+     "score": 2660,
+     "comments": 522,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3m4x4h/",
+     "posted": "2015-09-24"
+    },
+    {
+     "rank": 4,
+     "song": "GOOD:AM Stream NPR",
+     "artist": "Mac Miller",
+     "title": "[FRESH] Mac Miller - GOOD:AM Stream NPR",
+     "score": 2604,
+     "comments": 1026,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3kv9lj/",
+     "posted": "2015-09-14"
+    },
+    {
+     "rank": 5,
+     "song": "Oh my Darling Don't Meow",
+     "artist": "Meow The Jewels",
+     "title": "[FRESH] Meow The Jewels - Oh my Darling Don't Meow",
+     "score": 2524,
+     "comments": 302,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3lc8z6/",
+     "posted": "2015-09-17"
+    },
+    {
+     "rank": 6,
+     "song": "Lively Hood",
+     "artist": "DOOMSTARKS (MF DOOM / Ghostface Killah)",
+     "title": "[FRESH] DOOMSTARKS (MF DOOM / Ghostface Killah) - Lively Hood",
+     "score": 2292,
+     "comments": 289,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3kx97y/",
+     "posted": "2015-09-14"
+    },
+    {
+     "rank": 7,
+     "song": "Young Jesus ft. Big Lenbo",
+     "artist": "Logic",
+     "title": "[FRESH] Logic - Young Jesus ft. Big Lenbo (Official Audio)",
+     "score": 1896,
+     "comments": 330,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3lyy8t/",
+     "posted": "2015-09-22"
+    },
+    {
+     "rank": 8,
+     "song": "Rodeo",
+     "artist": "Travi$ Scott",
+     "title": "[FRESH ALBUM] Travi$ Scott - Rodeo",
+     "score": 1521,
+     "comments": 794,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3jjo2q/",
+     "posted": "2015-09-03"
+    },
+    {
+     "rank": 9,
+     "song": "90059",
+     "artist": "Jay Rock",
+     "title": "[FRESH ALBUM] Jay Rock - 90059",
+     "score": 1389,
+     "comments": 445,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3kegbd/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 10,
+     "song": "Mula (feat. Kanye West)",
+     "artist": "The Game",
+     "title": "[FRESH] The Game - Mula (feat. Kanye West)",
+     "score": 1315,
+     "comments": 323,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3n0g14/",
+     "posted": "2015-09-30"
+    },
+    {
+     "rank": 11,
+     "song": "GO:OD AM",
+     "artist": "Mac Miller",
+     "title": "[FRESH ALBUM] Mac Miller - GO:OD AM",
+     "score": 1213,
+     "comments": 297,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3lczf2/",
+     "posted": "2015-09-17"
+    },
+    {
+     "rank": 12,
+     "song": "Blacktivist",
+     "artist": "Flatbush ZOMBiES",
+     "title": "[FRESH VIDEO] Flatbush ZOMBiES - Blacktivist",
+     "score": 1100,
+     "comments": 285,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3km654/",
+     "posted": "2015-09-12"
+    },
+    {
+     "rank": 13,
+     "song": "On Me Ft. Kendrick Lamar",
+     "artist": "The Game",
+     "title": "[FRESH] The Game - On Me Ft. Kendrick Lamar",
+     "score": 1097,
+     "comments": 154,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3n0t9j/",
+     "posted": "2015-09-30"
+    },
+    {
+     "rank": 14,
+     "song": "El Chapo",
+     "artist": "The Game",
+     "title": "[FRESH] The Game - El Chapo",
+     "score": 1069,
+     "comments": 192,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3lz57i/",
+     "posted": "2015-09-22"
+    },
+    {
+     "rank": 15,
+     "song": "Ain't that funkin kinda hard on you FT. Kendrick Lamar",
+     "artist": "George Clinton",
+     "title": "[FRESH] George Clinton - Ain't that funkin kinda hard on you FT. Kendrick Lamar",
+     "score": 1069,
+     "comments": 180,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3manhj/",
+     "posted": "2015-09-25"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Blank Space?",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - Blank Space?",
+     "score": 382,
+     "comments": 92,
+     "url": "https://www.reddit.com/r/indieheads/comments/3lup9u/",
+     "posted": "2015-09-21"
+    },
+    {
+     "rank": 2,
+     "song": "Every Open Eye",
+     "artist": "CHVRCHES",
+     "title": "[FRESH] CHVRCHES - Every Open Eye (NPR Stream)",
+     "score": 223,
+     "comments": 79,
+     "url": "https://www.reddit.com/r/indieheads/comments/3lrb6q/",
+     "posted": "2015-09-21"
+    },
+    {
+     "rank": 3,
+     "song": "Meow the Jewels (Run the Jewels 2 remixed with only cat sounds)",
+     "artist": "Official Download of Run the Jewels",
+     "title": "[FRESH] Official Download of Run the Jewels - Meow the Jewels (Run the Jewels 2 remixed with only cat sounds)",
+     "score": 216,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/3meyej/",
+     "posted": "2015-09-26"
+    },
+    {
+     "rank": 4,
+     "song": "New Bermuda",
+     "artist": "Deafheaven",
+     "title": "[FRESH STREAM] Deafheaven - New Bermuda",
+     "score": 213,
+     "comments": 101,
+     "url": "https://www.reddit.com/r/indieheads/comments/3m5jp0/",
+     "posted": "2015-09-24"
+    },
+    {
+     "rank": 5,
+     "song": "Can't Keep Checking My Phone",
+     "artist": "Unknown Mortal Orchestra",
+     "title": "[FRESH VIDEO] Unknown Mortal Orchestra - Can't Keep Checking My Phone",
+     "score": 169,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/3jhwep/",
+     "posted": "2015-09-03"
+    },
+    {
+     "rank": 6,
+     "song": "Breaker",
+     "artist": "Deerhunter",
+     "title": "[FRESH VIDEO] Deerhunter - Breaker",
+     "score": 151,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/indieheads/comments/3l17l9/",
+     "posted": "2015-09-15"
+    },
+    {
+     "rank": 7,
+     "song": "The Night Josh Tillman Came To Our Apartment",
+     "artist": "Father John Misty",
+     "title": "[FRESH VIDEO] Father John Misty - The Night Josh Tillman Came To Our Apartment",
+     "score": 144,
+     "comments": 43,
+     "url": "https://www.reddit.com/r/indieheads/comments/3lfis3/",
+     "posted": "2015-09-18"
+    },
+    {
+     "rank": 8,
+     "song": "Welcome To New York",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - Welcome To New York",
+     "score": 142,
+     "comments": 36,
+     "url": "https://www.reddit.com/r/indieheads/comments/3luvvi/",
+     "posted": "2015-09-21"
+    },
+    {
+     "rank": 9,
+     "song": "Bunker Buster",
+     "artist": "Viet Cong",
+     "title": "[FRESH VIDEO] Viet Cong - Bunker Buster",
+     "score": 141,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/indieheads/comments/3kf4rf/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 10,
+     "song": "The Memo",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - The Memo",
+     "score": 133,
+     "comments": 46,
+     "url": "https://www.reddit.com/r/indieheads/comments/3mdsgj/",
+     "posted": "2015-09-25"
+    },
+    {
+     "rank": 11,
+     "song": "DIIV",
+     "artist": "Dopamine",
+     "title": "[FRESH] Dopamine - DIIV",
+     "score": 116,
+     "comments": 38,
+     "url": "https://www.reddit.com/r/indieheads/comments/3l4qd4/",
+     "posted": "2015-09-16"
+    },
+    {
+     "rank": 12,
+     "song": "Come Back",
+     "artist": "Deafheaven",
+     "title": "[FRESH] Deafheaven - Come Back",
+     "score": 113,
+     "comments": 70,
+     "url": "https://www.reddit.com/r/indieheads/comments/3l3wx0/",
+     "posted": "2015-09-16"
+    },
+    {
+     "rank": 13,
+     "song": "Clearest Blue",
+     "artist": "CHVRCHES",
+     "title": "[FRESH VIDEO] CHVRCHES - Clearest Blue",
+     "score": 108,
+     "comments": 53,
+     "url": "https://www.reddit.com/r/indieheads/comments/3kgn9k/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 14,
+     "song": "Wake Up! Go! Go! Forward!",
+     "artist": "Papa Francis",
+     "title": "[FRESH] Papa Francis - Wake Up! Go! Go! Forward!",
+     "score": 87,
+     "comments": 32,
+     "url": "https://www.reddit.com/r/indieheads/comments/3mctin/",
+     "posted": "2015-09-25"
+    },
+    {
+     "rank": 15,
+     "song": "I Know There's Gonna Be (Good Times)",
+     "artist": "Jamie XX",
+     "title": "[FRESH VIDEO] Jamie XX - I Know There's Gonna Be (Good Times)",
+     "score": 85,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/3mohw4/",
+     "posted": "2015-09-28"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Til It Happens To You",
+     "artist": "Lady Gaga",
+     "title": "[FRESH] Lady Gaga - Til It Happens To You",
+     "score": 81,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/popheads/comments/3lepqs/",
+     "posted": "2015-09-18"
+    },
+    {
+     "rank": 2,
+     "song": "Magnets",
+     "artist": "Disclosure ft. Lorde",
+     "title": "[FRESH] - Disclosure ft. Lorde - Magnets",
+     "score": 68,
+     "comments": 18,
+     "url": "https://www.reddit.com/r/popheads/comments/3m3fol/",
+     "posted": "2015-09-23"
+    },
+    {
+     "rank": 3,
+     "song": "Magnets",
+     "artist": "Disclosure ft. Lord",
+     "title": "[FreSh Video] Disclosure ft. Lord - Magnets",
+     "score": 58,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/3muduc/",
+     "posted": "2015-09-29"
+    },
+    {
+     "rank": 4,
+     "song": "Clearest Blue",
+     "artist": "CHVRCHES",
+     "title": "[FRESH] CHVRCHES - Clearest Blue",
+     "score": 57,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/popheads/comments/3kgp80/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 5,
+     "song": "Alive",
+     "artist": "Sia",
+     "title": "[FRESH] Sia - Alive",
+     "score": 39,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/popheads/comments/3m6m17/",
+     "posted": "2015-09-24"
+    },
+    {
+     "rank": 6,
+     "song": "Party Favors (feat. Young Thug)",
+     "artist": "Tinashe",
+     "title": "[FRESH] Tinashe - Party Favors (feat. Young Thug)",
+     "score": 35,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/popheads/comments/3kanbf/",
+     "posted": "2015-09-09"
+    },
+    {
+     "rank": 7,
+     "song": "Music to Watch Boys to",
+     "artist": "Lana Del Rey",
+     "title": "[FRESH] Lana Del Rey - Music to Watch Boys to",
+     "score": 31,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/popheads/comments/3kbcrk/",
+     "posted": "2015-09-09"
+    },
+    {
+     "rank": 8,
+     "song": "quand c'est",
+     "artist": "Stromae",
+     "title": "[FRESH] Stromae - quand c'est",
+     "score": 31,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/3kxmu7/",
+     "posted": "2015-09-14"
+    },
+    {
+     "rank": 9,
+     "song": "Death of a Bachelor",
+     "artist": "Panic! at the Disco",
+     "title": "[FRESH] Panic! at the Disco - Death of a Bachelor",
+     "score": 27,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/popheads/comments/3ja728/",
+     "posted": "2015-09-01"
+    },
+    {
+     "rank": 10,
+     "song": "Every Open Eye",
+     "artist": "CHVRCHES",
+     "title": "[FRESH STREAM] CHVRCHES - Every Open Eye",
+     "score": 26,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/3m9cci/",
+     "posted": "2015-09-24"
+    },
+    {
+     "rank": 11,
+     "song": "Same Old Love",
+     "artist": "Selena Gomez",
+     "title": "[FRESH] Selena Gomez - Same Old Love (Produced by Stargate and Charli XCX)",
+     "score": 26,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/3kdau8/",
+     "posted": "2015-09-10"
+    },
+    {
+     "rank": 12,
+     "song": "Unbreakable",
+     "artist": "Janet Jackson",
+     "title": "[Fresh] Janet Jackson - Unbreakable",
+     "score": 24,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/popheads/comments/3jki0b/",
+     "posted": "2015-09-04"
+    },
+    {
+     "rank": 13,
+     "song": "On My Mind",
+     "artist": "Ellie Goulding",
+     "title": "[FRESH] Ellie Goulding - On My Mind",
+     "score": 23,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/3la86n/",
+     "posted": "2015-09-17"
+    },
+    {
+     "rank": 14,
+     "song": "MSMSMSM",
+     "artist": "SOPHIE",
+     "title": "[FRESH] SOPHIE - MSMSMSM",
+     "score": 21,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/3mzkmx/",
+     "posted": "2015-09-30"
+    },
+    {
+     "rank": 15,
+     "song": "Writing's on the Wall (Theme to James Bond: Spectre)",
+     "artist": "Sam Smith",
+     "title": "[FRESH] Sam Smith - Writing's on the Wall (Theme to James Bond: Spectre)",
+     "score": 20,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/popheads/comments/3mbpog/",
+     "posted": "2015-09-25"
+    }
+   ]
+  }
+ ]
+}

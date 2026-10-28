@@ -1,0 +1,318 @@
+{
+ "month": "2016-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Numbers: Jonny, Thom & a CR78",
+     "artist": "Radiohead",
+     "title": "[FRESH] Radiohead - The Numbers: Jonny, Thom & a CR78",
+     "score": 475,
+     "comments": 69,
+     "url": "https://www.reddit.com/r/indieheads/comments/55zlm9/",
+     "posted": "2016-10-05"
+    },
+    {
+     "rank": 2,
+     "song": "Because I'm Me",
+     "artist": "The Avalanches",
+     "title": "[FRESH VIDEO] The Avalanches - Because I'm Me",
+     "score": 435,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/59jwax/",
+     "posted": "2016-10-26"
+    },
+    {
+     "rank": 3,
+     "song": "Dead Alive",
+     "artist": "The Shins",
+     "title": "[FRESH] The Shins - Dead Alive",
+     "score": 375,
+     "comments": 79,
+     "url": "https://www.reddit.com/r/indieheads/comments/59hq8z/",
+     "posted": "2016-10-26"
+    },
+    {
+     "rank": 4,
+     "song": "Make Hay",
+     "artist": "Joanna Newsom",
+     "title": "[FRESH] Joanna Newsom - Make Hay",
+     "score": 316,
+     "comments": 70,
+     "url": "https://www.reddit.com/r/indieheads/comments/58ynm5/",
+     "posted": "2016-10-23"
+    },
+    {
+     "rank": 5,
+     "song": "MEGA",
+     "artist": "Blank Banshee",
+     "title": "[FRESH ALBUM] Blank Banshee - MEGA",
+     "score": 277,
+     "comments": 32,
+     "url": "https://www.reddit.com/r/indieheads/comments/56rmze/",
+     "posted": "2016-10-10"
+    },
+    {
+     "rank": 6,
+     "song": "29 #Strafford APTS - Official Lyric Video",
+     "artist": "Bon Iver",
+     "title": "[FRESH VIDEO] Bon Iver - 29 #Strafford APTS - Official Lyric Video",
+     "score": 226,
+     "comments": 90,
+     "url": "https://www.reddit.com/r/indieheads/comments/55di8s/",
+     "posted": "2016-10-01"
+    },
+    {
+     "rank": 7,
+     "song": "WORRY.",
+     "artist": "Jeff Rosenstock",
+     "title": "[FRESH ALBUM] Jeff Rosenstock - WORRY. (free on his website)",
+     "score": 194,
+     "comments": 45,
+     "url": "https://www.reddit.com/r/indieheads/comments/57ek4e/",
+     "posted": "2016-10-14"
+    },
+    {
+     "rank": 8,
+     "song": "8 (circle) - Official Lyric Video",
+     "artist": "Bon Iver",
+     "title": "[FRESH VIDEO] Bon Iver - 8 (circle) - Official Lyric Video",
+     "score": 165,
+     "comments": 39,
+     "url": "https://www.reddit.com/r/indieheads/comments/55sm1n/",
+     "posted": "2016-10-04"
+    },
+    {
+     "rank": 9,
+     "song": "When I Met You",
+     "artist": "David Bowie",
+     "title": "[FRESH] David Bowie - \"When I Met You\"",
+     "score": 138,
+     "comments": 14,
+     "url": "https://www.reddit.com/r/indieheads/comments/583l9y/",
+     "posted": "2016-10-18"
+    },
+    {
+     "rank": 10,
+     "song": "Season 2 Episode 3",
+     "artist": "Glass Animals",
+     "title": "[FRESH VIDEO] Glass Animals - Season 2 Episode 3",
+     "score": 137,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/indieheads/comments/56y572/",
+     "posted": "2016-10-11"
+    },
+    {
+     "rank": 11,
+     "song": "You Want It Darker",
+     "artist": "Leonard Cohen",
+     "title": "[FRESH STREAM] Leonard Cohen - You Want It Darker",
+     "score": 135,
+     "comments": 30,
+     "url": "https://www.reddit.com/r/indieheads/comments/57g4w7/",
+     "posted": "2016-10-14"
+    },
+    {
+     "rank": 12,
+     "song": "666 ʇ - Official Lyric Video",
+     "artist": "Bon Iver",
+     "title": "[FRESH VIDEO] Bon Iver - 666 ʇ - Official Lyric Video",
+     "score": 124,
+     "comments": 21,
+     "url": "https://www.reddit.com/r/indieheads/comments/55hz6b/",
+     "posted": "2016-10-02"
+    },
+    {
+     "rank": 13,
+     "song": "Quite Like You\", Directed by Chad Vangaallen.",
+     "artist": "Andy Shauf",
+     "title": "[FRESH VIDEO] Andy Shauf - \"Quite Like You\", Directed by Chad Vangaallen.",
+     "score": 123,
+     "comments": 45,
+     "url": "https://www.reddit.com/r/indieheads/comments/589z6i/",
+     "posted": "2016-10-19"
+    },
+    {
+     "rank": 14,
+     "song": "Bonito Graduation",
+     "artist": "Kero Kero Bonito",
+     "title": "[fresh album] Kero Kero Bonito - Bonito Graduation",
+     "score": 123,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/58n5vn/",
+     "posted": "2016-10-21"
+    },
+    {
+     "rank": 15,
+     "song": "World Princess Part II",
+     "artist": "Grimes",
+     "title": "[FRESH VIDEO] Grimes - World Princess Part II",
+     "score": 120,
+     "comments": 45,
+     "url": "https://www.reddit.com/r/indieheads/comments/560szd/",
+     "posted": "2016-10-05"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Joanne",
+     "artist": "Lady Gaga",
+     "title": "[FRESH STREAM] Lady Gaga - Joanne",
+     "score": 233,
+     "comments": 143,
+     "url": "https://www.reddit.com/r/popheads/comments/58kj8d/",
+     "posted": "2016-10-21"
+    },
+    {
+     "rank": 2,
+     "song": "24K Magic",
+     "artist": "Bruno Mars",
+     "title": "[FRESH VIDEO] Bruno Mars - 24K Magic",
+     "score": 203,
+     "comments": 137,
+     "url": "https://www.reddit.com/r/popheads/comments/569gyq/",
+     "posted": "2016-10-07"
+    },
+    {
+     "rank": 3,
+     "song": "Million Reasons",
+     "artist": "Lady Gaga",
+     "title": "[FRESH] Lady Gaga - Million Reasons (also her album is up for preorder!)",
+     "score": 153,
+     "comments": 89,
+     "url": "https://www.reddit.com/r/popheads/comments/563fna/",
+     "posted": "2016-10-06"
+    },
+    {
+     "rank": 4,
+     "song": "After The Afterparty feat. Lil Yachty",
+     "artist": "Charli XCX",
+     "title": "[FRESH VIDEO] Charli XCX - After The Afterparty feat. Lil Yachty",
+     "score": 133,
+     "comments": 55,
+     "url": "https://www.reddit.com/r/popheads/comments/5a71d2/",
+     "posted": "2016-10-30"
+    },
+    {
+     "rank": 5,
+     "song": "A-Yo",
+     "artist": "Lady Gaga",
+     "title": "[FRESH] Lady Gaga - A-Yo",
+     "score": 128,
+     "comments": 70,
+     "url": "https://www.reddit.com/r/popheads/comments/584nta/",
+     "posted": "2016-10-18"
+    },
+    {
+     "rank": 6,
+     "song": "After The Afterparty (feat. Lil Yachty)",
+     "artist": "Charli XCX",
+     "title": "[FRESH] Charli XCX - After The Afterparty (feat. Lil Yachty)",
+     "score": 127,
+     "comments": 53,
+     "url": "https://www.reddit.com/r/popheads/comments/59oks8/",
+     "posted": "2016-10-27"
+    },
+    {
+     "rank": 7,
+     "song": "Into You",
+     "artist": "Ariana Grande",
+     "title": "[FRESH] Ariana Grande - Into You (80s Remix)",
+     "score": 112,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/5a95qw/",
+     "posted": "2016-10-30"
+    },
+    {
+     "rank": 8,
+     "song": "Lady Wood",
+     "artist": "Tove Lo",
+     "title": "[FRESH STREAM] Tove Lo - Lady Wood",
+     "score": 102,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/popheads/comments/59qne7/",
+     "posted": "2016-10-27"
+    },
+    {
+     "rank": 9,
+     "song": "Fairy Dust",
+     "artist": "Tove Lo",
+     "title": "[FRESH VIDEO] Tove Lo - Fairy Dust",
+     "score": 88,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/popheads/comments/5aeql0/",
+     "posted": "2016-10-31"
+    },
+    {
+     "rank": 10,
+     "song": "Million Reasons (SNL)",
+     "artist": "Lady Gaga",
+     "title": "[FRESH PERFORMANCE] Lady Gaga - Million Reasons (SNL)",
+     "score": 82,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/popheads/comments/58xprf/",
+     "posted": "2016-10-23"
+    },
+    {
+     "rank": 11,
+     "song": "Greedy",
+     "artist": "Ariana Grande",
+     "title": "[FRESH] Ariana Grande - Greedy (Official Instrumental)",
+     "score": 73,
+     "comments": 30,
+     "url": "https://www.reddit.com/r/popheads/comments/55rh9y/",
+     "posted": "2016-10-04"
+    },
+    {
+     "rank": 12,
+     "song": "True Disaster",
+     "artist": "Tove Lo",
+     "title": "[FRESH] Tove Lo - True Disaster",
+     "score": 72,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/popheads/comments/57eo99/",
+     "posted": "2016-10-14"
+    },
+    {
+     "rank": 13,
+     "song": "Belly of the Beat",
+     "artist": "Grimes",
+     "title": "[FRESH VIDEO] Grimes - Belly of the Beat",
+     "score": 71,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/popheads/comments/560tmg/",
+     "posted": "2016-10-05"
+    },
+    {
+     "rank": 14,
+     "song": "This is Acting (Deluxe Version)",
+     "artist": "Sia",
+     "title": "[Fresh Stream] Sia - This is Acting (Deluxe Version)",
+     "score": 69,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/58lc5x/",
+     "posted": "2016-10-21"
+    },
+    {
+     "rank": 15,
+     "song": "Fade Away",
+     "artist": "Hannah Diamond",
+     "title": "[FRESH] Hannah Diamond - Fade Away",
+     "score": 67,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/popheads/comments/569hxv/",
+     "posted": "2016-10-07"
+    }
+   ]
+  }
+ ]
+}

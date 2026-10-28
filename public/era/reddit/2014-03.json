@@ -1,0 +1,318 @@
+{
+ "month": "2014-03",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "We Made It",
+     "artist": "JAY Z x JAY ELECTRONICA",
+     "title": "[FRESH] JAY Z x JAY ELECTRONICA - We Made It",
+     "score": 2290,
+     "comments": 748,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/2155su/",
+     "posted": "2014-03-23"
+    },
+    {
+     "rank": 2,
+     "song": "Childs Play",
+     "artist": "SZA feat. Chance The Rapper",
+     "title": "[FRESH] SZA feat. Chance The Rapper - Childs Play (Prod. by XXYYXX)",
+     "score": 1434,
+     "comments": 267,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/21csye/",
+     "posted": "2014-03-25"
+    },
+    {
+     "rank": 3,
+     "song": "F*ck KD (KEVIN DURANT DISS)",
+     "artist": "Lil B",
+     "title": "[FRESH] Lil B - F*ck KD (KEVIN DURANT DISS)",
+     "score": 1084,
+     "comments": 486,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1zvtuk/",
+     "posted": "2014-03-08"
+    },
+    {
+     "rank": 4,
+     "song": "Keep Watch",
+     "artist": "Wu-Tang Clan",
+     "title": "[FRESH] Wu-Tang Clan - Keep Watch",
+     "score": 899,
+     "comments": 219,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/20rr2a/",
+     "posted": "2014-03-19"
+    },
+    {
+     "rank": 5,
+     "song": "HAND IN MY POCKET",
+     "artist": "Pusha T & A$AP Ferg",
+     "title": "[FRESH] Pusha T & A$AP Ferg - HAND IN MY POCKET (Prod. by Sean C & LV)",
+     "score": 869,
+     "comments": 120,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/20th43/",
+     "posted": "2014-03-19"
+    },
+    {
+     "rank": 6,
+     "song": "What They Want (Explicit) ft. 2 Chainz",
+     "artist": "SchoolBoy Q",
+     "title": "[FRESH] SchoolBoy Q - What They Want (Explicit) ft. 2 Chainz",
+     "score": 713,
+     "comments": 218,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1zr8d5/",
+     "posted": "2014-03-06"
+    },
+    {
+     "rank": 7,
+     "song": "Don't Do Drugs Kids",
+     "artist": "Flatbush Zombies",
+     "title": "[FRESH] Flatbush Zombies - Don't Do Drugs Kids",
+     "score": 622,
+     "comments": 119,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/21mcdg/",
+     "posted": "2014-03-28"
+    },
+    {
+     "rank": 8,
+     "song": "Lac Lac",
+     "artist": "Big K.R.I.T. feat A$AP Ferg",
+     "title": "[FRESH] Big K.R.I.T. feat A$AP Ferg - Lac Lac",
+     "score": 606,
+     "comments": 108,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1zmx2l/",
+     "posted": "2014-03-05"
+    },
+    {
+     "rank": 9,
+     "song": "HERO",
+     "artist": "Frank Ocean + Mick Jones + Paul Simonon + Diplo",
+     "title": "[FRESH] Frank Ocean + Mick Jones + Paul Simonon + Diplo - \"HERO\"",
+     "score": 533,
+     "comments": 165,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/201nwr/",
+     "posted": "2014-03-10"
+    },
+    {
+     "rank": 10,
+     "song": "Home Studio",
+     "artist": "Chance The Rapper & The Social Experiment",
+     "title": "[FRESH] Chance The Rapper & The Social Experiment - Home Studio",
+     "score": 528,
+     "comments": 137,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/21b1hb/",
+     "posted": "2014-03-25"
+    },
+    {
+     "rank": 11,
+     "song": "Backwards",
+     "artist": "Tame Imapala and Kendrick Lamar",
+     "title": "[FRESH] Tame Imapala and Kendrick Lamar - Backwards",
+     "score": 441,
+     "comments": 139,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1zu2gx/",
+     "posted": "2014-03-07"
+    },
+    {
+     "rank": 12,
+     "song": "It's On Again",
+     "artist": "Alicia Keys feat. Kendrick Lamar",
+     "title": "[FRESH] Alicia Keys feat. Kendrick Lamar - It's On Again",
+     "score": 437,
+     "comments": 192,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/21tru9/",
+     "posted": "2014-03-31"
+    },
+    {
+     "rank": 13,
+     "song": "Hold On",
+     "artist": "50 Cent",
+     "title": "[FRESH] 50 Cent - Hold On",
+     "score": 432,
+     "comments": 145,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/20ml9h/",
+     "posted": "2014-03-17"
+    },
+    {
+     "rank": 14,
+     "song": "Egyptian Cotton",
+     "artist": "Big K.R.I.T.",
+     "title": "[FRESH] Big K.R.I.T. - Egyptian Cotton",
+     "score": 423,
+     "comments": 50,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1ztgz3/",
+     "posted": "2014-03-07"
+    },
+    {
+     "rank": 15,
+     "song": "Move That Dope ft. Pharrell Williams, Pusha T",
+     "artist": "Future",
+     "title": "[FRESH VIDEO] Future - Move That Dope ft. Pharrell Williams, Pusha T",
+     "score": 414,
+     "comments": 127,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1zrfoo/",
+     "posted": "2014-03-06"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Fever",
+     "artist": "The Black Keys",
+     "title": "[FRESH] The Black Keys - Fever",
+     "score": 36,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/indieheads/comments/218vjg/",
+     "posted": "2014-03-24"
+    },
+    {
+     "rank": 2,
+     "song": "Water Fountain",
+     "artist": "tUnE-yArDs",
+     "title": "[FRESH] tUnE-yArDs - \"Water Fountain\"",
+     "score": 36,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/20pne9/",
+     "posted": "2014-03-18"
+    },
+    {
+     "rank": 3,
+     "song": "A Little God in Our Hands",
+     "artist": "Swans",
+     "title": "[FRESH] Swans - A Little God in Our Hands",
+     "score": 25,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/indieheads/comments/21121f/",
+     "posted": "2014-03-21"
+    },
+    {
+     "rank": 4,
+     "song": "Mac DeMarco",
+     "artist": "Salad Days",
+     "title": "[FRESH] Salad Days - Mac DeMarco (NPR Stream)",
+     "score": 24,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/217b6v/",
+     "posted": "2014-03-24"
+    },
+    {
+     "rank": 5,
+     "song": "Brother",
+     "artist": "Mac Demarco",
+     "title": "[FRESH] Mac Demarco - Brother",
+     "score": 22,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/indieheads/comments/1zrwj4/",
+     "posted": "2014-03-07"
+    },
+    {
+     "rank": 6,
+     "song": "Palace",
+     "artist": "The Antlers",
+     "title": "[FRESH] The Antlers - Palace",
+     "score": 18,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/indieheads/comments/21uhxe/",
+     "posted": "2014-03-31"
+    },
+    {
+     "rank": 7,
+     "song": "The Lens",
+     "artist": "THEE OH SEES",
+     "title": "[FRESH] THEE OH SEES - The Lens",
+     "score": 16,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/20y1j0/",
+     "posted": "2014-03-20"
+    },
+    {
+     "rank": 8,
+     "song": "Magic",
+     "artist": "Coldplay",
+     "title": "[FRESH] Coldplay - Magic",
+     "score": 14,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/indieheads/comments/1zewd0/",
+     "posted": "2014-03-03"
+    },
+    {
+     "rank": 9,
+     "song": "Words I Don't Remember",
+     "artist": "How To Dress Well",
+     "title": "[FRESH] How To Dress Well - Words I Don't Remember",
+     "score": 14,
+     "comments": 0,
+     "url": "https://www.reddit.com/r/indieheads/comments/1zwo80/",
+     "posted": "2014-03-08"
+    },
+    {
+     "rank": 10,
+     "song": "Stranger In Moscow (Michael Jackson Cover)",
+     "artist": "Tame Impala",
+     "title": "[FRESH] Tame Impala - Stranger In Moscow (Michael Jackson Cover)",
+     "score": 12,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/20d12v/",
+     "posted": "2014-03-13"
+    },
+    {
+     "rank": 11,
+     "song": "A Dream Of You And Me",
+     "artist": "Future Islands",
+     "title": "[FRESH] Future Islands - A Dream Of You And Me",
+     "score": 11,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/indieheads/comments/1zj914/",
+     "posted": "2014-03-04"
+    },
+    {
+     "rank": 12,
+     "song": "Sleep Sound",
+     "artist": "Jamie xx",
+     "title": "[FRESH] Jamie xx - Sleep Sound",
+     "score": 11,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/indieheads/comments/21iles/",
+     "posted": "2014-03-27"
+    },
+    {
+     "rank": 13,
+     "song": "...",
+     "artist": "The Antlers",
+     "title": "[FRESH] The Antlers -- ...",
+     "score": 11,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/indieheads/comments/21ls2w/",
+     "posted": "2014-03-28"
+    },
+    {
+     "rank": 14,
+     "song": "Algiers",
+     "artist": "THE AFGHAN WHIGS",
+     "title": "[FRESH] THE AFGHAN WHIGS - Algiers",
+     "score": 10,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/indieheads/comments/21evcg/",
+     "posted": "2014-03-26"
+    },
+    {
+     "rank": 15,
+     "song": "Backwards",
+     "artist": "Tame Impala ft. Kendrick Lamar",
+     "title": "[FRESH] Tame Impala ft. Kendrick Lamar - Backwards",
+     "score": 10,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/1zw0sm/",
+     "posted": "2014-03-08"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,474 @@
+{
+ "month": "2015-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "These Walls",
+     "artist": "Kendrick Lamar",
+     "title": "[FRESH VIDEO] Kendrick Lamar - These Walls",
+     "score": 3947,
+     "comments": 908,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3qlowd/",
+     "posted": "2015-10-28"
+    },
+    {
+     "rank": 2,
+     "song": "Kanye West",
+     "artist": "When I See It",
+     "title": "[FRESH] - When I See It - Kanye West",
+     "score": 2869,
+     "comments": 661,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3pea22/",
+     "posted": "2015-10-19"
+    },
+    {
+     "rank": 3,
+     "song": "FUCK IT",
+     "artist": "Tyler, The Creator",
+     "title": "[FRESH] Tyler, The Creator - FUCK IT",
+     "score": 2718,
+     "comments": 675,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3ohok1/",
+     "posted": "2015-10-12"
+    },
+    {
+     "rank": 4,
+     "song": "Angles (feat. Saba)",
+     "artist": "Chance The Rapper",
+     "title": "[FRESH] Chance The Rapper - Angles (feat. Saba)",
+     "score": 2536,
+     "comments": 469,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3qdesq/",
+     "posted": "2015-10-27"
+    },
+    {
+     "rank": 5,
+     "song": "These Walls",
+     "artist": "Kendrick Lamar and the National Symphony Orchestra",
+     "title": "[FRESH] Kendrick Lamar and the National Symphony Orchestra - These Walls",
+     "score": 2497,
+     "comments": 312,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3pkze3/",
+     "posted": "2015-10-21"
+    },
+    {
+     "rank": 6,
+     "song": "Fuckin' Up The Count",
+     "artist": "Freddie Gibbs",
+     "title": "[FRESH] Freddie Gibbs - Fuckin' Up The Count",
+     "score": 2437,
+     "comments": 442,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3qpx6h/",
+     "posted": "2015-10-29"
+    },
+    {
+     "rank": 7,
+     "song": "KANYE WEST",
+     "artist": "SAY YOU WILL REMIX FEAT. CAROLINE SHAW",
+     "title": "[FRESH] SAY YOU WILL REMIX FEAT. CAROLINE SHAW - KANYE WEST",
+     "score": 2389,
+     "comments": 307,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3pe9v0/",
+     "posted": "2015-10-19"
+    },
+    {
+     "rank": 8,
+     "song": "Oh My Darling Don't Meow",
+     "artist": "Run The Jewels",
+     "title": "[FRESH VIDEO] Run The Jewels - Oh My Darling Don't Meow",
+     "score": 1659,
+     "comments": 154,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3n8re8/",
+     "posted": "2015-10-02"
+    },
+    {
+     "rank": 9,
+     "song": "Buffalo",
+     "artist": "Tyler, The Creator",
+     "title": "[FRESH VIDEO] Tyler, The Creator - Buffalo",
+     "score": 1561,
+     "comments": 406,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3n69fr/",
+     "posted": "2015-10-02"
+    },
+    {
+     "rank": 10,
+     "song": "Travis Scott feat. Kanye West",
+     "artist": "Piss on your Grave",
+     "title": "[FRESH VIDEO] Piss on your Grave - Travis Scott feat. Kanye West",
+     "score": 1493,
+     "comments": 408,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3qv09h/",
+     "posted": "2015-10-30"
+    },
+    {
+     "rank": 11,
+     "song": "Rubble Kings Theme (Dynamite)",
+     "artist": "Run the Jewels",
+     "title": "[FRESH] Run the Jewels - Rubble Kings Theme (Dynamite)",
+     "score": 1350,
+     "comments": 139,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3nl6bu/",
+     "posted": "2015-10-05"
+    },
+    {
+     "rank": 12,
+     "song": "No Words (his best song)",
+     "artist": "Hopsin",
+     "title": "[FRESH VIDEO] Hopsin - No Words (his best song)",
+     "score": 1234,
+     "comments": 612,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3nss57/",
+     "posted": "2015-10-07"
+    },
+    {
+     "rank": 13,
+     "song": "Slime Season 2",
+     "artist": "Young Thug",
+     "title": "[FRESH] Young Thug - Slime Season 2",
+     "score": 1096,
+     "comments": 378,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3r0t57/",
+     "posted": "2015-10-31"
+    },
+    {
+     "rank": 14,
+     "song": "When I See It (Mike Dean Extended Ending)",
+     "artist": "Kanye West",
+     "title": "[FRESH] Kanye West - When I See It (Mike Dean Extended Ending)",
+     "score": 1096,
+     "comments": 195,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3qhv42/",
+     "posted": "2015-10-28"
+    },
+    {
+     "rank": 15,
+     "song": "Like Woah",
+     "artist": "Logic",
+     "title": "[FRESH] Logic - Like Woah",
+     "score": 1056,
+     "comments": 387,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/3orall/",
+     "posted": "2015-10-14"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Flesh without Blood/Life in the Vivid Dream",
+     "artist": "Grimes",
+     "title": "[FRESH] Grimes - Flesh without Blood/Life in the Vivid Dream",
+     "score": 297,
+     "comments": 268,
+     "url": "https://www.reddit.com/r/indieheads/comments/3qbj0c/",
+     "posted": "2015-10-26"
+    },
+    {
+     "rank": 2,
+     "song": "Thank Your Lucky Stars",
+     "artist": "Beach House",
+     "title": "[FRESH STREAM] Beach House - Thank Your Lucky Stars",
+     "score": 159,
+     "comments": 112,
+     "url": "https://www.reddit.com/r/indieheads/comments/3ox4ue/",
+     "posted": "2015-10-15"
+    },
+    {
+     "rank": 3,
+     "song": "Divers",
+     "artist": "Joanna Newsom",
+     "title": "[FRESH STREAM] Joanna Newsom - Divers",
+     "score": 131,
+     "comments": 86,
+     "url": "https://www.reddit.com/r/indieheads/comments/3pmml2/",
+     "posted": "2015-10-21"
+    },
+    {
+     "rank": 4,
+     "song": "SCREAM",
+     "artist": "Grimes",
+     "title": "[FRESH] Grimes - SCREAM",
+     "score": 97,
+     "comments": 62,
+     "url": "https://www.reddit.com/r/indieheads/comments/3qschu/",
+     "posted": "2015-10-30"
+    },
+    {
+     "rank": 5,
+     "song": "Boxing Day Blues (Revisited)",
+     "artist": "Courtney Barnett",
+     "title": "[FRESH] Courtney Barnett - Boxing Day Blues (Revisited)",
+     "score": 88,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/indieheads/comments/3p7ufb/",
+     "posted": "2015-10-18"
+    },
+    {
+     "rank": 6,
+     "song": "Sandra's Smile",
+     "artist": "Blood Orange",
+     "title": "[FRESH] Blood Orange - Sandra's Smile",
+     "score": 87,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/indieheads/comments/3qesvt/",
+     "posted": "2015-10-27"
+    },
+    {
+     "rank": 7,
+     "song": "Slumlord Rising",
+     "artist": "Neon Indian",
+     "title": "[FRESH VIDEO] Neon Indian - Slumlord Rising",
+     "score": 86,
+     "comments": 28,
+     "url": "https://www.reddit.com/r/indieheads/comments/3pdejc/",
+     "posted": "2015-10-19"
+    },
+    {
+     "rank": 8,
+     "song": "The Agent Intellect",
+     "artist": "Protomartyr",
+     "title": "[FRESH ALBUM] Protomartyr - The Agent Intellect",
+     "score": 85,
+     "comments": 24,
+     "url": "https://www.reddit.com/r/indieheads/comments/3o3js4/",
+     "posted": "2015-10-09"
+    },
+    {
+     "rank": 9,
+     "song": "Mess Around",
+     "artist": "Cage The Elephant",
+     "title": "[FRESH] Cage The Elephant - Mess Around",
+     "score": 84,
+     "comments": 71,
+     "url": "https://www.reddit.com/r/indieheads/comments/3qqyg8/",
+     "posted": "2015-10-29"
+    },
+    {
+     "rank": 10,
+     "song": "The Ideal Husband - Live On Jimmy Kimmel",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - The Ideal Husband - Live On Jimmy Kimmel",
+     "score": 82,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/indieheads/comments/3otxim/",
+     "posted": "2015-10-15"
+    },
+    {
+     "rank": 11,
+     "song": "Roman Candle",
+     "artist": "The National",
+     "title": "[FRESH] The National - Roman Candle (Live Debut)",
+     "score": 81,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/indieheads/comments/3p40c1/",
+     "posted": "2015-10-17"
+    },
+    {
+     "rank": 12,
+     "song": "Michael, Remember (Jam May 12, 2015)",
+     "artist": "Animal Collective",
+     "title": "[FRESH] Animal Collective - \"Michael, Remember (Jam May 12, 2015)",
+     "score": 80,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/3qvcvd/",
+     "posted": "2015-10-30"
+    },
+    {
+     "rank": 13,
+     "song": "VEGA INTL. Night School",
+     "artist": "Neon Indian",
+     "title": "[FRESH STREAM] Neon Indian - VEGA INTL. Night School",
+     "score": 79,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/indieheads/comments/3ogb1c/",
+     "posted": "2015-10-12"
+    },
+    {
+     "rank": 14,
+     "song": "Sounds of Silence",
+     "artist": "James Blake",
+     "title": "[FRESH] James Blake - Sounds of Silence",
+     "score": 79,
+     "comments": 20,
+     "url": "https://www.reddit.com/r/indieheads/comments/3o1om0/",
+     "posted": "2015-10-09"
+    },
+    {
+     "rank": 15,
+     "song": "Fading Frontier",
+     "artist": "Deerhunter",
+     "title": "[FRESH STREAM] Deerhunter - Fading Frontier",
+     "score": 77,
+     "comments": 39,
+     "url": "https://www.reddit.com/r/indieheads/comments/3oy798/",
+     "posted": "2015-10-16"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "HELLO",
+     "artist": "ADELE",
+     "title": "[FRESH] ADELE - HELLO",
+     "score": 162,
+     "comments": 56,
+     "url": "https://www.reddit.com/r/popheads/comments/3pvn0g/",
+     "posted": "2015-10-23"
+    },
+    {
+     "rank": 2,
+     "song": "Sorry",
+     "artist": "Justin Bieber",
+     "title": "[FRESH] Justin Bieber - Sorry",
+     "score": 91,
+     "comments": 50,
+     "url": "https://www.reddit.com/r/popheads/comments/3ptf0s/",
+     "posted": "2015-10-22"
+    },
+    {
+     "rank": 3,
+     "song": "Flesh without Blood/Life in the Vivid Dream",
+     "artist": "Grimes",
+     "title": "[FRESH] Grimes - Flesh without Blood/Life in the Vivid Dream",
+     "score": 58,
+     "comments": 12,
+     "url": "https://www.reddit.com/r/popheads/comments/3qblr3/",
+     "posted": "2015-10-26"
+    },
+    {
+     "rank": 4,
+     "song": "I Want Your Love",
+     "artist": "Lady Gaga feat. Nile Rodgers",
+     "title": "[FRESH] Lady Gaga feat. Nile Rodgers - I Want Your Love",
+     "score": 52,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/popheads/comments/3n84ff/",
+     "posted": "2015-10-02"
+    },
+    {
+     "rank": 5,
+     "song": "Hotline Bling",
+     "artist": "Drake",
+     "title": "[Fresh Video] Drake - Hotline Bling",
+     "score": 44,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/popheads/comments/3pfvhh/",
+     "posted": "2015-10-20"
+    },
+    {
+     "rank": 6,
+     "song": "Focus",
+     "artist": "Ariana Grande",
+     "title": "[FRESH VIDEO] Ariana Grande - Focus",
+     "score": 40,
+     "comments": 26,
+     "url": "https://www.reddit.com/r/popheads/comments/3qssbz/",
+     "posted": "2015-10-30"
+    },
+    {
+     "rank": 7,
+     "song": "Scream",
+     "artist": "Grimes",
+     "title": "[Fresh] Grimes - Scream",
+     "score": 36,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/popheads/comments/3qt0vx/",
+     "posted": "2015-10-30"
+    },
+    {
+     "rank": 8,
+     "song": "All My Friends",
+     "artist": "Tinashe ft. Chance the Rapper",
+     "title": "[FRESH] Tinashe ft. Chance the Rapper - All My Friends",
+     "score": 32,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/popheads/comments/3obso0/",
+     "posted": "2015-10-11"
+    },
+    {
+     "rank": 9,
+     "song": "Kamikaze",
+     "artist": "MØ",
+     "title": "[FRESH] MØ - Kamikaze (prod. by Diplo)",
+     "score": 30,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/popheads/comments/3orv02/",
+     "posted": "2015-10-14"
+    },
+    {
+     "rank": 10,
+     "song": "Confident",
+     "artist": "Demi Lovato",
+     "title": "[FRESH VIDEO] Demi Lovato - Confident",
+     "score": 30,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/popheads/comments/3o5uyd/",
+     "posted": "2015-10-09"
+    },
+    {
+     "rank": 11,
+     "song": "Begin Again",
+     "artist": "Purity Ring",
+     "title": "[FRESH VIDEO] Purity Ring - Begin Again",
+     "score": 30,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/popheads/comments/3ogo02/",
+     "posted": "2015-10-12"
+    },
+    {
+     "rank": 12,
+     "song": "Delilah",
+     "artist": "Florence + The Machine",
+     "title": "[FRESH VIDEO] Florence + The Machine - Delilah",
+     "score": 24,
+     "comments": 0,
+     "url": "https://www.reddit.com/r/popheads/comments/3pwuwc/",
+     "posted": "2015-10-23"
+    },
+    {
+     "rank": 13,
+     "song": "Music To Watch Boys To",
+     "artist": "Lana Del Rey",
+     "title": "[FRESH VIDEO] Lana Del Rey – Music To Watch Boys To",
+     "score": 22,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/popheads/comments/3n24m3/",
+     "posted": "2015-10-01"
+    },
+    {
+     "rank": 14,
+     "song": "Endless Vacation EP",
+     "artist": "Annie",
+     "title": "[FRESH STREAM] Annie - Endless Vacation EP",
+     "score": 20,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/popheads/comments/3p56fa/",
+     "posted": "2015-10-17"
+    },
+    {
+     "rank": 15,
+     "song": "Player (feat. Chris Brown)",
+     "artist": "Tinashe",
+     "title": "[FRESH] Tinashe - Player (feat. Chris Brown)",
+     "score": 18,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/popheads/comments/3n3clt/",
+     "posted": "2015-10-01"
+    }
+   ]
+  }
+ ]
+}

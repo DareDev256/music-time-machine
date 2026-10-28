@@ -1,0 +1,162 @@
+{
+ "month": "2015-05",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "The Way You'd Love Her",
+     "artist": "Mac Demarco",
+     "title": "[FRESH] Mac Demarco - The Way You'd Love Her",
+     "score": 261,
+     "comments": 63,
+     "url": "https://www.reddit.com/r/indieheads/comments/35lpp1/",
+     "posted": "2015-05-11"
+    },
+    {
+     "rank": 2,
+     "song": "Eventually",
+     "artist": "Tame Impala",
+     "title": "[FRESH] Tame Impala - Eventually",
+     "score": 234,
+     "comments": 56,
+     "url": "https://www.reddit.com/r/indieheads/comments/3570ld/",
+     "posted": "2015-05-07"
+    },
+    {
+     "rank": 3,
+     "song": "I Know There's Gonna Be (Good Times)",
+     "artist": "Jamie xx feat. Young Thug and Popcaan",
+     "title": "[FRESH] Jamie xx feat. Young Thug and Popcaan - I Know There's Gonna Be (Good Times)",
+     "score": 130,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/indieheads/comments/36nrkk/",
+     "posted": "2015-05-20"
+    },
+    {
+     "rank": 4,
+     "song": "I Know There's Gonna Be (Good Times) ft. Young Thug",
+     "artist": "Jamie xx",
+     "title": "[FRESH] Jamie xx - I Know There's Gonna Be (Good Times) ft. Young Thug",
+     "score": 110,
+     "comments": 28,
+     "url": "https://www.reddit.com/r/indieheads/comments/35kmxd/",
+     "posted": "2015-05-11"
+    },
+    {
+     "rank": 5,
+     "song": "Multi-Love",
+     "artist": "Unknown Mortal Orchestra",
+     "title": "[FRESH] Unknown Mortal Orchestra - Multi-Love (Album Stream)",
+     "score": 100,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/indieheads/comments/36bxea/",
+     "posted": "2015-05-18"
+    },
+    {
+     "rank": 6,
+     "song": "Hiatus Kaiyote",
+     "artist": "Choose Your Weapon",
+     "title": "[FRESH ALBUM] Choose Your Weapon - Hiatus Kaiyote",
+     "score": 91,
+     "comments": 19,
+     "url": "https://www.reddit.com/r/indieheads/comments/34tdvt/",
+     "posted": "2015-05-04"
+    },
+    {
+     "rank": 7,
+     "song": "Dream Lover",
+     "artist": "Destroyer",
+     "title": "[FRESH] Destroyer - \"Dream Lover\"",
+     "score": 90,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/indieheads/comments/36r2bm/",
+     "posted": "2015-05-21"
+    },
+    {
+     "rank": 8,
+     "song": "Inside Out",
+     "artist": "Spoon",
+     "title": "[FRESH VIDEO] Spoon - Inside Out",
+     "score": 75,
+     "comments": 14,
+     "url": "https://www.reddit.com/r/indieheads/comments/35twvi/",
+     "posted": "2015-05-13"
+    },
+    {
+     "rank": 9,
+     "song": "Cause I'm A Man",
+     "artist": "Tame Impala",
+     "title": "[FRESH] Tame Impala - 'Cause I'm A Man (New animated music video)",
+     "score": 70,
+     "comments": 21,
+     "url": "https://www.reddit.com/r/indieheads/comments/36r9k2/",
+     "posted": "2015-05-21"
+    },
+    {
+     "rank": 10,
+     "song": "Annie",
+     "artist": "Neon Indian",
+     "title": "[FRESH] Neon Indian - Annie",
+     "score": 64,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/37c0rw/",
+     "posted": "2015-05-26"
+    },
+    {
+     "rank": 11,
+     "song": "Intro",
+     "artist": "Ratatat",
+     "title": "[FRESH] Ratatat - Intro",
+     "score": 64,
+     "comments": 15,
+     "url": "https://www.reddit.com/r/indieheads/comments/35yi8b/",
+     "posted": "2015-05-14"
+    },
+    {
+     "rank": 12,
+     "song": "Kamasi Washington: it might not be very indie but everyone should check it our",
+     "artist": "The Epic",
+     "title": "[FRESH] The Epic - Kamasi Washington: it might not be very indie but everyone should check it our",
+     "score": 56,
+     "comments": 20,
+     "url": "https://www.reddit.com/r/indieheads/comments/357ig8/",
+     "posted": "2015-05-07"
+    },
+    {
+     "rank": 13,
+     "song": "New Alhambra",
+     "artist": "Elvis Depressedly",
+     "title": "[FRESH] Elvis Depressedly - New Alhambra (Full Album Stream)",
+     "score": 47,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/3599qd/",
+     "posted": "2015-05-08"
+    },
+    {
+     "rank": 14,
+     "song": "Mutilator Defeated at Last",
+     "artist": "Thee Oh Sees",
+     "title": "[FRESH STREAM] Thee Oh Sees - Mutilator Defeated at Last",
+     "score": 46,
+     "comments": 32,
+     "url": "https://www.reddit.com/r/indieheads/comments/35vbed/",
+     "posted": "2015-05-13"
+    },
+    {
+     "rank": 15,
+     "song": "The Shade",
+     "artist": "METRIC",
+     "title": "[FRESH] METRIC - The Shade",
+     "score": 46,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/35lb11/",
+     "posted": "2015-05-11"
+    }
+   ]
+  }
+ ]
+}

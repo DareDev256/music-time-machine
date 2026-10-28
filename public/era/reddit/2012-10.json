@@ -1,0 +1,162 @@
+{
+ "month": "2012-10",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Backseat Freestyle (Prod by Hit-Boy) (Uncensored) From the TDE Soundcloud page",
+     "artist": "Kendrick Lamar",
+     "title": "[FRESH] Kendrick Lamar - Backseat Freestyle (Prod by Hit-Boy) (Uncensored) From the TDE Soundcloud page",
+     "score": 333,
+     "comments": 96,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11j9sa/",
+     "posted": "2012-10-15"
+    },
+    {
+     "rank": 2,
+     "song": "Compton",
+     "artist": "Kendrick Lamar f. Dr. Dre",
+     "title": "[Fresh] Kendrick Lamar f. Dr. Dre - Compton",
+     "score": 270,
+     "comments": 92,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/10ss1n/",
+     "posted": "2012-10-02"
+    },
+    {
+     "rank": 3,
+     "song": "The Jig Is Up",
+     "artist": "Kendrick Lamar & J. Cole",
+     "title": "[Fresh] Kendrick Lamar & J. Cole - The Jig Is Up",
+     "score": 214,
+     "comments": 59,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/12cte8/",
+     "posted": "2012-10-30"
+    },
+    {
+     "rank": 4,
+     "song": "P2",
+     "artist": "Mellowhype ft. Earl Sweatshirt",
+     "title": "[Fresh] Mellowhype ft. Earl Sweatshirt - P2",
+     "score": 132,
+     "comments": 76,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1154qe/",
+     "posted": "2012-10-08"
+    },
+    {
+     "rank": 5,
+     "song": "Rivers of Blood (Man With The Iron First Soundtrack)",
+     "artist": "Wu-Tang Clan ft. Kool G Rap",
+     "title": "[FRESH] Wu-Tang Clan ft. Kool G Rap - Rivers of Blood (Man With The Iron First Soundtrack)",
+     "score": 127,
+     "comments": 36,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11kpy5/",
+     "posted": "2012-10-16"
+    },
+    {
+     "rank": 6,
+     "song": "White Walls",
+     "artist": "Macklemore & Ryan Lewis feat. ScHoolboy Q",
+     "title": "[FRESH] Macklemore & Ryan Lewis feat. ScHoolboy Q - White Walls",
+     "score": 103,
+     "comments": 28,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/115jdc/",
+     "posted": "2012-10-08"
+    },
+    {
+     "rank": 7,
+     "song": "New Chick",
+     "artist": "Dumbfoundead",
+     "title": "[FRESH] Dumbfoundead - New Chick",
+     "score": 103,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11wvqt/",
+     "posted": "2012-10-23"
+    },
+    {
+     "rank": 8,
+     "song": "Reagan\" (Official Music Video) - YouTube",
+     "artist": "Killer Mike",
+     "title": "[FRESH] Killer Mike - \"Reagan\" (Official Music Video) - YouTube",
+     "score": 102,
+     "comments": 50,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/10vvhz/",
+     "posted": "2012-10-03"
+    },
+    {
+     "rank": 9,
+     "song": "Dreams and Nightmares Intro",
+     "artist": "Meek Mill",
+     "title": "[FRESH] Meek Mill - Dreams and Nightmares Intro",
+     "score": 93,
+     "comments": 49,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11wo2j/",
+     "posted": "2012-10-22"
+    },
+    {
+     "rank": 10,
+     "song": "It Ain't Over",
+     "artist": "Shad",
+     "title": "[FRESH] Shad - It Ain't Over",
+     "score": 80,
+     "comments": 11,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/12ej6z/",
+     "posted": "2012-10-31"
+    },
+    {
+     "rank": 11,
+     "song": "Tick Tock",
+     "artist": "Pusha T, Raekwon, Joell Ortiz & Danny Brown",
+     "title": "[FRESH] Pusha T, Raekwon, Joell Ortiz & Danny Brown - Tick Tock",
+     "score": 76,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11re9p/",
+     "posted": "2012-10-19"
+    },
+    {
+     "rank": 12,
+     "song": "Fatty Boom Boom",
+     "artist": "Die Antwoord",
+     "title": "[Fresh] Die Antwoord - \"Fatty Boom Boom\" (Official Video)",
+     "score": 75,
+     "comments": 43,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11l9kl/",
+     "posted": "2012-10-16"
+    },
+    {
+     "rank": 13,
+     "song": "PAIN",
+     "artist": "PUSHA T ft. Future",
+     "title": "[FRESH] PUSHA T ft. Future - PAIN (Prod. by Kanye West)",
+     "score": 73,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/1162jr/",
+     "posted": "2012-10-09"
+    },
+    {
+     "rank": 14,
+     "song": "Swimming Pools (Black Hippy Remix) ft. Schoolboy Q, Jay Rock & Ab-Soul",
+     "artist": "Kendrick Lamar",
+     "title": "[FRESH] Kendrick Lamar – Swimming Pools (Black Hippy Remix) ft. Schoolboy Q, Jay Rock & Ab-Soul",
+     "score": 67,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/11wf3s/",
+     "posted": "2012-10-22"
+    },
+    {
+     "rank": 15,
+     "song": "Enemy",
+     "artist": "The Weeknd",
+     "title": "[FRESH] The Weeknd - Enemy (4:51)",
+     "score": 62,
+     "comments": 26,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/123xqc/",
+     "posted": "2012-10-26"
+    }
+   ]
+  }
+ ]
+}

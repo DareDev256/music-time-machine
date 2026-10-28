@@ -1,0 +1,1381 @@
+{
+ "months": {
+  "2011-01": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 7
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-02": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 3
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-03": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 6
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-04": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 16
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-05": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 7
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-06": {
+   "r/hiphopheads": {
+    "rows": 9,
+    "status": "ok",
+    "reason": null,
+    "candidates": 35
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-07": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 73
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-08": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 130
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 101
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-10": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 182
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-11": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 175
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2011-12": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 180
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-01": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 199
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-02": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 217
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-03": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 258
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-04": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 211
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-05": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 221
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-06": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 267
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-07": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 406
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-08": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 425
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 399
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-10": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 412
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-11": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 442
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2012-12": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 388
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-01": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 554
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-02": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 575
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-03": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 842
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-04": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1090
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-05": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-06": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1096
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-07": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1139
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-08": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1368
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1127
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-10": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1103
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-11": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1077
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2013-12": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1208
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2014-01"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-01": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1122
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 44
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-02": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 43
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-03": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1319
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 70
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-04": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1320
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 81
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-05": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 33
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-06": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1315
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 36
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-07": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 70
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-08": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1407
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 117
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1431
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 128
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-10": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1627
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 120
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-11": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 125
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2014-12": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 101
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "skipped",
+    "reason": "tag convention starts 2015-01"
+   }
+  },
+  "2015-01": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1518
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 163
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-02": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1546
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 157
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-03": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1683
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-04": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 282
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-05": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 229
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-06": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1803
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 253
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-07": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "only 0 usable release rows (need 5)",
+    "candidates": 0
+   }
+  },
+  "2015-08": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 57
+   }
+  },
+  "2015-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2009
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 381
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 86
+   }
+  },
+  "2015-10": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1837
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 395
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 107
+   }
+  },
+  "2015-11": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 1969
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 379
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 78
+   }
+  },
+  "2015-12": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 239
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 48
+   }
+  },
+  "2016-01": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2291
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 88
+   }
+  },
+  "2016-02": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2299
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 604
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 115
+   }
+  },
+  "2016-03": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 664
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 130
+   }
+  },
+  "2016-04": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 171
+   }
+  },
+  "2016-05": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 564
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 272
+   }
+  },
+  "2016-06": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 611
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 252
+   }
+  },
+  "2016-07": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2435
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 557
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 275
+   }
+  },
+  "2016-08": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 678
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 346
+   }
+  },
+  "2016-09": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2483
+   },
+   "r/indieheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   }
+  },
+  "2016-10": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 630
+   },
+   "r/popheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 331
+   }
+  },
+  "2016-11": {
+   "r/hiphopheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 2315
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 565
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   }
+  },
+  "2016-12": {
+   "r/hiphopheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   },
+   "r/indieheads": {
+    "rows": 15,
+    "status": "ok",
+    "reason": null,
+    "candidates": 333
+   },
+   "r/popheads": {
+    "rows": 0,
+    "status": "failed",
+    "reason": "archive query timed out 8 times"
+   }
+  }
+ },
+ "built": "2026-10-20",
+ "source": "Arctic Shift (arctic-shift.photon-reddit.com), Reddit archive; ranked by upvotes",
+ "subreddits": [
+  {
+   "id": "r/hiphopheads",
+   "tag": "\\[\\s*FRESH\\b[^\\]]*\\]",
+   "first": "2011-01",
+   "label": "r/hiphopheads · [FRESH], top by upvotes"
+  },
+  {
+   "id": "r/indieheads",
+   "tag": "\\[\\s*FRESH\\b[^\\]]*\\]",
+   "first": "2014-01",
+   "label": "r/indieheads · [FRESH], top by upvotes"
+  },
+  {
+   "id": "r/popheads",
+   "tag": "\\[\\s*FRESH\\b[^\\]]*\\]",
+   "first": "2015-01",
+   "label": "r/popheads · [FRESH], top by upvotes"
+  }
+ ],
+ "skipped_subreddits": [
+  {
+   "id": "r/rnb",
+   "reason": "[FRESH] exists but is used on only 1-4 posts a month (probed 2015-05, 2021-05, 2013-05), below the 5-row canary; its archive queries also time out most of the time"
+  },
+  {
+   "id": "r/electronicmusic",
+   "reason": "no stable release tag ([NEW] appears on ~10% of posts from ~2020, titles otherwise carry genre brackets)"
+  },
+  {
+   "id": "r/Metal",
+   "reason": "no stable release tag ([NEW RELEASE] on ~5 posts a month, most new music is untagged)"
+  },
+  {
+   "id": "r/country",
+   "reason": "no release tag; new music is untagged"
+  },
+  {
+   "id": "r/CountryMusic",
+   "reason": "no release tag; new music is untagged"
+  },
+  {
+   "id": "r/LetsTalkMusic",
+   "reason": "discussion forum, not releases"
+  }
+ ]
+}

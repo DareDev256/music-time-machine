@@ -1,0 +1,474 @@
+{
+ "month": "2016-07",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/hiphopheads",
+   "label": "r/hiphopheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Black Hippy remix",
+     "artist": "THat Part",
+     "title": "[FRESH] THat Part - Black Hippy remix",
+     "score": 4577,
+     "comments": 816,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4rsfso/",
+     "posted": "2016-07-08"
+    },
+    {
+     "rank": 2,
+     "song": "Timmy Turner",
+     "artist": "Desiigner",
+     "title": "[FRESH] Desiigner - Timmy Turner",
+     "score": 3936,
+     "comments": 1367,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4ty65y/",
+     "posted": "2016-07-21"
+    },
+    {
+     "rank": 3,
+     "song": "Dang!",
+     "artist": "Mac Miller ft. Anderson .Paak",
+     "title": "[FRESH] Mac Miller ft. Anderson .Paak - Dang!",
+     "score": 3396,
+     "comments": 486,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4v1ihe/",
+     "posted": "2016-07-28"
+    },
+    {
+     "rank": 4,
+     "song": "Blank Face LP",
+     "artist": "ScHoolboy Q",
+     "title": "[FRESH] ScHoolboy Q - Blank Face LP",
+     "score": 2944,
+     "comments": 106,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4rsjeh/",
+     "posted": "2016-07-08"
+    },
+    {
+     "rank": 5,
+     "song": "Holy Key (ft. Kendrick Lamar, Big Sean & Betty Wright)",
+     "artist": "DJ Khaled",
+     "title": "[FRESH] DJ Khaled - Holy Key (ft. Kendrick Lamar, Big Sean & Betty Wright)",
+     "score": 2782,
+     "comments": 652,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4u5yft/",
+     "posted": "2016-07-23"
+    },
+    {
+     "rank": 6,
+     "song": "Bobby Tarantino",
+     "artist": "Logic",
+     "title": "[Fresh] Logic - Bobby Tarantino",
+     "score": 2682,
+     "comments": 1098,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4qplsi/",
+     "posted": "2016-07-01"
+    },
+    {
+     "rank": 7,
+     "song": "JoHn Muir",
+     "artist": "ScHoolboy Q",
+     "title": "[FRESH VIDEO] ScHoolboy Q - JoHn Muir",
+     "score": 2551,
+     "comments": 360,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4tupon/",
+     "posted": "2016-07-21"
+    },
+    {
+     "rank": 8,
+     "song": "Everybody Looking",
+     "artist": "Gucci Mane",
+     "title": "[FRESH ALBUM] Gucci Mane - Everybody Looking",
+     "score": 2530,
+     "comments": 685,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4u0rgr/",
+     "posted": "2016-07-22"
+    },
+    {
+     "rank": 9,
+     "song": "Broccoli feat. Lil Yachty",
+     "artist": "D.R.A.M.",
+     "title": "[ Fresh Video ] D.R.A.M. - Broccoli feat. Lil Yachty (Official Music Video)",
+     "score": 2381,
+     "comments": 376,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4u3u5c/",
+     "posted": "2016-07-22"
+    },
+    {
+     "rank": 10,
+     "song": "Fuck Taylor Swift",
+     "artist": "Lil Boom",
+     "title": "[FRESH] Lil Boom - Fuck Taylor Swift",
+     "score": 2322,
+     "comments": 189,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4tdzou/",
+     "posted": "2016-07-18"
+    },
+    {
+     "rank": 11,
+     "song": "Pussy Print ft. Kanye West",
+     "artist": "Gucci Mane",
+     "title": "[FRESH] Gucci Mane - Pussy Print ft. Kanye West",
+     "score": 2006,
+     "comments": 445,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4twvb8/",
+     "posted": "2016-07-21"
+    },
+    {
+     "rank": 12,
+     "song": "Wake (Drake Diss)",
+     "artist": "Joe Budden",
+     "title": "[FRESH] Joe Budden – Wake (Drake Diss) (Prod. by AraabMUZIK)",
+     "score": 1931,
+     "comments": 1104,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4rh71q/",
+     "posted": "2016-07-06"
+    },
+    {
+     "rank": 13,
+     "song": "Be Somebody",
+     "artist": "Clams Casino ft. A$AP Rocky and Lil B",
+     "title": "[FRESH] Clams Casino ft. A$AP Rocky and Lil B - Be Somebody",
+     "score": 1866,
+     "comments": 329,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4stx10/",
+     "posted": "2016-07-14"
+    },
+    {
+     "rank": 14,
+     "song": "On Me\" (feat. Tupac)",
+     "artist": "Gucci Mane",
+     "title": "[FRESH] Gucci Mane - \"On Me\" (feat. Tupac)",
+     "score": 1745,
+     "comments": 314,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4rfrb0/",
+     "posted": "2016-07-06"
+    },
+    {
+     "rank": 15,
+     "song": "The Perfect Luv Tape",
+     "artist": "Lil Uzi Vert",
+     "title": "[FRESH MIXTAPE] Lil Uzi Vert - The Perfect Luv Tape",
+     "score": 1601,
+     "comments": 542,
+     "url": "https://www.reddit.com/r/hiphopheads/comments/4vjbny/",
+     "posted": "2016-07-31"
+    }
+   ]
+  },
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Real Love Baby",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - Real Love Baby (Mastered Single Release)",
+     "score": 391,
+     "comments": 90,
+     "url": "https://www.reddit.com/r/indieheads/comments/4ums2h/",
+     "posted": "2016-07-26"
+    },
+    {
+     "rank": 2,
+     "song": "Wildflower",
+     "artist": "[INTERNATIONAL] The Avalanches",
+     "title": "[FRESH STREAM] [INTERNATIONAL] The Avalanches - Wildflower",
+     "score": 346,
+     "comments": 77,
+     "url": "https://www.reddit.com/r/indieheads/comments/4t005j/",
+     "posted": "2016-07-15"
+    },
+    {
+     "rank": 3,
+     "song": "Elevator Operator",
+     "artist": "Courtney Barnett",
+     "title": "[FRESH VIDEO] Courtney Barnett - Elevator Operator",
+     "score": 326,
+     "comments": 39,
+     "url": "https://www.reddit.com/r/indieheads/comments/4ri5o6/",
+     "posted": "2016-07-06"
+    },
+    {
+     "rank": 4,
+     "song": "Wildflower",
+     "artist": "The Avalanches",
+     "title": "[FRESH STREAM] The Avalanches - Wildflower",
+     "score": 269,
+     "comments": 82,
+     "url": "https://www.reddit.com/r/indieheads/comments/4rugty/",
+     "posted": "2016-07-08"
+    },
+    {
+     "rank": 5,
+     "song": "Friends (feat. Bon Iver and Kanye West)",
+     "artist": "Francis and the Lights",
+     "title": "[FRESH] Francis and the Lights - Friends (feat. Bon Iver and Kanye West)",
+     "score": 216,
+     "comments": 61,
+     "url": "https://www.reddit.com/r/indieheads/comments/4rqhz7/",
+     "posted": "2016-07-07"
+    },
+    {
+     "rank": 6,
+     "song": "Squidbillies theme song cover",
+     "artist": "Father John Misty",
+     "title": "[FRESH] Father John Misty - Squidbillies theme song cover",
+     "score": 210,
+     "comments": 33,
+     "url": "https://www.reddit.com/r/indieheads/comments/4rp7j4/",
+     "posted": "2016-07-07"
+    },
+    {
+     "rank": 7,
+     "song": "The Traveller",
+     "artist": "Beach House",
+     "title": "[FRESH VIDEO] Beach House - The Traveller",
+     "score": 185,
+     "comments": 20,
+     "url": "https://www.reddit.com/r/indieheads/comments/4v0u8q/",
+     "posted": "2016-07-28"
+    },
+    {
+     "rank": 8,
+     "song": "Degraded",
+     "artist": "Preoccupations",
+     "title": "[FRESH] Preoccupations - Degraded",
+     "score": 162,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/indieheads/comments/4sn4g4/",
+     "posted": "2016-07-13"
+    },
+    {
+     "rank": 9,
+     "song": "Safe and Sound",
+     "artist": "Justice",
+     "title": "[Fresh] Justice - \"Safe and Sound\"",
+     "score": 161,
+     "comments": 35,
+     "url": "https://www.reddit.com/r/indieheads/comments/4sopgo/",
+     "posted": "2016-07-13"
+    },
+    {
+     "rank": 10,
+     "song": "Division",
+     "artist": "Tycho",
+     "title": "[FRESH] Tycho - Division",
+     "score": 137,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/4qpxlg/",
+     "posted": "2016-07-01"
+    },
+    {
+     "rank": 11,
+     "song": "Back Pocket",
+     "artist": "Vulfpeck",
+     "title": "[FRESH] Vulfpeck - Back Pocket (Music Video)",
+     "score": 122,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/indieheads/comments/4tlvvo/",
+     "posted": "2016-07-19"
+    },
+    {
+     "rank": 12,
+     "song": "Giving Good People Bad Ideas",
+     "artist": "Death Grips",
+     "title": "[FRESH VIDEO] Death Grips - Giving Good People Bad Ideas",
+     "score": 119,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/4s3h53/",
+     "posted": "2016-07-10"
+    },
+    {
+     "rank": 13,
+     "song": "Scum with Boundaries",
+     "artist": "The I.l.y's",
+     "title": "[FRESH ALBUM] The I.l.y's - Scum with Boundaries",
+     "score": 119,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/indieheads/comments/4t7amo/",
+     "posted": "2016-07-17"
+    },
+    {
+     "rank": 14,
+     "song": "Char",
+     "artist": "Crystal Castles",
+     "title": "[FRESH] Crystal Castles - Char",
+     "score": 108,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/indieheads/comments/4scisd/",
+     "posted": "2016-07-11"
+    },
+    {
+     "rank": 15,
+     "song": "Magic Bullet",
+     "artist": "My Morning Jacket",
+     "title": "[FRESH] My Morning Jacket - Magic Bullet",
+     "score": 106,
+     "comments": 21,
+     "url": "https://www.reddit.com/r/indieheads/comments/4s7u21/",
+     "posted": "2016-07-10"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Make Me...",
+     "artist": "Britney Spears (ft. G-Eazy)",
+     "title": "[FRESH] Britney Spears (ft. G-Eazy) - Make Me...",
+     "score": 163,
+     "comments": 96,
+     "url": "https://www.reddit.com/r/popheads/comments/4sx74o/",
+     "posted": "2016-07-15"
+    },
+    {
+     "rank": 2,
+     "song": "Wolves",
+     "artist": "Kanye West",
+     "title": "[FRESH VIDEO] Kanye West - Wolves",
+     "score": 99,
+     "comments": 53,
+     "url": "https://www.reddit.com/r/popheads/comments/4v7dv8/",
+     "posted": "2016-07-29"
+    },
+    {
+     "rank": 3,
+     "song": "Cold Water (feat. Justin Bieber & MØ)",
+     "artist": "Major Lazer",
+     "title": "[FRESH] Major Lazer - Cold Water (feat. Justin Bieber & MØ)",
+     "score": 93,
+     "comments": 36,
+     "url": "https://www.reddit.com/r/popheads/comments/4u103c/",
+     "posted": "2016-07-22"
+    },
+    {
+     "rank": 4,
+     "song": "Closer",
+     "artist": "The Chainsmokers feat. Halsey",
+     "title": "[FRESH] The Chainsmokers feat. Halsey - Closer",
+     "score": 87,
+     "comments": 55,
+     "url": "https://www.reddit.com/r/popheads/comments/4v4ded/",
+     "posted": "2016-07-29"
+    },
+    {
+     "rank": 5,
+     "song": "M.I.L.F. $",
+     "artist": "Fergie",
+     "title": "[FRESH VIDEO] Fergie - M.I.L.F. $",
+     "score": 80,
+     "comments": 50,
+     "url": "https://www.reddit.com/r/popheads/comments/4qu2lp/",
+     "posted": "2016-07-01"
+    },
+    {
+     "rank": 6,
+     "song": "Famous\" SFW Version (features Justin Bieber, Carly Rae, Troye Sivan, and others)",
+     "artist": "BBC Radio 1",
+     "title": "[FRESH VIDEO] BBC Radio 1 - \"Famous\" SFW Version (features Justin Bieber, Carly Rae, Troye Sivan, and others)",
+     "score": 70,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/popheads/comments/4rojqf/",
+     "posted": "2016-07-07"
+    },
+    {
+     "rank": 7,
+     "song": "Timmy Turner (shits hot;please listen)",
+     "artist": "Desiigner",
+     "title": "[FRESH] Desiigner - Timmy Turner (shits hot;please listen)",
+     "score": 57,
+     "comments": 46,
+     "url": "https://www.reddit.com/r/popheads/comments/4tyt05/",
+     "posted": "2016-07-21"
+    },
+    {
+     "rank": 8,
+     "song": "Rise",
+     "artist": "Katy Perry",
+     "title": "[FRESH] Katy Perry - Rise",
+     "score": 55,
+     "comments": 135,
+     "url": "https://www.reddit.com/r/popheads/comments/4sx6vn/",
+     "posted": "2016-07-15"
+    },
+    {
+     "rank": 9,
+     "song": "F*** With Myself",
+     "artist": "Banks",
+     "title": "[FRESH] Banks - F*** With Myself",
+     "score": 52,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/popheads/comments/4si0zx/",
+     "posted": "2016-07-12"
+    },
+    {
+     "rank": 10,
+     "song": "A Song for Orlando (Feat. Britney Spears, P!nk, Selena Gomez, and More)",
+     "artist": "Hands",
+     "title": "[FRESH] “Hands” - A Song for Orlando (Feat. Britney Spears, P!nk, Selena Gomez, and More)",
+     "score": 52,
+     "comments": 22,
+     "url": "https://www.reddit.com/r/popheads/comments/4rgt9y/",
+     "posted": "2016-07-06"
+    },
+    {
+     "rank": 11,
+     "song": "Nothing's Real",
+     "artist": "Shura",
+     "title": "[FRESH] Shura - Nothing's Real",
+     "score": 51,
+     "comments": 26,
+     "url": "https://www.reddit.com/r/popheads/comments/4rt3x7/",
+     "posted": "2016-07-08"
+    },
+    {
+     "rank": 12,
+     "song": "Cruel",
+     "artist": "Snakehips (ft. ZAYN)",
+     "title": "[FRESH] Snakehips (ft. ZAYN) - Cruel",
+     "score": 49,
+     "comments": 17,
+     "url": "https://www.reddit.com/r/popheads/comments/4sx01r/",
+     "posted": "2016-07-15"
+    },
+    {
+     "rank": 13,
+     "song": "WILD ft. Alessia Cara",
+     "artist": "Troye Sivan",
+     "title": "[Fresh Video] Troye Sivan - WILD ft. Alessia Cara",
+     "score": 48,
+     "comments": 46,
+     "url": "https://www.reddit.com/r/popheads/comments/4u5vxi/",
+     "posted": "2016-07-23"
+    },
+    {
+     "rank": 14,
+     "song": "Mean What I Mean",
+     "artist": "AlunaGeorge, Leikeli47, Dreezy",
+     "title": "[FRESH VIDEO] AlunaGeorge, Leikeli47, Dreezy - Mean What I Mean",
+     "score": 47,
+     "comments": 25,
+     "url": "https://www.reddit.com/r/popheads/comments/4uz430/",
+     "posted": "2016-07-28"
+    },
+    {
+     "rank": 15,
+     "song": "Tears",
+     "artist": "Clean Bandit ft. Louisa Johnson",
+     "title": "[FRESH VIDEO] Clean Bandit ft. Louisa Johnson - Tears",
+     "score": 41,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/popheads/comments/4rpn02/",
+     "posted": "2016-07-07"
+    }
+   ]
+  }
+ ]
+}

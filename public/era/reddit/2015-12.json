@@ -1,0 +1,318 @@
+{
+ "month": "2015-12",
+ "built": "2026-10-20",
+ "sources": [
+  {
+   "id": "r/indieheads",
+   "label": "r/indieheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "Christmas Will Break Your Heart",
+     "artist": "LCD Soundsystem",
+     "title": "[FRESH] LCD Soundsystem - Christmas Will Break Your Heart",
+     "score": 1258,
+     "comments": 265,
+     "url": "https://www.reddit.com/r/indieheads/comments/3y4q0j/",
+     "posted": "2015-12-24"
+    },
+    {
+     "rank": 2,
+     "song": "Spectre",
+     "artist": "Radiohead",
+     "title": "[FRESH] Radiohead - Spectre",
+     "score": 835,
+     "comments": 146,
+     "url": "https://www.reddit.com/r/indieheads/comments/3y6d1u/",
+     "posted": "2015-12-25"
+    },
+    {
+     "rank": 3,
+     "song": "WHITE CHRISTMA$",
+     "artist": "Mac DeMarco",
+     "title": "[FRESH] Mac DeMarco - WHITE CHRISTMA$",
+     "score": 305,
+     "comments": 34,
+     "url": "https://www.reddit.com/r/indieheads/comments/3yb7om/",
+     "posted": "2015-12-26"
+    },
+    {
+     "rank": 4,
+     "song": "Christmas Unicorn",
+     "artist": "Sufjan Stevens",
+     "title": "[FRESH VIDEO] Sufjan Stevens - Christmas Unicorn",
+     "score": 166,
+     "comments": 24,
+     "url": "https://www.reddit.com/r/indieheads/comments/3vk3m0/",
+     "posted": "2015-12-05"
+    },
+    {
+     "rank": 5,
+     "song": "Lazarus",
+     "artist": "David Bowie",
+     "title": "[FRESH] David Bowie - Lazarus (Audio)",
+     "score": 150,
+     "comments": 78,
+     "url": "https://www.reddit.com/r/indieheads/comments/3x8n7a/",
+     "posted": "2015-12-17"
+    },
+    {
+     "rank": 6,
+     "song": "The Speed Dial",
+     "artist": "How To Dress Well (feat. @Seinfeld2000)",
+     "title": "[FRESH] How To Dress Well (feat. @Seinfeld2000) - \"The Speed Dial\"",
+     "score": 135,
+     "comments": 16,
+     "url": "https://www.reddit.com/r/indieheads/comments/3y010f/",
+     "posted": "2015-12-23"
+    },
+    {
+     "rank": 7,
+     "song": "Silent Spring (solo Acoustic @ Pathway to Paris) (New Radiohead song!)",
+     "artist": "Thom Yorke",
+     "title": "[FRESH] Thom Yorke - Silent Spring (solo Acoustic @ Pathway to Paris) (New Radiohead song!)",
+     "score": 123,
+     "comments": 38,
+     "url": "https://www.reddit.com/r/indieheads/comments/3vh779/",
+     "posted": "2015-12-04"
+    },
+    {
+     "rank": 8,
+     "song": "Today/Dear Billy Corgan",
+     "artist": "Deerhunter",
+     "title": "[FRESH] Deerhunter - \"Today/Dear Billy Corgan\"",
+     "score": 84,
+     "comments": 56,
+     "url": "https://www.reddit.com/r/indieheads/comments/3w2uh0/",
+     "posted": "2015-12-09"
+    },
+    {
+     "rank": 9,
+     "song": "Under The Sun",
+     "artist": "DIIV",
+     "title": "[FRESH] DIIV - Under The Sun",
+     "score": 83,
+     "comments": 23,
+     "url": "https://www.reddit.com/r/indieheads/comments/3wqf8w/",
+     "posted": "2015-12-14"
+    },
+    {
+     "rank": 10,
+     "song": "A New Place 2 Drown",
+     "artist": "Archy Marshall (King Krule)",
+     "title": "[FRESH STREAM] Archy Marshall (King Krule) - A New Place 2 Drown",
+     "score": 79,
+     "comments": 31,
+     "url": "https://www.reddit.com/r/indieheads/comments/3w6wv9/",
+     "posted": "2015-12-10"
+    },
+    {
+     "rank": 11,
+     "song": "Last Christmas",
+     "artist": "Future Islands",
+     "title": "[FRESH] Future Islands - Last Christmas",
+     "score": 68,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/indieheads/comments/3y4835/",
+     "posted": "2015-12-24"
+    },
+    {
+     "rank": 12,
+     "song": "Oblivion Access",
+     "artist": "Lil Ugly Mane",
+     "title": "[FRESH] Lil Ugly Mane - Oblivion Access",
+     "score": 56,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/3xfttg/",
+     "posted": "2015-12-19"
+    },
+    {
+     "rank": 13,
+     "song": "Old Rock N Roll",
+     "artist": "Young Fathers",
+     "title": "[FRESH VIDEO] Young Fathers - Old Rock N Roll",
+     "score": 55,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/indieheads/comments/3yaha8/",
+     "posted": "2015-12-26"
+    },
+    {
+     "rank": 14,
+     "song": "Alone on Christmas Day",
+     "artist": "Bill Murray & Phoenix",
+     "title": "[FRESH CHRISTMAS CHEER] Bill Murray & Phoenix - \"Alone on Christmas Day\"",
+     "score": 51,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/indieheads/comments/3vdruq/",
+     "posted": "2015-12-04"
+    },
+    {
+     "rank": 15,
+     "song": "SB-03",
+     "artist": "Unknown Mortal Orchestra",
+     "title": "[FRESH] Unknown Mortal Orchestra - SB-03 (Instrumental jam/improvisation w/ free DL)",
+     "score": 51,
+     "comments": 5,
+     "url": "https://www.reddit.com/r/indieheads/comments/3yayba/",
+     "posted": "2015-12-26"
+    }
+   ]
+  },
+  {
+   "id": "r/popheads",
+   "label": "r/popheads · [FRESH], top by upvotes",
+   "rows": [
+    {
+     "rank": 1,
+     "song": "United State of Pop 2015 (Fifty Shades of Pop)",
+     "artist": "DJ Earworm",
+     "title": "[FRESH] DJ Earworm - United State of Pop 2015 (Fifty Shades of Pop)",
+     "score": 47,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/popheads/comments/3v5j3t/",
+     "posted": "2015-12-02"
+    },
+    {
+     "rank": 2,
+     "song": "In The Night",
+     "artist": "The Weeknd",
+     "title": "[FRESH VIDEO] The Weeknd - In The Night",
+     "score": 31,
+     "comments": 8,
+     "url": "https://www.reddit.com/r/popheads/comments/3w089v/",
+     "posted": "2015-12-09"
+    },
+    {
+     "rank": 3,
+     "song": "heartsigh",
+     "artist": "Purity Ring",
+     "title": "[FRESH VIDEO] Purity Ring - heartsigh",
+     "score": 27,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/popheads/comments/3wtoqn/",
+     "posted": "2015-12-14"
+    },
+    {
+     "rank": 4,
+     "song": "Run Away With Me (Simlish Version)",
+     "artist": "Carly Rae Jepsen",
+     "title": "[FRESH] Carly Rae Jepsen - Run Away With Me (Simlish Version)",
+     "score": 23,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/3vy8nu/",
+     "posted": "2015-12-08"
+    },
+    {
+     "rank": 5,
+     "song": "Influence",
+     "artist": "Tove Lo",
+     "title": "[FRESH] Tove Lo - Influence",
+     "score": 23,
+     "comments": 4,
+     "url": "https://www.reddit.com/r/popheads/comments/3y3ht6/",
+     "posted": "2015-12-24"
+    },
+    {
+     "rank": 6,
+     "song": "Jenny",
+     "artist": "Studio Killers",
+     "title": "[FRESH VIDEO] Studio Killers - Jenny",
+     "score": 21,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/popheads/comments/3y7jtf/",
+     "posted": "2015-12-25"
+    },
+    {
+     "rank": 7,
+     "song": "A Head Full Of Dreams (FINALLY on Spotify)",
+     "artist": "Coldplay",
+     "title": "[FRESH STREAM] Coldplay - A Head Full Of Dreams (FINALLY on Spotify)",
+     "score": 20,
+     "comments": 10,
+     "url": "https://www.reddit.com/r/popheads/comments/3weiy1/",
+     "posted": "2015-12-11"
+    },
+    {
+     "rank": 8,
+     "song": "Romeo",
+     "artist": "Chairlift",
+     "title": "[FRESH VIDEO] Chairlift - \"Romeo\"",
+     "score": 19,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/popheads/comments/3vw1lm/",
+     "posted": "2015-12-08"
+    },
+    {
+     "rank": 9,
+     "song": "Doubt",
+     "artist": "Mary J Blige ft. Taylor Swift",
+     "title": "[FRESH VIDEO] Mary J Blige ft. Taylor Swift - \"Doubt\"",
+     "score": 17,
+     "comments": 6,
+     "url": "https://www.reddit.com/r/popheads/comments/3xzqjt/",
+     "posted": "2015-12-23"
+    },
+    {
+     "rank": 10,
+     "song": "Devil Side",
+     "artist": "Foxes",
+     "title": "[FRESH] Foxes - Devil Side",
+     "score": 16,
+     "comments": 1,
+     "url": "https://www.reddit.com/r/popheads/comments/3ybbiu/",
+     "posted": "2015-12-26"
+    },
+    {
+     "rank": 11,
+     "song": "UGH!",
+     "artist": "The 1975",
+     "title": "[FRESH VIDEO] The 1975 - UGH!",
+     "score": 15,
+     "comments": 9,
+     "url": "https://www.reddit.com/r/popheads/comments/3xftwg/",
+     "posted": "2015-12-19"
+    },
+    {
+     "rank": 12,
+     "song": "Low Life",
+     "artist": "Future & The Weeknd",
+     "title": "[FRESH] Future & The Weeknd - Low Life",
+     "score": 14,
+     "comments": 2,
+     "url": "https://www.reddit.com/r/popheads/comments/3y5ok9/",
+     "posted": "2015-12-25"
+    },
+    {
+     "rank": 13,
+     "song": "BB TALK",
+     "artist": "MILEY CYRUS",
+     "title": "[FRESH VIDEO] MILEY CYRUS - BB TALK",
+     "score": 13,
+     "comments": 29,
+     "url": "https://www.reddit.com/r/popheads/comments/3wgewh/",
+     "posted": "2015-12-12"
+    },
+    {
+     "rank": 14,
+     "song": "Ariana Grande",
+     "artist": "Christmas & Chill EP",
+     "title": "[FRESH STREAM] Christmas & Chill EP - Ariana Grande",
+     "score": 13,
+     "comments": 7,
+     "url": "https://www.reddit.com/r/popheads/comments/3x8ynz/",
+     "posted": "2015-12-17"
+    },
+    {
+     "rank": 15,
+     "song": "Cheap Thrills",
+     "artist": "Sia",
+     "title": "[FRESH] Sia - Cheap Thrills",
+     "score": 11,
+     "comments": 3,
+     "url": "https://www.reddit.com/r/popheads/comments/3x5l60/",
+     "posted": "2015-12-17"
+    }
+   ]
+  }
+ ]
+}
