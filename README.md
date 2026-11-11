@@ -13,16 +13,16 @@
 <!-- STATS:BEGIN -->
 <table>
 <tr>
-<td align="center"><strong>3,563</strong><br><sub>Hot 100 weeks, 1958–2026</sub></td>
+<td align="center"><strong>3,564</strong><br><sub>Hot 100 weeks, 1958–2026</sub></td>
 <td align="center"><strong>1,196/1,200</strong><br><sub>#1 songs with their cover</sub></td>
-<td align="center"><strong>47,233</strong><br><sub>songs in the search index</sub></td>
+<td align="center"><strong>47,240</strong><br><sub>songs in the search index</sub></td>
 <td align="center"><strong>8</strong><br><sub>genre and country charts</sub></td>
 <td align="center"><strong>216</strong><br><sub>months of archived blog charts (2008–2025)</sub></td>
 <td align="center"><strong>1973–2025</strong><br><sub>US revenue by format (RIAA)</sub></td>
 </tr>
 </table>
 
-<sub>Counted from the data in <code>public/era/</code> on 2026-11-04 by <code>data/scripts/readme_stats.py</code>; charts through 2026-11-07.</sub>
+<sub>Counted from the data in <code>public/era/</code> on 2026-11-11 by <code>data/scripts/readme_stats.py</code>; charts through 2026-11-14.</sub>
 <!-- STATS:END -->
 
 ## What it does
