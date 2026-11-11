@@ -59,7 +59,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      # 2026-11-11: the runner's apt mirror (azure.archive.ubuntu.com) stopped resolving, so
+      # --with-deps failed every run (43040049228, 43050326405, 43052497558) while the site was
+      # fine. The ubuntu-latest image already carries the browser libs: fall back to the browser alone.
+      - run: npx playwright install --with-deps chromium || npx playwright install chromium
       - name: Shoot each month at 390 and 1440
         run: |
           [[ "$URL" =~ ^https://[a-z0-9.-]+$ ]] || { echo "url must be https://host"; exit 1; }
