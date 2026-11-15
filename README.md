@@ -1,14 +1,27 @@
 <div align="center">
 
-# Was Playing
+# Was Playing: music time machine
 
-**The music time machine. Name a song you lived with, fly back through every #1 to the week it was playing, and land in its era.**
+**A music time machine for anyone who wants to hear a year again: name a song you lived with, fly back through every Hot 100 #1 to the week it was playing, and land in its era.**
 
 [**Fly back →**](https://music-time-machine.vercel.app) &nbsp;·&nbsp; [Design](docs/superpowers/specs/2026-10-20-era-engine-design.md) &nbsp;·&nbsp; [Plan](docs/superpowers/plans/2026-10-20-era-engine.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
 
 <img src="docs/screenshots/2026-10-20_flight-landing-1440.png" alt="Landing on 28 April 2012: the genre branches peel off the red Hot 100 trunk, each labelled with that week's number one, above Gotye's cover framed in red" width="860">
 
 </div>
+
+**What song was number 1 on my birthday?** Press *The day you were born* on the [home page](https://music-time-machine.vercel.app), enter the date, and it lands on that week with the Billboard Hot 100 #1, the top 10 that week, and the #1 from 38 weeks earlier. Any date from 4 August 1958 to the latest chart works.
+
+## Quick start
+
+```bash
+git clone https://github.com/DareDev256/music-time-machine.git
+cd music-time-machine
+npm install
+npm run dev            # http://localhost:3000, no keys needed
+```
+
+License: MIT, see [LICENSE](LICENSE).
 
 <!-- STATS:BEGIN -->
 <table>
