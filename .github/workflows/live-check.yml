@@ -47,7 +47,9 @@ jobs:
           [ "$ms" -le 3000 ] || { echo "index build ${ms} ms of CPU on the live server, limit 3000"; exit 1; }
 
   render:
-    runs-on: ubuntu-latest
+    # ubuntu-latest moved to 26.04 in Nov 2026 and Playwright 1.58 has no Chromium build for it ("Playwright does
+    # not support chromium on ubuntu26.04-x64", run 44326139584, 2026-11-18). Pinned until Playwright ships one.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
       URL: ${{ inputs.url }}
