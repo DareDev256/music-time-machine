@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { readFile, readdir } from "node:fs/promises";
-import path from "node:path";
+import { eraJson, eraList } from "@/lib/era/data";
 
 // GET /api/health — what data the site is serving and how old it is.
 // A shard that is missing or stale turns the status to "degraded", so an outside probe
@@ -8,7 +7,6 @@ import path from "node:path";
 
 export const dynamic = "force-dynamic";
 
-const ERA = path.join(process.cwd(), "public", "era");
 const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "unknown";
 const CHART_STALE_DAYS = 14; // Billboard publishes weekly; two missed weeks means the refresh is broken.
 // YouTube counts are refreshed weekly and must not be shown past 30 days (API policy; the page hides them itself).
@@ -17,7 +15,7 @@ const YOUTUBE_STALE_DAYS = 14;
 
 async function json<T>(file: string): Promise<T | null> {
   try {
-    return JSON.parse(await readFile(path.join(ERA, file), "utf8")) as T;
+    return await eraJson<T>(file, { fresh: true });
   } catch {
     return null;
   }
@@ -32,15 +30,12 @@ function daysSince(iso: string | null | undefined): number | null {
 export async function GET() {
   const flight = await json<{ through?: string; songs?: { art: string | null }[] }>("flight.json");
   const lanes = await json<{ lanes?: { lane: string; through?: string }[] }>("lanes/index.json");
-  const heatMonths = await readdir(path.join(ERA, "heat")).then(
-    (f) => f.filter((n) => /^\d{4}-\d{2}\.json$/.test(n)).length,
-    () => 0,
-  );
+  const heatMonths = (await eraList("heat")).filter((n) => /^\d{4}-\d{2}\.json$/.test(n)).length;
 
   // The crawl is live once its index exists; from then on, no month files (deleted as stale) is a failure too.
   const ytBuilt = (await json<unknown>("youtube/index.json")) !== null;
   const ytFiles = ytBuilt
-    ? await readdir(path.join(ERA, "youtube")).then((f) => f.filter((n) => /^\d{4}-\d{2}\.json$/.test(n)), () => [] as string[])
+    ? (await eraList("youtube")).filter((n) => /^\d{4}-\d{2}\.json$/.test(n))
     : [];
   const ytDates = (await Promise.all(ytFiles.map((f) => json<{ viewsAsOf?: string }>(`youtube/${f}`)))).map((d) => d?.viewsAsOf ?? "");
   const ytOldest = ytDates.length ? [...ytDates].sort()[0] || null : null;

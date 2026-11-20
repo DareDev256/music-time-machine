@@ -53,3 +53,6 @@ public/era/youtube/
 public/era/index-yt.json
 .open-next/
 .wrangler/
+
+# Build output for Cloudflare Workers (scripts/era-manifest.mjs)
+public/era/*/manifest.json

@@ -10,7 +10,9 @@
     "test": "vitest",
     "test:ci": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "audit": "npm audit --audit-level=moderate"
+    "audit": "npm audit --audit-level=moderate",
+    "cf:build": "node scripts/era-manifest.mjs && CF_BUILD=1 NEXT_PUBLIC_SITE_URL=https://music-time-machine.mini-outage-watch.workers.dev opennextjs-cloudflare build",
+    "cf:deploy": "npm run cf:build && opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@vercel/og": "^0.6.0",

@@ -1,8 +1,12 @@
 // Server-side readers for the static era shards in public/era/ (built by data/scripts/).
 // History is immutable, so each file is read once per server instance and kept in memory.
+// On Cloudflare Workers (no filesystem) the files come from the ASSETS binding: the readers stay synchronous, a file
+// not fetched yet throws EraMiss, and withEra() fetches it and runs the reads again. Async callers use eraJson/eraList.
 
 import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { assetsBinding, fetchPublic } from "./assets";
 
 const ERA = path.join(process.cwd(), "public", "era");
 const DAY = 86_400_000;
@@ -18,12 +22,76 @@ export interface NumberOneWeek { date: string; song: string; artist: string; art
 export interface IndexRow { s: string; a: string; d: string; g: "day" | "month" | "year"; src: string; ds: string; k: string; y?: string; n?: string }
 
 const cache = new Map<string, unknown>();
+
+/** Thrown on Workers when an era file has not been fetched yet; withEra() catches it, fetches the file and retries. */
+export class EraMiss extends Error {
+  constructor(readonly rel: string) {
+    super(`era file not loaded yet: ${rel} (wrap the read in withEra)`);
+    this.name = "EraMiss";
+  }
+}
+
 function load<T>(rel: string): T | null {
   if (cache.has(rel)) return cache.get(rel) as T | null;
+  if (assetsBinding()) throw new EraMiss(rel);
   const file = path.join(ERA, rel);
   const value = existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as T) : null;
   cache.set(rel, value);
   return value;
+}
+
+/** Fetch era files into the cache. Workers only: with a filesystem, load() reads them itself. */
+export async function primeEra(rels: string[]): Promise<void> {
+  const a = assetsBinding();
+  if (!a) return;
+  await Promise.all(
+    rels.filter((r) => !cache.has(r)).map(async (r) => {
+      const res = await fetchPublic(a, `era/${r}`);
+      cache.set(r, res ? await res.json() : null);
+    }),
+  );
+}
+
+/** Run synchronous era reads on any host. `fn` must only read: on Workers it runs again after each file it misses. */
+export async function withEra<T>(fn: () => T): Promise<T> {
+  for (let i = 0; i < 40; i++) {
+    try {
+      return fn();
+    } catch (e) {
+      if (!(e instanceof EraMiss)) throw e;
+      await primeEra([e.rel]);
+    }
+  }
+  throw new Error("withEra: one read needed more than 40 era files");
+}
+
+/**
+ * One era file for async callers; null when it does not exist. A missing file is not remembered (a later build may
+ * write it). `fresh` skips the cache for readers that must see the files as they are now (/api/health).
+ */
+export async function eraJson<T>(rel: string, opts: { fresh?: boolean } = {}): Promise<T | null> {
+  if (!opts.fresh && cache.has(rel) && cache.get(rel) !== null) return cache.get(rel) as T;
+  const a = assetsBinding();
+  let value: T | null;
+  if (a) {
+    const res = await fetchPublic(a, `era/${rel}`);
+    value = res ? ((await res.json()) as T) : null;
+  } else {
+    try {
+      value = JSON.parse(await readFile(path.join(ERA, rel), "utf8")) as T;
+    } catch (e) {
+      if ((e as { code?: string })?.code !== "ENOENT") throw e;
+      value = null;
+    }
+  }
+  if (value !== null && !opts.fresh) cache.set(rel, value);
+  return value;
+}
+
+/** File names in public/era/<dir>. On Workers they come from <dir>/manifest.json, written by scripts/era-manifest.mjs on cf:build. */
+export async function eraList(dir: string): Promise<string[]> {
+  if (assetsBinding()) return (await eraJson<string[]>(`${dir}/manifest.json`, { fresh: true })) ?? [];
+  return readdir(path.join(ERA, dir)).then((f) => f.filter((n) => n !== "manifest.json"), () => [] as string[]);
 }
 
 const ms = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
@@ -94,10 +162,16 @@ export function chartsThrough(): string {
 export function heatMonthSpan(): [string, string] | null {
   if (cache.has("heat:span")) return cache.get("heat:span") as [string, string] | null;
   let months: string[] = [];
-  try {
-    months = readdirSync(path.join(ERA, "heat")).filter((f) => /^\d{4}-\d{2}\.json$/.test(f)).map((f) => f.slice(0, 7)).sort();
-  } catch {
-    months = [];
+  const isMonth = (f: string) => /^\d{4}-\d{2}\.json$/.test(f);
+  if (assetsBinding()) {
+    // No directory listing on Workers: the build writes heat/manifest.json (scripts/era-manifest.mjs).
+    months = (load<string[]>("heat/manifest.json") ?? []).filter(isMonth).map((f) => f.slice(0, 7)).sort();
+  } else {
+    try {
+      months = readdirSync(path.join(ERA, "heat")).filter(isMonth).map((f) => f.slice(0, 7)).sort();
+    } catch {
+      months = [];
+    }
   }
   const span: [string, string] | null = months.length ? [months[0], months[months.length - 1]] : null;
   cache.set("heat:span", span);

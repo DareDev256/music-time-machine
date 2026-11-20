@@ -2,7 +2,7 @@
 // iTunes. Each source yields at most one date (its earliest credible one); a source that fails,
 // times out or finds nothing simply contributes nothing, and the verdict says "unverified" if all do.
 
-import { indexRow, normTitle, primaryArtist } from "@/lib/era/data";
+import { indexRow, normTitle, primaryArtist, withEra } from "@/lib/era/data";
 import { earliestOf, isDate, type KnownDate } from "@/lib/era/verdict";
 
 const UA = "MusicTimeMachine/2.0 (dev@jamesdare.com)";
@@ -106,7 +106,7 @@ export async function fromItunes(song: string, artist: string): Promise<KnownDat
 export async function gatherEvidence(song: string, artist: string): Promise<KnownDate[]> {
   let own: KnownDate | null = null;
   try {
-    own = fromIndex(song, artist);
+    own = await withEra(() => fromIndex(song, artist));
   } catch {
     own = null;
   }

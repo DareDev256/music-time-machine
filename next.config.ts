@@ -10,6 +10,12 @@ import { FALLBACK_CSP } from "./src/lib/csp";
  * block the youtube-nocookie player for YouTube-only anchors.
  */
 const nextConfig: NextConfig = {
+  // Cloudflare Workers build (npm run cf:build sets CF_BUILD=1): convex/browser's "node" export bundles the ws
+  // package, which breaks on workerd ("Class extends value [object Module]"). ConvexHttpClient needs only fetch, so
+  // the Workers build takes the plain browser entry. Vercel and next dev are unchanged.
+  ...(process.env.CF_BUILD === "1"
+    ? { turbopack: { resolveAlias: { "convex/browser": "./node_modules/convex/dist/esm/browser/index.js" } } }
+    : {}),
   env: {
     NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version ?? "0.0.0",
   },

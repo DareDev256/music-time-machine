@@ -2,18 +2,15 @@
 // Reads public/era/index.json once per server instance. A missing index answers { rows: [] } with
 // x-index: missing so the browser falls through to MusicBrainz and iTunes instead of erroring.
 
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
 import { prepareIndex, searchIndex, type PreparedIndex } from "@/lib/era/resolve";
 import { hasControlChars } from "@/lib/era/normalize";
+import { eraJson } from "@/lib/era/data";
 
 export const runtime = "nodejs";
 
-const INDEX_FILE = path.join(process.cwd(), "public", "era", "index.json");
 // The channel crawl's songs (build_index.py), generated on deploy and never committed: YouTube API data may be kept
 // 30 days and git history keeps everything. Optional: without it the index is the charts, lanes, blogs and seed.
-const YT_FILE = path.join(process.cwd(), "public", "era", "index-yt.json");
 const MAX_Q = 200;
 
 type Loaded = { state: "ok"; index: PreparedIndex } | { state: "missing" | "invalid" };
@@ -25,26 +22,26 @@ let buildTiming = "";
 async function loadIndex(): Promise<Loaded> {
   if (!cached) {
     // Missing or unreadable YouTube rows cost only those rows, never the index.
-    const yt = readFile(YT_FILE, "utf8").then(
-      (t) => {
-        try {
-          const r = (JSON.parse(t) as { rows?: unknown }).rows;
-          return Array.isArray(r) ? r : [];
-        } catch {
-          console.error("resolve: index-yt.json unreadable; serving the index without YouTube rows");
-          return [];
-        }
+    // Both files are read through eraJson (the ASSETS binding on Cloudflare Workers, the disk elsewhere), which
+    // shares its parsed copy with indexRow() instead of holding a second 7 MB index.
+    const yt = eraJson<{ rows?: unknown }>("index-yt.json").then(
+      (d) => (d && Array.isArray(d.rows) ? d.rows : []),
+      () => {
+        console.error("resolve: index-yt.json unreadable; serving the index without YouTube rows");
+        return [];
       },
-      () => [],
     );
-    cached = Promise.all([readFile(INDEX_FILE, "utf8"), yt]).then(([text, ytRows]) => {
-      const doc = JSON.parse(text) as { rows?: unknown };
+    cached = Promise.all([eraJson<{ rows?: unknown }>("index.json"), yt]).then(([doc, ytRows]) => {
+      if (doc === null) throw Object.assign(new Error("index.json missing"), { code: "ENOENT" });
       if (!Array.isArray(doc?.rows)) throw Object.assign(new Error("index.json has no rows"), { code: "EINVALID" });
       const rows = Array.isArray(ytRows) ? [...doc.rows, ...ytRows] : doc.rows;
-      const c = process.cpuUsage();
+      const t0 = Date.now();
+      let c: NodeJS.CpuUsage | null = null;
+      try { c = process.cpuUsage(); } catch { c = null; } // not implemented on Workers
       const index = prepareIndex(rows);
-      const d = process.cpuUsage(c);
-      buildTiming = `index-build;dur=${Math.round((d.user + d.system) / 1000)};desc="cpu ms, ${rows.length} rows"`;
+      let dur = Date.now() - t0, desc = "wall ms";
+      try { if (c) { const d = process.cpuUsage(c); dur = Math.round((d.user + d.system) / 1000); desc = "cpu ms"; } } catch { /* wall time stands */ }
+      buildTiming = `index-build;dur=${dur};desc="${desc}, ${rows.length} rows"`;
       return index;
     });
   }

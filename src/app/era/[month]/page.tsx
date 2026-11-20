@@ -10,7 +10,7 @@ import RememberForm from "@/components/era/RememberForm";
 import Industry from "@/components/era/Industry";
 import {
   weekNearest, lanesOn, heatFor, heatMonthSpan, redditFor, youtubeFor, numberOneOn, numberOnesThrough, chartsThrough, weeksInMonth,
-  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, type ChartRow, type HeatSource, type YouTubeRow, type YouTubeSource,
+  indexRow, coverFor, art, addDays, normTitle, primaryArtist, industryFor, withEra, type ChartRow, type HeatSource, type YouTubeRow, type YouTubeSource,
 } from "@/lib/era/data";
 import { cardLine } from "@/lib/era/cardLine";
 import { coverArtFor } from "@/lib/coverArt";
@@ -132,10 +132,27 @@ function HeatColumn({ src, isMine }: { src: HeatSource; isMine: (artist: string)
   );
 }
 
+/**
+ * On Cloudflare Workers the era files come from the ASSETS binding, not the disk: touch every reader this page uses
+ * (same arguments as below) inside withEra so each file is fetched once before the synchronous render reads it.
+ */
+async function primeEraPage(month: string, sp: Awaited<Search>): Promise<void> {
+  await withEra(() => {
+    if (!validMonth(month)) return;
+    const song = clean(sp.song), artist = clean(sp.artist);
+    const date = pageDate(month, clean(sp.date, 10));
+    if (song && artist) { indexRow(song, artist); coverFor(song, artist); }
+    weekNearest(date); numberOneOn(date); lanesOn(date); heatFor(month); heatMonthSpan(); redditFor(month); youtubeFor(month);
+    chartsThrough(); weeksInMonth(month); numberOnesThrough(); industryFor(Number(month.slice(0, 4)));
+    numberOneOn(addDays(date, -266));
+  });
+}
+
 export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Search }): Promise<Metadata> {
   const { month } = await params;
-  if (!validMonth(month)) return { title: "Was Playing" };
   const sp = await searchParams;
+  await primeEraPage(month, sp);
+  if (!validMonth(month)) return { title: "Was Playing" };
   const song = clean(sp.song), artist = clean(sp.artist);
   const date = pageDate(month, clean(sp.date, 10));
   const n1 = numberOneOn(date);
@@ -154,8 +171,9 @@ export async function generateMetadata({ params, searchParams }: { params: Param
 
 export default async function EraPage({ params, searchParams }: { params: Params; searchParams: Search }) {
   const { month } = await params;
-  if (!validMonth(month)) notFound();
   const sp = await searchParams;
+  await primeEraPage(month, sp);
+  if (!validMonth(month)) notFound();
 
   const song = clean(sp.song);
   const artist = clean(sp.artist);
