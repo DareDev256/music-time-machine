@@ -51,3 +51,5 @@ data/hot100-covers.merged.json
 # YouTube API data: stored at most 30 days (API policy), so never in git history. Generated, deployed, refreshed weekly.
 public/era/youtube/
 public/era/index-yt.json
+.open-next/
+.wrangler/
